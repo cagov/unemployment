@@ -25,11 +25,18 @@ steps:
   displayName: "npm build"
 
 
+- task: CopyFiles@2
+  displayName: 'Copy Files to: $(Build.ArtifactStagingDirectory)'
+  inputs:
+    SourceFolder: build
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
 - task: ArchiveFiles@2
+  displayName: 'Archive files'
   inputs:
-    rootFolderOrFile: '$(build.sourcesDirectory)'
+    rootFolderOrFile: '$(System.DefaultWorkingDirectory)/build'
     includeRootFolder: false
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish artifacts: drop'
+
