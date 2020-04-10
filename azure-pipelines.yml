@@ -27,9 +27,8 @@ steps:
 
 
 - task: ArchiveFiles@2
-  displayName: 'Archive files'
   inputs:
-    rootFolderOrFile: '$(System.DefaultWorkingDirectory)/build'
+    rootFolderOrFile: '$(build.sourcesDirectory)'
     includeRootFolder: false
 
 - task: PublishBuildArtifacts@1
