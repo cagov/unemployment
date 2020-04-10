@@ -1,6 +1,5 @@
 # React / Node Todo Demo
-TEST
-TEST TEST
+
 This demo shows the core functionality of [Visual Studio Code](https://code.visualstudio.com)
 for Build 2016 session workshop.
 
