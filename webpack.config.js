@@ -19,7 +19,10 @@ var loaders = [
     {
         test: /\.js$/,
         loader: 'babel-loader',
-        include: path.join(__dirname, APP_ROOT)
+        include: path.join(__dirname, APP_ROOT),
+                    query: {
+                presets: ['es2015', 'react']
+            }
     }
 ];
 
