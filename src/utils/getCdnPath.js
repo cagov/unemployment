@@ -3,7 +3,7 @@
  * @param {string} path - Relative URL (i.e. /asset/style.css)
  * @returns {string}
  */
-function cdnPath(path) {
+function getCdnPath(path) {
   if (process.env.CDN_ENDPOINT_NAME) {
     return `https://${process.env.CDN_ENDPOINT_NAME}.azureedge.net${path}`;
   }
@@ -11,4 +11,4 @@ function cdnPath(path) {
   return path;
 }
 
-module.exports = cdnPath;
+module.exports = getCdnPath;
