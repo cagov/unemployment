@@ -29,7 +29,7 @@ steps:
 - task: ArchiveFiles@2
   inputs:
     rootFolderOrFile: '$(build.sourcesDirectory)'
-    includeRootFolder: true
+    includeRootFolder: false
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish artifacts: drop'
