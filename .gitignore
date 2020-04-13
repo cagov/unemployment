@@ -1,1 +1,9 @@
 node_modules
+
+# .css and .js files in public/ are created during compile process
+public/**/*.css
+public/**/*.js
+public/**/*.map
+
+# Manifest files are generated during the compile process
+src/**/manifest-*.json

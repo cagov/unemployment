@@ -1,0 +1,14 @@
+/**
+ * A single source of truth for the page routes. Include
+ * a route's associated component name in its definition
+ * below and it'll automatically rendered as a <Route> in
+ * the single page app (`client/pages/index.js`).
+ */
+const routes = {
+  home: {
+    path: "/"
+    // We exclude the Home `component` so we can manually import it into pages/index.js
+  }
+};
+
+module.exports = routes;
