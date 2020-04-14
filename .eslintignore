@@ -1,0 +1,10 @@
+*.config.js
+__mocks__
+__snapshots__
+build
+coverage
+examples
+node_modules
+# Web apps
+*/public/**/*.css
+*/public/**/*.js

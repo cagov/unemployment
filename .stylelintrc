@@ -1,0 +1,6 @@
+{
+  "extends": ["stylelint-config-prettier"],
+  "rules": {
+    "declaration-bang-space-before": null
+  }
+}
