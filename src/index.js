@@ -9,15 +9,17 @@ function startServer() {
   const server = http.createServer(app);
   const port = process.env.PORT || 3000;
 
-  server.listen(port, error => {
+  server.listen(port, (error) => {
     if (error) {
+      // eslint-disable-next-line no-console
       console.log(error);
     }
 
+    // eslint-disable-next-line no-console
     console.log("Server started", {
       app: "Benefits Screener",
       cdn_endpoint_name: process.env.CDN_ENDPOINT_NAME,
-      port
+      port,
     });
   });
 }

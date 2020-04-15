@@ -5,7 +5,6 @@
 const express = require("express");
 const helmet = require("helmet");
 const routes = require("./routes");
-const session = require("cookie-session");
 
 /**
  * @returns {object} Express application
@@ -45,7 +44,7 @@ function init() {
           res.header("Access-Control-Allow-Origin", "*");
           res.header("Access-Control-Allow-Headers", "*");
         }
-      }
+      },
     })
   );
 
