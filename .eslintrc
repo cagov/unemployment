@@ -34,7 +34,7 @@
     "jsdoc/require-param-description": "off",
     "jsdoc/require-param-name": "error",
     "jsdoc/require-param-type": "error",
-    "jsdoc/require-returns": "off", // TODO: Re-enable as Warning after fixing all the warnings
+    "jsdoc/require-returns": "warn",
     "jsdoc/require-returns-description": "off",
     "jsdoc/no-undefined-types": "off",
     "no-console": ["error", { "allow": ["error"] }],
