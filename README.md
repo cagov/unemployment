@@ -11,9 +11,9 @@ We are developing the repository using Node v.12.16.2.
    npm install
    ```
 1. Start the application
-  ```bash
-  npm start
-  ```
+   ```bash
+   npm start
+   ```
 1. Open http://localhost:3000/ to see the app
 
 ## Running test suite
@@ -21,7 +21,7 @@ We are developing the repository using Node v.12.16.2.
 npm run test
 ```
 
-### To update snapshots
+### To update snapshots so tests pass after intentional UI changes
 ```bash
 npm run test:update-snapshots
 ```
