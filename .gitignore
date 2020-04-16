@@ -7,3 +7,6 @@ public/**/*.map
 
 # Manifest files are generated during the compile process
 src/**/manifest-*.json
+
+# Test output
+test-output
