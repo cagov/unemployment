@@ -1,0 +1,14 @@
+coverage
+npm-debug.log
+Dockerfile*
+docker-compose*
+.dockerignore
+.git
+.gitignore
+README.md
+LICENSE
+.vscode
+# Ignore copied node_modules since these will be overwritten as part of npm install
+node_modules
+# Ignore files generated during build process
+public/build

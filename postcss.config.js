@@ -13,11 +13,11 @@ const sass = require("@csstools/postcss-sass");
 const manifestPath = "./src/data/manifest-styles.json";
 const sassOptions = {
   includePaths: ["./src/client", "./node_modules"],
-  sourceMap: true
+  sourceMap: true,
 };
 const sourceMapOptions = { annotation: true, inline: false };
 
-module.exports = context => {
+module.exports = (context) => {
   const isDevelopment = context.env === "development";
 
   return {
@@ -30,19 +30,19 @@ module.exports = context => {
       autoprefixer,
       // Minify the .css file
       cssnano({
-        preset: ["default", { discardComments: { removeAll: true } }]
+        preset: ["default", { discardComments: { removeAll: true } }],
       }),
       // Append cache-buster hash to filename and create the manifest file
       hash({
         manifest: manifestPath,
-        name: generateHashedFilename(isDevelopment)
-      })
-    ]
+        name: generateHashedFilename(isDevelopment),
+      }),
+    ],
   };
 };
 
 function generateHashedFilename(isDevelopment) {
-  return function({ dir, name, hash, ext }) {
+  return function ({ dir, name, hash, ext }) {
     if (isDevelopment) {
       // During development, we don't want to generate a new file
       // every time the CSS changes since that prevents live reloading
