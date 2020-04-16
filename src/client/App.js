@@ -1,9 +1,16 @@
-import React from "react";
+import React, { Suspense } from "react";
+import { useTranslation } from "react-i18next";
 
-class App extends React.Component {
-  render() {
-    return <div>Hello World!</div>;
-  }
+function Page() {
+  const { t } = useTranslation();
+
+  return <div>{t("helloWorld")}</div>;
 }
 
-export default App;
+export default function App() {
+  return (
+    <Suspense fallback="Loading...">
+      <Page />
+    </Suspense>
+  );
+}
