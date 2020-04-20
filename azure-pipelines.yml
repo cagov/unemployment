@@ -32,7 +32,7 @@ steps:
     includeRootFolder: false
 
 - task: PublishBuildArtifacts@1
-  displayName: 'Publish artifacts: drop'
+  displayName: 'Publish artifacts: dropscantest'
 
 - task: Veracode@3
   inputs:
