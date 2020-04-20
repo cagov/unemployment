@@ -40,7 +40,7 @@ steps:
     AnalysisService: 'Veracode  Scan'
     veracodeAppProfile: '$(system.teamProject)'
     version: '$(build.buildNumber)'
-    filepath: '$(build.artifactstagingdirectory/$(build.buildNumber).zip)'
+    filepath: '$(build.sourcesDirectory)/*.zip)'
     createSandBox: false
     createProfile: true
     failTheBuildIfVeracodeScanDidNotInitiate: false
