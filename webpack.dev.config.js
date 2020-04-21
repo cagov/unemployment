@@ -12,9 +12,6 @@ module.exports = merge(common, {
     ],
   },
   output: {
-    // publicPath: '/static/js/',
-    // path: filePath,
-    // filename: fileName
     hotUpdateChunkFilename: ".hot/hot-update.js",
     hotUpdateMainFilename: ".hot/hot-update.json",
   },

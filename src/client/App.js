@@ -8,7 +8,7 @@ function Page() {
   return (
     <div>
       {t("helloWorld")}
-      <Badge>New</Badge>
+      <Badge>News</Badge>
     </div>
   );
 }
