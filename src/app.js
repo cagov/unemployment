@@ -28,17 +28,20 @@ function init() {
    */
   app.use(helmet());
 
-  app.use(
-    require("webpack-dev-middleware")(webpackCompiler, {
-      noInfo: true,
-      publicPath: webpackConfig.output.publicPath,
-    })
-  );
-  app.use(
-    require("webpack-hot-middleware")(webpackCompiler, {
-      path: "/__webpack_hmr",
-    })
-  );
+  // On dev, enable hot reloading
+  if (process.env.NODE_ENV === "development") {
+    app.use(
+      require("webpack-dev-middleware")(webpackCompiler, {
+        noInfo: true,
+        publicPath: webpackConfig.output.publicPath,
+      })
+    );
+    app.use(
+      require("webpack-hot-middleware")(webpackCompiler, {
+        path: "/__webpack_hmr",
+      })
+    );
+  }
 
   /**
    * Serve static assets from the public/ directory. This middleware should
