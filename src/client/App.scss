@@ -1,1 +1,11 @@
+// These variables are found here: https://github.com/twbs/bootstrap/blob/master/scss/_variables.scss
+
+$primary:       #046B99 !default; //medium blue
+$secondary:     #FDB81E !default; //yellowish gold
+$dark:          #046B99 !default; //medium blue
+$light:         #FFFFFF !default; //white
+
+$border-width:  4px !default;
+
 @import "bootstrap/scss/bootstrap";
+
