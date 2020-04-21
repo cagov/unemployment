@@ -2,6 +2,7 @@ const merge = require("webpack-merge");
 const common = require("./webpack.common.config.js");
 const path = require("path");
 const webpack = require("webpack");
+const { I18NextHMRPlugin } = require("i18next-hmr/plugin");
 
 module.exports = merge(common, {
   mode: "development",
@@ -18,5 +19,10 @@ module.exports = merge(common, {
   watchOptions: {
     ignored: "/node_modules/",
   },
-  plugins: [new webpack.HotModuleReplacementPlugin()],
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new I18NextHMRPlugin({
+      localesDir: path.resolve(__dirname, "public/locales"),
+    }),
+  ],
 });
