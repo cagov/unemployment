@@ -6,6 +6,10 @@
 trigger:
 - master
 
+# no PR triggers
+
+
+
 pool:
   vmImage: 'ubuntu-latest'
 
