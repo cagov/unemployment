@@ -1,0 +1,13 @@
+{
+	"verbose": true,
+	"ignore": [
+		"public/",
+		"node_modules/",
+		"webpack.common.config.js",
+		"webpack.dev.config.js",
+		"webpack.prod.config.js",
+		"src/client/",
+		"src/data/manifest-scripts.json",
+		"src/data/manifest-styles.json"
+	]
+}

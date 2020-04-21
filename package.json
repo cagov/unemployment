@@ -7,7 +7,7 @@
         "prebuild": "npm run clean-build-dir",
         "build:css": "postcss src/client/**/[!_]*.scss -d public/build/css --ext css",
         "build:css:dev": "npm run build:css -- --env development",
-        "build:js": "NODE_ENV=production webpack",
+        "build:js": "NODE_ENV=production webpack --config webpack.prod.config.js",
         "clean-build-dir": "rm -fr public/build/",
         "lint:css": "stylelint --allow-empty-input",
         "lint:css:all": "npm run lint:css -- ./**/*.scss",
@@ -23,7 +23,7 @@
         "test:watch": "jest --watch",
         "watch:css": "chokidar \"src/client/**/*.scss\" -c \"npm run build:css:dev\"",
         "prewatch:css": "npm run build:css:dev",
-        "watch:js": "webpack"
+        "watch:js": "webpack --config webpack.dev.config.js"
     },
     "dependencies": {
         "axios": "^0.19.2",
@@ -97,6 +97,9 @@
         "webpack": "^4.41.2",
         "webpack-bundle-analyzer": "^3.6.0",
         "webpack-cli": "^3.3.10",
+        "webpack-dev-middleware": "^3.7.2",
+        "webpack-hot-middleware": "^2.25.0",
+        "webpack-merge": "4.2.2",
         "webpackbar": "^4.0.0"
     },
     "husky": {

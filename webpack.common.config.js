@@ -16,12 +16,12 @@ const env = process.env.NODE_ENV || "development";
 const IS_DEV = env === "development";
 
 // Setup our paths
-const resolveApp = relativePath => path.resolve(__dirname, relativePath);
+const resolveApp = (relativePath) => path.resolve(__dirname, relativePath);
 const paths = {
   appData: resolveApp("src/data/"),
   appPublic: resolveApp("public"),
   appSrc: resolveApp("src"),
-  sharedModule: resolveApp("shared-module")
+  sharedModule: resolveApp("shared-module"),
 };
 
 /**
@@ -32,7 +32,7 @@ const config = {
   entry: {
     // Note: the name of this is important, since it's used when manifest-scripts.json
     // is generated, which is a dependency on the server-side
-    client: ["./src/client/index.js"]
+    client: ["./src/client/index.js"],
   },
   mode: env,
   module: {
@@ -42,30 +42,30 @@ const config = {
       {
         test: /\.js$/,
         include: [paths.appSrc, paths.sharedModule],
-        loader: require.resolve("babel-loader")
-      }
-    ]
+        loader: require.resolve("babel-loader"),
+      },
+    ],
   },
   output: {
-    filename: "build/js/client.[chunkhash:8].js",
-    chunkFilename: "build/js/[name].[chunkhash:8].js",
+    filename: "build/js/client.js",
+    chunkFilename: "build/js/[name].js",
     path: paths.appPublic,
-    publicPath: "/"
+    publicPath: "/",
   },
   plugins: [
     // Output our JS file paths in a manifest file
     new AssetsPlugin({
       path: paths.appData,
-      filename: "manifest-scripts.json"
+      filename: "manifest-scripts.json",
     }),
     // Show a visual progress bar in the CLI
     new WebpackBar({
-      name: "Client-side JS bundle"
-    })
+      name: "Client-side JS bundle",
+    }),
   ],
   resolve: {
-    aliasFields: ["browser"]
-  }
+    aliasFields: ["browser"],
+  },
 };
 
 /**
@@ -78,7 +78,7 @@ if (IS_DEV) {
   config.stats = "errors-warnings";
   config.watch = true;
   config.watchOptions = {
-    ignored: /node_modules/
+    ignored: /node_modules/,
   };
 }
 
@@ -98,18 +98,18 @@ if (!IS_DEV) {
         // Enable file caching
         cache: true,
         // Retain source map
-        sourceMap: true
-      })
-    ]
+        sourceMap: true,
+      }),
+    ],
   };
 
   config.plugins = [
     ...config.plugins,
     // Define process.env.NODE_ENV for optimized React bundles
     new webpack.DefinePlugin({
-      "process.env.NODE_ENV": JSON.stringify(env)
+      "process.env.NODE_ENV": JSON.stringify(env),
     }),
-    new webpack.optimize.AggressiveMergingPlugin()
+    new webpack.optimize.AggressiveMergingPlugin(),
   ];
 }
 
