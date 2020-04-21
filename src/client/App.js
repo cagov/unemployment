@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import Sidebar from "./Sidebar.js";
+import Sidebar from "./components/sidebar/Sidebar";
 
 function Page() {
   return <Sidebar />;
