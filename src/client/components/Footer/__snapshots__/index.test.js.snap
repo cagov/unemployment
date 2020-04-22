@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer /> renders the footer component 1`] = `
+<footer
+  className="footer bg-light"
+>
+  <div
+    className="container"
+  >
+    <span>
+      Copyright © 2020 State of California
+    </span>
+  </div>
+</footer>
+`;

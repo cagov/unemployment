@@ -24,7 +24,7 @@ i18n
     load: "languageOnly", // ignore the -US in en-US
   });
 
-if (process.env.NODE_ENV !== "production") {
+if (process.env.NODE_ENV === "development") {
   const { applyClientHMR } = require("i18next-hmr");
   applyClientHMR(i18n);
 }

@@ -6,6 +6,10 @@
 trigger:
 - master
 
+# no PR triggers
+pr: none
+
+
 pool:
   vmImage: 'ubuntu-latest'
 
@@ -33,3 +37,19 @@ steps:
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish artifacts: drop'
+
+- task: Veracode@3
+  inputs:
+    ConnectionDetailsSelection: 'Endpoint'
+    AnalysisService: 'Veracode  Scan'
+    veracodeAppProfile: '$(system.teamProject)'
+    version: '$(build.buildNumber)'
+    filepath: '$(build.artifactstagingdirectory)'
+    createSandBox: false
+    createProfile: true
+    failTheBuildIfVeracodeScanDidNotInitiate: false
+    scanStatusCheckInterval: '60'
+    importResults: false
+    failBuildOnPolicyFail: false
+
+
