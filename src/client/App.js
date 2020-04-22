@@ -7,8 +7,11 @@ function Page() {
 
   return (
     <div>
-      {t("helloWorld")}
-      <Badge>News</Badge>
+      <Header />
+      <main>
+        {t("helloWorld")} <Badge>New</Badge> <br />
+      </main>
+      <Footer />
     </div>
   );
 }
