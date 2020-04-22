@@ -24,6 +24,25 @@ function init() {
    */
   app.use(helmet());
 
+  // On dev, enable hot reloading
+  if (process.env.NODE_ENV === "development") {
+    const webpack = require("webpack");
+    const webpackConfig = require("../webpack.dev.config.js");
+    const webpackCompiler = webpack(webpackConfig);
+
+    app.use(
+      require("webpack-dev-middleware")(webpackCompiler, {
+        noInfo: true,
+        publicPath: webpackConfig.output.publicPath,
+      })
+    );
+    app.use(
+      require("webpack-hot-middleware")(webpackCompiler, {
+        path: "/__webpack_hmr",
+      })
+    );
+  }
+
   /**
    * Serve static assets from the public/ directory. This middleware should
    * be included *before* our session middleware so that static asset requests
