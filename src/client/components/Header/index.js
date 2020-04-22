@@ -7,8 +7,8 @@ import iconSet from "../../../../public/icons.json";
 class Header extends React.PureComponent {
   render() {
     return (
-      <div>
-        <Navbar className="justify-content-between" variant="dark" bg="dark">
+      <header className="header border-bottom border-secondary">
+        <Navbar className="justify-content-between" variant="dark" bg="primary">
           <Navbar.Brand href="https://ca.gov">
             <img
               src="images/Ca-Gov-Logo-Gold.svg"
@@ -26,7 +26,7 @@ class Header extends React.PureComponent {
                 size={15}
                 icon="home"
               />{" "}
-              Home
+              <span className="text-white">Home</span>
             </Nav.Link>
             <Nav.Link href="https://edd.ca.gov/login.htm">
               <IcomoonReact
@@ -35,35 +35,40 @@ class Header extends React.PureComponent {
                 size={15}
                 icon="key"
               />{" "}
-              Log In
+              <span className="text-white">Log In</span>
             </Nav.Link>
           </Nav>
         </Navbar>
-        <Navbar
-          className="border-bottom border-secondary"
-          collapseOnSelect
-          expand="md"
-        >
+        <Navbar className="" collapseOnSelect expand="md" variant="light">
           <Navbar.Brand href="https://edd.ca.gov">
             <img
               src="images/edd-logo-2-Color.svg"
               height="50"
+              width="150"
               className="d-inline-block align-top"
               alt="California gov logo"
             />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse>
-            <Nav.Link href="https://edd.ca.gov/jobs.htm">Jobs</Nav.Link>
-            <Nav.Link href="https://edd.ca.gov/claims.htm">Claims</Nav.Link>
-            <Nav.Link href="https://edd.ca.gov/employers.htm">
-              Employers
+            <Nav.Link href="https://edd.ca.gov/jobs.htm">
+              <span className="text-dark">Jobs</span>
             </Nav.Link>
-            <Nav.Link href="https://edd.ca.gov/newsroom.htm">Newsroom</Nav.Link>
-            <Nav.Link href="https://edd.ca.gov/serp.html?q=">Search</Nav.Link>
+            <Nav.Link href="https://edd.ca.gov/claims.htm">
+              <span className="text-dark">Claims</span>
+            </Nav.Link>
+            <Nav.Link href="https://edd.ca.gov/employers.htm">
+              <span className="text-dark">Employers</span>
+            </Nav.Link>
+            <Nav.Link href="https://edd.ca.gov/newsroom.htm">
+              <span className="text-dark">Newsroom</span>
+            </Nav.Link>
+            <Nav.Link href="https://edd.ca.gov/serp.html?q=">
+              <span className="text-dark">Search</span>
+            </Nav.Link>
           </Navbar.Collapse>
         </Navbar>
-      </div>
+      </header>
     );
   }
 }
