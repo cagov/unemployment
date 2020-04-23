@@ -2,6 +2,7 @@ import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
+// TODO(kalvin): fix this ordering error
 import React, { useState } from "react";
 import Row from "react-bootstrap/Row";
 import Tab from "react-bootstrap/Tab";
@@ -37,6 +38,22 @@ function TabbedContainer() {
     setActiveKey(key);
   };
 
+  const renderNextButton = (index) => {
+    // Don't display the next button on the final tab
+    if (index < tabTitleKeys.length - 1) {
+      return (
+        <Button
+          variant="secondary"
+          href={"#" + tabTitleKeys[index + 1]}
+          // TODO(kalvin): fix this very slight performance issue
+          onClick={handleClick.bind(this, index + 1)}
+        >
+          {t("buttonNextPrefix") + t(tabTitleKeys[index + 1])}
+        </Button>
+      );
+    }
+  };
+
   return (
     <Container>
       <Tab.Container
@@ -53,6 +70,7 @@ function TabbedContainer() {
                     <Nav.Link
                       eventKey={index}
                       href={"#" + value}
+                      // TODO(kalvin): fix this very slight performance issue
                       onClick={handleClick.bind(this, index)}
                     >
                       {t(value)}
@@ -68,13 +86,7 @@ function TabbedContainer() {
                 return (
                   <Tab.Pane eventKey={index} key={index}>
                     <h2>{t(value)}</h2>
-                    <Button
-                      variant="secondary"
-                      href={"#" + tabTitleKeys[index + 1]}
-                      onClick={handleClick.bind(this, index + 1)}
-                    >
-                      {t("buttonNextPrefix") + t(tabTitleKeys[index + 1])}
-                    </Button>
+                    {renderNextButton(index)}
                   </Tab.Pane>
                 );
               })}
