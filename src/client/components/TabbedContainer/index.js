@@ -5,7 +5,7 @@ import Row from "react-bootstrap/Row";
 import Tab from "react-bootstrap/Tab";
 import { useTranslation } from "react-i18next";
 
-function Sidebar() {
+function TabbedContainer() {
   const { t } = useTranslation();
 
   // We write these out instead of generating them
@@ -31,8 +31,8 @@ function Sidebar() {
 
   return (
     <Tab.Container id="left-tabs-example" defaultActiveKey="0">
-      <Row>
-        <Col sm={4}>
+      <Row className="tabbed-container">
+        <Col sm={4} className="TabbedContainer">
           <Nav variant="pills" className="flex-column">
             {tabTitleKeys.map((value, index) => {
               return (
@@ -59,4 +59,4 @@ function Sidebar() {
   );
 }
 
-export default Sidebar;
+export default TabbedContainer;

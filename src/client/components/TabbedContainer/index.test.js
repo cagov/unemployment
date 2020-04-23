@@ -1,10 +1,10 @@
 import React from "react";
-import Sidebar from "./index";
+import TabbedContainer from "./index";
 import { shallow } from "enzyme";
 
-describe("<Sidebar />", () => {
+describe("<TabbedContainer />", () => {
   it("renders vertical navigation bar", async () => {
-    const wrapper = shallow(<Sidebar />);
+    const wrapper = shallow(<TabbedContainer />);
 
     expect(wrapper).toMatchSnapshot();
   });

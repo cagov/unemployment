@@ -1,14 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Sidebar /> renders vertical navigation bar 1`] = `
+exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
 <TabContainer
   defaultActiveKey="0"
   id="left-tabs-example"
 >
   <Row
+    className="tabbed-container"
     noGutters={false}
   >
     <Col
+      className="TabbedContainer"
       sm={4}
     >
       <Nav
