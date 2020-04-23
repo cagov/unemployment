@@ -15,4 +15,8 @@ body {
   width: 100%;
   height: $footer-height;
   line-height: $footer-height;
+
+  .navbar-custom .navbar-nav .nav-link {
+    color: #ffffff;
+  }
 }

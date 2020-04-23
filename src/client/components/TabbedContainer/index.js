@@ -1,4 +1,5 @@
 import Col from "react-bootstrap/Col";
+import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import React from "react";
 import Row from "react-bootstrap/Row";
@@ -30,32 +31,34 @@ function TabbedContainer() {
   ];
 
   return (
-    <Tab.Container id="left-tabs-example" defaultActiveKey="0">
-      <Row className="tabbed-container">
-        <Col sm={4} className="TabbedContainer">
-          <Nav variant="pills" className="flex-column">
-            {tabTitleKeys.map((value, index) => {
-              return (
-                <Nav.Item key={index}>
-                  <Nav.Link eventKey={index}>{t(value)}</Nav.Link>
-                </Nav.Item>
-              );
-            })}
-          </Nav>
-        </Col>
-        <Col sm={8}>
-          <Tab.Content>
-            {tabContentKeys.map((value, index) => {
-              return (
-                <Tab.Pane eventKey={index} key={index}>
-                  {t(value)}
-                </Tab.Pane>
-              );
-            })}
-          </Tab.Content>
-        </Col>
-      </Row>
-    </Tab.Container>
+    <Container>
+      <Tab.Container id="left-tabs-example" defaultActiveKey="0">
+        <Row className="tabbed-container">
+          <Col sm={4} className="TabbedContainer">
+            <Nav variant="pills" className="flex-column">
+              {tabTitleKeys.map((value, index) => {
+                return (
+                  <Nav.Item key={index}>
+                    <Nav.Link eventKey={index}>{t(value)}</Nav.Link>
+                  </Nav.Item>
+                );
+              })}
+            </Nav>
+          </Col>
+          <Col sm={8}>
+            <Tab.Content>
+              {tabContentKeys.map((value, index) => {
+                return (
+                  <Tab.Pane eventKey={index} key={index}>
+                    {t(value)}
+                  </Tab.Pane>
+                );
+              })}
+            </Tab.Content>
+          </Col>
+        </Row>
+      </Tab.Container>
+    </Container>
   );
 }
 

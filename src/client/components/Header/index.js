@@ -8,7 +8,11 @@ class Header extends React.PureComponent {
   render() {
     return (
       <header className="header border-bottom border-secondary">
-        <Navbar className="justify-content-between" variant="dark" bg="primary">
+        <Navbar
+          className="justify-content-between"
+          variant="custom"
+          bg="primary"
+        >
           <Navbar.Brand href="https://ca.gov">
             <img
               src="images/Ca-Gov-Logo-Gold.svg"
@@ -26,7 +30,7 @@ class Header extends React.PureComponent {
                 size={15}
                 icon="home"
               />{" "}
-              <span className="text-white">Home</span>
+              <span>Home</span>
             </Nav.Link>
             <Nav.Link href="https://edd.ca.gov/login.htm">
               <IcomoonReact
@@ -35,7 +39,7 @@ class Header extends React.PureComponent {
                 size={15}
                 icon="key"
               />{" "}
-              <span className="text-white">Log In</span>
+              <span>Log In</span>
             </Nav.Link>
           </Nav>
         </Navbar>
