@@ -167,7 +167,7 @@ exports[`<Header /> renders the header component 1`] = `
         />
          
         <span
-          class="text-white"
+          className="text-white"
         >
           Home
         </span>
@@ -313,7 +313,7 @@ exports[`<Header /> renders the header component 1`] = `
         />
          
         <span
-          class="text-white"
+          className="text-white"
         >
           Log In
         </span>
@@ -354,7 +354,7 @@ exports[`<Header /> renders the header component 1`] = `
         href="https://edd.ca.gov/jobs.htm"
       >
         <span
-          class="text-dark"
+          className="text-dark"
         >
           Jobs
         </span>
@@ -371,7 +371,7 @@ exports[`<Header /> renders the header component 1`] = `
         href="https://edd.ca.gov/claims.htm"
       >
         <span
-          class="text-dark"
+          className="text-dark"
         >
           Claims
         </span>
@@ -388,7 +388,7 @@ exports[`<Header /> renders the header component 1`] = `
         href="https://edd.ca.gov/employers.htm"
       >
         <span
-          class="text-dark"
+          className="text-dark"
         >
           Employers
         </span>
@@ -405,7 +405,7 @@ exports[`<Header /> renders the header component 1`] = `
         href="https://edd.ca.gov/newsroom.htm"
       >
         <span
-          class="text-dark"
+          className="text-dark"
         >
           Newsroom
         </span>
@@ -422,7 +422,7 @@ exports[`<Header /> renders the header component 1`] = `
         href="https://edd.ca.gov/serp.html?q="
       >
         <span
-          class="text-dark"
+          className="text-dark"
         >
           Search
         </span>

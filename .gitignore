@@ -5,6 +5,9 @@ public/**/*.css
 public/**/*.js
 public/**/*.map
 
+# .hot files are generated for hot reloading
+public/.hot/*
+
 # Manifest files are generated during the compile process
 src/**/manifest-*.json
 

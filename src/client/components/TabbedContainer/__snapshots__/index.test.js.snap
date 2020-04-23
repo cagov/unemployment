@@ -1,0 +1,193 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
+<TabContainer
+  defaultActiveKey="0"
+  id="left-tabs-example"
+>
+  <Row
+    className="tabbed-container"
+    noGutters={false}
+  >
+    <Col
+      className="TabbedContainer"
+      sm={4}
+    >
+      <Nav
+        className="flex-column"
+        fill={false}
+        justify={false}
+        variant="pills"
+      >
+        <NavItem
+          key="0"
+        >
+          <NavLink
+            as={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "displayName": "SafeAnchor",
+                "render": [Function],
+              }
+            }
+            disabled={false}
+            eventKey={0}
+          >
+            tab0Title
+          </NavLink>
+        </NavItem>
+        <NavItem
+          key="1"
+        >
+          <NavLink
+            as={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "displayName": "SafeAnchor",
+                "render": [Function],
+              }
+            }
+            disabled={false}
+            eventKey={1}
+          >
+            tab1Title
+          </NavLink>
+        </NavItem>
+        <NavItem
+          key="2"
+        >
+          <NavLink
+            as={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "displayName": "SafeAnchor",
+                "render": [Function],
+              }
+            }
+            disabled={false}
+            eventKey={2}
+          >
+            tab2Title
+          </NavLink>
+        </NavItem>
+        <NavItem
+          key="3"
+        >
+          <NavLink
+            as={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "displayName": "SafeAnchor",
+                "render": [Function],
+              }
+            }
+            disabled={false}
+            eventKey={3}
+          >
+            tab3Title
+          </NavLink>
+        </NavItem>
+        <NavItem
+          key="4"
+        >
+          <NavLink
+            as={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "displayName": "SafeAnchor",
+                "render": [Function],
+              }
+            }
+            disabled={false}
+            eventKey={4}
+          >
+            tab4Title
+          </NavLink>
+        </NavItem>
+        <NavItem
+          key="5"
+        >
+          <NavLink
+            as={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "displayName": "SafeAnchor",
+                "render": [Function],
+              }
+            }
+            disabled={false}
+            eventKey={5}
+          >
+            tab5Title
+          </NavLink>
+        </NavItem>
+        <NavItem
+          key="6"
+        >
+          <NavLink
+            as={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "displayName": "SafeAnchor",
+                "render": [Function],
+              }
+            }
+            disabled={false}
+            eventKey={6}
+          >
+            tab6Title
+          </NavLink>
+        </NavItem>
+      </Nav>
+    </Col>
+    <Col
+      sm={8}
+    >
+      <ForwardRef>
+        <TabPane
+          eventKey={0}
+          key="0"
+        >
+          tab0Content
+        </TabPane>
+        <TabPane
+          eventKey={1}
+          key="1"
+        >
+          tab1Content
+        </TabPane>
+        <TabPane
+          eventKey={2}
+          key="2"
+        >
+          tab2Content
+        </TabPane>
+        <TabPane
+          eventKey={3}
+          key="3"
+        >
+          tab3Content
+        </TabPane>
+        <TabPane
+          eventKey={4}
+          key="4"
+        >
+          tab4Content
+        </TabPane>
+        <TabPane
+          eventKey={5}
+          key="5"
+        >
+          tab5Content
+        </TabPane>
+        <TabPane
+          eventKey={6}
+          key="6"
+        >
+          tab6Content
+        </TabPane>
+      </ForwardRef>
+    </Col>
+  </Row>
+</TabContainer>
+`;

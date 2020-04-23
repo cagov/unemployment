@@ -1,0 +1,10 @@
+{
+	"verbose": true,
+	"ignore": [
+		"public/",
+		"node_modules/",
+		"src/client/",
+		"src/data/manifest-scripts.json",
+		"src/data/manifest-styles.json"
+	]
+}
