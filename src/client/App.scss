@@ -1,10 +1,10 @@
 // Any bootstrap variables we're overwriting must be defined before importing bootstrap.
 // These variables are found here: https://github.com/twbs/bootstrap/blob/master/scss/_variables.scss
 
-$primary:                #046B99 !default; //medium blue
-$secondary:              #FDB81E !default; //yellowish gold
+$primary: #046b99 !default; //medium blue
+$secondary: #fdb81e !default; //yellowish gold
 
-@import url(https://fonts.googleapis.com/css2?family=Source+Sans+Pro);
+@import url(https://fonts.googleapis.com/css2?family=Source + Sans + Pro);
 
 $font-family-sans-serif: "Source Sans Pro", sans-serif !default;
 
@@ -14,3 +14,4 @@ $font-family-sans-serif: "Source Sans Pro", sans-serif !default;
 // accompanying JS component
 @import "components/Header/index";
 @import "components/Footer/index";
+@import "components/Sidebar/index";

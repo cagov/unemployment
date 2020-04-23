@@ -28,34 +28,32 @@ function Sidebar() {
   ];
 
   return (
-    <div>
-      <Tab.Container id="left-tabs-example" defaultActiveKey="0">
-        <Row>
-          <Col sm={3}>
-            <Nav variant="pills" className="flex-column">
-              {tabTitleKeys.map((value, index) => {
-                return (
-                  <Nav.Item key={index}>
-                    <Nav.Link eventKey={index}>{t(value)}</Nav.Link>
-                  </Nav.Item>
-                );
-              })}
-            </Nav>
-          </Col>
-          <Col sm={9}>
-            <Tab.Content>
-              {tabContentKeys.map((value, index) => {
-                return (
-                  <Tab.Pane eventKey={index} key={index}>
-                    {t(value)}
-                  </Tab.Pane>
-                );
-              })}
-            </Tab.Content>
-          </Col>
-        </Row>
-      </Tab.Container>
-    </div>
+    <Tab.Container id="left-tabs-example" defaultActiveKey="0">
+      <Row>
+        <Col sm={4}>
+          <Nav variant="pills" className="flex-column">
+            {tabTitleKeys.map((value, index) => {
+              return (
+                <Nav.Item key={index}>
+                  <Nav.Link eventKey={index}>{t(value)}</Nav.Link>
+                </Nav.Item>
+              );
+            })}
+          </Nav>
+        </Col>
+        <Col sm={8}>
+          <Tab.Content>
+            {tabContentKeys.map((value, index) => {
+              return (
+                <Tab.Pane eventKey={index} key={index}>
+                  {t(value)}
+                </Tab.Pane>
+              );
+            })}
+          </Tab.Content>
+        </Col>
+      </Row>
+    </Tab.Container>
   );
 }
 

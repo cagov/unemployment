@@ -7,7 +7,7 @@ function Page() {
   return (
     <div>
       <Header />
-      <main>
+      <main className="container">
         <Sidebar />
       </main>
       <Footer />
