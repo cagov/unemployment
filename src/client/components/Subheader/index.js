@@ -9,10 +9,10 @@ function Subheader() {
     <div className="bg-light">
       <div className="container p-4">
         <h2>
-          <b>{t("subheaderH2")}</b>
+          <b>{t("subheaderHeader")}</b>
         </h2>
         <h5>
-          <b>{t("subheaderH5")}</b>
+          <b>{t("subheaderSubheader")}</b>
         </h5>
         <p>{t("subheaderParagraph")}</p>
         <Button

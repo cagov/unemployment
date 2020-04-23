@@ -9,12 +9,12 @@ exports[`<Subheader /> renders vertical navigation bar 1`] = `
   >
     <h2>
       <b>
-        subheaderH2
+        subheaderHeader
       </b>
     </h2>
     <h5>
       <b>
-        subheaderH5
+        subheaderSubheader
       </b>
     </h5>
     <p>

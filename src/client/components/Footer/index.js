@@ -1,3 +1,4 @@
+import Container from "react-bootstrap/Container";
 import IcomoonReact from "icomoon-react";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -70,7 +71,7 @@ class Footer extends React.PureComponent {
           </Nav>
         </Navbar>
         <div className="bg-light">
-          <div className="container">Copyright © 2020 State of California</div>
+          <Container>Copyright © 2020 State of California</Container>
         </div>
       </footer>
     );

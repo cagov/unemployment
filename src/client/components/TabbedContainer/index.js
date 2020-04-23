@@ -1,4 +1,5 @@
 import Col from "react-bootstrap/Col";
+import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import React from "react";
 import Row from "react-bootstrap/Row";
@@ -30,7 +31,7 @@ function TabbedContainer() {
   ];
 
   return (
-    <div className="container">
+    <Container>
       <Tab.Container id="left-tabs-example" defaultActiveKey="0">
         <Row className="tabbed-container">
           <Col sm={4} className="TabbedContainer">
@@ -57,7 +58,7 @@ function TabbedContainer() {
           </Col>
         </Row>
       </Tab.Container>
-    </div>
+    </Container>
   );
 }
 

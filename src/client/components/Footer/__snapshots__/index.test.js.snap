@@ -1521,11 +1521,11 @@ exports[`<Footer /> renders the footer component 1`] = `
   <div
     className="bg-light"
   >
-    <div
-      className="container"
+    <Container
+      fluid={false}
     >
       Copyright © 2020 State of California
-    </div>
+    </Container>
   </div>
 </footer>
 `;
