@@ -1,10 +1,6 @@
 .tabbed-container {
   padding: 2rem 0px;
 
-  .nav-pills .nav-link {
-    border-radius: 0;
-  }
-
   .nav-item {
     border: 1px solid rgba(0, 0, 0, 0.125);
   }
@@ -15,5 +11,9 @@
 
   .nav-link {
     padding: 0.8rem 1rem;
+  }
+
+  .nav-pills .nav-link {
+    border-radius: 0;
   }
 }
