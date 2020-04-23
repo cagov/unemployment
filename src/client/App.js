@@ -1,14 +1,14 @@
 import React, { Suspense } from "react";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import Sidebar from "./components/Sidebar";
+import TabbedContainer from "./components/TabbedContainer";
 
 function Page() {
   return (
     <div>
       <Header />
-      <main>
-        <Sidebar />
+      <main className="container">
+        <TabbedContainer />
       </main>
       <Footer />
     </div>
