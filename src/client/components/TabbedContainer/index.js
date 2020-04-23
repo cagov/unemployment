@@ -5,12 +5,13 @@ import Row from "react-bootstrap/Row";
 import Tab from "react-bootstrap/Tab";
 import { useTranslation } from "react-i18next";
 
-function Sidebar() {
+function TabbedContainer() {
   const { t } = useTranslation();
 
   // We write these out instead of generating them
   // so we can find them easily when searching for keys in translation.json
   const tabTitleKeys = [
+    "tab0Title",
     "tab1Title",
     "tab2Title",
     "tab3Title",
@@ -19,6 +20,7 @@ function Sidebar() {
     "tab6Title",
   ];
   const tabContentKeys = [
+    "tab0Content",
     "tab1Content",
     "tab2Content",
     "tab3Content",
@@ -28,10 +30,10 @@ function Sidebar() {
   ];
 
   return (
-    <div>
+    <div className="container">
       <Tab.Container id="left-tabs-example" defaultActiveKey="0">
-        <Row>
-          <Col sm={3}>
+        <Row className="tabbed-container">
+          <Col sm={4} className="TabbedContainer">
             <Nav variant="pills" className="flex-column">
               {tabTitleKeys.map((value, index) => {
                 return (
@@ -42,7 +44,7 @@ function Sidebar() {
               })}
             </Nav>
           </Col>
-          <Col sm={9}>
+          <Col sm={8}>
             <Tab.Content>
               {tabContentKeys.map((value, index) => {
                 return (
@@ -59,4 +61,4 @@ function Sidebar() {
   );
 }
 
-export default Sidebar;
+export default TabbedContainer;

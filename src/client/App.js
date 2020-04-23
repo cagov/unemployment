@@ -1,8 +1,8 @@
 import React, { Suspense } from "react";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import Sidebar from "./components/Sidebar";
 import Subheader from "./components/Subheader";
+import TabbedContainer from "./components/TabbedContainer";
 
 function Page() {
   return (
@@ -10,7 +10,7 @@ function Page() {
       <Header />
       <main id="back-to-top">
         <Subheader />
-        <Sidebar />
+        <TabbedContainer />
       </main>
       <Footer />
     </div>
