@@ -11,6 +11,7 @@ function Sidebar() {
   // We write these out instead of generating them
   // so we can find them easily when searching for keys in translation.json
   const tabTitleKeys = [
+    "tab0Title",
     "tab1Title",
     "tab2Title",
     "tab3Title",
@@ -19,6 +20,7 @@ function Sidebar() {
     "tab6Title",
   ];
   const tabContentKeys = [
+    "tab0Content",
     "tab1Content",
     "tab2Content",
     "tab3Content",

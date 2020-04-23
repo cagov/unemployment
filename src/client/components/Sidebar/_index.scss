@@ -1,4 +1,21 @@
+.row {
+	padding: 2rem 0px;
+}
+
 .nav-pills .nav-link {
 	border-radius: 0;
 }
+
+.nav-item {
+	border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.nav-item:not(:first-child) {
+	border-top-width: 0;
+}
+
+.nav-link {
+	padding: 0.8rem 1rem;
+}
+
 
