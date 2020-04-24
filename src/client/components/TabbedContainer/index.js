@@ -11,7 +11,6 @@ import TabPaneContent2 from "../TabPaneContent2";
 import TabPaneContent3 from "../TabPaneContent3";
 import TabPaneContent4 from "../TabPaneContent4";
 import TabPaneContent5 from "../TabPaneContent5";
-import TabPaneContent6 from "../TabPaneContent6";
 import { useTranslation } from "react-i18next";
 
 function TabbedContainer() {
@@ -26,7 +25,6 @@ function TabbedContainer() {
     "tab3Title",
     "tab4Title",
     "tab5Title",
-    "tab6Title",
   ];
 
   // This mapping is needed because React doesn't allow strings as component names
@@ -38,7 +36,6 @@ function TabbedContainer() {
     3: TabPaneContent3,
     4: TabPaneContent4,
     5: TabPaneContent5,
-    6: TabPaneContent6,
   };
 
   const [activeKey, setActiveKey] = useState(0);
