@@ -7,7 +7,7 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
   <TabContainer
     activeKey={0}
     defaultActiveKey="0"
-    id="left-tabs-example"
+    id="left-tabs"
   >
     <Row
       className="tabbed-container"
