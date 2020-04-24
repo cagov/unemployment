@@ -1,7 +1,7 @@
 import React from "react";
 // import { useTranslation } from "react-i18next";
 
-function TabPaneContent0() {
+function TabPaneContent1() {
   // const { t } = useTranslation();
 
   return (
@@ -33,12 +33,19 @@ function TabPaneContent0() {
       </p>
       <ul>
         <li>
-          <strong>Work history from the last 18 months.</strong>
+          <strong>Work history from the last 18 months.</strong> This includes
+          the name of any companies as they appear on your paycheck, the dates
+          of employment, hours worked per week, the total wages you earned
+          before taxes were taken out (gross wages), hourly rate of pay, and the
+          reason you are no longer working.
         </li>
         <li>
           <strong>
             Specific information from your last employer or company.
-          </strong>
+          </strong>{" "}
+          This includes mailing address, phone number, supervisor’s name, total
+          wages you earned before taxes were taken out (gross wages) for the
+          last week you worked, and the reason for your change in employment.
         </li>
       </ul>
       <h4>Federal and military documents</h4>
@@ -58,4 +65,4 @@ function TabPaneContent0() {
   );
 }
 
-export default TabPaneContent0;
+export default TabPaneContent1;
