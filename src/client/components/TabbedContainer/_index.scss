@@ -20,4 +20,20 @@
   .tab-pane > div {
     padding: 1rem 0;
   }
+
+  .gray-box {
+    margin: 2em 0;
+    padding: 1rem 1.5rem;
+    background-color: #eeeeee;
+  }
+
+  .btn-secondary {
+    margin-bottom: 1rem;
+  }
+
+  .highlight-blockquote {
+    padding: 0 1rem;
+    margin-top: 1rem;
+    border-left: 0.3rem solid $secondary;
+  }
 }
