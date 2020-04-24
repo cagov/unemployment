@@ -51,14 +51,14 @@ function TabPaneContent1() {
       <h4>Federal and military documents</h4>
       <ul>
         <li>
-          <strong>If you are a former federal employee,</strong> have your
-          Notice to Federal Employees About Unemployment Insurance (Standard
-          Form 8) ready.
+          <strong>If you are a former federal employee,</strong> have your{" "}
+          <i>Notice to Federal Employees About Unemployment Insurance</i>{" "}
+          (Standard Form 8) ready.
         </li>
         <li>
           <strong>If you served in the military in the last 18 months,</strong>{" "}
-          have your Certificate of Release or Discharge from Active Duty (DD
-          214) ready.
+          have your <i>Certificate of Release or Discharge from Active Duty</i>{" "}
+          (DD 214) ready.
         </li>
       </ul>
     </div>
