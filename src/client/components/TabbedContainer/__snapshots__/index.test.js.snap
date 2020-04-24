@@ -5,6 +5,7 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
   fluid={false}
 >
   <TabContainer
+    activeKey={0}
     defaultActiveKey="0"
     id="left-tabs-example"
   >
@@ -35,6 +36,8 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
               }
               disabled={false}
               eventKey={0}
+              href="#tab0Title"
+              onClick={[Function]}
             >
               tab0Title
             </NavLink>
@@ -52,6 +55,8 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
               }
               disabled={false}
               eventKey={1}
+              href="#tab1Title"
+              onClick={[Function]}
             >
               tab1Title
             </NavLink>
@@ -69,6 +74,8 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
               }
               disabled={false}
               eventKey={2}
+              href="#tab2Title"
+              onClick={[Function]}
             >
               tab2Title
             </NavLink>
@@ -86,6 +93,8 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
               }
               disabled={false}
               eventKey={3}
+              href="#tab3Title"
+              onClick={[Function]}
             >
               tab3Title
             </NavLink>
@@ -103,6 +112,8 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
               }
               disabled={false}
               eventKey={4}
+              href="#tab4Title"
+              onClick={[Function]}
             >
               tab4Title
             </NavLink>
@@ -120,6 +131,8 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
               }
               disabled={false}
               eventKey={5}
+              href="#tab5Title"
+              onClick={[Function]}
             >
               tab5Title
             </NavLink>
@@ -137,6 +150,8 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
               }
               disabled={false}
               eventKey={6}
+              href="#tab6Title"
+              onClick={[Function]}
             >
               tab6Title
             </NavLink>
@@ -151,43 +166,124 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
             eventKey={0}
             key="0"
           >
-            tab0Content
+            <h2>
+              tab0Title
+            </h2>
+            <TabPaneContent0 />
+            <Button
+              active={false}
+              disabled={false}
+              href="#tab1Title"
+              onClick={[Function]}
+              type="button"
+              variant="secondary"
+            >
+              buttonNextPrefixtab1Title
+            </Button>
           </TabPane>
           <TabPane
             eventKey={1}
             key="1"
           >
-            tab1Content
+            <h2>
+              tab1Title
+            </h2>
+            <TabPaneContent1 />
+            <Button
+              active={false}
+              disabled={false}
+              href="#tab2Title"
+              onClick={[Function]}
+              type="button"
+              variant="secondary"
+            >
+              buttonNextPrefixtab2Title
+            </Button>
           </TabPane>
           <TabPane
             eventKey={2}
             key="2"
           >
-            tab2Content
+            <h2>
+              tab2Title
+            </h2>
+            <TabPaneContent2 />
+            <Button
+              active={false}
+              disabled={false}
+              href="#tab3Title"
+              onClick={[Function]}
+              type="button"
+              variant="secondary"
+            >
+              buttonNextPrefixtab3Title
+            </Button>
           </TabPane>
           <TabPane
             eventKey={3}
             key="3"
           >
-            tab3Content
+            <h2>
+              tab3Title
+            </h2>
+            <TabPaneContent3 />
+            <Button
+              active={false}
+              disabled={false}
+              href="#tab4Title"
+              onClick={[Function]}
+              type="button"
+              variant="secondary"
+            >
+              buttonNextPrefixtab4Title
+            </Button>
           </TabPane>
           <TabPane
             eventKey={4}
             key="4"
           >
-            tab4Content
+            <h2>
+              tab4Title
+            </h2>
+            <TabPaneContent4 />
+            <Button
+              active={false}
+              disabled={false}
+              href="#tab5Title"
+              onClick={[Function]}
+              type="button"
+              variant="secondary"
+            >
+              buttonNextPrefixtab5Title
+            </Button>
           </TabPane>
           <TabPane
             eventKey={5}
             key="5"
           >
-            tab5Content
+            <h2>
+              tab5Title
+            </h2>
+            <TabPaneContent5 />
+            <Button
+              active={false}
+              disabled={false}
+              href="#tab6Title"
+              onClick={[Function]}
+              type="button"
+              variant="secondary"
+            >
+              buttonNextPrefixtab6Title
+            </Button>
           </TabPane>
           <TabPane
             eventKey={6}
             key="6"
           >
-            tab6Content
+            <h2>
+              tab6Title
+            </h2>
+            <TabPaneContent6 />
           </TabPane>
         </ForwardRef>
       </Col>
