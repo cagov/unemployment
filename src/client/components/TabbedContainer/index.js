@@ -5,7 +5,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Row from "react-bootstrap/Row";
 import Tab from "react-bootstrap/Tab";
-// We generate these tab names dynamically and assign them to TabePaneContentTagName
+// We generate these tab names dynamically and assign them to TabPaneContentTagName
 import TabPaneContent0 from "../TabPaneContent0"; // eslint-disable-line no-unused-vars
 import TabPaneContent1 from "../TabPaneContent1"; // eslint-disable-line no-unused-vars
 import TabPaneContent2 from "../TabPaneContent2"; // eslint-disable-line no-unused-vars
@@ -59,11 +59,7 @@ function TabbedContainer() {
 
   return (
     <Container>
-      <Tab.Container
-        id="left-tabs-example"
-        defaultActiveKey="0"
-        activeKey={activeKey}
-      >
+      <Tab.Container id="left-tabs" defaultActiveKey="0" activeKey={activeKey}>
         <Row className="tabbed-container">
           <Col sm={4} className="TabbedContainer">
             <Nav variant="pills" className="flex-column">
@@ -85,11 +81,11 @@ function TabbedContainer() {
           <Col sm={8}>
             <Tab.Content>
               {tabTitleKeys.map((value, index) => {
-                const TabePaneContentTagName = tabPaneContent[index];
+                const TabPaneContentTagName = tabPaneContent[index];
                 return (
                   <Tab.Pane eventKey={index} key={index}>
                     <h2>{t(value)}</h2>
-                    <TabePaneContentTagName />
+                    <TabPaneContentTagName />
                     {renderNextButton(index)}
                   </Tab.Pane>
                 );
