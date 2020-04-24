@@ -150,7 +150,7 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
             <h2>
               tab0Title
             </h2>
-            <TabPaneContent1 />
+            <TabPaneContent0 />
             <Button
               active={false}
               disabled={false}
