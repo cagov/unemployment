@@ -50,29 +50,34 @@ function TabPaneContent4() {
       <h5>About your EDD Debit Card</h5>
       <ul>
         <li>
-          If you were issued an EDD Debit Card in the last three years, you will
-          receive your benefit payments on that card. If your card has expired,
-          a new card will automatically be sent to you once funds are available.
+          <strong>
+            If you were issued an EDD Debit Card in the last three years
+          </strong>
+          , you will receive your benefit payments on that card. If your card
+          has expired, a new card will automatically be sent to you once funds
+          are available.
         </li>
         <li>
-          If you lost your EDD Debit Card, contact Bank of America at
-          1-866-692-9374 (TTY: 1-866-692-9374). It may be difficult to reach a
-          representative by phone due to high call volumes. We appreciate your
-          patience.
+          <strong>If you lost your EDD Debit Card</strong>, contact Bank of
+          America at 1-866-692-9374 (TTY: 1-866-692-9374). It may be difficult
+          to reach a representative by phone due to high call volumes. We
+          appreciate your patience.
         </li>
         <li>
-          Download the Bank of America Prepaid Card app from any app store to
-          keep track of your EDD Debit Card payments and balance information.
+          <strong>Download the Bank of America Prepaid Card app</strong> from
+          any app store to keep track of your EDD Debit Card payments and
+          balance information.
         </li>
         <li>
-          Note: Bank of America representatives cannot answer questions about
-          your claim or pending payments.{" "}
+          <strong>Note</strong>: Bank of America representatives cannot answer
+          questions about your claim or pending payments.{" "}
         </li>
       </ul>
       <h4>2. Certify your claim every two weeks</h4>
 
       <div className="highlight-blockquote">
-        Note: Certification is not required from March 14 through May 9, 2020.
+        <strong>Note:</strong> Certification is <strong>not required</strong>{" "}
+        from March 14 through May 9, 2020.
       </div>
 
       <p>
