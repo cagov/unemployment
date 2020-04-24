@@ -4,7 +4,7 @@ import React from "react";
 function TabPaneContent0() {
   // const { t } = useTranslation();
 
-  return <div>blah</div>;
+  return <div>I think this tab was deleted from the mockup?</div>;
 }
 
 export default TabPaneContent0;
