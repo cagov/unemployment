@@ -47,10 +47,9 @@ function TabPaneContent2() {
         </li>
       </ul>
       <div className="gray-box">
-        <p>
-          <h5>Tips for applying on UI Online</h5> These will help your claim get
-          processed faster.
-        </p>
+        <h5>Tips for applying on UI Online</h5>
+
+        <p>These will help your claim get processed faster.</p>
         <ul>
           <li>Include all employment information.</li>
           <li>Check for spelling errors or mismatched employer names.</li>

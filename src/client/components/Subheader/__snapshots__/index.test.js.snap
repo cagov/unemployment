@@ -20,6 +20,9 @@ exports[`<Subheader /> renders vertical navigation bar 1`] = `
     <p>
       subheaderParagraph
     </p>
+    <p>
+      subheaderParagraph2
+    </p>
     <Button
       active={false}
       disabled={false}

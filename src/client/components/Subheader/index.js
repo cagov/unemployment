@@ -15,6 +15,7 @@ function Subheader() {
           <b>{t("subheaderSubheader")}</b>
         </h5>
         <p>{t("subheaderParagraph")}</p>
+        <p>{t("subheaderParagraph2")}</p>
         <Button
           variant="secondary"
           href="https://portal.edd.ca.gov/WebApp/Login"
