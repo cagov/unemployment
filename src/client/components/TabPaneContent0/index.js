@@ -123,15 +123,15 @@ function TabPaneContent0() {
       <ul>
         <li>
           If you are unable to perform your normal work duties because you are
-          sick or quarantined, apply for{" "}
+          sick or quarantined,{" "}
           <a href="https://edd.ca.gov/Disability/DI_Claim_Process.htm">
-            Disability Insurance.
+            apply for Disability Insurance.
           </a>
         </li>
         <li>
-          If you are caring for someone who is sick, apply for{" "}
+          If you are caring for someone who is sick,{" "}
           <a href="https://edd.ca.gov/Disability/How_to_File_a_PFL_Claim_in_SDI_Online.htm">
-            Paid Family Leave.
+            apply for Paid Family Leave.
           </a>
         </li>
       </ul>
