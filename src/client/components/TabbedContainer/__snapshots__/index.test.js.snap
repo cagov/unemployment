@@ -137,25 +137,6 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
               tab5Title
             </NavLink>
           </NavItem>
-          <NavItem
-            key="6"
-          >
-            <NavLink
-              as={
-                Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "displayName": "SafeAnchor",
-                  "render": [Function],
-                }
-              }
-              disabled={false}
-              eventKey={6}
-              href="#tab6Title"
-              onClick={[Function]}
-            >
-              tab6Title
-            </NavLink>
-          </NavItem>
         </Nav>
       </Col>
       <Col
@@ -169,7 +150,7 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
             <h2>
               tab0Title
             </h2>
-            <TabPaneContent0 />
+            <TabPaneContent1 />
             <Button
               active={false}
               disabled={false}
@@ -265,25 +246,6 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
               tab5Title
             </h2>
             <TabPaneContent5 />
-            <Button
-              active={false}
-              disabled={false}
-              href="#tab6Title"
-              onClick={[Function]}
-              type="button"
-              variant="secondary"
-            >
-              buttonNextPrefixtab6Title
-            </Button>
-          </TabPane>
-          <TabPane
-            eventKey={6}
-            key="6"
-          >
-            <h2>
-              tab6Title
-            </h2>
-            <TabPaneContent6 />
           </TabPane>
         </ForwardRef>
       </Col>
