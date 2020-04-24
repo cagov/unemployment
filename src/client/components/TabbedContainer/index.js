@@ -30,6 +30,8 @@ function TabbedContainer() {
     "tab6Title",
   ];
 
+  // This mapping is needed because React doesn't allow strings as component names
+  // TODO(kalvin): find a less hacky way of getting content into these tab panes
   const tabPaneContent = {
     0: TabPaneContent0,
     1: TabPaneContent1,
