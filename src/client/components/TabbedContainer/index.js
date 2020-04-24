@@ -30,6 +30,16 @@ function TabbedContainer() {
     "tab6Title",
   ];
 
+  const tabPaneContent = {
+    0: TabPaneContent0,
+    1: TabPaneContent1,
+    2: TabPaneContent2,
+    3: TabPaneContent3,
+    4: TabPaneContent4,
+    5: TabPaneContent5,
+    6: TabPaneContent6,
+  };
+
   const [activeKey, setActiveKey] = useState(0);
 
   const renderNextButton = (index) => {
@@ -75,7 +85,7 @@ function TabbedContainer() {
           <Col sm={8}>
             <Tab.Content>
               {tabTitleKeys.map((value, index) => {
-                const TabePaneContentTagName = "TabPaneContent" + index;
+                const TabePaneContentTagName = tabPaneContent[index];
                 return (
                   <Tab.Pane eventKey={index} key={index}>
                     <h2>{t(value)}</h2>
