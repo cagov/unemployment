@@ -5,6 +5,14 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Row from "react-bootstrap/Row";
 import Tab from "react-bootstrap/Tab";
+// We generate these tab names dynamically and assign them to TabePaneContentTagName
+import TabPaneContent0 from "../TabPaneContent0"; // eslint-disable-line no-unused-vars
+import TabPaneContent1 from "../TabPaneContent1"; // eslint-disable-line no-unused-vars
+import TabPaneContent2 from "../TabPaneContent2"; // eslint-disable-line no-unused-vars
+import TabPaneContent3 from "../TabPaneContent3"; // eslint-disable-line no-unused-vars
+import TabPaneContent4 from "../TabPaneContent4"; // eslint-disable-line no-unused-vars
+import TabPaneContent5 from "../TabPaneContent5"; // eslint-disable-line no-unused-vars
+import TabPaneContent6 from "../TabPaneContent6"; // eslint-disable-line no-unused-vars
 import { useTranslation } from "react-i18next";
 
 function TabbedContainer() {
@@ -31,7 +39,6 @@ function TabbedContainer() {
         <Button
           variant="secondary"
           href={"#" + tabTitleKeys[index + 1]}
-          // TODO(kalvin): fix this very slight performance issue
           onClick={() => setActiveKey(activeKey + 1)}
         >
           {t("buttonNextPrefix") + t(tabTitleKeys[index + 1])}
@@ -68,9 +75,11 @@ function TabbedContainer() {
           <Col sm={8}>
             <Tab.Content>
               {tabTitleKeys.map((value, index) => {
+                const TabePaneContentTagName = "TabPaneContent" + index;
                 return (
                   <Tab.Pane eventKey={index} key={index}>
                     <h2>{t(value)}</h2>
+                    <TabePaneContentTagName />
                     {renderNextButton(index)}
                   </Tab.Pane>
                 );
