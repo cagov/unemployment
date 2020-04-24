@@ -77,7 +77,7 @@ function TabPaneContent2() {
         income for last year under the <strong>Natural Disasters</strong>{" "}
         question.
       </p>
-      <h5>If you were previously approved for UI</h5>
+      <h4>If you were previously approved for UI</h4>
       <p>
         <strong>Restart your old claim,</strong> then begin certifying every two
         weeks. If your UI application was approved within the past 12 months,
