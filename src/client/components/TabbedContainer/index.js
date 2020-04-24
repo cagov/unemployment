@@ -5,14 +5,13 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Row from "react-bootstrap/Row";
 import Tab from "react-bootstrap/Tab";
-// We generate these tab names dynamically and assign them to TabPaneContentTagName
-import TabPaneContent0 from "../TabPaneContent0"; // eslint-disable-line no-unused-vars
-import TabPaneContent1 from "../TabPaneContent1"; // eslint-disable-line no-unused-vars
-import TabPaneContent2 from "../TabPaneContent2"; // eslint-disable-line no-unused-vars
-import TabPaneContent3 from "../TabPaneContent3"; // eslint-disable-line no-unused-vars
-import TabPaneContent4 from "../TabPaneContent4"; // eslint-disable-line no-unused-vars
-import TabPaneContent5 from "../TabPaneContent5"; // eslint-disable-line no-unused-vars
-import TabPaneContent6 from "../TabPaneContent6"; // eslint-disable-line no-unused-vars
+import TabPaneContent0 from "../TabPaneContent0";
+import TabPaneContent1 from "../TabPaneContent1";
+import TabPaneContent2 from "../TabPaneContent2";
+import TabPaneContent3 from "../TabPaneContent3";
+import TabPaneContent4 from "../TabPaneContent4";
+import TabPaneContent5 from "../TabPaneContent5";
+import TabPaneContent6 from "../TabPaneContent6";
 import { useTranslation } from "react-i18next";
 
 function TabbedContainer() {
