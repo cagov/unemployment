@@ -18,7 +18,7 @@ function TabPaneContent3() {
         <li>
           If you're not new to the system, we will mail you a letter with your
           EDD Customer Account Number. Use this to verify your UI Online account
-          and prevent identification fraud. 
+          and prevent identification fraud.
         </li>
         <li>
           <strong>
