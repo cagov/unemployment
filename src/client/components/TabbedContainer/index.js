@@ -45,7 +45,7 @@ function TabbedContainer() {
     const sidebarOffset = tabbedContainer.current.offsetTop;
 
     try {
-      // new API - https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo
+      // smooth smooth scrolling for newer browsers
       window.scroll({
         top: sidebarOffset,
         left: 0,
@@ -57,7 +57,7 @@ function TabbedContainer() {
     }
   }, [activeTab]);
 
-  function LoadTab(tabIndex) {
+  function loadTab(tabIndex) {
     setActiveTab(tabIndex);
 
     return null;
@@ -70,7 +70,7 @@ function TabbedContainer() {
         <Button
           variant="secondary"
           href={"#" + tabTitleKeys[tabIndex + 1]}
-          onClick={() => LoadTab(tabIndex + 1)}
+          onClick={() => loadTab(tabIndex + 1)}
         >
           {t("buttonNextPrefix") + t(tabTitleKeys[tabIndex + 1])}
         </Button>
@@ -90,7 +90,7 @@ function TabbedContainer() {
                     <Nav.Link
                       eventKey={index}
                       href={"#" + value}
-                      onClick={() => LoadTab(index)}
+                      onClick={() => loadTab(index)}
                     >
                       {t(value)}
                     </Nav.Link>
@@ -106,7 +106,7 @@ function TabbedContainer() {
                 return (
                   <Tab.Pane eventKey={index} key={index}>
                     <h2>{t(value)}</h2>
-                    <TabPaneContentTagName loadTab={LoadTab} />
+                    <TabPaneContentTagName loadTab={loadTab} />
                     {renderNextButton(index)}
                   </Tab.Pane>
                 );

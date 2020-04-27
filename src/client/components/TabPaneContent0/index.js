@@ -43,7 +43,6 @@ function TabPaneContent0({ loadTab }) {
           href="#tab0Title"
           onClick={() => {
             loadTab(1);
-            return false;
           }}
         >
           Receive Your Benefits
@@ -150,7 +149,7 @@ function TabPaneContent0({ loadTab }) {
 }
 
 TabPaneContent0.propTypes = {
-  loadTab: PropTypes.any, // prop-types can't validate React Hooks yet
+  loadTab: PropTypes.func,
 };
 
 export default TabPaneContent0;
