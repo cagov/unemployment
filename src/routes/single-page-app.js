@@ -36,7 +36,7 @@ singlePageAppRouter.get("/*", (req, res) => {
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <title>Benefits Screener</title>
+      <title>Guide to applying for unemployment benefits</title>
       <meta name="description" content="" />
 
       <link rel="stylesheet" href="${cssURL}" />
