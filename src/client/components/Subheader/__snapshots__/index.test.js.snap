@@ -8,14 +8,10 @@ exports[`<Subheader /> renders vertical navigation bar 1`] = `
     className="container p-4"
   >
     <h2>
-      <b>
-        subheaderHeader
-      </b>
+      subheaderHeader
     </h2>
     <h5>
-      <b>
-        subheaderSubheader
-      </b>
+      subheaderSubheader
     </h5>
     <p>
       subheaderParagraph
