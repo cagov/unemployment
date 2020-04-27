@@ -38,7 +38,7 @@ function TabbedContainer() {
     5: TabPaneContent5,
   };
 
-  const [activeKey, setActiveKey] = useState(0);
+  const [activeTab, setActiveTab] = useState(0);
 
   const renderNextButton = (index) => {
     // Don't display the next button on the final tab
@@ -47,7 +47,7 @@ function TabbedContainer() {
         <Button
           variant="secondary"
           href={"#" + tabTitleKeys[index + 1]}
-          onClick={() => setActiveKey(activeKey + 1)}
+          onClick={() => setActiveTab(activeTab + 1)}
         >
           {t("buttonNextPrefix") + t(tabTitleKeys[index + 1])}
         </Button>
@@ -57,7 +57,7 @@ function TabbedContainer() {
 
   return (
     <Container>
-      <Tab.Container id="left-tabs" defaultActiveKey="0" activeKey={activeKey}>
+      <Tab.Container id="left-tabs" defaultActiveKey="0" activeKey={activeTab}>
         <Row className="tabbed-container">
           <Col sm={4} className="TabbedContainer">
             <Nav variant="pills" className="flex-column">
@@ -67,7 +67,7 @@ function TabbedContainer() {
                     <Nav.Link
                       eventKey={index}
                       href={"#" + value}
-                      onClick={() => setActiveKey(index)}
+                      onClick={() => setActiveTab(index)}
                     >
                       {t(value)}
                     </Nav.Link>
@@ -83,7 +83,7 @@ function TabbedContainer() {
                 return (
                   <Tab.Pane eventKey={index} key={index}>
                     <h2>{t(value)}</h2>
-                    <TabPaneContentTagName />
+                    <TabPaneContentTagName setActiveTab={setActiveTab} />
                     {renderNextButton(index)}
                   </Tab.Pane>
                 );
