@@ -13,12 +13,15 @@ const singlePageAppRouter = Router();
 singlePageAppRouter.get("/*", (req, res) => {
   const cssURL = getCdnPath(`/build/css/${manifestStyles["App.css"]}`);
 
-  const is404 = !Object.values(pageRoutes)
+  const shouldRedirect = !Object.values(pageRoutes)
     .map((r) => r.path)
     .includes(req.path);
-  const statusCode = is404 ? 404 : 200;
+  if (shouldRedirect) {
+      res.status(301).location(pageRoutes.home.path).send();
+      return;
+  }
 
-  res.status(statusCode).send(
+  res.status(200).send(
     `<!doctype html>
     <html lang="en">
     <head>
