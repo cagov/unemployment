@@ -40,8 +40,16 @@ function TabbedContainer() {
 
   const tabbedContainer = useRef(null);
   const [activeTab, setActiveTab] = useState(0);
+  const initialPageLoad = useRef(true);
 
+  // Scroll to the top of the sidebar when activeTab changes
   useEffect(() => {
+    // Don't scroll down to the top of the sidebar on initial page load
+    if (initialPageLoad.current) {
+      initialPageLoad.current = false;
+      return;
+    }
+
     const sidebarOffset = tabbedContainer.current.offsetTop;
 
     try {
