@@ -1,7 +1,8 @@
+import PropTypes from "prop-types";
 import React from "react";
 // import { useTranslation } from "react-i18next";
 
-function TabPaneContent0() {
+function TabPaneContent0({ setActiveTab }) {
   // const { t } = useTranslation();
 
   return (
@@ -37,8 +38,17 @@ function TabPaneContent0() {
         <li>Or, your previous UI claim has expired.</li>
       </ul>
       <p>
-        If you're already receiving UI, review Receive Your Benefits to learn
-        how your UI claim is affected by COVID-19.
+        If you're already receiving UI, review{" "}
+        <a
+          href="#tab0Title"
+          onClick={() => {
+            setActiveTab(1);
+            return false;
+          }}
+        >
+          Receive Your Benefits
+        </a>{" "}
+        to learn how your UI claim is affected by COVID-19.
       </p>
       <p>
         <a href="https://www.edd.ca.gov/Benefit_Programs_Online.htm">
@@ -138,5 +148,9 @@ function TabPaneContent0() {
     </div>
   );
 }
+
+TabPaneContent0.propTypes = {
+  setActiveTab: PropTypes.any, // prop-types can't validate React Hooks yet
+};
 
 export default TabPaneContent0;

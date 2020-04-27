@@ -150,7 +150,9 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
             <h2>
               tab0Title
             </h2>
-            <TabPaneContent0 />
+            <TabPaneContent0
+              setActiveTab={[Function]}
+            />
             <Button
               active={false}
               disabled={false}
@@ -169,7 +171,9 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
             <h2>
               tab1Title
             </h2>
-            <TabPaneContent1 />
+            <TabPaneContent1
+              setActiveTab={[Function]}
+            />
             <Button
               active={false}
               disabled={false}
@@ -188,7 +192,9 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
             <h2>
               tab2Title
             </h2>
-            <TabPaneContent2 />
+            <TabPaneContent2
+              setActiveTab={[Function]}
+            />
             <Button
               active={false}
               disabled={false}
@@ -207,7 +213,9 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
             <h2>
               tab3Title
             </h2>
-            <TabPaneContent3 />
+            <TabPaneContent3
+              setActiveTab={[Function]}
+            />
             <Button
               active={false}
               disabled={false}
@@ -226,7 +234,9 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
             <h2>
               tab4Title
             </h2>
-            <TabPaneContent4 />
+            <TabPaneContent4
+              setActiveTab={[Function]}
+            />
             <Button
               active={false}
               disabled={false}
@@ -245,7 +255,9 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
             <h2>
               tab5Title
             </h2>
-            <TabPaneContent5 />
+            <TabPaneContent5
+              setActiveTab={[Function]}
+            />
           </TabPane>
         </ForwardRef>
       </Col>
