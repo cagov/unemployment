@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import React from "react";
 // import { useTranslation } from "react-i18next";
 
-function TabPaneContent0({ setActiveTab }) {
+function TabPaneContent0({ loadTab }) {
   // const { t } = useTranslation();
 
   return (
@@ -42,8 +42,7 @@ function TabPaneContent0({ setActiveTab }) {
         <a
           href="#tab0Title"
           onClick={() => {
-            setActiveTab(1);
-            return false;
+            loadTab(1);
           }}
         >
           Receive Your Benefits
@@ -150,7 +149,7 @@ function TabPaneContent0({ setActiveTab }) {
 }
 
 TabPaneContent0.propTypes = {
-  setActiveTab: PropTypes.any, // prop-types can't validate React Hooks yet
+  loadTab: PropTypes.func,
 };
 
 export default TabPaneContent0;

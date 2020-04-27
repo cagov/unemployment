@@ -151,7 +151,7 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
               tab0Title
             </h2>
             <TabPaneContent0
-              setActiveTab={[Function]}
+              loadTab={[Function]}
             />
             <Button
               active={false}
@@ -172,7 +172,7 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
               tab1Title
             </h2>
             <TabPaneContent1
-              setActiveTab={[Function]}
+              loadTab={[Function]}
             />
             <Button
               active={false}
@@ -193,7 +193,7 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
               tab2Title
             </h2>
             <TabPaneContent2
-              setActiveTab={[Function]}
+              loadTab={[Function]}
             />
             <Button
               active={false}
@@ -214,7 +214,7 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
               tab3Title
             </h2>
             <TabPaneContent3
-              setActiveTab={[Function]}
+              loadTab={[Function]}
             />
             <Button
               active={false}
@@ -235,7 +235,7 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
               tab4Title
             </h2>
             <TabPaneContent4
-              setActiveTab={[Function]}
+              loadTab={[Function]}
             />
             <Button
               active={false}
@@ -256,7 +256,7 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
               tab5Title
             </h2>
             <TabPaneContent5
-              setActiveTab={[Function]}
+              loadTab={[Function]}
             />
           </TabPane>
         </ForwardRef>
