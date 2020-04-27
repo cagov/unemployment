@@ -2,8 +2,21 @@ import PropTypes from "prop-types";
 import React from "react";
 // import { useTranslation } from "react-i18next";
 
-function TabPaneContent0({ loadTab }) {
+function TabPaneContent0({ loadTab, tabSlugs, getTabTitle }) {
   // const { t } = useTranslation();
+
+  function ReceiveYourBenefitsLink() {
+    return (
+      <a
+        href={"#" + tabSlugs[4]}
+        onClick={() => {
+          loadTab(4);
+        }}
+      >
+        {getTabTitle(4)}
+      </a>
+    );
+  }
 
   return (
     <div>
@@ -38,16 +51,8 @@ function TabPaneContent0({ loadTab }) {
         <li>Your previous UI claim has expired.</li>
       </ul>
       <p>
-        If you're already receiving UI, review{" "}
-        <a
-          href="#tab0Title"
-          onClick={() => {
-            loadTab(1);
-          }}
-        >
-          Receive Your Benefits
-        </a>{" "}
-        to learn how your UI claim is affected by COVID-19.
+        If you're already receiving UI, review <ReceiveYourBenefitsLink /> to
+        learn how your UI claim is affected by COVID-19.
       </p>
       <h4>Pandemic Unemployment Assistance (PUA)</h4>
       <p>
@@ -134,6 +139,8 @@ function TabPaneContent0({ loadTab }) {
 
 TabPaneContent0.propTypes = {
   loadTab: PropTypes.func,
+  tabSlugs: PropTypes.arrayOf(PropTypes.string),
+  getTabTitle: PropTypes.func,
 };
 
 export default TabPaneContent0;

@@ -4,11 +4,13 @@
   "subheaderSubheader": "Learn what type of benefits you qualify for and how to apply for them.",
   "subheaderParagraph": "If you lost your job or had your hours reduced, and meet eligibility requirements, you may be eligible to receive Unemployment Insurance (UI) benefits from California’s Employment Development Department (EDD).",
   "subheaderParagraph2": "First register or login at Benefit Programs Online, then apply for unemployment benefits on UI Online.",
-  "tab0Title": "Benefits you can apply for",
-  "tab1Title": "What you need before you apply",
-  "tab2Title": "How to apply",
-  "tab3Title": "After you submit your application",
-  "tab4Title": "Receive your benefits",
-  "tab5Title": "More Resources",
+  "tabTitles": {
+    "0": "Benefits you can apply for",
+    "1": "What you need before you apply",
+    "2": "How to apply",
+    "3": "After you submit your application",
+    "4": "Receive your benefits",
+    "5": "More Resources"
+  },
   "buttonNextPrefix": "Next: "
 }
