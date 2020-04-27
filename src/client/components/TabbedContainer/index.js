@@ -16,27 +16,27 @@ import { useTranslation } from "react-i18next";
 function TabbedContainer() {
   const { t } = useTranslation();
 
-  // We write these out instead of generating them
-  // so we can find them easily when searching for keys in translation.json
-  const tabTitleKeys = [
-    "tab0Title",
-    "tab1Title",
-    "tab2Title",
-    "tab3Title",
-    "tab4Title",
-    "tab5Title",
+  // The number and order of items here need to correspond to
+  // tabTitles in translation.json
+  const tabSlugs = [
+    "benefits",
+    "before-you-apply",
+    "how-to-apply",
+    "after-you-submit",
+    "receive-benefits",
+    "more-resources",
   ];
 
   // This mapping is needed because React doesn't allow strings as component names
   // TODO(kalvin): find a less hacky way of getting content into these tab panes
-  const tabPaneContent = {
-    0: TabPaneContent0,
-    1: TabPaneContent1,
-    2: TabPaneContent2,
-    3: TabPaneContent3,
-    4: TabPaneContent4,
-    5: TabPaneContent5,
-  };
+  const tabPaneContent = [
+    TabPaneContent0,
+    TabPaneContent1,
+    TabPaneContent2,
+    TabPaneContent3,
+    TabPaneContent4,
+    TabPaneContent5,
+  ];
 
   const tabbedContainer = useRef(null);
   const [activeTab, setActiveTab] = useState(0);
@@ -63,16 +63,21 @@ function TabbedContainer() {
     return null;
   }
 
+  function getTabTitle(tabIndex) {
+    return t("tabTitles." + tabIndex);
+  }
+
   const renderNextButton = (tabIndex) => {
     // Don't display the next button on the final tab
-    if (tabIndex < tabTitleKeys.length - 1) {
+    if (tabIndex < tabSlugs.length - 1) {
+      const nextTabIndex = tabIndex + 1;
       return (
         <Button
           variant="secondary"
-          href={"#" + tabTitleKeys[tabIndex + 1]}
-          onClick={() => loadTab(tabIndex + 1)}
+          href={"#" + tabSlugs[nextTabIndex]}
+          onClick={() => loadTab(nextTabIndex)}
         >
-          {t("buttonNextPrefix") + t(tabTitleKeys[tabIndex + 1])}
+          {t("buttonNextPrefix") + getTabTitle(nextTabIndex)}
         </Button>
       );
     }
@@ -84,7 +89,7 @@ function TabbedContainer() {
         <Row className="tabbed-container">
           <Col sm={4} className="TabbedContainer">
             <Nav variant="pills" className="flex-column">
-              {tabTitleKeys.map((value, index) => {
+              {tabSlugs.map((value, index) => {
                 return (
                   <Nav.Item key={index}>
                     <Nav.Link
@@ -92,7 +97,7 @@ function TabbedContainer() {
                       href={"#" + value}
                       onClick={() => loadTab(index)}
                     >
-                      {t(value)}
+                      {getTabTitle(index)}
                     </Nav.Link>
                   </Nav.Item>
                 );
@@ -101,12 +106,16 @@ function TabbedContainer() {
           </Col>
           <Col sm={8}>
             <Tab.Content>
-              {tabTitleKeys.map((value, index) => {
+              {tabSlugs.map((value, index) => {
                 const TabPaneContentTagName = tabPaneContent[index];
                 return (
                   <Tab.Pane eventKey={index} key={index}>
-                    <h2>{t(value)}</h2>
-                    <TabPaneContentTagName loadTab={loadTab} />
+                    <h2>{getTabTitle(index)}</h2>
+                    <TabPaneContentTagName
+                      loadTab={loadTab}
+                      tabSlugs={tabSlugs}
+                      getTabTitle={getTabTitle}
+                    />
                     {renderNextButton(index)}
                   </Tab.Pane>
                 );
