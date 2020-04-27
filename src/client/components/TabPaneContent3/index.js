@@ -23,11 +23,11 @@ function TabPaneContent3() {
         <li>
           <strong>
             After you submit your initial application, EDD will confirm your
-            application and weekly benefit amount via email and postal mail.
+            application and weekly benefit amount via postal mail.
           </strong>{" "}
-          You might receive this within two weeks. We'll let you know what your
-          Weekly Benefit Amount (WBA) is, based on our wage records. For an
-          initial estimate of your weekly benefit amount, use our{" "}
+          You should receive this within two to four weeks. We'll let you know
+          what your Weekly Benefit Amount (WBA) is, based on our wage records.
+          For an initial estimate of your weekly benefit amount, use our{" "}
           <a href="https://www.edd.ca.gov/Unemployment/UI-Calculator.htm">
             UI benefit calculator
           </a>
@@ -53,8 +53,9 @@ function TabPaneContent3() {
           $167
         </strong>{" "}
         for claims starting February 2, 2020. Claims between March 30 to July 31
-        will have an additional, taxable $600. Your total benefits last for 39
-        weeks (including any regular UI you might qualify for).
+        will have an additional, taxable $600. Your total benefits will last for
+        39 weeks (including any regular UI and extended benefits you might
+        qualify for).
       </p>
       <p>
         <strong>
@@ -65,8 +66,9 @@ function TabPaneContent3() {
       </p>
 
       <p>
-        <strong>Note:</strong> Benefits are retroactive to the date you were
-        affected, regardless of when you submitted your claim application.
+        <strong>Note:</strong> You will be paid benefits from the date you
+        became unemployed as a result of COVID-19, regardless of when you
+        submitted your claim application.
       </p>
 
       <h4>2. Certify for your first benefit payment</h4>
@@ -75,7 +77,7 @@ function TabPaneContent3() {
         <strong>Note:</strong> Certification is <strong>not required</strong>{" "}
         from March 14 through May 9, 2020.
       </div>
-
+      <p>When you are required to certify, here’s what you’ll need to do:</p>
       <ul>
         <li>
           <strong>Certify your claim in UI Online</strong> once you're
@@ -100,9 +102,11 @@ function TabPaneContent3() {
           information:
         </p>
         <ul>
-          <li>Physically able to work?</li>
-          <li>Available for work?</li>
-          <li>Ready and willing to accept work immediately?</li>
+          <li>Are you physically able to work?</li>
+          <li>Are you available for work?</li>
+          <li>Are you ready and willing to accept work immediately?</li>
+          <li>Did you refuse work?</li>
+          <li>Did you work and earn wages?</li>
         </ul>
         <p>
           The fastest way to certify is on{" "}
@@ -117,6 +121,18 @@ function TabPaneContent3() {
           from March 14 through May 9, 2020.
         </div>
       </div>
+      <h4>3. Upload your resume in CalJOBS</h4>
+      <div className="highlight-blockquote">
+        <strong>Note:</strong> We understand that it’s a difficult time to look
+        for a job right now. You are currently <strong>not required</strong> to
+        upload your resume to CalJOBS, during the COVID-19 pandemic.
+      </div>
+      <p>
+        <a href="https://www.caljobs.ca.gov/vosnet/Default.aspx">
+          Upload your resume in CalJobs
+        </a>{" "}
+        within 21 days of submitting your application.{" "}
+      </p>
     </div>
   );
 }

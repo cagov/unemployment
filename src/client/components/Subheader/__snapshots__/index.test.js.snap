@@ -17,7 +17,7 @@ exports[`<Subheader /> renders vertical navigation bar 1`] = `
       subheaderParagraph
     </p>
     <p>
-      subheaderParagraph2
+      First register or login at Benefit Programs Online, then apply for unemployment benefits on UI Online℠.
     </p>
     <Button
       active={false}
