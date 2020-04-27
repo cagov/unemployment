@@ -56,7 +56,7 @@ function TabPaneContent2() {
           <li>Check for spelling errors or mismatched employer names.</li>
           <li>
             Confirm your Social Security number and California Driver’s License
-            or ID number. (Check that this information matches your tax forms.) 
+            or ID number. (Check that this information matches your tax forms.)
           </li>
           <li>
             <a href="https://www.irs.gov/taxtopics/tc157">
