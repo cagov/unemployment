@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
@@ -38,25 +38,48 @@ function TabbedContainer() {
     5: TabPaneContent5,
   };
 
+  const tabbedContainer = useRef(null);
   const [activeTab, setActiveTab] = useState(0);
 
-  const renderNextButton = (index) => {
+  useEffect(() => {
+    const sidebarOffset = tabbedContainer.current.offsetTop;
+
+    try {
+      // new API - https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo
+      window.scroll({
+        top: sidebarOffset,
+        left: 0,
+        behavior: "smooth",
+      });
+    } catch (error) {
+      // fallback for older browsers
+      window.scrollTo(0, sidebarOffset);
+    }
+  }, [activeTab]);
+
+  function LoadTab(tabIndex) {
+    setActiveTab(tabIndex);
+
+    return null;
+  }
+
+  const renderNextButton = (tabIndex) => {
     // Don't display the next button on the final tab
-    if (index < tabTitleKeys.length - 1) {
+    if (tabIndex < tabTitleKeys.length - 1) {
       return (
         <Button
           variant="secondary"
-          href={"#" + tabTitleKeys[index + 1]}
-          onClick={() => setActiveTab(activeTab + 1)}
+          href={"#" + tabTitleKeys[tabIndex + 1]}
+          onClick={() => LoadTab(tabIndex + 1)}
         >
-          {t("buttonNextPrefix") + t(tabTitleKeys[index + 1])}
+          {t("buttonNextPrefix") + t(tabTitleKeys[tabIndex + 1])}
         </Button>
       );
     }
   };
 
   return (
-    <Container>
+    <Container ref={tabbedContainer}>
       <Tab.Container id="left-tabs" defaultActiveKey="0" activeKey={activeTab}>
         <Row className="tabbed-container">
           <Col sm={4} className="TabbedContainer">
@@ -67,7 +90,7 @@ function TabbedContainer() {
                     <Nav.Link
                       eventKey={index}
                       href={"#" + value}
-                      onClick={() => setActiveTab(index)}
+                      onClick={() => LoadTab(index)}
                     >
                       {t(value)}
                     </Nav.Link>
@@ -83,7 +106,7 @@ function TabbedContainer() {
                 return (
                   <Tab.Pane eventKey={index} key={index}>
                     <h2>{t(value)}</h2>
-                    <TabPaneContentTagName setActiveTab={setActiveTab} />
+                    <TabPaneContentTagName loadTab={LoadTab} />
                     {renderNextButton(index)}
                   </Tab.Pane>
                 );
