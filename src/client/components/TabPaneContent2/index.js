@@ -25,7 +25,7 @@ function TabPaneContent2() {
         variant="secondary"
         href="https://www.edd.ca.gov/Benefit_Programs_Online.htm"
       >
-        Register or login at Benefits Programs Online
+        Register or log in at Benefits Programs Online
       </Button>
       <h4>2. Submit your application</h4>
       <h5>
@@ -41,9 +41,10 @@ function TabPaneContent2() {
         </li>
         <li>
           Submit the first date you were affected by COVID-19. We will back pay
-          you. PUA supports claims between February 2 and December 31, 2020.
-          Claims between March 30 and July 31, 2020 are eligible for an
-          additional, taxable $600.
+          you for the weeks you are eligible to receive benefits. PUA supports
+          claims between February 2, 2020 and December 26, 2020. Claims between
+          March 30 and July 25, 2020 are eligible for an additional, taxable
+          $600 every week.
         </li>
       </ul>
       <div className="gray-box">
@@ -54,9 +55,8 @@ function TabPaneContent2() {
           <li>Include all employment information.</li>
           <li>Check for spelling errors or mismatched employer names.</li>
           <li>
-            Confirm your Social Security number or California ID number. (Check
-            that this information matches your tax forms and match your driver
-            license or state ID.) 
+            Confirm your Social Security number and California Driver’s License
+            or ID number. (Check that this information matches your tax forms.) 
           </li>
           <li>
             <a href="https://www.irs.gov/taxtopics/tc157">
@@ -65,23 +65,21 @@ function TabPaneContent2() {
             </a>
           </li>
         </ul>
+        <div className="highlight-blockquote">
+          <strong>Note:</strong> For business owners, independent contractors,
+          self-employed workers, freelancers, gig workers: complete your
+          employment information under the{" "}
+          <strong>Additional Information</strong> section. Submit your net
+          annual income for last year under the{" "}
+          <strong>Natural Disasters</strong> question.
+        </div>
       </div>
-      <h4>
-        For business owners, independent contractors, self-employed workers,
-        freelancers, gig workers:
-      </h4>
-      <p>
-        Complete your employment information under the{" "}
-        <strong>Additional Information</strong> section. Submit your net annual
-        income for last year under the <strong>Natural Disasters</strong>{" "}
-        question.
-      </p>
       <h4>If you were previously approved for UI</h4>
       <p>
-        <strong>Restart your old claim,</strong> then begin certifying every two
-        weeks. If your UI application was approved within the past 12 months,
-        you don't submit a new application. If your claim is more than 12 months
-        old, you may need to file a new claim.
+        <strong>Restart your old claim</strong>. If your UI application was
+        approved within the past 12 months, you don't submit a new application.
+        If your claim is more than 12 months old, you will need to file a new
+        claim.
       </p>
     </div>
   );

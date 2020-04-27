@@ -21,15 +21,15 @@ function TabPaneContent1() {
         </li>
       </ul>
       <p>
-        You must be authorized to work in the US to receive UI or PUA. If you
-        are not a US citizen, have information from your employment
-        authorization document ready.
+        You must be authorized to work in the US to receive unemployment
+        benefits. If you are not a US citizen, have information from your
+        employment authorization document ready.
       </p>
       <h4>2. Information about your work history</h4>
       <p>
-        Your employment history affects the amount of benefits you receive each
-        week. Submitting accurate information helps us process your claim
-        faster. You will need:
+        Your work history affects the amount of benefits you receive each week.
+        Submitting accurate information helps us process your claim faster. You
+        will need:
       </p>
       <ul>
         <li>
@@ -43,9 +43,10 @@ function TabPaneContent1() {
           <strong>
             Specific information from your last employer or company.
           </strong>{" "}
-          This includes mailing address, phone number, supervisor’s name, total
-          wages you earned before taxes were taken out (gross wages) for the
-          last week you worked, and the reason for your change in employment.
+          This includes your employer’s name, mailing address, phone number,
+          supervisor’s name, total wages you earned before taxes were taken out
+          (gross wages) for the last week you worked, and the reason for your
+          unemployment.
         </li>
       </ul>
       <h4>Federal and military documents</h4>

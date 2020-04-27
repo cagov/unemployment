@@ -11,7 +11,10 @@ function Subheader() {
         <h2>{t("subheaderHeader")}</h2>
         <h5>{t("subheaderSubheader")}</h5>
         <p>{t("subheaderParagraph")}</p>
-        <p>{t("subheaderParagraph2")}</p>
+        <p>
+          First register or login at Benefit Programs Online, then apply for
+          unemployment benefits on UI Online&#x2120;.
+        </p>
         <Button
           variant="secondary"
           href="https://portal.edd.ca.gov/WebApp/Login"

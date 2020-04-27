@@ -6,12 +6,7 @@ function TabPaneContent4() {
 
   return (
     <div>
-      <p>
-        There is usually a one-week, unpaid waiting period between when you
-        first apply and when you may collect benefits. This week has been waived
-        for eligible COVID-19 claims.
-      </p>
-      <h4>1. We will issue you an EDD Debit Card</h4>
+      <h4>1. We will issue you an EDD Debit Card&#x2120;</h4>
 
       <p>
         Benefit payments for Unemployment Insurance, Pandemic Unemployment
@@ -82,7 +77,8 @@ function TabPaneContent4() {
 
       <p>
         To continue receiving benefit payments, you’ll need to certify your
-        unemployment status every two weeks.
+        unemployment status every two weeks via UI Online for the fastest and
+        most secure way to obtain benefits.
       </p>
 
       <div className="gray-box">
@@ -93,9 +89,11 @@ function TabPaneContent4() {
           information:
         </p>
         <ul>
-          <li>Physically able to work?</li>
-          <li>Available for work?</li>
-          <li>Ready and willing to accept work immediately?</li>
+          <li>Are you physically able to work?</li>
+          <li>Are you available for work?</li>
+          <li>Are you ready and willing to accept work immediately?</li>
+          <li>Did you refuse work?</li>
+          <li>Did you work and earn wages?</li>
         </ul>
         <p>
           The fastest way to certify is on{" "}
@@ -116,21 +114,25 @@ function TabPaneContent4() {
         $600 every week
       </h5>
       <p>
-        The EDD will automatically add $600 to each week of benefits certified
-        from March 30 to July 31, 2020. These funds are part of the Federal
-        Pandemic Unemployment Assistance (FPUC) program.
+        TThe EDD will automatically add $600 every week certified to eligible
+        claimants from March 30 to July 26, 2020. These funds are part of the
+        Federal Pandemic Unemployment Assistance (FPUC) program, also referred
+        to as Pandemic Additional Compensation (PAC).
       </p>
       <h5>UI benefit payments have been extended for COVID-19 claims</h5>
       <p>
-        The EDD normally provides 26 weeks of UI benefits, and will extend your
-        benefits an additional 13 weeks, to a total of 39 weeks. These funds are
-        part of the Pandemic Emergency Unemployment Compensation (PEUC) program.
+        The EDD provides up to 26 weeks of UI benefits to eligible claimants.
+        Once the EDD has implemented a new federal extended benefit program, you
+        may be eligible to extend your benefits an additional 13 weeks, to a
+        total of 39 weeks. These funds are part of the Pandemic Emergency
+        Unemployment Compensation (PEUC) program.
       </p>
 
       <p>
-        For existing UI claims that expire after March 29, 2020, your benefits
-        will be extended automatically. You will also be required to certify
-        your claim every two weeks.
+        The EDD is still working to implement this program which will take
+        effect retroactively to March 29, 2020. In the interim, individuals who
+        have exhausted their benefits on their regular UI claim may be eligible
+        to receive benefits on a PUA claim.
       </p>
     </div>
   );

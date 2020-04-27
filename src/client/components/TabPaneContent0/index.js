@@ -27,15 +27,15 @@ function TabPaneContent0({ setActiveTab }) {
       <ul>
         <li>Your employment status has been affected by COVID-19.</li>
         <li>
-          Or, you are fully or partially unemployed. This includes layoffs,
+          You are fully or partially unemployed. This includes layoffs,
           furloughs, reduced wages, or reduced hours. You can still receive
           unemployment benefits while working, depending on your pay.
         </li>
         <li>
-          Or, your child’s school is closed, and you need to miss work to care
-          for them.
+          Your child’s school is closed, and you need to miss work to care for
+          them.
         </li>
-        <li>Or, your previous UI claim has expired.</li>
+        <li>Your previous UI claim has expired.</li>
       </ul>
       <p>
         If you're already receiving UI, review{" "}
@@ -50,16 +50,7 @@ function TabPaneContent0({ setActiveTab }) {
         </a>{" "}
         to learn how your UI claim is affected by COVID-19.
       </p>
-      <p>
-        <a href="https://www.edd.ca.gov/Benefit_Programs_Online.htm">
-          Apply for unemployment insurance on UI Online.
-        </a>
-      </p>
       <h4>Pandemic Unemployment Assistance (PUA)</h4>
-      <p>
-        You may be eligible to receive PUA benefits if you don’t qualify for any
-        of the above benefits (regular UI, DI, or PFML).
-      </p>
       <p>
         Apply for PUA if you are a business owner, independent contractor,
         self-employed worker, freelancer, or gig worker and{" "}
@@ -73,27 +64,25 @@ function TabPaneContent0({ setActiveTab }) {
       <ul>
         <li>
           You have been diagnosed with COVID-19 or are experiencing symptoms and
-          are seeking a medical diagnosis
+          are seeking a medical diagnosis.
+        </li>
+        <li>A member of your household has been diagnosed with COVID-19.</li>
+        <li>
+          You are caring for a family member or a member of your household who
+          has been diagnosed with COVID-19.
         </li>
         <li>
-          Or, a member of your household has been diagnosed with COVID-19.
+          You are caring for a dependent because their school or another care
+          facility has closed due of COVID-19 and you are now caring for them
+          during the work day.
         </li>
         <li>
-          Or, you are caring for a family member or a member of your household
-          who has been diagnosed with COVID-19
+          Your healthcare provider has told you to self-quarantine because of
+          COVID-19.
         </li>
         <li>
-          Or, you are caring for a dependent because their school or another
-          care facility has closed due of COVID-19 and you are now caring for
-          them during the work day
-        </li>
-        <li>
-          Or, your healthcare provider has told you to self-quarantine because
-          of COVID-19
-        </li>
-        <li>
-          Or, you have become the main income provider due to a COVID-19 death
-          in your household
+          You have become the main income provider due to a COVID-19 death in
+          your household.
         </li>
       </ul>
       <h5>Criteria related to changes in employment status due to COVID-19</h5>
@@ -101,29 +90,24 @@ function TabPaneContent0({ setActiveTab }) {
         <li>
           You had a definite date to begin work, but the job is no longer
           available, or you could not reach the job as a direct result of
-          COVID-19
+          COVID-19.
         </li>
         <li>
-          Or, you are unable to travel to your job as a direct result of
-          COVID-19
+          You are unable to travel to your job as a direct result of COVID-19.
         </li>
-        <li>Or, you quit your job as a direct result of COVID-19</li>
-        <li>Or, your workplace is closed as a direct result of COVID-19</li>
+        <li>You quit your job as a direct result of COVID-19.</li>
+        <li>Your workplace is closed as a direct result of COVID-19.</li>
         <li>
-          Or, you work as an independent contractor (with reportable income,
-          such as a 1099) and you are unemployed, partially employed, or unable
-          to work because COVID-19 has forced you to stop working
+          You are self-employed or work as an independent contractor (with
+          reportable income, such as a 1099) and you are unemployed, partially
+          employed, or unable to work because COVID-19 has forced you to stop
+          working.
         </li>
         <li>
-          Or, your local government has enforced a stay at home order and you
-          cannot work from home
+          Your local government has enforced a stay at home order and you cannot
+          work from home.
         </li>
       </ul>
-      <p>
-        <a href="https://www.edd.ca.gov/Benefit_Programs_Online.htm">
-          Apply for unemployment insurance on UI Online.
-        </a>
-      </p>
       <h4>Disability Insurance (DI) or Paid Family Leave (PFL)</h4>
       <p>
         If you’re not eligible for UI, you may be eligible for Disability
@@ -134,7 +118,7 @@ function TabPaneContent0({ setActiveTab }) {
         <li>
           If you are unable to perform your normal work duties because you are
           sick or quarantined,{" "}
-          <a href="https://edd.ca.gov/Disability/DI_Claim_Process.htm">
+          <a href="https://edd.ca.gov/Disability/How_to_File_a_DI_Claim_in_SDI_Online.htm">
             apply for Disability Insurance.
           </a>
         </li>
