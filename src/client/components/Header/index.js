@@ -54,7 +54,7 @@ class Header extends React.PureComponent {
             />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse>
+          <Navbar.Collapse className="justify-content-between">
             <Nav.Link href="https://edd.ca.gov/jobs.htm">
               <span className="text-dark">Jobs</span>
             </Nav.Link>
