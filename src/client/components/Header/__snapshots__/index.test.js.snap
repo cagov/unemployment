@@ -617,7 +617,9 @@ exports[`<Header /> renders the header component 1`] = `
       aria-controls="responsive-navbar-nav"
       label="Toggle navigation"
     />
-    <NavbarCollapse>
+    <NavbarCollapse
+      className="justify-content-between"
+    >
       <NavLink
         as={
           Object {
