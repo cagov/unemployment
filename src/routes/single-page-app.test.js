@@ -1,5 +1,5 @@
-import request from "supertest";
 import { init } from "../app";
+import request from "supertest";
 
 const server = init();
 
