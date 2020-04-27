@@ -6,7 +6,7 @@
  */
 const routes = {
   home: {
-    path: "/"
+    path: "/guide"
     // We exclude the Home `component` so we can manually import it into pages/index.js
   }
 };
