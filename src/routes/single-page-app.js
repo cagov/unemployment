@@ -17,8 +17,8 @@ singlePageAppRouter.get("/*", (req, res) => {
     .map((r) => r.path)
     .includes(req.path);
   if (shouldRedirect) {
-      res.status(301).location(pageRoutes.home.path).send();
-      return;
+    res.status(301).location(pageRoutes.home.path).send();
+    return;
   }
 
   res.status(200).send(
