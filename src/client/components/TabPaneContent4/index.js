@@ -118,7 +118,7 @@ function TabPaneContent4() {
         $600 every week
       </h5>
       <p>
-        TThe EDD will automatically add $600 every week certified to eligible
+        The EDD will automatically add $600 every week certified to eligible
         claimants from March 30 to July 26, 2020. These funds are part of the
         Federal Pandemic Unemployment Assistance (FPUC) program, also referred
         to as Pandemic Additional Compensation (PAC).
