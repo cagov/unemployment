@@ -6,11 +6,11 @@ $secondary: #fdb81e !default; //yellowish gold
 
 $font-size-base: 1.2rem !default;
 
-$line-height-base:            1.7 !default;
-$line-height-sm:              1.45 !default;
-$line-height-lg:              2.2 !default;
+$line-height-base: 1.7 !default;
+$line-height-sm: 1.45 !default;
+$line-height-lg: 2.2 !default;
 
-$paragraph-margin-bottom:   1.2rem !default;
+$paragraph-margin-bottom: 1.2rem !default;
 
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap");
 
@@ -24,6 +24,18 @@ $font-family-sans-serif: "Source Sans Pro", sans-serif !default;
 @import "components/Footer/index";
 @import "components/TabbedContainer/index";
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight:bold;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: bold;
+}
+
+// Eliminate whitespace overflow on right half of mobile viewport
+// None of the usual solutions are compatible with sticky elements
+// But this solution is: https://stackoverflow.com/a/59019025/6074728
+#overflow-wrapper {
+	touch-action: pan-y pinch-zoom;
 }
