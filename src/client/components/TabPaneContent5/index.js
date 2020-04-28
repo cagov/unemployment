@@ -6,15 +6,16 @@ function TabPaneContent5() {
 
   return (
     <div>
+      <h5>Helpful links</h5>
       <p>
         <a href="https://edd.ca.gov/about_edd/coronavirus-2019/faqs.htm">
           Coronavirus (COVID-19) FAQs from EDD
         </a>
       </p>
       <p>
-        After you file your claim:{" "}
+        More details about what you need to do after you file your claim:{" "}
         <a href="https://edd.ca.gov/about_edd/coronavirus-2019/unemployment-claims.htm">
-          Post-Application: COVID-19 Unemployment Insurance Claims
+          COVID-19 Unemployment Insurance Claims
         </a>
       </p>
       <h4>New unemployment programs from the CARES Act</h4>

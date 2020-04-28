@@ -56,9 +56,9 @@ function TabPaneContent0({ loadTab, tabSlugs, getTabTitle }) {
       </p>
       <h4>Pandemic Unemployment Assistance (PUA)</h4>
       <p>
-        If you are a business owner, independent contractor, self-employed
-        worker, freelancer, or gig worker and only received a 1099 tax form last
-        year, you are most likely eligible for PUA instead of regular UI.
+        Starting April 28th, apply for PUA if you are a business owner,
+        independent contractor, self-employed worker, freelancer, or gig worker
+        and only received a 1099 tax form last year.
       </p>
       <p>
         To be eligible for PUA, you must meet <strong>any</strong> of the
@@ -102,7 +102,7 @@ function TabPaneContent0({ loadTab, tabSlugs, getTabTitle }) {
         </li>
         <li>
           You are caring for a dependent because their school or another care
-          facility has closed due of COVID-19 and you are now caring for them
+          facility has closed due to COVID-19 and you are now caring for them
           during the work day.
         </li>
         <li>
@@ -118,7 +118,8 @@ function TabPaneContent0({ loadTab, tabSlugs, getTabTitle }) {
       <p>
         If you’re not eligible for UI, you may be eligible for Disability
         Insurance (DI) or Paid Family Leave (PFL). You usually qualify if you
-        have a W-2 tax form.
+        have a W-2 tax form, because taxes have been taken out automatically to
+        pay for these programs.
       </p>
       <ul>
         <li>

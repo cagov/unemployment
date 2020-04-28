@@ -53,9 +53,9 @@ function TabPaneContent2() {
             or ID number. (Check that this information matches your tax forms.)
           </li>
           <li>
+            If you recently moved,{" "}
             <a href="https://www.irs.gov/taxtopics/tc157">
-              If you recently moved, make sure your address is current on the
-              IRS website.
+              make sure your address is current on the IRS website.
             </a>
           </li>
         </ul>

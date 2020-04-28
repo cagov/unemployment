@@ -10,7 +10,7 @@ function BPOButton() {
       onClick={() => logEvent("register-or-login")}
       target="_blank"
     >
-      Register or login at Benefits Programs Online
+      Register or log in at Benefits Programs Online
     </Button>
   );
 }
