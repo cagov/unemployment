@@ -71,8 +71,10 @@ function TabPaneContent4() {
       <h4>2. Certify your claim every two weeks</h4>
 
       <div className="highlight-blockquote">
-        <strong>Note:</strong> Certification is <strong>not required</strong>{" "}
-        from March 14 through May 9, 2020.
+        <strong>Note:</strong> Certification is <strong>not required</strong> at
+        this time for benefits with week ending dates of March 14 through May 9,
+        2020. The EDD will contact you at a later date to certify for these
+        weeks.
       </div>
 
       <p>
@@ -105,7 +107,9 @@ function TabPaneContent4() {
         </p>
         <div className="highlight-blockquote">
           <strong>Note:</strong> Certification is <strong>not required</strong>{" "}
-          from March 14 through May 9, 2020.
+          at this time for benefits with week ending dates of March 14 through
+          May 9, 2020. The EDD will contact you at a later date to certify for
+          these weeks.
         </div>
       </div>
 

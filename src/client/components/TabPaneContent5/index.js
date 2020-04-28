@@ -12,11 +12,6 @@ function TabPaneContent5() {
         </a>
       </p>
       <p>
-        <a href="https://edd.ca.gov/about_edd/coronavirus-2019/pandemic-unemployment-assistance.htm">
-          Pandemic Unemployment Assistance
-        </a>
-      </p>
-      <p>
         After you file your claim:{" "}
         <a href="https://edd.ca.gov/about_edd/coronavirus-2019/unemployment-claims.htm">
           Post-Application: COVID-19 Unemployment Insurance Claims
@@ -24,9 +19,9 @@ function TabPaneContent5() {
       </p>
       <h4>New unemployment programs from the CARES Act</h4>
       <p>
-        These programs expand the Unemployment Insurance (UI) benefits by
-        increasing the number of people who are eligible, increasing benefit
-        amounts, and extending the length of the program.
+        These programs expand Unemployment Insurance (UI) benefits by increasing
+        the number of people who are eligible, increasing benefit amounts, and
+        extending the length of the program.
       </p>
       <h5>Pandemic Unemployment Assistance (PUA)</h5>
       <p>
@@ -39,7 +34,11 @@ function TabPaneContent5() {
         It is also available to individuals who have exhausted their regular UI
         claims, are serving penalty weeks on their claim, or are subject to a
         disqualification. PUA supports claims between February 2 and December
-        31, 2020.
+        31, 2020.{" "}
+        <a href="https://edd.ca.gov/about_edd/coronavirus-2019/pandemic-unemployment-assistance.htm">
+          Read more about PUA
+        </a>
+        .
       </p>
       <h5>
         Federal Pandemic Unemployment Compensation (FPUC) or Pandemic Additional

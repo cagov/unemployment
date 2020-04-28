@@ -29,9 +29,9 @@ function TabPaneContent0({ loadTab, tabSlugs, getTabTitle }) {
       </p>
       <h4>Unemployment Insurance (UI)</h4>
       <p>
-        Apply for UI if you are a full-time worker at your company and{" "}
-        <strong>only</strong> received a W-2 tax form last year, or you received{" "}
-        <strong>both</strong> W-2 and 1099 tax forms last year.
+        If you are a full-time worker at your company and only received a W-2
+        tax form last year, or you received both W-2 and 1099 tax forms last
+        year, you are most likely eligible for UI.
       </p>
       <p>
         You may be eligible for regular Unemployment Insurance (UI) if you meet{" "}
@@ -56,15 +56,40 @@ function TabPaneContent0({ loadTab, tabSlugs, getTabTitle }) {
       </p>
       <h4>Pandemic Unemployment Assistance (PUA)</h4>
       <p>
-        Apply for PUA if you are a business owner, independent contractor,
-        self-employed worker, freelancer, or gig worker and{" "}
-        <strong>only</strong> received a 1099 tax form last year.
+        If you are a business owner, independent contractor, self-employed
+        worker, freelancer, or gig worker and only received a 1099 tax form last
+        year, you are most likely eligible for PUA instead of regular UI.
       </p>
       <p>
         To be eligible for PUA, you must meet <strong>any</strong> of the
         following criteria:
       </p>
-      <h5>Criteria related to health issues due to COVID-19</h5>
+      <h5>
+        Any criteria related to changes in employment status due to COVID-19
+      </h5>
+      <ul>
+        <li>
+          You had a definite date to begin work, but the job is no longer
+          available, or you could not reach the job as a direct result of
+          COVID-19.
+        </li>
+        <li>
+          You are unable to travel to your job as a direct result of COVID-19.
+        </li>
+        <li>You quit your job as a direct result of COVID-19.</li>
+        <li>Your workplace is closed as a direct result of COVID-19.</li>
+        <li>
+          You are self-employed or work as an independent contractor (with
+          reportable income, such as a 1099) and you are unemployed, partially
+          employed, or unable to work because COVID-19 has forced you to stop
+          working.
+        </li>
+        <li>
+          Your local government has enforced a stay at home order and you cannot
+          work from home.
+        </li>
+      </ul>
+      <h5>Any criteria related to health issues due to COVID-19</h5>
       <ul>
         <li>
           You have been diagnosed with COVID-19 or are experiencing symptoms and
@@ -87,29 +112,6 @@ function TabPaneContent0({ loadTab, tabSlugs, getTabTitle }) {
         <li>
           You have become the main income provider due to a COVID-19 death in
           your household.
-        </li>
-      </ul>
-      <h5>Criteria related to changes in employment status due to COVID-19</h5>
-      <ul>
-        <li>
-          You had a definite date to begin work, but the job is no longer
-          available, or you could not reach the job as a direct result of
-          COVID-19.
-        </li>
-        <li>
-          You are unable to travel to your job as a direct result of COVID-19.
-        </li>
-        <li>You quit your job as a direct result of COVID-19.</li>
-        <li>Your workplace is closed as a direct result of COVID-19.</li>
-        <li>
-          You are self-employed or work as an independent contractor (with
-          reportable income, such as a 1099) and you are unemployed, partially
-          employed, or unable to work because COVID-19 has forced you to stop
-          working.
-        </li>
-        <li>
-          Your local government has enforced a stay at home order and you cannot
-          work from home.
         </li>
       </ul>
       <h4>Disability Insurance (DI) or Paid Family Leave (PFL)</h4>
