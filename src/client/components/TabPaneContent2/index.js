@@ -13,7 +13,7 @@ function TabPaneContent2() {
           The fastest way to apply for all unemployment benefits is through UI
           Online. After you have registered for a Benefit Programs Online
           account, you can get started on UI Online.
-        </strong>
+        </strong>{" "}
         You can still apply for UI by{" "}
         <a href="https://edd.ca.gov/Unemployment/Filing_a_Claim.htm">
           phone, mail, or fax
