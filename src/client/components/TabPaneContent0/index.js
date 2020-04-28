@@ -56,9 +56,9 @@ function TabPaneContent0({ loadTab, tabSlugs, getTabTitle }) {
       </p>
       <h4>Pandemic Unemployment Assistance (PUA)</h4>
       <p>
-        If you are a business owner, independent contractor, self-employed
-        worker, freelancer, or gig worker and only received a 1099 tax form last
-        year, you are most likely eligible for PUA instead of regular UI.
+        Starting April 28th, apply for PUA if you are a business owner,
+        independent contractor, self-employed worker, freelancer, or gig worker
+        and only received a 1099 tax form last year.
       </p>
       <p>
         To be eligible for PUA, you must meet <strong>any</strong> of the
