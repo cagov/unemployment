@@ -1,5 +1,4 @@
-import Button from "react-bootstrap/Button";
-
+import BPOButton from "../BPOButton";
 import React from "react";
 // import { useTranslation } from "react-i18next";
 
@@ -21,12 +20,7 @@ function TabPaneContent2() {
         </a>
         .
       </p>
-      <Button
-        variant="secondary"
-        href="https://www.edd.ca.gov/Benefit_Programs_Online.htm"
-      >
-        Register or log in at Benefits Programs Online
-      </Button>
+      <BPOButton />
       <h4 className="pt-4">2. Submit your application</h4>
       <h5>
         Filling out employment information for COVID-19 claims in UI Online

@@ -19,15 +19,7 @@ exports[`<Subheader /> renders vertical navigation bar 1`] = `
     <p>
       First register or login at Benefit Programs Online, then apply for unemployment benefits on UI Online℠.
     </p>
-    <Button
-      active={false}
-      disabled={false}
-      href="https://portal.edd.ca.gov/WebApp/Login"
-      type="button"
-      variant="secondary"
-    >
-      subheaderButton
-    </Button>
+    <BPOButton />
   </div>
 </div>
 `;

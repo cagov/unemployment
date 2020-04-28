@@ -11,6 +11,7 @@ import TabPaneContent2 from "../TabPaneContent2";
 import TabPaneContent3 from "../TabPaneContent3";
 import TabPaneContent4 from "../TabPaneContent4";
 import TabPaneContent5 from "../TabPaneContent5";
+import logEvent from "../../utils.js";
 import { useTranslation } from "react-i18next";
 
 function TabbedContainer() {
@@ -43,6 +44,7 @@ function TabbedContainer() {
   const initialPageLoad = useRef(true);
 
   // Scroll to the top of the sidebar when activeTab changes
+  // and log tab change to Google Analytics
   useEffect(() => {
     // Don't scroll down to the top of the sidebar on initial page load
     if (initialPageLoad.current) {
@@ -67,12 +69,17 @@ function TabbedContainer() {
 
   function loadTab(tabIndex) {
     setActiveTab(tabIndex);
+    logEvent(getTabHashFragment(activeTab));
 
     return null;
   }
 
   function getTabTitle(tabIndex) {
     return t("tabTitles." + tabIndex);
+  }
+
+  function getTabHashFragment(tabIndex) {
+    return `#${tabSlugs[tabIndex]}`;
   }
 
   const renderNextButton = (tabIndex) => {
@@ -82,7 +89,7 @@ function TabbedContainer() {
       return (
         <Button
           variant="secondary"
-          href={"#" + tabSlugs[nextTabIndex]}
+          href={getTabHashFragment(nextTabIndex)}
           onClick={() => loadTab(nextTabIndex)}
         >
           {t("buttonNextPrefix") + getTabTitle(nextTabIndex)}
@@ -102,7 +109,7 @@ function TabbedContainer() {
                   <Nav.Item key={index}>
                     <Nav.Link
                       eventKey={index}
-                      href={"#" + value}
+                      href={getTabHashFragment(index)}
                       onClick={() => loadTab(index)}
                     >
                       {getTabTitle(index)}
@@ -120,9 +127,9 @@ function TabbedContainer() {
                   <Tab.Pane eventKey={index} key={index}>
                     <h2>{getTabTitle(index)}</h2>
                     <TabPaneContentTagName
+                      getTabTitle={getTabTitle}
                       loadTab={loadTab}
                       tabSlugs={tabSlugs}
-                      getTabTitle={getTabTitle}
                     />
                     {renderNextButton(index)}
                   </Tab.Pane>

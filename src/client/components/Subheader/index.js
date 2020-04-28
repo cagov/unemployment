@@ -1,4 +1,4 @@
-import Button from "react-bootstrap/Button";
+import BPOButton from "../BPOButton";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
@@ -15,12 +15,7 @@ function Subheader() {
           First register or login at Benefit Programs Online, then apply for
           unemployment benefits on UI Online&#x2120;.
         </p>
-        <Button
-          variant="secondary"
-          href="https://portal.edd.ca.gov/WebApp/Login"
-        >
-          {t("subheaderButton")}
-        </Button>
+        <BPOButton />
       </div>
     </div>
   );
