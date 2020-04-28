@@ -56,9 +56,10 @@ function TabPaneContent0({ loadTab, tabSlugs, getTabTitle }) {
       </p>
       <h4>Pandemic Unemployment Assistance (PUA)</h4>
       <p>
-        Starting April 28th, apply for PUA if you are a business owner,
-        independent contractor, self-employed worker, freelancer, or gig worker
-        and only received a 1099 tax form last year.
+        If you are a business owner, independent contractor, self-employed
+        worker, freelancer, or gig worker and only received a 1099 tax form last
+        year, you are most likely eligible for PUA. You can apply for benefits
+        starting April 28.
       </p>
       <p>
         To be eligible for PUA, you must meet <strong>any</strong> of the
@@ -83,10 +84,6 @@ function TabPaneContent0({ loadTab, tabSlugs, getTabTitle }) {
           reportable income, such as a 1099) and you are unemployed, partially
           employed, or unable to work because COVID-19 has forced you to stop
           working.
-        </li>
-        <li>
-          Your local government has enforced a stay at home order and you cannot
-          work from home.
         </li>
       </ul>
       <h5>Any criteria related to health issues due to COVID-19</h5>
