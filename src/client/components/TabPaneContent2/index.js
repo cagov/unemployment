@@ -21,7 +21,7 @@ function TabPaneContent2() {
         .
       </p>
       <BPOButton />
-      <h4>2. Submit your application</h4>
+      <h4 className="pt-4">2. Submit your application</h4>
       <h5>
         Filling out employment information for COVID-19 claims in UI Online
       </h5>
@@ -50,7 +50,7 @@ function TabPaneContent2() {
           <li>Check for spelling errors or mismatched employer names.</li>
           <li>
             Confirm your Social Security number and California Driver’s License
-            or ID number. (Check that this information matches your tax forms.) 
+            or ID number. (Check that this information matches your tax forms.)
           </li>
           <li>
             <a href="https://www.irs.gov/taxtopics/tc157">
@@ -71,9 +71,9 @@ function TabPaneContent2() {
       <h4>If you were previously approved for UI</h4>
       <p>
         <strong>Restart your old claim</strong>. If your UI application was
-        approved within the past 12 months, you don't submit a new application.
-        If your claim is more than 12 months old, you will need to file a new
-        claim.
+        approved within the past 12 months and you stopped receiving benefits,
+        you don't need to submit a new application. If your claim is more than
+        12 months old, you will need to file a new claim.
       </p>
     </div>
   );

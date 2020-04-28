@@ -12,22 +12,23 @@ function TabPaneContent3() {
       </h4>
       <ul>
         <li>
-          If you're new to the UI Online system, we'll email you to confirm your
-          registration.
+          You may receive an email confirming that you were automatically
+          registered in UI Online. This allows you to fully access information
+          about your claim and to certify for continued benefits online.
         </li>
         <li>
-          If you're not new to the system, we will mail you a letter with your
-          EDD Customer Account Number. Use this to verify your UI Online account
-          and prevent identification fraud. 
+          If you're not automatically registered in UI Online, you’ll receive a
+          notice in the mail with your EDD Customer Account Number. Use the
+          account number to finish registering for full UI Online access.
         </li>
         <li>
           <strong>
             After you submit your initial application, EDD will confirm your
             application and weekly benefit amount via postal mail.
           </strong>{" "}
-          You should receive this within two to four weeks. We'll let you know
-          what your Weekly Benefit Amount (WBA) is, based on our wage records.
-          For an initial estimate of your weekly benefit amount, use our{" "}
+          You should receive this within two weeks. We'll let you know what your
+          weekly benefit amount (WBA) is, based on our wage records. For an
+          initial estimate of your weekly benefit amount, use our{" "}
           <a href="https://www.edd.ca.gov/Unemployment/UI-Calculator.htm">
             UI benefit calculator
           </a>
@@ -42,10 +43,10 @@ function TabPaneContent3() {
         If this happens, we may need more time to process your claim.
       </p>
 
-      <h4>
+      <h5>
         For business owners, independent contractors, self-employed workers,
         freelancers, gig workers:
-      </h4>
+      </h5>
 
       <p>
         <strong>
@@ -74,8 +75,10 @@ function TabPaneContent3() {
       <h4>2. Certify for your first benefit payment</h4>
 
       <div className="highlight-blockquote">
-        <strong>Note:</strong> Certification is <strong>not required</strong>{" "}
-        from March 14 through May 9, 2020.
+        <strong>Note:</strong> Certification is <strong>not required</strong> at
+        this time for benefits with week ending dates of March 14 through May 9,
+        2020. The EDD will contact you at a later date to certify for these
+        weeks.
       </div>
       <p>When you are required to certify, here’s what you’ll need to do:</p>
       <ul>
@@ -118,7 +121,9 @@ function TabPaneContent3() {
         </p>
         <div className="highlight-blockquote">
           <strong>Note:</strong> Certification is <strong>not required</strong>{" "}
-          from March 14 through May 9, 2020.
+          at this time for benefits with week ending dates of March 14 through
+          May 9, 2020. The EDD will contact you at a later date to certify for
+          these weeks.
         </div>
       </div>
       <h4>3. Upload your resume in CalJOBS</h4>

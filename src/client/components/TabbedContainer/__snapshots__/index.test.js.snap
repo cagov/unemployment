@@ -18,7 +18,7 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
         sm={4}
       >
         <Nav
-          className="flex-column"
+          className="flex-column sidebar-sticky"
           fill={false}
           justify={false}
           variant="pills"

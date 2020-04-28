@@ -103,7 +103,7 @@ function TabbedContainer() {
       <Tab.Container id="left-tabs" defaultActiveKey="0" activeKey={activeTab}>
         <Row className="tabbed-container">
           <Col sm={4} className="TabbedContainer">
-            <Nav variant="pills" className="flex-column">
+            <Nav variant="pills" className="flex-column sidebar-sticky">
               {tabSlugs.map((value, index) => {
                 return (
                   <Nav.Item key={index}>
