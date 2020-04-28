@@ -14,10 +14,10 @@ function TabPaneContent1() {
       </p>
       <ul>
         <li>Social Security number</li>
-        <li>And, California driver license or identification (ID) card</li>
+        <li>California driver’s license OR identification (ID) card</li>
         <li>
-          And, citizenship status (this may include your Alien Registration
-          Number)
+          Be a US citizen OR have a green card OR have a visa that allows you to
+          work in the US OR have an Alien Registration Number
         </li>
       </ul>
       <p>

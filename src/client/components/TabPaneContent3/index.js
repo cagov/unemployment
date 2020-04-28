@@ -66,11 +66,11 @@ function TabPaneContent3() {
         increase you are entitled to receive.
       </p>
 
-      <p>
+      <div className="highlight-blockquote">
         <strong>Note:</strong> You will be paid benefits from the date you
         became unemployed as a result of COVID-19, regardless of when you
         submitted your claim application.
-      </p>
+      </div>
 
       <h4>2. Certify for your first benefit payment</h4>
 
