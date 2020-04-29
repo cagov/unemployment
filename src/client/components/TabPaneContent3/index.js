@@ -116,7 +116,7 @@ function TabPaneContent3() {
           <a href="https://portal.edd.ca.gov/WebApp/Login?resource_url=https%3A%2F%2Fportal.edd.ca.gov%2FWebApp%2FHome">
             UI Online
           </a>
-          . You can also do this by phone by calling 1-800-300-5616, or by
+          . You can also do this by phone by calling 1-866-333-4606, or by
           mailing the paper form.
         </p>
         <div className="highlight-blockquote">

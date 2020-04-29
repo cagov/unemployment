@@ -54,7 +54,7 @@ function TabPaneContent4() {
         </li>
         <li>
           <strong>If you lost your EDD Debit Card</strong>, contact Bank of
-          America at 1-866-692-9374 (TTY: 1-866-692-9374). It may be difficult
+          America at 1-866-692-9374 (TTY: 1-866-656-5913). It may be difficult
           to reach a representative by phone due to high call volumes. We
           appreciate your patience.
         </li>
@@ -114,7 +114,7 @@ function TabPaneContent4() {
       </div>
 
       <h5>
-        All claims from March 30 to July 31, 2020 will include an additional
+        All claims from March 29 to July 25, 2020 will include an additional
         $600 every week
       </h5>
       <p>
