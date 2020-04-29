@@ -54,17 +54,12 @@ function TabbedContainer() {
 
     const sidebarOffset = tabbedContainer.current.offsetTop;
 
-    try {
-      // smooth smooth scrolling for newer browsers
-      window.scroll({
-        top: sidebarOffset,
-        left: 0,
-        behavior: "smooth",
-      });
-    } catch (error) {
-      // fallback for older browsers
-      window.scrollTo(0, sidebarOffset);
-    }
+    // we use smoothscroll-polyfill for Edge/IE
+    window.scroll({
+      top: sidebarOffset,
+      left: 0,
+      behavior: "smooth",
+    });
   }, [activeTab]);
 
   function loadTab(tabIndex) {
