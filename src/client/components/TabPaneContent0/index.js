@@ -20,6 +20,47 @@ function TabPaneContent0({ loadTab, tabSlugs, getTabTitle }) {
 
   return (
     <div>
+      <div className="gray-box mt-0">
+        <h5>Tips for applying on UI Online</h5>
+        <ul>
+          <li>
+            Everyone (UI and PUA applicants) uses the same form.{" "}
+            <a href="https://www.edd.ca.gov/Benefit_Programs_Online.htm">
+              Register or log in with Benefit Programs Online
+            </a>{" "}
+            and click “File New Claim.”
+          </li>
+          <li>
+            File a new claim if you have already applied for UI but are eligible
+            for PUA because you are a business owner, independent contractor,
+            self-employed worker, freelancer, or gig worker affected by
+            COVID-19, <strong>and</strong> you have <strong>not</strong> already
+            appealed a $0 award notice, been asked to verify your identity, or
+            requested a wage investigation.
+          </li>
+          <li>
+            If you are a small business owner, independent contractor,
+            self-employed worker, freelancer, or gig worker, here’s how to
+            answer key questions in the application form:
+            <ul>
+              <li>
+                on the Employment History screen when you supply your last
+                employer information, select <strong>No</strong>.
+              </li>
+              <li>
+                on the Availability Information page, answer question 7 with{" "}
+                <strong>No</strong>.
+              </li>
+              <li>
+                on the Disaster Information page, answer question 1a.3 with “You
+                are an independent contractor.” If you got paid in cash, select
+                “None of these options apply to me.”
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <h4>Benefits you can apply for</h4>
       <p>
         These benefits are available for all California residents. If you are
         still unsure of your eligibility or what to apply for,{" "}
