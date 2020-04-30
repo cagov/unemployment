@@ -8,6 +8,7 @@ function Page() {
   return (
     <div id="overflow-wrapper">
       <Header />
+      {/* <main> triggers a React console warning in IE11, but only in development */}
       <main id="back-to-top">
         <Subheader />
         <TabbedContainer />
