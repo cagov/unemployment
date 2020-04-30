@@ -35,8 +35,9 @@ module.exports = (api) => {
           // Convert ES import/export syntax during tests, since Jest expects
           // CommonJS, not ES import/export syntax
           modules: api.env("test") ? "cjs" : false,
+          // tell babel to transpile to ES5 for older browsers
           targets: {
-            browsers: ["> 1%"],
+            browsers: ["> 1%"], // market share >1% includes IE11, for now
           },
           // replace the "core-js" and "regenerator-runtime/runtime" import
           // statements with specific polyfills
