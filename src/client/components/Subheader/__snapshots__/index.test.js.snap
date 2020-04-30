@@ -7,9 +7,9 @@ exports[`<Subheader /> renders vertical navigation bar 1`] = `
   <div
     className="container p-4"
   >
-    <h1>
+    <h2>
       subheaderHeader
-    </h1>
+    </h2>
     <p>
       subheaderSubheader
     </p>
