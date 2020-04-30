@@ -123,7 +123,7 @@ exports[`<Footer /> renders the footer component 1`] = `
         href="https://www.facebook.com/californiaedd/"
       >
         <img
-          alt="facebook icon"
+          alt="iconAltText.facebook"
           height="15"
           src="images/facebook.svg"
           width="15"
@@ -142,7 +142,7 @@ exports[`<Footer /> renders the footer component 1`] = `
         href="https://twitter.com/CA_EDD"
       >
         <img
-          alt="twitter icon"
+          alt="iconAltText.twitter"
           height="15"
           src="images/twitter.svg"
           width="15"
@@ -161,7 +161,7 @@ exports[`<Footer /> renders the footer component 1`] = `
         href="https://www.linkedin.com/company/californiaedd/"
       >
         <img
-          alt="linkedin icon"
+          alt="iconAltText.linkedIn"
           height="15"
           src="images/linkedin.svg"
           width="15"
@@ -180,7 +180,7 @@ exports[`<Footer /> renders the footer component 1`] = `
         href="https://www.instagram.com/ca_edd/"
       >
         <img
-          alt="instagram icon"
+          alt="iconAltText.instagram"
           height="15"
           src="images/instagram.svg"
           width="15"
@@ -199,7 +199,7 @@ exports[`<Footer /> renders the footer component 1`] = `
         href="https://www.youtube.com/user/CaliforniaEDDD"
       >
         <img
-          alt="youtube icon"
+          alt="iconAltText.youtube"
           height="15"
           src="images/youtube.svg"
           width="15"

@@ -38,7 +38,7 @@ exports[`<Header /> renders the header component 1`] = `
         href="https://edd.ca.gov"
       >
         <img
-          alt="home icon"
+          alt="iconAltText.home"
           height="15"
           src="images/home.svg"
           width="15"
@@ -60,7 +60,7 @@ exports[`<Header /> renders the header component 1`] = `
         href="https://edd.ca.gov/login.htm"
       >
         <img
-          alt="key icon"
+          alt="iconAltText.key"
           height="15"
           src="images/key.svg"
           width="15"
