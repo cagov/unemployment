@@ -1,8 +1,6 @@
-import IcomoonReact from "icomoon-react";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import React from "react";
-import iconSet from "../../../../public/icons.json";
 
 class Header extends React.PureComponent {
   render() {
@@ -24,21 +22,16 @@ class Header extends React.PureComponent {
           </Navbar.Brand>
           <Nav>
             <Nav.Link href="https://edd.ca.gov">
-              <IcomoonReact
-                iconSet={iconSet}
-                color="#ffffff"
-                size={15}
-                icon="home"
+              <img
+                src="images/home.svg"
+                width="15"
+                height="15"
+                alt="home icon"
               />{" "}
               <span>Home</span>
             </Nav.Link>
             <Nav.Link href="https://edd.ca.gov/login.htm">
-              <IcomoonReact
-                iconSet={iconSet}
-                color="#ffffff"
-                size={15}
-                icon="key"
-              />{" "}
+              <img src="images/key.svg" width="15" height="15" alt="key icon" />{" "}
               <span>Log In</span>
             </Nav.Link>
           </Nav>

@@ -1,9 +1,7 @@
 import Container from "react-bootstrap/Container";
-import IcomoonReact from "icomoon-react";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import React from "react";
-import iconSet from "../../../../public/icons.json";
 
 class Footer extends React.PureComponent {
   render() {
@@ -29,43 +27,43 @@ class Footer extends React.PureComponent {
           </Nav>
           <Nav>
             <Nav.Link href="https://www.facebook.com/californiaedd/">
-              <IcomoonReact
-                iconSet={iconSet}
-                color="#ffffff"
-                size={20}
-                icon="facebook"
+              <img
+                src="images/facebook.svg"
+                width="15"
+                height="15"
+                alt="facebook icon"
               />{" "}
             </Nav.Link>
             <Nav.Link href="https://twitter.com/CA_EDD">
-              <IcomoonReact
-                iconSet={iconSet}
-                color="#ffffff"
-                size={20}
-                icon="twitter"
+              <img
+                src="images/twitter.svg"
+                width="15"
+                height="15"
+                alt="twitter icon"
               />{" "}
             </Nav.Link>
             <Nav.Link href="https://www.linkedin.com/company/californiaedd/">
-              <IcomoonReact
-                iconSet={iconSet}
-                color="#ffffff"
-                size={20}
-                icon="linkedin2"
+              <img
+                src="images/linkedin.svg"
+                width="15"
+                height="15"
+                alt="linkedin icon"
               />{" "}
             </Nav.Link>
             <Nav.Link href="https://www.instagram.com/ca_edd/">
-              <IcomoonReact
-                iconSet={iconSet}
-                color="#ffffff"
-                size={20}
-                icon="instagram"
+              <img
+                src="images/instagram.svg"
+                width="15"
+                height="15"
+                alt="instagram icon"
               />{" "}
             </Nav.Link>
             <Nav.Link href="https://www.youtube.com/user/CaliforniaEDDD">
-              <IcomoonReact
-                iconSet={iconSet}
-                color="#ffffff"
-                size={20}
-                icon="youtube"
+              <img
+                src="images/youtube.svg"
+                width="15"
+                height="15"
+                alt="youtube icon"
               />{" "}
             </Nav.Link>
           </Nav>
