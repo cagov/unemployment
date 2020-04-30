@@ -1,3 +1,6 @@
+import "core-js/stable";
+import "regenerator-runtime/runtime";
+import "whatwg-fetch";
 import "./i18n";
 import App from "./App";
 import React from "react";
