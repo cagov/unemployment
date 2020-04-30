@@ -5,12 +5,12 @@ const transformDesignSystemImports = [
       transform:
         // eslint-disable-next-line no-template-curly-in-string
         "@cmsgov/design-system-core/dist/components/${member}/${member}",
-      preventFullImport: true
-    }
-  }
+      preventFullImport: true,
+    },
+  },
 ];
 
-module.exports = api => {
+module.exports = (api) => {
   /**
    * Cache based on the value of NODE_ENV. Any time the using callback returns
    * a value other than the one that was expected, the overall config function
@@ -22,8 +22,8 @@ module.exports = api => {
     env: {
       test: {
         // async/await fix for tests
-        plugins: ["@babel/plugin-transform-runtime"]
-      }
+        plugins: ["@babel/plugin-transform-runtime"],
+      },
     },
     presets: [
       [
@@ -35,12 +35,15 @@ module.exports = api => {
           // Convert ES import/export syntax during tests, since Jest expects
           // CommonJS, not ES import/export syntax
           modules: api.env("test") ? "cjs" : false,
+          targets: {
+            browsers: ["> 1%"],
+          },
           // replace the "core-js" and "regenerator-runtime/runtime" import
           // statements with specific polyfills
-          useBuiltIns: "entry"
-        }
+          useBuiltIns: "entry",
+        },
       ],
-      "@babel/preset-react"
+      "@babel/preset-react",
     ],
     plugins: [
       // Allow parsing of import()
@@ -50,16 +53,16 @@ module.exports = api => {
       [
         "@babel/plugin-proposal-object-rest-spread",
         {
-          useBuiltIns: true
-        }
+          useBuiltIns: true,
+        },
       ],
-      transformDesignSystemImports
-    ]
+      transformDesignSystemImports,
+    ],
   };
 
   if (api.env("production")) {
     config.plugins.push.apply(config.plugins, [
-      "babel-plugin-transform-react-remove-prop-types"
+      "babel-plugin-transform-react-remove-prop-types",
     ]);
   }
 

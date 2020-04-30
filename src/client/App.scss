@@ -44,3 +44,8 @@ h6 {
 #overflow-wrapper {
 	touch-action: pan-y pinch-zoom;
 }
+
+// Needed for IE11: https://stackoverflow.com/a/35820454/6074728
+main {
+	display: block;
+}
