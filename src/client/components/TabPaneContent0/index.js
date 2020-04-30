@@ -21,7 +21,7 @@ function TabPaneContent0({ loadTab, tabSlugs, getTabTitle }) {
   return (
     <div>
       <div className="gray-box mt-0">
-        <h5>Tips for applying on UI Online</h5>
+        <h3>Tips for applying on UI Online</h3>
         <ul>
           <li>
             Everyone (UI and PUA applicants) uses the same form.{" "}
@@ -60,7 +60,7 @@ function TabPaneContent0({ loadTab, tabSlugs, getTabTitle }) {
           </li>
         </ul>
       </div>
-      <h4>Benefits you can apply for</h4>
+      <h2>Benefits you can apply for</h2>
       <p>
         These benefits are available for all California residents. If you are
         still unsure of your eligibility or what to apply for,{" "}
@@ -68,7 +68,7 @@ function TabPaneContent0({ loadTab, tabSlugs, getTabTitle }) {
         Complete the application as best you can, and we will follow up with you
         as soon as possible.
       </p>
-      <h4>Unemployment Insurance (UI)</h4>
+      <h3>Unemployment Insurance (UI)</h3>
       <p>
         If you are a full-time worker at your company and only received a W-2
         tax form last year, or you received both W-2 and 1099 tax forms last
@@ -95,7 +95,7 @@ function TabPaneContent0({ loadTab, tabSlugs, getTabTitle }) {
         If you're already receiving UI, review <ReceiveYourBenefitsLink /> to
         learn how your UI claim is affected by COVID-19.
       </p>
-      <h4>Pandemic Unemployment Assistance (PUA)</h4>
+      <h3>Pandemic Unemployment Assistance (PUA)</h3>
       <p>
         If you are a business owner, independent contractor, self-employed
         worker, freelancer, or gig worker and only received a 1099 tax form last
@@ -106,9 +106,9 @@ function TabPaneContent0({ loadTab, tabSlugs, getTabTitle }) {
         To be eligible for PUA, you must meet <strong>any</strong> of the
         following criteria:
       </p>
-      <h5>
+      <h4>
         Any criteria related to changes in employment status due to COVID-19
-      </h5>
+      </h4>
       <ul>
         <li>
           You had a definite date to begin work, but the job is no longer
@@ -127,7 +127,7 @@ function TabPaneContent0({ loadTab, tabSlugs, getTabTitle }) {
           working.
         </li>
       </ul>
-      <h5>Any criteria related to health issues due to COVID-19</h5>
+      <h4>Any criteria related to health issues due to COVID-19</h4>
       <ul>
         <li>
           You have been diagnosed with COVID-19 or are experiencing symptoms and
@@ -152,7 +152,7 @@ function TabPaneContent0({ loadTab, tabSlugs, getTabTitle }) {
           your household.
         </li>
       </ul>
-      <h4>Disability Insurance (DI) or Paid Family Leave (PFL)</h4>
+      <h3>Disability Insurance (DI) or Paid Family Leave (PFL)</h3>
       <p>
         If you’re not eligible for UI, you may be eligible for Disability
         Insurance (DI) or Paid Family Leave (PFL). You usually qualify if you

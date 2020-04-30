@@ -6,9 +6,9 @@ function TabPaneContent1() {
 
   return (
     <div>
-      <h4>
+      <h3>
         1. Evidence of citizenship or authorization to work in the United States
-      </h4>
+      </h3>
       <p>
         You will need <strong>all</strong> of following:
       </p>
@@ -25,7 +25,7 @@ function TabPaneContent1() {
         benefits. If you are not a US citizen, have information from your
         employment authorization document ready.
       </p>
-      <h4>2. Information about your work history</h4>
+      <h3>2. Information about your work history</h3>
       <p>
         Your work history affects the amount of benefits you receive each week.
         Submitting accurate information helps us process your claim faster. You
@@ -49,7 +49,7 @@ function TabPaneContent1() {
           unemployment.
         </li>
       </ul>
-      <h4>Federal and military documents</h4>
+      <h3>Federal and military documents</h3>
       <ul>
         <li>
           <strong>If you are a former federal employee,</strong> have your{" "}

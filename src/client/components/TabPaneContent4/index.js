@@ -6,7 +6,7 @@ function TabPaneContent4() {
 
   return (
     <div>
-      <h4>1. We will issue you an EDD Debit Card&#x2120;</h4>
+      <h3>1. We will issue you an EDD Debit Card&#x2120;</h3>
 
       <p>
         Benefit payments for Unemployment Insurance, Pandemic Unemployment
@@ -42,7 +42,7 @@ function TabPaneContent4() {
         .
       </p>
 
-      <h5>About your EDD Debit Card</h5>
+      <h4>About your EDD Debit Card</h4>
       <ul>
         <li>
           <strong>
@@ -68,7 +68,7 @@ function TabPaneContent4() {
           questions about your claim or pending payments.{" "}
         </li>
       </ul>
-      <h4>2. Certify your claim every two weeks</h4>
+      <h3>2. Certify your claim every two weeks</h3>
 
       <div className="highlight-blockquote">
         <strong>Note:</strong> Certification is <strong>not required</strong> at
@@ -84,7 +84,7 @@ function TabPaneContent4() {
       </p>
 
       <div className="gray-box">
-        <h5>What is certification?</h5>
+        <h4>What is certification?</h4>
         <p>
           Certification is the required process of updating the EDD every two
           weeks with your unemployment status with basic eligibility
@@ -113,17 +113,17 @@ function TabPaneContent4() {
         </div>
       </div>
 
-      <h5>
+      <h4>
         All claims from March 29 to July 25, 2020 will include an additional
         $600 every week
-      </h5>
+      </h4>
       <p>
         The EDD will automatically add $600 every week certified to eligible
         claimants from March 30 to July 26, 2020. These funds are part of the
         Federal Pandemic Unemployment Assistance (FPUC) program, also referred
         to as Pandemic Additional Compensation (PAC).
       </p>
-      <h5>UI benefit payments have been extended for COVID-19 claims</h5>
+      <h4>UI benefit payments have been extended for COVID-19 claims</h4>
       <p>
         The EDD provides up to 26 weeks of UI benefits to eligible claimants.
         Once the EDD has implemented a new federal extended benefit program, you

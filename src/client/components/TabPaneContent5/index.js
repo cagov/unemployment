@@ -6,7 +6,7 @@ function TabPaneContent5() {
 
   return (
     <div>
-      <h5>Helpful links</h5>
+      <h3>Helpful links</h3>
       <p>
         <a href="https://edd.ca.gov/about_edd/coronavirus-2019/faqs.htm">
           Coronavirus (COVID-19) FAQs from EDD
@@ -18,13 +18,13 @@ function TabPaneContent5() {
           COVID-19 Unemployment Insurance Claims
         </a>
       </p>
-      <h4>New unemployment programs from the CARES Act</h4>
+      <h3>New unemployment programs from the CARES Act</h3>
       <p>
         These programs expand Unemployment Insurance (UI) benefits by increasing
         the number of people who are eligible, increasing benefit amounts, and
         extending the length of the program.
       </p>
-      <h5>Pandemic Unemployment Assistance (PUA)</h5>
+      <h4>Pandemic Unemployment Assistance (PUA)</h4>
       <p>
         <strong>
           This expands who can apply for Unemployment Insurance, due to
@@ -41,10 +41,10 @@ function TabPaneContent5() {
         </a>
         .
       </p>
-      <h5>
+      <h4>
         Federal Pandemic Unemployment Compensation (FPUC) or Pandemic Additional
         Compensation (PAC)
-      </h5>
+      </h4>
       <p>
         <strong>This provides an additional $600 per week</strong> to all
         recipients of Unemployment Insurance. It is retroactive for claims
@@ -52,7 +52,7 @@ function TabPaneContent5() {
         issued separately every two weeks. You may receive it at the same time
         as your UI benefits, or in a separate debit card.
       </p>
-      <h5>Pandemic Emergency Unemployment Compensation (PEUC)</h5>
+      <h4>Pandemic Emergency Unemployment Compensation (PEUC)</h4>
       <p>
         <strong>This provides an additional 13 weeks of benefits</strong> for
         all people receiving UI between March 29, 2020 to December 26, 2020.

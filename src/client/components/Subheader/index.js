@@ -9,7 +9,7 @@ function Subheader() {
     <div className="bg-light">
       <div className="container p-4">
         <h1>{t("subheaderHeader")}</h1>
-        <h2>{t("subheaderSubheader")}</h2>
+        <p>{t("subheaderSubheader")}</p>
         <p>{t("subheaderParagraph")}</p>
         <p>
           First register or log in at Benefit Programs Online, then apply for
