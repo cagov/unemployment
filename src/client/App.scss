@@ -12,6 +12,17 @@ $line-height-lg: 2.2 !default;
 
 $paragraph-margin-bottom: 1.2rem !default;
 
+//$h1-font-size:                $font-size-base * 2.5 !default;
+//$h2-font-size:                $font-size-base * 2 !default;
+//$h3-font-size:                $font-size-base * 1.75 !default;
+//$h4-font-size:                $font-size-base * 1.5 !default;
+//$h5-font-size:                $font-size-base * 1.25 !default;
+//$h6-font-size:                $font-size-base !default;
+
+$h1-font-size:                $font-size-base * 2.0 !default;
+$h2-font-size:                $font-size-base * 1.5 !default;
+$h3-font-size:                $font-size-base * 1.25 !default;
+
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap");
 
 $font-family-sans-serif: "Source Sans Pro", sans-serif !default;
@@ -30,7 +41,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 // Eliminate whitespace overflow on right half of mobile viewport
