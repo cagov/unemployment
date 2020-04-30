@@ -8,7 +8,7 @@ function Subheader() {
   return (
     <div className="bg-light">
       <div className="container p-4">
-        <h2>{t("subheaderHeader")}</h2>
+        <h1>{t("subheaderHeader")}</h1>
         <p>{t("subheaderSubheader")}</p>
         <p>{t("subheaderParagraph")}</p>
         <p>
