@@ -6,10 +6,10 @@ function TabPaneContent3() {
 
   return (
     <div>
-      <h4>
+      <h3>
         1. We'll confirm your application and weekly benefit amount via email
         and postal mail
-      </h4>
+      </h3>
       <ul>
         <li>
           You may receive an email confirming that you were automatically
@@ -43,10 +43,10 @@ function TabPaneContent3() {
         If this happens, we may need more time to process your claim.
       </p>
 
-      <h5>
+      <h4>
         For business owners, independent contractors, self-employed workers,
         freelancers, gig workers:
-      </h5>
+      </h4>
 
       <p>
         <strong>
@@ -66,13 +66,13 @@ function TabPaneContent3() {
         increase you are entitled to receive.
       </p>
 
-      <div className="highlight-blockquote">
+      <div className="highlight-blockquote mb-5">
         <strong>Note:</strong> You will be paid benefits from the date you
         became unemployed as a result of COVID-19, regardless of when you
         submitted your claim application.
       </div>
 
-      <h4>2. Certify for your first benefit payment</h4>
+      <h3>2. Certify for your first benefit payment</h3>
 
       <div className="highlight-blockquote">
         <strong>Note:</strong> Certification is <strong>not required</strong> at
@@ -98,7 +98,7 @@ function TabPaneContent3() {
       </ul>
 
       <div className="gray-box">
-        <h5>What is certification?</h5>
+        <h4>What is certification?</h4>
         <p>
           Certification is the required process of updating the EDD every two
           weeks with your unemployment status with basic eligibility
@@ -126,7 +126,7 @@ function TabPaneContent3() {
           these weeks.
         </div>
       </div>
-      <h4>3. Upload your resume in CalJOBS</h4>
+      <h3>3. Upload your resume in CalJOBS</h3>
       <div className="highlight-blockquote">
         <strong>Note:</strong> We understand that it’s a difficult time to look
         for a job right now. You are currently <strong>not required</strong> to

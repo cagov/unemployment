@@ -7,7 +7,7 @@ function TabPaneContent2() {
 
   return (
     <div>
-      <h4>1. Register with Benefit Programs Online</h4>
+      <h3>1. Register with Benefit Programs Online</h3>
       <p>
         <strong>
           The fastest way to apply for all unemployment benefits is through UI
@@ -21,10 +21,10 @@ function TabPaneContent2() {
         .
       </p>
       <BPOButton />
-      <h4 className="pt-4">2. Submit your application</h4>
-      <h5>
+      <h3 className="pt-4">2. Submit your application</h3>
+      <h4>
         Filling out employment information for COVID-19 claims in UI Online
-      </h5>
+      </h4>
       <ul>
         <li>
           If you have been laid off or had hours cut back as a direct result of
@@ -42,7 +42,7 @@ function TabPaneContent2() {
         </li>
       </ul>
       <div className="gray-box">
-        <h5>Tips for applying on UI Online</h5>
+        <h4>Tips for applying on UI Online</h4>
 
         <p>These will help your claim get processed faster.</p>
         <ul>
@@ -68,7 +68,7 @@ function TabPaneContent2() {
           <strong>Natural Disasters</strong> question.
         </div>
       </div>
-      <h4>If you were previously approved for UI</h4>
+      <h3>If you were previously approved for UI</h3>
       <p>
         <strong>Restart your old claim</strong>. If your UI application was
         approved within the past 12 months and you stopped receiving benefits,
