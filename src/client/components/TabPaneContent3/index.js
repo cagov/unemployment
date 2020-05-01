@@ -65,10 +65,7 @@ function TabPaneContent3() {
           Once we verify your income, your weekly benefit amount may increase
         </strong>
         . Any increase will also apply retroactively. We will notify you of any
-        increase you are entitled to receive.
-      </p>
-
-      <p>
+        increase you are entitled to receive.{" "}
         <a href="https://edd.ca.gov/about_edd/coronavirus-2019/pandemic-unemployment-assistance.htm">
           Read more about PUA.
         </a>
