@@ -26,7 +26,7 @@ function Header() {
               height="15"
               alt={t("iconAltText.home")}
             />{" "}
-            <span className="text">Home</span>
+            <span className="text">{t("header.home")}</span>
           </Nav.Link>
           <Nav.Link href="https://edd.ca.gov/login.htm">
             <span>
@@ -37,7 +37,7 @@ function Header() {
                 height="15"
                 alt={t("iconAltText.key")}
               />{" "}
-              <span className="text">Log In</span>
+              <span className="text">{t("header.login")}</span>
             </span>
           </Nav.Link>
         </Nav>
@@ -55,19 +55,19 @@ function Header() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse className="justify-content-between ml-5 pl-5 mr-5 pr-5">
           <Nav.Link href="https://edd.ca.gov/jobs.htm">
-            <span>Jobs</span>
+            <span>{t("header.jobs")}</span>
           </Nav.Link>
           <Nav.Link href="https://edd.ca.gov/claims.htm">
-            <span>Claims</span>
+            <span>{t("header.claims")}</span>
           </Nav.Link>
           <Nav.Link href="https://edd.ca.gov/employers.htm">
-            <span>Employers</span>
+            <span>{t("header.employers")}</span>
           </Nav.Link>
           <Nav.Link href="https://edd.ca.gov/newsroom.htm">
-            <span>Newsroom</span>
+            <span>{t("header.newsroom")}</span>
           </Nav.Link>
           <Nav.Link href="https://edd.ca.gov/serp.html?q=">
-            <span>Search</span>
+            <span>{t("header.search")}</span>
           </Nav.Link>
         </Navbar.Collapse>
       </Navbar>

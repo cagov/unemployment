@@ -27,7 +27,7 @@ exports[`<Footer /> renders the footer component 1`] = `
         disabled={false}
         href="#back-to-top"
       >
-        Back to Top
+        footer.toTop
       </NavLink>
       <NavLink
         as={
@@ -40,7 +40,7 @@ exports[`<Footer /> renders the footer component 1`] = `
         disabled={false}
         href="https://edd.ca.gov/about_edd/"
       >
-        About EDD
+        footer.about
       </NavLink>
       <NavLink
         as={
@@ -53,7 +53,7 @@ exports[`<Footer /> renders the footer component 1`] = `
         disabled={false}
         href="https://edd.ca.gov/about_edd/contact_edd.htm"
       >
-        Contact EDD
+        footer.contact
       </NavLink>
       <NavLink
         as={
@@ -66,7 +66,7 @@ exports[`<Footer /> renders the footer component 1`] = `
         disabled={false}
         href="https://edd.ca.gov/about_edd/conditions_of_use.htm"
       >
-        Conditions of Use
+        footer.conditionsOfUse
       </NavLink>
       <NavLink
         as={
@@ -79,7 +79,7 @@ exports[`<Footer /> renders the footer component 1`] = `
         disabled={false}
         href="https://edd.ca.gov/about_edd/privacy_policy.htm"
       >
-        Privacy Policy
+        footer.privacyPolicy
       </NavLink>
       <NavLink
         as={
@@ -92,7 +92,7 @@ exports[`<Footer /> renders the footer component 1`] = `
         disabled={false}
         href="https://edd.ca.gov/about_edd/accessibility.htm"
       >
-        Accessibility
+        footer.accessibility
       </NavLink>
       <NavLink
         as={
@@ -105,7 +105,7 @@ exports[`<Footer /> renders the footer component 1`] = `
         disabled={false}
         href="https://edd.ca.gov/sitemap.htm"
       >
-        Site Map
+        footer.siteMap
       </NavLink>
     </Nav>
     <Nav
@@ -216,7 +216,7 @@ exports[`<Footer /> renders the footer component 1`] = `
     <Container
       fluid={false}
     >
-      Copyright © 2020 State of California
+      footer.copyright
     </Container>
   </div>
 </footer>
