@@ -1,5 +1,18 @@
+// This code is to ensure that our footer stays at the bottom of the page.
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin-bottom: 120px;
+}
 
 .footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
   .navbar-custom .navbar-nav .nav-link {
     color: #ffffff;
     font-size: 16px;

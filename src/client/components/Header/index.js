@@ -53,7 +53,7 @@ function Header() {
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse className="justify-content-between ml-5 pl-5 mr-5 pr-5">
+        <Navbar.Collapse className="justify-content-between ml-5 mr-5 pl-5">
           <Nav.Link href="https://edd.ca.gov/jobs.htm">
             <span>{t("header.jobs")}</span>
           </Nav.Link>

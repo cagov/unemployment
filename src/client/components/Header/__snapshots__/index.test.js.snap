@@ -100,7 +100,7 @@ exports[`<Header /> renders the header component 1`] = `
       label="Toggle navigation"
     />
     <NavbarCollapse
-      className="justify-content-between ml-5 pl-5 mr-5 pr-5"
+      className="justify-content-between ml-5 mr-5 pl-5"
     >
       <NavLink
         as={
