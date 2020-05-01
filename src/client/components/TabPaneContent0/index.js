@@ -45,11 +45,11 @@ function TabPaneContent0({ loadTab, tabSlugs, getTabTitle }) {
             <ul>
               <li>
                 On the Employment History screen when you supply your last
-                employer information, select <strong>"No"</strong>.
+                employer information, select "No".
               </li>
               <li>
-                On the Availability Information page, answer question 7 with{" "}
-                <strong>"No"</strong>.
+                On the Availability Information page, answer question 7 with
+                "No".
               </li>
               <li>
                 On the Disaster Information page, answer question 1a.3 with “You
