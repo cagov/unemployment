@@ -55,9 +55,10 @@ function TabPaneContent3() {
           If you qualify for PUA, your initial weekly benefit amount will be
           $167
         </strong>{" "}
-        for claims starting February 2, 2020. Claims between March 29 to July 25
-        will have an additional $600. Your total benefits will last for 39 weeks
-        (including any regular UI and extended benefits you might qualify for).
+        for claims starting February 2, 2020. Claims between March 29 to July
+        25, 2020 will have an additional $600. Your total benefits will last for
+        39 weeks (including any regular UI and extended benefits you might
+        qualify for).
       </p>
       <p>
         <strong>
