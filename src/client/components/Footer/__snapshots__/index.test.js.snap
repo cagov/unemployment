@@ -209,7 +209,7 @@ exports[`<Footer /> renders the footer component 1`] = `
     </Nav>
   </Navbar>
   <div
-    className="bg-light"
+    className="bg-light secondary-footer"
   >
     <Container
       fluid={false}

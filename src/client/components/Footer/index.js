@@ -70,7 +70,7 @@ function Footer() {
           </Nav.Link>
         </Nav>
       </Navbar>
-      <div className="bg-light">
+      <div className="bg-light secondary-footer">
         <Container>Copyright © 2020 State of California</Container>
       </div>
     </footer>

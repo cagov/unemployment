@@ -14,57 +14,60 @@ function Header() {
             src="images/Ca-Gov-Logo-Gold.svg"
             width="30"
             height="30"
-            className="d-inline-block align-top"
             alt={t("iconAltText.caGov")}
           />
         </Navbar.Brand>
         <Nav>
           <Nav.Link href="https://edd.ca.gov">
             <img
+              className="icon"
               src="images/home.svg"
               width="15"
               height="15"
               alt={t("iconAltText.home")}
             />{" "}
-            <span>Home</span>
+            <span className="text">Home</span>
           </Nav.Link>
           <Nav.Link href="https://edd.ca.gov/login.htm">
-            <img
-              src="images/key.svg"
-              width="15"
-              height="15"
-              alt={t("iconAltText.key")}
-            />{" "}
-            <span>Log In</span>
+            <span>
+              <img
+                className="icon"
+                src="images/key.svg"
+                width="15"
+                height="15"
+                alt={t("iconAltText.key")}
+              />{" "}
+              <span className="text">Log In</span>
+            </span>
           </Nav.Link>
         </Nav>
       </Navbar>
-      <Navbar className="" collapseOnSelect expand="md" variant="light">
+      <Navbar collapseOnSelect expand="md" variant="light">
         <Navbar.Brand href="https://edd.ca.gov">
           <img
             src="images/edd-logo-2-Color.svg"
             height="50"
             width="150"
-            className="d-inline-block align-top"
+            className="d-inline-block align-top mr-5"
             alt={t("iconAltText.caGov")}
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse className="justify-content-between">
+        <Navbar.Collapse className="justify-content-between ml-5 pl-5 mr-5 pr-5">
           <Nav.Link href="https://edd.ca.gov/jobs.htm">
-            <span className="text-dark">Jobs</span>
+            <span>Jobs</span>
           </Nav.Link>
           <Nav.Link href="https://edd.ca.gov/claims.htm">
-            <span className="text-dark">Claims</span>
+            <span>Claims</span>
           </Nav.Link>
           <Nav.Link href="https://edd.ca.gov/employers.htm">
-            <span className="text-dark">Employers</span>
+            <span>Employers</span>
           </Nav.Link>
           <Nav.Link href="https://edd.ca.gov/newsroom.htm">
-            <span className="text-dark">Newsroom</span>
+            <span>Newsroom</span>
           </Nav.Link>
           <Nav.Link href="https://edd.ca.gov/serp.html?q=">
-            <span className="text-dark">Search</span>
+            <span>Search</span>
           </Nav.Link>
         </Navbar.Collapse>
       </Navbar>
