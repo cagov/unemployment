@@ -10,7 +10,7 @@ function Footer() {
   return (
     <footer className="footer">
       <Navbar className="justify-content-between" variant="custom" bg="dark">
-        <Nav>
+        <Nav className="flex-wrap">
           <Nav.Link href="#back-to-top">Back to Top</Nav.Link>
           <Nav.Link href="https://edd.ca.gov/about_edd/">About EDD</Nav.Link>
           <Nav.Link href="https://edd.ca.gov/about_edd/contact_edd.htm">
@@ -27,7 +27,7 @@ function Footer() {
           </Nav.Link>
           <Nav.Link href="https://edd.ca.gov/sitemap.htm">Site Map</Nav.Link>
         </Nav>
-        <Nav>
+        <Nav className="flex-wrap">
           <Nav.Link href="https://www.facebook.com/californiaedd/">
             <img
               src="images/facebook.svg"
