@@ -15,7 +15,7 @@ function Header() {
             width="30"
             height="30"
             className="d-inline-block align-top"
-            alt="California gov logo"
+            alt={t("iconAltText.caGov")}
           />
         </Navbar.Brand>
         <Nav>
@@ -46,7 +46,7 @@ function Header() {
             height="50"
             width="150"
             className="d-inline-block align-top"
-            alt="California gov logo"
+            alt={t("iconAltText.caGov")}
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
