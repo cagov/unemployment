@@ -65,10 +65,7 @@ function TabPaneContent3() {
           Once we verify your income, your weekly benefit amount may increase
         </strong>
         . Any increase will also apply retroactively. We will notify you of any
-        increase you are entitled to receive.
-      </p>
-
-      <p>
+        increase you are entitled to receive.{" "}
         <a href="https://edd.ca.gov/about_edd/coronavirus-2019/pandemic-unemployment-assistance.htm">
           Read more about PUA.
         </a>
@@ -133,17 +130,12 @@ function TabPaneContent3() {
           weeks.
         </div>
       </div>
-      <h3>3. Upload your resume in CalJOBS&#x2120;</h3>
-      <div className="highlight-blockquote">
-        <strong>Note:</strong> We understand that it’s a difficult time to look
-        for a job right now. You are currently <strong>not required</strong> to
-        upload your resume to CalJOBS, during the COVID-19 pandemic.
-      </div>
+      <h3>3. Upload your resume in CalJOBS&#x2120; (Optional)</h3>
       <p>
-        <a href="https://www.caljobs.ca.gov/vosnet/Default.aspx">
-          Upload your resume in CalJobs
-        </a>{" "}
-        within 21 days of submitting your application.{" "}
+        We understand that it’s a difficult time to look for a job right now.
+        You are <strong>currently not</strong> required to upload your resume to{" "}
+        <a href="https://www.caljobs.ca.gov/vosnet/Default.aspx">CalJOBS</a>,
+        during the COVID-19 pandemic.
       </p>
     </div>
   );
