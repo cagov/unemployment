@@ -9,7 +9,7 @@ function TabPaneContent5() {
       <h3>Helpful links</h3>
       <p>
         <a href="https://edd.ca.gov/about_edd/coronavirus-2019/faqs.htm">
-          Coronavirus (COVID-19) FAQs from EDD
+          Coronavirus (COVID-19) FAQs
         </a>
       </p>
       <p>
@@ -26,16 +26,12 @@ function TabPaneContent5() {
       </p>
       <h4>Pandemic Unemployment Assistance (PUA)</h4>
       <p>
-        <strong>
-          This expands who can apply for Unemployment Insurance, due to
-          COVID-19.
-        </strong>{" "}
+        <strong>This expands who can apply for UI, due to COVID-19.</strong>{" "}
         This includes business owners, independent contractors, self-employed
         workers, freelancers, gig workers and people with limited work history.
-        It is also available to individuals who have exhausted their regular UI
-        claims, are serving penalty weeks on their claim, or are subject to a
-        disqualification. PUA supports claims between February 2 and December
-        31, 2020.{" "}
+        It is also available to people who have exhausted their regular UI
+        claims, are serving penalty weeks on their claim, or whose claim may be
+        disqualified. PUA supports claims between February 2 and December, 2020.{" "}
         <a href="https://edd.ca.gov/about_edd/coronavirus-2019/pandemic-unemployment-assistance.htm">
           Read more about PUA
         </a>
@@ -46,23 +42,24 @@ function TabPaneContent5() {
         Compensation (PAC)
       </h4>
       <p>
-        <strong>This provides an additional $600 per week</strong> to all
-        recipients of Unemployment Insurance. It is retroactive for claims
-        between March 29, 2020 and July 26, 2020. This taxable $600 benefit is
-        issued separately every two weeks. You may receive it at the same time
-        as your UI benefits, or in a separate debit card.
+        <strong>This provides an additional $600 per week</strong> to people
+        receiving UI benefits. It is retroactive for claims between March 29 and
+        July 25, 2020. This $600 benefit is issued every two weeks. You will
+        receive it at the same time as your UI or PUA benefits.
       </p>
       <h4>Pandemic Emergency Unemployment Compensation (PEUC)</h4>
       <p>
         <strong>This provides an additional 13 weeks of benefits</strong> for
-        all people receiving UI between March 29, 2020 to December 26, 2020.
+        people receiving UI benefits between March 29 and December 26, 2020.
         California provides up to 26 weeks of UI benefits depending on the
         amount of your earnings during the four-quarter period on which your
-        claim is based. The CARES act extends benefits to a total of 39 weeks.
-        The EDD is still working to implement the PEUC program. Please continue
-        to monitor the EDD website for instructions on next steps for the PEUC
-        program.
+        claim is based. The CARES Act extends benefits to a total of 39 weeks.
       </p>
+      <div className="highlight-blockquote">
+        <strong>Note:</strong> We are still working to implement the PEUC
+        program. Please continue to monitor our website for instructions on next
+        steps for the PEUC program.
+      </div>
     </div>
   );
 }

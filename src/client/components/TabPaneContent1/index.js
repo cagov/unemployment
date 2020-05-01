@@ -7,17 +7,17 @@ function TabPaneContent1() {
   return (
     <div>
       <h3>
-        1. Evidence of citizenship or authorization to work in the United States
+        Proof of citizenship or authorization to work in the United States
       </h3>
       <p>
         You will need <strong>all</strong> of following:
       </p>
       <ul>
         <li>Social Security number</li>
-        <li>California driver’s license OR identification (ID) card</li>
+        <li>California driver license or ID card</li>
         <li>
-          Be a US citizen OR have a green card OR have a visa that allows you to
-          work in the US OR have an Alien Registration Number
+          Proof of US citizenship, or a green card, or a visa that allows you to
+          work in the US, or an Alien Registration Number
         </li>
       </ul>
       <p>
@@ -25,7 +25,7 @@ function TabPaneContent1() {
         benefits. If you are not a US citizen, have information from your
         employment authorization document ready.
       </p>
-      <h3>2. Information about your work history</h3>
+      <h3>Information about your work history</h3>
       <p>
         Your work history affects the amount of benefits you receive each week.
         Submitting accurate information helps us process your claim faster. You

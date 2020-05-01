@@ -6,12 +6,12 @@ function TabPaneContent4() {
 
   return (
     <div>
-      <h3>1. We will issue you an EDD Debit Card&#x2120;</h3>
+      <h3>1. Look for your EDD Debit Card&#x2120; in the mail</h3>
 
       <p>
         Benefit payments for Unemployment Insurance, Pandemic Unemployment
         Assistance (PUA), Disability Insurance, and Paid Family Leave are all
-        made using the EDD Visa Debit Card.
+        made using the EDD Debit Card.
       </p>
 
       <p>
@@ -21,13 +21,14 @@ function TabPaneContent4() {
         application.
       </p>
 
-      <p>
-        Due to the high volume of claims, it may take a few extra days to
-        receive your EDD Debit Card in the mail.
-      </p>
+      <div className="highlight-blockquote">
+        <strong>Note:</strong> Due to the high volume of claims, it may take a
+        few extra days to receive your EDD Debit Card in the mail.
+      </div>
 
       <p>
-        To set up direct deposit, visit the{" "}
+        To set up direct deposit transfer from your debit card to your bank
+        account, visit the{" "}
         <a href="https://prepaid.bankofamerica.com/EddCard">
           Bank of America EDD Debit Card website
         </a>
@@ -51,21 +52,37 @@ function TabPaneContent4() {
           , you will receive your benefit payments on that card. If your card
           has expired, a new card will automatically be sent to you once funds
           are available.
+          <ul>
+            <li>
+              <strong>Note:</strong> If you were issued a card before 2015, you
+              must visit{" "}
+              <a href="https://prepaid.bankofamerica.com/eddcard/ReplaceMyCard/verify">
+                Replace my Card
+              </a>{" "}
+              or contact Bank of America at 1-866-692-9374 (TTY: 1-866-656-5913)
+              to request a new one.
+            </li>
+          </ul>
         </li>
         <li>
-          <strong>If you lost your EDD Debit Card</strong>, contact Bank of
-          America at 1-866-692-9374 (TTY: 1-866-656-5913). It may be difficult
-          to reach a representative by phone due to high call volumes. We
-          appreciate your patience.
+          <strong>If you lost your EDD Debit Card</strong>, visit{" "}
+          <a href="https://prepaid.bankofamerica.com/eddcard/ReplaceMyCard/verify">
+            Replace my Card
+          </a>{" "}
+          or contact Bank of America at 1-866-692-9374 (TTY: 1-866-656-5913).
+          You do not need to speak to a representative. Choose the “lost or
+          stolen” option in the automated menu. Your new card will arrive 7 to
+          10 business days from the order date.
         </li>
         <li>
-          <strong>Download the Bank of America Prepaid Card app</strong> from
-          any app store to keep track of your EDD Debit Card payments and
+          <strong>You can download the Bank of America Prepaid Card app</strong>{" "}
+          from any app store to keep track of your EDD Debit Card payments and
           balance information.
         </li>
         <li>
-          <strong>Note</strong>: Bank of America representatives cannot answer
-          questions about your claim or pending payments.{" "}
+          <strong>Note</strong>: Bank of America representatives{" "}
+          <strong>cannot</strong> answer questions about your claim or pending
+          payments.{" "}
         </li>
       </ul>
       <h3>2. Certify your claim every two weeks</h3>
@@ -95,7 +112,7 @@ function TabPaneContent4() {
           <li>Are you available for work?</li>
           <li>Are you ready and willing to accept work immediately?</li>
           <li>Did you refuse work?</li>
-          <li>Did you work and earn wages?</li>
+          <li>Did you work and earn wages? If so, how much?</li>
         </ul>
         <p>
           The fastest way to certify is on{" "}
@@ -108,8 +125,8 @@ function TabPaneContent4() {
         <div className="highlight-blockquote">
           <strong>Note:</strong> Certification is <strong>not required</strong>{" "}
           at this time for benefits with week ending dates of March 14 through
-          May 9, 2020. The EDD will contact you at a later date to certify for
-          these weeks.
+          May 9, 2020. We'll contact you at a later date to certify for these
+          weeks.
         </div>
       </div>
 
@@ -118,25 +135,24 @@ function TabPaneContent4() {
         $600 every week
       </h4>
       <p>
-        The EDD will automatically add $600 every week certified to eligible
-        claimants from March 30 to July 26, 2020. These funds are part of the
+        We will automatically add $600 every week certified to eligible
+        claimants from March 29 to July 25, 2020. These funds are part of the
         Federal Pandemic Unemployment Assistance (FPUC) program, also referred
         to as Pandemic Additional Compensation (PAC).
       </p>
       <h4>UI benefit payments have been extended for COVID-19 claims</h4>
       <p>
-        The EDD provides up to 26 weeks of UI benefits to eligible claimants.
-        Once the EDD has implemented a new federal extended benefit program, you
-        may be eligible to extend your benefits an additional 13 weeks, to a
-        total of 39 weeks. These funds are part of the Pandemic Emergency
-        Unemployment Compensation (PEUC) program.
+        We normally provide up to 26 weeks of UI benefits to eligible claimants.
+        Once we have implemented the Pandemic Emergency Unemployment
+        Compensation program (PEUC), you may be eligible to extend your benefits
+        for 13 weeks, for a total of 39 weeks.
       </p>
 
       <p>
-        The EDD is still working to implement this program which will take
-        effect retroactively to March 29, 2020. In the interim, individuals who
-        have exhausted their benefits on their regular UI claim may be eligible
-        to receive benefits on a PUA claim.
+        We are still working to implement this program which will take effect
+        retroactively to March 29, 2020. In the interim, individuals who have
+        exhausted their benefits on their regular UI claim may be eligible to
+        receive benefits on a PUA claim.
       </p>
     </div>
   );
