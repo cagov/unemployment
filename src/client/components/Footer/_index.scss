@@ -1,22 +1,25 @@
 // This code is to ensure that our footer stays at the bottom of the page.
 
-$footer-height: 60px;
-
 html {
   position: relative;
   min-height: 100%;
 }
 body {
-  margin-bottom: $footer-height;
+  margin-bottom: 120px;
 }
+
 .footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: $footer-height;
-  line-height: $footer-height;
 
   .navbar-custom .navbar-nav .nav-link {
     color: #ffffff;
+    font-size: 16px;
+  }
+
+  .secondary-footer {
+    line-height: 60px;
+    font-size: 16px;
   }
 }

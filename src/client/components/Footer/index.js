@@ -10,24 +10,28 @@ function Footer() {
   return (
     <footer className="footer">
       <Navbar className="justify-content-between" variant="custom" bg="dark">
-        <Nav>
-          <Nav.Link href="#back-to-top">Back to Top</Nav.Link>
-          <Nav.Link href="https://edd.ca.gov/about_edd/">About EDD</Nav.Link>
+        <Nav className="flex-wrap">
+          <Nav.Link href="#back-to-top">{t("footer.toTop")}</Nav.Link>
+          <Nav.Link href="https://edd.ca.gov/about_edd/">
+            {t("footer.about")}
+          </Nav.Link>
           <Nav.Link href="https://edd.ca.gov/about_edd/contact_edd.htm">
-            Contact EDD
+            {t("footer.contact")}
           </Nav.Link>
           <Nav.Link href="https://edd.ca.gov/about_edd/conditions_of_use.htm">
-            Conditions of Use
+            {t("footer.conditionsOfUse")}
           </Nav.Link>
           <Nav.Link href="https://edd.ca.gov/about_edd/privacy_policy.htm">
-            Privacy Policy
+            {t("footer.privacyPolicy")}
           </Nav.Link>
           <Nav.Link href="https://edd.ca.gov/about_edd/accessibility.htm">
-            Accessibility
+            {t("footer.accessibility")}
           </Nav.Link>
-          <Nav.Link href="https://edd.ca.gov/sitemap.htm">Site Map</Nav.Link>
+          <Nav.Link href="https://edd.ca.gov/sitemap.htm">
+            {t("footer.siteMap")}
+          </Nav.Link>
         </Nav>
-        <Nav>
+        <Nav className="flex-wrap">
           <Nav.Link href="https://www.facebook.com/californiaedd/">
             <img
               src="images/facebook.svg"
@@ -70,8 +74,8 @@ function Footer() {
           </Nav.Link>
         </Nav>
       </Navbar>
-      <div className="bg-light">
-        <Container>Copyright © 2020 State of California</Container>
+      <div className="bg-light secondary-footer">
+        <Container>{t("footer.copyright")}</Container>
       </div>
     </footer>
   );
