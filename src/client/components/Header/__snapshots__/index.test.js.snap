@@ -15,7 +15,7 @@ exports[`<Header /> renders the header component 1`] = `
       href="https://ca.gov"
     >
       <img
-        alt="California gov logo"
+        alt="iconAltText.caGov"
         className="d-inline-block align-top"
         height="30"
         src="images/Ca-Gov-Logo-Gold.svg"
@@ -82,7 +82,7 @@ exports[`<Header /> renders the header component 1`] = `
       href="https://edd.ca.gov"
     >
       <img
-        alt="California gov logo"
+        alt="iconAltText.caGov"
         className="d-inline-block align-top"
         height="50"
         src="images/edd-logo-2-Color.svg"
