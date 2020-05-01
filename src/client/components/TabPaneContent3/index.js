@@ -130,12 +130,12 @@ function TabPaneContent3() {
           weeks.
         </div>
       </div>
-      <h3>3. Upload your resume in CalJOBS&#x2120;</h3>
-      <div className="highlight-blockquote">
-        <strong>Note:</strong> We understand that it’s a difficult time to look
-        for a job right now. You are currently <strong>not required</strong> to
-        upload your resume to CalJOBS, during the COVID-19 pandemic.
-      </div>
+      <h3>3. Upload your resume in CalJOBS&#x2120; (Optional)</h3>
+      <p>
+        We understand that it’s a difficult time to look for a job right now.
+        You are currently <strong>not required</strong> to upload your resume to
+        CalJOBS, during the COVID-19 pandemic.
+      </p>
       <p>
         <a href="https://www.caljobs.ca.gov/vosnet/Default.aspx">
           Upload your resume in CalJobs
