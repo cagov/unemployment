@@ -11,5 +11,15 @@
     "4": "Receive your benefits",
     "5": "More Resources"
   },
-  "buttonNextPrefix": "Next: "
+  "buttonNextPrefix": "Next: ",
+  "iconAltText": {
+    "home": "home icon",
+    "key": "key icon",
+    "facebook": "Facebook icon",
+    "twitter": "Twitter icon",
+    "linkedIn": "LinkedIn icon",
+    "instagram": "Instagram icon",
+    "youtube": "YouTube icon",
+    "caGov": "California gov logo"
+  }
 }
