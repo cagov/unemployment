@@ -29,7 +29,6 @@ function TabPaneContent0({ loadTab, tabSlugs, getTabTitle }) {
               Register or log in with Benefit Programs Online
             </a>{" "}
             and click “File New Claim.”
-            <br />
           </li>
           <li className="mb-3">
             File a new claim if you have already applied for UI but are eligible
