@@ -37,7 +37,7 @@ function TabPaneContent2() {
           Submit the first date you were affected by COVID-19. We will back pay
           you for the weeks you are eligible to receive benefits. PUA supports
           claims between February 2, 2020 and December 26, 2020. Claims between
-          March 30 and July 25, 2020 are eligible for an additional, taxable
+          March 29 and July 25, 2020 are eligible for an additional, taxable
           $600 every week.
         </li>
       </ul>
@@ -52,17 +52,11 @@ function TabPaneContent2() {
             Confirm your Social Security number and California Driver’s License
             or ID number. (Check that this information matches your tax forms.)
           </li>
-          <li>
-            If you recently moved,{" "}
-            <a href="https://www.irs.gov/taxtopics/tc157">
-              make sure your address is current on the IRS website.
-            </a>
-          </li>
         </ul>
         <div className="highlight-blockquote">
-          <strong>Note:</strong> For business owners, independent contractors,
-          self-employed workers, freelancers, gig workers: complete your
-          employment information under the{" "}
+          <strong>Note:</strong> If you’re a business owner, independent
+          contractor, self-employed worker, freelancer, or gig worker, you can
+          complete your employment information under the{" "}
           <strong>Additional Information</strong> section. Submit your net
           annual income for last year under the{" "}
           <strong>Natural Disasters</strong> question.

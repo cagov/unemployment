@@ -16,7 +16,6 @@ exports[`<Header /> renders the header component 1`] = `
     >
       <img
         alt="iconAltText.caGov"
-        className="d-inline-block align-top"
         height="30"
         src="images/Ca-Gov-Logo-Gold.svg"
         width="30"
@@ -39,13 +38,16 @@ exports[`<Header /> renders the header component 1`] = `
       >
         <img
           alt="iconAltText.home"
+          className="icon"
           height="15"
           src="images/home.svg"
           width="15"
         />
          
-        <span>
-          Home
+        <span
+          className="text"
+        >
+          header.home
         </span>
       </NavLink>
       <NavLink
@@ -59,21 +61,25 @@ exports[`<Header /> renders the header component 1`] = `
         disabled={false}
         href="https://edd.ca.gov/login.htm"
       >
-        <img
-          alt="iconAltText.key"
-          height="15"
-          src="images/key.svg"
-          width="15"
-        />
-         
         <span>
-          Log In
+          <img
+            alt="iconAltText.key"
+            className="icon"
+            height="15"
+            src="images/key.svg"
+            width="15"
+          />
+           
+          <span
+            className="text"
+          >
+            header.login
+          </span>
         </span>
       </NavLink>
     </Nav>
   </Navbar>
   <Navbar
-    className=""
     collapseOnSelect={true}
     expand="md"
     variant="light"
@@ -83,7 +89,7 @@ exports[`<Header /> renders the header component 1`] = `
     >
       <img
         alt="iconAltText.caGov"
-        className="d-inline-block align-top"
+        className="d-inline-block align-top mr-5"
         height="50"
         src="images/edd-logo-2-Color.svg"
         width="150"
@@ -94,7 +100,7 @@ exports[`<Header /> renders the header component 1`] = `
       label="Toggle navigation"
     />
     <NavbarCollapse
-      className="justify-content-between"
+      className="justify-content-between ml-5 mr-5 pl-5"
     >
       <NavLink
         as={
@@ -107,10 +113,8 @@ exports[`<Header /> renders the header component 1`] = `
         disabled={false}
         href="https://edd.ca.gov/jobs.htm"
       >
-        <span
-          className="text-dark"
-        >
-          Jobs
+        <span>
+          header.jobs
         </span>
       </NavLink>
       <NavLink
@@ -124,10 +128,8 @@ exports[`<Header /> renders the header component 1`] = `
         disabled={false}
         href="https://edd.ca.gov/claims.htm"
       >
-        <span
-          className="text-dark"
-        >
-          Claims
+        <span>
+          header.claims
         </span>
       </NavLink>
       <NavLink
@@ -141,10 +143,8 @@ exports[`<Header /> renders the header component 1`] = `
         disabled={false}
         href="https://edd.ca.gov/employers.htm"
       >
-        <span
-          className="text-dark"
-        >
-          Employers
+        <span>
+          header.employers
         </span>
       </NavLink>
       <NavLink
@@ -158,10 +158,8 @@ exports[`<Header /> renders the header component 1`] = `
         disabled={false}
         href="https://edd.ca.gov/newsroom.htm"
       >
-        <span
-          className="text-dark"
-        >
-          Newsroom
+        <span>
+          header.newsroom
         </span>
       </NavLink>
       <NavLink
@@ -175,10 +173,8 @@ exports[`<Header /> renders the header component 1`] = `
         disabled={false}
         href="https://edd.ca.gov/serp.html?q="
       >
-        <span
-          className="text-dark"
-        >
-          Search
+        <span>
+          header.search
         </span>
       </NavLink>
     </NavbarCollapse>

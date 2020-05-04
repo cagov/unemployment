@@ -1,15 +1,15 @@
 {
-  "subheaderButton": "Register or log in with Benefit Programs Online",
+  "subheaderButton": "Go to Benefit Programs Online",
   "subheaderHeader": "Guide to applying for unemployment benefits",
   "subheaderSubheader": "Learn what type of benefits you qualify for and how to apply for them.",
-  "subheaderParagraph": "If you lost your job or had your hours reduced, and meet eligibility requirements, you may be eligible to receive Unemployment Insurance (UI) benefits from California’s Employment Development Department (EDD).",
+  "subheaderParagraph": "If you are out of work or had your hours reduced you may be eligible to receive unemployment benefits from California’s Employment Development Department (EDD).",
   "tabTitles": {
     "0": "Start here",
     "1": "What you need before you apply",
     "2": "How to apply",
     "3": "After you submit your application",
     "4": "Receive your benefits",
-    "5": "More Resources"
+    "5": "More resources"
   },
   "buttonNextPrefix": "Next: ",
   "iconAltText": {
@@ -21,5 +21,24 @@
     "instagram": "Instagram icon",
     "youtube": "YouTube icon",
     "caGov": "California gov logo"
+  },
+  "header": {
+    "home": "Home",
+    "login": "Log In",
+    "jobs": "Jobs",
+    "claims": "Claims",
+    "employers": "Employers",
+    "newsroom": "Newsroom",
+    "search": "Search"
+  },
+  "footer": {
+    "toTop": "Back to Top",
+    "about": "About EDD",
+    "contact": "Contact EDD",
+    "conditionsOfUse": "Conditions of Use",
+    "privacyPolicy": "Privacy Policy",
+    "accessibility": "Accessibility", 
+    "siteMap": "Site Map",
+    "copyright": "Copyright © 2020 State of California"
   }
 }

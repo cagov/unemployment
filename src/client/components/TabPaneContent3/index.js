@@ -7,10 +7,22 @@ function TabPaneContent3() {
   return (
     <div>
       <h3>
-        1. We'll confirm your application and weekly benefit amount via email
-        and postal mail
+        1. We'll confirm your application and weekly benefit amount (WBA) via
+        email and postal mail
       </h3>
       <ul>
+        <li>
+          <strong>
+            You should receive the confirmation of your application within two
+            weeks via postal mail.
+          </strong>{" "}
+          We'll let you know what your WBA is, based on our wage records. For an
+          initial estimate of your WBA, use our{" "}
+          <a href="https://www.edd.ca.gov/Unemployment/UI-Calculator.htm">
+            UI benefit calculator
+          </a>
+          .
+        </li>
         <li>
           You may receive an email confirming that you were automatically
           registered in UI Online. This allows you to fully access information
@@ -21,26 +33,16 @@ function TabPaneContent3() {
           notice in the mail with your EDD Customer Account Number. Use the
           account number to finish registering for full UI Online access.
         </li>
-        <li>
-          <strong>
-            After you submit your initial application, EDD will confirm your
-            application and weekly benefit amount via postal mail.
-          </strong>{" "}
-          You should receive this within two weeks. We'll let you know what your
-          weekly benefit amount (WBA) is, based on our wage records. For an
-          initial estimate of your weekly benefit amount, use our{" "}
-          <a href="https://www.edd.ca.gov/Unemployment/UI-Calculator.htm">
-            UI benefit calculator
-          </a>
-          .
-        </li>
       </ul>
 
       <p>
         If we need more information from you to complete your claim, we may call
         you or mail you a notice. If we are unable to verify your identity or
         your wages, our system might determine your estimated WBA to be $0.00.
-        If this happens, we may need more time to process your claim.
+        If this happens, we may need more time to process your claim. If you
+        were paid wages during the four quarters shown on your{" "}
+        <i>Notice of Unemployment Insurance Award</i>, you should contact the
+        EDD to request a wage investigation.
       </p>
 
       <h4>
@@ -53,8 +55,8 @@ function TabPaneContent3() {
           If you qualify for PUA, your initial weekly benefit amount will be
           $167
         </strong>{" "}
-        for claims starting February 2, 2020. Claims between March 30 to July 31
-        will have an additional, taxable $600. Your total benefits will last for
+        for claims starting February 2, 2020. Claims between March 29 to July
+        25, 2020 will have an additional $600. Your total benefits will last for
         39 weeks (including any regular UI and extended benefits you might
         qualify for).
       </p>
@@ -63,7 +65,10 @@ function TabPaneContent3() {
           Once we verify your income, your weekly benefit amount may increase
         </strong>
         . Any increase will also apply retroactively. We will notify you of any
-        increase you are entitled to receive.
+        increase you are entitled to receive.{" "}
+        <a href="https://edd.ca.gov/about_edd/coronavirus-2019/pandemic-unemployment-assistance.htm">
+          Read more about PUA.
+        </a>
       </p>
 
       <div className="highlight-blockquote mb-5">
@@ -77,8 +82,7 @@ function TabPaneContent3() {
       <div className="highlight-blockquote">
         <strong>Note:</strong> Certification is <strong>not required</strong> at
         this time for benefits with week ending dates of March 14 through May 9,
-        2020. The EDD will contact you at a later date to certify for these
-        weeks.
+        2020. We'll contact you at a later date to certify for these weeks.
       </div>
       <p>When you are required to certify, here’s what you’ll need to do:</p>
       <ul>
@@ -109,7 +113,7 @@ function TabPaneContent3() {
           <li>Are you available for work?</li>
           <li>Are you ready and willing to accept work immediately?</li>
           <li>Did you refuse work?</li>
-          <li>Did you work and earn wages?</li>
+          <li>Did you work and earn wages? If so, how much?</li>
         </ul>
         <p>
           The fastest way to certify is on{" "}
@@ -122,21 +126,16 @@ function TabPaneContent3() {
         <div className="highlight-blockquote">
           <strong>Note:</strong> Certification is <strong>not required</strong>{" "}
           at this time for benefits with week ending dates of March 14 through
-          May 9, 2020. The EDD will contact you at a later date to certify for
-          these weeks.
+          May 9, 2020. We'll contact you at a later date to certify for these
+          weeks.
         </div>
       </div>
-      <h3>3. Upload your resume in CalJOBS</h3>
-      <div className="highlight-blockquote">
-        <strong>Note:</strong> We understand that it’s a difficult time to look
-        for a job right now. You are currently <strong>not required</strong> to
-        upload your resume to CalJOBS, during the COVID-19 pandemic.
-      </div>
+      <h3>3. Upload your resume in CalJOBS&#x2120; (Optional)</h3>
       <p>
-        <a href="https://www.caljobs.ca.gov/vosnet/Default.aspx">
-          Upload your resume in CalJobs
-        </a>{" "}
-        within 21 days of submitting your application.{" "}
+        We understand that it’s a difficult time to look for a job right now.
+        You are <strong>currently not</strong> required to upload your resume to{" "}
+        <a href="https://www.caljobs.ca.gov/vosnet/Default.aspx">CalJOBS</a>,
+        during the COVID-19 pandemic.
       </p>
     </div>
   );
