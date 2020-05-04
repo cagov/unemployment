@@ -39,15 +39,15 @@ function TabbedContainer() {
     TabPaneContent5,
   ];
 
-  // We must manually manage the active tab state because we need to change
-  // the tab state when the user clicks internal links and the Next buttons
+  // The default "uncontrolled" React Bootstrap tab container automatically
+  // manages active tab state and keypresses, but we must do that manually
+  // because we need to update the active tab when the user clicks on
+  // navigation outside of the sidebar tabs (internal links, the Next buttons)
   const initialTabIndex = 0;
   const [activeTabIndex, setActiveTabIndex] = useState(initialTabIndex);
   const activeNavItem = useRef(null);
 
-  // The default "uncontrolled" React Bootstrap tab container manages
-  // keypresses, but we need to manage them manually here. We follow
-  // accessibility specs: https://www.w3.org/TR/wai-aria-practices-1.1/#tabpanel
+  // Follows accessibility specs: https://www.w3.org/TR/wai-aria-practices-1.1/#tabpanel
   const handleKeyDown = (event, tabIndex) => {
     let targetTabIndex;
     switch (event.key) {
