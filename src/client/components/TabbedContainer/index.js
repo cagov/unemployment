@@ -45,7 +45,6 @@ function TabbedContainer() {
   // navigation outside of the sidebar tabs (internal links, the Next buttons)
   const initialTabIndex = 0;
   const [activeTabIndex, setActiveTabIndex] = useState(initialTabIndex);
-  const activeNavItem = useRef(null);
 
   // Follows accessibility specs: https://www.w3.org/TR/wai-aria-practices-1.1/#tabpanel
   const handleKeyDown = (event, tabIndex) => {
@@ -138,7 +137,7 @@ function TabbedContainer() {
             <Nav variant="pills" className="flex-column sidebar-sticky">
               {tabSlugs.map((value, index) => {
                 return (
-                  <Nav.Item key={index} ref={activeNavItem}>
+                  <Nav.Item key={index}>
                     <Nav.Link
                       as={Link}
                       eventKey={index}
