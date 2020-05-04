@@ -1,6 +1,6 @@
 import Button from "react-bootstrap/Button";
 import React from "react";
-import logEvent from "../../utils.js";
+import { logEvent } from "../../utils.js";
 
 function BPOButton() {
   return (
