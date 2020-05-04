@@ -51,6 +51,8 @@ function TabbedContainer() {
   const handleKeyDown = (event, tabIndex) => {
     let targetTabIndex;
     switch (event.key) {
+      // WAI-ARIA: "If the tabs in a tab list are arranged vertically",
+      // navigate with the up and down keys
       case "ArrowUp":
         targetTabIndex = tabIndex - 1;
         break;
@@ -64,6 +66,10 @@ function TabbedContainer() {
 
     event.preventDefault();
     setActiveTabIndex(targetTabIndex);
+
+    // WAI-ARIA: "It is recommended that tabs activate automatically when
+    // they receive focus as long as their associated tab panels are displayed
+    // without noticeable latency."
     history.push(prefix + tabSlugs[targetTabIndex]);
   };
 
