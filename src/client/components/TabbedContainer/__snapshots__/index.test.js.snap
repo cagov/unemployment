@@ -6,7 +6,6 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
 >
   <TabContainer
     activeKey={0}
-    defaultActiveKey="0"
     id="left-tabs"
   >
     <Row
@@ -36,11 +35,13 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
               }
               disabled={false}
               eventKey={0}
-              href="#benefits"
               onClick={[Function]}
+              onKeyDown={[Function]}
+              to="/guide/benefits"
             >
               tabTitles.0
             </NavLink>
+             
           </NavItem>
           <NavItem
             key="1"
@@ -55,11 +56,13 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
               }
               disabled={false}
               eventKey={1}
-              href="#before-you-apply"
               onClick={[Function]}
+              onKeyDown={[Function]}
+              to="/guide/before-you-apply"
             >
               tabTitles.1
             </NavLink>
+             
           </NavItem>
           <NavItem
             key="2"
@@ -74,11 +77,13 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
               }
               disabled={false}
               eventKey={2}
-              href="#how-to-apply"
               onClick={[Function]}
+              onKeyDown={[Function]}
+              to="/guide/how-to-apply"
             >
               tabTitles.2
             </NavLink>
+             
           </NavItem>
           <NavItem
             key="3"
@@ -93,11 +98,13 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
               }
               disabled={false}
               eventKey={3}
-              href="#after-you-submit"
               onClick={[Function]}
+              onKeyDown={[Function]}
+              to="/guide/after-you-submit"
             >
               tabTitles.3
             </NavLink>
+             
           </NavItem>
           <NavItem
             key="4"
@@ -112,11 +119,13 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
               }
               disabled={false}
               eventKey={4}
-              href="#receive-benefits"
               onClick={[Function]}
+              onKeyDown={[Function]}
+              to="/guide/receive-benefits"
             >
               tabTitles.4
             </NavLink>
+             
           </NavItem>
           <NavItem
             key="5"
@@ -131,11 +140,13 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
               }
               disabled={false}
               eventKey={5}
-              href="#more-resources"
               onClick={[Function]}
+              onKeyDown={[Function]}
+              to="/guide/more-resources"
             >
               tabTitles.5
             </NavLink>
+             
           </NavItem>
         </Nav>
       </Col>
@@ -143,188 +154,134 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
         sm={8}
       >
         <ForwardRef>
-          <TabPane
-            eventKey={0}
-            key="0"
-          >
-            <h2>
-              tabTitles.0
-            </h2>
-            <TabPaneContent0
-              getTabTitle={[Function]}
-              loadTab={[Function]}
-              tabSlugs={
-                Array [
-                  "benefits",
-                  "before-you-apply",
-                  "how-to-apply",
-                  "after-you-submit",
-                  "receive-benefits",
-                  "more-resources",
-                ]
-              }
-            />
-            <Button
-              active={false}
-              disabled={false}
-              href="#before-you-apply"
-              onClick={[Function]}
-              type="button"
-              variant="secondary"
+          <Component>
+            <Component
+              key="0"
+              path="/guide/benefits"
             >
-              buttonNextPrefixtabTitles.1
-            </Button>
-          </TabPane>
-          <TabPane
-            eventKey={1}
-            key="1"
-          >
-            <h2>
-              tabTitles.1
-            </h2>
-            <TabPaneContent1
-              getTabTitle={[Function]}
-              loadTab={[Function]}
-              tabSlugs={
-                Array [
-                  "benefits",
-                  "before-you-apply",
-                  "how-to-apply",
-                  "after-you-submit",
-                  "receive-benefits",
-                  "more-resources",
-                ]
-              }
-            />
-            <Button
-              active={false}
-              disabled={false}
-              href="#how-to-apply"
-              onClick={[Function]}
-              type="button"
-              variant="secondary"
+              <ScrollToTopOnMount />
+              <h2>
+                tabTitles.0
+              </h2>
+              <TabPaneContent0
+                getTabLink={[Function]}
+              />
+              <Button
+                active={false}
+                disabled={false}
+                onClick={[Function]}
+                to="/guide/before-you-apply"
+                type="button"
+                variant="secondary"
+              >
+                buttonNextPrefixtabTitles.1
+              </Button>
+            </Component>
+            <Component
+              key="1"
+              path="/guide/before-you-apply"
             >
-              buttonNextPrefixtabTitles.2
-            </Button>
-          </TabPane>
-          <TabPane
-            eventKey={2}
-            key="2"
-          >
-            <h2>
-              tabTitles.2
-            </h2>
-            <TabPaneContent2
-              getTabTitle={[Function]}
-              loadTab={[Function]}
-              tabSlugs={
-                Array [
-                  "benefits",
-                  "before-you-apply",
-                  "how-to-apply",
-                  "after-you-submit",
-                  "receive-benefits",
-                  "more-resources",
-                ]
-              }
-            />
-            <Button
-              active={false}
-              disabled={false}
-              href="#after-you-submit"
-              onClick={[Function]}
-              type="button"
-              variant="secondary"
+              <ScrollToTopOnMount />
+              <h2>
+                tabTitles.1
+              </h2>
+              <TabPaneContent1
+                getTabLink={[Function]}
+              />
+              <Button
+                active={false}
+                disabled={false}
+                onClick={[Function]}
+                to="/guide/how-to-apply"
+                type="button"
+                variant="secondary"
+              >
+                buttonNextPrefixtabTitles.2
+              </Button>
+            </Component>
+            <Component
+              key="2"
+              path="/guide/how-to-apply"
             >
-              buttonNextPrefixtabTitles.3
-            </Button>
-          </TabPane>
-          <TabPane
-            eventKey={3}
-            key="3"
-          >
-            <h2>
-              tabTitles.3
-            </h2>
-            <TabPaneContent3
-              getTabTitle={[Function]}
-              loadTab={[Function]}
-              tabSlugs={
-                Array [
-                  "benefits",
-                  "before-you-apply",
-                  "how-to-apply",
-                  "after-you-submit",
-                  "receive-benefits",
-                  "more-resources",
-                ]
-              }
-            />
-            <Button
-              active={false}
-              disabled={false}
-              href="#receive-benefits"
-              onClick={[Function]}
-              type="button"
-              variant="secondary"
+              <ScrollToTopOnMount />
+              <h2>
+                tabTitles.2
+              </h2>
+              <TabPaneContent2
+                getTabLink={[Function]}
+              />
+              <Button
+                active={false}
+                disabled={false}
+                onClick={[Function]}
+                to="/guide/after-you-submit"
+                type="button"
+                variant="secondary"
+              >
+                buttonNextPrefixtabTitles.3
+              </Button>
+            </Component>
+            <Component
+              key="3"
+              path="/guide/after-you-submit"
             >
-              buttonNextPrefixtabTitles.4
-            </Button>
-          </TabPane>
-          <TabPane
-            eventKey={4}
-            key="4"
-          >
-            <h2>
-              tabTitles.4
-            </h2>
-            <TabPaneContent4
-              getTabTitle={[Function]}
-              loadTab={[Function]}
-              tabSlugs={
-                Array [
-                  "benefits",
-                  "before-you-apply",
-                  "how-to-apply",
-                  "after-you-submit",
-                  "receive-benefits",
-                  "more-resources",
-                ]
-              }
-            />
-            <Button
-              active={false}
-              disabled={false}
-              href="#more-resources"
-              onClick={[Function]}
-              type="button"
-              variant="secondary"
+              <ScrollToTopOnMount />
+              <h2>
+                tabTitles.3
+              </h2>
+              <TabPaneContent3
+                getTabLink={[Function]}
+              />
+              <Button
+                active={false}
+                disabled={false}
+                onClick={[Function]}
+                to="/guide/receive-benefits"
+                type="button"
+                variant="secondary"
+              >
+                buttonNextPrefixtabTitles.4
+              </Button>
+            </Component>
+            <Component
+              key="4"
+              path="/guide/receive-benefits"
             >
-              buttonNextPrefixtabTitles.5
-            </Button>
-          </TabPane>
-          <TabPane
-            eventKey={5}
-            key="5"
-          >
-            <h2>
-              tabTitles.5
-            </h2>
-            <TabPaneContent5
-              getTabTitle={[Function]}
-              loadTab={[Function]}
-              tabSlugs={
-                Array [
-                  "benefits",
-                  "before-you-apply",
-                  "how-to-apply",
-                  "after-you-submit",
-                  "receive-benefits",
-                  "more-resources",
-                ]
-              }
+              <ScrollToTopOnMount />
+              <h2>
+                tabTitles.4
+              </h2>
+              <TabPaneContent4
+                getTabLink={[Function]}
+              />
+              <Button
+                active={false}
+                disabled={false}
+                onClick={[Function]}
+                to="/guide/more-resources"
+                type="button"
+                variant="secondary"
+              >
+                buttonNextPrefixtabTitles.5
+              </Button>
+            </Component>
+            <Component
+              key="5"
+              path="/guide/more-resources"
+            >
+              <ScrollToTopOnMount />
+              <h2>
+                tabTitles.5
+              </h2>
+              <TabPaneContent5
+                getTabLink={[Function]}
+              />
+            </Component>
+            <Component
+              from="/"
+              to="/guide/benefits"
             />
-          </TabPane>
+          </Component>
         </ForwardRef>
       </Col>
     </Row>
