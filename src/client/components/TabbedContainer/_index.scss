@@ -1,6 +1,10 @@
 .tabbed-container {
   padding: 2rem 0;
 
+  .TabbedContainer {
+    padding-bottom: 2rem;
+  }
+
   .nav-item {
     border: 1px solid rgba(0, 0, 0, 0.125);
   }
