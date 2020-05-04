@@ -39,13 +39,36 @@ function TabbedContainer() {
     TabPaneContent5,
   ];
 
-  // We must manage the active tab state (a "controlled" component) because we
-  // need to change it when the user clicks internal links and the Next buttons
-  const [activeTabIndex, setActiveTabIndex] = useState(0);
+  // We must manually manage the active tab state because we need to change
+  // the tab state when the user clicks internal links and the Next buttons
+  const initialTabIndex = 0;
+  const [activeTabIndex, setActiveTabIndex] = useState(initialTabIndex);
   const activeNavItem = useRef(null);
+
+  // The default "uncontrolled" React Bootstrap tab container manages
+  // keypresses, but we need to manage them manually here. We follow
+  // accessibility specs: https://www.w3.org/TR/wai-aria-practices-1.1/#tabpanel
+  const handleKeyDown = (event, tabIndex) => {
+    let targetTabIndex;
+    switch (event.key) {
+      case "ArrowUp":
+        targetTabIndex = tabIndex - 1;
+        break;
+      case "ArrowDown":
+        targetTabIndex = tabIndex + 1;
+        break;
+      default:
+        return;
+    }
+    if (targetTabIndex < 0 || targetTabIndex > tabSlugs.length - 1) return;
+
+    event.preventDefault();
+    setActiveTabIndex(targetTabIndex);
+    history.push(prefix + tabSlugs[targetTabIndex]);
+  };
+
   const tabbedContainer = useRef(null);
   const prefix = "/guide/";
-  const initialTabIndex = 0;
   const initialPageLoad = useRef(true);
   const history = useHistory();
 
@@ -84,25 +107,6 @@ function TabbedContainer() {
     );
   }
 
-  const handleKeyDown = (event, tabIndex) => {
-    let targetTabIndex;
-    switch (event.key) {
-      case "ArrowUp":
-        targetTabIndex = tabIndex - 1;
-        break;
-      case "ArrowDown":
-        targetTabIndex = tabIndex + 1;
-        break;
-      default:
-        return;
-    }
-    if (targetTabIndex < 0 || targetTabIndex > tabSlugs.length - 1) return;
-
-    event.preventDefault();
-    setActiveTabIndex(targetTabIndex);
-    history.push(prefix + tabSlugs[targetTabIndex]);
-  };
-
   const renderNextButton = (tabIndex) => {
     // Don't render a next button on the final tab
     if (tabIndex >= tabSlugs.length - 1) return;
@@ -122,11 +126,7 @@ function TabbedContainer() {
 
   return (
     <Container ref={tabbedContainer}>
-      <Tab.Container
-        id="left-tabs"
-        defaultActiveKey={initialTabIndex}
-        activeKey={activeTabIndex}
-      >
+      <Tab.Container id="left-tabs" activeKey={activeTabIndex}>
         <Row className="tabbed-container">
           <Col sm={4} className="TabbedContainer">
             <Nav variant="pills" className="flex-column sidebar-sticky">
