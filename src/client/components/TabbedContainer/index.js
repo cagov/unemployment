@@ -1,3 +1,4 @@
+import { Link, Redirect, Route, Switch, useHistory } from "react-router-dom";
 import React, { useEffect, useRef, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
@@ -11,7 +12,6 @@ import TabPaneContent2 from "../TabPaneContent2";
 import TabPaneContent3 from "../TabPaneContent3";
 import TabPaneContent4 from "../TabPaneContent4";
 import TabPaneContent5 from "../TabPaneContent5";
-import logEvent from "../../utils.js";
 import { useTranslation } from "react-i18next";
 
 function TabbedContainer() {
@@ -39,32 +39,60 @@ function TabbedContainer() {
     TabPaneContent5,
   ];
 
-  const tabbedContainer = useRef(null);
-  const [activeTab, setActiveTab] = useState(0);
-  const initialPageLoad = useRef(true);
+  // The default "uncontrolled" React Bootstrap tab container automatically
+  // manages active tab state and keypresses, but we must do that manually
+  // because we need to update the active tab when the user clicks on
+  // navigation outside of the sidebar tabs (internal links, the Next buttons)
+  const initialTabIndex = 0;
+  const [activeTabIndex, setActiveTabIndex] = useState(initialTabIndex);
 
-  // Scroll to the top of the sidebar when activeTab changes
-  // and log tab change to Google Analytics
-  useEffect(() => {
-    // Don't scroll down to the top of the sidebar on initial page load
-    if (initialPageLoad.current) {
-      initialPageLoad.current = false;
-      return;
+  // Follows accessibility specs: https://www.w3.org/TR/wai-aria-practices-1.1/#tabpanel
+  const handleKeyDown = (event, tabIndex) => {
+    let targetTabIndex;
+    switch (event.key) {
+      // WAI-ARIA: "If the tabs in a tab list are arranged vertically",
+      // navigate with the up and down keys
+      case "ArrowUp":
+        targetTabIndex = tabIndex - 1;
+        break;
+      case "ArrowDown":
+        targetTabIndex = tabIndex + 1;
+        break;
+      default:
+        return;
     }
+    if (targetTabIndex < 0 || targetTabIndex > tabSlugs.length - 1) return;
 
-    const sidebarOffset = tabbedContainer.current.offsetTop;
+    event.preventDefault();
+    setActiveTabIndex(targetTabIndex);
 
-    // we use smoothscroll-polyfill for Edge/IE
-    window.scroll({
-      top: sidebarOffset,
-      left: 0,
-      behavior: "smooth",
-    });
-  }, [activeTab]);
+    // WAI-ARIA: "It is recommended that tabs activate automatically when
+    // they receive focus as long as their associated tab panels are displayed
+    // without noticeable latency."
+    history.push(prefix + tabSlugs[targetTabIndex]);
+  };
 
-  function loadTab(tabIndex) {
-    setActiveTab(tabIndex);
-    logEvent(getTabHashFragment(activeTab));
+  const tabbedContainer = useRef(null);
+  const prefix = "/guide/";
+  const initialPageLoad = useRef(true);
+  const history = useHistory();
+
+  // Scroll to the top of the sidebar when a tab content pane loads
+  function ScrollToTopOnMount() {
+    useEffect(() => {
+      // Don't scroll down to the top of the sidebar on initial page load
+      if (initialPageLoad.current) {
+        initialPageLoad.current = false;
+        return;
+      }
+
+      // we use smoothscroll-polyfill for Edge/IE
+      window.scroll({
+        top: tabbedContainer.current.offsetTop,
+        left: 0,
+        behavior: "smooth",
+      });
+    }, []);
 
     return null;
   }
@@ -73,29 +101,37 @@ function TabbedContainer() {
     return t("tabTitles." + tabIndex);
   }
 
-  function getTabHashFragment(tabIndex) {
-    return `#${tabSlugs[tabIndex]}`;
+  function getTabLink(tabIndex) {
+    return (
+      <Link
+        to={prefix + tabSlugs[tabIndex]}
+        onClick={() => setActiveTabIndex(tabIndex)}
+      >
+        {getTabTitle(tabIndex)}
+      </Link>
+    );
   }
 
   const renderNextButton = (tabIndex) => {
-    // Don't display the next button on the final tab
-    if (tabIndex < tabSlugs.length - 1) {
-      const nextTabIndex = tabIndex + 1;
-      return (
-        <Button
-          variant="secondary"
-          href={getTabHashFragment(nextTabIndex)}
-          onClick={() => loadTab(nextTabIndex)}
-        >
-          {t("buttonNextPrefix") + getTabTitle(nextTabIndex)}
-        </Button>
-      );
-    }
+    // Don't render a next button on the final tab
+    if (tabIndex >= tabSlugs.length - 1) return;
+
+    const nextTabIndex = tabIndex + 1;
+    return (
+      <Button
+        variant="secondary"
+        as={Link}
+        to={prefix + tabSlugs[nextTabIndex]}
+        onClick={() => setActiveTabIndex(nextTabIndex)}
+      >
+        {t("buttonNextPrefix") + getTabTitle(nextTabIndex)}
+      </Button>
+    );
   };
 
   return (
     <Container ref={tabbedContainer}>
-      <Tab.Container id="left-tabs" defaultActiveKey="0" activeKey={activeTab}>
+      <Tab.Container id="left-tabs" activeKey={activeTabIndex}>
         <Row className="tabbed-container">
           <Col sm={4} className="TabbedContainer">
             <Nav variant="pills" className="flex-column sidebar-sticky">
@@ -103,12 +139,14 @@ function TabbedContainer() {
                 return (
                   <Nav.Item key={index}>
                     <Nav.Link
+                      as={Link}
                       eventKey={index}
-                      href={getTabHashFragment(index)}
-                      onClick={() => loadTab(index)}
+                      to={prefix + value}
+                      onClick={() => setActiveTabIndex(index)}
+                      onKeyDown={(event) => handleKeyDown(event, index)}
                     >
                       {getTabTitle(index)}
-                    </Nav.Link>
+                    </Nav.Link>{" "}
                   </Nav.Item>
                 );
               })}
@@ -116,20 +154,20 @@ function TabbedContainer() {
           </Col>
           <Col sm={8}>
             <Tab.Content>
-              {tabSlugs.map((value, index) => {
-                const TabPaneContentTagName = tabPaneContent[index];
-                return (
-                  <Tab.Pane eventKey={index} key={index}>
-                    <h2>{getTabTitle(index)}</h2>
-                    <TabPaneContentTagName
-                      getTabTitle={getTabTitle}
-                      loadTab={loadTab}
-                      tabSlugs={tabSlugs}
-                    />
-                    {renderNextButton(index)}
-                  </Tab.Pane>
-                );
-              })}
+              <Switch>
+                {tabSlugs.map((value, index) => {
+                  const TabPaneContentTagName = tabPaneContent[index];
+                  return (
+                    <Route path={prefix + value} key={index}>
+                      <ScrollToTopOnMount />
+                      <h2>{getTabTitle(index)}</h2>
+                      <TabPaneContentTagName getTabLink={getTabLink} />
+                      {renderNextButton(index)}
+                    </Route>
+                  );
+                })}
+                <Redirect from="/" to={prefix + tabSlugs[initialTabIndex]} />
+              </Switch>
             </Tab.Content>
           </Col>
         </Row>
