@@ -29,5 +29,6 @@ jest.mock("react-i18next", () => ({
 jest.mock("react-router-dom", () => ({
   useHistory: () => ({
     push: jest.fn(),
+    listen: jest.fn(),
   }),
 }));
