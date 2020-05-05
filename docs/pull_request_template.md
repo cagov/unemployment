@@ -8,7 +8,8 @@
 Resolves #XXX
 
 - [ ] Snapshots updated, if output HTML/JS has changed (`npm run test:update-snapshots`)
+- [ ] Changes reviewed on mobile using devtools, if output HTML/CSS has changed
 - [ ] Automated tests added, if new functionality added
 - [ ] Documentation (e.g. READMEs) updated, if relevant
 - [ ] IE11 and Edge compatibility confirmed via manual testing in Browserstack, if new libraries added or newish JS/HTML/CSS features used for the first time in this codebase
-- [ ] Accessibility & performance audit run using Lighthouse in Chrome DevTools, if major changes made
+- [ ] Accessibility & performance audit run using Google Lighthouse, if major changes made
