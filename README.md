@@ -2,8 +2,6 @@
 
 This repository contains the screener for Californians to determine what benefits they may be eligible for.
 
-We are developing the repository using Node v.12.16.2 and [React Bootstrap](https://react-bootstrap.github.io/).
-
 ## Setup
 
 1. Install NPM dependencies
