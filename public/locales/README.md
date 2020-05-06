@@ -2,11 +2,12 @@ Usage note: [only the "br", "strong", "i", and "p" tags](https://react.i18next.c
 (Oddly, "em" isn't supported.)
 
 Other tags must be converted. One way is to delete the key from translation.json,
-ensure debug:true here, load the page and copy the console output with converted
+load the page, and copy the console output with converted
 tags back into translation.json. Other ways [are described in the docs](https://react.i18next.com/latest/trans-component#how-to-get-the-correct-translation-string).
 
-Warning: Oddly, the text in `<Trans>` containing links cannot be empty;
-the length must _approximately_ match the corresponding value in translation.json,
+A strange warning: in the JSX, if a `<Trans>` component contains a link it
+cannot be left empty like most `<Trans>` components; the length of the
+contents must _approximately_ match the corresponding value in translation.json,
 otherwise the link won't render. It's unclear how similar it must be;
 deleting all but a few words of the text in `<Trans>` won't work,
 whereas deleting half does. Since Spanish translations are generally
