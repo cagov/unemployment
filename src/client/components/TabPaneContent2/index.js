@@ -33,7 +33,7 @@ function TabPaneContent2() {
         <Trans t={t} i18nKey="tab2-header2" />
       </h3>
       <h4>
-        <Trans t={t} i18nKey="tab2-header2.1" />
+        <Trans t={t} i18nKey="tab2-header2a" />
       </h4>
       <ul>
         <li>
@@ -45,7 +45,7 @@ function TabPaneContent2() {
       </ul>
       <div className="gray-box">
         <h4>
-          <Trans t={t} i18nKey="tab2-header2.2" />
+          <Trans t={t} i18nKey="tab2-header2b" />
         </h4>
 
         <p>

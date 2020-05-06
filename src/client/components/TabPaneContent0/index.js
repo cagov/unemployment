@@ -32,13 +32,13 @@ function TabPaneContent0({ getTabLink }) {
             <Trans t={t} i18nKey="tab0-list1-item3" />
             <ul>
               <li>
-                <Trans t={t} i18nKey="tab0-list1.1-item1" />
+                <Trans t={t} i18nKey="tab0-list1a-item1" />
               </li>
               <li>
-                <Trans t={t} i18nKey="tab0-list1.1-item2" />
+                <Trans t={t} i18nKey="tab0-list1a-item2" />
               </li>
               <li>
-                <Trans t={t} i18nKey="tab0-list1.1-item3" />
+                <Trans t={t} i18nKey="tab0-list1a-item3" />
               </li>
             </ul>
           </li>
@@ -49,10 +49,10 @@ function TabPaneContent0({ getTabLink }) {
             <Trans t={t} i18nKey="tab0-list1-item5" />
             <ul>
               <li>
-                <Trans t={t} i18nKey="tab0-list1.2-item1" />
+                <Trans t={t} i18nKey="tab0-list1b-item1" />
               </li>
               <li>
-                <Trans t={t} i18nKey="tab0-list1.2-item2" />
+                <Trans t={t} i18nKey="tab0-list1b-item2" />
               </li>
             </ul>
           </li>
