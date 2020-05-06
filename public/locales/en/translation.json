@@ -37,8 +37,10 @@
     "contact": "Contact EDD",
     "conditionsOfUse": "Conditions of Use",
     "privacyPolicy": "Privacy Policy",
-    "accessibility": "Accessibility", 
+    "accessibility": "Accessibility",
     "siteMap": "Site Map",
     "copyright": "Copyright © 2020 State of California"
-  }
+  },
+  "youWillNeed": "You will need <strong>all</strong> of following:",
+  "requirements": "<0>Social Security number</0><1>California driver license or ID card</1><2>Proof of US citizenship, or a green card, or a visa that allows you to work in the US, or an Alien Registration Number</2>"
 }
