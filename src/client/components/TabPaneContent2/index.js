@@ -8,10 +8,10 @@ function TabPaneContent2() {
   return (
     <div>
       <h3>
-        <Trans t={t} i18nKey="tab2.header10" />
+        <Trans t={t} i18nKey="tab2-header1" />
       </h3>
       <p>
-        <Trans t={t} i18nKey="tab2.p10">
+        <Trans t={t} i18nKey="tab2-p1">
           {
             // The text in this <Trans> must *approximately* match translation.json
             // otherwise the link won't render.
@@ -30,47 +30,47 @@ function TabPaneContent2() {
       </p>
       <BPOButton />
       <h3 className="pt-4">
-        <Trans t={t} i18nKey="tab2.header20" />
+        <Trans t={t} i18nKey="tab2-header2" />
       </h3>
       <h4>
-        <Trans t={t} i18nKey="tab2.header21" />
+        <Trans t={t} i18nKey="tab2-header2.1" />
       </h4>
       <ul>
         <li>
-          <Trans t={t} i18nKey="tab2.list10-item10" />
+          <Trans t={t} i18nKey="tab2-list1-item1" />
         </li>
         <li>
-          <Trans t={t} i18nKey="tab2.list10-item20" />
+          <Trans t={t} i18nKey="tab2-list1-item2" />
         </li>
       </ul>
       <div className="gray-box">
         <h4>
-          <Trans t={t} i18nKey="tab2.header22" />
+          <Trans t={t} i18nKey="tab2-header2.2" />
         </h4>
 
         <p>
-          <Trans t={t} i18nKey="tab2.p20" />
+          <Trans t={t} i18nKey="tab2-p2" />
         </p>
         <ul>
           <li>
-            <Trans t={t} i18nKey="tab2.list20-item10" />
+            <Trans t={t} i18nKey="tab2-list2-item1" />
           </li>
           <li>
-            <Trans t={t} i18nKey="tab2.list20-item20" />
+            <Trans t={t} i18nKey="tab2-list2-item2" />
           </li>
           <li>
-            <Trans t={t} i18nKey="tab2.list20-item30" />
+            <Trans t={t} i18nKey="tab2-list2-item3" />
           </li>
         </ul>
         <div className="highlight-blockquote">
-          <Trans t={t} i18nKey="tab2.blockquote10" />
+          <Trans t={t} i18nKey="tab2-blockquote1" />
         </div>
       </div>
       <h3>
-        <Trans t={t} i18nKey="tab2.header30" />
+        <Trans t={t} i18nKey="tab2-header3" />
       </h3>
       <p>
-        <Trans t={t} i18nKey="tab2.p30" />
+        <Trans t={t} i18nKey="tab2-p3" />
       </p>
     </div>
   );

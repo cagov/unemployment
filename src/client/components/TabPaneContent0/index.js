@@ -9,11 +9,11 @@ function TabPaneContent0({ getTabLink }) {
     <div>
       <div className="gray-box mt-0">
         <h3>
-          <Trans t={t} i18nKey="tab0.header10" />
+          <Trans t={t} i18nKey="tab0-header1" />
         </h3>
         <ul>
           <li className="mb-3">
-            <Trans t={t} i18nKey="tab0.list10-item10">
+            <Trans t={t} i18nKey="tab0-list1-item1">
               {
                 // The text in this <Trans> must *approximately* match translation.json
                 // otherwise the link won't render.
@@ -26,72 +26,72 @@ function TabPaneContent0({ getTabLink }) {
             </Trans>
           </li>
           <li className="mb-3">
-            <Trans t={t} i18nKey="tab0.list10-item20" />
+            <Trans t={t} i18nKey="tab0-list1-item2" />
           </li>
           <li className="mb-3">
-            <Trans t={t} i18nKey="tab0.list10-item30" />
+            <Trans t={t} i18nKey="tab0-list1-item3" />
             <ul>
               <li>
-                <Trans t={t} i18nKey="tab0.list11-item10" />
+                <Trans t={t} i18nKey="tab0-list1.1-item1" />
               </li>
               <li>
-                <Trans t={t} i18nKey="tab0.list11-item20" />
+                <Trans t={t} i18nKey="tab0-list1.1-item2" />
               </li>
               <li>
-                <Trans t={t} i18nKey="tab0.list11-item30" />
+                <Trans t={t} i18nKey="tab0-list1.1-item3" />
               </li>
             </ul>
           </li>
           <li className="mb-3">
-            <Trans t={t} i18nKey="tab0.list10-item40" />
+            <Trans t={t} i18nKey="tab0-list1-item4" />
           </li>
           <li className="mb-3">
-            <Trans t={t} i18nKey="tab0.list10-item50" />
+            <Trans t={t} i18nKey="tab0-list1-item5" />
             <ul>
               <li>
-                <Trans t={t} i18nKey="tab0.list12-item10" />
+                <Trans t={t} i18nKey="tab0-list1.2-item1" />
               </li>
               <li>
-                <Trans t={t} i18nKey="tab0.list12-item20" />
+                <Trans t={t} i18nKey="tab0-list1.2-item2" />
               </li>
             </ul>
           </li>
           <li className="mb-3">
-            <Trans t={t} i18nKey="tab0.list10-item60" />
+            <Trans t={t} i18nKey="tab0-list1-item6" />
           </li>
           <li className="mb-3">
-            <Trans t={t} i18nKey="tab0.list10-item70" />
+            <Trans t={t} i18nKey="tab0-list1-item7" />
           </li>
         </ul>
       </div>
       <h3>
-        <Trans t={t} i18nKey="tab0.header20" />
+        <Trans t={t} i18nKey="tab0-header2" />
       </h3>
       <p>
-        <Trans t={t} i18nKey="tab0.p10" />
+        <Trans t={t} i18nKey="tab0-p1" />
       </p>
       <h3>
-        <Trans t={t} i18nKey="tab0.header30" />
+        <Trans t={t} i18nKey="tab0-header3" />
       </h3>
       <p>
-        <Trans t={t} i18nKey="tab0.p20" />
+        <Trans t={t} i18nKey="tab0-p2" />
       </p>
       <ul>
         <li>
-          <Trans t={t} i18nKey="tab0.list20-item10" />
+          <Trans t={t} i18nKey="tab0-list2-item1" />
         </li>
         <li>
-          <Trans t={t} i18nKey="tab0.list20-item20" />
+          <Trans t={t} i18nKey="tab0-list2-item2" />
         </li>
         <li>
-          <Trans t={t} i18nKey="tab0.list20-item30" />
+          <Trans t={t} i18nKey="tab0-list2-item3" />
         </li>
         <li>
-          <Trans t={t} i18nKey="tab0.list20-item40" />
+          <Trans t={t} i18nKey="tab0-list2-item4" />
         </li>
       </ul>
       <p>
-        <Trans t={t} i18nKey="tab0.p30">
+        <Trans t={t} i18nKey="tab0-p3">
           {
             // The text in this <Trans> must *approximately* match translation.json
             // otherwise the link won't render.
@@ -101,63 +101,63 @@ function TabPaneContent0({ getTabLink }) {
         </Trans>
       </p>
       <h3>
-        <Trans t={t} i18nKey="tab0.header40" />
+        <Trans t={t} i18nKey="tab0-header4" />
       </h3>
       <p>
-        <Trans t={t} i18nKey="tab0.p40" />
+        <Trans t={t} i18nKey="tab0-p4" />
       </p>
       <h4>
-        <Trans t={t} i18nKey="tab0.header50" />
+        <Trans t={t} i18nKey="tab0-header5" />
       </h4>
       <ul>
         <li>
-          <Trans t={t} i18nKey="tab0.list30-item10" />
+          <Trans t={t} i18nKey="tab0-list3-item1" />
         </li>
         <li>
-          <Trans t={t} i18nKey="tab0.list30-item20" />
+          <Trans t={t} i18nKey="tab0-list3-item2" />
         </li>
         <li>
-          <Trans t={t} i18nKey="tab0.list30-item30" />
+          <Trans t={t} i18nKey="tab0-list3-item3" />
         </li>
         <li>
-          <Trans t={t} i18nKey="tab0.list30-item40" />
+          <Trans t={t} i18nKey="tab0-list3-item4" />
         </li>
         <li>
-          <Trans t={t} i18nKey="tab0.list30-item50" />
+          <Trans t={t} i18nKey="tab0-list3-item5" />
         </li>
       </ul>
       <h4>
-        <Trans t={t} i18nKey="tab0.header60" />
+        <Trans t={t} i18nKey="tab0-header6" />
       </h4>
       <ul>
         <li>
-          <Trans t={t} i18nKey="tab0.list40-item10" />
+          <Trans t={t} i18nKey="tab0-list4-item1" />
         </li>
         <li>
-          <Trans t={t} i18nKey="tab0.list40-item20" />
+          <Trans t={t} i18nKey="tab0-list4-item2" />
         </li>
         <li>
-          <Trans t={t} i18nKey="tab0.list40-item30" />
+          <Trans t={t} i18nKey="tab0-list4-item3" />
         </li>
         <li>
-          <Trans t={t} i18nKey="tab0.list40-item40" />
+          <Trans t={t} i18nKey="tab0-list4-item4" />
         </li>
         <li>
-          <Trans t={t} i18nKey="tab0.list40-item50" />
+          <Trans t={t} i18nKey="tab0-list4-item5" />
         </li>
         <li>
-          <Trans t={t} i18nKey="tab0.list40-item60" />
+          <Trans t={t} i18nKey="tab0-list4-item6" />
         </li>
       </ul>
       <h3>
-        <Trans t={t} i18nKey="tab0.header70" />
+        <Trans t={t} i18nKey="tab0-header7" />
       </h3>
       <p>
-        <Trans t={t} i18nKey="tab0.p50" />
+        <Trans t={t} i18nKey="tab0-p5" />
       </p>
       <ul>
         <li>
-          <Trans t={t} i18nKey="tab0.list50-item10">
+          <Trans t={t} i18nKey="tab0-list5-item1">
             {
               // The text in this <Trans> must *approximately* match translation.json
               // otherwise the link won't render.
@@ -170,7 +170,7 @@ function TabPaneContent0({ getTabLink }) {
           </Trans>
         </li>
         <li>
-          <Trans t={t} i18nKey="tab0.list50-item20">
+          <Trans t={t} i18nKey="tab0-list5-item2">
             {
               // The text in this <Trans> must *approximately* match translation.json
               // otherwise the link won't render.
