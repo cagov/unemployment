@@ -16,13 +16,13 @@ function TabPaneContent1() {
 
       <ul>
         <li>
-          <Trans t={t} i18nKey="tab1.list10-item1" />
+          <Trans t={t} i18nKey="tab1.list10-item10" />
         </li>
         <li>
-          <Trans t={t} i18nKey="tab1.list10-item2" />
+          <Trans t={t} i18nKey="tab1.list10-item20" />
         </li>
         <li>
-          <Trans t={t} i18nKey="tab1.list10-item3" />
+          <Trans t={t} i18nKey="tab1.list10-item30" />
         </li>
       </ul>
 
@@ -40,10 +40,10 @@ function TabPaneContent1() {
 
       <ul>
         <li>
-          <Trans t={t} i18nKey="tab1.list20-item1" />
+          <Trans t={t} i18nKey="tab1.list20-item10" />
         </li>
         <li>
-          <Trans t={t} i18nKey="tab1.list20-item2" />
+          <Trans t={t} i18nKey="tab1.list20-item20" />
         </li>
       </ul>
       <h3>
@@ -51,10 +51,10 @@ function TabPaneContent1() {
       </h3>
       <ul>
         <li>
-          <Trans t={t} i18nKey="tab1.list30-item1" />
+          <Trans t={t} i18nKey="tab1.list30-item10" />
         </li>
         <li>
-          <Trans t={t} i18nKey="tab1.list30-item2" />
+          <Trans t={t} i18nKey="tab1.list30-item20" />
         </li>
       </ul>
     </div>

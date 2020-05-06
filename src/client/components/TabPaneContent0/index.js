@@ -1,195 +1,185 @@
+import { Trans, useTranslation } from "react-i18next";
 import PropTypes from "prop-types";
 import React from "react";
-// import { useTranslation } from "react-i18next";
 
 function TabPaneContent0({ getTabLink }) {
-  // const { t } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <div>
       <div className="gray-box mt-0">
-        <h3>Tips for applying on UI Online</h3>
+        <h3>
+          <Trans t={t} i18nKey="tab0.header10" />
+        </h3>
         <ul>
           <li className="mb-3">
-            Everyone (UI and PUA applicants) uses the same form.{" "}
-            <a href="https://www.edd.ca.gov/Benefit_Programs_Online.htm">
-              Register or log in with Benefit Programs Online
-            </a>{" "}
-            and click “File New Claim.”
+            <Trans t={t} i18nKey="tab0.list10-item10">
+              {
+                // The text in this <Trans> must *approximately* match translation.json
+                // otherwise the link won't render.
+              }
+              Everyone (UI and PUA applicants) uses the same form.{" "}
+              <a href="https://www.edd.ca.gov/Benefit_Programs_Online.htm">
+                Register or log in with Benefit Programs Online
+              </a>{" "}
+              and click “File New Claim.”
+            </Trans>
           </li>
           <li className="mb-3">
-            File a new claim if you have already applied for UI but are eligible
-            for PUA because you are a business owner, independent contractor,
-            self-employed worker, freelancer, or gig worker affected by
-            COVID-19, <strong>and</strong> you have <strong>not</strong> already
-            appealed a $0 award notice, been asked to verify your identity, or
-            requested a wage investigation.
+            <Trans t={t} i18nKey="tab0.list10-item20" />
           </li>
           <li className="mb-3">
-            If you are a small business owner, independent contractor,
-            self-employed worker, freelancer, or gig worker, here’s how to
-            answer key questions in the application form:
+            <Trans t={t} i18nKey="tab0.list10-item30" />
             <ul>
               <li>
-                On the Employment History screen when you supply your last
-                employer information, select "No".
+                <Trans t={t} i18nKey="tab0.list11-item10" />
               </li>
               <li>
-                On the Availability Information page, answer question 7 with
-                "No".
+                <Trans t={t} i18nKey="tab0.list11-item20" />
               </li>
               <li>
-                On the Disaster Information page, answer question 1a.3 with “You
-                are an independent contractor.” If you got paid in cash, select
-                “None of these options apply to me.”
+                <Trans t={t} i18nKey="tab0.list11-item30" />
               </li>
             </ul>
           </li>
           <li className="mb-3">
-            If you have run out of benefits, you are unemployed, and your
-            benefit year has expired, reapply for benefits through UI Online.
+            <Trans t={t} i18nKey="tab0.list10-item40" />
           </li>
           <li className="mb-3">
-            If you have run out of benefits but you are still within the one
-            year that your claim is good for, and your benefits
+            <Trans t={t} i18nKey="tab0.list10-item50" />
             <ul>
               <li>
-                Ran out <strong>before February 2</strong>, you are probably not
-                eligible for PUA. (You would have to show that you are
-                unemployed because of COVID-19.) You may be eligible for the
-                federal 13-week extension. We will notify you about what to do.
+                <Trans t={t} i18nKey="tab0.list12-item10" />
               </li>
               <li>
-                Were for weeks you spent unemployed{" "}
-                <strong>between February 2 and March 21</strong>, we will send
-                you a form to fill out to supply information not already in your
-                claim. When you get the form, fill it out and return it.
+                <Trans t={t} i18nKey="tab0.list12-item20" />
               </li>
             </ul>
           </li>
           <li className="mb-3">
-            If you received your last payment for weeks you were unemployed{" "}
-            <strong>on or after March 21</strong> and are still within your
-            benefit year, we will automatically extend your claim for 13 weeks.
-            We will notify you that we have done that and when you can certify.
+            <Trans t={t} i18nKey="tab0.list10-item60" />
           </li>
           <li className="mb-3">
-            If you applied for unemployment assistance but didn’t qualify (for
-            example, because you voluntarily quit or you were fired or
-            discharged by your employer), or you are serving a penalty because
-            of false statements on a past claim, you could be eligible for PUA.
-            We will send you a form to fill out to supply information not
-            already in your account. When you get the form, fill it out and
-            return it.
+            <Trans t={t} i18nKey="tab0.list10-item70" />
           </li>
         </ul>
       </div>
-      <h2>Benefits you can apply for</h2>
+      <h3>
+        <Trans t={t} i18nKey="tab0.header20" />
+      </h3>
       <p>
-        These benefits are available for California residents. If you are still
-        unsure of your eligibility or what to apply for,{" "}
-        <strong>apply anyway</strong> as soon as you are out of work or had your
-        hours reduced. Complete the application as best you can, and we will
-        follow up with you as soon as possible.
+        <Trans t={t} i18nKey="tab0.p10" />
       </p>
-      <h3>Unemployment Insurance (UI)</h3>
+      <h3>
+        <Trans t={t} i18nKey="tab0.header30" />
+      </h3>
       <p>
-        You may be eligible for regular UI if you have income reported on a W2
-        and you meet <strong>any</strong> of these:
+        <Trans t={t} i18nKey="tab0.p20" />
       </p>
       <ul>
         <li>
-          Your employment status has been affected by COVID-19 and you are fully
-          or partially unemployed as a result.
+          <Trans t={t} i18nKey="tab0.list20-item10" />
         </li>
         <li>
-          You are fully or partially unemployed. This includes layoffs,
-          furloughs, reduced wages, or reduced hours. You can still receive
-          unemployment benefits while working, depending on your pay.
+          <Trans t={t} i18nKey="tab0.list20-item20" />
         </li>
         <li>
-          Your child’s school is closed, and you need to miss work to care for
-          them.
+          <Trans t={t} i18nKey="tab0.list20-item30" />
         </li>
-        <li>Your previous UI claim has expired.</li>
+        <li>
+          <Trans t={t} i18nKey="tab0.list20-item40" />
+        </li>
       </ul>
       <p>
-        If you're already receiving UI, review {getTabLink(4)} to learn how your
-        UI claim may be affected by COVID-19.
+        <Trans t={t} i18nKey="tab0.p30">
+          {
+            // The text in this <Trans> must *approximately* match translation.json
+            // otherwise the link won't render.
+          }
+          If you're already receiving UI, review {getTabLink(4)} to learn how
+          your UI claim may be affected by COVID-19.
+        </Trans>
       </p>
-      <h3>Pandemic Unemployment Assistance (PUA)</h3>
+      <h3>
+        <Trans t={t} i18nKey="tab0.header40" />
+      </h3>
       <p>
-        If you are a business owner, independent contractor, self-employed
-        worker, freelancer, or gig worker and only received a 1099 tax form last
-        year, you are most likely eligible for PUA.
+        <Trans t={t} i18nKey="tab0.p40" />
       </p>
       <h4>
-        Apply for PUA if your work situation changed because of COVID-19, and
-        you meet <strong>any</strong> of these:
+        <Trans t={t} i18nKey="tab0.header50" />
       </h4>
       <ul>
         <li>
-          You had a definite date to begin work, but the job is no longer
-          available, or you could not reach the job as a direct result of
-          COVID-19.
+          <Trans t={t} i18nKey="tab0.list30-item10" />
         </li>
         <li>
-          You are unable to travel to your job as a direct result of COVID-19.
+          <Trans t={t} i18nKey="tab0.list30-item20" />
         </li>
-        <li>You quit your job as a direct result of COVID-19.</li>
-        <li>Your workplace is closed as a direct result of COVID-19.</li>
         <li>
-          You are unemployed, partially employed, or unable to work because
-          COVID-19 has forced you to stop working.
+          <Trans t={t} i18nKey="tab0.list30-item30" />
+        </li>
+        <li>
+          <Trans t={t} i18nKey="tab0.list30-item40" />
+        </li>
+        <li>
+          <Trans t={t} i18nKey="tab0.list30-item50" />
         </li>
       </ul>
       <h4>
-        Apply for PUA if you have health issues because of COVID-19, and you
-        meet any of these:
+        <Trans t={t} i18nKey="tab0.header60" />
       </h4>
       <ul>
         <li>
-          You have been diagnosed with COVID-19 or are experiencing symptoms and
-          are seeking a medical diagnosis.
-        </li>
-        <li>A member of your household has been diagnosed with COVID-19.</li>
-        <li>
-          You are caring for a family member or a member of your household who
-          has been diagnosed with COVID-19.
+          <Trans t={t} i18nKey="tab0.list40-item10" />
         </li>
         <li>
-          You are caring for a dependent during the work day because their
-          school or another care facility has closed due to COVID-19.
+          <Trans t={t} i18nKey="tab0.list40-item20" />
         </li>
         <li>
-          Your healthcare provider has told you to self-quarantine because of
-          COVID-19.
+          <Trans t={t} i18nKey="tab0.list40-item30" />
         </li>
         <li>
-          You have become the main income provider due to a COVID-19 death in
-          your household.
+          <Trans t={t} i18nKey="tab0.list40-item40" />
+        </li>
+        <li>
+          <Trans t={t} i18nKey="tab0.list40-item50" />
+        </li>
+        <li>
+          <Trans t={t} i18nKey="tab0.list40-item60" />
         </li>
       </ul>
-      <h3>Disability Insurance (DI) or Paid Family Leave (PFL)</h3>
+      <h3>
+        <Trans t={t} i18nKey="tab0.header70" />
+      </h3>
       <p>
-        If you’re not eligible for UI, you may be eligible for Disability
-        Insurance (DI) or Paid Family Leave (PFL). You usually qualify if you
-        paid into the State Disability Insurance program (noted as “CASDI” on
-        paystubs), via taxes.
+        <Trans t={t} i18nKey="tab0.p50" />
       </p>
       <ul>
         <li>
-          If you are unable to perform your normal work duties because you are
-          sick or quarantined, apply for{" "}
-          <a href="https://edd.ca.gov/Disability/How_to_File_a_DI_Claim_in_SDI_Online.htm">
-            Disability Insurance.
-          </a>
+          <Trans t={t} i18nKey="tab0.list50-item10">
+            {
+              // The text in this <Trans> must *approximately* match translation.json
+              // otherwise the link won't render.
+            }
+            If you are unable to perform your normal work duties because you are
+            sick or quarantined, apply for{" "}
+            <a href="https://edd.ca.gov/Disability/How_to_File_a_DI_Claim_in_SDI_Online.htm">
+              Disability Insurance.
+            </a>
+          </Trans>
         </li>
         <li>
-          If you are caring for a family member who is sick, apply for{" "}
-          <a href="https://edd.ca.gov/Disability/How_to_File_a_PFL_Claim_in_SDI_Online.htm">
-            Paid Family Leave.
-          </a>
+          <Trans t={t} i18nKey="tab0.list50-item20">
+            {
+              // The text in this <Trans> must *approximately* match translation.json
+              // otherwise the link won't render.
+            }
+            If you are caring for a family member who is sick, apply for{" "}
+            <a href="https://edd.ca.gov/Disability/How_to_File_a_PFL_Claim_in_SDI_Online.htm">
+              Paid Family Leave.
+            </a>
+          </Trans>
         </li>
       </ul>
     </div>

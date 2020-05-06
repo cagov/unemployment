@@ -13,8 +13,8 @@ function TabPaneContent2() {
       <p>
         <Trans t={t} i18nKey="tab2.p10">
           {
-            // The content of this <Trans> must match translation.json
-            // otherwise the link won't render
+            // The text in this <Trans> must *approximately* match translation.json
+            // otherwise the link won't render.
           }
           <strong>
             The fastest way to apply for all unemployment benefits is through UI
@@ -37,10 +37,10 @@ function TabPaneContent2() {
       </h4>
       <ul>
         <li>
-          <Trans t={t} i18nKey="tab2.list1-item1" />
+          <Trans t={t} i18nKey="tab2.list10-item10" />
         </li>
         <li>
-          <Trans t={t} i18nKey="tab2.list1-item2" />
+          <Trans t={t} i18nKey="tab2.list10-item20" />
         </li>
       </ul>
       <div className="gray-box">
@@ -53,13 +53,13 @@ function TabPaneContent2() {
         </p>
         <ul>
           <li>
-            <Trans t={t} i18nKey="tab2.list2-item1" />
+            <Trans t={t} i18nKey="tab2.list20-item10" />
           </li>
           <li>
-            <Trans t={t} i18nKey="tab2.list2-item2" />
+            <Trans t={t} i18nKey="tab2.list20-item20" />
           </li>
           <li>
-            <Trans t={t} i18nKey="tab2.list2-item3" />
+            <Trans t={t} i18nKey="tab2.list20-item30" />
           </li>
         </ul>
         <div className="highlight-blockquote">
