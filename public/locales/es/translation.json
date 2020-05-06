@@ -37,8 +37,23 @@
     "contact": "Contact EDD",
     "conditionsOfUse": "Conditions of Use",
     "privacyPolicy": "Privacy Policy",
-    "accessibility": "Accessibility", 
+    "accessibility": "Accessibility",
     "siteMap": "Site Map",
     "copyright": "Copyright © 2020 State of California"
+  },
+  "tab1": {
+    "header10": "Proof of citizenship or authorization to work in the United States",
+    "p10": "You will need <strong>all</strong> of the following:",
+    "list10-item1": "Social Security number",
+    "list10-item2": "California driver license or ID card",
+    "list10-item3": "Proof of US citizenship, or a green card, or a visa that allows you to work in the US, or an Alien Registration Number",
+    "p20": "You must be authorized to work in the US to receive unemployment benefits. If you are not a US citizen, have information from your employment authorization document ready.",
+    "header20": "Information about your work history",
+    "p30": "Your work history affects the amount of benefits you receive each week. Submitting accurate information helps us process your claim faster. You will need:",
+    "list20-item1": "<strong>Work history from the last 18 months.</strong> This includes the name of any companies as they appear on your paycheck, the dates of employment, hours worked per week, the total wages you earned before taxes were taken out (gross wages), hourly rate of pay, and the reason you are no longer working.",
+    "list20-item2": "<strong>Specific information from your last employer or company.</strong> This includes your employer’s name, mailing address, phone number, supervisor’s name, total wages you earned before taxes were taken out (gross wages) for the last week you worked, and the reason for your unemployment.",
+    "header30": "Federal and military documents",
+    "list30-item1": "<strong>If you are a former federal employee,</strong> have your <em>Notice to Federal Employees About Unemployment Insurance</em> (Standard Form 8) ready.",
+    "list30-item2": "<strong>If you served in the military in the last 18 months,</strong> have your <em>Certificate of Release or Discharge from Active Duty</em> (DD 214) ready."
   }
 }
