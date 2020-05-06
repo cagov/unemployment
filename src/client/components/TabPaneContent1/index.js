@@ -11,11 +11,13 @@ function TabPaneContent1() {
           Proof of citizenship or authorization to work in the United States
         </Trans>
       </h3>
-      <Trans t={t} i18nKey="tab1.p10">
-        <p>
+
+      <p>
+        <Trans t={t} i18nKey="tab1.p10">
           You will need <strong>all</strong> of the following:
-        </p>
-      </Trans>
+        </Trans>
+      </p>
+
       <ul>
         <li>
           <Trans t={t} i18nKey="tab1.list10-item1">
@@ -34,26 +36,29 @@ function TabPaneContent1() {
           </Trans>
         </li>
       </ul>
-      <Trans t={t} i18nKey="tab1.p20">
-        <p>
+
+      <p>
+        <Trans t={t} i18nKey="tab1.p20">
           You must be authorized to work in the US to receive unemployment
           benefits. If you are not a US citizen, have information from your
           employment authorization document ready.
-        </p>
-      </Trans>
+        </Trans>{" "}
+      </p>
 
       <h3>
         <Trans t={t} i18nKey="tab1.header20">
           Information about your work history
         </Trans>
       </h3>
-      <Trans t={t} i18nKey="tab1.p30">
-        <p>
+
+      <p>
+        <Trans t={t} i18nKey="tab1.p30">
           Your work history affects the amount of benefits you receive each
           week. Submitting accurate information helps us process your claim
           faster. You will need:
-        </p>
-      </Trans>
+        </Trans>
+      </p>
+
       <ul>
         <li>
           <Trans t={t} i18nKey="tab1.list20-item1">
