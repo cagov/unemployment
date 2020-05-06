@@ -3,10 +3,6 @@ import LanguageDetector from "i18next-browser-languagedetector";
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
-// Usage note: only the "br", "strong", "i", and "p" tags can be used in translation.json
-// Other tags must be converted (delete the key from translation.json, ensure debug:true here,
-// load the page and copy the console output with converted tags back into translation.json.)
-
 const isDev = process.env.NODE_ENV === "development";
 
 i18n
