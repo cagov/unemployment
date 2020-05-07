@@ -15,7 +15,7 @@ singlePageAppRouter.get("/*", (req, res) => {
 
   const shouldRedirect = !Object.values(pageRoutes)
     .map((r) => r.path)
-    .includes(req.path);
+    .some(path => req.path.startsWith(path))
   if (shouldRedirect) {
     res.status(301).location(pageRoutes.home.path).send();
     return;
@@ -25,6 +25,7 @@ singlePageAppRouter.get("/*", (req, res) => {
     `<!doctype html>
     <html lang="en">
     <head>
+      <base href="/">
       <!-- Global site tag (gtag.js) - Google Analytics -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=UA-3419582-2"></script>
       <script>
