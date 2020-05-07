@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BPOButton /> renders content pane 1`] = `
+<Button
+  active={false}
+  disabled={false}
+  href="https://www.edd.ca.gov/Benefit_Programs_Online.htm"
+  onClick={[Function]}
+  target="_blank"
+  type="button"
+  variant="secondary"
+>
+  Go to Benefit Programs Online
+</Button>
+`;
