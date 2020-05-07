@@ -15,7 +15,7 @@ singlePageAppRouter.get("/*", (req, res) => {
 
   const shouldRedirect = !Object.values(pageRoutes)
     .map((r) => r.path)
-    .includes(req.path);
+    .some(path => req.path.startsWith(path))
   if (shouldRedirect) {
     res.status(301).location(pageRoutes.home.path).send();
     return;
@@ -25,6 +25,7 @@ singlePageAppRouter.get("/*", (req, res) => {
     `<!doctype html>
     <html lang="en">
     <head>
+      <base href="/">
       <!-- Global site tag (gtag.js) - Google Analytics -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=UA-3419582-2"></script>
       <script>
@@ -32,8 +33,9 @@ singlePageAppRouter.get("/*", (req, res) => {
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         // For details see: https://support.google.com/analytics/answer/9310895?hl=en
-        gtag('config', 'UA-3419582-2'); // www.ca.gov
-        gtag('config', 'UA-3419582-31'); // edd.ca.gov
+        // https://developers.google.com/analytics/devguides/collection/gtagjs/ip-anonymization
+        gtag('config', 'UA-3419582-2', { 'anonymize_ip': true }); // www.ca.gov
+        gtag('config', 'UA-3419582-31', { 'anonymize_ip': true }); // edd.ca.gov
       </script>
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta charset="utf-8" />
