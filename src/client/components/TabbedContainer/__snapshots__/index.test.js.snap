@@ -172,9 +172,11 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
                 onClick={[Function]}
                 to="/guide/before-you-apply"
                 type="button"
-                variant="secondary"
+                variant="outline-secondary"
               >
-                buttonNextPrefixtabTitles.1
+                <strong>
+                  buttonNextPrefixtabTitles.1
+                </strong>
               </Button>
             </Component>
             <Component
@@ -194,9 +196,11 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
                 onClick={[Function]}
                 to="/guide/how-to-apply"
                 type="button"
-                variant="secondary"
+                variant="outline-secondary"
               >
-                buttonNextPrefixtabTitles.2
+                <strong>
+                  buttonNextPrefixtabTitles.2
+                </strong>
               </Button>
             </Component>
             <Component
@@ -216,9 +220,11 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
                 onClick={[Function]}
                 to="/guide/after-you-submit"
                 type="button"
-                variant="secondary"
+                variant="outline-secondary"
               >
-                buttonNextPrefixtabTitles.3
+                <strong>
+                  buttonNextPrefixtabTitles.3
+                </strong>
               </Button>
             </Component>
             <Component
@@ -238,9 +244,11 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
                 onClick={[Function]}
                 to="/guide/receive-benefits"
                 type="button"
-                variant="secondary"
+                variant="outline-secondary"
               >
-                buttonNextPrefixtabTitles.4
+                <strong>
+                  buttonNextPrefixtabTitles.4
+                </strong>
               </Button>
             </Component>
             <Component
@@ -260,9 +268,11 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
                 onClick={[Function]}
                 to="/guide/more-resources"
                 type="button"
-                variant="secondary"
+                variant="outline-secondary"
               >
-                buttonNextPrefixtabTitles.5
+                <strong>
+                  buttonNextPrefixtabTitles.5
+                </strong>
               </Button>
             </Component>
             <Component
