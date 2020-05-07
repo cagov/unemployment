@@ -121,12 +121,12 @@ function TabbedContainer() {
     const nextTabIndex = tabIndex + 1;
     return (
       <Button
-        variant="secondary"
+        variant="outline-secondary"
         as={Link}
         to={prefix + tabSlugs[nextTabIndex]}
         onClick={() => setActiveTabIndex(nextTabIndex)}
       >
-        {t("buttonNextPrefix") + getTabTitle(nextTabIndex)}
+        <strong>{t("buttonNextPrefix") + getTabTitle(nextTabIndex)}</strong>
       </Button>
     );
   };
