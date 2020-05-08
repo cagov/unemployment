@@ -159,7 +159,9 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
               key="0"
               path="/guide/benefits"
             >
-              <ScrollToTopOnMount />
+              <TabPaneContentOnMount
+                tabIndex={0}
+              />
               <h2>
                 tabTitles.0
               </h2>
@@ -181,7 +183,9 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
               key="1"
               path="/guide/before-you-apply"
             >
-              <ScrollToTopOnMount />
+              <TabPaneContentOnMount
+                tabIndex={1}
+              />
               <h2>
                 tabTitles.1
               </h2>
@@ -203,7 +207,9 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
               key="2"
               path="/guide/how-to-apply"
             >
-              <ScrollToTopOnMount />
+              <TabPaneContentOnMount
+                tabIndex={2}
+              />
               <h2>
                 tabTitles.2
               </h2>
@@ -225,7 +231,9 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
               key="3"
               path="/guide/after-you-submit"
             >
-              <ScrollToTopOnMount />
+              <TabPaneContentOnMount
+                tabIndex={3}
+              />
               <h2>
                 tabTitles.3
               </h2>
@@ -247,7 +255,9 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
               key="4"
               path="/guide/receive-benefits"
             >
-              <ScrollToTopOnMount />
+              <TabPaneContentOnMount
+                tabIndex={4}
+              />
               <h2>
                 tabTitles.4
               </h2>
@@ -269,7 +279,9 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
               key="5"
               path="/guide/more-resources"
             >
-              <ScrollToTopOnMount />
+              <TabPaneContentOnMount
+                tabIndex={5}
+              />
               <h2>
                 tabTitles.5
               </h2>
