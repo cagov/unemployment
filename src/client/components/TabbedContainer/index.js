@@ -101,7 +101,7 @@ function TabbedContainer() {
         left: 0,
         behavior: "smooth",
       });
-    }, [tabIndex]);
+    });
 
     return null;
   }
