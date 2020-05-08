@@ -84,7 +84,7 @@ function TabbedContainer() {
     useEffect(() => {
       // If make sure the correct tab is active (e.g., if the
       // user is loading a tab directly).
-      if (activeTabIndex != tabIndex) {
+      if (activeTabIndex !== tabIndex) {
         setActiveTabIndex(tabIndex);
         return;
       }
@@ -101,7 +101,7 @@ function TabbedContainer() {
         left: 0,
         behavior: "smooth",
       });
-    }, []);
+    }, [tabIndex]);
 
     return null;
   }
