@@ -79,9 +79,16 @@ function TabbedContainer() {
   const history = useHistory();
   history.listen((location) => logPage(location.pathname));
 
-  // Scroll to the top of the sidebar when a tab content pane loads
-  function ScrollToTopOnMount() {
+  // Runs when a tab content pane loads.
+  function TabPaneContentOnMount({ tabIndex }) {
     useEffect(() => {
+      // If make sure the correct tab is active (e.g., if the
+      // user is loading a tab directly).
+      if (activeTabIndex != tabIndex) {
+        setActiveTabIndex(tabIndex);
+        return;
+      }
+
       // Don't scroll down to the top of the sidebar on initial page load
       if (initialPageLoad.current) {
         initialPageLoad.current = false;
@@ -161,7 +168,7 @@ function TabbedContainer() {
                   const TabPaneContentTagName = tabPaneContent[index];
                   return (
                     <Route path={prefix + value} key={index}>
-                      <ScrollToTopOnMount />
+                      <TabPaneContentOnMount tabIndex={index} />
                       <h2>{getTabTitle(index)}</h2>
                       <TabPaneContentTagName getTabLink={getTabLink} />
                       {renderNextButton(index)}
