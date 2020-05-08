@@ -23,7 +23,7 @@
       "jsx": true
     }
   },
-  "plugins": ["jest", "jsdoc", "jsx-a11y", "react-hooks"],
+  "plugins": ["jest", "jsdoc", "jsx-a11y", "react-hooks", "simple-import-sort"],
   "rules": {
     "jest/consistent-test-it": ["error", { "fn": "it" }],
     "jest/no-try-expect": "off",
@@ -45,7 +45,8 @@
     "react/jsx-fragments": ["error", "element"],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "sort-imports": "error",
+    "simple-import-sort/sort": "error",
+    "sort-imports": "off",
     "sort-vars": "error"
   },
   "settings": {
