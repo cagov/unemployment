@@ -45,8 +45,6 @@
     "react/jsx-fragments": ["error", "element"],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "sort-imports": "error",
-    "sort-vars": "error"
   },
   "settings": {
     "react": {
