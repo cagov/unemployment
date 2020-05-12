@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<BPOButton /> renders content pane 1`] = `
+exports[`<BPOButton /> renders the component 1`] = `
 <Button
   active={false}
   disabled={false}

@@ -1,80 +1,157 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<TabPaneContent1 /> renders content pane 1`] = `
-<div>
-  <h3>
-    Proof of citizenship or authorization to work in the United States
-  </h3>
-  <p>
-    You will need 
-    <strong>
-      all
-    </strong>
-     of following:
-  </p>
-  <ul>
-    <li>
-      Social Security number
-    </li>
-    <li>
-      California driver license or ID card
-    </li>
-    <li>
-      Proof of US citizenship, or a green card, or a visa that allows you to work in the US, or an Alien Registration Number
-    </li>
-  </ul>
-  <p>
-    You must be authorized to work in the US to receive unemployment benefits. If you are not a US citizen, have information from your employment authorization document ready.
-  </p>
-  <h3>
-    Information about your work history
-  </h3>
-  <p>
-    Your work history affects the amount of benefits you receive each week. Submitting accurate information helps us process your claim faster. You will need:
-  </p>
-  <ul>
-    <li>
-      <strong>
-        Work history from the last 18 months.
-      </strong>
-       This includes the name of any companies as they appear on your paycheck, the dates of employment, hours worked per week, the total wages you earned before taxes were taken out (gross wages), hourly rate of pay, and the reason you are no longer working.
-    </li>
-    <li>
-      <strong>
-        Specific information from your last employer or company.
-      </strong>
+exports[`<TabPaneContent1 /> renders the TabPaneContent component 1`] = `
+<TabPaneContent1>
+  <div>
+    <h3>
+      <Trans
+        i18nKey="tab1-header1"
+        t={[Function]}
+      >
+        Proof of citizenship or authorization to work in the United States
+      </Trans>
+    </h3>
+    <p>
+      <Trans
+        i18nKey="tab1-p1"
+        t={[Function]}
+      >
+        You will need 
+        <strong
+          key="strong-1"
+        >
+          all
+        </strong>
+         of the following:
+      </Trans>
+    </p>
+    <ul>
+      <li>
+        <Trans
+          i18nKey="tab1-list1-item1"
+          t={[Function]}
+        >
+          Social Security number
+        </Trans>
+      </li>
+      <li>
+        <Trans
+          i18nKey="tab1-list1-item2"
+          t={[Function]}
+        >
+          California driver license or ID card
+        </Trans>
+      </li>
+      <li>
+        <Trans
+          i18nKey="tab1-list1-item3"
+          t={[Function]}
+        >
+          Proof of US citizenship, or a green card, or a visa that allows you to work in the US, or an Alien Registration Number
+        </Trans>
+      </li>
+    </ul>
+    <p>
+      <Trans
+        i18nKey="tab1-p2"
+        t={[Function]}
+      >
+        You must be authorized to work in the US to receive unemployment benefits. If you are not a US citizen, have information from your employment authorization document ready.
+      </Trans>
        
-      This includes your employer’s name, mailing address, phone number, supervisor’s name, total wages you earned before taxes were taken out (gross wages) for the last week you worked, and the reason for your unemployment.
-    </li>
-  </ul>
-  <h3>
-    Federal and military documents
-  </h3>
-  <ul>
-    <li>
-      <strong>
-        If you are a former federal employee,
-      </strong>
-       have your
-       
-      <i>
-        Notice to Federal Employees About Unemployment Insurance
-      </i>
-       
-      (Standard Form 8) ready.
-    </li>
-    <li>
-      <strong>
-        If you served in the military in the last 18 months,
-      </strong>
-       
-      have your 
-      <i>
-        Certificate of Release or Discharge from Active Duty
-      </i>
-       
-      (DD 214) ready.
-    </li>
-  </ul>
-</div>
+    </p>
+    <h3>
+      <Trans
+        i18nKey="tab1-header2"
+        t={[Function]}
+      >
+        Information about your work history
+      </Trans>
+    </h3>
+    <p>
+      <Trans
+        i18nKey="tab1-p3"
+        t={[Function]}
+      >
+        Your work history affects the amount of benefits you receive each week. Submitting accurate information helps us process your claim faster. You will need:
+      </Trans>
+    </p>
+    <ul>
+      <li>
+        <Trans
+          i18nKey="tab1-list2-item1"
+          t={[Function]}
+        >
+          <strong
+            key="strong-0"
+          >
+            Work history from the last 18 months.
+          </strong>
+           This includes the name of any companies as they appear on your paycheck, the dates of employment, hours worked per week, the total wages you earned before taxes were taken out (gross wages), hourly rate of pay, and the reason you are no longer working.
+        </Trans>
+      </li>
+      <li>
+        <Trans
+          i18nKey="tab1-list2-item2"
+          t={[Function]}
+        >
+          <strong
+            key="strong-0"
+          >
+            Specific information from your last employer or company.
+          </strong>
+           This includes your employer’s name, mailing address, phone number, supervisor’s name, total wages you earned before taxes were taken out (gross wages) for the last week you worked, and the reason for your unemployment.
+        </Trans>
+      </li>
+    </ul>
+    <h3>
+      <Trans
+        i18nKey="tab1-header3"
+        t={[Function]}
+      >
+        Federal and military documents
+      </Trans>
+    </h3>
+    <ul>
+      <li>
+        <Trans
+          i18nKey="tab1-list3-item1"
+          t={[Function]}
+        >
+          <strong
+            key="strong-0"
+          >
+            If you are a former federal employee,
+          </strong>
+           have your 
+          <i
+            key="i-2"
+          >
+            Notice to Federal Employees About Unemployment Insurance
+          </i>
+           (Standard Form 8) ready.
+        </Trans>
+      </li>
+      <li>
+        <Trans
+          i18nKey="tab1-list3-item2"
+          t={[Function]}
+        >
+          <strong
+            key="strong-0"
+          >
+            If you served in the military in the last 18 months,
+          </strong>
+           have your 
+          <i
+            key="i-2"
+          >
+            Certificate of Release or Discharge from Active Duty
+          </i>
+           (DD 214) ready.
+        </Trans>
+      </li>
+    </ul>
+  </div>
+</TabPaneContent1>
 `;

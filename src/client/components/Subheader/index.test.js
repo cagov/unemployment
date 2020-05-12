@@ -1,10 +1,9 @@
-import React from "react";
-import Subheader from "./index";
-import { shallow } from "enzyme";
+import renderNonTransContent from "../../test-helpers/renderNonTransContent";
+import Component from "./index";
 
 describe("<Subheader />", () => {
   it("renders vertical navigation bar", async () => {
-    const wrapper = shallow(<Subheader />);
+    const wrapper = renderNonTransContent(Component, "Subheader");
 
     expect(wrapper).toMatchSnapshot();
   });
