@@ -1,10 +1,9 @@
-import Footer from "./index";
-import React from "react";
-import { shallow } from "enzyme";
+import renderNonTransContent from "../../test-helpers/renderNonTransContent";
+import Component from "./index";
 
 describe("<Footer />", () => {
-  it("renders the footer component", async () => {
-    const wrapper = shallow(<Footer />);
+  it("renders the component", async () => {
+    const wrapper = renderNonTransContent(Component, "Footer");
 
     expect(wrapper).toMatchSnapshot();
   });

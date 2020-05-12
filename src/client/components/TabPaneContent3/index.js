@@ -25,7 +25,7 @@ function TabPaneContent3() {
           </Trans>
         </li>
         <li>
-          <Trans t={t} i18nKey="tab3-list1-item3" />
+          <Trans t={t} i18nKey="tab3-list1-item2" />
         </li>
         <li>
           <Trans t={t} i18nKey="tab3-list1-item3" />

@@ -4,6 +4,7 @@ import React from "react";
 
 function TabPaneContent0({ getTabLink }) {
   const { t } = useTranslation();
+  const tabLink = getTabLink(4); // Receive your benefits
 
   return (
     <div>
@@ -91,13 +92,13 @@ function TabPaneContent0({ getTabLink }) {
         </li>
       </ul>
       <p>
-        <Trans t={t} i18nKey="tab0-p3">
+        <Trans t={t} i18nKey="tab0-p3" tabLink={tabLink}>
           {
             // The text in this <Trans> must *approximately* match translation.json
             // otherwise the link won't render.
           }
-          If you're already receiving UI, review {getTabLink(4)} to learn how
-          your UI claim may be affected by COVID-19.
+          If you're already receiving UI, review {{ tabLink }} to learn how your
+          UI claim may be affected by COVID-19.
         </Trans>
       </p>
       <h3>

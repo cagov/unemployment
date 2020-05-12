@@ -1,10 +1,9 @@
-import Header from "./index";
-import React from "react";
-import { shallow } from "enzyme";
+import renderNonTransContent from "../../test-helpers/renderNonTransContent";
+import Component from "./index";
 
 describe("<Header />", () => {
-  it("renders the header component", async () => {
-    const wrapper = shallow(<Header />);
+  it("renders the component", async () => {
+    const wrapper = renderNonTransContent(Component, "Header");
 
     expect(wrapper).toMatchSnapshot();
   });
