@@ -64,12 +64,6 @@ function TabPaneContent3() {
         <Trans t={t} i18nKey="tab3-header3" />
       </h3>
 
-      <div className="highlight-blockquote">
-        <Trans t={t} i18nKey="tab3-blockquote2" />
-      </div>
-      <p>
-        <Trans t={t} i18nKey="tab3-p4" />
-      </p>
       <ul>
         <li>
           <Trans t={t} i18nKey="tab3-list2-item1" />
@@ -113,9 +107,6 @@ function TabPaneContent3() {
             mailing the paper form.
           </Trans>
         </p>
-        <div className="highlight-blockquote">
-          <Trans t={t} i18nKey="tab3-blockquote3" />
-        </div>
       </div>
       <h3>
         <Trans t={t} i18nKey="tab3-header5" />

@@ -126,35 +126,6 @@ exports[`<TabPaneContent3 /> renders the TabPaneContent component 1`] = `
         2. Certify for your first benefit payment
       </Trans>
     </h3>
-    <div
-      className="highlight-blockquote"
-    >
-      <Trans
-        i18nKey="tab3-blockquote2"
-        t={[Function]}
-      >
-        <strong
-          key="strong-0"
-        >
-          Note:
-        </strong>
-         Certification is 
-        <strong
-          key="strong-2"
-        >
-          not required
-        </strong>
-         at this time for benefits with week ending dates of March 14 through May 9, 2020. We'll contact you at a later date to certify for these weeks.
-      </Trans>
-    </div>
-    <p>
-      <Trans
-        i18nKey="tab3-p4"
-        t={[Function]}
-      >
-        When you are required to certify, here’s what you’ll need to do:
-      </Trans>
-    </p>
     <ul>
       <li>
         <Trans
@@ -259,27 +230,6 @@ exports[`<TabPaneContent3 /> renders the TabPaneContent component 1`] = `
           . You can also do this by phone by calling 1-866-333-4606, or by mailing the paper form.
         </Trans>
       </p>
-      <div
-        className="highlight-blockquote"
-      >
-        <Trans
-          i18nKey="tab3-blockquote3"
-          t={[Function]}
-        >
-          <strong
-            key="strong-0"
-          >
-            Note:
-          </strong>
-           Certification is 
-          <strong
-            key="strong-2"
-          >
-            not required
-          </strong>
-           at this time for benefits with week ending dates of March 14 through May 9, 2020. We'll contact you at a later date to certify for these weeks.
-        </Trans>
-      </div>
     </div>
     <h3>
       <Trans
