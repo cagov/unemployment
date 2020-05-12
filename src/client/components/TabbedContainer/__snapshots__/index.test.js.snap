@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
+exports[`<TabbedContainer /> renders the component 1`] = `
 <Container
   fluid={false}
 >
@@ -39,7 +39,7 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
               onKeyDown={[Function]}
               to="/guide/benefits"
             >
-              tabTitles.0
+              Start here
             </NavLink>
              
           </NavItem>
@@ -60,7 +60,7 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
               onKeyDown={[Function]}
               to="/guide/before-you-apply"
             >
-              tabTitles.1
+              What you need before you apply
             </NavLink>
              
           </NavItem>
@@ -81,7 +81,7 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
               onKeyDown={[Function]}
               to="/guide/how-to-apply"
             >
-              tabTitles.2
+              How to apply
             </NavLink>
              
           </NavItem>
@@ -102,7 +102,7 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
               onKeyDown={[Function]}
               to="/guide/after-you-submit"
             >
-              tabTitles.3
+              After you submit your application
             </NavLink>
              
           </NavItem>
@@ -123,7 +123,7 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
               onKeyDown={[Function]}
               to="/guide/receive-benefits"
             >
-              tabTitles.4
+              Receive your benefits
             </NavLink>
              
           </NavItem>
@@ -144,7 +144,7 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
               onKeyDown={[Function]}
               to="/guide/more-resources"
             >
-              tabTitles.5
+              More resources
             </NavLink>
              
           </NavItem>
@@ -163,7 +163,7 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
                 tabIndex={0}
               />
               <h2>
-                tabTitles.0
+                Start here
               </h2>
               <TabPaneContent0
                 getTabLink={[Function]}
@@ -176,7 +176,7 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
                 type="button"
                 variant="secondary"
               >
-                buttonNextPrefixtabTitles.1
+                Next: What you need before you apply
               </Button>
             </Component>
             <Component
@@ -187,7 +187,7 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
                 tabIndex={1}
               />
               <h2>
-                tabTitles.1
+                What you need before you apply
               </h2>
               <TabPaneContent1
                 getTabLink={[Function]}
@@ -200,7 +200,7 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
                 type="button"
                 variant="secondary"
               >
-                buttonNextPrefixtabTitles.2
+                Next: How to apply
               </Button>
             </Component>
             <Component
@@ -211,7 +211,7 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
                 tabIndex={2}
               />
               <h2>
-                tabTitles.2
+                How to apply
               </h2>
               <TabPaneContent2
                 getTabLink={[Function]}
@@ -224,7 +224,7 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
                 type="button"
                 variant="secondary"
               >
-                buttonNextPrefixtabTitles.3
+                Next: After you submit your application
               </Button>
             </Component>
             <Component
@@ -235,7 +235,7 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
                 tabIndex={3}
               />
               <h2>
-                tabTitles.3
+                After you submit your application
               </h2>
               <TabPaneContent3
                 getTabLink={[Function]}
@@ -248,7 +248,7 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
                 type="button"
                 variant="secondary"
               >
-                buttonNextPrefixtabTitles.4
+                Next: Receive your benefits
               </Button>
             </Component>
             <Component
@@ -259,7 +259,7 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
                 tabIndex={4}
               />
               <h2>
-                tabTitles.4
+                Receive your benefits
               </h2>
               <TabPaneContent4
                 getTabLink={[Function]}
@@ -272,7 +272,7 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
                 type="button"
                 variant="secondary"
               >
-                buttonNextPrefixtabTitles.5
+                Next: More resources
               </Button>
             </Component>
             <Component
@@ -283,7 +283,7 @@ exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
                 tabIndex={5}
               />
               <h2>
-                tabTitles.5
+                More resources
               </h2>
               <TabPaneContent5
                 getTabLink={[Function]}

@@ -8,13 +8,13 @@ exports[`<Subheader /> renders vertical navigation bar 1`] = `
     className="container p-4"
   >
     <h1>
-      subheaderHeader
+      Guide to applying for unemployment benefits
     </h1>
     <p>
-      subheaderSubheader
+      Learn what type of benefits you qualify for and how to apply for them.
     </p>
     <p>
-      subheaderParagraph
+      If you are out of work or had your hours reduced you may be eligible to receive unemployment benefits from California’s Employment Development Department (EDD).
     </p>
     <p>
       First register or log in at Benefit Programs Online, then apply for unemployment benefits on UI Online℠.

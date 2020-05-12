@@ -1,10 +1,9 @@
-import BPOButton from "./index";
-import React from "react";
-import { shallow } from "enzyme";
+import renderNonTransContent from "../../test-helpers/renderNonTransContent";
+import Component from "./index";
 
 describe("<BPOButton />", () => {
-  it("renders content pane", async () => {
-    const wrapper = shallow(<BPOButton />);
+  it("renders the component", async () => {
+    const wrapper = renderNonTransContent(Component, "BPOButton");
 
     expect(wrapper).toMatchSnapshot();
   });
