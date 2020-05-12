@@ -1,9 +1,10 @@
-import renderNonTransContent from "../../test-helpers/renderNonTransContent";
-import Component from "./index";
+import React from "react";
+import TabbedContainer from "./index";
+import { shallow } from "enzyme";
 
 describe("<TabbedContainer />", () => {
-  it("renders the component", async () => {
-    const wrapper = renderNonTransContent(Component, "TabbedContainer");
+  it("renders vertical navigation bar", async () => {
+    const wrapper = shallow(<TabbedContainer />);
 
     expect(wrapper).toMatchSnapshot();
   });

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<TabbedContainer /> renders the component 1`] = `
+exports[`<TabbedContainer /> renders vertical navigation bar 1`] = `
 <Container
   fluid={false}
 >
@@ -39,7 +39,7 @@ exports[`<TabbedContainer /> renders the component 1`] = `
               onKeyDown={[Function]}
               to="/guide/benefits"
             >
-              Start here
+              tabTitles.0
             </NavLink>
              
           </NavItem>
@@ -60,7 +60,7 @@ exports[`<TabbedContainer /> renders the component 1`] = `
               onKeyDown={[Function]}
               to="/guide/before-you-apply"
             >
-              What you need before you apply
+              tabTitles.1
             </NavLink>
              
           </NavItem>
@@ -81,7 +81,7 @@ exports[`<TabbedContainer /> renders the component 1`] = `
               onKeyDown={[Function]}
               to="/guide/how-to-apply"
             >
-              How to apply
+              tabTitles.2
             </NavLink>
              
           </NavItem>
@@ -102,7 +102,7 @@ exports[`<TabbedContainer /> renders the component 1`] = `
               onKeyDown={[Function]}
               to="/guide/after-you-submit"
             >
-              After you submit your application
+              tabTitles.3
             </NavLink>
              
           </NavItem>
@@ -123,7 +123,7 @@ exports[`<TabbedContainer /> renders the component 1`] = `
               onKeyDown={[Function]}
               to="/guide/receive-benefits"
             >
-              Receive your benefits
+              tabTitles.4
             </NavLink>
              
           </NavItem>
@@ -144,7 +144,7 @@ exports[`<TabbedContainer /> renders the component 1`] = `
               onKeyDown={[Function]}
               to="/guide/more-resources"
             >
-              More resources
+              tabTitles.5
             </NavLink>
              
           </NavItem>
@@ -163,7 +163,7 @@ exports[`<TabbedContainer /> renders the component 1`] = `
                 tabIndex={0}
               />
               <h2>
-                Start here
+                tabTitles.0
               </h2>
               <TabPaneContent0
                 getTabLink={[Function]}
@@ -176,7 +176,7 @@ exports[`<TabbedContainer /> renders the component 1`] = `
                 type="button"
                 variant="secondary"
               >
-                Next: What you need before you apply
+                buttonNextPrefixtabTitles.1
               </Button>
             </Component>
             <Component
@@ -187,7 +187,7 @@ exports[`<TabbedContainer /> renders the component 1`] = `
                 tabIndex={1}
               />
               <h2>
-                What you need before you apply
+                tabTitles.1
               </h2>
               <TabPaneContent1
                 getTabLink={[Function]}
@@ -200,7 +200,7 @@ exports[`<TabbedContainer /> renders the component 1`] = `
                 type="button"
                 variant="secondary"
               >
-                Next: How to apply
+                buttonNextPrefixtabTitles.2
               </Button>
             </Component>
             <Component
@@ -211,7 +211,7 @@ exports[`<TabbedContainer /> renders the component 1`] = `
                 tabIndex={2}
               />
               <h2>
-                How to apply
+                tabTitles.2
               </h2>
               <TabPaneContent2
                 getTabLink={[Function]}
@@ -224,7 +224,7 @@ exports[`<TabbedContainer /> renders the component 1`] = `
                 type="button"
                 variant="secondary"
               >
-                Next: After you submit your application
+                buttonNextPrefixtabTitles.3
               </Button>
             </Component>
             <Component
@@ -235,7 +235,7 @@ exports[`<TabbedContainer /> renders the component 1`] = `
                 tabIndex={3}
               />
               <h2>
-                After you submit your application
+                tabTitles.3
               </h2>
               <TabPaneContent3
                 getTabLink={[Function]}
@@ -248,7 +248,7 @@ exports[`<TabbedContainer /> renders the component 1`] = `
                 type="button"
                 variant="secondary"
               >
-                Next: Receive your benefits
+                buttonNextPrefixtabTitles.4
               </Button>
             </Component>
             <Component
@@ -259,7 +259,7 @@ exports[`<TabbedContainer /> renders the component 1`] = `
                 tabIndex={4}
               />
               <h2>
-                Receive your benefits
+                tabTitles.4
               </h2>
               <TabPaneContent4
                 getTabLink={[Function]}
@@ -272,7 +272,7 @@ exports[`<TabbedContainer /> renders the component 1`] = `
                 type="button"
                 variant="secondary"
               >
-                Next: More resources
+                buttonNextPrefixtabTitles.5
               </Button>
             </Component>
             <Component
@@ -283,7 +283,7 @@ exports[`<TabbedContainer /> renders the component 1`] = `
                 tabIndex={5}
               />
               <h2>
-                More resources
+                tabTitles.5
               </h2>
               <TabPaneContent5
                 getTabLink={[Function]}
