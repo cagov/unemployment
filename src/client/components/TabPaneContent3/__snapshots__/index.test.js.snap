@@ -34,10 +34,10 @@ exports[`<TabPaneContent3 /> renders the TabPaneContent component 1`] = `
       </li>
       <li>
         <Trans
-          i18nKey="tab3-list1-item3"
+          i18nKey="tab3-list1-item2"
           t={[Function]}
         >
-          If you're not automatically registered in UI Online, you’ll receive a notice in the mail with your EDD Customer Account Number. Use the account number to finish registering for full UI Online access.
+          You may receive an email confirming that you were automatically registered in UI Online. This allows you to fully access information about your claim and to certify for continued benefits online.
         </Trans>
       </li>
       <li>
