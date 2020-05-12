@@ -1,213 +1,102 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<TabPaneContent2 /> renders the TabPaneContent component 1`] = `
-<TabPaneContent2>
-  <div>
-    <h3>
-      <Trans
-        i18nKey="tab2-header1"
-        t={[Function]}
-      >
-        1. Register with Benefit Programs Online
-      </Trans>
-    </h3>
-    <p>
-      <Trans
-        i18nKey="tab2-p1"
-        t={[Function]}
-      >
-        <strong
-          key="strong-0"
-        >
-          The fastest way to apply for all unemployment benefits is through UI Online. After you have registered for a Benefit Programs Online account, you can get started on UI Online.
-        </strong>
-         You can still apply for UI by 
-        <a
-          href="https://edd.ca.gov/Unemployment/Filing_a_Claim.htm"
-          key="2"
-        >
-          phone, mail, or fax
-        </a>
-        .
-      </Trans>
-    </p>
-    <BPOButton>
-      <Button
-        active={false}
-        disabled={false}
-        href="https://www.edd.ca.gov/Benefit_Programs_Online.htm"
-        onClick={[Function]}
-        target="_blank"
-        type="button"
-        variant="secondary"
-      >
-        <SafeAnchor
-          className="btn btn-secondary"
-          disabled={false}
-          href="https://www.edd.ca.gov/Benefit_Programs_Online.htm"
-          onClick={[Function]}
-          target="_blank"
-        >
-          <a
-            className="btn btn-secondary"
-            href="https://www.edd.ca.gov/Benefit_Programs_Online.htm"
-            onClick={[Function]}
-            onKeyDown={[Function]}
-            target="_blank"
-          >
-            Go to Benefit Programs Online
-          </a>
-        </SafeAnchor>
-      </Button>
-    </BPOButton>
-    <h3
-      className="pt-4"
+exports[`<TabPaneContent2 /> renders content pane 1`] = `
+<div>
+  <h3>
+    1. Register with Benefit Programs Online
+  </h3>
+  <p>
+    <strong>
+      The fastest way to apply for all unemployment benefits is through UI Online. After you have registered for a Benefit Programs Online account, you can get started on UI Online.
+    </strong>
+     
+    You can still apply for UI by
+     
+    <a
+      href="https://edd.ca.gov/Unemployment/Filing_a_Claim.htm"
     >
-      <Trans
-        i18nKey="tab2-header2"
-        t={[Function]}
-      >
-        2. Submit your application
-      </Trans>
-    </h3>
+      phone, mail, or fax
+    </a>
+    .
+  </p>
+  <BPOButton />
+  <h3
+    className="pt-4"
+  >
+    2. Submit your application
+  </h3>
+  <h4>
+    Filling out employment information for COVID-19 claims in UI Online
+  </h4>
+  <ul>
+    <li>
+      If you have been laid off or had hours cut back as a direct result of COVID-19, under the first dropdown menu in the
+       
+      <strong>
+        Additional Information
+      </strong>
+       section, select
+       
+      <strong>
+        Laid Off/Lack of Work
+      </strong>
+       as your reason for separation. Then select 
+      <strong>
+        Out of Work Due to COVID-19
+      </strong>
+      .
+    </li>
+    <li>
+      Submit the first date you were affected by COVID-19. We will back pay you for the weeks you are eligible to receive benefits. PUA supports claims between February 2, 2020 and December 26, 2020. Claims between March 29 and July 25, 2020 are eligible for an additional, taxable $600 every week.
+    </li>
+  </ul>
+  <div
+    className="gray-box"
+  >
     <h4>
-      <Trans
-        i18nKey="tab2-header2a"
-        t={[Function]}
-      >
-        Filling out employment information for COVID-19 claims in UI Online
-      </Trans>
+      Tips for applying on UI Online
     </h4>
+    <p>
+      These will help your claim get processed faster.
+    </p>
     <ul>
       <li>
-        <Trans
-          i18nKey="tab2-list1-item1"
-          t={[Function]}
-        >
-          If you have been laid off or had hours cut back as a direct result of COVID-19, under the first dropdown menu in the 
-          <strong
-            key="strong-1"
-          >
-            Additional Information
-          </strong>
-           section, select 
-          <strong
-            key="strong-3"
-          >
-            Laid Off/Lack of Work
-          </strong>
-           as your reason for separation. Then select 
-          <strong
-            key="strong-5"
-          >
-            Out of Work Due to COVID-19
-          </strong>
-          .
-        </Trans>
+        Include all employment information.
       </li>
       <li>
-        <Trans
-          i18nKey="tab2-list1-item2"
-          t={[Function]}
-        >
-          Submit the first date you were affected by COVID-19. We will back pay you for the weeks you are eligible to receive benefits. PUA supports claims between February 2, 2020 and December 26, 2020. Claims between March 29 and July 25, 2020 are eligible for an additional, taxable $600 every week.
-        </Trans>
+        Check for spelling errors or mismatched employer names.
+      </li>
+      <li>
+        Confirm your Social Security number and California Driver’s License or ID number. (Check that this information matches your tax forms.)
       </li>
     </ul>
     <div
-      className="gray-box"
+      className="highlight-blockquote"
     >
-      <h4>
-        <Trans
-          i18nKey="tab2-header2b"
-          t={[Function]}
-        >
-          Tips for applying on UI Online
-        </Trans>
-      </h4>
-      <p>
-        <Trans
-          i18nKey="tab2-p2"
-          t={[Function]}
-        >
-          These will help your claim get processed faster.
-        </Trans>
-      </p>
-      <ul>
-        <li>
-          <Trans
-            i18nKey="tab2-list2-item1"
-            t={[Function]}
-          >
-            Include all employment information.
-          </Trans>
-        </li>
-        <li>
-          <Trans
-            i18nKey="tab2-list2-item2"
-            t={[Function]}
-          >
-            Check for spelling errors or mismatched employer names.
-          </Trans>
-        </li>
-        <li>
-          <Trans
-            i18nKey="tab2-list2-item3"
-            t={[Function]}
-          >
-            Confirm your Social Security number and California Driver’s License or ID number. (Check that this information matches your tax forms.)
-          </Trans>
-        </li>
-      </ul>
-      <div
-        className="highlight-blockquote"
-      >
-        <Trans
-          i18nKey="tab2-blockquote1"
-          t={[Function]}
-        >
-          <strong
-            key="strong-0"
-          >
-            Note:
-          </strong>
-           If you’re a business owner, independent contractor, self-employed worker, freelancer, or gig worker, you can complete your employment information under the 
-          <strong
-            key="strong-2"
-          >
-            Additional Information
-          </strong>
-           section. Submit your net annual income for last year under the 
-          <strong
-            key="strong-4"
-          >
-            Natural Disasters
-          </strong>
-           question.
-        </Trans>
-      </div>
+      <strong>
+        Note:
+      </strong>
+       If you’re a business owner, independent contractor, self-employed worker, freelancer, or gig worker, you can complete your employment information under the
+       
+      <strong>
+        Additional Information
+      </strong>
+       section. Submit your net annual income for last year under the
+       
+      <strong>
+        Natural Disasters
+      </strong>
+       question.
     </div>
-    <h3>
-      <Trans
-        i18nKey="tab2-header3"
-        t={[Function]}
-      >
-        If you were previously approved for UI
-      </Trans>
-    </h3>
-    <p>
-      <Trans
-        i18nKey="tab2-p3"
-        t={[Function]}
-      >
-        <strong
-          key="strong-0"
-        >
-          Restart your old claim
-        </strong>
-        . If your UI application was approved within the past 12 months and you stopped receiving benefits, you don't need to submit a new application. If your claim is more than 12 months old, you will need to file a new claim.
-      </Trans>
-    </p>
   </div>
-</TabPaneContent2>
+  <h3>
+    If you were previously approved for UI
+  </h3>
+  <p>
+    <strong>
+      Restart your old claim
+    </strong>
+    . If your UI application was approved within the past 12 months and you stopped receiving benefits, you don't need to submit a new application. If your claim is more than 12 months old, you will need to file a new claim.
+  </p>
+</div>
 `;

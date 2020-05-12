@@ -1,9 +1,11 @@
-import renderTransContent from "../../test-helpers/renderTransContent";
-import TabPaneContent from "./index";
+import React from "react";
+import TabPaneContent5 from "./index";
+import { shallow } from "enzyme";
 
 describe("<TabPaneContent5 />", () => {
-  it("renders the TabPaneContent component", async () => {
-    const content = renderTransContent(TabPaneContent);
-    expect(content).toMatchSnapshot();
+  it("renders content pane", async () => {
+    const wrapper = shallow(<TabPaneContent5 />);
+
+    expect(wrapper).toMatchSnapshot();
   });
 });
