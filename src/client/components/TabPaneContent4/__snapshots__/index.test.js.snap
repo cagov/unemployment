@@ -341,7 +341,7 @@ exports[`<TabPaneContent4 /> renders the TabPaneContent component 1`] = `
         i18nKey="tab4-p10"
         t={[Function]}
       >
-        We are still working to implement this program which will take effect retroactively to March 29, 2020. In the interim, individuals who have exhausted their benefits on their regular UI claim may be eligible to receive benefits on a PUA claim
+        We are still working to implement this program which will take effect retroactively to March 29, 2020. In the interim, individuals who have exhausted their benefits on their regular UI claim may be eligible to receive benefits on a PUA claim.
       </Trans>
     </p>
   </div>

@@ -137,7 +137,7 @@ exports[`<TabPaneContent0 /> renders the TabPaneContent component 1`] = `
                 >
                   before February 2
                 </strong>
-                , you are probably not eligible for PUA. (You would have to show that you are unemployed because of COVID-19.) You may be eligible for the federal 1.3-week extension. We will notify you about what to do.
+                , you are probably not eligible for PUA. (You would have to show that you are unemployed because of COVID-19.) You may be eligible for the federal 13-week extension. We will notify you about what to do.
               </Trans>
             </li>
             <li>
@@ -149,7 +149,7 @@ exports[`<TabPaneContent0 /> renders the TabPaneContent component 1`] = `
                 <strong
                   key="strong-1"
                 >
-                  between February 2 and March 2.1
+                  between February 2 and March 21
                 </strong>
                 , we will send you a form to fill out to supply information not already in your claim. When you get the form, fill it out and return it.
               </Trans>
@@ -167,9 +167,9 @@ exports[`<TabPaneContent0 /> renders the TabPaneContent component 1`] = `
             <strong
               key="strong-1"
             >
-              on or after March 2.1
+              on or after March 21
             </strong>
-             and are still within your benefit year, we will automatically extend your claim for 1.3 weeks. We will notify you that we have done that and when you can certify.
+             and are still within your benefit year, we will automatically extend your claim for 13 weeks. We will notify you that we have done that and when you can certify.
           </Trans>
         </li>
         <li
@@ -285,7 +285,7 @@ exports[`<TabPaneContent0 /> renders the TabPaneContent component 1`] = `
         i18nKey="tab0-p4"
         t={[Function]}
       >
-        If you are a business owner, independent contractor, self-employed worker, freelancer, or gig worker and only received a 19.9 tax form last year, you are most likely eligible for PUA.
+        If you are a business owner, independent contractor, self-employed worker, freelancer, or gig worker and only received a 1099 tax form last year, you are most likely eligible for PUA.
       </Trans>
     </p>
     <h4>
