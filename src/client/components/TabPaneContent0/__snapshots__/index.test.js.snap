@@ -123,7 +123,7 @@ exports[`<TabPaneContent0 /> renders the TabPaneContent component 1`] = `
             i18nKey="tab0-list1-item5"
             t={[Function]}
           >
-            If you have run out of benefits but you are still within the one year that your claim is good for, and your benefits
+            If you have run out of benefits but you are still within the one year that your claim is good for, and your benefits:
           </Trans>
           <ul>
             <li>

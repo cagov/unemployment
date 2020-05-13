@@ -11,10 +11,7 @@ function Subheader() {
         <h1>{t("subheaderHeader")}</h1>
         <p>{t("subheaderSubheader")}</p>
         <p>{t("subheaderParagraph")}</p>
-        <p>
-          First register or log in at Benefit Programs Online, then apply for
-          unemployment benefits on UI Online&#x2120;.
-        </p>
+        <p>{t("subheaderParagraph2")}</p>
         <BPOButton />
       </div>
     </div>
