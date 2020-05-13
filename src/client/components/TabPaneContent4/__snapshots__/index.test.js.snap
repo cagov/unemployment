@@ -1,186 +1,307 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<TabPaneContent4 /> renders content pane 1`] = `
-<div>
-  <h3>
-    1. Look for your EDD Debit Card℠ in the mail
-  </h3>
-  <p>
-    Benefit payments for Unemployment Insurance, Pandemic Unemployment Assistance (PUA), Disability Insurance, and Paid Family Leave are all made using the EDD Debit Card.
-  </p>
-  <p>
-    Typically, it will take about a week after you certify before you receive your first benefit payment. If you applied for PUA, your EDD Debit Card will be issued within 24-48 hours after you submit your application.
-  </p>
-  <div
-    className="highlight-blockquote"
-  >
-    <strong>
-      Note:
-    </strong>
-     Due to the high volume of claims, it may take a few extra days to receive your EDD Debit Card in the mail.
-  </div>
-  <p>
-    To set up direct deposit transfer from your debit card to your bank account, visit the
-     
-    <a
-      href="https://prepaid.bankofamerica.com/EddCard"
-    >
-      Bank of America EDD Debit Card website
-    </a>
-    .
-  </p>
-  <p>
-    For more information on the EDD Debit Card, visit
-     
-    <a
-      href="https://www.edd.ca.gov/about_edd/The_EDD_Debit_Card.htm"
-    >
-      EDD Debit Card
-    </a>
-    .
-  </p>
-  <h4>
-    About your EDD Debit Card
-  </h4>
-  <ul>
-    <li>
-      <strong>
-        If you were issued an EDD Debit Card in the last three years
-      </strong>
-      , you will receive your benefit payments on that card. If your card has expired, a new card will automatically be sent to you once funds are available.
-      <ul>
-        <li>
-          <strong>
-            Note:
-          </strong>
-           If you were issued a card before 2015, you must visit
-           
-          <a
-            href="https://prepaid.bankofamerica.com/eddcard/ReplaceMyCard/verify"
-          >
-            Replace my Card
-          </a>
-           
-          or contact Bank of America at 1-866-692-9374 (TTY: 1-866-656-5913) to request a new one.
-        </li>
-      </ul>
-    </li>
-    <li>
-      <strong>
-        If you lost your EDD Debit Card
-      </strong>
-      , visit
-       
-      <a
-        href="https://prepaid.bankofamerica.com/eddcard/ReplaceMyCard/verify"
+exports[`<TabPaneContent4 /> renders the TabPaneContent component 1`] = `
+<TabPaneContent4>
+  <div>
+    <h3>
+      <Trans
+        i18nKey="tab4-header1"
+        t={[Function]}
       >
-        Replace my Card
-      </a>
-       
-      or contact Bank of America at 1-866-692-9374 (TTY: 1-866-656-5913). You do not need to speak to a representative. Choose the “lost or stolen” option in the automated menu. Your new card will arrive 7 to 10 business days from the order date.
-    </li>
-    <li>
-      <strong>
-        You can download the Bank of America Prepaid Card app
-      </strong>
-       
-      from any app store to keep track of your EDD Debit Card payments and balance information.
-    </li>
-    <li>
-      <strong>
-        Note
-      </strong>
-      : Bank of America representatives
-       
-      <strong>
-        cannot
-      </strong>
-       answer questions about your claim or pending payments.
-       
-    </li>
-  </ul>
-  <h3>
-    2. Certify your claim every two weeks
-  </h3>
-  <div
-    className="highlight-blockquote"
-  >
-    <strong>
-      Note:
-    </strong>
-     Certification is 
-    <strong>
-      not required
-    </strong>
-     at this time for benefits with week ending dates of March 14 through May 9, 2020. The EDD will contact you at a later date to certify for these weeks.
-  </div>
-  <p>
-    To continue receiving benefit payments, you’ll need to certify your unemployment status every two weeks via UI Online for the fastest and most secure way to obtain benefits.
-  </p>
-  <div
-    className="gray-box"
-  >
-    <h4>
-      What is certification?
-    </h4>
+        1. Look for your EDD Debit Card℠ in the mail
+      </Trans>
+    </h3>
     <p>
-      Certification is the required process of updating the EDD every two weeks with your unemployment status with basic eligibility information:
+      <Trans
+        i18nKey="tab4-p1"
+        t={[Function]}
+      >
+        Benefit payments for Unemployment Insurance, Pandemic Unemployment Assistance (PUA), Disability Insurance, and Paid Family Leave are all made using the EDD Debit Card.
+      </Trans>
     </p>
-    <ul>
-      <li>
-        Are you physically able to work?
-      </li>
-      <li>
-        Are you available for work?
-      </li>
-      <li>
-        Are you ready and willing to accept work immediately?
-      </li>
-      <li>
-        Did you refuse work?
-      </li>
-      <li>
-        Did you work and earn wages? If so, how much?
-      </li>
-    </ul>
     <p>
-      The fastest way to certify is on
-       
-      <a
-        href="https://portal.edd.ca.gov/WebApp/Login?resource_url=https%3A%2F%2Fportal.edd.ca.gov%2FWebApp%2FHome"
+      <Trans
+        i18nKey="tab4-p2"
+        t={[Function]}
       >
-        UI Online
-      </a>
-      . You can also do this by phone by calling 1-866-333-4606, or by mailing the paper form.
+        Typically, it will take about a week after you certify before you receive your first benefit payment. If you applied for PUA, your EDD Debit Card will be issued within 24-48 hours after you submit your application.
+      </Trans>
     </p>
     <div
       className="highlight-blockquote"
     >
-      <strong>
-        Note:
-      </strong>
-       Certification is 
-      <strong>
-        not required
-      </strong>
-       
-      at this time for benefits with week ending dates of March 14 through May 9, 2020. We'll contact you at a later date to certify for these weeks.
+      <Trans
+        i18nKey="tab4-blockquote1"
+        t={[Function]}
+      >
+        <strong
+          key="strong-0"
+        >
+          Note:
+        </strong>
+         Due to the high volume of claims, it may take a few extra days to receive your EDD Debit Card in the mail.
+      </Trans>
     </div>
+    <p>
+      <Trans
+        i18nKey="tab4-p3"
+        t={[Function]}
+      >
+        To set up direct deposit transfer from your debit card to your bank account, visit the 
+        <a
+          href="https://prepaid.bankofamerica.com/EddCard"
+          key="1"
+        >
+          Bank of America EDD Debit Card website
+        </a>
+        .
+      </Trans>
+    </p>
+    <p>
+      <Trans
+        i18nKey="tab4-p4"
+        t={[Function]}
+      >
+        For more information on the EDD Debit Card, visit 
+        <a
+          href="https://www.edd.ca.gov/about_edd/The_EDD_Debit_Card.htm"
+          key="1"
+        >
+          EDD Debit Card
+        </a>
+        .
+      </Trans>
+    </p>
+    <h4>
+      <Trans
+        i18nKey="tab4-header2"
+        t={[Function]}
+      >
+        About your EDD Debit Card
+      </Trans>
+    </h4>
+    <ul>
+      <li>
+        <Trans
+          i18nKey="tab4-list1-item1"
+          t={[Function]}
+        >
+          <strong
+            key="strong-0"
+          >
+            If you were issued an EDD Debit Card in the last three years
+          </strong>
+          , you will receive your benefit payments on that card. If your card has expired, a new card will automatically be sent to you once funds are available.
+        </Trans>
+        <ul>
+          <li>
+            <Trans
+              i18nKey="tab4-list1a-item1"
+              t={[Function]}
+            >
+              <strong
+                key="strong-0"
+              >
+                Note:
+              </strong>
+               If you were issued a card before 2015, you must visit 
+              <a
+                href="https://prepaid.bankofamerica.com/eddcard/ReplaceMyCard/verify"
+                key="2"
+              >
+                Replace my Card
+              </a>
+               or contact Bank of America at 1-866-692-9374 (TTY: 1-866-656-5913) to request a new one.
+            </Trans>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <Trans
+          i18nKey="tab4-list1-item2"
+          t={[Function]}
+        >
+          <strong
+            key="strong-0"
+          >
+            If you lost your EDD Debit Card
+          </strong>
+          , visit 
+          <a
+            href="https://prepaid.bankofamerica.com/eddcard/ReplaceMyCard/verify"
+            key="2"
+          >
+            Replace my Card
+          </a>
+           or contact Bank of America at 1-866-692-9374 (TTY: 1-866-656-5913). You do not need to speak to a representative. Choose the “lost or stolen” option in the automated menu. Your new card will arrive 7 to 10 business days from the order date.
+        </Trans>
+      </li>
+      <li>
+        <Trans
+          i18nKey="tab4-list1-item3"
+          t={[Function]}
+        >
+          <strong
+            key="strong-0"
+          >
+            You can download the Bank of America Prepaid Card app
+          </strong>
+           from any app store to keep track of your EDD Debit Card payments and balance information.
+        </Trans>
+      </li>
+      <li>
+        <Trans
+          i18nKey="tab4-list1-item4"
+          t={[Function]}
+        >
+          <strong
+            key="strong-0"
+          >
+            Note
+          </strong>
+          : Bank of America representatives 
+          <strong
+            key="strong-2"
+          >
+            cannot
+          </strong>
+           answer questions about your claim or pending payments. 
+        </Trans>
+      </li>
+    </ul>
+    <h3>
+      <Trans
+        i18nKey="tab4-header3"
+        t={[Function]}
+      >
+        2. Certify your claim every two weeks
+      </Trans>
+    </h3>
+    <p>
+      <Trans
+        i18nKey="tab4-p5"
+        t={[Function]}
+      >
+        To continue receiving benefit payments, you’ll need to certify your unemployment status every two weeks via UI Online for the fastest and most secure way to obtain benefits.
+      </Trans>
+    </p>
+    <div
+      className="gray-box"
+    >
+      <h4>
+        <Trans
+          i18nKey="tab4-header4"
+          t={[Function]}
+        >
+          What is certification?
+        </Trans>
+      </h4>
+      <p>
+        <Trans
+          i18nKey="tab4-p6"
+          t={[Function]}
+        >
+          Certification is the required process of updating the EDD every two weeks with your unemployment status with basic eligibility information:
+        </Trans>
+      </p>
+      <ul>
+        <li>
+          <Trans
+            i18nKey="tab4-list2-item1"
+            t={[Function]}
+          >
+            Are you physically able to work?
+          </Trans>
+        </li>
+        <li>
+          <Trans
+            i18nKey="tab4-list2-item2"
+            t={[Function]}
+          >
+            Are you available for work?
+          </Trans>
+        </li>
+        <li>
+          <Trans
+            i18nKey="tab4-list2-item3"
+            t={[Function]}
+          >
+            Are you ready and willing to accept work immediately?
+          </Trans>
+        </li>
+        <li>
+          <Trans
+            i18nKey="tab4-list2-item4"
+            t={[Function]}
+          >
+            Did you refuse work?
+          </Trans>
+        </li>
+        <li>
+          <Trans
+            i18nKey="tab4-list2-item5"
+            t={[Function]}
+          >
+            Did you work and earn wages? If so, how much?
+          </Trans>
+        </li>
+      </ul>
+      <p>
+        <Trans
+          i18nKey="tab4-p7"
+          t={[Function]}
+        >
+          The fastest way to certify is on 
+          <a
+            href="https://portal.edd.ca.gov/WebApp/Login?resource_url=https%3A%2F%2Fportal.edd.ca.gov%2FWebApp%2FHome"
+            key="1"
+          >
+            UI Online
+          </a>
+          . You can also do this by phone by calling 1-866-333-4606, or by mailing the paper form.
+        </Trans>
+      </p>
+    </div>
+    <h4>
+      <Trans
+        i18nKey="tab4-header5"
+        t={[Function]}
+      >
+        All claims from March 29 to July 25, 2020 will include an additional $600 every week
+      </Trans>
+    </h4>
+    <p>
+      <Trans
+        i18nKey="tab4-p8"
+        t={[Function]}
+      >
+        We will automatically add $600 every week certified to eligible claimants from March 29 to July 25, 2020. These funds are part of the Federal Pandemic Unemployment Assistance (FPUC) program, also referred to as Pandemic Additional Compensation (PAC).
+      </Trans>
+    </p>
+    <h4>
+      <Trans
+        i18nKey="tab4-header6"
+        t={[Function]}
+      >
+        UI benefit payments have been extended for COVID-19 claims
+      </Trans>
+    </h4>
+    <p>
+      <Trans
+        i18nKey="tab4-p9"
+        t={[Function]}
+      >
+        We normally provide up to 26 weeks of UI benefits to eligible claimants. Once we have implemented the Pandemic Emergency Unemployment Compensation program (PEUC), you may be eligible to extend your benefits for 13 weeks, for a total of 39 weeks.
+      </Trans>
+    </p>
+    <p>
+      <Trans
+        i18nKey="tab4-p10"
+        t={[Function]}
+      >
+        We are still working to implement this program which will take effect retroactively to March 29, 2020. In the interim, individuals who have exhausted their benefits on their regular UI claim may be eligible to receive benefits on a PUA claim.
+      </Trans>
+    </p>
   </div>
-  <h4>
-    All claims from March 29 to July 25, 2020 will include an additional $600 every week
-  </h4>
-  <p>
-    We will automatically add $600 every week certified to eligible claimants from March 29 to July 25, 2020. These funds are part of the Federal Pandemic Unemployment Assistance (FPUC) program, also referred to as Pandemic Additional Compensation (PAC).
-  </p>
-  <h4>
-    UI benefit payments have been extended for COVID-19 claims
-  </h4>
-  <p>
-    We normally provide up to 26 weeks of UI benefits to eligible claimants. Once we have implemented the Pandemic Emergency Unemployment Compensation program (PEUC), you may be eligible to extend your benefits for 13 weeks, for a total of 39 weeks.
-  </p>
-  <p>
-    We are still working to implement this program which will take effect retroactively to March 29, 2020. In the interim, individuals who have exhausted their benefits on their regular UI claim may be eligible to receive benefits on a PUA claim.
-  </p>
-</div>
+</TabPaneContent4>
 `;

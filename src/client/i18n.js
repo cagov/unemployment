@@ -3,6 +3,8 @@ import LanguageDetector from "i18next-browser-languagedetector";
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
+const isDev = process.env.NODE_ENV === "development";
+
 i18n
   // load translation using http -> see /public/locales (i.e. https://github.com/i18next/react-i18next/tree/master/example/react/public/locales)
   // learn more: https://github.com/i18next/i18next-http-backend
@@ -16,15 +18,14 @@ i18n
   // for all options read: https://www.i18next.com/overview/configuration-options
   .init({
     fallbackLng: "en",
-    debug: false,
-
+    debug: isDev,
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default
     },
     load: "languageOnly", // ignore the -US in en-US
   });
 
-if (process.env.NODE_ENV === "development") {
+if (isDev) {
   const { applyClientHMR } = require("i18next-hmr");
   applyClientHMR(i18n);
 }

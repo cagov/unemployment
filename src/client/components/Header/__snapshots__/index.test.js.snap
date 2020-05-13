@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Header /> renders the header component 1`] = `
+exports[`<Header /> renders the component 1`] = `
 <header
   className="header border-bottom border-secondary"
 >
@@ -15,7 +15,7 @@ exports[`<Header /> renders the header component 1`] = `
       href="https://ca.gov"
     >
       <img
-        alt="iconAltText.caGov"
+        alt="California gov logo"
         height="30"
         src="images/Ca-Gov-Logo-Gold.svg"
         width="30"
@@ -37,7 +37,7 @@ exports[`<Header /> renders the header component 1`] = `
         href="https://edd.ca.gov"
       >
         <img
-          alt="iconAltText.home"
+          alt="home icon"
           className="icon"
           height="15"
           src="images/home.svg"
@@ -47,7 +47,7 @@ exports[`<Header /> renders the header component 1`] = `
         <span
           className="text"
         >
-          header.home
+          Home
         </span>
       </NavLink>
       <NavLink
@@ -63,7 +63,7 @@ exports[`<Header /> renders the header component 1`] = `
       >
         <span>
           <img
-            alt="iconAltText.key"
+            alt="key icon"
             className="icon"
             height="15"
             src="images/key.svg"
@@ -73,7 +73,7 @@ exports[`<Header /> renders the header component 1`] = `
           <span
             className="text"
           >
-            header.login
+            Log In
           </span>
         </span>
       </NavLink>
@@ -88,7 +88,7 @@ exports[`<Header /> renders the header component 1`] = `
       href="https://edd.ca.gov"
     >
       <img
-        alt="iconAltText.caGov"
+        alt="California gov logo"
         className="d-inline-block align-top mr-5"
         height="50"
         src="images/edd-logo-2-Color.svg"
@@ -114,7 +114,7 @@ exports[`<Header /> renders the header component 1`] = `
         href="https://edd.ca.gov/jobs.htm"
       >
         <span>
-          header.jobs
+          Jobs
         </span>
       </NavLink>
       <NavLink
@@ -129,7 +129,7 @@ exports[`<Header /> renders the header component 1`] = `
         href="https://edd.ca.gov/claims.htm"
       >
         <span>
-          header.claims
+          Claims
         </span>
       </NavLink>
       <NavLink
@@ -144,7 +144,7 @@ exports[`<Header /> renders the header component 1`] = `
         href="https://edd.ca.gov/employers.htm"
       >
         <span>
-          header.employers
+          Employers
         </span>
       </NavLink>
       <NavLink
@@ -159,7 +159,7 @@ exports[`<Header /> renders the header component 1`] = `
         href="https://edd.ca.gov/newsroom.htm"
       >
         <span>
-          header.newsroom
+          Newsroom
         </span>
       </NavLink>
       <NavLink
@@ -174,7 +174,7 @@ exports[`<Header /> renders the header component 1`] = `
         href="https://edd.ca.gov/serp.html?q="
       >
         <span>
-          header.search
+          Search
         </span>
       </NavLink>
     </NavbarCollapse>
