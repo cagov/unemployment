@@ -1,64 +1,67 @@
+import { Trans, useTranslation } from "react-i18next";
 import React from "react";
-// import { useTranslation } from "react-i18next";
 
 function TabPaneContent5() {
-  // const { t } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <div>
-      <h3>Helpful links</h3>
+      <h3>
+        <Trans t={t} i18nKey="tab5-header1" />
+      </h3>
       <p>
-        <a href="https://edd.ca.gov/about_edd/coronavirus-2019/faqs.htm">
-          Coronavirus (COVID-19) FAQs
-        </a>
+        <Trans t={t} i18nKey="tab5-p1">
+          <a href="https://edd.ca.gov/about_edd/coronavirus-2019/faqs.htm">
+            Coronavirus (COVID-19) FAQs
+          </a>
+        </Trans>
       </p>
       <p>
-        More details about what you need to do after you file your claim:{" "}
-        <a href="https://edd.ca.gov/about_edd/coronavirus-2019/unemployment-claims.htm">
-          COVID-19 Unemployment Insurance Claims
-        </a>
+        <Trans t={t} i18nKey="tab5-p2">
+          More details about what you need to do after you file your claim:{" "}
+          <a href="https://edd.ca.gov/about_edd/coronavirus-2019/unemployment-claims.htm">
+            COVID-19 Unemployment Insurance Claims
+          </a>
+        </Trans>
       </p>
-      <h3>New unemployment programs from the CARES Act</h3>
+      <h3>
+        <Trans t={t} i18nKey="tab5-header2" />
+      </h3>
       <p>
-        These programs expand Unemployment Insurance (UI) benefits by increasing
-        the number of people who are eligible, increasing benefit amounts, and
-        extending the length of the program.
-      </p>
-      <h4>Pandemic Unemployment Assistance (PUA)</h4>
-      <p>
-        <strong>This expands who can apply for UI, due to COVID-19.</strong>{" "}
-        This includes business owners, independent contractors, self-employed
-        workers, freelancers, gig workers and people with limited work history.
-        It is also available to people who have exhausted their regular UI
-        claims, are serving penalty weeks on their claim, or whose claim may be
-        disqualified. PUA supports claims between February 2 and December, 2020.{" "}
-        <a href="https://edd.ca.gov/about_edd/coronavirus-2019/pandemic-unemployment-assistance.htm">
-          Read more about PUA
-        </a>
-        .
+        <Trans t={t} i18nKey="tab5-p3" />
       </p>
       <h4>
-        Federal Pandemic Unemployment Compensation (FPUC) or Pandemic Additional
-        Compensation (PAC)
+        <Trans t={t} i18nKey="tab5-header3" />
       </h4>
       <p>
-        <strong>This provides an additional $600 per week</strong> to people
-        receiving UI benefits. It is retroactive for claims between March 29 and
-        July 25, 2020. This $600 benefit is issued every two weeks. You will
-        receive it at the same time as your UI or PUA benefits.
+        <Trans t={t} i18nKey="tab5-p4">
+          <strong>This expands who can apply for UI, due to COVID-19.</strong>{" "}
+          This includes business owners, independent contractors, self-employed
+          workers, freelancers, gig workers and people with limited work
+          history. It is also available to people who have exhausted their
+          regular UI claims, are serving penalty weeks on their claim, or whose
+          claim may be disqualified. PUA supports claims between February 2 and
+          December, 2020.{" "}
+          <a href="https://edd.ca.gov/about_edd/coronavirus-2019/pandemic-unemployment-assistance.htm">
+            Read more about PUA
+          </a>
+          .
+        </Trans>
       </p>
-      <h4>Pandemic Emergency Unemployment Compensation (PEUC)</h4>
+      <h4>
+        <Trans t={t} i18nKey="tab5-header4" />
+      </h4>
       <p>
-        <strong>This provides an additional 13 weeks of benefits</strong> for
-        people receiving UI benefits between March 29 and December 26, 2020.
-        California provides up to 26 weeks of UI benefits depending on the
-        amount of your earnings during the four-quarter period on which your
-        claim is based. The CARES Act extends benefits to a total of 39 weeks.
+        <Trans t={t} i18nKey="tab5-p5" />
+      </p>
+      <h4>
+        <Trans t={t} i18nKey="tab5-header5" />
+      </h4>
+      <p>
+        <Trans t={t} i18nKey="tab5-p6" />
       </p>
       <div className="highlight-blockquote">
-        <strong>Note:</strong> We are still working to implement the PEUC
-        program. Please continue to monitor our website for instructions on next
-        steps for the PEUC program.
+        <Trans t={t} i18nKey="tab5-blockquote1" />
       </div>
     </div>
   );
