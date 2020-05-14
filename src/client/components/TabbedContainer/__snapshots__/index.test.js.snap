@@ -165,9 +165,7 @@ exports[`<TabbedContainer /> renders the component 1`] = `
               <h2>
                 Start here
               </h2>
-              <TabPaneContent0
-                getTabLink={[Function]}
-              />
+              <TabPaneContent0 />
               <Button
                 active={false}
                 disabled={false}
@@ -189,9 +187,7 @@ exports[`<TabbedContainer /> renders the component 1`] = `
               <h2>
                 What you need before you apply
               </h2>
-              <TabPaneContent1
-                getTabLink={[Function]}
-              />
+              <TabPaneContent1 />
               <Button
                 active={false}
                 disabled={false}
@@ -213,9 +209,7 @@ exports[`<TabbedContainer /> renders the component 1`] = `
               <h2>
                 How to apply
               </h2>
-              <TabPaneContent2
-                getTabLink={[Function]}
-              />
+              <TabPaneContent2 />
               <Button
                 active={false}
                 disabled={false}
@@ -237,9 +231,7 @@ exports[`<TabbedContainer /> renders the component 1`] = `
               <h2>
                 After you submit your application
               </h2>
-              <TabPaneContent3
-                getTabLink={[Function]}
-              />
+              <TabPaneContent3 />
               <Button
                 active={false}
                 disabled={false}
@@ -261,9 +253,7 @@ exports[`<TabbedContainer /> renders the component 1`] = `
               <h2>
                 Receive your benefits
               </h2>
-              <TabPaneContent4
-                getTabLink={[Function]}
-              />
+              <TabPaneContent4 />
               <Button
                 active={false}
                 disabled={false}
@@ -285,9 +275,7 @@ exports[`<TabbedContainer /> renders the component 1`] = `
               <h2>
                 More resources
               </h2>
-              <TabPaneContent5
-                getTabLink={[Function]}
-              />
+              <TabPaneContent5 />
             </Component>
             <Component
               from="/"

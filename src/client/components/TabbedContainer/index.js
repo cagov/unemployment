@@ -90,7 +90,8 @@ function TabbedContainer() {
       }
 
       // Don't scroll down to the top of the sidebar on initial page load
-      if (initialPageLoad.current) {
+      // unless it's loading a secondary page
+      if (initialPageLoad.current && tabIndex === 0) {
         initialPageLoad.current = false;
         return;
       }
@@ -108,17 +109,6 @@ function TabbedContainer() {
 
   function getTabTitle(tabIndex) {
     return t("tabTitles." + tabIndex);
-  }
-
-  function getTabLink(tabIndex) {
-    return (
-      <Link
-        to={prefix + tabSlugs[tabIndex]}
-        onClick={() => setActiveTabIndex(tabIndex)}
-      >
-        {getTabTitle(tabIndex)}
-      </Link>
-    );
   }
 
   const renderNextButton = (tabIndex) => {
@@ -170,7 +160,7 @@ function TabbedContainer() {
                     <Route path={prefix + value} key={index}>
                       <TabPaneContentOnMount tabIndex={index} />
                       <h2>{getTabTitle(index)}</h2>
-                      <TabPaneContentTagName getTabLink={getTabLink} />
+                      <TabPaneContentTagName />
                       {renderNextButton(index)}
                     </Route>
                   );

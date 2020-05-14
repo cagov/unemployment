@@ -1,10 +1,9 @@
 import { Trans, useTranslation } from "react-i18next";
-import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 import React from "react";
 
-function TabPaneContent0({ getTabLink }) {
+function TabPaneContent0() {
   const { t } = useTranslation();
-  const tabLink = getTabLink(4); // Receive your benefits
 
   return (
     <div>
@@ -92,13 +91,14 @@ function TabPaneContent0({ getTabLink }) {
         </li>
       </ul>
       <p>
-        <Trans t={t} i18nKey="tab0-p3" tabLink={tabLink}>
+        <Trans t={t} i18nKey="tab0-p3">
           {
             // The text in this <Trans> must *approximately* match translation.json
             // otherwise the link won't render.
           }
-          If you're already receiving UI, review {{ tabLink }} to learn how your
-          UI claim may be affected by COVID-19.
+          If you're already receiving UI, review{" "}
+          <Link to="/guide/receive-benefits">Receive your benefits</Link> to
+          learn how your UI claim may be affected by COVID-19.
         </Trans>
       </p>
       <h3>
@@ -186,9 +186,5 @@ function TabPaneContent0({ getTabLink }) {
     </div>
   );
 }
-
-TabPaneContent0.propTypes = {
-  getTabLink: PropTypes.func,
-};
 
 export default TabPaneContent0;
