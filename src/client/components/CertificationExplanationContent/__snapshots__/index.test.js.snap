@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CertificationExplanationContent /> renders the component 1`] = `
+<CertificationExplanationContent>
+  <div
+    className="gray-box"
+  >
+    <h4>
+      <Trans
+        i18nKey="certification-header1"
+        t={[Function]}
+      >
+        What is certification?
+      </Trans>
+    </h4>
+    <p>
+      <Trans
+        i18nKey="certification-p1"
+        t={[Function]}
+      >
+        Certification is the required process of updating the EDD every two weeks with your unemployment status with basic eligibility information:
+      </Trans>
+    </p>
+    <ul>
+      <li>
+        <Trans
+          i18nKey="certification-list1-item1"
+          t={[Function]}
+        >
+          Are you physically able to work?
+        </Trans>
+      </li>
+      <li>
+        <Trans
+          i18nKey="certification-list1-item2"
+          t={[Function]}
+        >
+          Are you available for work?
+        </Trans>
+      </li>
+      <li>
+        <Trans
+          i18nKey="certification-list1-item3"
+          t={[Function]}
+        >
+          Are you ready and willing to accept work immediately?
+        </Trans>
+      </li>
+      <li>
+        <Trans
+          i18nKey="certification-list1-item4"
+          t={[Function]}
+        >
+          Did you refuse work?
+        </Trans>
+      </li>
+      <li>
+        <Trans
+          i18nKey="certification-list1-item5"
+          t={[Function]}
+        >
+          Did you work and earn wages? If so, how much?
+        </Trans>
+      </li>
+    </ul>
+    <p>
+      <Trans
+        i18nKey="certification-p2"
+        t={[Function]}
+      >
+        The fastest way to certify is on 
+        <a
+          href="https://portal.edd.ca.gov/WebApp/Login?resource_url=https%3A%2F%2Fportal.edd.ca.gov%2FWebApp%2FHome"
+          key="1"
+        >
+          UI Online
+        </a>
+        . You can also do this by phone by calling 1-866-333-4606, or by mailing the paper form.
+      </Trans>
+    </p>
+  </div>
+</CertificationExplanationContent>
+`;
