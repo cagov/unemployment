@@ -8,6 +8,7 @@ Resolves #XXX
 
 - [ ] Snapshots updated, if output HTML/JS has changed (`npm run test:update-snapshots`)
 - [ ] Changes reviewed on mobile using devtools, if output HTML/CSS has changed
+- [ ] Spanish checked by adding `?lng=es` to URL e.g. `/guide/benefits?lng=es`, if Spanish updated
 - [ ] Automated tests added, if new functionality added
 - [ ] Documentation (e.g. READMEs) updated, if relevant
 - [ ] IE11 and Edge compatibility confirmed via manual testing in Browserstack, if new libraries added or newish JS/HTML/CSS features used for the first time in this codebase
