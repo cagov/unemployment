@@ -51,7 +51,7 @@ exports[`<CertificationExplanationContent /> renders the component 1`] = `
           i18nKey="certification-list1-item4"
           t={[Function]}
         >
-          Did you refuse work
+          Did you refuse work?
         </Trans>
       </li>
       <li>
