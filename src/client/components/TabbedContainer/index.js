@@ -110,17 +110,6 @@ function TabbedContainer() {
     return t("tabTitles." + tabIndex);
   }
 
-  function getTabLink(tabIndex) {
-    return (
-      <Link
-        to={prefix + tabSlugs[tabIndex]}
-        onClick={() => setActiveTabIndex(tabIndex)}
-      >
-        {getTabTitle(tabIndex)}
-      </Link>
-    );
-  }
-
   const renderNextButton = (tabIndex) => {
     // Don't render a next button on the final tab
     if (tabIndex >= tabSlugs.length - 1) return;
@@ -170,7 +159,7 @@ function TabbedContainer() {
                     <Route path={prefix + value} key={index}>
                       <TabPaneContentOnMount tabIndex={index} />
                       <h2>{getTabTitle(index)}</h2>
-                      <TabPaneContentTagName getTabLink={getTabLink} />
+                      <TabPaneContentTagName />
                       {renderNextButton(index)}
                     </Route>
                   );

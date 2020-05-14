@@ -29,7 +29,14 @@ exports[`<TabbedContainer /> renders the component 1`] = `
               as={
                 Object {
                   "$$typeof": Symbol(react.forward_ref),
-                  "displayName": "SafeAnchor",
+                  "displayName": "Link",
+                  "propTypes": Object {
+                    "innerRef": [Function],
+                    "onClick": [Function],
+                    "replace": [Function],
+                    "target": [Function],
+                    "to": [Function],
+                  },
                   "render": [Function],
                 }
               }
@@ -50,7 +57,14 @@ exports[`<TabbedContainer /> renders the component 1`] = `
               as={
                 Object {
                   "$$typeof": Symbol(react.forward_ref),
-                  "displayName": "SafeAnchor",
+                  "displayName": "Link",
+                  "propTypes": Object {
+                    "innerRef": [Function],
+                    "onClick": [Function],
+                    "replace": [Function],
+                    "target": [Function],
+                    "to": [Function],
+                  },
                   "render": [Function],
                 }
               }
@@ -71,7 +85,14 @@ exports[`<TabbedContainer /> renders the component 1`] = `
               as={
                 Object {
                   "$$typeof": Symbol(react.forward_ref),
-                  "displayName": "SafeAnchor",
+                  "displayName": "Link",
+                  "propTypes": Object {
+                    "innerRef": [Function],
+                    "onClick": [Function],
+                    "replace": [Function],
+                    "target": [Function],
+                    "to": [Function],
+                  },
                   "render": [Function],
                 }
               }
@@ -92,7 +113,14 @@ exports[`<TabbedContainer /> renders the component 1`] = `
               as={
                 Object {
                   "$$typeof": Symbol(react.forward_ref),
-                  "displayName": "SafeAnchor",
+                  "displayName": "Link",
+                  "propTypes": Object {
+                    "innerRef": [Function],
+                    "onClick": [Function],
+                    "replace": [Function],
+                    "target": [Function],
+                    "to": [Function],
+                  },
                   "render": [Function],
                 }
               }
@@ -113,7 +141,14 @@ exports[`<TabbedContainer /> renders the component 1`] = `
               as={
                 Object {
                   "$$typeof": Symbol(react.forward_ref),
-                  "displayName": "SafeAnchor",
+                  "displayName": "Link",
+                  "propTypes": Object {
+                    "innerRef": [Function],
+                    "onClick": [Function],
+                    "replace": [Function],
+                    "target": [Function],
+                    "to": [Function],
+                  },
                   "render": [Function],
                 }
               }
@@ -134,7 +169,14 @@ exports[`<TabbedContainer /> renders the component 1`] = `
               as={
                 Object {
                   "$$typeof": Symbol(react.forward_ref),
-                  "displayName": "SafeAnchor",
+                  "displayName": "Link",
+                  "propTypes": Object {
+                    "innerRef": [Function],
+                    "onClick": [Function],
+                    "replace": [Function],
+                    "target": [Function],
+                    "to": [Function],
+                  },
                   "render": [Function],
                 }
               }
@@ -154,8 +196,8 @@ exports[`<TabbedContainer /> renders the component 1`] = `
         sm={8}
       >
         <ForwardRef>
-          <Component>
-            <Component
+          <Switch>
+            <Route
               key="0"
               path="/guide/benefits"
             >
@@ -165,11 +207,23 @@ exports[`<TabbedContainer /> renders the component 1`] = `
               <h2>
                 Start here
               </h2>
-              <TabPaneContent0
-                getTabLink={[Function]}
-              />
+              <TabPaneContent0 />
               <Button
                 active={false}
+                as={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "displayName": "Link",
+                    "propTypes": Object {
+                      "innerRef": [Function],
+                      "onClick": [Function],
+                      "replace": [Function],
+                      "target": [Function],
+                      "to": [Function],
+                    },
+                    "render": [Function],
+                  }
+                }
                 disabled={false}
                 onClick={[Function]}
                 to="/guide/before-you-apply"
@@ -178,8 +232,8 @@ exports[`<TabbedContainer /> renders the component 1`] = `
               >
                 Next: What you need before you apply
               </Button>
-            </Component>
-            <Component
+            </Route>
+            <Route
               key="1"
               path="/guide/before-you-apply"
             >
@@ -189,11 +243,23 @@ exports[`<TabbedContainer /> renders the component 1`] = `
               <h2>
                 What you need before you apply
               </h2>
-              <TabPaneContent1
-                getTabLink={[Function]}
-              />
+              <TabPaneContent1 />
               <Button
                 active={false}
+                as={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "displayName": "Link",
+                    "propTypes": Object {
+                      "innerRef": [Function],
+                      "onClick": [Function],
+                      "replace": [Function],
+                      "target": [Function],
+                      "to": [Function],
+                    },
+                    "render": [Function],
+                  }
+                }
                 disabled={false}
                 onClick={[Function]}
                 to="/guide/how-to-apply"
@@ -202,8 +268,8 @@ exports[`<TabbedContainer /> renders the component 1`] = `
               >
                 Next: How to apply
               </Button>
-            </Component>
-            <Component
+            </Route>
+            <Route
               key="2"
               path="/guide/how-to-apply"
             >
@@ -213,11 +279,23 @@ exports[`<TabbedContainer /> renders the component 1`] = `
               <h2>
                 How to apply
               </h2>
-              <TabPaneContent2
-                getTabLink={[Function]}
-              />
+              <TabPaneContent2 />
               <Button
                 active={false}
+                as={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "displayName": "Link",
+                    "propTypes": Object {
+                      "innerRef": [Function],
+                      "onClick": [Function],
+                      "replace": [Function],
+                      "target": [Function],
+                      "to": [Function],
+                    },
+                    "render": [Function],
+                  }
+                }
                 disabled={false}
                 onClick={[Function]}
                 to="/guide/after-you-submit"
@@ -226,8 +304,8 @@ exports[`<TabbedContainer /> renders the component 1`] = `
               >
                 Next: After you submit your application
               </Button>
-            </Component>
-            <Component
+            </Route>
+            <Route
               key="3"
               path="/guide/after-you-submit"
             >
@@ -237,11 +315,23 @@ exports[`<TabbedContainer /> renders the component 1`] = `
               <h2>
                 After you submit your application
               </h2>
-              <TabPaneContent3
-                getTabLink={[Function]}
-              />
+              <TabPaneContent3 />
               <Button
                 active={false}
+                as={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "displayName": "Link",
+                    "propTypes": Object {
+                      "innerRef": [Function],
+                      "onClick": [Function],
+                      "replace": [Function],
+                      "target": [Function],
+                      "to": [Function],
+                    },
+                    "render": [Function],
+                  }
+                }
                 disabled={false}
                 onClick={[Function]}
                 to="/guide/receive-benefits"
@@ -250,8 +340,8 @@ exports[`<TabbedContainer /> renders the component 1`] = `
               >
                 Next: Receive your benefits
               </Button>
-            </Component>
-            <Component
+            </Route>
+            <Route
               key="4"
               path="/guide/receive-benefits"
             >
@@ -261,11 +351,23 @@ exports[`<TabbedContainer /> renders the component 1`] = `
               <h2>
                 Receive your benefits
               </h2>
-              <TabPaneContent4
-                getTabLink={[Function]}
-              />
+              <TabPaneContent4 />
               <Button
                 active={false}
+                as={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "displayName": "Link",
+                    "propTypes": Object {
+                      "innerRef": [Function],
+                      "onClick": [Function],
+                      "replace": [Function],
+                      "target": [Function],
+                      "to": [Function],
+                    },
+                    "render": [Function],
+                  }
+                }
                 disabled={false}
                 onClick={[Function]}
                 to="/guide/more-resources"
@@ -274,8 +376,8 @@ exports[`<TabbedContainer /> renders the component 1`] = `
               >
                 Next: More resources
               </Button>
-            </Component>
-            <Component
+            </Route>
+            <Route
               key="5"
               path="/guide/more-resources"
             >
@@ -285,15 +387,13 @@ exports[`<TabbedContainer /> renders the component 1`] = `
               <h2>
                 More resources
               </h2>
-              <TabPaneContent5
-                getTabLink={[Function]}
-              />
-            </Component>
-            <Component
+              <TabPaneContent5 />
+            </Route>
+            <Redirect
               from="/"
               to="/guide/benefits"
             />
-          </Component>
+          </Switch>
         </ForwardRef>
       </Col>
     </Row>
