@@ -85,7 +85,7 @@ exports[`<TabPaneContent0 /> renders the TabPaneContent component 1`] = `
                 i18nKey="tab0-list1a-item1"
                 t={[Function]}
               >
-                On the Employment History screen when you supply your last employer information, select "No".
+                On the Employment History screen when you supply your last employer information, select "No."
               </Trans>
             </li>
             <li>
@@ -93,7 +93,7 @@ exports[`<TabPaneContent0 /> renders the TabPaneContent component 1`] = `
                 i18nKey="tab0-list1a-item2"
                 t={[Function]}
               >
-                On the Availability Information page, answer question 7 with "No".
+                On the Availability Information page, answer question 7 with "No."
               </Trans>
             </li>
             <li>
@@ -123,7 +123,7 @@ exports[`<TabPaneContent0 /> renders the TabPaneContent component 1`] = `
             i18nKey="tab0-list1-item5"
             t={[Function]}
           >
-            If you have run out of benefits but you are still within the one year that your claim is good for, and your benefits
+            If you have run out of benefits but you are still within the one year that your claim is good for, and your benefits:
           </Trans>
           <ul>
             <li>
@@ -415,7 +415,7 @@ exports[`<TabPaneContent0 /> renders the TabPaneContent component 1`] = `
         i18nKey="tab0-p5"
         t={[Function]}
       >
-        If you’re not eligible for UI, you may be eligible for Disability Insurance (DI) or Paid Family Leave (PFL). You usually qualify if you paid into the State Disability Insurance program (noted as “CASDI” on paystubs), via taxes.
+        If you’re not eligible for UI, you may be eligible for Disability Insurance or Paid Family Leave. You usually qualify if you paid into the State Disability Insurance program (noted as “CASDI” on paystubs), via taxes.
       </Trans>
     </p>
     <ul>
