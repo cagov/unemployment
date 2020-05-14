@@ -1,23 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<TabPaneContent0 /> renders the TabPaneContent component 1`] = `
-<TabPaneContent0
-  getTabLink={
-    [MockFunction] {
-      "calls": Array [
-        Array [
-          4,
-        ],
-      ],
-      "results": Array [
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-      ],
-    }
-  }
->
+<TabPaneContent0>
   <div>
     <div
       className="gray-box mt-0"
@@ -268,7 +252,22 @@ exports[`<TabPaneContent0 /> renders the TabPaneContent component 1`] = `
         t={[Function]}
       >
         If you're already receiving UI, review 
-        Receive your benefits
+        <Link
+          key="1"
+          to="/guide/receive-benefits"
+        >
+          <LinkAnchor
+            href="/guide/receive-benefits"
+            navigate={[Function]}
+          >
+            <a
+              href="/guide/receive-benefits"
+              onClick={[Function]}
+            >
+              Receive your benefits
+            </a>
+          </LinkAnchor>
+        </Link>
          to learn how your UI claim may be affected by COVID-19.
       </Trans>
     </p>

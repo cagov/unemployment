@@ -22,9 +22,14 @@ jest.mock(
   { virtual: true }
 );
 
-jest.mock("react-router-dom", () => ({
-  useHistory: () => ({
-    push: jest.fn(),
-    listen: jest.fn(),
-  }),
-}));
+jest.mock("react-router-dom", () => {
+  const actual = jest.requireActual("react-router-dom");
+
+  return {
+    ...actual,
+    useHistory: () => ({
+      push: jest.fn(),
+      listen: jest.fn(),
+    }),
+  };
+});
