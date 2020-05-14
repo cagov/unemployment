@@ -90,7 +90,6 @@ function TabbedContainer() {
       }
 
       // Don't scroll down to the top of the sidebar on initial page load
-      // unless it's loading a secondary page
       if (initialPageLoad.current) {
         initialPageLoad.current = false;
         return;
