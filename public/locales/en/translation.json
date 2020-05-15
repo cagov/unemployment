@@ -42,6 +42,19 @@
     "siteMap": "Site Map",
     "copyright": "Copyright © 2020 State of California"
   },
+  "links": {
+    "edd-bpo": "https://www.edd.ca.gov/Benefit_Programs_Online.htm",
+    "edd-di-claim": "https://edd.ca.gov/Disability/How_to_File_a_DI_Claim_in_SDI_Online.htm",
+    "edd-pfl-claim": "https://edd.ca.gov/Disability/How_to_File_a_PFL_Claim_in_SDI_Online.htm",
+    "edd-filing-claim": "https://edd.ca.gov/Unemployment/Filing_a_Claim.htm",
+    "edd-calculator": "https://www.edd.ca.gov/Unemployment/ui-calculator.htm",
+    "edd-pua": "https://edd.ca.gov/about_edd/coronavirus-2019/pandemic-unemployment-assistance.htm",
+    "edd-webapp": "https://portal.edd.ca.gov/WebApp/Login?resource_url=https://portal.edd.ca.gov/WebApp/Home",
+    "caljobs": "https://www.caljobs.ca.gov/vosnet/Default.aspx",
+    "edd-debit": "https://www.edd.ca.gov/about_edd/The_EDD_Debit_Card.htm",
+    "edd-coronavirus-faqs": "https://edd.ca.gov/about_edd/coronavirus-2019/faqs.htm",
+    "edd-coronavirus-claims": "https://edd.ca.gov/about_edd/coronavirus-2019/unemployment-claims.htm"
+  },
   "certification-header1": "What is certification?",
   "certification-p1": "Certification is the required process of updating the EDD every two weeks with your unemployment status with basic eligibility information:",
   "certification-list1-item1": "Are you physically able to work?",

@@ -9,7 +9,7 @@ function BPOButton() {
   return (
     <Button
       variant="secondary"
-      href="https://www.edd.ca.gov/Benefit_Programs_Online.htm"
+      href={t("links.edd-bpo")}
       onClick={() => logEvent("register-or-login")}
       target="_blank"
     >

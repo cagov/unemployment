@@ -37,10 +37,7 @@ function TabPaneContent4() {
       <p>
         <Trans t={t} i18nKey="tab4-p4">
           For more information on the EDD Debit Card, visit{" "}
-          <a href="https://www.edd.ca.gov/about_edd/The_EDD_Debit_Card.htm">
-            EDD Debit Card
-          </a>
-          .
+          <a href={t("links.edd-debit")}>EDD Debit Card</a>.
         </Trans>
       </p>
 

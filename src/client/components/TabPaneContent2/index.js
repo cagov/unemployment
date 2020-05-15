@@ -22,10 +22,7 @@ function TabPaneContent2() {
             account, you can get started on UI Online.
           </strong>{" "}
           You can still apply for UI by{" "}
-          <a href="https://edd.ca.gov/Unemployment/Filing_a_Claim.htm">
-            phone, mail, or fax
-          </a>
-          .
+          <a href={t("links.edd-filing-claim")}>phone, mail, or fax</a>.
         </Trans>
       </p>
       <BPOButton />

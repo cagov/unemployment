@@ -73,12 +73,7 @@ exports[`<TabPaneContent5 /> renders the TabPaneContent component 1`] = `
           This expands who can apply for UI, due to COVID-19.
         </strong>
          This includes business owners, independent contractors, self-employed workers, freelancers, gig workers and people with limited work history. It is also available to people who have exhausted their regular UI claims, are serving penalty weeks on their claim, or whose claim may be disqualified. PUA supports claims between February 2 and December, 2020. 
-        <a
-          href="https://edd.ca.gov/about_edd/coronavirus-2019/pandemic-unemployment-assistance.htm"
-          key="2"
-        >
-          Read more about PUA
-        </a>
+        .
         .
       </Trans>
     </p>

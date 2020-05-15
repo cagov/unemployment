@@ -19,7 +19,7 @@ function TabPaneContent0() {
                 // otherwise the link won't render.
               }
               Everyone (UI and PUA applicants) uses the same form.{" "}
-              <a href="https://www.edd.ca.gov/Benefit_Programs_Online.htm">
+              <a href={t("links.edd-bpo")}>
                 Register or log in with Benefit Programs Online
               </a>{" "}
               and click “File New Claim.”
@@ -165,9 +165,7 @@ function TabPaneContent0() {
             }
             If you are unable to perform your normal work duties because you are
             sick or quarantined, apply for{" "}
-            <a href="https://edd.ca.gov/Disability/How_to_File_a_DI_Claim_in_SDI_Online.htm">
-              Disability Insurance.
-            </a>
+            <a href={t("links.edd-di-claim")}>Disability Insurance.</a>
           </Trans>
         </li>
         <li>
@@ -177,9 +175,7 @@ function TabPaneContent0() {
               // otherwise the link won't render.
             }
             If you are caring for a family member who is sick, apply for{" "}
-            <a href="https://edd.ca.gov/Disability/How_to_File_a_PFL_Claim_in_SDI_Online.htm">
-              Paid Family Leave.
-            </a>
+            <a href={t("links.edd-pfl-claim")}>Paid Family Leave.</a>
           </Trans>
         </li>
       </ul>
