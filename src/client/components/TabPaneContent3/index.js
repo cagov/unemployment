@@ -19,7 +19,7 @@ function TabPaneContent3() {
             </strong>{" "}
             We'll let you know what your WBA is, based on our wage records. For
             an initial estimate of your WBA, use our{" "}
-            <a href={t("links.edd-filing-claim")}>UI benefit calculator</a>.
+            <a href={t("links.edd-calculator")}>UI benefit calculator</a>.
           </Trans>
         </li>
         <li>
