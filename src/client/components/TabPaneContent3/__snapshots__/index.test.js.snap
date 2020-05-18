@@ -24,7 +24,7 @@ exports[`<TabPaneContent3 /> renders the TabPaneContent component 1`] = `
           </strong>
            We'll let you know what your WBA is, based on our wage records. For an initial estimate of your WBA, use our 
           <a
-            href="https://www.edd.ca.gov/Unemployment/UI-Calculator.htm"
+            href="https://www.edd.ca.gov/Unemployment/ui-calculator.htm"
             key="2"
           >
             UI benefit calculator
@@ -223,7 +223,7 @@ exports[`<TabPaneContent3 /> renders the TabPaneContent component 1`] = `
           >
             The fastest way to certify is on 
             <a
-              href="https://portal.edd.ca.gov/WebApp/Login?resource_url=https%3A%2F%2Fportal.edd.ca.gov%2FWebApp%2FHome"
+              href="https://portal.edd.ca.gov/WebApp/Login?resource_url=https://portal.edd.ca.gov/WebApp/Home"
               key="1"
             >
               UI Online

@@ -32,11 +32,8 @@ function CertificationExplanationContent() {
       <p>
         <Trans t={t} i18nKey="certification-p2">
           The fastest way to certify is on{" "}
-          <a href="https://portal.edd.ca.gov/WebApp/Login?resource_url=https%3A%2F%2Fportal.edd.ca.gov%2FWebApp%2FHome">
-            UI Online
-          </a>
-          . You can also do this by phone by calling 1-866-333-4606, or by
-          mailing the paper form.
+          <a href={t("links.edd-webapp")}>UI Online</a>. You can also do this by
+          phone by calling 1-866-333-4606, or by mailing the paper form.
         </Trans>
       </p>
     </div>

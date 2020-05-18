@@ -11,7 +11,7 @@ function TabPaneContent5() {
       </h3>
       <p>
         <Trans t={t} i18nKey="tab5-p1">
-          <a href="https://edd.ca.gov/about_edd/coronavirus-2019/faqs.htm">
+          <a href={t("links.edd-coronavirus-faqs")}>
             Coronavirus (COVID-19) FAQs
           </a>
         </Trans>
@@ -19,7 +19,7 @@ function TabPaneContent5() {
       <p>
         <Trans t={t} i18nKey="tab5-p2">
           More details about what you need to do after you file your claim:{" "}
-          <a href="https://edd.ca.gov/about_edd/coronavirus-2019/unemployment-claims.htm">
+          <a href={t("links.edd-coronavirus-claims")}>
             COVID-19 Unemployment Insurance Claims
           </a>
         </Trans>
@@ -41,11 +41,7 @@ function TabPaneContent5() {
           history. It is also available to people who have exhausted their
           regular UI claims, are serving penalty weeks on their claim, or whose
           claim may be disqualified. PUA supports claims between February 2 and
-          December, 2020.{" "}
-          <a href="https://edd.ca.gov/about_edd/coronavirus-2019/pandemic-unemployment-assistance.htm">
-            Read more about PUA
-          </a>
-          .
+          December, 2020. <a href={t("links.edd-pua")}>Read more about PUA</a>.
         </Trans>
       </p>
       <h4>

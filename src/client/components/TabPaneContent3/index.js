@@ -19,10 +19,7 @@ function TabPaneContent3() {
             </strong>{" "}
             We'll let you know what your WBA is, based on our wage records. For
             an initial estimate of your WBA, use our{" "}
-            <a href="https://www.edd.ca.gov/Unemployment/UI-Calculator.htm">
-              UI benefit calculator
-            </a>
-            .
+            <a href={t("links.edd-calculator")}>UI benefit calculator</a>.
           </Trans>
         </li>
         <li>
@@ -51,9 +48,7 @@ function TabPaneContent3() {
           </strong>
           . Any increase will also apply retroactively. We will notify you of
           any increase you are entitled to receive.{" "}
-          <a href="https://edd.ca.gov/about_edd/coronavirus-2019/pandemic-unemployment-assistance.htm">
-            Read more about PUA.
-          </a>
+          <a href={t("links.edd-pua")}>Read more about PUA.</a>
         </Trans>
       </p>
 
@@ -81,9 +76,8 @@ function TabPaneContent3() {
         <Trans t={t} i18nKey="tab3-p7">
           We understand that it’s a difficult time to look for a job right now.
           You are <strong>currently not</strong> required to upload your resume
-          to{" "}
-          <a href="https://www.caljobs.ca.gov/vosnet/Default.aspx">CalJOBS</a>,
-          during the COVID-19 pandemic.
+          to <a href={t("links.caljobs")}>CalJOBS</a>, during the COVID-19
+          pandemic.
         </Trans>
       </p>
     </div>
