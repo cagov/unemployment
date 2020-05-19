@@ -23,7 +23,10 @@ function Subheader() {
             <BPOButton />
           </div>
           <Dropdown>
-            <Dropdown.Toggle variant="outline-secondary" className="text-dark">
+            <Dropdown.Toggle
+              variant="outline-secondary"
+              className="text-dark bg-light"
+            >
               Select Language
             </Dropdown.Toggle>
 
