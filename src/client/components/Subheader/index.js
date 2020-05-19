@@ -18,27 +18,24 @@ function Subheader() {
         <p>{t("subheaderSubheader")}</p>
         <p>{t("subheaderParagraph")}</p>
         <p>{t("subheaderParagraph2")}</p>
-        <div className="btn-toolbar">
-          <BPOButton />
-          <div className="ml-4 text-dark">
-            <Dropdown>
-              <Dropdown.Toggle
-                variant="outline-secondary"
-                className="text-dark"
-              >
-                Select Language
-              </Dropdown.Toggle>
-
-              <Dropdown.Menu>
-                <Dropdown.Item onClick={() => changeLanguage("en")}>
-                  English
-                </Dropdown.Item>
-                <Dropdown.Item onClick={() => changeLanguage("es")}>
-                  Español
-                </Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
+        <div className="btn-toolbar" role="toolbar">
+          <div className="mr-4 mb-4">
+            <BPOButton />
           </div>
+          <Dropdown>
+            <Dropdown.Toggle variant="outline-secondary" className="text-dark">
+              Select Language
+            </Dropdown.Toggle>
+
+            <Dropdown.Menu>
+              <Dropdown.Item onClick={() => changeLanguage("en")}>
+                English
+              </Dropdown.Item>
+              <Dropdown.Item onClick={() => changeLanguage("es")}>
+                Español
+              </Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
         </div>
       </div>
     </div>
