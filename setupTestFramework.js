@@ -31,5 +31,12 @@ jest.mock("react-router-dom", () => {
       push: jest.fn(),
       listen: jest.fn(),
     }),
+    useLocation: () => ({
+      pathname: '',
+      search: '',
+      hash: '',
+      state: null,
+      key: '',
+    }),
   };
 });

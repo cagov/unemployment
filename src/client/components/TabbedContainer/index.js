@@ -1,4 +1,4 @@
-import { Link, Redirect, Route, Switch, useHistory } from "react-router-dom";
+import { Link, Redirect, Route, Switch, useHistory, useLocation } from "react-router-dom";
 import React, { useEffect, useRef, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
@@ -70,11 +70,13 @@ function TabbedContainer() {
     // WAI-ARIA: "It is recommended that tabs activate automatically when
     // they receive focus as long as their associated tab panels are displayed
     // without noticeable latency."
-    history.push(prefix + tabSlugs[targetTabIndex]);
+    history.push(prefix + tabSlugs[targetTabIndex] + queryParams);
   };
 
   const tabbedContainer = useRef(null);
   const prefix = "/guide/";
+  const queryParams = useLocation().search;
+
   const initialPageLoad = useRef(true);
   const history = useHistory();
   history.listen((location) => logPage(location.pathname));
@@ -119,7 +121,7 @@ function TabbedContainer() {
       <Button
         variant="secondary"
         as={Link}
-        to={prefix + tabSlugs[nextTabIndex]}
+        to={prefix + tabSlugs[nextTabIndex] + queryParams}
         onClick={() => setActiveTabIndex(nextTabIndex)}
       >
         {t("buttonNextPrefix") + getTabTitle(nextTabIndex)}
@@ -139,7 +141,7 @@ function TabbedContainer() {
                     <Nav.Link
                       as={Link}
                       eventKey={index}
-                      to={prefix + value}
+                      to={prefix + value + queryParams}
                       onClick={() => setActiveTabIndex(index)}
                       onKeyDown={(event) => handleKeyDown(event, index)}
                     >
@@ -164,7 +166,7 @@ function TabbedContainer() {
                     </Route>
                   );
                 })}
-                <Redirect from="/" to={prefix + tabSlugs[initialTabIndex]} />
+                <Redirect from="/" to={prefix + tabSlugs[initialTabIndex] + queryParams} />
               </Switch>
             </Tab.Content>
           </Col>
