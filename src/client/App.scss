@@ -57,6 +57,10 @@ a {
 	text-decoration: none;
 }
 
+.btn:not(.dropdown-toggle) {
+	font-weight: bold;
+}
+
 // Eliminate whitespace overflow on right half of mobile viewport
 // None of the usual solutions are compatible with sticky elements
 // But this solution is: https://stackoverflow.com/a/59019025/6074728
