@@ -19,7 +19,57 @@ exports[`<Subheader /> renders vertical navigation bar 1`] = `
     <p>
       First register or log in at Benefit Programs Online, then apply for unemployment benefits on UI Online℠.
     </p>
-    <BPOButton />
+    <div
+      className="btn-toolbar"
+      role="toolbar"
+    >
+      <div
+        className="mr-4 mb-4"
+      >
+        <BPOButton />
+      </div>
+      <Dropdown
+        navbar={false}
+      >
+        <DropdownToggle
+          className="text-dark bg-light"
+          variant="outline-secondary"
+        >
+          Select Language
+        </DropdownToggle>
+        <DropdownMenu
+          alignRight={false}
+          flip={true}
+        >
+          <DropdownItem
+            as={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "displayName": "SafeAnchor",
+                "render": [Function],
+              }
+            }
+            disabled={false}
+            onClick={[Function]}
+          >
+            English
+          </DropdownItem>
+          <DropdownItem
+            as={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "displayName": "SafeAnchor",
+                "render": [Function],
+              }
+            }
+            disabled={false}
+            onClick={[Function]}
+          >
+            Español
+          </DropdownItem>
+        </DropdownMenu>
+      </Dropdown>
+    </div>
   </div>
 </div>
 `;
