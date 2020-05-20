@@ -27,7 +27,7 @@ function Subheader() {
               variant="outline-secondary"
               className="text-dark bg-light"
             >
-              Select Language
+              {t("subheaderLanguageButton")}
             </Dropdown.Toggle>
 
             <Dropdown.Menu>

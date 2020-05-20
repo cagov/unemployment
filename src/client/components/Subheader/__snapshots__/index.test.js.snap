@@ -35,7 +35,7 @@ exports[`<Subheader /> renders vertical navigation bar 1`] = `
           className="text-dark bg-light"
           variant="outline-secondary"
         >
-          Select Language
+          Language
         </DropdownToggle>
         <DropdownMenu
           alignRight={false}
