@@ -1,8 +1,12 @@
 const merge = require("webpack-merge");
 const common = require("./webpack.common.config.js");
+const TerserPlugin = require("terser-webpack-plugin");
+const webpack = require("webpack");
+
+const env = "production";
 
 module.exports = merge(common, {
-  mode: "production",
+  mode: env,
   entry: {
     // Note: the name of this is important, since it's used when manifest-scripts.json
     // is generated, which is a dependency on the server-side
@@ -24,7 +28,6 @@ module.exports = merge(common, {
     ],
   },
   plugins: [
-    ...config.plugins,
     // Define process.env.NODE_ENV for optimized React bundles
     new webpack.DefinePlugin({
       "process.env.NODE_ENV": JSON.stringify(env),
