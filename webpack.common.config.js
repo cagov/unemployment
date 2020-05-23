@@ -6,10 +6,7 @@
 const AssetsPlugin = require("assets-webpack-plugin");
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
   .BundleAnalyzerPlugin;
-const TerserPlugin = require("terser-webpack-plugin");
-const WebpackBar = require("webpackbar");
 const path = require("path");
-const webpack = require("webpack");
 
 // Setup our paths
 const resolveApp = (relativePath) => path.resolve(__dirname, relativePath);
@@ -46,10 +43,6 @@ const config = {
     new AssetsPlugin({
       path: paths.appData,
       filename: "manifest-scripts.json",
-    }),
-    // Show a visual progress bar in the CLI
-    new WebpackBar({
-      name: "Client-side JS bundle",
     }),
   ],
   resolve: {
