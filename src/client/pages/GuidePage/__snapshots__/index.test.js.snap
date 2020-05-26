@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GuidePage /> renders the component 1`] = `
+<div
+  id="overflow-wrapper"
+>
+  <Header />
+  <main
+    id="back-to-top"
+  >
+    <Subheader />
+    <TabbedContainer />
+  </main>
+  <Footer />
+</div>
+`;
