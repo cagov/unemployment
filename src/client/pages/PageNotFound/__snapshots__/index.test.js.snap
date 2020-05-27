@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PageNotFound /> renders a 404 page 1`] = `
+<div
+  id="overflow-wrapper"
+>
+  <Header />
+  <main>
+    <div
+      className="container p-4"
+    >
+      <h1>
+        Page Not Found
+      </h1>
+      <p>
+        The page or form you requested cannot be found. If your link worked before but does not work now, then this page has moved or was deleted as part of our ongoing efforts to make our website work better for you.
+      </p>
+    </div>
+  </main>
+  <Footer />
+</div>
+`;
