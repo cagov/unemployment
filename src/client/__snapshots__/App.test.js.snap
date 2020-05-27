@@ -4,6 +4,6 @@ exports[`<App /> renders application 1`] = `
 <Suspense
   fallback="Loading..."
 >
-  <Page />
+  <GuidePage />
 </Suspense>
 `;
