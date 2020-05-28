@@ -19,7 +19,7 @@ export default function App() {
         {Object.values(routes).map(route => {
           const PageComponent = pages[route.component];
           return (
-            <Route key={route.path} path={route.path} exact>
+            <Route key={route.path} path={route.path} {...route.routeProps}>
               <PageComponent />
             </Route>
           );

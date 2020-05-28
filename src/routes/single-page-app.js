@@ -14,8 +14,12 @@ singlePageAppRouter.get("/*", (req, res) => {
   const cssURL = getCdnPath(`/build/css/${manifestStyles["App.css"]}`);
 
   const is404 = !Object.values(pageRoutes)
-    .map(r => r.path)
-    .includes(req.path);
+    .some(route => {
+      if (route.routeProps && route.routeProps.exact) {
+        return route.path === req.path;
+      }
+      return req.path.startsWith(route.path);
+    });
   const statusCode = is404 ? 404 : 200;
 
   res.status(statusCode).send(
