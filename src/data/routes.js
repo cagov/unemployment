@@ -5,9 +5,41 @@
  * the single page app (`client/App.js`).
  */
 const routes = {
+  guide: {
+    path: "/guide",
+    component: "GuidePage"
+  },
+  guideBenefits: {
+    path: "/guide/benefits",
+    component: "GuidePage"
+  },
+  guideBeforeYouApply: {
+    path: "/guide/before-you-apply",
+    component: "GuidePage"
+  },
+  guideHowToApply: {
+    path: "/guide/how-to-apply",
+    component: "GuidePage"
+  },
+  guideAfterYouSubmit: {
+    path: "/guide/after-you-submit",
+    component: "GuidePage"
+  },
+  guideReceiveBenefits: {
+    path: "/guide/receive-benefits",
+    component: "GuidePage"
+  },
+  guideReceiveMoreResources: {
+    path: "/guide/more-resources",
+    component: "GuidePage"
+  },
   home: {
-    path: "/guide"
-    // We exclude the Home `component` so we can manually import it into pages/index.js
+    path: "/",
+    component: "RedirectToGuide"
+  },
+  guideSlash: {
+    path: "/guide/",
+    component: "RedirectToGuide"
   }
 };
 

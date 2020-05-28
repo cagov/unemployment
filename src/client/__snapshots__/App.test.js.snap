@@ -4,6 +4,73 @@ exports[`<App /> renders application 1`] = `
 <Suspense
   fallback="Loading..."
 >
-  <GuidePage />
+  <Switch>
+    <Route
+      exact={true}
+      key="/guide"
+      path="/guide"
+    >
+      <GuidePage />
+    </Route>
+    <Route
+      exact={true}
+      key="/guide/benefits"
+      path="/guide/benefits"
+    >
+      <GuidePage />
+    </Route>
+    <Route
+      exact={true}
+      key="/guide/before-you-apply"
+      path="/guide/before-you-apply"
+    >
+      <GuidePage />
+    </Route>
+    <Route
+      exact={true}
+      key="/guide/how-to-apply"
+      path="/guide/how-to-apply"
+    >
+      <GuidePage />
+    </Route>
+    <Route
+      exact={true}
+      key="/guide/after-you-submit"
+      path="/guide/after-you-submit"
+    >
+      <GuidePage />
+    </Route>
+    <Route
+      exact={true}
+      key="/guide/receive-benefits"
+      path="/guide/receive-benefits"
+    >
+      <GuidePage />
+    </Route>
+    <Route
+      exact={true}
+      key="/guide/more-resources"
+      path="/guide/more-resources"
+    >
+      <GuidePage />
+    </Route>
+    <Route
+      exact={true}
+      key="/"
+      path="/"
+    >
+      <RedirectToGuide />
+    </Route>
+    <Route
+      exact={true}
+      key="/guide/"
+      path="/guide/"
+    >
+      <RedirectToGuide />
+    </Route>
+    <Route>
+      <PageNotFound />
+    </Route>
+  </Switch>
 </Suspense>
 `;
