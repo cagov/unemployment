@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<App /> renders application 1`] = `
+exports[`<App /> renders application with retro-certs 1`] = `
 <Suspense
   fallback="Loading..."
 >
@@ -17,6 +17,43 @@ exports[`<App /> renders application 1`] = `
       path="/guide"
     >
       <GuidePage />
+    </Route>
+    <Route
+      key="/retroactive-certification"
+      path="/retroactive-certification"
+    >
+      <RetroCertsPage />
+    </Route>
+    <Route>
+      <PageNotFound />
+    </Route>
+  </Switch>
+</Suspense>
+`;
+
+exports[`<App /> renders application without retro-certs 1`] = `
+<Suspense
+  fallback="Loading..."
+>
+  <Switch>
+    <Route
+      exact={true}
+      key="/"
+      path="/"
+    >
+      <RedirectToGuide />
+    </Route>
+    <Route
+      key="/guide"
+      path="/guide"
+    >
+      <GuidePage />
+    </Route>
+    <Route
+      key="/retroactive-certification"
+      path="/retroactive-certification"
+    >
+      <PageNotFound />
     </Route>
     <Route>
       <PageNotFound />
