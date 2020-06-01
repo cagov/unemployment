@@ -4,12 +4,21 @@
  */
 const express = require("express");
 const helmet = require("helmet");
-const routes = require("./routes");
+const createRouter = require("./routes");
+const fflip = require("fflip");
+const fflipConfig = require("./data/fflipConfig");
+
+// Load default feature flag values.
+fflip.config(fflipConfig);
 
 /**
  * @returns {object} Express application
  */
 function init() {
+  if (process.env.NODE_ENV === "development" || process.env.ENABLE_RETRO_CERTS === '1') {
+    fflip.features.retroCerts.enabled = true;
+  }
+
   const app = express();
 
   /**
@@ -68,7 +77,7 @@ function init() {
   );
 
   // Setup our routes
-  app.use("/", routes);
+  app.use("/", createRouter());
 
   return app;
 }
