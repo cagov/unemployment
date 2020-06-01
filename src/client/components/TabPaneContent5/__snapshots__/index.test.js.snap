@@ -127,19 +127,14 @@ exports[`<TabPaneContent5 /> renders the TabPaneContent component 1`] = `
     <div
       className="highlight-blockquote"
     >
-      <Trans
-        i18nKey="tab5-blockquote1"
-        t={[Function]}
+      For more information, visit
+       
+      <a
+        href="http://https://edd.ca.gov/about_edd/coronavirus-2019/cares-act.htm"
       >
-        For more information, visit 
-        <a
-          href="https://edd.ca.gov/about_edd/coronavirus-2019/cares-act.htm"
-          key="1"
-        >
-          CARES Act Provisions
-          .
-        </a>
-      </Trans>
+        CARES Act Provisions
+      </a>
+      .
     </div>
   </div>
 </TabPaneContent5>

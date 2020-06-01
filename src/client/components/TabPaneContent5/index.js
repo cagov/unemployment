@@ -57,10 +57,11 @@ function TabPaneContent5() {
         <Trans t={t} i18nKey="tab5-p6" />
       </p>
       <div className="highlight-blockquote">
-        <Trans t={t} i18nKey="tab5-blockquote1">
-          For more information, visit{" "}
-          <a href={t("links.edd-cares")}>CARES Act Provisions</a>.
-        </Trans>
+        For more information, visit{" "}
+        <a href="http://https://edd.ca.gov/about_edd/coronavirus-2019/cares-act.htm">
+          CARES Act Provisions
+        </a>
+        .
       </div>
     </div>
   );
