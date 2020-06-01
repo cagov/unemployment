@@ -57,7 +57,10 @@ function TabPaneContent5() {
         <Trans t={t} i18nKey="tab5-p6" />
       </p>
       <div className="highlight-blockquote">
-        <Trans t={t} i18nKey="tab5-blockquote1" />
+        <Trans t={t} i18nKey="tab5-blockquote1">
+          For more information, visit{" "}
+          <a href={t("links.edd-cares")}>CARES Act Provisions</a>
+        </Trans>
       </div>
     </div>
   );
