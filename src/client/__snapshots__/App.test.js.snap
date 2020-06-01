@@ -4,6 +4,23 @@ exports[`<App /> renders application 1`] = `
 <Suspense
   fallback="Loading..."
 >
-  <GuidePage />
+  <Switch>
+    <Route
+      exact={true}
+      key="/"
+      path="/"
+    >
+      <RedirectToGuide />
+    </Route>
+    <Route
+      key="/guide"
+      path="/guide"
+    >
+      <GuidePage />
+    </Route>
+    <Route>
+      <PageNotFound />
+    </Route>
+  </Switch>
 </Suspense>
 `;
