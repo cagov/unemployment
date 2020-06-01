@@ -32,6 +32,7 @@
         "core-js": "^3.6.5",
         "dotenv": "^8.2.0",
         "express": "^4.17.1",
+        "fflip": "^4.0.0",
         "helmet": "^3.21.2",
         "i18next-browser-languagedetector": "^4.1.1",
         "i18next-http-backend": "^1.0.9",
