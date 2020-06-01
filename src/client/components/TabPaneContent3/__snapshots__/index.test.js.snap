@@ -94,7 +94,7 @@ exports[`<TabPaneContent3 /> renders the TabPaneContent component 1`] = `
         >
           Once we verify your income, your weekly benefit amount may increase
         </strong>
-        . Any increase will also apply retroactively. We will notify you of any increase you are entitled to receive. 
+        . Any increase will also apply retroactively. We will notify you if your weekly benefit amount increases. 
         <a
           href="https://edd.ca.gov/about_edd/coronavirus-2019/pandemic-unemployment-assistance.htm"
           key="2"

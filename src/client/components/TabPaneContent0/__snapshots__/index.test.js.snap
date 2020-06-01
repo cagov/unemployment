@@ -292,7 +292,7 @@ exports[`<TabPaneContent0 /> renders the TabPaneContent component 1`] = `
         i18nKey="tab0-header5"
         t={[Function]}
       >
-        Apply for PUA if your work situation changed because of COVID-19, and you meet 
+        Apply for PUA if your work situation changed because of COVID-19 and you meet 
         <strong
           key="strong-1"
         >
@@ -348,7 +348,7 @@ exports[`<TabPaneContent0 /> renders the TabPaneContent component 1`] = `
         i18nKey="tab0-header6"
         t={[Function]}
       >
-        Apply for PUA if you have health issues because of COVID-19, and you meet any of these:
+        Apply for PUA if you have health issues because of COVID-19 or you meet any of these:
       </Trans>
     </h4>
     <ul>
