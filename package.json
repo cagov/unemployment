@@ -7,7 +7,7 @@
         "prebuild": "npm run clean-build-dir",
         "build:css": "postcss src/client/**/[!_]*.scss -d public/build/css --ext css",
         "build:css:dev": "npm run build:css -- --env development",
-        "build:js": "NODE_ENV=production webpack --config webpack.prod.config.js",
+        "build:js": "NODE_ENV=production webpack --config webpack.config.js",
         "clean-build-dir": "rm -fr public/build/",
         "lint:css": "stylelint --allow-empty-input",
         "lint:css:all": "npm run lint:css -- ./**/*.scss",
