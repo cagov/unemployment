@@ -27,10 +27,17 @@ describe("Router: Single page app", () => {
     expect(res.text).toMatch(/<html/);
   });
 
-  it("/ returns 301 status code", async () => {
+  it("/ uses <Redirect> to go to the guide", async () => {
     const res = await request(server).get("/");
 
-    expect(res.status).toBe(301);
-    expect(res.get('Location')).toBe('/guide');
+    expect(res.status).toBe(200);
+    expect(res.text).toMatch(/<html/);
+  });
+
+  it("/does-not-exist returns 404 status code", async () => {
+    const res = await request(server).get("/does-not-exist");
+
+    expect(res.status).toBe(404);
+    expect(res.text).toMatch(/<html/);
   });
 });
