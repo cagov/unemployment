@@ -15,6 +15,10 @@ const routes = {
   guide: {
     path: "/guide",
     component: "GuidePage"
+  },
+  retroCerts: {
+    path: "/retroactive-certification",
+    component: "RetroCertsPage"
   }
 };
 
