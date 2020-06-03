@@ -100,7 +100,7 @@ exports[`<TabPaneContent5 /> renders the TabPaneContent component 1`] = `
         >
           This provides an additional $600 per week
         </strong>
-         to people receiving UI benefits. It is retroactive for claims between March 29 and July 25, 2020. You will receive it at the same time as your UI or PUA benefits.
+         to people receiving UI benefits. It is retroactive for claims between March 29 and July 25, 2020. You will receive it at the same time as your UI or PUA benefits, every two weeks.
       </Trans>
     </p>
     <h4>
