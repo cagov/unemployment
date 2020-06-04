@@ -3,9 +3,13 @@ const { Router } = require("express");
 function createRouter() {
   const router = Router();
 
-  // An example post handler.
-  router.post("/retroactive-certification/save-data", (req, res) => {
-    res.status(501).send("Not implemented\n");
+  router.post("/retroactive-certification/api/login", (req, res) => {
+    // TODO: Validate the login information and send back an auth token.
+    res.status(200).type('json').send(JSON.stringify({
+      status: "OK",
+      // For now, just echo the data back.
+      echo: req.body
+    }));
   });
 
   return router;

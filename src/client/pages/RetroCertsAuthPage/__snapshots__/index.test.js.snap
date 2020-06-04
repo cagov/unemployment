@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RetroCertsAuthPage /> renders the retro certs main page 1`] = `
+<div
+  id="overflow-wrapper"
+>
+  <Header />
+  <main>
+    <div
+      className="container p-4"
+    >
+      <Form
+        inline={false}
+        onSubmit={[Function]}
+      >
+        <h1>
+          retro-cert-auth-title
+        </h1>
+        <FormGroup
+          controlId="formLastName"
+        >
+          <FormLabel
+            column={false}
+            srOnly={false}
+          >
+            retro-cert-auth-last-name
+          </FormLabel>
+          <FormControl
+            onChange={[Function]}
+            placeholder="retro-cert-auth-last-name-placeholder"
+            type="text"
+          />
+        </FormGroup>
+        <FormGroup
+          controlId="formEDDCAN"
+        >
+          <FormLabel
+            column={false}
+            srOnly={false}
+          >
+            retro-cert-auth-eddcan
+          </FormLabel>
+          <FormControl
+            onChange={[Function]}
+            placeholder="retro-cert-auth-eddcan-placeholder"
+            type="text"
+          />
+        </FormGroup>
+        <FormGroup
+          controlId="formSSN"
+        >
+          <FormLabel
+            column={false}
+            srOnly={false}
+          >
+            retro-cert-auth-ssn
+          </FormLabel>
+          <FormControl
+            onChange={[Function]}
+            placeholder="retro-cert-auth-ssn-placeholder"
+            type="password"
+          />
+        </FormGroup>
+        <Button
+          active={false}
+          disabled={false}
+          type="submit"
+          variant="secondary"
+        >
+          retro-cert-auth-find-me
+        </Button>
+      </Form>
+    </div>
+    <div
+      className="container p-4"
+    />
+  </main>
+  <Footer />
+</div>
+`;

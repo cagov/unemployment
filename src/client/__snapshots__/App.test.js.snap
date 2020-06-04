@@ -22,7 +22,7 @@ exports[`<App /> renders application with retro-certs 1`] = `
       key="/retroactive-certification"
       path="/retroactive-certification"
     >
-      <RetroCertsPage />
+      <RetroCertsAuthPage />
     </Route>
     <Route>
       <PageNotFound />

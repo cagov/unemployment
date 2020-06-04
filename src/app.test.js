@@ -40,7 +40,7 @@ describe("Router: Single page app", () => {
     fflip.features.retroCerts.enabled = false;
     const server = init();
     const testPaths = [
-      "/retroactive-certification/save-data",
+      "/retroactive-certification/api/login",
     ];
 
     for (const testPath of testPaths) {
@@ -54,13 +54,35 @@ describe("Router: Single page app", () => {
     fflip.features.retroCerts.enabled = true;
     const server = init();
     const testPaths = [
-      "/retroactive-certification/save-data",
+      "/retroactive-certification/api/login",
     ];
 
     for (const testPath of testPaths) {
       const res = await request(server).post(testPath);
-      expect(res.status).toBe(501);
-      expect(res.text).toMatch(/Not implemented/);
+      expect(res.status).toBe(200);
+      expect(res.text).toMatch(/"status":"OK"/);
+    }
+  });
+
+  it("retro-certs login tests", async () => {
+    fflip.features.retroCerts.enabled = true;
+    const server = init();
+    const testCases = [
+      [{}, {status:"OK", echo: {}}],
+      [{lastName: "Last", eddcan: "1234567890", ssn: "123456789"}, {
+          status: "OK",
+          echo: {lastName: "Last", eddcan: "1234567890", ssn: "123456789"}}],
+    ];
+
+    for (const testCase of testCases) {
+      const [reqJson, responseJson] = testCase;
+      const res = await request(server)
+          .post("/retroactive-certification/api/login")
+          .send(JSON.stringify(reqJson))
+          .type("json");
+      expect(res.status).toBe(200);
+      expect(res.header["content-type"]).toMatch(/json/);
+      expect(res.body).toEqual(responseJson);
     }
   });
 });
