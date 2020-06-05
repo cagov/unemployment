@@ -24,8 +24,10 @@ steps:
     command: 'install'
 
 
-    
+
 - script: npm run build
+  env:
+    ENABLE_RETRO_CERTS: $(ENABLE_RETRO_CERTS)
   displayName: "npm build"
 
 
