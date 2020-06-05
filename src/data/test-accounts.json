@@ -1,0 +1,13 @@
+[{
+  "lastName": "last",
+  "eddcan": "1234567890",
+  "ssn": "123456789"
+}, {
+  "lastName": "last",
+  "eddcan": "1111122222",
+  "ssn": "888990000"
+}, {
+  "lastName": "foobar",
+  "eddcan": "1234554321",
+  "ssn": "012345678"
+}]

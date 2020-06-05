@@ -1,7 +1,6 @@
 import { init } from "./app";
 import fflip from "fflip";
 import request from "supertest";
-import { response } from "express";
 
 describe("Router: Single page app", () => {
   it("HTTP gets returning the single page", async () => {
