@@ -33,9 +33,7 @@ function RetroCertsAuthPage() {
         ssn})
     })
     .then(response => response.json())
-    .then(data => {
-      setUserData(data)
-    })
+    .then(data => setUserData(data))
     .catch(error => console.error(error));
   };
 
@@ -85,7 +83,7 @@ function RetroCertsAuthPage() {
         </div>
         <div className="container p-4">
           {/* For testing, show the response JSON. */}
-          {userData && userData.status === "OK" ? JSON.stringify(userData) : ""}
+          {userData && userData.status !== "not-logged-in" ? JSON.stringify(userData) : ""}
         </div>
       </main>
       <Footer />
