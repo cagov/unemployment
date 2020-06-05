@@ -11,7 +11,7 @@ function RetroCertsAuthPage() {
   // We will probably need to move this up to the App component so this
   // can be shared accross pages.
   const [userData, setUserData] = useState({
-    status: 'no-logged-in'
+    status: "not-logged-in"
   });
 
   const [lastName, setLastName] = useState("");
@@ -22,10 +22,10 @@ function RetroCertsAuthPage() {
     event.preventDefault();
     event.stopPropagation();
     // TODO: Form validation.
-    fetch('/retroactive-certification/api/login', {
-      method: 'POST',
+    fetch("/retroactive-certification/api/login", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json'
+        "Content-Type": "application/json"
       },
       body: JSON.stringify({
         lastName,
@@ -85,7 +85,7 @@ function RetroCertsAuthPage() {
         </div>
         <div className="container p-4">
           {/* For testing, show the response JSON. */}
-          {userData && userData.status === 'OK' ? JSON.stringify(userData) : ''}
+          {userData && userData.status === "OK" ? JSON.stringify(userData) : ""}
         </div>
       </main>
       <Footer />
