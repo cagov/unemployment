@@ -33,6 +33,9 @@ function init() {
    */
   app.use(helmet());
 
+  // Enable parsing JSON sent in requests.
+  app.use(express.json());
+
   // On dev, enable hot reloading
   if (process.env.NODE_ENV === "development") {
     const webpack = require("webpack");

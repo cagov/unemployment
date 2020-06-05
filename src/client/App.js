@@ -4,7 +4,7 @@ import fflip from "fflip";
 import GuidePage from "./pages/GuidePage";
 import PageNotFound from "./pages/PageNotFound";
 import RedirectToGuide from "./pages/RedirectToGuide";
-import RetroCertsPage from "./pages/RetroCertsPage";
+import RetroCertsAuthPage from "./pages/RetroCertsAuthPage";
 import routes from "../data/routes";
 import fflipConfig from "../data/fflipConfig";
 
@@ -22,7 +22,7 @@ export default function App() {
   const pages = {
     "GuidePage": GuidePage,
     "RedirectToGuide": RedirectToGuide,
-    "RetroCertsPage": fflip.features.retroCerts.enabled ? RetroCertsPage : PageNotFound
+    "RetroCertsPage": fflip.features.retroCerts.enabled ? RetroCertsAuthPage : PageNotFound
   };
 
   return (
