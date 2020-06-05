@@ -1,37 +1,57 @@
 const { Router } = require("express");
-const { v4: uuidv4 } = require('uuid');
 const testAccounts = require("../data/test-accounts.json");
 
 function createRouter() {
   const router = Router();
 
-  function authStatus(postJson) {
+  function authStatus(postJson, responseJson) {
+    responseJson.status = "user-not-found";
     for (const testAccount of testAccounts) {
       if ((postJson.lastName || "").toLowerCase() === testAccount.lastName
           && postJson.ssn === testAccount.ssn
           && postJson.eddcan === testAccount.eddcan) {
-        return "OK";
+        responseJson.status = "OK";
+        responseJson.authToken = testAccount.authToken;
+        responseJson.weeksToCertify = Array.from(testAccount.weeksToCertify);
+        break;
       } else if (postJson.ssn === testAccount.ssn
           && postJson.eddcan !== testAccount.eddcan) {
-        return "wrong-eddcan";
+        responseJson.status = "wrong-eddcan";
+        break;
       } else if (postJson.ssn !== testAccount.ssn
           && postJson.eddcan === testAccount.eddcan) {
-        return "wrong-ssn";
+        responseJson.status = "wrong-ssn";
+        break;
       }
     }
-    return "user-not-found";
+    return responseJson;
+  }
+
+  function authWithToken(postJson, responseJson) {
+    responseJson.status = "user-not-found";
+    if (postJson.authToken) {
+      for (const testAccount of testAccounts) {
+        if (postJson.authToken === testAccount.authToken) {
+          responseJson.status = "OK";
+          responseJson.weeksToCertify = Array.from(testAccount.weeksToCertify);
+          break;
+        }
+      }
+    }
+    return responseJson;
   }
 
   router.post("/retroactive-certification/api/login", (req, res) => {
-    const status = authStatus(req.body);
-    const httpStatus = status === "OK" ? 200 : 401
+    const responseJson = authStatus(req.body, {});
+    const httpStatus = responseJson.status === "OK" ? 200 : 401
 
-    const responseJson = {
-      status
-    };
-    if (status === "OK") {
-      responseJson.authToken = uuidv4();
-    }
+    res.status(httpStatus).type('json').send(JSON.stringify(responseJson));
+  });
+
+  router.post("/retroactive-certification/api/data", (req, res) => {
+    const responseJson = authWithToken(req.body, {});
+    const httpStatus = responseJson.status === "OK" ? 200 : 401
+
     res.status(httpStatus).type('json').send(JSON.stringify(responseJson));
   });
 
