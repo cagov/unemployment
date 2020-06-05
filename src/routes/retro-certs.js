@@ -7,7 +7,7 @@ function createRouter() {
 
   function authStatus(postJson) {
     for (const testAccount of testAccounts) {
-      if (postJson.lastName.toLowerCase() === testAccount.lastName
+      if ((postJson.lastName || "").toLowerCase() === testAccount.lastName
           && postJson.ssn === testAccount.ssn
           && postJson.eddcan === testAccount.eddcan) {
         return "OK";

@@ -1,6 +1,7 @@
 import { init } from "./app";
 import fflip from "fflip";
 import request from "supertest";
+import { response } from "express";
 
 describe("Router: Single page app", () => {
   it("HTTP gets returning the single page", async () => {
@@ -59,8 +60,8 @@ describe("Router: Single page app", () => {
 
     for (const testPath of testPaths) {
       const res = await request(server).post(testPath);
-      expect(res.status).toBe(200);
-      expect(res.text).toMatch(/"status":"OK"/);
+      expect(res.status).toBe(401);
+      expect(res.text).toMatch(/"status":"user-not-found"/);
     }
   });
 
@@ -68,20 +69,23 @@ describe("Router: Single page app", () => {
     fflip.features.retroCerts.enabled = true;
     const server = init();
     const testCases = [
-      [{}, {status:"OK", echo: {}}],
-      [{lastName: "Last", eddcan: "1234567890", ssn: "123456789"}, {
+      [{}, 401, {status:"user-not-found"}],
+      [{lastName: "Last", eddcan: "1234567890", ssn: "123456789"}, 200, {
           status: "OK",
-          echo: {lastName: "Last", eddcan: "1234567890", ssn: "123456789"}}],
+          authToken: ""}],
     ];
 
     for (const testCase of testCases) {
-      const [reqJson, responseJson] = testCase;
+      const [reqJson, httpStatus, responseJson] = testCase;
       const res = await request(server)
           .post("/retroactive-certification/api/login")
           .send(JSON.stringify(reqJson))
           .type("json");
-      expect(res.status).toBe(200);
+      expect(res.status).toBe(httpStatus);
       expect(res.header["content-type"]).toMatch(/json/);
+      if (res.body.authToken) {
+        res.body.authToken = "";
+      }
       expect(res.body).toEqual(responseJson);
     }
   });
