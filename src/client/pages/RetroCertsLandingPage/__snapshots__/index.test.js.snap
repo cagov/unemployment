@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RetroCertsLandingPage /> renders the retro certs landing page (after auth) 1`] = `
+<Redirect
+  to="/retroactive-certification"
+/>
+`;

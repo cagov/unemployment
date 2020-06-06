@@ -19,10 +19,30 @@ exports[`<App /> renders application with retro-certs 1`] = `
       <GuidePage />
     </Route>
     <Route
+      key="/retroactive-certification/landing"
+      path="/retroactive-certification/landing"
+    >
+      <RetroCertsLandingPage
+        setUserData={[Function]}
+        userData={
+          Object {
+            "status": "not-logged-in",
+          }
+        }
+      />
+    </Route>
+    <Route
       key="/retroactive-certification"
       path="/retroactive-certification"
     >
-      <RetroCertsAuthPage />
+      <RetroCertsAuthPage
+        setUserData={[Function]}
+        userData={
+          Object {
+            "status": "not-logged-in",
+          }
+        }
+      />
     </Route>
     <Route>
       <PageNotFound />
@@ -48,6 +68,12 @@ exports[`<App /> renders application without retro-certs 1`] = `
       path="/guide"
     >
       <GuidePage />
+    </Route>
+    <Route
+      key="/retroactive-certification/landing"
+      path="/retroactive-certification/landing"
+    >
+      <PageNotFound />
     </Route>
     <Route
       key="/retroactive-certification"
