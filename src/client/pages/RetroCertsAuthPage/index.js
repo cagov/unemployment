@@ -1,4 +1,6 @@
+import PropTypes from 'prop-types';
 import { useTranslation } from "react-i18next";
+import { useHistory } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
@@ -8,14 +10,12 @@ import React, { useState } from "react";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 
-function RetroCertsAuthPage() {
+function RetroCertsAuthPage(props) {
   const { t } = useTranslation();
+  const history = useHistory();
 
-  // We will probably need to move this up to the App component so this
-  // can be shared accross pages.
-  const [userData, setUserData] = useState({
-    status: "not-logged-in",
-  });
+  const userData = props.userData;
+  const setUserData = props.setUserData;
 
   const [lastName, setLastName] = useState("");
   const [eddcan, setEDDCAN] = useState("");
@@ -37,7 +37,18 @@ function RetroCertsAuthPage() {
       }),
     })
       .then((response) => response.json())
-      .then((data) => setUserData(data))
+      .then((data) => {
+        setUserData(data);
+        if (data.authToken) {
+          // Session storage is destroyed when the tab is closed! That's a bit weird.
+          // If we want to allow the user to use multiple tabs, we could sync the
+          // value across tabs:
+          // https://medium.com/@marciomariani/sharing-sessionstorage-between-tabs-5b6f42c6348c
+          sessionStorage.setItem("authToken", data.authToken);
+          history.push('/retroactive-certification/landing');
+        } else {
+          sessionStorage.removeItem("authToken");
+        }})
       .catch((error) => console.error(error));
   };
 
@@ -122,5 +133,10 @@ function RetroCertsAuthPage() {
     </div>
   );
 }
+
+RetroCertsAuthPage.propTypes = {
+  userData: PropTypes.object,
+  setUserData: PropTypes.func
+};
 
 export default RetroCertsAuthPage;

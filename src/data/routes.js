@@ -16,9 +16,13 @@ const routes = {
     path: "/guide",
     component: "GuidePage"
   },
+  retroCertsLanding: {
+    path: "/retroactive-certification/landing",
+    component: "RetroCertsLandingPage"
+  },
   retroCerts: {
     path: "/retroactive-certification",
-    component: "RetroCertsPage"
+    component: "RetroCertsAuthPage"
   }
 };
 
