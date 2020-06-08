@@ -43,6 +43,7 @@
         "react": "^16.12.0",
         "react-bootstrap": "^1.0.1",
         "react-dom": "^16.12.0",
+        "react-google-recaptcha": "^2.1.0",
         "react-i18next": "^11.4.0",
         "react-router-dom": "^5.1.2",
         "regenerator-runtime": "^0.13.5",

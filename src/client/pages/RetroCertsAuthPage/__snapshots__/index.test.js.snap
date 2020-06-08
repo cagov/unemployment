@@ -9,71 +9,112 @@ exports[`<RetroCertsAuthPage /> renders the retro certs main page 1`] = `
     <div
       className="container p-4"
     >
+      <h1>
+        Retroactive Unemployment Certification
+      </h1>
+      <h2
+        className="mt-4"
+      >
+        Help us find you
+      </h2>
+      <p>
+        We need to make sure your identity matches EDD records so that we show you accurate records.
+      </p>
       <Form
         inline={false}
         onSubmit={[Function]}
       >
-        <h1>
-          retro-cert-auth-title
-        </h1>
-        <FormGroup
-          controlId="formLastName"
+        <Row
+          noGutters={false}
         >
-          <FormLabel
-            column={false}
-            srOnly={false}
+          <FormGroup
+            className="col-md-6"
+            controlId="formLastName"
           >
-            retro-cert-auth-last-name
-          </FormLabel>
-          <FormControl
-            onChange={[Function]}
-            placeholder="retro-cert-auth-last-name-placeholder"
-            type="text"
-          />
-        </FormGroup>
-        <FormGroup
-          controlId="formEDDCAN"
+            <FormLabel
+              column={false}
+              srOnly={false}
+            >
+              Last name
+            </FormLabel>
+            <FormControl
+              onChange={[Function]}
+              type="text"
+              value=""
+            />
+          </FormGroup>
+        </Row>
+        <Row
+          noGutters={false}
         >
-          <FormLabel
-            column={false}
-            srOnly={false}
+          <FormGroup
+            className="col-md-6"
+            controlId="formEDDCAN"
           >
-            retro-cert-auth-eddcan
-          </FormLabel>
-          <FormControl
-            onChange={[Function]}
-            placeholder="retro-cert-auth-eddcan-placeholder"
-            type="text"
-          />
-        </FormGroup>
-        <FormGroup
-          controlId="formSSN"
+            <FormLabel
+              column={false}
+              srOnly={false}
+            >
+              EDDCAN
+            </FormLabel>
+            <FormControl
+              onChange={[Function]}
+              type="text"
+              value=""
+            />
+          </FormGroup>
+        </Row>
+        <Row
+          noGutters={false}
         >
-          <FormLabel
-            column={false}
-            srOnly={false}
+          <FormGroup
+            className="col-md-6"
+            controlId="formSSN"
           >
-            retro-cert-auth-ssn
-          </FormLabel>
-          <FormControl
-            onChange={[Function]}
-            placeholder="retro-cert-auth-ssn-placeholder"
-            type="password"
-          />
-        </FormGroup>
+            <FormLabel
+              column={false}
+              srOnly={false}
+            >
+              Social Security Number
+            </FormLabel>
+            <FormControl
+              onChange={[Function]}
+              type="password"
+              value=""
+            />
+          </FormGroup>
+        </Row>
+        <Row
+          noGutters={false}
+        >
+          <FormGroup
+            className="col-md-6"
+            controlId="formReCaptcha"
+          >
+            <AsyncScriptLoader(ReCAPTCHA)
+              onChange={[Function]}
+              sitekey="6Lf-DQEVAAAAABCMwJ-Gnbqec08RuiPhMZPtZPm9"
+            />
+            <FormText
+              className="text-muted"
+            >
+              Security check provided by reCAPTCHA.
+            </FormText>
+          </FormGroup>
+        </Row>
+        <Row
+          noGutters={false}
+        />
         <Button
           active={false}
           disabled={false}
           type="submit"
           variant="secondary"
         >
-          retro-cert-auth-find-me
+          Find me
         </Button>
       </Form>
     </div>
-    <div
-      className="container p-4"
-    />
   </main>
   <Footer />
 </div>
