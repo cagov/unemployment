@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 import Button from "react-bootstrap/Button";
@@ -7,6 +6,8 @@ import Row from "react-bootstrap/Row";
 import Alert from "react-bootstrap/Alert";
 import ReCAPTCHA from "react-google-recaptcha";
 import React, { useState } from "react";
+import auth from "../../../data/auth";
+import { userDataPropType, setUserDataPropType } from "../../commonPropTypes";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 
@@ -18,14 +19,14 @@ function RetroCertsAuthPage(props) {
   const setUserData = props.setUserData;
 
   const [lastName, setLastName] = useState("");
-  const [eddcan, setEDDCAN] = useState("");
-  const [ssn, setSSN] = useState("");
+  const [eddcan, setEddcan] = useState("");
+  const [ssn, setSsn] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
     event.stopPropagation();
     // TODO: Form validation.
-    fetch("/retroactive-certification/api/login", {
+    fetch(auth.apiPath.login, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -40,14 +41,14 @@ function RetroCertsAuthPage(props) {
       .then((data) => {
         setUserData(data);
         if (data.authToken) {
-          // Session storage is destroyed when the tab is closed! That's a bit weird.
+          // Session storage is destroyed when the tab is closed! That"s a bit weird.
           // If we want to allow the user to use multiple tabs, we could sync the
           // value across tabs:
           // https://medium.com/@marciomariani/sharing-sessionstorage-between-tabs-5b6f42c6348c
-          sessionStorage.setItem("authToken", data.authToken);
-          history.push('/retroactive-certification/landing');
+          sessionStorage.setItem(auth.AUTHTOKEN, data.authToken);
+          history.push("/retroactive-certification/landing");
         } else {
-          sessionStorage.removeItem("authToken");
+          sessionStorage.removeItem(auth.AUTHTOKEN);
         }})
       .catch((error) => console.error(error));
   };
@@ -77,22 +78,22 @@ function RetroCertsAuthPage(props) {
               </Form.Group>
             </Row>
             <Row>
-              <Form.Group controlId="formEDDCAN" className="col-md-6">
+              <Form.Group controlId="formEddcan" className="col-md-6">
                 <Form.Label>{t("retrocert-login.eddcan-label")}</Form.Label>
                 <Form.Control
                   type="text"
                   value={eddcan}
-                  onChange={(e) => handleChange(e, setEDDCAN)}
+                  onChange={(e) => handleChange(e, setEddcan)}
                 />
               </Form.Group>
             </Row>
             <Row>
-              <Form.Group controlId="formSSN" className="col-md-6">
+              <Form.Group controlId="formSsn" className="col-md-6">
                 <Form.Label>{t("retrocert-login.ssn-label")}</Form.Label>
                 <Form.Control
                   type="password"
                   value={ssn}
-                  onChange={(e) => handleChange(e, setSSN)}
+                  onChange={(e) => handleChange(e, setSsn)}
                 />
               </Form.Group>
             </Row>
@@ -109,7 +110,7 @@ function RetroCertsAuthPage(props) {
               </Form.Group>
             </Row>
             <Row>
-              {userData && userData.status === "wrong-eddcan" && (
+              {userData && userData.status === auth.statusCode.wrongEddcan && (
                 <Alert variant="danger">
                   {t("retrocert-login.eddcan-error")}
                 </Alert>
@@ -117,7 +118,7 @@ function RetroCertsAuthPage(props) {
               {userData && userData.status === "wrong-ssn" && (
                 <Alert variant="danger">{t("retrocert-login.ssn-error")}</Alert>
               )}
-              {userData && userData.status === "user-not-found" && (
+              {userData && userData.status === auth.statusCode.userNotFound && (
                 <Alert variant="danger">
                   {t("retrocert-login.invalid-user-error")}
                 </Alert>
@@ -135,8 +136,8 @@ function RetroCertsAuthPage(props) {
 }
 
 RetroCertsAuthPage.propTypes = {
-  userData: PropTypes.object,
-  setUserData: PropTypes.func
+  userData: userDataPropType,
+  setUserData: setUserDataPropType,
 };
 
 export default RetroCertsAuthPage;

@@ -2,6 +2,7 @@
 
 exports[`<RetroCertsLandingPage /> renders the retro certs landing page (after auth) 1`] = `
 <Redirect
+  push={true}
   to="/retroactive-certification"
 />
 `;
