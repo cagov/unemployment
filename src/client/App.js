@@ -9,14 +9,14 @@ import routes from "../data/routes";
 
 export default function App(props) {
   const hostname = props.hostname || window.location.hostname
-  const retroCertsEnabled = hostname !== "unemployment.edd.ca.gov";
+  const isProduction = hostname === "unemployment.edd.ca.gov";
 
   // Allow us to map back from the name of a page component
   // (declared in routes) to the actual page component.
   const pages = {
     "GuidePage": GuidePage,
     "RedirectToGuide": RedirectToGuide,
-    "RetroCertsPage": retroCertsEnabled ? RetroCertsAuthPage : PageNotFound
+    "RetroCertsPage": isProduction ? PageNotFound : RetroCertsAuthPage
   };
 
   return (
