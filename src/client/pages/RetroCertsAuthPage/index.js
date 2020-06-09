@@ -6,7 +6,7 @@ import Row from "react-bootstrap/Row";
 import Alert from "react-bootstrap/Alert";
 import ReCAPTCHA from "react-google-recaptcha";
 import React, { useState } from "react";
-import auth from "../../../data/auth";
+import AUTH_STRINGS from "../../../data/auth-strings";
 import { userDataPropType, setUserDataPropType } from "../../commonPropTypes";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
@@ -26,7 +26,7 @@ function RetroCertsAuthPage(props) {
     event.preventDefault();
     event.stopPropagation();
     // TODO: Form validation.
-    fetch(auth.apiPath.login, {
+    fetch(AUTH_STRINGS.apiPath.login, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -45,10 +45,10 @@ function RetroCertsAuthPage(props) {
           // If we want to allow the user to use multiple tabs, we could sync the
           // value across tabs:
           // https://medium.com/@marciomariani/sharing-sessionstorage-between-tabs-5b6f42c6348c
-          sessionStorage.setItem(auth.AUTHTOKEN, data.authToken);
+          sessionStorage.setItem(AUTH_STRINGS.authToken, data.authToken);
           history.push("/retroactive-certification/landing");
         } else {
-          sessionStorage.removeItem(auth.AUTHTOKEN);
+          sessionStorage.removeItem(AUTH_STRINGS.authToken);
         }})
       .catch((error) => console.error(error));
   };
@@ -110,7 +110,7 @@ function RetroCertsAuthPage(props) {
               </Form.Group>
             </Row>
             <Row>
-              {userData && userData.status === auth.statusCode.wrongEddcan && (
+              {userData && userData.status === AUTH_STRINGS.statusCode.wrongEddcan && (
                 <Alert variant="danger">
                   {t("retrocert-login.eddcan-error")}
                 </Alert>
@@ -118,7 +118,7 @@ function RetroCertsAuthPage(props) {
               {userData && userData.status === "wrong-ssn" && (
                 <Alert variant="danger">{t("retrocert-login.ssn-error")}</Alert>
               )}
-              {userData && userData.status === auth.statusCode.userNotFound && (
+              {userData && userData.status === AUTH_STRINGS.statusCode.userNotFound && (
                 <Alert variant="danger">
                   {t("retrocert-login.invalid-user-error")}
                 </Alert>

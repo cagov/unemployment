@@ -6,7 +6,7 @@ import PageNotFound from "./pages/PageNotFound";
 import RedirectToGuide from "./pages/RedirectToGuide";
 import RetroCertsAuthPage from "./pages/RetroCertsAuthPage";
 import RetroCertsLandingPage from "./pages/RetroCertsLandingPage";
-import auth from "../data/auth";
+import AUTH_STRINGS from "../data/auth-strings";
 import routes from "../data/routes";
 
 export default function App(props) {
@@ -15,7 +15,7 @@ export default function App(props) {
 
   // TODO: Move status strings into constants in src/data.
   const [retroCertsUserData, setRetroCertsUserData] = useState({
-    status: auth.statusCode.notLoggedIn,
+    status: AUTH_STRINGS.statusCode.notLoggedIn,
   });
   // Allow us to map back from the name of a page component
   // (declared in routes) to the actual page component.

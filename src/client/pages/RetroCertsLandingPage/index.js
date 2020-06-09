@@ -1,7 +1,7 @@
 import Button from "react-bootstrap/Button";
 import { Redirect, useHistory } from "react-router-dom";
 import React from "react";
-import auth from "../../../data/auth";
+import AUTH_STRINGS from "../../../data/auth-strings";
 import { userDataPropType, setUserDataPropType } from "../../commonPropTypes";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
@@ -12,12 +12,12 @@ function RetroCertsLandingPage(props) {
   const history = useHistory();
 
   if (!userData.weeksToCertify) {
-    const authToken = sessionStorage.getItem(auth.AUTHTOKEN);
+    const authToken = sessionStorage.getItem(AUTH_STRINGS.authToken);
     if (!authToken) {
       return <Redirect to="/retroactive-certification" push />;
     }
 
-    fetch(auth.apiPath.data, {
+    fetch(AUTH_STRINGS.apiPath.data, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -27,8 +27,8 @@ function RetroCertsLandingPage(props) {
     .then(response => response.json())
     .then(data => {
       setUserData(data);
-      if (data.status !== auth.statusCode.OK) {
-        sessionStorage.removeItem(auth.AUTHTOKEN);
+      if (data.status !== AUTH_STRINGS.statusCode.ok) {
+        sessionStorage.removeItem(AUTH_STRINGS.authToken);
       }
     })
     .catch(error => console.error(error));
@@ -38,8 +38,8 @@ function RetroCertsLandingPage(props) {
 
   // Removes the users session token which logs the user out.
   function logout() {
-    sessionStorage.removeItem(auth.AUTHTOKEN);
-    setUserData({status: auth.statusCode.notLoggedIn});
+    sessionStorage.removeItem(AUTH_STRINGS.authToken);
+    setUserData({status: AUTH_STRINGS.statusCode.notLoggedIn});
     history.push("/retroactive-certification");
   }
 
