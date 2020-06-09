@@ -1,7 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<RetroCertsLandingPage /> renders the retro certs landing page (after auth) 1`] = `
+exports[`<RetroCertsLandingPage /> has user data 1`] = `
+<div
+  id="overflow-wrapper"
+>
+  <Header />
+  <main>
+    <div
+      className="container p-4"
+    >
+      <h1>
+        Hello
+      </h1>
+      <p>
+        Weeks to certify: 
+        2020-01-01
+      </p>
+      <p>
+        <Button
+          active={false}
+          disabled={false}
+          onClick={[Function]}
+          type="button"
+          variant="link"
+        >
+          Clear Session
+        </Button>
+      </p>
+    </div>
+  </main>
+  <Footer />
+</div>
+`;
+
+exports[`<RetroCertsLandingPage /> no authToken or user data 1`] = `
 <Redirect
+  push={true}
   to="/retroactive-certification"
 />
+`;
+
+exports[`<RetroCertsLandingPage /> re-fetch data with authToken 1`] = `
+<div>
+  Loading...
+</div>
 `;

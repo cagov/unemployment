@@ -49,7 +49,7 @@ exports[`<RetroCertsAuthPage /> renders the retro certs main page 1`] = `
         >
           <FormGroup
             className="col-md-6"
-            controlId="formEDDCAN"
+            controlId="formEddcan"
           >
             <FormLabel
               column={false}
@@ -69,7 +69,7 @@ exports[`<RetroCertsAuthPage /> renders the retro certs main page 1`] = `
         >
           <FormGroup
             className="col-md-6"
-            controlId="formSSN"
+            controlId="formSsn"
           >
             <FormLabel
               column={false}

@@ -1,26 +1,27 @@
 const { Router } = require("express");
 const testAccounts = require("../data/test-accounts.json");
+const AUTH_STRINGS = require("../data/authStrings");
 
 function createRouter() {
   const router = Router();
 
   function authStatus(postJson, responseJson) {
-    responseJson.status = "user-not-found";
+    responseJson.status = AUTH_STRINGS.statusCode.userNotFound;
     for (const testAccount of testAccounts) {
       if ((postJson.lastName || "").toLowerCase() === testAccount.lastName
           && postJson.ssn === testAccount.ssn
           && postJson.eddcan === testAccount.eddcan) {
-        responseJson.status = "OK";
+        responseJson.status = AUTH_STRINGS.statusCode.ok;
         responseJson.authToken = testAccount.authToken;
         responseJson.weeksToCertify = Array.from(testAccount.weeksToCertify);
         break;
       } else if (postJson.ssn === testAccount.ssn
           && postJson.eddcan !== testAccount.eddcan) {
-        responseJson.status = "wrong-eddcan";
+        responseJson.status = AUTH_STRINGS.statusCode.wrongEddcan;
         break;
       } else if (postJson.ssn !== testAccount.ssn
           && postJson.eddcan === testAccount.eddcan) {
-        responseJson.status = "wrong-ssn";
+        responseJson.status = AUTH_STRINGS.statusCode.wrongSsn;
         break;
       }
     }
@@ -28,11 +29,11 @@ function createRouter() {
   }
 
   function authWithToken(postJson, responseJson) {
-    responseJson.status = "user-not-found";
+    responseJson.status = AUTH_STRINGS.statusCode.userNotFound;
     if (postJson.authToken) {
       for (const testAccount of testAccounts) {
         if (postJson.authToken === testAccount.authToken) {
-          responseJson.status = "OK";
+          responseJson.status = AUTH_STRINGS.statusCode.ok;
           responseJson.weeksToCertify = Array.from(testAccount.weeksToCertify);
           break;
         }
@@ -41,18 +42,18 @@ function createRouter() {
     return responseJson;
   }
 
-  router.post("/retroactive-certification/api/login", (req, res) => {
+  router.post(AUTH_STRINGS.apiPath.login, (req, res) => {
     const responseJson = authStatus(req.body, {});
-    const httpStatus = responseJson.status === "OK" ? 200 : 401
+    const httpStatus = responseJson.status === AUTH_STRINGS.statusCode.ok ? 200 : 401
 
-    res.status(httpStatus).type('json').send(JSON.stringify(responseJson));
+    res.status(httpStatus).type("json").send(JSON.stringify(responseJson));
   });
 
-  router.post("/retroactive-certification/api/data", (req, res) => {
+  router.post(AUTH_STRINGS.apiPath.data, (req, res) => {
     const responseJson = authWithToken(req.body, {});
-    const httpStatus = responseJson.status === "OK" ? 200 : 401
+    const httpStatus = responseJson.status === AUTH_STRINGS.statusCode.ok ? 200 : 401
 
-    res.status(httpStatus).type('json').send(JSON.stringify(responseJson));
+    res.status(httpStatus).type("json").send(JSON.stringify(responseJson));
   });
 
   return router;
