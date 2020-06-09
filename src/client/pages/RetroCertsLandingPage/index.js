@@ -1,7 +1,7 @@
 import Button from "react-bootstrap/Button";
 import { Redirect, useHistory } from "react-router-dom";
 import React from "react";
-import AUTH_STRINGS from "../../../data/auth-strings";
+import AUTH_STRINGS from "../../../data/authStrings";
 import { userDataPropType, setUserDataPropType } from "../../commonPropTypes";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";

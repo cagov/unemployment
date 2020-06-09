@@ -1,5 +1,5 @@
 import { init } from "../app";
-import AUTH_STRINGS from "../data/auth-strings";
+import AUTH_STRINGS from "../data/authStrings";
 import fflip from "fflip";
 import request from "supertest";
 

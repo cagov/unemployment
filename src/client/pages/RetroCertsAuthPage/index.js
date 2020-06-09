@@ -6,7 +6,7 @@ import Row from "react-bootstrap/Row";
 import Alert from "react-bootstrap/Alert";
 import ReCAPTCHA from "react-google-recaptcha";
 import React, { useState } from "react";
-import AUTH_STRINGS from "../../../data/auth-strings";
+import AUTH_STRINGS from "../../../data/authStrings";
 import { userDataPropType, setUserDataPropType } from "../../commonPropTypes";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";

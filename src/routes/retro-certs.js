@@ -1,6 +1,6 @@
 const { Router } = require("express");
 const testAccounts = require("../data/test-accounts.json");
-const AUTH_STRINGS = require("../data/auth-strings");
+const AUTH_STRINGS = require("../data/authStrings");
 
 function createRouter() {
   const router = Router();

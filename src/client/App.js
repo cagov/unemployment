@@ -6,7 +6,7 @@ import PageNotFound from "./pages/PageNotFound";
 import RedirectToGuide from "./pages/RedirectToGuide";
 import RetroCertsAuthPage from "./pages/RetroCertsAuthPage";
 import RetroCertsLandingPage from "./pages/RetroCertsLandingPage";
-import AUTH_STRINGS from "../data/auth-strings";
+import AUTH_STRINGS from "../data/authStrings";
 import routes from "../data/routes";
 
 export default function App(props) {
