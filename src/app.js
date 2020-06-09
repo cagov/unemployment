@@ -7,6 +7,7 @@ const helmet = require("helmet");
 const createRouter = require("./routes");
 const fflip = require("fflip");
 const fflipConfig = require("./data/fflipConfig");
+const { createRetroCertDatabaseIfNeeded } = require("./data/cosmos");
 
 // Load default feature flag values.
 fflip.config(fflipConfig);
@@ -14,9 +15,13 @@ fflip.config(fflipConfig);
 /**
  * @returns {object} Express application
  */
-function init() {
-  if (process.env.NODE_ENV === "development" || process.env.ENABLE_RETRO_CERTS === "1") {
+async function init() {
+  if (
+    process.env.NODE_ENV === "development" ||
+    process.env.ENABLE_RETRO_CERTS === "1"
+  ) {
     fflip.features.retroCerts.enabled = true;
+    await createRetroCertDatabaseIfNeeded();
   }
 
   const app = express();
