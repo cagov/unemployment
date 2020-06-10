@@ -36,6 +36,7 @@ describe("Router: API tests", () => {
       [{lastName: "Last", eddcan: "1234567890", ssn: "123456789"}, 200, {
         status: AUTH_STRINGS.statusCode.ok,
         authToken: "e882639f-07b9-423d-9e1e-5f6b594b60eb",
+        lastName: "Last",
         weeksToCertify: ["2020-04-03", "2020-04-10"]}],
       [{lastName: "Incorrect", eddcan: "1234567890", ssn: "0"}, 401, {
         status: AUTH_STRINGS.statusCode.wrongSsn}],
@@ -46,6 +47,7 @@ describe("Router: API tests", () => {
       [{lastName: "LaSt", eddcan: "1111122222", ssn: "888990000"}, 200, {
         status: AUTH_STRINGS.statusCode.ok,
         authToken: "0be63615-6f3f-4e1f-a104-f1fab45c126b",
+        lastName: "Last",
         weeksToCertify: ["2020-03-27"]}]
     ];
 
@@ -70,9 +72,11 @@ describe("Router: API tests", () => {
         status: AUTH_STRINGS.statusCode.userNotFound}],
       [{authToken: "e882639f-07b9-423d-9e1e-5f6b594b60eb"}, 200, {
         status: AUTH_STRINGS.statusCode.ok,
+        lastName: "Last",
         weeksToCertify: ["2020-04-03", "2020-04-10"]}],
       [{authToken: "0be63615-6f3f-4e1f-a104-f1fab45c126b"}, 200, {
         status: AUTH_STRINGS.statusCode.ok,
+        lastName: "Last",
         weeksToCertify: ["2020-03-27"]}]
       ];
 

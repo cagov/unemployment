@@ -1,0 +1,18 @@
+.what-to-expect {
+  .green-highlight {
+    background-color: #ecf3ec;
+    border-left: .5rem solid #01a91c;
+    padding: .6rem;
+  }
+  .white-checkmark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    width: 2rem;
+    margin-right: .5rem;
+    color: #fff;
+    background-color: #000;
+    border-radius: 50%;
+  }
+}
