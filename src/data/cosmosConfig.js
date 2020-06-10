@@ -1,5 +1,3 @@
-const { COSMOS_STAGING_DB_KEY } = require("../../local.config.js");
-
 const COSMOS_CONFIG = {
   endpoint: "https://cdbbnscnd001.documents.azure.com:443/",
   key: getRetrocertDbKey(),
@@ -10,7 +8,13 @@ const COSMOS_CONFIG = {
 };
 
 function getRetrocertDbKey() {
-  const key = process.env.COSMOS_DB_KEY || COSMOS_STAGING_DB_KEY;
+  let key;
+  if (process.env.NODE_ENV === "development") {
+    // todo(kalvin): retrieve this key from azure instead of a local uncommitted file
+    key = require("../../local.config.js").COSMOS_STAGING_DB_KEY;
+  } else {
+    key = process.env.COSMOS_DB_KEY;
+  }
   if (!key) {
     console.error("CosmosDB key is missing");
   }
