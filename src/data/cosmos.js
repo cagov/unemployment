@@ -29,7 +29,7 @@ async function createContainer(containerId) {
     .database(databaseName)
     .containers.createIfNotExists(
       { id: containerId, partitionKey },
-      { offerThroughput: 400 }
+      { offerThroughput: 400 } // this the the minimum on autoscale, see https://azure.microsoft.com/en-us/pricing/details/cosmos-db/
     );
   return container;
 }
@@ -59,8 +59,10 @@ async function insertItem(item, containerName) {
 async function createRetroCertDatabaseIfNeeded() {
   try {
     await createDatabase(databaseName);
-    await createContainer(usersContainerName);
-    await createContainer(formsContainerName);
+    await Promise.all([
+      createContainer(usersContainerName),
+      createContainer(formsContainerName),
+    ]);
   } catch (error) {
     console.error(
       "Error when creating retrocert database and containers",
