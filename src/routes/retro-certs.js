@@ -8,11 +8,12 @@ function createRouter() {
   function authStatus(postJson, responseJson) {
     responseJson.status = AUTH_STRINGS.statusCode.userNotFound;
     for (const testAccount of testAccounts) {
-      if ((postJson.lastName || "").toLowerCase() === testAccount.lastName
+      if ((postJson.lastName || "").toLowerCase() === testAccount.lastName.toLowerCase()
           && postJson.ssn === testAccount.ssn
           && postJson.eddcan === testAccount.eddcan) {
         responseJson.status = AUTH_STRINGS.statusCode.ok;
         responseJson.authToken = testAccount.authToken;
+        responseJson.lastName = testAccount.lastName;
         responseJson.weeksToCertify = Array.from(testAccount.weeksToCertify);
         break;
       } else if (postJson.ssn === testAccount.ssn
@@ -34,6 +35,7 @@ function createRouter() {
       for (const testAccount of testAccounts) {
         if (postJson.authToken === testAccount.authToken) {
           responseJson.status = AUTH_STRINGS.statusCode.ok;
+          responseJson.lastName = testAccount.lastName;
           responseJson.weeksToCertify = Array.from(testAccount.weeksToCertify);
           break;
         }

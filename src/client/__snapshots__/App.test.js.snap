@@ -6,44 +6,53 @@ exports[`<App /> renders application with retro-certs 1`] = `
 >
   <Switch>
     <Route
+      component={[Function]}
       exact={true}
-      key="/"
       path="/"
-    >
-      <RedirectToGuide />
-    </Route>
+    />
     <Route
-      key="/guide"
+      component={[Function]}
       path="/guide"
-    >
-      <GuidePage />
-    </Route>
-    <Route
-      key="/retroactive-certification/landing"
+    />
+    <RetroCertsRoute
+      isProduction={false}
+      pageComponent={[Function]}
+      pageProps={
+        Object {
+          "setUserData": [Function],
+          "userData": Object {
+            "status": "not-logged-in",
+          },
+        }
+      }
       path="/retroactive-certification/landing"
-    >
-      <RetroCertsLandingPage
-        setUserData={[Function]}
-        userData={
-          Object {
+    />
+    <RetroCertsRoute
+      isProduction={false}
+      pageComponent={[Function]}
+      pageProps={
+        Object {
+          "setUserData": [Function],
+          "userData": Object {
             "status": "not-logged-in",
-          }
+          },
         }
-      />
-    </Route>
-    <Route
-      key="/retroactive-certification"
+      }
+      path="/retroactive-certification/what-to-expect"
+    />
+    <RetroCertsRoute
+      isProduction={false}
+      pageComponent={[Function]}
+      pageProps={
+        Object {
+          "setUserData": [Function],
+          "userData": Object {
+            "status": "not-logged-in",
+          },
+        }
+      }
       path="/retroactive-certification"
-    >
-      <RetroCertsAuthPage
-        setUserData={[Function]}
-        userData={
-          Object {
-            "status": "not-logged-in",
-          }
-        }
-      />
-    </Route>
+    />
     <Route>
       <PageNotFound />
     </Route>
@@ -57,30 +66,53 @@ exports[`<App /> renders application without retro-certs 1`] = `
 >
   <Switch>
     <Route
+      component={[Function]}
       exact={true}
-      key="/"
       path="/"
-    >
-      <RedirectToGuide />
-    </Route>
+    />
     <Route
-      key="/guide"
+      component={[Function]}
       path="/guide"
-    >
-      <GuidePage />
-    </Route>
-    <Route
-      key="/retroactive-certification/landing"
+    />
+    <RetroCertsRoute
+      isProduction={true}
+      pageComponent={[Function]}
+      pageProps={
+        Object {
+          "setUserData": [Function],
+          "userData": Object {
+            "status": "not-logged-in",
+          },
+        }
+      }
       path="/retroactive-certification/landing"
-    >
-      <PageNotFound />
-    </Route>
-    <Route
-      key="/retroactive-certification"
+    />
+    <RetroCertsRoute
+      isProduction={true}
+      pageComponent={[Function]}
+      pageProps={
+        Object {
+          "setUserData": [Function],
+          "userData": Object {
+            "status": "not-logged-in",
+          },
+        }
+      }
+      path="/retroactive-certification/what-to-expect"
+    />
+    <RetroCertsRoute
+      isProduction={true}
+      pageComponent={[Function]}
+      pageProps={
+        Object {
+          "setUserData": [Function],
+          "userData": Object {
+            "status": "not-logged-in",
+          },
+        }
+      }
       path="/retroactive-certification"
-    >
-      <PageNotFound />
-    </Route>
+    />
     <Route>
       <PageNotFound />
     </Route>

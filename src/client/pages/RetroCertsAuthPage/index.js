@@ -46,7 +46,7 @@ function RetroCertsAuthPage(props) {
           // value across tabs:
           // https://medium.com/@marciomariani/sharing-sessionstorage-between-tabs-5b6f42c6348c
           sessionStorage.setItem(AUTH_STRINGS.authToken, data.authToken);
-          history.push("/retroactive-certification/landing");
+          history.push("/retroactive-certification/what-to-expect");
         } else {
           sessionStorage.removeItem(AUTH_STRINGS.authToken);
         }})
