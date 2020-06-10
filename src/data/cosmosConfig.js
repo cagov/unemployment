@@ -12,7 +12,7 @@ const COSMOS_CONFIG = {
 function getRetrocertDbKey() {
   const key = process.env.COSMOS_DB_KEY || COSMOS_STAGING_DB_KEY;
   if (!key) {
-    console.log("CosmosDB key is missing");
+    console.error("CosmosDB key is missing");
   }
   return key;
 }

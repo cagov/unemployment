@@ -49,9 +49,9 @@ async function insertItem(item, containerName) {
     return createdItem;
   } catch (error) {
     if (error.code === 409) {
-      console.log("An item with this id already exists");
+      console.error("An item with this id already exists");
     } else {
-      console.log(error);
+      console.error(error);
     }
   }
 }
@@ -62,7 +62,10 @@ async function createRetroCertDatabaseIfNeeded() {
     await createContainer(usersContainerName);
     await createContainer(formsContainerName);
   } catch (error) {
-    console.log("Error when creating retrocert database and containers", error);
+    console.error(
+      "Error when creating retrocert database and containers",
+      error
+    );
   }
 }
 
