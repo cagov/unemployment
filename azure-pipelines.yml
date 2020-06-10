@@ -24,7 +24,7 @@ steps:
 
   - script: npm run build
     env:
-      RETROCERT_DB_KEY: ${RETROCERT_DB_KEY}
+      COSMOS_DB_KEY: ${COSMOS_DB_KEY}
     displayName: "npm build"
 
   - task: ArchiveFiles@2

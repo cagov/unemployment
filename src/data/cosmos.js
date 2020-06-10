@@ -41,7 +41,7 @@ function getContainer(containerName) {
   return container;
 }
 
-async function createItem(item, containerName) {
+async function insertItem(item, containerName) {
   const container = await getContainer(containerName);
 
   try {
@@ -80,12 +80,12 @@ async function getUsersByEddcanId(eddcanId) {
   return resources;
 }
 
-function createForm(item) {
-  return createItem(item, formsContainerName);
+function insertForm(item) {
+  return insertItem(item, formsContainerName);
 }
 
 module.exports = {
   createRetroCertDatabaseIfNeeded,
-  createForm,
+  insertForm,
   getUsersByEddcanId,
 };
