@@ -15,14 +15,8 @@ fflip.config(fflipConfig);
 /**
  * @returns {object} Express application
  */
-async function init() {
-  if (
-    process.env.NODE_ENV === "development" ||
-    process.env.ENABLE_RETRO_CERTS === "1"
-  ) {
-    fflip.features.retroCerts.enabled = true;
-    await createRetroCertDatabaseIfNeeded();
-  }
+function init() {
+  retroCertsIfEnabled();
 
   const app = express();
 
@@ -88,6 +82,16 @@ async function init() {
   app.use("/", createRouter());
 
   return app;
+}
+
+async function retroCertsIfEnabled() {
+  if (
+    process.env.NODE_ENV === "development" ||
+    process.env.ENABLE_RETRO_CERTS === "1"
+  ) {
+    fflip.features.retroCerts.enabled = true;
+    await createRetroCertDatabaseIfNeeded();
+  }
 }
 
 module.exports = { init };
