@@ -15,4 +15,4 @@ src/**/manifest-*.json
 test-output
 
 # Config data that shouldn't be checked into the repo
-local.config.js
+.env
