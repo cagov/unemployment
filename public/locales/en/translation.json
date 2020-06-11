@@ -191,11 +191,12 @@
     "submit": "Find me",
     "eddcan-error": "Please check your EDDCAN.",
     "ssn-error": "Please check your SSN.",
-    "invalid-user-error": "We couldn't find you in the system."
+    "invalid-user-error": "We couldn't find you in the system.",
+    "invalid-recaptcha-error": "Human verification expired. Please check the checkbox again."
   },
   "retrocerts-what-to-expect": {
     "title": "Retroactive Unemployment Certification",
-    "subheader": "We found your information, <strong>{{name}}</strong>!",
+    "subheader": "We found your information!",
     "header1": "What to expect",
     "p1a": "We'll ask you about your unemployment status, including the following:",
     "list-item1": "Were you too sick or injured to work?",

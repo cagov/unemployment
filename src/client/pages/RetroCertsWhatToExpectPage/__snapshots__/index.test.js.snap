@@ -21,15 +21,7 @@ exports[`<RetroCertsWhatToExpectPage /> has user data 1`] = `
         >
           ✔
         </span>
-        <Trans
-          i18nKey="retrocerts-what-to-expect.subheader"
-          t={[Function]}
-          values={
-            Object {
-              "name": "Lastname",
-            }
-          }
-        />
+        We found your information!
       </p>
       <h2>
         What to expect
