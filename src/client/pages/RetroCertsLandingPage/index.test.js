@@ -7,7 +7,7 @@ describe("<RetroCertsLandingPage />", () => {
     const wrapper = renderNonTransContent(Component, "RetroCertsLandingPage", {
       userData: {
         status: AUTH_STRINGS.statusCode.ok,
-        weeksToCertify: ["2020-01-01"],
+        weeksToCertify: [0],
       },
       setUserData: () => {},
     });

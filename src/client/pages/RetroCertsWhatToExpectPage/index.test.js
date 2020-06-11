@@ -8,7 +8,7 @@ describe("<RetroCertsWhatToExpectPage />", () => {
       userData: {
         status: AUTH_STRINGS.statusCode.ok,
         lastName: "Lastname",
-        weeksToCertify: ["2020-01-01"],
+        weeksToCertify: [1, 2],
       }
     });
 

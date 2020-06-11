@@ -14,7 +14,7 @@ exports[`<RetroCertsLandingPage /> has user data 1`] = `
       </h1>
       <p>
         Weeks to certify: 
-        2020-01-01
+        0
       </p>
       <p>
         <Button
