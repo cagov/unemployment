@@ -37,7 +37,7 @@ describe("Router: API tests", () => {
         status: AUTH_STRINGS.statusCode.ok,
         authToken: "e882639f-07b9-423d-9e1e-5f6b594b60eb",
         lastName: "Last",
-        weeksToCertify: ["2020-04-03", "2020-04-10"]}],
+        weeksToCertify: [0, 1]}],
       [{lastName: "Incorrect", eddcan: "1234567890", ssn: "0"}, 401, {
         status: AUTH_STRINGS.statusCode.wrongSsn}],
       [{lastName: "Incorrect", eddcan: "0", ssn: "123456789"}, 401, {
@@ -48,7 +48,7 @@ describe("Router: API tests", () => {
         status: AUTH_STRINGS.statusCode.ok,
         authToken: "0be63615-6f3f-4e1f-a104-f1fab45c126b",
         lastName: "Last",
-        weeksToCertify: ["2020-03-27"]}]
+        weeksToCertify: [2]}]
     ];
 
     for (const testCase of testCases) {
@@ -73,11 +73,11 @@ describe("Router: API tests", () => {
       [{authToken: "e882639f-07b9-423d-9e1e-5f6b594b60eb"}, 200, {
         status: AUTH_STRINGS.statusCode.ok,
         lastName: "Last",
-        weeksToCertify: ["2020-04-03", "2020-04-10"]}],
+        weeksToCertify: [0, 1]}],
       [{authToken: "0be63615-6f3f-4e1f-a104-f1fab45c126b"}, 200, {
         status: AUTH_STRINGS.statusCode.ok,
         lastName: "Last",
-        weeksToCertify: ["2020-03-27"]}]
+        weeksToCertify: [2]}]
       ];
 
     for (const testCase of testCases) {

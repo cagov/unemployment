@@ -1,8 +1,7 @@
 import Button from "react-bootstrap/Button";
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import React from "react";
-import AUTH_STRINGS from "../../../data/authStrings";
-import { userDataPropType, setUserDataPropType } from "../../commonPropTypes";
+import { userDataPropType } from "../../commonPropTypes";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import { useTranslation, Trans } from "react-i18next";
@@ -11,32 +10,6 @@ function RetroCertsWhatToExpectPage(props) {
   const { t } = useTranslation();
 
   const userData = props.userData;
-  const setUserData = props.setUserData;
-
-  if (!userData.weeksToCertify) {
-    const authToken = sessionStorage.getItem(AUTH_STRINGS.authToken);
-    if (!authToken) {
-      return <Redirect to="/retroactive-certification" push />;
-    }
-
-    fetch(AUTH_STRINGS.apiPath.data, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({authToken})
-    })
-    .then(response => response.json())
-    .then(data => {
-      setUserData(data);
-      if (data.status !== AUTH_STRINGS.statusCode.ok) {
-        sessionStorage.removeItem(AUTH_STRINGS.authToken);
-      }
-    })
-    .catch(error => console.error(error));
-
-    return <div>Loading...</div>;
-  }
 
   return (
     <div id="overflow-wrapper" className="what-to-expect">
@@ -78,7 +51,6 @@ function RetroCertsWhatToExpectPage(props) {
 
 RetroCertsWhatToExpectPage.propTypes = {
   userData: userDataPropType,
-  setUserData: setUserDataPropType,
 };
 
 export default RetroCertsWhatToExpectPage;

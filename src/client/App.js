@@ -27,17 +27,19 @@ export default function App(props) {
           path="/retroactive-certification/landing"
           isProduction={isProduction}
           pageComponent={RetroCertsLandingPage}
-          pageProps={{userData: retroCertsUserData, setUserData: setRetroCertsUserData}}/>
+          pageProps={{userData: retroCertsUserData, setUserData: setRetroCertsUserData}}
+          requiresAuthentication />
         <RetroCertsRoute
           path="/retroactive-certification/what-to-expect"
           isProduction={isProduction}
           pageComponent={RetroCertsWhatToExpectPage}
-          pageProps={{userData: retroCertsUserData, setUserData: setRetroCertsUserData}}/>
+          pageProps={{userData: retroCertsUserData, setUserData: setRetroCertsUserData}}
+          requiresAuthentication />
         <RetroCertsRoute
           path="/retroactive-certification"
           isProduction={isProduction}
           pageComponent={RetroCertsAuthPage}
-          pageProps={{userData: retroCertsUserData, setUserData: setRetroCertsUserData}}/>
+          pageProps={{userData: retroCertsUserData, setUserData: setRetroCertsUserData}} />
         <Route>
           <PageNotFound />
         </Route>
