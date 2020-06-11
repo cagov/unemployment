@@ -192,5 +192,21 @@
     "eddcan-error": "Please check your EDDCAN.",
     "ssn-error": "Please check your SSN.",
     "invalid-user-error": "We couldn't find you in the system."
+  },
+  "retrocerts-what-to-expect": {
+    "title": "Retroactive Unemployment Certification",
+    "subheader": "We found your information, <strong>{{name}}</strong>!",
+    "header1": "What to expect",
+    "p1a": "We'll ask you about your unemployment status, including the following:",
+    "list-item1": "Were you too sick or injured to work?",
+    "list-item2": "Was there any reason (other than sickness or injury) that you could not have accepted full-time work each work day?",
+    "list-item3": "Did you look for work?",
+    "list-item4": "Did you refuse any work?",
+    "list-item5": "Did you begin attending any kind of school or training?",
+    "list-item6": "Did you work or earn money, whether you were paid or not?",
+    "p1b": "You'll need to gather these details about your work, education, and other income for the time period from March 14 to May 9, 2020.",
+    "header2": "What if I already submitted my overpayments through AskEDD?",
+    "p2": "Please submit your eligibility information again.",
+    "button-start-certification": "Start certification"
   }
 }

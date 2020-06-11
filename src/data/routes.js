@@ -9,21 +9,25 @@ const routes = {
     path: "/",
     component: "RedirectToGuide",
     routeProps: {
-      exact: true
-    }
+      exact: true,
+    },
   },
   guide: {
     path: "/guide",
-    component: "GuidePage"
+    component: "GuidePage",
+  },
+  retroCertsWhatToExpect: {
+    path: "/retroactive-certification/what-to-expect",
+    component: "RetroCertsWhatToExpectPage",
   },
   retroCertsLanding: {
     path: "/retroactive-certification/landing",
-    component: "RetroCertsLandingPage"
+    component: "RetroCertsLandingPage",
   },
   retroCerts: {
     path: "/retroactive-certification",
-    component: "RetroCertsAuthPage"
-  }
+    component: "RetroCertsAuthPage",
+  },
 };
 
 module.exports = routes;
