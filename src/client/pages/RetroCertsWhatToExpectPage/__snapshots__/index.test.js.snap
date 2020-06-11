@@ -94,10 +94,3 @@ exports[`<RetroCertsWhatToExpectPage /> has user data 1`] = `
   <Footer />
 </div>
 `;
-
-exports[`<RetroCertsWhatToExpectPage /> no authToken or user data 1`] = `
-<Redirect
-  push={true}
-  to="/retroactive-certification"
-/>
-`;

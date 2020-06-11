@@ -31,6 +31,7 @@ export default function App(props) {
             userData: retroCertsUserData,
             setUserData: setRetroCertsUserData,
           }}
+          requiresAuthentication
         />
         <RetroCertsRoute
           path="/retroactive-certification/what-to-expect"
@@ -40,6 +41,7 @@ export default function App(props) {
             userData: retroCertsUserData,
             setUserData: setRetroCertsUserData,
           }}
+          requiresAuthentication
         />
         <RetroCertsRoute
           path="/retroactive-certification"

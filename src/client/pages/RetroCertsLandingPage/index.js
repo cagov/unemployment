@@ -1,5 +1,5 @@
 import Button from "react-bootstrap/Button";
-import { Redirect, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import React from "react";
 import AUTH_STRINGS from "../../../data/authStrings";
 import { userDataPropType, setUserDataPropType } from "../../commonPropTypes";
@@ -11,35 +11,10 @@ function RetroCertsLandingPage(props) {
   const setUserData = props.setUserData;
   const history = useHistory();
 
-  if (!userData.weeksToCertify) {
-    const authToken = sessionStorage.getItem(AUTH_STRINGS.authToken);
-    if (!authToken) {
-      return <Redirect to="/retroactive-certification" push />;
-    }
-
-    fetch(AUTH_STRINGS.apiPath.data, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({authToken})
-    })
-    .then(response => response.json())
-    .then(data => {
-      setUserData(data);
-      if (data.status !== AUTH_STRINGS.statusCode.ok) {
-        sessionStorage.removeItem(AUTH_STRINGS.authToken);
-      }
-    })
-    .catch(error => console.error(error));
-
-    return <div>Loading...</div>;
-  }
-
   // Removes the users session token which logs the user out.
   function logout() {
     sessionStorage.removeItem(AUTH_STRINGS.authToken);
-    setUserData({status: AUTH_STRINGS.statusCode.notLoggedIn});
+    setUserData({ status: AUTH_STRINGS.statusCode.notLoggedIn });
     history.push("/retroactive-certification");
   }
 
@@ -50,7 +25,11 @@ function RetroCertsLandingPage(props) {
         <div className="container p-4">
           <h1>Hello</h1>
           <p>Weeks to certify: {userData.weeksToCertify.join(", ")}</p>
-          <p><Button variant="link" onClick={logout}>Clear Session</Button></p>
+          <p>
+            <Button variant="link" onClick={logout}>
+              Clear Session
+            </Button>
+          </p>
         </div>
       </main>
       <Footer />

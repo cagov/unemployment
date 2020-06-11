@@ -1,24 +1,62 @@
 import PropTypes from "prop-types";
-import { Route } from "react-router-dom";
+import { Route, Redirect } from "react-router-dom";
 import React from "react";
 import { userDataPropType, setUserDataPropType } from "../../commonPropTypes";
+import AUTH_STRINGS from "../../../data/authStrings";
 import PageNotFound from "../../pages/PageNotFound";
+
+function userIsAuthenticated(userData) {
+  return !!userData.weeksToCertify;
+}
 
 function RetroCertsRoute(props) {
   const {
     pageComponent: Component,
     isProduction,
     pageProps,
+    requiresAuthentication,
     ...routeProps
   } = props;
 
-  // TODO: Move authentication logic into this component.
+  let routeChild = <div>Loading...</div>;
+  if (isProduction) {
+    routeChild = <PageNotFound />;
+  } else if (
+    !requiresAuthentication ||
+    userIsAuthenticated(pageProps.userData)
+  ) {
+    routeChild = <Component {...pageProps} />;
+  } else {
+    // eslint-disable-next-line no-console
+    console.log("user not authenticated");
+    // This page requires authentication and the user is not authenticated.
+    // Try using the auth token if they have one.
+    const authToken = sessionStorage.getItem(AUTH_STRINGS.authToken);
+    if (!authToken) {
+      // The user came here directly, send them back to the login page.
+      routeChild = <Redirect to="/retroactive-certification" push />;
+    } else {
+      // Try to refresh the data with the auth token.
+      fetch(AUTH_STRINGS.apiPath.data, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ authToken }),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          pageProps.setUserData(data);
+          if (data.status !== AUTH_STRINGS.statusCode.ok) {
+            sessionStorage.removeItem(AUTH_STRINGS.authToken);
+          }
+        })
+        .catch((error) => console.error(error));
+      // While the refresh happens, we show the default Loading.... text.
+    }
+  }
 
-  return (
-    <Route {...routeProps}>
-      {isProduction ? <PageNotFound /> : <Component {...pageProps} />}
-    </Route>
-  );
+  return <Route {...routeProps}>{routeChild}</Route>;
 }
 
 RetroCertsRoute.propTypes = {
@@ -29,7 +67,8 @@ RetroCertsRoute.propTypes = {
     userData: userDataPropType,
     setUserData: setUserDataPropType,
   }),
-  path: PropTypes.string,
+  path: PropTypes.string.isRequired,
+  requiresAuthentication: PropTypes.bool,
 };
 
 export default RetroCertsRoute;
