@@ -32,16 +32,3 @@ exports[`<RetroCertsLandingPage /> has user data 1`] = `
   <Footer />
 </div>
 `;
-
-exports[`<RetroCertsLandingPage /> no authToken or user data 1`] = `
-<Redirect
-  push={true}
-  to="/retroactive-certification"
-/>
-`;
-
-exports[`<RetroCertsLandingPage /> re-fetch data with authToken 1`] = `
-<div>
-  Loading...
-</div>
-`;

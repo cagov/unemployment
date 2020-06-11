@@ -7,26 +7,21 @@
 const routes = {
   home: {
     path: "/",
-    component: "RedirectToGuide",
     routeProps: {
       exact: true
     }
   },
   guide: {
     path: "/guide",
-    component: "GuidePage"
   },
   retroCertsWhatToExpect: {
     path: "/retroactive-certification/what-to-expect",
-    component: "RetroCertsWhatToExpectPage",
   },
   retroCertsLanding: {
     path: "/retroactive-certification/landing",
-    component: "RetroCertsLandingPage"
   },
   retroCerts: {
     path: "/retroactive-certification",
-    component: "RetroCertsAuthPage"
   }
 };
 
