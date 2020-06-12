@@ -56,7 +56,7 @@ describe("Router: API tests", () => {
     //   post body,
     //   recaptchaResponse,
     //   getUserByNameEddcanSsn promise response,
-    //   createAuthTokenForUser promise response,
+    //   getFormDataByUserIdWithNewAuthToken promise response,
     //   expected http status,
     //   expected request response
     const testCases = [
@@ -81,7 +81,7 @@ describe("Router: API tests", () => {
         { lastName: "Last", eddcan: "1234567890", ssn: "123456789" },
         true,
         { id: "hash", weeksToCertify: [0, 1] },
-        "test auth token",
+        { authToken: "test auth token" },
         200,
         {
           status: AUTH_STRINGS.statusCode.ok,
@@ -94,7 +94,7 @@ describe("Router: API tests", () => {
         { lastName: "Last", eddcan: "1234567890", ssn: "123456789" },
         false,
         { id: "hash", weeksToCertify: [0, 1] },
-        "test auth token",
+        { authToken: "test auth token" },
         401,
         {
           status: AUTH_STRINGS.statusCode.recaptchaInvalid,
@@ -107,7 +107,7 @@ describe("Router: API tests", () => {
         reqJson,
         recaptchaResponse,
         getUserResponse,
-        createAuthTokenResponse,
+        getFormDataByUserIdWithNewAuthTokenResponse,
         httpStatus,
         responseJson,
       ] = testCase;
@@ -120,12 +120,14 @@ describe("Router: API tests", () => {
       getUserByNameEddcanSsnMock.mockImplementation(
         jest.fn(() => Promise.resolve(getUserResponse))
       );
-      const createAuthTokenForUserMock = jest.spyOn(
+      const getFormDataByUserIdWithNewAuthTokenMock = jest.spyOn(
         cosmos,
-        "createAuthTokenForUser"
+        "getFormDataByUserIdWithNewAuthToken"
       );
-      createAuthTokenForUserMock.mockImplementation(
-        jest.fn(() => Promise.resolve(createAuthTokenResponse))
+      getFormDataByUserIdWithNewAuthTokenMock.mockImplementation(
+        jest.fn(() =>
+          Promise.resolve(getFormDataByUserIdWithNewAuthTokenResponse)
+        )
       );
 
       const res = await request(server)
@@ -138,7 +140,7 @@ describe("Router: API tests", () => {
 
       validateUserMock.mockRestore();
       getUserByNameEddcanSsnMock.mockRestore();
-      createAuthTokenForUserMock.mockRestore();
+      getFormDataByUserIdWithNewAuthTokenMock.mockRestore();
     }
   });
 
@@ -147,14 +149,16 @@ describe("Router: API tests", () => {
     const server = init();
     // Format of each test case is:
     //   post body,
-    //   getUserByAuthToken promise response,
+    //   getFormDataByAuthToken promise response,
+    //   getUserById promise response,
     //   expected http status,
     //   expected request response
 
     const testCases = [
-      [{}, null, 401, { status: AUTH_STRINGS.statusCode.userNotFound }],
+      [{}, null, null, 401, { status: AUTH_STRINGS.statusCode.userNotFound }],
       [
         { authToken: "invalid token" },
+        null,
         null,
         401,
         {
@@ -163,6 +167,7 @@ describe("Router: API tests", () => {
       ],
       [
         { authToken: "valid uuid" },
+        { id: "hash", authToken: "auth token" },
         { id: "hash", weeksToCertify: [0, 1] },
         200,
         {
@@ -172,6 +177,7 @@ describe("Router: API tests", () => {
       ],
       [
         { authToken: "valid uuid" },
+        { id: "hash", authToken: "auth token" },
         { id: "hash", weeksToCertify: [2] },
         200,
         {
@@ -184,13 +190,21 @@ describe("Router: API tests", () => {
     for (const testCase of testCases) {
       const [
         reqJson,
-        getUserByAuthResponse,
+        getFormDataByAuthTokenResponse,
+        getUserByIdResponse,
         httpStatus,
         responseJson,
       ] = testCase;
-      const getUserByAuthTokenMock = jest.spyOn(cosmos, "getUserByAuthToken");
-      getUserByAuthTokenMock.mockImplementation(
-        jest.fn(() => Promise.resolve(getUserByAuthResponse))
+      const getFormDataByAuthTokenMock = jest.spyOn(
+        cosmos,
+        "getFormDataByAuthToken"
+      );
+      getFormDataByAuthTokenMock.mockImplementation(
+        jest.fn(() => Promise.resolve(getFormDataByAuthTokenResponse))
+      );
+      const getUserByIdMock = jest.spyOn(cosmos, "getUserById");
+      getUserByIdMock.mockImplementation(
+        jest.fn(() => Promise.resolve(getUserByIdResponse))
       );
 
       const res = await request(server)
@@ -201,7 +215,8 @@ describe("Router: API tests", () => {
       expect(res.header["content-type"]).toMatch(/json/);
       expect(res.body).toEqual(responseJson);
 
-      getUserByAuthTokenMock.mockRestore();
+      getFormDataByAuthTokenMock.mockRestore();
+      getUserByIdMock.mockRestore();
     }
   });
 });

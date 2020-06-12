@@ -22,7 +22,8 @@
     "linkedIn": "LinkedIn icon",
     "instagram": "Instagram icon",
     "youtube": "YouTube icon",
-    "caGov": "California gov logo"
+    "caGov": "California gov logo",
+    "checkmark": "checkmark"
   },
   "header": {
     "home": "Home",
@@ -209,5 +210,14 @@
     "header2": "What if I already submitted my overpayments through AskEDD?",
     "p2": "Please submit your eligibility information again.",
     "button-start-certification": "Start certification"
+  },
+  "retrocerts-confirmation": {
+    "title": "Retroactive Unemployment Certification",
+    "subheader": "We have received your certification. Thank you.",
+    "header1": "Save this certification confirmation number",
+    "p1": "You EDD certification confirmation number is <strong>{{confirmationNumber}}</strong>. You may print this page in case you need it later.",
+    "header2": "Weeks certified",
+    "list-item": "Week {{number}}: {{formattedDateRange}}",
+    "button-print": "Print this page"
   }
 }
