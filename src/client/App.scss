@@ -38,56 +38,56 @@ h3,
 h4,
 h5,
 h6 {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 h2 {
-	margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 h3 {
-	margin-bottom: 0.8rem;
+  margin-bottom: 0.8rem;
 }
 
 a {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
 .btn,
 .nav-link {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 .btn {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 // Eliminate whitespace overflow on right half of mobile viewport
 // None of the usual solutions are compatible with sticky elements
 // But this solution is: https://stackoverflow.com/a/59019025/6074728
 #overflow-wrapper {
-	touch-action: pan-y pinch-zoom;
+  touch-action: pan-y pinch-zoom;
 }
 
 // Needed for IE11: https://stackoverflow.com/a/35820454/6074728
 main {
-	display: block;
+  display: block;
 }
 
 // This keeps the footer at the bottom of the page, even if the main
 // content is short. This doesn't work in IE, but degrades reasonably
 // well (the content doesn't grow if needed).
 #overflow-wrapper {
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 header {
-	flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 main {
-	flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 footer {
-	flex: 0 0 auto;
+  flex: 0 0 auto;
 }
