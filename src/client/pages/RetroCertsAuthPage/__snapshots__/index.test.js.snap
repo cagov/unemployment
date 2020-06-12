@@ -92,7 +92,6 @@ exports[`<RetroCertsAuthPage /> renders the retro certs main page 1`] = `
             controlId="formReCaptcha"
           >
             <AsyncScriptLoader(ReCAPTCHA)
-              onChange={[Function]}
               sitekey="6Lf-DQEVAAAAABCMwJ-Gnbqec08RuiPhMZPtZPm9"
             />
             <FormText

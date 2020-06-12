@@ -1,3 +1,7 @@
+/**
+ * @jest-environment node
+ */
+
 import { init } from "../app";
 import AUTH_STRINGS from "../data/authStrings";
 import fflip from "fflip";
@@ -49,14 +53,14 @@ describe("Router: API tests", () => {
         { lastName: "Incorrect", eddcan: "1234567890", ssn: "0" },
         401,
         {
-          status: AUTH_STRINGS.statusCode.wrongSsn,
+          status: AUTH_STRINGS.statusCode.userNotFound,
         },
       ],
       [
         { lastName: "Incorrect", eddcan: "0", ssn: "123456789" },
         401,
         {
-          status: AUTH_STRINGS.statusCode.wrongEddcan,
+          status: AUTH_STRINGS.statusCode.userNotFound,
         },
       ],
       [

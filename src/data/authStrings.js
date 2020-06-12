@@ -14,9 +14,7 @@ const AUTH_STRINGS = {
     ok: "ok",
     notLoggedIn: "not-logged-in",
     userNotFound: "user-not-found",
-    wrongEddcan: "wrong-eddcan",
-    wrongSsn: "wrong-ssn",
-  }
-}
+  },
+};
 
 module.exports = AUTH_STRINGS;

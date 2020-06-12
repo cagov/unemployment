@@ -1,3 +1,4 @@
+import "dotenv/config";
 import Adapter from "enzyme-adapter-react-16";
 import Enzyme from "enzyme";
 
@@ -21,6 +22,9 @@ jest.mock(
   }),
   { virtual: true }
 );
+
+// Google's test environment secret
+process.env.RECAPTCHA_SECRET = "6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe";
 
 jest.mock("react-router-dom", () => {
   const actual = jest.requireActual("react-router-dom");

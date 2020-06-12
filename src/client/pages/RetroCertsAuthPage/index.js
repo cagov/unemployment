@@ -115,15 +115,6 @@ function RetroCertsAuthPage(props) {
             </Row>
             <Row>
               {userData &&
-                userData.status === AUTH_STRINGS.statusCode.wrongEddcan && (
-                  <Alert variant="danger">
-                    {t("retrocert-login.eddcan-error")}
-                  </Alert>
-                )}
-              {userData && userData.status === "wrong-ssn" && (
-                <Alert variant="danger">{t("retrocert-login.ssn-error")}</Alert>
-              )}
-              {userData &&
                 userData.status === AUTH_STRINGS.statusCode.userNotFound && (
                   <Alert variant="danger">
                     {t("retrocert-login.invalid-user-error")}
