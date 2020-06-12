@@ -27,8 +27,6 @@ function RetroCertsRoute(props) {
   ) {
     routeChild = <Component {...pageProps} />;
   } else {
-    // eslint-disable-next-line no-console
-    console.log("user not authenticated");
     // This page requires authentication and the user is not authenticated.
     // Try using the auth token if they have one.
     const authToken = sessionStorage.getItem(AUTH_STRINGS.authToken);

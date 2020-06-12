@@ -15,6 +15,7 @@ class ReCaptcha {
   async askGoogle() {
     const postUrl = `${this.url}?secret=${this.secret}&response=${this.userToken}`;
 
+    // TODO: Add error handling
     const response = await axios.post(postUrl, {});
 
     return response;

@@ -25,6 +25,7 @@ jest.mock(
 
 // Google's test environment secret
 process.env.RECAPTCHA_SECRET = "6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe";
+process.env.COSMOS_DB_KEY = "mock-cosmos-db-key";
 
 jest.mock("react-router-dom", () => {
   const actual = jest.requireActual("react-router-dom");
