@@ -1,3 +1,5 @@
+// Set process.env from local .env file - this should come as early in file as possible
+require("dotenv/config");
 const http = require("http");
 const { init } = require("./app");
 

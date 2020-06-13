@@ -25,6 +25,7 @@ steps:
   - script: npm run build
     env:
       COSMOS_DB_KEY: ${COSMOS_DB_KEY}
+      RECAPTCHA_SECRET: ${RECAPTCHA_SECRET}
     displayName: "npm build"
 
   - task: ArchiveFiles@2

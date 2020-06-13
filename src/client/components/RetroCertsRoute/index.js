@@ -15,16 +15,18 @@ function RetroCertsRoute(props) {
     isProduction,
     pageProps,
     requiresAuthentication,
-    ...routeProps } = props;
+    ...routeProps
+  } = props;
 
   let routeChild = <div>Loading...</div>;
   if (isProduction) {
     routeChild = <PageNotFound />;
-  } else if (!requiresAuthentication || userIsAuthenticated(pageProps.userData)) {
+  } else if (
+    !requiresAuthentication ||
+    userIsAuthenticated(pageProps.userData)
+  ) {
     routeChild = <Component {...pageProps} />;
   } else {
-    // eslint-disable-next-line no-console
-    console.log('user not authenticated');
     // This page requires authentication and the user is not authenticated.
     // Try using the auth token if they have one.
     const authToken = sessionStorage.getItem(AUTH_STRINGS.authToken);
@@ -36,27 +38,23 @@ function RetroCertsRoute(props) {
       fetch(AUTH_STRINGS.apiPath.data, {
         method: "POST",
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify({authToken})
+        body: JSON.stringify({ authToken }),
       })
-      .then(response => response.json())
-      .then(data => {
-        pageProps.setUserData(data);
-        if (data.status !== AUTH_STRINGS.statusCode.ok) {
-          sessionStorage.removeItem(AUTH_STRINGS.authToken);
-        }
-      })
-      .catch(error => console.error(error));
+        .then((response) => response.json())
+        .then((data) => {
+          pageProps.setUserData(data);
+          if (data.status !== AUTH_STRINGS.statusCode.ok) {
+            sessionStorage.removeItem(AUTH_STRINGS.authToken);
+          }
+        })
+        .catch((error) => console.error(error));
       // While the refresh happens, we show the default Loading.... text.
     }
   }
 
-  return (
-      <Route {...routeProps}>
-        {routeChild}
-      </Route>
-    )
+  return <Route {...routeProps}>{routeChild}</Route>;
 }
 
 RetroCertsRoute.propTypes = {

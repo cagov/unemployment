@@ -22,6 +22,8 @@ function RetroCertsAuthPage(props) {
   const [eddcan, setEddcan] = useState("");
   const [ssn, setSsn] = useState("");
 
+  const recaptchaRef = React.createRef();
+
   const handleSubmit = (event) => {
     event.preventDefault();
     event.stopPropagation();
@@ -35,10 +37,12 @@ function RetroCertsAuthPage(props) {
         lastName,
         eddcan,
         ssn,
+        reCaptcha: recaptchaRef.current.getValue(),
       }),
     })
       .then((response) => response.json())
       .then((data) => {
+        recaptchaRef.current.reset();
         setUserData(data);
         if (data.authToken) {
           // Session storage is destroyed when the tab is closed! That"s a bit weird.
@@ -49,7 +53,8 @@ function RetroCertsAuthPage(props) {
           history.push("/retroactive-certification/what-to-expect");
         } else {
           sessionStorage.removeItem(AUTH_STRINGS.authToken);
-        }})
+        }
+      })
       .catch((error) => console.error(error));
   };
 
@@ -101,8 +106,7 @@ function RetroCertsAuthPage(props) {
               <Form.Group controlId="formReCaptcha" className="col-md-6">
                 <ReCAPTCHA
                   sitekey="6Lf-DQEVAAAAABCMwJ-Gnbqec08RuiPhMZPtZPm9"
-                  // eslint-disable-next-line no-console
-                  onChange={(e) => console.log(e)}
+                  ref={recaptchaRef}
                 />
                 <Form.Text className="text-muted">
                   {t("retrocert-login.recaptcha-text")}
@@ -110,19 +114,12 @@ function RetroCertsAuthPage(props) {
               </Form.Group>
             </Row>
             <Row>
-              {userData && userData.status === AUTH_STRINGS.statusCode.wrongEddcan && (
-                <Alert variant="danger">
-                  {t("retrocert-login.eddcan-error")}
-                </Alert>
-              )}
-              {userData && userData.status === "wrong-ssn" && (
-                <Alert variant="danger">{t("retrocert-login.ssn-error")}</Alert>
-              )}
-              {userData && userData.status === AUTH_STRINGS.statusCode.userNotFound && (
-                <Alert variant="danger">
-                  {t("retrocert-login.invalid-user-error")}
-                </Alert>
-              )}
+              {userData &&
+                userData.status === AUTH_STRINGS.statusCode.userNotFound && (
+                  <Alert variant="danger">
+                    {t("retrocert-login.invalid-user-error")}
+                  </Alert>
+                )}
             </Row>
             <Button variant="secondary" type="submit">
               {t("retrocert-login.submit")}

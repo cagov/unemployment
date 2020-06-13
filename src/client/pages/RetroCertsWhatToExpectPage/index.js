@@ -19,7 +19,11 @@ function RetroCertsWhatToExpectPage(props) {
           <h1>{t("retrocerts-what-to-expect.title")}</h1>
           <p className="green-highlight">
             <span className="white-checkmark">✔</span>
-            <Trans t={t} i18nKey="retrocerts-what-to-expect.subheader" values={{name: userData.lastName}} />
+            <Trans
+              t={t}
+              i18nKey="retrocerts-what-to-expect.subheader"
+              values={{ name: userData.lastName }}
+            />
           </p>
 
           <h2>{t("retrocerts-what-to-expect.header1")}</h2>
@@ -37,9 +41,10 @@ function RetroCertsWhatToExpectPage(props) {
           <p>{t("retrocerts-what-to-expect.p2")}</p>
 
           <Button
-              variant="secondary"
-              as={Link}
-              to="/retroactive-certification/landing">
+            variant="secondary"
+            as={Link}
+            to="/retroactive-certification/landing"
+          >
             {t("retrocerts-what-to-expect.button-start-certification")}
           </Button>
         </div>

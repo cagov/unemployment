@@ -14,7 +14,7 @@ function RetroCertsLandingPage(props) {
   // Removes the users session token which logs the user out.
   function logout() {
     sessionStorage.removeItem(AUTH_STRINGS.authToken);
-    setUserData({status: AUTH_STRINGS.statusCode.notLoggedIn});
+    setUserData({ status: AUTH_STRINGS.statusCode.notLoggedIn });
     history.push("/retroactive-certification");
   }
 
@@ -25,7 +25,11 @@ function RetroCertsLandingPage(props) {
         <div className="container p-4">
           <h1>Hello</h1>
           <p>Weeks to certify: {userData.weeksToCertify.join(", ")}</p>
-          <p><Button variant="link" onClick={logout}>Clear Session</Button></p>
+          <p>
+            <Button variant="link" onClick={logout}>
+              Clear Session
+            </Button>
+          </p>
         </div>
       </main>
       <Footer />

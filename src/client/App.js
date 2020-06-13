@@ -11,7 +11,7 @@ import RetroCertsWhatToExpectPage from "./pages/RetroCertsWhatToExpectPage";
 import AUTH_STRINGS from "../data/authStrings";
 
 export default function App(props) {
-  const hostname = props.hostname || window.location.hostname
+  const hostname = props.hostname || window.location.hostname;
   const isProduction = hostname === "unemployment.edd.ca.gov";
 
   const [retroCertsUserData, setRetroCertsUserData] = useState({
@@ -27,19 +27,31 @@ export default function App(props) {
           path="/retroactive-certification/landing"
           isProduction={isProduction}
           pageComponent={RetroCertsLandingPage}
-          pageProps={{userData: retroCertsUserData, setUserData: setRetroCertsUserData}}
-          requiresAuthentication />
+          pageProps={{
+            userData: retroCertsUserData,
+            setUserData: setRetroCertsUserData,
+          }}
+          requiresAuthentication
+        />
         <RetroCertsRoute
           path="/retroactive-certification/what-to-expect"
           isProduction={isProduction}
           pageComponent={RetroCertsWhatToExpectPage}
-          pageProps={{userData: retroCertsUserData, setUserData: setRetroCertsUserData}}
-          requiresAuthentication />
+          pageProps={{
+            userData: retroCertsUserData,
+            setUserData: setRetroCertsUserData,
+          }}
+          requiresAuthentication
+        />
         <RetroCertsRoute
           path="/retroactive-certification"
           isProduction={isProduction}
           pageComponent={RetroCertsAuthPage}
-          pageProps={{userData: retroCertsUserData, setUserData: setRetroCertsUserData}} />
+          pageProps={{
+            userData: retroCertsUserData,
+            setUserData: setRetroCertsUserData,
+          }}
+        />
         <Route>
           <PageNotFound />
         </Route>

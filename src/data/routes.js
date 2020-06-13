@@ -8,8 +8,8 @@ const routes = {
   home: {
     path: "/",
     routeProps: {
-      exact: true
-    }
+      exact: true,
+    },
   },
   guide: {
     path: "/guide",
@@ -22,7 +22,7 @@ const routes = {
   },
   retroCerts: {
     path: "/retroactive-certification",
-  }
+  },
 };
 
 module.exports = routes;
