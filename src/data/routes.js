@@ -23,6 +23,9 @@ const routes = {
   retroCerts: {
     path: "/retroactive-certification",
   },
+  test: {
+    path: "test",
+  },
 };
 
 module.exports = routes;
