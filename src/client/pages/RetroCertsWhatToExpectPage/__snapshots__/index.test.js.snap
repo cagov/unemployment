@@ -13,16 +13,32 @@ exports[`<RetroCertsWhatToExpectPage /> has user data 1`] = `
       <h1>
         Retroactive Unemployment Certification
       </h1>
-      <p
-        className="green-highlight"
+      <Alert
+        closeLabel="Close alert"
+        show={true}
+        transition={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": Object {
+              "appear": false,
+              "in": false,
+              "mountOnEnter": false,
+              "timeout": 300,
+              "unmountOnExit": false,
+            },
+            "displayName": "Fade",
+            "render": [Function],
+          }
+        }
+        variant="success"
       >
-        <span
-          className="white-checkmark"
-        >
-          ✔
-        </span>
+        <img
+          alt="checkmark"
+          className="checkmark"
+          src="/images/check-circle-fill.svg"
+        />
         We found your information!
-      </p>
+      </Alert>
       <h2>
         What to expect
       </h2>

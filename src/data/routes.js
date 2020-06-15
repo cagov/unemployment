@@ -14,14 +14,17 @@ const routes = {
   guide: {
     path: "/guide",
   },
+  retroCerts: {
+    path: "/retroactive-certification",
+  },
   retroCertsWhatToExpect: {
     path: "/retroactive-certification/what-to-expect",
   },
   retroCertsLanding: {
     path: "/retroactive-certification/landing",
   },
-  retroCerts: {
-    path: "/retroactive-certification",
+  retroCertsConfirmation: {
+    path: "/retroactive-certification/confirmation",
   },
 };
 
