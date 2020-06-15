@@ -7,7 +7,7 @@ function createRouter() {
   const router = Router();
 
   if (fflip.features.retroCerts.enabled) {
-    router.use(createRetroCertsRouter())
+    router.use(createRetroCertsRouter());
   }
 
   /**

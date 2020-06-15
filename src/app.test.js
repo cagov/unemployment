@@ -6,12 +6,7 @@ describe("Router: Single page app", () => {
   it("HTTP gets returning the single page", async () => {
     fflip.features.retroCerts.enabled = false;
     const server = init();
-    const testPaths = [
-      "/guide",
-      "/guide/",
-      "/guide/benefits",
-      "/",
-    ];
+    const testPaths = ["/guide", "/guide/", "/guide/benefits", "/"];
 
     for (const testPath of testPaths) {
       const res = await request(server).get(testPath);
@@ -24,9 +19,7 @@ describe("Router: Single page app", () => {
   it("404 for pages that don't exist", async () => {
     fflip.features.retroCerts.enabled = false;
     const server = init();
-    const testPaths = [
-      "/does-not-exist",
-    ];
+    const testPaths = ["/does-not-exist"];
 
     for (const testPath of testPaths) {
       const res = await request(server).get(testPath);
