@@ -9,6 +9,7 @@ const AUTH_STRINGS = {
   apiPath: {
     login: retroCertsBasePath + "/api/login",
     data: retroCertsBasePath + "/api/data",
+    save: retroCertsBasePath + "/api/save",
   },
   statusCode: {
     ok: "ok",
