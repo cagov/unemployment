@@ -1,15 +1,12 @@
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import React from "react";
-import { userDataPropType } from "../../commonPropTypes";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
-import { useTranslation, Trans } from "react-i18next";
+import { useTranslation } from "react-i18next";
 
-function RetroCertsWhatToExpectPage(props) {
+function RetroCertsWhatToExpectPage() {
   const { t } = useTranslation();
-
-  const userData = props.userData;
 
   return (
     <div id="overflow-wrapper" className="what-to-expect">
@@ -19,11 +16,7 @@ function RetroCertsWhatToExpectPage(props) {
           <h1>{t("retrocerts-what-to-expect.title")}</h1>
           <p className="green-highlight">
             <span className="white-checkmark">✔</span>
-            <Trans
-              t={t}
-              i18nKey="retrocerts-what-to-expect.subheader"
-              values={{ name: userData.lastName }}
-            />
+            {t("retrocerts-what-to-expect.subheader")}
           </p>
 
           <h2>{t("retrocerts-what-to-expect.header1")}</h2>
@@ -53,9 +46,5 @@ function RetroCertsWhatToExpectPage(props) {
     </div>
   );
 }
-
-RetroCertsWhatToExpectPage.propTypes = {
-  userData: userDataPropType,
-};
 
 export default RetroCertsWhatToExpectPage;

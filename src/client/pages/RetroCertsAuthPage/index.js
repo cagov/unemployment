@@ -114,12 +114,24 @@ function RetroCertsAuthPage(props) {
               </Form.Group>
             </Row>
             <Row>
-              {userData &&
-                userData.status === AUTH_STRINGS.statusCode.userNotFound && (
-                  <Alert variant="danger">
-                    {t("retrocert-login.invalid-user-error")}
-                  </Alert>
-                )}
+              {(() => {
+                const status = userData && userData.status;
+                let transKey = "";
+                if (status === AUTH_STRINGS.statusCode.userNotFound) {
+                  transKey = "retrocert-login.invalid-user-error";
+                } else if (
+                  status === AUTH_STRINGS.statusCode.recaptchaInvalid
+                ) {
+                  transKey = "retrocert-login.invalid-recaptcha-error";
+                }
+                if (transKey) {
+                  return (
+                    <div className="col-md-6">
+                      <Alert variant="danger">{t(transKey)}</Alert>
+                    </div>
+                  );
+                }
+              })()}
             </Row>
             <Button variant="secondary" type="submit">
               {t("retrocert-login.submit")}

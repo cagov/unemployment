@@ -50,6 +50,7 @@
         "react-router-dom": "^5.1.2",
         "regenerator-runtime": "^0.13.5",
         "reselect": "^4.0.0",
+        "sha.js": "^2.4.11",
         "smoothscroll-polyfill": "^0.4.4",
         "uuid": "^8.1.0",
         "whatwg-fetch": "^3.0.0"
