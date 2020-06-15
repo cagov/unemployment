@@ -10,6 +10,7 @@ import AUTH_STRINGS from "../../../data/authStrings";
 import { userDataPropType, setUserDataPropType } from "../../commonPropTypes";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import SessionTimer from "../../components/SessionTimer";
 
 function RetroCertsAuthPage(props) {
   const { t } = useTranslation();
@@ -21,6 +22,30 @@ function RetroCertsAuthPage(props) {
   const [lastName, setLastName] = useState("");
   const [eddcan, setEddcan] = useState("");
   const [ssn, setSsn] = useState("");
+
+  const status = userData && userData.status;
+  const errorTransKey = new Map([
+    [
+      AUTH_STRINGS.statusCode.userNotFound,
+      "retrocert-login.invalid-user-error",
+    ],
+    [
+      AUTH_STRINGS.statusCode.recaptchaInvalid,
+      "retrocert-login.invalid-recaptcha-error",
+    ],
+    [
+      AUTH_STRINGS.statusCode.sessionTimedOut,
+      "retrocert-login.session-timed-out",
+    ],
+  ]).get(status);
+
+  const errorAlert = errorTransKey && (
+    <Row>
+      <div className="col-md-6">
+        <Alert variant="danger">{t(errorTransKey)}</Alert>
+      </div>
+    </Row>
+  );
 
   const recaptchaRef = React.createRef();
 
@@ -77,6 +102,8 @@ function RetroCertsAuthPage(props) {
           <h2 className="mt-4">{t("retrocert-login.subheader")}</h2>
           <p>{t("retrocert-login.help-text")}</p>
           <Form onSubmit={handleSubmit}>
+            {errorTransKey === "retrocert-login.session-timed-out" &&
+              errorAlert}
             <Row>
               <Form.Group controlId="formLastName" className="col-md-6">
                 <Form.Label>{t("retrocert-login.last-name-label")}</Form.Label>
@@ -118,32 +145,16 @@ function RetroCertsAuthPage(props) {
                 </Form.Text>
               </Form.Group>
             </Row>
-            <Row>
-              {(() => {
-                const status = userData && userData.status;
-                let transKey = "";
-                if (status === AUTH_STRINGS.statusCode.userNotFound) {
-                  transKey = "retrocert-login.invalid-user-error";
-                } else if (
-                  status === AUTH_STRINGS.statusCode.recaptchaInvalid
-                ) {
-                  transKey = "retrocert-login.invalid-recaptcha-error";
-                }
-                if (transKey) {
-                  return (
-                    <div className="col-md-6">
-                      <Alert variant="danger">{t(transKey)}</Alert>
-                    </div>
-                  );
-                }
-              })()}
-            </Row>
+            {(errorTransKey === "retrocert-login.invalid-user-error" ||
+              errorTransKey === "retrocert-login.invalid-recaptcha-error") &&
+              errorAlert}
             <Button variant="secondary" type="submit">
               {t("retrocert-login.submit")}
             </Button>
           </Form>
         </div>
       </main>
+      <SessionTimer action="clear" setUserData={setUserDataPropType} />
       <Footer />
     </div>
   );

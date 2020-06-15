@@ -4,6 +4,7 @@ import React from "react";
 import { userDataPropType, setUserDataPropType } from "../../commonPropTypes";
 import AUTH_STRINGS from "../../../data/authStrings";
 import PageNotFound from "../../pages/PageNotFound";
+import SessionTimer from "../../components/SessionTimer";
 
 function userIsAuthenticated(userData) {
   return !!userData.weeksToCertify;
@@ -21,11 +22,18 @@ function RetroCertsRoute(props) {
   let routeChild = <div>Loading...</div>;
   if (isProduction) {
     routeChild = <PageNotFound />;
-  } else if (
-    !requiresAuthentication ||
-    userIsAuthenticated(pageProps.userData)
-  ) {
+  } else if (!requiresAuthentication) {
     routeChild = <Component {...pageProps} />;
+  } else if (userIsAuthenticated(pageProps.userData)) {
+    routeChild = (
+      <React.Fragment>
+        <Component {...pageProps} />
+        <SessionTimer
+          action="startOrUpdate"
+          setUserData={pageProps.setUserData}
+        />
+      </React.Fragment>
+    );
   } else {
     // This page requires authentication and the user is not authenticated.
     // Try using the auth token if they have one.
