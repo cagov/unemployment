@@ -1,23 +1,16 @@
 import Button from "react-bootstrap/Button";
-import { useHistory } from "react-router-dom";
+import Row from "react-bootstrap/Row";
 import React from "react";
-import AUTH_STRINGS from "../../../data/authStrings";
-import { userDataPropType, setUserDataPropType } from "../../commonPropTypes";
+import { userDataPropType } from "../../commonPropTypes";
+import { useTranslation } from "react-i18next";
+import { fromIndexToPathString } from "../../../utils/retroCertsWeeks";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import YesNoQuestion from "../../components/YesNoQuestion";
 
 function RetroCertsLandingPage(props) {
   const userData = props.userData;
-  const setUserData = props.setUserData;
-  const history = useHistory();
-
-  // Removes the users session token which logs the user out.
-  function logout() {
-    sessionStorage.removeItem(AUTH_STRINGS.authToken);
-    setUserData({ status: AUTH_STRINGS.statusCode.notLoggedIn });
-    history.push("/retroactive-certification");
-  }
+  const { t } = useTranslation();
 
   return (
     <div id="overflow-wrapper">
@@ -26,11 +19,29 @@ function RetroCertsLandingPage(props) {
         <div className="container p-4">
           <h1>Hello</h1>
           <p>Weeks to certify: {userData.weeksToCertify.join(", ")}</p>
-          <p>
-            <Button variant="link" onClick={logout}>
-              Clear Session
-            </Button>
-          </p>
+          <Row>
+            <div className="col-md-4">
+              <Button
+                variant="outline-secondary"
+                className="text-dark bg-light"
+                href="/retroactive-certification/what-to-expect"
+              >
+                {t("retrocerts-weeks.button-back")}
+              </Button>
+            </div>
+            <div className="col-md-4">
+              <Button
+                variant="secondary"
+                href={
+                  "/retroactive-certification/certify/" +
+                  fromIndexToPathString(userData.weeksToCertify[0])
+                }
+              >
+                {t("retrocerts-weeks.button-certify-week-1")}
+              </Button>
+            </div>
+          </Row>
+
           {[1, 2, 3].map((index) => (
             <YesNoQuestion
               key={index}
@@ -49,7 +60,6 @@ function RetroCertsLandingPage(props) {
 
 RetroCertsLandingPage.propTypes = {
   userData: userDataPropType,
-  setUserData: setUserDataPropType,
 };
 
 export default RetroCertsLandingPage;

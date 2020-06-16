@@ -33,7 +33,37 @@ const END_DATE = [
 ];
 
 const toWeekString = (index) => {
-  return `${START_DATE[index]} - ${END_DATE[index]}`;
+  return START_DATE[index] + " - " + END_DATE[index];
 };
 
-module.exports = { toWeekString };
+/**
+ * Converts the date from YYYY-MM-DD to an index (0-13).
+ * The date should be the Saturday of the week.
+ * @param {string} dateString Format YYYY-MM-DD.
+ * @returns {number} From 0-13 or -1 if it's not a valid date.
+ */
+const fromPathStringToIndex = (dateString) => {
+  const matches = dateString.match(/20(\d\d)-(\d\d)-(\d\d)/);
+  if (!matches || matches.length !== 4) {
+    return -1;
+  }
+  const [shortYear, month, day] = matches.slice(1);
+  const endDateString = month + "/" + day + "/" + shortYear;
+  return END_DATE.indexOf(endDateString);
+};
+
+/**
+ * Converts the index to the date string used in paths (YYYY-MM-DD).
+ * @param {number} index A value from 0-13.
+ * @returns {string}
+ */
+const fromIndexToPathString = (index) => {
+  const dateString = END_DATE[index];
+  if (!dateString) {
+    return "";
+  }
+  const [month, day, shortYear] = dateString.split("/");
+  return "20" + shortYear + "-" + month + "-" + day;
+};
+
+module.exports = { toWeekString, fromPathStringToIndex, fromIndexToPathString };
