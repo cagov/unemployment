@@ -1,5 +1,5 @@
 const COSMOS_CONFIG = {
-  endpoint: "https://cdbbnscnd001.documents.azure.com:443/",
+  endpoint: getRetrocertEndpoint(),
   key: getRetrocertDbKey(),
   databaseName: "retrocert",
   formsContainerName: "forms",
@@ -8,7 +8,7 @@ const COSMOS_CONFIG = {
 };
 
 function getRetrocertDbKey() {
-  // todo(kalvin): retrieve this key from azure instead of a local uncommitted file
+  // todo(kalvin): retrieve this key from azure instead of uncommitted .env
   const key = process.env.COSMOS_DB_KEY;
 
   if (!key) {
@@ -16,6 +16,16 @@ function getRetrocertDbKey() {
   }
 
   return key;
+}
+
+function getRetrocertEndpoint() {
+  const endpoint = process.env.COSMOS_ENDPOINT;
+
+  if (!endpoint) {
+    console.error("CosmosDB endpoint URL is missing");
+  }
+
+  return endpoint;
 }
 
 module.exports = COSMOS_CONFIG;

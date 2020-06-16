@@ -45,12 +45,17 @@ function RetroCertsAuthPage(props) {
         recaptchaRef.current.reset();
         setUserData(data);
         if (data.authToken) {
-          // Session storage is destroyed when the tab is closed! That"s a bit weird.
+          // Session storage is destroyed when the tab is closed! That's a bit weird.
           // If we want to allow the user to use multiple tabs, we could sync the
           // value across tabs:
           // https://medium.com/@marciomariani/sharing-sessionstorage-between-tabs-5b6f42c6348c
           sessionStorage.setItem(AUTH_STRINGS.authToken, data.authToken);
-          history.push("/retroactive-certification/what-to-expect");
+          if (data.confirmationNumber) {
+            // The user has already completed the retro-certs process.
+            history.push("/retroactive-certification/confirmation");
+          } else {
+            history.push("/retroactive-certification/what-to-expect");
+          }
         } else {
           sessionStorage.removeItem(AUTH_STRINGS.authToken);
         }
@@ -114,12 +119,24 @@ function RetroCertsAuthPage(props) {
               </Form.Group>
             </Row>
             <Row>
-              {userData &&
-                userData.status === AUTH_STRINGS.statusCode.userNotFound && (
-                  <Alert variant="danger">
-                    {t("retrocert-login.invalid-user-error")}
-                  </Alert>
-                )}
+              {(() => {
+                const status = userData && userData.status;
+                let transKey = "";
+                if (status === AUTH_STRINGS.statusCode.userNotFound) {
+                  transKey = "retrocert-login.invalid-user-error";
+                } else if (
+                  status === AUTH_STRINGS.statusCode.recaptchaInvalid
+                ) {
+                  transKey = "retrocert-login.invalid-recaptcha-error";
+                }
+                if (transKey) {
+                  return (
+                    <div className="col-md-6">
+                      <Alert variant="danger">{t(transKey)}</Alert>
+                    </div>
+                  );
+                }
+              })()}
             </Row>
             <Button variant="secondary" type="submit">
               {t("retrocert-login.submit")}

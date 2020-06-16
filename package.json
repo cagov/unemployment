@@ -14,6 +14,7 @@
         "lint:js": "eslint --ext .js",
         "lint:js:all": "npm run lint:js -- ./",
         "lint": "npm-run-all lint:js:all lint:css:all",
+        "prettier": "prettier --write src",
         "start": "npm-run-all -p start:dev watch:css watch:js",
         "prestart": "npm run clean-build-dir",
         "start:dev": "PORT=3000 NODE_ENV=development nodemon --inspect=0.0.0.0:9222 src --config nodemon.config.json",
@@ -49,6 +50,7 @@
         "react-router-dom": "^5.1.2",
         "regenerator-runtime": "^0.13.5",
         "reselect": "^4.0.0",
+        "sha.js": "^2.4.11",
         "smoothscroll-polyfill": "^0.4.4",
         "uuid": "^8.1.0",
         "whatwg-fetch": "^3.0.0"

@@ -1,5 +1,7 @@
 const COSMOS_CONFIG = require("./cosmosConfig");
 const CosmosClient = require("@azure/cosmos").CosmosClient;
+const { v4: uuidv4 } = require("uuid");
+const shajs = require("sha.js");
 
 const {
   endpoint,
@@ -45,8 +47,8 @@ async function insertItem(item, containerName) {
   const container = await getContainer(containerName);
 
   try {
-    const { resource: createdItem } = await container.items.create(item);
-    return createdItem;
+    const { resource: upsertedItem } = await container.items.upsert(item);
+    return upsertedItem;
   } catch (error) {
     if (error.code === 409) {
       console.error("An item with this id already exists");
@@ -71,26 +73,64 @@ async function createRetroCertDatabaseIfNeeded() {
   }
 }
 
-// This is a working example of a parametrized query
-// Returns an array of all matching items
-async function getUsersByEddcanId(eddcanId) {
+async function getUserById(id) {
   const container = await getContainer(usersContainerName);
 
   const { resources } = await container.items
     .query({
-      query: `SELECT * from ${usersContainerName} as u WHERE u.eddcanId = @eddcanId`,
-      parameters: [{ name: "@eddcanId", value: eddcanId }],
+      query: `SELECT * from ${usersContainerName} as u WHERE u.id = @id`,
+      parameters: [{ name: "@id", value: id }],
     })
     .fetchAll();
-  return resources;
+  return resources.length === 1 ? resources[0] : null;
 }
 
-function insertForm(item) {
-  return insertItem(item, formsContainerName);
+async function getUserByNameEddcanSsn(lastName, eddcan, ssn) {
+  const hashKey = lastName.toLowerCase() + eddcan + ssn;
+  const id = shajs("sha256").update(hashKey).digest("hex");
+  return await getUserById(id);
+}
+
+async function getFormDataByAuthToken(authToken) {
+  const container = await getContainer(formsContainerName);
+
+  const { resources } = await container.items
+    .query({
+      query: `SELECT * from ${formsContainerName} as f WHERE f.authToken = @authToken`,
+      parameters: [{ name: "@authToken", value: authToken }],
+    })
+    .fetchAll();
+  return resources.length === 1 ? resources[0] : null;
+}
+
+async function getFormDataByUserId(userId) {
+  const container = await getContainer(formsContainerName);
+
+  const { resources } = await container.items
+    .query({
+      query: `SELECT * from ${formsContainerName} as f WHERE f.id = @userId`,
+      parameters: [{ name: "@userId", value: userId }],
+    })
+    .fetchAll();
+  return resources.length === 1 ? resources[0] : null;
+}
+
+async function getFormDataByUserIdWithNewAuthToken(userId) {
+  const item = (await getFormDataByUserId(userId)) || {};
+  item.id = userId;
+  item.authToken = uuidv4();
+  await insertForm(item);
+  return item;
+}
+
+async function insertForm(item) {
+  await insertItem(item, formsContainerName);
 }
 
 module.exports = {
   createRetroCertDatabaseIfNeeded,
-  insertForm,
-  getUsersByEddcanId,
+  getFormDataByAuthToken,
+  getUserByNameEddcanSsn,
+  getUserById,
+  getFormDataByUserIdWithNewAuthToken,
 };

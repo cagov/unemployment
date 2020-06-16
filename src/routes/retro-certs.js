@@ -1,7 +1,7 @@
 const { Router } = require("express");
-const testAccounts = require("../data/test-accounts.json");
 const AUTH_STRINGS = require("../data/authStrings");
 const ReCaptcha = require("../services/reCaptcha");
+const cosmos = require("../data/cosmos");
 
 function createRouter() {
   const router = Router();
@@ -10,58 +10,73 @@ function createRouter() {
     responseJson.status = AUTH_STRINGS.statusCode.userNotFound;
 
     const reCaptcha = new ReCaptcha(postJson.reCaptcha);
-    const reCaptchaResponse = await reCaptcha.validateUser();
+
+    const [reCaptchaResponse, userRecord] = await Promise.all([
+      reCaptcha.validateUser(),
+      cosmos.getUserByNameEddcanSsn(
+        postJson.lastName || "",
+        postJson.eddcan,
+        postJson.ssn
+      ),
+    ]);
 
     if (!reCaptchaResponse) {
+      responseJson.status = AUTH_STRINGS.statusCode.recaptchaInvalid;
       return responseJson;
     }
 
-    for (const testAccount of testAccounts) {
-      if (
-        (postJson.lastName || "").toLowerCase() ===
-          testAccount.lastName.toLowerCase() &&
-        postJson.ssn === testAccount.ssn &&
-        postJson.eddcan === testAccount.eddcan
-      ) {
-        responseJson.status = AUTH_STRINGS.statusCode.ok;
-        responseJson.authToken = testAccount.authToken;
-        responseJson.lastName = testAccount.lastName;
-        responseJson.weeksToCertify = Array.from(testAccount.weeksToCertify);
-        break;
-      }
+    if (userRecord) {
+      const formRecord = await cosmos.getFormDataByUserIdWithNewAuthToken(
+        userRecord.id
+      );
+      responseJson.status = AUTH_STRINGS.statusCode.ok;
+      responseJson.authToken = formRecord.authToken;
+      responseJson.weeksToCertify = Array.from(userRecord.weeksToCertify);
+      responseJson.confirmationNumber = formRecord.confirmationNumber;
     }
     return responseJson;
   }
 
-  function authWithToken(postJson, responseJson) {
+  async function authWithToken(postJson, responseJson) {
     responseJson.status = AUTH_STRINGS.statusCode.userNotFound;
     if (postJson.authToken) {
-      for (const testAccount of testAccounts) {
-        if (postJson.authToken === testAccount.authToken) {
-          responseJson.status = AUTH_STRINGS.statusCode.ok;
-          responseJson.lastName = testAccount.lastName;
-          responseJson.weeksToCertify = Array.from(testAccount.weeksToCertify);
-          break;
-        }
+      const formRecord = await cosmos.getFormDataByAuthToken(
+        postJson.authToken
+      );
+      if (formRecord) {
+        const userRecord = await cosmos.getUserById(formRecord.id);
+        responseJson.status = AUTH_STRINGS.statusCode.ok;
+        responseJson.weeksToCertify = Array.from(userRecord.weeksToCertify);
+        responseJson.confirmationNumber = formRecord.confirmationNumber;
       }
     }
     return responseJson;
   }
 
   router.post(AUTH_STRINGS.apiPath.login, async (req, res) => {
-    const responseJson = await authStatus(req.body, {});
-    const httpStatus =
-      responseJson.status === AUTH_STRINGS.statusCode.ok ? 200 : 401;
+    try {
+      const responseJson = await authStatus(req.body, {});
+      const httpStatus =
+        responseJson.status === AUTH_STRINGS.statusCode.ok ? 200 : 401;
 
-    res.status(httpStatus).type("json").send(JSON.stringify(responseJson));
+      res.status(httpStatus).type("json").send(JSON.stringify(responseJson));
+    } catch (e) {
+      console.error("Error during /api/login", e);
+      res.status(500).send();
+    }
   });
 
-  router.post(AUTH_STRINGS.apiPath.data, (req, res) => {
-    const responseJson = authWithToken(req.body, {});
-    const httpStatus =
-      responseJson.status === AUTH_STRINGS.statusCode.ok ? 200 : 401;
+  router.post(AUTH_STRINGS.apiPath.data, async (req, res) => {
+    try {
+      const responseJson = await authWithToken(req.body, {});
+      const httpStatus =
+        responseJson.status === AUTH_STRINGS.statusCode.ok ? 200 : 401;
 
-    res.status(httpStatus).type("json").send(JSON.stringify(responseJson));
+      res.status(httpStatus).type("json").send(JSON.stringify(responseJson));
+    } catch (e) {
+      console.error("Error during /api/data", e);
+      res.status(500).send();
+    }
   });
 
   return router;

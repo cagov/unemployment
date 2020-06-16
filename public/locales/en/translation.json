@@ -22,7 +22,8 @@
     "linkedIn": "LinkedIn icon",
     "instagram": "Instagram icon",
     "youtube": "YouTube icon",
-    "caGov": "California gov logo"
+    "caGov": "California gov logo",
+    "checkmark": "checkmark"
   },
   "header": {
     "home": "Home",
@@ -191,11 +192,12 @@
     "submit": "Find me",
     "eddcan-error": "Please check your EDDCAN.",
     "ssn-error": "Please check your SSN.",
-    "invalid-user-error": "We couldn't find you in the system."
+    "invalid-user-error": "We couldn't find you in the system.",
+    "invalid-recaptcha-error": "Human verification expired. Please check the checkbox again."
   },
   "retrocerts-what-to-expect": {
     "title": "Retroactive Unemployment Certification",
-    "subheader": "We found your information, <strong>{{name}}</strong>!",
+    "subheader": "We found your information!",
     "header1": "What to expect",
     "p1a": "We'll ask you about your unemployment status, including the following:",
     "list-item1": "Were you too sick or injured to work?",
@@ -208,5 +210,14 @@
     "header2": "What if I already submitted my overpayments through AskEDD?",
     "p2": "Please submit your eligibility information again.",
     "button-start-certification": "Start certification"
+  },
+  "retrocerts-confirmation": {
+    "title": "Retroactive Unemployment Certification",
+    "subheader": "We have received your certification. Thank you.",
+    "header1": "Save this certification confirmation number",
+    "p1": "You EDD certification confirmation number is <strong>{{confirmationNumber}}</strong>. You may print this page in case you need it later.",
+    "header2": "Weeks certified",
+    "list-item": "Week {{number}}: {{formattedDateRange}}",
+    "button-print": "Print this page"
   }
 }

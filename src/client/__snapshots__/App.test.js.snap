@@ -53,6 +53,20 @@ exports[`<App /> renders application with retro-certs 1`] = `
           },
         }
       }
+      path="/retroactive-certification/confirmation"
+      requiresAuthentication={true}
+    />
+    <RetroCertsRoute
+      isProduction={false}
+      pageComponent={[Function]}
+      pageProps={
+        Object {
+          "setUserData": [Function],
+          "userData": Object {
+            "status": "not-logged-in",
+          },
+        }
+      }
       path="/retroactive-certification"
     />
     <Route>
@@ -102,6 +116,20 @@ exports[`<App /> renders application without retro-certs 1`] = `
         }
       }
       path="/retroactive-certification/what-to-expect"
+      requiresAuthentication={true}
+    />
+    <RetroCertsRoute
+      isProduction={true}
+      pageComponent={[Function]}
+      pageProps={
+        Object {
+          "setUserData": [Function],
+          "userData": Object {
+            "status": "not-logged-in",
+          },
+        }
+      }
+      path="/retroactive-certification/confirmation"
       requiresAuthentication={true}
     />
     <RetroCertsRoute

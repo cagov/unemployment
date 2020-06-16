@@ -14,6 +14,7 @@ const AUTH_STRINGS = {
     ok: "ok",
     notLoggedIn: "not-logged-in",
     userNotFound: "user-not-found",
+    recaptchaInvalid: "recaptcha-invalid",
   },
 };
 

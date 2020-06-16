@@ -27,3 +27,16 @@ npm run test
 ```bash
 npm run test:update-snapshots
 ```
+
+## Style
+eslint checks the JS code style and stylelint checks the CSS style.
+
+```bash
+npm run lint
+```
+
+Additionally, we use [prettier](https://prettier.io/) to format JS and CSS files. You can either [configure it with your editor](https://prettier.io/docs/en/editors.html) or run
+
+```
+npm run prettier
+```
