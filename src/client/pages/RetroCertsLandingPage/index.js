@@ -31,16 +31,15 @@ function RetroCertsLandingPage(props) {
               Clear Session
             </Button>
           </p>
-          <ol>
-            {[1, 2, 3].map((index) => (
-              <YesNoQuestion
-                key={index}
-                questionText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque."
-                helpText="Aliquam fermentum, tortor in pulvinar."
-                inputName={`YesNo${index}`}
-              />
-            ))}
-          </ol>
+          {[1, 2, 3].map((index) => (
+            <YesNoQuestion
+              key={index}
+              questionNumber={index}
+              questionText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque."
+              helpText="Aliquam fermentum, tortor in pulvinar."
+              inputName={`YesNo${index}`}
+            />
+          ))}
         </div>
       </main>
       <Footer />

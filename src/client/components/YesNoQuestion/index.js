@@ -3,7 +3,14 @@ import PropTypes from "prop-types";
 import { Form } from "react-bootstrap";
 
 function YesNoQuestion(props) {
-  const { questionText, helpText, inputName, onChange, ifYes } = props;
+  const {
+    questionNumber,
+    questionText,
+    helpText,
+    inputName,
+    onChange,
+    ifYes,
+  } = props;
   const [isYes, setIsYes] = useState(ifYes);
 
   function onSelectionChanged(e) {
@@ -24,9 +31,9 @@ function YesNoQuestion(props) {
   }
 
   return (
-    <li className="bg-light p-2 m-2">
-      {questionText}
-      <p>{helpText}</p>
+    <div className="bg-light p-2 m-2">
+      {questionNumber}.&nbsp;{questionText}
+      <p className="ml-3">{helpText}</p>
       <Form>
         <Form.Group>
           {["Yes", "No"].map((value) => (
@@ -55,11 +62,12 @@ function YesNoQuestion(props) {
           tristique ipsum. Ut nec iaculis ipsum, at bibendum sem.
         </p>
       </div>
-    </li>
+    </div>
   );
 }
 
 YesNoQuestion.propTypes = {
+  questionNumber: PropTypes.number.isRequired,
   questionText: PropTypes.string.isRequired,
   helpText: PropTypes.string.isRequired,
   inputName: PropTypes.string.isRequired,
