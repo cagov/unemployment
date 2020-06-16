@@ -10,7 +10,9 @@ function YesNoQuestion(props) {
     const value = e.target.value;
     const isYes = value === "Yes";
     setIsYes(isYes);
-    onChange({ value: isYes, name: inputName });
+    if (onChange) {
+      onChange({ value: isYes, name: inputName });
+    }
   }
 
   function isChecked(value) {
