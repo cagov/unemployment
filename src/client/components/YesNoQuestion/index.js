@@ -22,7 +22,7 @@ function YesNoQuestion(props) {
   }
 
   return (
-    <li className="bg-light">
+    <li className="bg-light p-2 m-2">
       {questionText}
       <p>{helpText}</p>
       <Form>
@@ -43,13 +43,15 @@ function YesNoQuestion(props) {
         </Form.Group>
       </Form>
       <div hidden={isYes === null || !isYes}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-        cursus neque risus, id efficitur felis tincidunt in. Mauris pretium
-        tortor orci, ac pharetra ipsum vulputate quis. Maecenas sit amet libero
-        ut elit ornare imperdiet sit amet ac velit. Nunc sit amet lacinia velit,
-        a tincidunt nibh. Ut porttitor finibus dolor, non porta dolor ornare
-        sed. Aenean nunc dolor, congue quis sodales eu, viverra tristique ipsum.
-        Ut nec iaculis ipsum, at bibendum sem.
+        <p className="text-muted">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+          cursus neque risus, id efficitur felis tincidunt in. Mauris pretium
+          tortor orci, ac pharetra ipsum vulputate quis. Maecenas sit amet
+          libero ut elit ornare imperdiet sit amet ac velit. Nunc sit amet
+          lacinia velit, a tincidunt nibh. Ut porttitor finibus dolor, non porta
+          dolor ornare sed. Aenean nunc dolor, congue quis sodales eu, viverra
+          tristique ipsum. Ut nec iaculis ipsum, at bibendum sem.
+        </p>
       </div>
     </li>
   );

@@ -32,7 +32,7 @@ function RetroCertsLandingPage(props) {
             </Button>
           </p>
           <ol>
-            {[...3].map((index) => (
+            {[1, 2, 3].map((index) => (
               <YesNoQuestion
                 key={index}
                 questionText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque."
