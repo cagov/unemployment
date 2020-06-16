@@ -87,7 +87,7 @@ function RetroCertsCertificationPage(props) {
               <div className="col-md-4">
                 {weekForUser === numberOfWeeks && (
                   <Button variant="secondary" onClick={handleSubmit}>
-                    t("retrocerts-certification.button-submit")
+                    {t("retrocerts-certification.button-submit")}
                   </Button>
                 )}
                 {weekForUser !== numberOfWeeks && (

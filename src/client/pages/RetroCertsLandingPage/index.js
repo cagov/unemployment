@@ -10,7 +10,6 @@ import YesNoQuestion from "../../components/YesNoQuestion";
 
 function RetroCertsLandingPage(props) {
   const userData = props.userData;
-
   const { t } = useTranslation();
 
   return (
