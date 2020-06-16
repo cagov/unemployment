@@ -1,17 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
+import { Form } from "react-bootstrap";
 
 function YesNoQuestion(props) {
-  const { questionText, helpText, inputName } = props;
+  const { questionText, helpText, inputName, onChange, ifYes } = props;
+  const [isYes, setIsYes] = useState(ifYes);
+
+  function onSelectionChanged(e) {
+    const value = e.target.value;
+    const isYes = value === "Yes";
+    setIsYes(isYes);
+    onChange({ value: isYes, name: inputName });
+  }
+
+  function isChecked(value) {
+    if (value === "Yes") {
+      return isYes === true;
+    } else {
+      return isYes === false;
+    }
+  }
+
   return (
-    <li className="yesNoComponent">
+    <li className="bg-light">
       {questionText}
-      <p className="helpText">{helpText}</p>
-      <form>
-        <input name={inputName} type="radio" value="Yes" />
-        <input name={inputName} type="radio" value="No" />
-      </form>
-      <div className="subQuestion">
+      <p>{helpText}</p>
+      <Form>
+        <Form.Group>
+          {["Yes", "No"].map((value) => (
+            <Form.Check
+              key={value}
+              inline
+              label={value}
+              type="radio"
+              id={`radio${value}`}
+              onChange={onSelectionChanged}
+              name={inputName}
+              value={value}
+              checked={isChecked(value)}
+            />
+          ))}
+        </Form.Group>
+      </Form>
+      <div hidden={isYes === null || !isYes}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
         cursus neque risus, id efficitur felis tincidunt in. Mauris pretium
         tortor orci, ac pharetra ipsum vulputate quis. Maecenas sit amet libero
@@ -28,6 +59,8 @@ YesNoQuestion.propTypes = {
   questionText: PropTypes.string.isRequired,
   helpText: PropTypes.string.isRequired,
   inputName: PropTypes.string.isRequired,
+  onChange: PropTypes.func,
+  ifYes: PropTypes.bool,
 };
 
 export default YesNoQuestion;

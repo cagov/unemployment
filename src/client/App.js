@@ -8,7 +8,6 @@ import RedirectToGuide from "./pages/RedirectToGuide";
 import RetroCertsAuthPage from "./pages/RetroCertsAuthPage";
 import RetroCertsLandingPage from "./pages/RetroCertsLandingPage";
 import RetroCertsWhatToExpectPage from "./pages/RetroCertsWhatToExpectPage";
-import Test from "./pages/Test";
 import AUTH_STRINGS from "../data/authStrings";
 
 export default function App(props) {
@@ -24,7 +23,6 @@ export default function App(props) {
       <Switch>
         <Route path="/" exact component={RedirectToGuide} />
         <Route path="/guide" component={GuidePage} />
-        <Route path="/test" exact component={Test} />
         <RetroCertsRoute
           path="/retroactive-certification/landing"
           isProduction={isProduction}
