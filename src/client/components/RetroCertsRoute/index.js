@@ -3,6 +3,7 @@ import { Route, Redirect } from "react-router-dom";
 import React from "react";
 import { userDataPropType, setUserDataPropType } from "../../commonPropTypes";
 import AUTH_STRINGS from "../../../data/authStrings";
+import routes from "../../../data/routes";
 import PageNotFound from "../../pages/PageNotFound";
 import SessionTimer from "../../components/SessionTimer";
 
@@ -64,7 +65,7 @@ function RetroCertsRoute(props) {
     const authToken = sessionStorage.getItem(AUTH_STRINGS.authToken);
     if (!authToken) {
       // The user came here directly, send them back to the login page.
-      routeChild = <Redirect to="/retroactive-certification" push />;
+      routeChild = <Redirect to={routes.retroCertsAuth} push />;
     } else {
       // Try to refresh the data with the auth token.
       fetch(AUTH_STRINGS.apiPath.data, {

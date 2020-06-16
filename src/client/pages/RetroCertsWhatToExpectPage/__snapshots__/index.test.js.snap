@@ -91,7 +91,7 @@ exports[`<RetroCertsWhatToExpectPage /> has user data 1`] = `
           }
         }
         disabled={false}
-        to="/retroactive-certification/landing"
+        to="/retroactive-certification/weeks-to-certify"
         type="button"
         variant="secondary"
       >
