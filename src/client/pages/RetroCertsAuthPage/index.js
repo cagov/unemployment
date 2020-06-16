@@ -22,6 +22,7 @@ function RetroCertsAuthPage(props) {
   const [lastName, setLastName] = useState("");
   const [eddcan, setEddcan] = useState("");
   const [ssn, setSsn] = useState("");
+  const [validated, setValidated] = useState(false);
 
   const status = userData && userData.status;
   const errorTransKey = new Map([
@@ -47,12 +48,31 @@ function RetroCertsAuthPage(props) {
     </Row>
   );
 
+  function hasMissingFields() {
+    return validated && (!lastName || !eddcan || !ssn);
+  }
+
+  const missingFieldsAlert = (
+    <Row>
+      <div className="col-md-6">
+        <Alert variant="danger">
+          {t("retrocert-login.missing-fields-error")}
+        </Alert>
+      </div>
+    </Row>
+  );
+
   const recaptchaRef = React.createRef();
 
   const handleSubmit = (event) => {
+    const form = event.currentTarget;
+    form.checkValidity();
+
     event.preventDefault();
     event.stopPropagation();
-    // TODO: Form validation.
+
+    setValidated(true);
+
     fetch(AUTH_STRINGS.apiPath.login, {
       method: "POST",
       headers: {
@@ -101,7 +121,7 @@ function RetroCertsAuthPage(props) {
           <h1>{t("retrocert-login.title")}</h1>
           <h2 className="mt-4">{t("retrocert-login.subheader")}</h2>
           <p>{t("retrocert-login.help-text")}</p>
-          <Form onSubmit={handleSubmit}>
+          <Form noValidate validated={validated} onSubmit={handleSubmit}>
             {errorTransKey === "retrocert-login.session-timed-out" &&
               errorAlert}
             <Row>
@@ -111,7 +131,11 @@ function RetroCertsAuthPage(props) {
                   type="text"
                   value={lastName}
                   onChange={(e) => handleChange(e, setLastName)}
+                  required
                 />
+                <Form.Control.Feedback type="invalid">
+                  {t("retrocert-login.last-name-required-error")}
+                </Form.Control.Feedback>
               </Form.Group>
             </Row>
             <Row>
@@ -121,7 +145,11 @@ function RetroCertsAuthPage(props) {
                   type="text"
                   value={eddcan}
                   onChange={(e) => handleChange(e, setEddcan)}
+                  required
                 />
+                <Form.Control.Feedback type="invalid">
+                  {t("retrocert-login.eddcan-required-error")}
+                </Form.Control.Feedback>
               </Form.Group>
             </Row>
             <Row>
@@ -131,7 +159,11 @@ function RetroCertsAuthPage(props) {
                   type="password"
                   value={ssn}
                   onChange={(e) => handleChange(e, setSsn)}
+                  required
                 />
+                <Form.Control.Feedback type="invalid">
+                  {t("retrocert-login.ssn-required-error")}
+                </Form.Control.Feedback>
               </Form.Group>
             </Row>
             <Row>
@@ -148,6 +180,7 @@ function RetroCertsAuthPage(props) {
             {(errorTransKey === "retrocert-login.invalid-user-error" ||
               errorTransKey === "retrocert-login.invalid-recaptcha-error") &&
               errorAlert}
+            {hasMissingFields() === true && missingFieldsAlert}
             <Button variant="secondary" type="submit">
               {t("retrocert-login.submit")}
             </Button>

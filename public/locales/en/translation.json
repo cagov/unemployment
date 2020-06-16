@@ -194,7 +194,11 @@
     "ssn-error": "Please check your SSN.",
     "invalid-user-error": "We couldn't find you in the system.",
     "invalid-recaptcha-error": "Human verification expired. Please check the checkbox again.",
-    "session-timed-out": "Logged out after being idle for 30 minutes."
+    "session-timed-out": "Logged out after being idle for 30 minutes.",
+    "last-name-required-error": "Please provide your Last name.",
+    "eddcan-required-error": "Please provide your EDDCAN number.",
+    "ssn-required-error": "Please provide your SSN.",
+    "missing-fields-error":"It looks like you missed some information. Please fill out all fields and try again."
   },
   "retrocerts-what-to-expect": {
     "title": "Retroactive Unemployment Certification",
