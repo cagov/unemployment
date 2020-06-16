@@ -1,6 +1,126 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<RetroCertsAuthPage /> renders the retro certs main page 1`] = `
+exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
+<div
+  id="overflow-wrapper"
+>
+  <Header />
+  <main>
+    <div
+      className="container p-4"
+    >
+      <h1>
+        Retroactive Unemployment Certification
+      </h1>
+      <h2
+        className="mt-4"
+      >
+        Help us find you
+      </h2>
+      <p>
+        We need to make sure your identity matches EDD records so that we show you accurate records.
+      </p>
+      <Form
+        inline={false}
+        onSubmit={[Function]}
+      >
+        <Row
+          noGutters={false}
+        >
+          <FormGroup
+            className="col-md-6"
+            controlId="formLastName"
+          >
+            <FormLabel
+              column={false}
+              srOnly={false}
+            >
+              Last name
+            </FormLabel>
+            <FormControl
+              onChange={[Function]}
+              type="text"
+              value=""
+            />
+          </FormGroup>
+        </Row>
+        <Row
+          noGutters={false}
+        >
+          <FormGroup
+            className="col-md-6"
+            controlId="formEddcan"
+          >
+            <FormLabel
+              column={false}
+              srOnly={false}
+            >
+              EDDCAN
+            </FormLabel>
+            <FormControl
+              onChange={[Function]}
+              type="text"
+              value=""
+            />
+          </FormGroup>
+        </Row>
+        <Row
+          noGutters={false}
+        >
+          <FormGroup
+            className="col-md-6"
+            controlId="formSsn"
+          >
+            <FormLabel
+              column={false}
+              srOnly={false}
+            >
+              Social Security Number
+            </FormLabel>
+            <FormControl
+              onChange={[Function]}
+              type="password"
+              value=""
+            />
+          </FormGroup>
+        </Row>
+        <Row
+          noGutters={false}
+        >
+          <FormGroup
+            className="col-md-6"
+            controlId="formReCaptcha"
+          >
+            <AsyncScriptLoader(ReCAPTCHA)
+              sitekey="6Lf-DQEVAAAAABCMwJ-Gnbqec08RuiPhMZPtZPm9"
+            />
+            <FormText
+              className="text-muted"
+            >
+              Security check provided by reCAPTCHA.
+            </FormText>
+          </FormGroup>
+        </Row>
+        <Button
+          active={false}
+          disabled={false}
+          type="submit"
+          variant="secondary"
+        >
+          Find me
+        </Button>
+      </Form>
+    </div>
+  </main>
+  <SessionTimer
+    action="clear"
+    setUserData={[Function]}
+  />
+  <Footer />
+</div>
+`;
+
+exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error 1`] = `
 <div
   id="overflow-wrapper"
 >
@@ -103,7 +223,33 @@ exports[`<RetroCertsAuthPage /> renders the retro certs main page 1`] = `
         </Row>
         <Row
           noGutters={false}
-        />
+        >
+          <div
+            className="col-md-6"
+          >
+            <Alert
+              closeLabel="Close alert"
+              show={true}
+              transition={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "defaultProps": Object {
+                    "appear": false,
+                    "in": false,
+                    "mountOnEnter": false,
+                    "timeout": 300,
+                    "unmountOnExit": false,
+                  },
+                  "displayName": "Fade",
+                  "render": [Function],
+                }
+              }
+              variant="danger"
+            >
+              Human verification expired. Please check the checkbox again.
+            </Alert>
+          </div>
+        </Row>
         <Button
           active={false}
           disabled={false}
@@ -115,6 +261,308 @@ exports[`<RetroCertsAuthPage /> renders the retro certs main page 1`] = `
       </Form>
     </div>
   </main>
+  <SessionTimer
+    action="clear"
+    setUserData={[Function]}
+  />
+  <Footer />
+</div>
+`;
+
+exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] = `
+<div
+  id="overflow-wrapper"
+>
+  <Header />
+  <main>
+    <div
+      className="container p-4"
+    >
+      <h1>
+        Retroactive Unemployment Certification
+      </h1>
+      <h2
+        className="mt-4"
+      >
+        Help us find you
+      </h2>
+      <p>
+        We need to make sure your identity matches EDD records so that we show you accurate records.
+      </p>
+      <Form
+        inline={false}
+        onSubmit={[Function]}
+      >
+        <Row
+          noGutters={false}
+        >
+          <div
+            className="col-md-6"
+          >
+            <Alert
+              closeLabel="Close alert"
+              show={true}
+              transition={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "defaultProps": Object {
+                    "appear": false,
+                    "in": false,
+                    "mountOnEnter": false,
+                    "timeout": 300,
+                    "unmountOnExit": false,
+                  },
+                  "displayName": "Fade",
+                  "render": [Function],
+                }
+              }
+              variant="danger"
+            >
+              Logged out after being idle for 30 minutes.
+            </Alert>
+          </div>
+        </Row>
+        <Row
+          noGutters={false}
+        >
+          <FormGroup
+            className="col-md-6"
+            controlId="formLastName"
+          >
+            <FormLabel
+              column={false}
+              srOnly={false}
+            >
+              Last name
+            </FormLabel>
+            <FormControl
+              onChange={[Function]}
+              type="text"
+              value=""
+            />
+          </FormGroup>
+        </Row>
+        <Row
+          noGutters={false}
+        >
+          <FormGroup
+            className="col-md-6"
+            controlId="formEddcan"
+          >
+            <FormLabel
+              column={false}
+              srOnly={false}
+            >
+              EDDCAN
+            </FormLabel>
+            <FormControl
+              onChange={[Function]}
+              type="text"
+              value=""
+            />
+          </FormGroup>
+        </Row>
+        <Row
+          noGutters={false}
+        >
+          <FormGroup
+            className="col-md-6"
+            controlId="formSsn"
+          >
+            <FormLabel
+              column={false}
+              srOnly={false}
+            >
+              Social Security Number
+            </FormLabel>
+            <FormControl
+              onChange={[Function]}
+              type="password"
+              value=""
+            />
+          </FormGroup>
+        </Row>
+        <Row
+          noGutters={false}
+        >
+          <FormGroup
+            className="col-md-6"
+            controlId="formReCaptcha"
+          >
+            <AsyncScriptLoader(ReCAPTCHA)
+              sitekey="6Lf-DQEVAAAAABCMwJ-Gnbqec08RuiPhMZPtZPm9"
+            />
+            <FormText
+              className="text-muted"
+            >
+              Security check provided by reCAPTCHA.
+            </FormText>
+          </FormGroup>
+        </Row>
+        <Button
+          active={false}
+          disabled={false}
+          type="submit"
+          variant="secondary"
+        >
+          Find me
+        </Button>
+      </Form>
+    </div>
+  </main>
+  <SessionTimer
+    action="clear"
+    setUserData={[Function]}
+  />
+  <Footer />
+</div>
+`;
+
+exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 1`] = `
+<div
+  id="overflow-wrapper"
+>
+  <Header />
+  <main>
+    <div
+      className="container p-4"
+    >
+      <h1>
+        Retroactive Unemployment Certification
+      </h1>
+      <h2
+        className="mt-4"
+      >
+        Help us find you
+      </h2>
+      <p>
+        We need to make sure your identity matches EDD records so that we show you accurate records.
+      </p>
+      <Form
+        inline={false}
+        onSubmit={[Function]}
+      >
+        <Row
+          noGutters={false}
+        >
+          <FormGroup
+            className="col-md-6"
+            controlId="formLastName"
+          >
+            <FormLabel
+              column={false}
+              srOnly={false}
+            >
+              Last name
+            </FormLabel>
+            <FormControl
+              onChange={[Function]}
+              type="text"
+              value=""
+            />
+          </FormGroup>
+        </Row>
+        <Row
+          noGutters={false}
+        >
+          <FormGroup
+            className="col-md-6"
+            controlId="formEddcan"
+          >
+            <FormLabel
+              column={false}
+              srOnly={false}
+            >
+              EDDCAN
+            </FormLabel>
+            <FormControl
+              onChange={[Function]}
+              type="text"
+              value=""
+            />
+          </FormGroup>
+        </Row>
+        <Row
+          noGutters={false}
+        >
+          <FormGroup
+            className="col-md-6"
+            controlId="formSsn"
+          >
+            <FormLabel
+              column={false}
+              srOnly={false}
+            >
+              Social Security Number
+            </FormLabel>
+            <FormControl
+              onChange={[Function]}
+              type="password"
+              value=""
+            />
+          </FormGroup>
+        </Row>
+        <Row
+          noGutters={false}
+        >
+          <FormGroup
+            className="col-md-6"
+            controlId="formReCaptcha"
+          >
+            <AsyncScriptLoader(ReCAPTCHA)
+              sitekey="6Lf-DQEVAAAAABCMwJ-Gnbqec08RuiPhMZPtZPm9"
+            />
+            <FormText
+              className="text-muted"
+            >
+              Security check provided by reCAPTCHA.
+            </FormText>
+          </FormGroup>
+        </Row>
+        <Row
+          noGutters={false}
+        >
+          <div
+            className="col-md-6"
+          >
+            <Alert
+              closeLabel="Close alert"
+              show={true}
+              transition={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "defaultProps": Object {
+                    "appear": false,
+                    "in": false,
+                    "mountOnEnter": false,
+                    "timeout": 300,
+                    "unmountOnExit": false,
+                  },
+                  "displayName": "Fade",
+                  "render": [Function],
+                }
+              }
+              variant="danger"
+            >
+              We couldn't find you in the system.
+            </Alert>
+          </div>
+        </Row>
+        <Button
+          active={false}
+          disabled={false}
+          type="submit"
+          variant="secondary"
+        >
+          Find me
+        </Button>
+      </Form>
+    </div>
+  </main>
+  <SessionTimer
+    action="clear"
+    setUserData={[Function]}
+  />
   <Footer />
 </div>
 `;

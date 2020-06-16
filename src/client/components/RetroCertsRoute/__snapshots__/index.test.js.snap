@@ -31,6 +31,7 @@ exports[`<RetroCertsRoute /> route needing auth with user data 1`] = `
   path="/path"
 >
   <TestComponent
+    setUserData={[Function]}
     userData={
       Object {
         "weeksToCertify": Array [
@@ -38,6 +39,10 @@ exports[`<RetroCertsRoute /> route needing auth with user data 1`] = `
         ],
       }
     }
+  />
+  <SessionTimer
+    action="startOrUpdate"
+    setUserData={[Function]}
   />
 </Route>
 `;
