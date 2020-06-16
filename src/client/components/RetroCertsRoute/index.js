@@ -10,6 +10,38 @@ function userIsAuthenticated(userData) {
   return !!userData.weeksToCertify;
 }
 
+/**
+ * A component that wraps authorized page components.
+ *
+ * This does the following:
+ * - Passes props from the Route down to the page component.
+ * - Adds the session timer to each page
+ *
+ * @returns {React.ReactElement}
+ */
+function AuthorizedPageWrapper(props) {
+  const { pageComponent: Component, pageProps, computedMatch } = props;
+
+  return (
+    <React.Fragment>
+      <Component routeComputedMatch={computedMatch} {...pageProps} />
+      <SessionTimer
+        action="startOrUpdate"
+        setUserData={pageProps.setUserData}
+      />
+    </React.Fragment>
+  );
+}
+
+AuthorizedPageWrapper.propTypes = {
+  pageComponent: PropTypes.func.isRequired,
+  pageProps: PropTypes.shape({
+    userData: userDataPropType,
+    setUserData: setUserDataPropType,
+  }),
+  computedMatch: PropTypes.object.isRequired,
+};
+
 function RetroCertsRoute(props) {
   const {
     pageComponent: Component,
@@ -25,15 +57,7 @@ function RetroCertsRoute(props) {
   } else if (!requiresAuthentication) {
     routeChild = <Component {...pageProps} />;
   } else if (userIsAuthenticated(pageProps.userData)) {
-    routeChild = (
-      <React.Fragment>
-        <Component {...pageProps} />
-        <SessionTimer
-          action="startOrUpdate"
-          setUserData={pageProps.setUserData}
-        />
-      </React.Fragment>
-    );
+    routeChild = <AuthorizedPageWrapper {...props} />;
   } else {
     // This page requires authentication and the user is not authenticated.
     // Try using the auth token if they have one.

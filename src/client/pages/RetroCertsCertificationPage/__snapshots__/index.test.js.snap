@@ -1,0 +1,157 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RetroCertsCertificationPage /> Certify for 2nd week of 2 1`] = `
+<div
+  id="overflow-wrapper"
+>
+  <Header />
+  <main>
+    <div
+      className="container p-4"
+    >
+      <h1>
+        Retroactive Unemployment Certification
+      </h1>
+      <p>
+        <Trans
+          i18nKey="retrocerts-certification.p1-multiple"
+          t={[Function]}
+          values={
+            Object {
+              "numberOfWeeks": 2,
+              "weekForUser": 2,
+            }
+          }
+        />
+      </p>
+      <Form
+        inline={false}
+        onSubmit={[Function]}
+      >
+        <Row
+          noGutters={false}
+        >
+          Questions go here.
+        </Row>
+        <Row
+          noGutters={false}
+        >
+          <div
+            className="col-md-4"
+          >
+            <Button
+              active={false}
+              className="text-dark bg-light"
+              disabled={false}
+              href="/retroactive-certification/certify/2020-02-08"
+              type="button"
+              variant="outline-secondary"
+            >
+              Back
+            </Button>
+          </div>
+          <div
+            className="col-md-4"
+          >
+            <Button
+              active={false}
+              disabled={false}
+              href="/retroactive-certification/confirmation"
+              type="submit"
+              variant="secondary"
+            >
+              Submit your certification
+            </Button>
+          </div>
+        </Row>
+      </Form>
+    </div>
+  </main>
+  <Footer />
+</div>
+`;
+
+exports[`<RetroCertsCertificationPage /> Certify for one week of 2 1`] = `
+<div
+  id="overflow-wrapper"
+>
+  <Header />
+  <main>
+    <div
+      className="container p-4"
+    >
+      <h1>
+        Retroactive Unemployment Certification
+      </h1>
+      <p>
+        <Trans
+          i18nKey="retrocerts-certification.p1-multiple"
+          t={[Function]}
+          values={
+            Object {
+              "numberOfWeeks": 2,
+              "weekForUser": 1,
+            }
+          }
+        />
+      </p>
+      <Form
+        inline={false}
+        onSubmit={[Function]}
+      >
+        <Row
+          noGutters={false}
+        >
+          Questions go here.
+        </Row>
+        <Row
+          noGutters={false}
+        >
+          <div
+            className="col-md-4"
+          >
+            <Button
+              active={false}
+              className="text-dark bg-light"
+              disabled={false}
+              href="/retroactive-certification/landing"
+              type="button"
+              variant="outline-secondary"
+            >
+              Back
+            </Button>
+          </div>
+          <div
+            className="col-md-4"
+          >
+            <Button
+              active={false}
+              disabled={false}
+              href="/retroactive-certification/certify/2020-02-15"
+              type="submit"
+              variant="secondary"
+            >
+              <Trans
+                i18nKey="retrocerts-certification.button-next"
+                t={[Function]}
+                values={
+                  Object {
+                    "nextWeekForUser": 2,
+                  }
+                }
+              />
+            </Button>
+          </div>
+        </Row>
+      </Form>
+    </div>
+  </main>
+  <Footer />
+</div>
+`;
+
+exports[`<RetroCertsCertificationPage /> Certify week not found. 1`] = `
+<Redirect
+  to="/retroactive-certification/landing"
+/>
+`;

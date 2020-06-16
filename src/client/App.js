@@ -7,6 +7,7 @@ import PageNotFound from "./pages/PageNotFound";
 import RedirectToGuide from "./pages/RedirectToGuide";
 import RetroCertsAuthPage from "./pages/RetroCertsAuthPage";
 import RetroCertsLandingPage from "./pages/RetroCertsLandingPage";
+import RetroCertsCertificationPage from "./pages/RetroCertsCertificationPage";
 import RetroCertsConfirmationPage from "./pages/RetroCertsConfirmationPage";
 import RetroCertsWhatToExpectPage from "./pages/RetroCertsWhatToExpectPage";
 import AUTH_STRINGS from "../data/authStrings";
@@ -38,6 +39,16 @@ export default function App(props) {
           path="/retroactive-certification/what-to-expect"
           isProduction={isProduction}
           pageComponent={RetroCertsWhatToExpectPage}
+          pageProps={{
+            userData: retroCertsUserData,
+            setUserData: setRetroCertsUserData,
+          }}
+          requiresAuthentication
+        />
+        <RetroCertsRoute
+          path="/retroactive-certification/certify/:week"
+          isProduction={isProduction}
+          pageComponent={RetroCertsCertificationPage}
           pageProps={{
             userData: retroCertsUserData,
             setUserData: setRetroCertsUserData,
