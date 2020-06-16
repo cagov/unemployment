@@ -1,7 +1,7 @@
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Form from "react-bootstrap/Form";
-import { Redirect } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import React from "react";
 import { useTranslation, Trans } from "react-i18next";
@@ -10,6 +10,7 @@ import {
   fromIndexToPathString,
   fromPathStringToIndex,
 } from "../../../utils/retroCertsWeeks";
+import routes from "../../../data/routes";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 
@@ -26,7 +27,7 @@ function RetroCertsCertificationPage(props) {
   if (!weekForUser) {
     // The week from the URL is not a week that the user has
     // to certify for. Send them back to the list of weeks page.
-    return <Redirect to="/retroactive-certification/landing" />;
+    return <Redirect to={routes.retroCertsWeeksToCertify} />;
   }
 
   const handleSubmit = (event) => {
@@ -55,11 +56,15 @@ function RetroCertsCertificationPage(props) {
                 <Button
                   variant="outline-secondary"
                   className="text-dark bg-light"
-                  href={
+                  as={Link}
+                  to={
                     weekForUser === 1
-                      ? "/retroactive-certification/landing"
-                      : "/retroactive-certification/certify/" +
-                        fromIndexToPathString(weekForUser - 2)
+                      ? routes.retroCertsWeeksToCertify
+                      : routes.retroCertsCertify +
+                        "/" +
+                        fromIndexToPathString(
+                          userData.weeksToCertify[weekForUser - 2]
+                        )
                   }
                 >
                   {t("retrocerts-certification.button-back")}
@@ -68,11 +73,15 @@ function RetroCertsCertificationPage(props) {
               <div className="col-md-4">
                 <Button
                   variant="secondary"
-                  href={
+                  as={Link}
+                  to={
                     weekForUser === numberOfWeeks
-                      ? "/retroactive-certification/confirmation"
-                      : "/retroactive-certification/certify/" +
-                        fromIndexToPathString(weekForUser)
+                      ? routes.retroCertsConfirmation
+                      : routes.retroCertsCertify +
+                        "/" +
+                        fromIndexToPathString(
+                          userData.weeksToCertify[weekForUser]
+                        )
                   }
                   type="submit"
                 >

@@ -1,16 +1,16 @@
 import React, { Suspense, useState } from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import PropTypes from "prop-types";
 import RetroCertsRoute from "./components/RetroCertsRoute";
 import GuidePage from "./pages/GuidePage";
 import PageNotFound from "./pages/PageNotFound";
-import RedirectToGuide from "./pages/RedirectToGuide";
 import RetroCertsAuthPage from "./pages/RetroCertsAuthPage";
-import RetroCertsLandingPage from "./pages/RetroCertsLandingPage";
+import RetroCertsWeeksToCertifyPage from "./pages/RetroCertsWeeksToCertifyPage";
 import RetroCertsCertificationPage from "./pages/RetroCertsCertificationPage";
 import RetroCertsConfirmationPage from "./pages/RetroCertsConfirmationPage";
 import RetroCertsWhatToExpectPage from "./pages/RetroCertsWhatToExpectPage";
 import AUTH_STRINGS from "../data/authStrings";
+import routes from "../data/routes";
 
 export default function App(props) {
   const hostname = props.hostname || window.location.hostname;
@@ -23,12 +23,14 @@ export default function App(props) {
   return (
     <Suspense fallback="Loading...">
       <Switch>
-        <Route path="/" exact component={RedirectToGuide} />
+        <Route path="/" exact>
+          <Redirect to={routes.guideBenefits} />
+        </Route>
         <Route path="/guide" component={GuidePage} />
         <RetroCertsRoute
-          path="/retroactive-certification/landing"
+          path={routes.retroCertsWeeksToCertify}
           isProduction={isProduction}
-          pageComponent={RetroCertsLandingPage}
+          pageComponent={RetroCertsWeeksToCertifyPage}
           pageProps={{
             userData: retroCertsUserData,
             setUserData: setRetroCertsUserData,
@@ -36,7 +38,7 @@ export default function App(props) {
           requiresAuthentication
         />
         <RetroCertsRoute
-          path="/retroactive-certification/what-to-expect"
+          path={routes.retroCertsWhatToExpect}
           isProduction={isProduction}
           pageComponent={RetroCertsWhatToExpectPage}
           pageProps={{
@@ -46,7 +48,7 @@ export default function App(props) {
           requiresAuthentication
         />
         <RetroCertsRoute
-          path="/retroactive-certification/certify/:week"
+          path={routes.retroCertsCertify + "/:week"}
           isProduction={isProduction}
           pageComponent={RetroCertsCertificationPage}
           pageProps={{
@@ -56,7 +58,7 @@ export default function App(props) {
           requiresAuthentication
         />
         <RetroCertsRoute
-          path="/retroactive-certification/confirmation"
+          path={routes.retroCertsConfirmation}
           isProduction={isProduction}
           pageComponent={RetroCertsConfirmationPage}
           pageProps={{
@@ -66,7 +68,7 @@ export default function App(props) {
           requiresAuthentication
         />
         <RetroCertsRoute
-          path="/retroactive-certification"
+          path={routes.retroCertsAuth}
           isProduction={isProduction}
           pageComponent={RetroCertsAuthPage}
           pageProps={{

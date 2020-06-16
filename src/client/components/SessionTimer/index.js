@@ -2,6 +2,7 @@ import { useHistory } from "react-router-dom";
 import PropTypes from "prop-types";
 import { setUserDataPropType } from "../../commonPropTypes";
 import AUTH_STRINGS from "../../../data/authStrings";
+import routes from "../../../data/routes";
 
 let timerId = null;
 
@@ -15,7 +16,7 @@ function SessionTimer(props) {
     timerId = setTimeout(() => {
       if (sessionStorage.getItem(AUTH_STRINGS.authToken)) {
         sessionStorage.removeItem(AUTH_STRINGS.authToken);
-        history.push("/retroactive-certification");
+        history.push(routes.retroCertsAuth);
         setUserData({
           status: AUTH_STRINGS.statusCode.sessionTimedOut,
         });

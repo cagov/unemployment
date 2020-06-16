@@ -7,6 +7,7 @@ import Alert from "react-bootstrap/Alert";
 import ReCAPTCHA from "react-google-recaptcha";
 import React, { useState } from "react";
 import AUTH_STRINGS from "../../../data/authStrings";
+import routes from "../../../data/routes";
 import { userDataPropType, setUserDataPropType } from "../../commonPropTypes";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
@@ -77,9 +78,9 @@ function RetroCertsAuthPage(props) {
           sessionStorage.setItem(AUTH_STRINGS.authToken, data.authToken);
           if (data.confirmationNumber) {
             // The user has already completed the retro-certs process.
-            history.push("/retroactive-certification/confirmation");
+            history.push(routes.retroCertsConfirmation);
           } else {
-            history.push("/retroactive-certification/what-to-expect");
+            history.push(routes.retroCertsWhatToExpect);
           }
         } else {
           sessionStorage.removeItem(AUTH_STRINGS.authToken);
