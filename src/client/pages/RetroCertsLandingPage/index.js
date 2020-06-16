@@ -1,9 +1,12 @@
 import Button from "react-bootstrap/Button";
-import { useHistory } from "react-router-dom";
+import Row from "react-bootstrap/Row";
 import React from "react";
+import { useHistory } from "react-router-dom";
 import AUTH_STRINGS from "../../../data/authStrings";
 import routes from "../../../data/routes";
 import { userDataPropType, setUserDataPropType } from "../../commonPropTypes";
+import { useTranslation } from "react-i18next";
+import { fromIndexToPathString } from "../../../utils/retroCertsWeeks";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import mockedFormData from "../../../data/mockedFormData";
@@ -33,6 +36,8 @@ function RetroCertsLandingPage(props) {
       .catch((error) => console.error(error));
   }
 
+  const { t } = useTranslation();
+
   return (
     <div id="overflow-wrapper">
       <Header />
@@ -43,6 +48,29 @@ function RetroCertsLandingPage(props) {
           <p>
             <Button onClick={handleSubmit}>Submit</Button>
           </p>
+          <Row>
+            <div className="col-md-4">
+              <Button
+                variant="outline-secondary"
+                className="text-dark bg-light"
+                href="/retroactive-certification/what-to-expect"
+              >
+                {t("retrocerts-weeks.button-back")}
+              </Button>
+            </div>
+            <div className="col-md-4">
+              <Button
+                variant="secondary"
+                href={
+                  "/retroactive-certification/certify/" +
+                  fromIndexToPathString(userData.weeksToCertify[0])
+                }
+              >
+                {t("retrocerts-weeks.button-certify-week-1")}
+              </Button>
+            </div>
+          </Row>
+
           {[1, 2, 3].map((index) => (
             <YesNoQuestion
               key={index}

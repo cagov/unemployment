@@ -30,19 +30,20 @@ exports[`<RetroCertsRoute /> route needing auth with user data 1`] = `
 <Route
   path="/path"
 >
-  <TestComponent
-    setUserData={[Function]}
-    userData={
+  <AuthorizedPageWrapper
+    pageComponent={[Function]}
+    pageProps={
       Object {
-        "weeksToCertify": Array [
-          0,
-        ],
+        "setUserData": [Function],
+        "userData": Object {
+          "weeksToCertify": Array [
+            0,
+          ],
+        },
       }
     }
-  />
-  <SessionTimer
-    action="startOrUpdate"
-    setUserData={[Function]}
+    path="/path"
+    requiresAuthentication={true}
   />
 </Route>
 `;

@@ -212,6 +212,18 @@
     "p2": "Please submit your eligibility information again.",
     "button-start-certification": "Start certification"
   },
+  "retrocerts-weeks": {
+    "button-back": "Back",
+    "button-certify-week-1": "Certify Week 1"
+  },
+  "retrocerts-certification": {
+    "title":"Retroactive Unemployment Certification",
+    "p1-multiple": "You are on Week {{weekForUser}} of {{numberOfWeeks}} to certify.",
+    "form-header": "Week {{weekForUser}}: {{startDate}} - {{endDate}}",
+    "button-back": "Back",
+    "button-next": "Next, certify Week {{nextWeekForUser}}",
+    "button-submit": "Submit your certification"
+  },
   "retrocerts-confirmation": {
     "title": "Retroactive Unemployment Certification",
     "subheader": "We have received your certification. Thank you.",
