@@ -1,5 +1,6 @@
 import pandas as pd
 
+invalid_input = False
 def print_invalid_rows(invalid_rows, row_name):
     global invalid_input
     invalid_row_count = len(invalid_rows)
@@ -14,39 +15,53 @@ def validate_column(col_name, valid_values):
     invalid_rows = df[~df[col_name].isin(valid_values)]
     print_invalid_rows(invalid_rows, col_name)
 
-HASH_LENGTH = 11
-VALID_WEEKS = ["3/15/20",
-  "3/22/20",
-  "3/29/20",
-  "4/5/20",
-  "4/12/20",
-  "4/19/20",
-  "4/26/20",
-  "5/3/20"
+HASH_LENGTH = 66
+VALID_WEEKS = [
+    "2020-02-08",
+    "2020-02-15",
+    "2020-02-22",
+    "2020-02-29",
+    "2020-03-07",
+    "2020-03-14",
+    "2020-03-21",
+    "2020-03-28",
+    "2020-04-04",
+    "2020-04-11",
+    "2020-04-18",
+    "2020-04-25",
+    "2020-05-02",
+    "2020-05-09"
 ]
 VALID_PROGRAMS = ["DUA", "UI"]
 VALID_PLANS = ["UI part time", "UI full time", "PUA full time"]
+INPUT_DATA_FILENAME = "users.csv"
+PROCESSED_DATA_FILENAME = "processed.json"
+FINAL_DATA_FILENAME = "final.json"
 
-print("Importing from users.csv...")
-df = pd.read_csv("users.csv")\
-        .apply(lambda x: x.str.strip()) # remove leading and trailing whitespace
+print(f"Importing from {INPUT_DATA_FILENAME} and removing leading/trailing whitespace...")
+df = pd.read_csv(INPUT_DATA_FILENAME).apply(lambda x: x.str.strip())
 row_count = len(df)
 print(f"Imported {row_count} rows.\n")
 
-print("Validating hashes are all present and valid...")
-invalid_hash_rows = df[df["hash"].apply(lambda x: len(str(x)) != HASH_LENGTH)]
-print_invalid_rows(invalid_hash_rows, "hash")
+print("Validating SHA256_hash values are all present and valid...")
+invalid_hash_rows = df[df["SHA256_hash"].apply(lambda x: len(str(x)) != HASH_LENGTH)]
+print_invalid_rows(invalid_hash_rows, "SHA256_hash")
 
 validate_column("WeekEndingDate", VALID_WEEKS)
 validate_column("Program", VALID_PROGRAMS)
 validate_column("SeekWorkPlan", VALID_PLANS)
 
 if invalid_input is not True:
-    print("First few rows of output:")
-    output = df.groupby("hash")["WeekEndingDate"].apply(list).reset_index()\
-                .rename(columns={"WeekEndingDate": "WeekEndingDates"})
+    print("All values valid!\n")
+    print("Grouping by SHA256_hash/user and merging all WeekEndingDates into one array per user...")
+    output = df.groupby("SHA256_hash")["WeekEndingDate"].apply(list)\
+        .reset_index().rename(columns={"WeekEndingDate": "WeekEndingDates"}) # todo fix this line
+    result_count = len(output)
 
+    print(f"{result_count} resulting users. Here's a few sample rows:")
     print(output.head())
 
-    print("Writing results to users.json")
-    df.to_json("users.json", orient="records")
+    print(f"Writing results to {OUTPUT_DATA_FILENAME}...")
+    df.to_json(OUTPUT_DATA_FILENAME, orient="records")
+
+    print("Success!")
