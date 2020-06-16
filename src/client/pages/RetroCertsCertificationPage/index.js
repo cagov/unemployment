@@ -1,22 +1,26 @@
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Form from "react-bootstrap/Form";
-import { Redirect } from "react-router-dom";
+import { Redirect, useHistory } from "react-router-dom";
 import PropTypes from "prop-types";
 import React from "react";
+
 import { useTranslation, Trans } from "react-i18next";
 import { userDataPropType, setUserDataPropType } from "../../commonPropTypes";
 import {
   fromIndexToPathString,
   fromPathStringToIndex,
 } from "../../../utils/retroCertsWeeks";
+import mockedFormData from "../../../data/mockedFormData";
+import routes from "../../../data/routes";
+import AUTH_STRINGS from "../../../data/authStrings";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 
 function RetroCertsCertificationPage(props) {
   const { t } = useTranslation();
-  // Disable until this is implemented.
-  // eslint-disable-next-line no-unused-vars
+  const history = useHistory();
+
   const { userData, setUserData, routeComputedMatch } = props;
   const week = routeComputedMatch.params.week || "";
 
@@ -29,9 +33,24 @@ function RetroCertsCertificationPage(props) {
     return <Redirect to="/retroactive-certification/landing" />;
   }
 
-  const handleSubmit = (event) => {
-    // TODO: form validation, post form.
-  };
+  function handleSubmit() {
+    fetch(AUTH_STRINGS.apiPath.save, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        formData: mockedFormData,
+        authToken: sessionStorage.getItem(AUTH_STRINGS.authToken),
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setUserData(data);
+        history.push(routes.retroCertsConfirmation.path);
+      })
+      .catch((error) => console.error(error));
+  }
 
   return (
     <div id="overflow-wrapper">
@@ -66,26 +85,26 @@ function RetroCertsCertificationPage(props) {
                 </Button>
               </div>
               <div className="col-md-4">
-                <Button
-                  variant="secondary"
-                  href={
-                    weekForUser === numberOfWeeks
-                      ? "/retroactive-certification/confirmation"
-                      : "/retroactive-certification/certify/" +
-                        fromIndexToPathString(weekForUser)
-                  }
-                  type="submit"
-                >
-                  {weekForUser === numberOfWeeks ? (
+                {weekForUser === numberOfWeeks && (
+                  <Button variant="secondary" onClick={handleSubmit}>
                     t("retrocerts-certification.button-submit")
-                  ) : (
+                  </Button>
+                )}
+                {weekForUser !== numberOfWeeks && (
+                  <Button
+                    variant="secondary"
+                    type="submit"
+                    href={`/retroactive-certification/certify/${fromIndexToPathString(
+                      weekForUser
+                    )}`}
+                  >
                     <Trans
                       t={t}
                       i18nKey="retrocerts-certification.button-next"
                       values={{ nextWeekForUser: weekForUser + 1 }}
                     />
-                  )}
-                </Button>
+                  </Button>
+                )}
               </div>
             </Row>
           </Form>
