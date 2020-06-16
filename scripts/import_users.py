@@ -2,23 +2,20 @@ import pandas as pd
 
 def print_invalid_rows(invalid_rows, row_name):
     global invalid_input
-    if len(invalid_rows) > 0:
-        print(f"there are invalid {row_name} rows:")
+    invalid_row_count = len(invalid_rows)
+    if invalid_row_count > 0:
+        print(f"Invalid {row_name} rows ({invalid_row_count}) listed below:")
         print(invalid_rows)
+        print()
         invalid_input = True
 
-print("importing from users.csv...")
-df = pd.read_csv("users.csv").apply(lambda x: x.str.strip()) # remove leading and trailing whitespace
+def validate_column(col_name, valid_values):
+    print(f"Validating {col_name} values are all present and valid...")
+    invalid_rows = df[~df[col_name].isin(valid_values)]
+    print_invalid_rows(invalid_rows, col_name)
 
-print("checking for errors...")
-
-print("checking if hashes are all present and valid...")
-hash_length = 11
-invalid_hash_rows = df[df["hash"].apply(lambda x: len(str(x)) != hash_length)]
-print_invalid_rows(invalid_hash_rows, "hash")
-
-print("checking if WeekEndingDate values are all present and valid...")
-valid_weeks = ["3/15/20",
+HASH_LENGTH = 11
+VALID_WEEKS = ["3/15/20",
   "3/22/20",
   "3/29/20",
   "4/5/20",
@@ -27,25 +24,29 @@ valid_weeks = ["3/15/20",
   "4/26/20",
   "5/3/20"
 ]
-invalid_week_rows = df[~df["WeekEndingDate"].isin(valid_weeks)]
-print_invalid_rows(invalid_week_rows, "WeekEndingDate")
+VALID_PROGRAMS = ["DUA", "UI"]
+VALID_PLANS = ["UI part time", "UI full time", "PUA full time"]
 
-print("checking if Program values are all present and valid...")
-valid_programs = ["DUA", "UI"]
-invalid_program_rows = df[~df["Program"].isin(valid_programs)]
-print_invalid_rows(invalid_program_rows, "Program")
+print("Importing from users.csv...")
+df = pd.read_csv("users.csv")\
+        .apply(lambda x: x.str.strip()) # remove leading and trailing whitespace
+row_count = len(df)
+print(f"Imported {row_count} rows.\n")
 
-print("checking if SeekWorkPlan values are all present and valid...")
-valid_plans = ["UI part time", "UI full time", "PUA full time"]
-invalid_plan_rows = df[~df["SeekWorkPlan"].isin(valid_plans)]
-print_invalid_rows(invalid_plan_rows, "SeekWorkPlan")
+print("Validating hashes are all present and valid...")
+invalid_hash_rows = df[df["hash"].apply(lambda x: len(str(x)) != HASH_LENGTH)]
+print_invalid_rows(invalid_hash_rows, "hash")
+
+validate_column("WeekEndingDate", VALID_WEEKS)
+validate_column("Program", VALID_PROGRAMS)
+validate_column("SeekWorkPlan", VALID_PLANS)
 
 if invalid_input is not True:
-    print("first few rows of output:")
+    print("First few rows of output:")
     output = df.groupby("hash")["WeekEndingDate"].apply(list).reset_index()\
                 .rename(columns={"WeekEndingDate": "WeekEndingDates"})
 
     print(output.head())
 
-    print("writing results to users.json")
+    print("Writing results to users.json")
     df.to_json("users.json", orient="records")
