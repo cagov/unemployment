@@ -15,6 +15,7 @@ const AUTH_STRINGS = {
     notLoggedIn: "not-logged-in",
     userNotFound: "user-not-found",
     recaptchaInvalid: "recaptcha-invalid",
+    sessionTimedOut: "session-timed-out",
   },
 };
 
