@@ -81,7 +81,11 @@ function createRouter() {
 
   router.post(AUTH_STRINGS.apiPath.save, async (req, res) => {
     try {
-      console.error("Logic not implemented yet!");
+      const responseJson = await cosmos.saveFormData(
+        req.body.authToken,
+        req.body.formData
+      );
+      res.status(200).type("json").send(JSON.stringify(responseJson));
     } catch (e) {
       console.error("Error during /api/save", e);
       res.status(500).send();

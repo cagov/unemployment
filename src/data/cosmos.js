@@ -123,6 +123,14 @@ async function getFormDataByUserIdWithNewAuthToken(userId) {
   return item;
 }
 
+async function saveFormData(authToken, formData) {
+  const item = await getFormDataByAuthToken(authToken);
+  item.formData = formData;
+  item.confirmationNumber = uuidv4();
+  await insertForm(item);
+  return item;
+}
+
 async function insertForm(item) {
   await insertItem(item, formsContainerName);
 }
@@ -133,4 +141,5 @@ module.exports = {
   getUserByNameEddcanSsn,
   getUserById,
   getFormDataByUserIdWithNewAuthToken,
+  saveFormData,
 };

@@ -2,6 +2,7 @@ import Button from "react-bootstrap/Button";
 import { useHistory } from "react-router-dom";
 import React from "react";
 import AUTH_STRINGS from "../../../data/authStrings";
+import routes from "../../../data/routes";
 import { userDataPropType, setUserDataPropType } from "../../commonPropTypes";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
@@ -13,32 +14,24 @@ function RetroCertsLandingPage(props) {
   const setUserData = props.setUserData;
   const history = useHistory();
 
-  const handleSubmit = () => {
+  function handleSubmit() {
     fetch(AUTH_STRINGS.apiPath.save, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        mockedFormData,
+        formData: mockedFormData,
+        authToken: sessionStorage.getItem(AUTH_STRINGS.authToken),
       }),
     })
       .then((response) => response.json())
       .then((data) => {
         setUserData(data);
-        if (data.authToken) {
-          // Session storage is destroyed when the tab is closed! That"s a bit weird.
-          // If we want to allow the user to use multiple tabs, we could sync the
-          // value across tabs:
-          // https://medium.com/@marciomariani/sharing-sessionstorage-between-tabs-5b6f42c6348c
-          sessionStorage.setItem(AUTH_STRINGS.authToken, data.authToken);
-          history.push("/retroactive-certification/what-to-expect");
-        } else {
-          sessionStorage.removeItem(AUTH_STRINGS.authToken);
-        }
+        history.push(routes.retroCertsConfirmation.path);
       })
       .catch((error) => console.error(error));
-  };
+  }
 
   return (
     <div id="overflow-wrapper">
