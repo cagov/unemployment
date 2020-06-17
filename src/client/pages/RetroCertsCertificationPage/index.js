@@ -4,7 +4,6 @@ import Form from "react-bootstrap/Form";
 import { Redirect, useHistory, Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import React from "react";
-
 import { useTranslation, Trans } from "react-i18next";
 import { userDataPropType, setUserDataPropType } from "../../commonPropTypes";
 import {
@@ -47,7 +46,7 @@ function RetroCertsCertificationPage(props) {
       .then((response) => response.json())
       .then((data) => {
         setUserData(data);
-        history.push(routes.retroCertsConfirmation.path);
+        history.push(routes.retroCertsConfirmation);
       })
       .catch((error) => console.error(error));
   }
@@ -101,6 +100,7 @@ function RetroCertsCertificationPage(props) {
                     type="submit"
                     to={
                       routes.retroCertsCertify +
+                      "/" +
                       fromIndexToPathString(weekForUser)
                     }
                   >
