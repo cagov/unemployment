@@ -91,19 +91,16 @@ async function getUserByNameEddcanSsn(lastName, eddcan, ssn) {
   return await getUserById(id);
 }
 
-async function getUserByAuthToken(authToken) {
+async function getFormDataByAuthToken(authToken) {
   const container = await getContainer(formsContainerName);
 
   const { resources } = await container.items
     .query({
-      query: `SELECT f.id from ${formsContainerName} as f WHERE f.authToken = @authToken`,
+      query: `SELECT * from ${formsContainerName} as f WHERE f.authToken = @authToken`,
       parameters: [{ name: "@authToken", value: authToken }],
     })
     .fetchAll();
-  if (resources.length !== 1) {
-    return null;
-  }
-  return await getUserById(resources[0].id);
+  return resources.length === 1 ? resources[0] : null;
 }
 
 async function getFormDataByUserId(userId) {
@@ -118,21 +115,32 @@ async function getFormDataByUserId(userId) {
   return resources.length === 1 ? resources[0] : null;
 }
 
-async function createAuthTokenForUser(userId) {
+async function getFormDataByUserIdWithNewAuthToken(userId) {
   const item = (await getFormDataByUserId(userId)) || {};
   item.id = userId;
   item.authToken = uuidv4();
-  await insertForm(item);
-  return item.authToken;
+  await insertItem(item, formsContainerName);
+  return item;
 }
 
-async function insertForm(item) {
+async function saveFormData(authToken, formData) {
+  const item = await getFormDataByAuthToken(authToken);
+
+  if (!item) {
+    return;
+  }
+
+  item.formData = formData;
+  item.confirmationNumber = uuidv4();
   await insertItem(item, formsContainerName);
+  return item;
 }
 
 module.exports = {
   createRetroCertDatabaseIfNeeded,
+  getFormDataByAuthToken,
   getUserByNameEddcanSsn,
-  getUserByAuthToken,
-  createAuthTokenForUser,
+  getUserById,
+  getFormDataByUserIdWithNewAuthToken,
+  saveFormData,
 };

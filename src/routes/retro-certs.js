@@ -11,7 +11,7 @@ function createRouter() {
 
     const reCaptcha = new ReCaptcha(postJson.reCaptcha);
 
-    const [reCaptchaResponse, record] = await Promise.all([
+    const [reCaptchaResponse, userRecord] = await Promise.all([
       reCaptcha.validateUser(),
       cosmos.getUserByNameEddcanSsn(
         postJson.lastName || "",
@@ -25,10 +25,14 @@ function createRouter() {
       return responseJson;
     }
 
-    if (record) {
+    if (userRecord) {
+      const formRecord = await cosmos.getFormDataByUserIdWithNewAuthToken(
+        userRecord.id
+      );
       responseJson.status = AUTH_STRINGS.statusCode.ok;
-      responseJson.authToken = await cosmos.createAuthTokenForUser(record.id);
-      responseJson.weeksToCertify = Array.from(record.weeksToCertify);
+      responseJson.authToken = formRecord.authToken;
+      responseJson.weeksToCertify = Array.from(userRecord.weeksToCertify);
+      responseJson.confirmationNumber = formRecord.confirmationNumber;
     }
     return responseJson;
   }
@@ -36,10 +40,14 @@ function createRouter() {
   async function authWithToken(postJson, responseJson) {
     responseJson.status = AUTH_STRINGS.statusCode.userNotFound;
     if (postJson.authToken) {
-      const record = await cosmos.getUserByAuthToken(postJson.authToken);
-      if (record) {
+      const formRecord = await cosmos.getFormDataByAuthToken(
+        postJson.authToken
+      );
+      if (formRecord) {
+        const userRecord = await cosmos.getUserById(formRecord.id);
         responseJson.status = AUTH_STRINGS.statusCode.ok;
-        responseJson.weeksToCertify = Array.from(record.weeksToCertify);
+        responseJson.weeksToCertify = Array.from(userRecord.weeksToCertify);
+        responseJson.confirmationNumber = formRecord.confirmationNumber;
       }
     }
     return responseJson;
@@ -67,6 +75,19 @@ function createRouter() {
       res.status(httpStatus).type("json").send(JSON.stringify(responseJson));
     } catch (e) {
       console.error("Error during /api/data", e);
+      res.status(500).send();
+    }
+  });
+
+  router.post(AUTH_STRINGS.apiPath.save, async (req, res) => {
+    try {
+      const responseJson = await cosmos.saveFormData(
+        req.body.authToken,
+        req.body.formData
+      );
+      res.status(200).type("json").send(JSON.stringify(responseJson));
+    } catch (e) {
+      console.error("Error during /api/save", e);
       res.status(500).send();
     }
   });

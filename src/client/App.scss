@@ -30,7 +30,6 @@ $font-family-sans-serif: "Source Sans Pro", sans-serif !default;
 @import "components/Header/index";
 @import "components/Footer/index";
 @import "components/TabbedContainer/index";
-@import "pages/RetroCertsWhatToExpectPage/index";
 
 h1,
 h2,
@@ -60,6 +59,13 @@ a {
 
 .btn {
   font-weight: bold;
+}
+
+// Style the checkbox in a successful alert.
+.checkmark {
+  height: 2rem;
+  width: 2rem;
+  margin-right: 0.8rem;
 }
 
 // Eliminate whitespace overflow on right half of mobile viewport

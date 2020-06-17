@@ -3,11 +3,45 @@ import { Route, Redirect } from "react-router-dom";
 import React from "react";
 import { userDataPropType, setUserDataPropType } from "../../commonPropTypes";
 import AUTH_STRINGS from "../../../data/authStrings";
+import routes from "../../../data/routes";
 import PageNotFound from "../../pages/PageNotFound";
+import SessionTimer from "../../components/SessionTimer";
 
 function userIsAuthenticated(userData) {
   return !!userData.weeksToCertify;
 }
+
+/**
+ * A component that wraps authorized page components.
+ *
+ * This does the following:
+ * - Passes props from the Route down to the page component.
+ * - Adds the session timer to each page
+ *
+ * @returns {React.ReactElement}
+ */
+function AuthorizedPageWrapper(props) {
+  const { pageComponent: Component, pageProps, computedMatch } = props;
+
+  return (
+    <React.Fragment>
+      <Component routeComputedMatch={computedMatch} {...pageProps} />
+      <SessionTimer
+        action="startOrUpdate"
+        setUserData={pageProps.setUserData}
+      />
+    </React.Fragment>
+  );
+}
+
+AuthorizedPageWrapper.propTypes = {
+  pageComponent: PropTypes.func.isRequired,
+  pageProps: PropTypes.shape({
+    userData: userDataPropType,
+    setUserData: setUserDataPropType,
+  }),
+  computedMatch: PropTypes.object.isRequired,
+};
 
 function RetroCertsRoute(props) {
   const {
@@ -21,18 +55,17 @@ function RetroCertsRoute(props) {
   let routeChild = <div>Loading...</div>;
   if (isProduction) {
     routeChild = <PageNotFound />;
-  } else if (
-    !requiresAuthentication ||
-    userIsAuthenticated(pageProps.userData)
-  ) {
+  } else if (!requiresAuthentication) {
     routeChild = <Component {...pageProps} />;
+  } else if (userIsAuthenticated(pageProps.userData)) {
+    routeChild = <AuthorizedPageWrapper {...props} />;
   } else {
     // This page requires authentication and the user is not authenticated.
     // Try using the auth token if they have one.
     const authToken = sessionStorage.getItem(AUTH_STRINGS.authToken);
     if (!authToken) {
       // The user came here directly, send them back to the login page.
-      routeChild = <Redirect to="/retroactive-certification" push />;
+      routeChild = <Redirect to={routes.retroCertsAuth} push />;
     } else {
       // Try to refresh the data with the auth token.
       fetch(AUTH_STRINGS.apiPath.data, {

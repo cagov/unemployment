@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RetroCertsWeeksToCertifyPage /> has user data 1`] = `
+<div
+  id="overflow-wrapper"
+>
+  <Header />
+  <main>
+    <div
+      className="container p-4"
+    >
+      <h1>
+        Hello
+      </h1>
+      <p>
+        Weeks to certify: 
+        0
+      </p>
+      <Row
+        noGutters={false}
+      >
+        <div
+          className="col-md-4"
+        >
+          <Button
+            active={false}
+            as={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "displayName": "Link",
+                "propTypes": Object {
+                  "innerRef": [Function],
+                  "onClick": [Function],
+                  "replace": [Function],
+                  "target": [Function],
+                  "to": [Function],
+                },
+                "render": [Function],
+              }
+            }
+            className="text-dark bg-light"
+            disabled={false}
+            to="/retroactive-certification/what-to-expect"
+            type="button"
+            variant="outline-secondary"
+          >
+            Back
+          </Button>
+        </div>
+        <div
+          className="col-md-4"
+        >
+          <Button
+            active={false}
+            as={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "displayName": "Link",
+                "propTypes": Object {
+                  "innerRef": [Function],
+                  "onClick": [Function],
+                  "replace": [Function],
+                  "target": [Function],
+                  "to": [Function],
+                },
+                "render": [Function],
+              }
+            }
+            disabled={false}
+            to="/retroactive-certification/certify/2020-02-08"
+            type="button"
+            variant="secondary"
+          >
+            Certify Week 1
+          </Button>
+        </div>
+      </Row>
+      <YesNoQuestion
+        helpText="Aliquam fermentum, tortor in pulvinar."
+        inputName="YesNo1"
+        key="1"
+        questionNumber={1}
+        questionText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque."
+      />
+      <YesNoQuestion
+        helpText="Aliquam fermentum, tortor in pulvinar."
+        inputName="YesNo2"
+        key="2"
+        questionNumber={2}
+        questionText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque."
+      />
+      <YesNoQuestion
+        helpText="Aliquam fermentum, tortor in pulvinar."
+        inputName="YesNo3"
+        key="3"
+        questionNumber={3}
+        questionText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque."
+      />
+    </div>
+  </main>
+  <Footer />
+</div>
+`;

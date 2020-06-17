@@ -36,6 +36,7 @@ describe("<RetroCertsRoute />", () => {
       pageComponent: TestComponent,
       pageProps: {
         userData: {},
+        setUserData: () => {},
       },
       requiresAuthentication: true,
     });
@@ -50,8 +51,10 @@ describe("<RetroCertsRoute />", () => {
       pageComponent: TestComponent,
       pageProps: {
         userData: { weeksToCertify: [0] },
+        setUserData: () => {},
       },
       requiresAuthentication: true,
+      computedMatch: {},
     });
 
     expect(wrapper).toMatchSnapshot();

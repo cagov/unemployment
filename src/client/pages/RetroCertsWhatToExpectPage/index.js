@@ -1,9 +1,11 @@
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
+import Alert from "react-bootstrap/Alert";
 import React from "react";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import { useTranslation } from "react-i18next";
+import routes from "../../../data/routes";
 
 function RetroCertsWhatToExpectPage() {
   const { t } = useTranslation();
@@ -14,10 +16,14 @@ function RetroCertsWhatToExpectPage() {
       <main>
         <div className="container p-4">
           <h1>{t("retrocerts-what-to-expect.title")}</h1>
-          <p className="green-highlight">
-            <span className="white-checkmark">✔</span>
+          <Alert variant="success">
+            <img
+              className="checkmark"
+              src="/images/check-circle-fill.svg"
+              alt={t("iconAltText.checkmark")}
+            />
             {t("retrocerts-what-to-expect.subheader")}
-          </p>
+          </Alert>
 
           <h2>{t("retrocerts-what-to-expect.header1")}</h2>
           <p>{t("retrocerts-what-to-expect.p1a")}</p>
@@ -36,7 +42,7 @@ function RetroCertsWhatToExpectPage() {
           <Button
             variant="secondary"
             as={Link}
-            to="/retroactive-certification/landing"
+            to={routes.retroCertsWeeksToCertify}
           >
             {t("retrocerts-what-to-expect.button-start-certification")}
           </Button>

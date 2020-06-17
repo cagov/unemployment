@@ -1,0 +1,157 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RetroCertsConfirmationPage /> no confirmation number 1`] = `
+<Redirect
+  to="/retroactive-certification/what-to-expect"
+/>
+`;
+
+exports[`<RetroCertsConfirmationPage /> with confirmation number 1`] = `
+<div
+  id="overflow-wrapper"
+>
+  <Header />
+  <main>
+    <div
+      className="container p-4"
+    >
+      <h1>
+        Retroactive Unemployment Certification
+      </h1>
+      <Alert
+        closeLabel="Close alert"
+        show={true}
+        transition={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": Object {
+              "appear": false,
+              "in": false,
+              "mountOnEnter": false,
+              "timeout": 300,
+              "unmountOnExit": false,
+            },
+            "displayName": "Fade",
+            "render": [Function],
+          }
+        }
+        variant="success"
+      >
+        <img
+          alt="checkmark"
+          className="checkmark"
+          src="/images/check-circle-fill.svg"
+        />
+        We have received your certification. Thank you.
+      </Alert>
+      <h2>
+        Save this certification confirmation number
+      </h2>
+      <p>
+        <Trans
+          i18nKey="retrocerts-confirmation.p1"
+          t={[Function]}
+          values={
+            Object {
+              "confirmationNumber": "CONFIRMATION_NUMBER",
+            }
+          }
+        />
+      </p>
+      <h2>
+        Weeks certified
+      </h2>
+      <ul>
+        <li
+          key="week0"
+        >
+          <Trans
+            i18nKey="retrocerts-confirmation.list-item"
+            t={[Function]}
+            values={
+              Object {
+                "formattedDateRange": "02/02/20 - 02/08/20",
+                "number": 1,
+              }
+            }
+          />
+           
+        </li>
+        <li
+          key="week1"
+        >
+          <Trans
+            i18nKey="retrocerts-confirmation.list-item"
+            t={[Function]}
+            values={
+              Object {
+                "formattedDateRange": "02/09/20 - 02/15/20",
+                "number": 2,
+              }
+            }
+          />
+           
+        </li>
+        <li
+          key="week2"
+        >
+          <Trans
+            i18nKey="retrocerts-confirmation.list-item"
+            t={[Function]}
+            values={
+              Object {
+                "formattedDateRange": "02/16/20 - 02/22/20",
+                "number": 3,
+              }
+            }
+          />
+           
+        </li>
+        <li
+          key="week3"
+        >
+          <Trans
+            i18nKey="retrocerts-confirmation.list-item"
+            t={[Function]}
+            values={
+              Object {
+                "formattedDateRange": "03/08/20 - 03/14/20",
+                "number": 4,
+              }
+            }
+          />
+           
+        </li>
+        <li
+          key="week4"
+        >
+          <Trans
+            i18nKey="retrocerts-confirmation.list-item"
+            t={[Function]}
+            values={
+              Object {
+                "formattedDateRange": "03/15/20 - 03/21/20",
+                "number": 5,
+              }
+            }
+          />
+           
+        </li>
+      </ul>
+      <p>
+        <Button
+          active={false}
+          className="text-dark bg-light"
+          disabled={false}
+          onClick={[Function]}
+          type="button"
+          variant="outline-secondary"
+        >
+          Print this page
+        </Button>
+      </p>
+    </div>
+  </main>
+  <Footer />
+</div>
+`;
