@@ -41,9 +41,23 @@ exports[`<RetroCertsCertificationPage /> Certify for 2nd week of 2 1`] = `
           >
             <Button
               active={false}
+              as={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "displayName": "Link",
+                  "propTypes": Object {
+                    "innerRef": [Function],
+                    "onClick": [Function],
+                    "replace": [Function],
+                    "target": [Function],
+                    "to": [Function],
+                  },
+                  "render": [Function],
+                }
+              }
               className="text-dark bg-light"
               disabled={false}
-              href="/retroactive-certification/certify/2020-02-08"
+              to="/retroactive-certification/certify/2020-02-08"
               type="button"
               variant="outline-secondary"
             >
@@ -112,9 +126,23 @@ exports[`<RetroCertsCertificationPage /> Certify for one week of 2 1`] = `
           >
             <Button
               active={false}
+              as={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "displayName": "Link",
+                  "propTypes": Object {
+                    "innerRef": [Function],
+                    "onClick": [Function],
+                    "replace": [Function],
+                    "target": [Function],
+                    "to": [Function],
+                  },
+                  "render": [Function],
+                }
+              }
               className="text-dark bg-light"
               disabled={false}
-              href="/retroactive-certification/landing"
+              to="/retroactive-certification/weeks-to-certify"
               type="button"
               variant="outline-secondary"
             >
@@ -126,8 +154,22 @@ exports[`<RetroCertsCertificationPage /> Certify for one week of 2 1`] = `
           >
             <Button
               active={false}
+              as={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "displayName": "Link",
+                  "propTypes": Object {
+                    "innerRef": [Function],
+                    "onClick": [Function],
+                    "replace": [Function],
+                    "target": [Function],
+                    "to": [Function],
+                  },
+                  "render": [Function],
+                }
+              }
               disabled={false}
-              href="/retroactive-certification/certify/2020-02-15"
+              to="/retroactive-certification/certify2020-02-15"
               type="submit"
               variant="secondary"
             >
@@ -152,6 +194,6 @@ exports[`<RetroCertsCertificationPage /> Certify for one week of 2 1`] = `
 
 exports[`<RetroCertsCertificationPage /> Certify week not found. 1`] = `
 <Redirect
-  to="/retroactive-certification/landing"
+  to="/retroactive-certification/weeks-to-certify"
 />
 `;

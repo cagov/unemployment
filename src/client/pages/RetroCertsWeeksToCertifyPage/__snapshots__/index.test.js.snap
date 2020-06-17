@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<RetroCertsLandingPage /> has user data 1`] = `
+exports[`<RetroCertsWeeksToCertifyPage /> has user data 1`] = `
 <div
   id="overflow-wrapper"
 >
@@ -24,9 +24,23 @@ exports[`<RetroCertsLandingPage /> has user data 1`] = `
         >
           <Button
             active={false}
+            as={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "displayName": "Link",
+                "propTypes": Object {
+                  "innerRef": [Function],
+                  "onClick": [Function],
+                  "replace": [Function],
+                  "target": [Function],
+                  "to": [Function],
+                },
+                "render": [Function],
+              }
+            }
             className="text-dark bg-light"
             disabled={false}
-            href="/retroactive-certification/what-to-expect"
+            to="/retroactive-certification/what-to-expect"
             type="button"
             variant="outline-secondary"
           >
@@ -38,8 +52,22 @@ exports[`<RetroCertsLandingPage /> has user data 1`] = `
         >
           <Button
             active={false}
+            as={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "displayName": "Link",
+                "propTypes": Object {
+                  "innerRef": [Function],
+                  "onClick": [Function],
+                  "replace": [Function],
+                  "target": [Function],
+                  "to": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
-            href="/retroactive-certification/certify/2020-02-08"
+            to="/retroactive-certification/certify/2020-02-08"
             type="button"
             variant="secondary"
           >

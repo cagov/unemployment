@@ -6,6 +6,7 @@ import { useTranslation, Trans } from "react-i18next";
 import { userDataPropType } from "../../commonPropTypes";
 import { toWeekString } from "../../../utils/retroCertsWeeks";
 import AUTH_STRINGS from "../../../data/authStrings";
+import routes from "../../../data/routes";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 
@@ -17,7 +18,7 @@ function RetroCertsConfirmationPage(props) {
   if (!userData.confirmationNumber) {
     // For now, send them to the what-to-expect page, but
     // in the future, go to the first week without data.
-    return <Redirect to="/retroactive-certification/what-to-expect" />;
+    return <Redirect to={routes.retroCertsWhatToExpect} />;
   }
 
   // Log out the user since they are done!

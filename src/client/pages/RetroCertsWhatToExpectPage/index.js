@@ -5,6 +5,7 @@ import React from "react";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import { useTranslation } from "react-i18next";
+import routes from "../../../data/routes";
 
 function RetroCertsWhatToExpectPage() {
   const { t } = useTranslation();
@@ -41,7 +42,7 @@ function RetroCertsWhatToExpectPage() {
           <Button
             variant="secondary"
             as={Link}
-            to="/retroactive-certification/landing"
+            to={routes.retroCertsWeeksToCertify}
           >
             {t("retrocerts-what-to-expect.button-start-certification")}
           </Button>

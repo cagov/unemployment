@@ -1,7 +1,7 @@
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Form from "react-bootstrap/Form";
-import { Redirect, useHistory } from "react-router-dom";
+import { Redirect, useHistory, Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import React from "react";
 
@@ -30,7 +30,7 @@ function RetroCertsCertificationPage(props) {
   if (!weekForUser) {
     // The week from the URL is not a week that the user has
     // to certify for. Send them back to the list of weeks page.
-    return <Redirect to="/retroactive-certification/landing" />;
+    return <Redirect to={routes.retroCertsWeeksToCertify} />;
   }
 
   function handleSubmit() {
@@ -74,11 +74,15 @@ function RetroCertsCertificationPage(props) {
                 <Button
                   variant="outline-secondary"
                   className="text-dark bg-light"
-                  href={
+                  as={Link}
+                  to={
                     weekForUser === 1
-                      ? "/retroactive-certification/landing"
-                      : "/retroactive-certification/certify/" +
-                        fromIndexToPathString(weekForUser - 2)
+                      ? routes.retroCertsWeeksToCertify
+                      : routes.retroCertsCertify +
+                        "/" +
+                        fromIndexToPathString(
+                          userData.weeksToCertify[weekForUser - 2]
+                        )
                   }
                 >
                   {t("retrocerts-certification.button-back")}
@@ -93,10 +97,12 @@ function RetroCertsCertificationPage(props) {
                 {weekForUser !== numberOfWeeks && (
                   <Button
                     variant="secondary"
+                    as={Link}
                     type="submit"
-                    href={`/retroactive-certification/certify/${fromIndexToPathString(
-                      weekForUser
-                    )}`}
+                    to={
+                      routes.retroCertsCertify +
+                      fromIndexToPathString(weekForUser)
+                    }
                   >
                     <Trans
                       t={t}

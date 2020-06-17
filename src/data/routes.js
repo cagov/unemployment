@@ -1,31 +1,37 @@
 /**
- * A single source of truth for the page routes. Include
- * a route's associated component name in its definition
- * below and it'll automatically rendered as a <Route> in
- * the single page app (`client/App.js`).
+ * A single source of truth for the page routes.
+ * Anything not in this file will return a 404.
  */
 const routes = {
-  home: {
-    path: "/",
-    routeProps: {
-      exact: true,
-    },
-  },
-  guide: {
-    path: "/guide",
-  },
-  retroCerts: {
-    path: "/retroactive-certification",
-  },
-  retroCertsWhatToExpect: {
-    path: "/retroactive-certification/what-to-expect",
-  },
-  retroCertsLanding: {
-    path: "/retroactive-certification/landing",
-  },
-  retroCertsConfirmation: {
-    path: "/retroactive-certification/confirmation",
-  },
+  home: "/",
+
+  guide: "/guide",
+  guideBenefits: "/guide/benefits",
+  guideBeforeYouApply: "/guide/before-you-apply",
+  guideHowToApply: "/guide/how-to-apply",
+  guideAfterYouSubmit: "/guide/after-you-submit",
+  guideReceiveBenefits: "/guide/receive-benefits",
+  guideMoreResources: "/guide/more-resources",
+
+  retroCertsAuth: "/retroactive-certification",
+  retroCertsWhatToExpect: "/retroactive-certification/what-to-expect",
+  retroCertsWeeksToCertify: "/retroactive-certification/weeks-to-certify",
+  retroCertsCertify: "/retroactive-certification/certify",
+  retroCertsCertifyWeek0: "/retroactive-certification/certify/2020-02-08",
+  retroCertsCertifyWeek1: "/retroactive-certification/certify/2020-02-15",
+  retroCertsCertifyWeek2: "/retroactive-certification/certify/2020-02-22",
+  retroCertsCertifyWeek3: "/retroactive-certification/certify/2020-02-29",
+  retroCertsCertifyWeek4: "/retroactive-certification/certify/2020-03-07",
+  retroCertsCertifyWeek5: "/retroactive-certification/certify/2020-03-14",
+  retroCertsCertifyWeek6: "/retroactive-certification/certify/2020-03-21",
+  retroCertsCertifyWeek7: "/retroactive-certification/certify/2020-03-28",
+  retroCertsCertifyWeek8: "/retroactive-certification/certify/2020-04-04",
+  retroCertsCertifyWeek9: "/retroactive-certification/certify/2020-04-11",
+  retroCertsCertifyWeek10: "/retroactive-certification/certify/2020-04-18",
+  retroCertsCertifyWeek11: "/retroactive-certification/certify/2020-04-25",
+  retroCertsCertifyWeek12: "/retroactive-certification/certify/2020-05-02",
+  retroCertsCertifyWeek13: "/retroactive-certification/certify/2020-05-09",
+  retroCertsConfirmation: "/retroactive-certification/confirmation",
 };
 
 module.exports = routes;
