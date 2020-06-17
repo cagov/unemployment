@@ -92,6 +92,9 @@ async function getUserByNameEddcanSsn(lastName, eddcan, ssn) {
 }
 
 async function getFormDataByAuthToken(authToken) {
+  if (!authToken) {
+  }
+
   const container = await getContainer(formsContainerName);
 
   const { resources } = await container.items
@@ -119,20 +122,21 @@ async function getFormDataByUserIdWithNewAuthToken(userId) {
   const item = (await getFormDataByUserId(userId)) || {};
   item.id = userId;
   item.authToken = uuidv4();
-  await insertForm(item);
+  await insertItem(item, formsContainerName);
   return item;
 }
 
 async function saveFormData(authToken, formData) {
   const item = await getFormDataByAuthToken(authToken);
+
+  if (!item) {
+    return;
+  }
+
   item.formData = formData;
   item.confirmationNumber = uuidv4();
-  await insertForm(item);
-  return item;
-}
-
-async function insertForm(item) {
   await insertItem(item, formsContainerName);
+  return item;
 }
 
 module.exports = {
