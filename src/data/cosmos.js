@@ -92,9 +92,6 @@ async function getUserByNameEddcanSsn(lastName, eddcan, ssn) {
 }
 
 async function getFormDataByAuthToken(authToken) {
-  if (!authToken) {
-  }
-
   const container = await getContainer(formsContainerName);
 
   const { resources } = await container.items
