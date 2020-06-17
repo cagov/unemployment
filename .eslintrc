@@ -37,6 +37,7 @@
     "jsdoc/require-returns": "warn",
     "jsdoc/require-returns-description": "off",
     "jsdoc/no-undefined-types": "off",
+    "jsdoc/check-tag-names": ["error", { "definedTags": ["jest-environment"] }],
     "no-console": ["error", { "allow": ["error"] }],
     "no-prototype-builtins": "off",
     "object-shorthand": ["error", "properties", { "avoidQuotes": true }],

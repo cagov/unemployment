@@ -69,23 +69,9 @@ exports[`<RetroCertsCertificationPage /> Certify for 2nd week of 2 1`] = `
           >
             <Button
               active={false}
-              as={
-                Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "displayName": "Link",
-                  "propTypes": Object {
-                    "innerRef": [Function],
-                    "onClick": [Function],
-                    "replace": [Function],
-                    "target": [Function],
-                    "to": [Function],
-                  },
-                  "render": [Function],
-                }
-              }
               disabled={false}
-              to="/retroactive-certification/confirmation"
-              type="submit"
+              onClick={[Function]}
+              type="button"
               variant="secondary"
             >
               Submit your certification
