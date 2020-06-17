@@ -169,7 +169,7 @@ exports[`<RetroCertsCertificationPage /> Certify for one week of 2 1`] = `
                 }
               }
               disabled={false}
-              to="/retroactive-certification/certify2020-02-15"
+              to="/retroactive-certification/certify/2020-02-15"
               type="submit"
               variant="secondary"
             >
