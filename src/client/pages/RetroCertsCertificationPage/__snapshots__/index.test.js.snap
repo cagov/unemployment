@@ -56,8 +56,8 @@ exports[`<RetroCertsCertificationPage /> Certify for 2nd week of 2 1`] = `
             <Button
               active={false}
               disabled={false}
-              href="/retroactive-certification/confirmation"
-              type="submit"
+              onClick={[Function]}
+              type="button"
               variant="secondary"
             >
               Submit your certification
