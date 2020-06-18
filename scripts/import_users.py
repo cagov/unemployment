@@ -1,6 +1,8 @@
-import pandas as pd
+#!/usr/bin/env python3
 
-# modin enables using multiple cores for pandas but is "not yet optimized" for all groupby operations,
+import pandas as pd
+# Note on the modin library: modin enables using multiple cores for pandas
+# but is "not yet optimized" for all groupby operations,
 # and isn't optimized for the groupby operation used in this script
 
 # Options to set before running the script
@@ -29,8 +31,8 @@ VALID_WEEKS = [
     "2020-05-02",
     "2020-05-09"
 ]
-WEEKS_TO_INDEX = dict(map(reversed, enumerate(VALID_WEEKS)))  # { "2020-04-15": "0" ... }
-INDEX_TO_WEEKS = dict(enumerate(VALID_WEEKS))  # { "0": "2020-04-15"... }
+WEEKS_TO_INDEX = dict(map(reversed, enumerate(VALID_WEEKS)))  # { "2020-04-15": 0 ... }
+INDEX_TO_WEEKS = dict(enumerate(VALID_WEEKS))  # { 0: "2020-04-15"... }
 VALID_PROGRAMS = ["DUA", "UI"]
 VALID_PLANS = ["UI part time", "UI full time", "PUA full time"]
 SOURCE_DATA_FILENAME = "users.csv"
@@ -73,7 +75,7 @@ def generate_final_file():
         dupe_hashes.to_excel(DUPLICATE_HASHES_FILENAME)
 
 
-    print(f"Importing {intermediate_filename}. Delete it to import {intermediate_filename} instead")
+    print(f"Importing {intermediate_filename}...")
     df = pd.read_pickle(intermediate_filename)
     # insert your code here or choose one of the print_* functions above
     print_duplicate_hashes(df)
