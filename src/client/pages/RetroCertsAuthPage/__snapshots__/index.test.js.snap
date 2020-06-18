@@ -286,7 +286,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
               }
               variant="danger"
             >
-              Human verification expired. Please check the checkbox again.
+              Please check the box next to "I'm not a robot" to continue.
             </Alert>
           </div>
         </Row>
@@ -360,7 +360,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
               }
               variant="danger"
             >
-              Logged out after being idle for 30 minutes.
+              We logged you out after 30 minutes of inactivity. Please provide your information again to certify your weeks.
             </Alert>
           </div>
         </Row>
