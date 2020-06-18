@@ -82,9 +82,9 @@ function RetroCertsAuthPage(props) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        lastName,
-        eddcan,
-        ssn,
+        lastName: lastName.trim(),
+        eddcan: eddcan.trim(),
+        ssn: ssn.trim(),
         reCaptcha: recaptchaRef.current.getValue(),
       }),
     })
