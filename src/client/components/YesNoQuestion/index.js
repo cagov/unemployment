@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Form } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
 
 function YesNoQuestion(props) {
   const {
@@ -10,8 +11,10 @@ function YesNoQuestion(props) {
     inputName,
     onChange,
     ifYes,
+    children,
   } = props;
   const [isYes, setIsYes] = useState(ifYes);
+  const { t } = useTranslation();
 
   function onSelectionChanged(e) {
     const value = e.target.value;
@@ -40,9 +43,9 @@ function YesNoQuestion(props) {
             <Form.Check
               key={value}
               inline
-              label={value}
+              label={t(`yesnoquestion.${value}`)}
               type="radio"
-              id={`radio${value}`}
+              id={`${inputName}radio${value}`}
               onChange={onSelectionChanged}
               name={inputName}
               value={value}
@@ -51,17 +54,7 @@ function YesNoQuestion(props) {
           ))}
         </Form.Group>
       </Form>
-      <div hidden={isYes === null || !isYes}>
-        <p className="text-muted">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-          cursus neque risus, id efficitur felis tincidunt in. Mauris pretium
-          tortor orci, ac pharetra ipsum vulputate quis. Maecenas sit amet
-          libero ut elit ornare imperdiet sit amet ac velit. Nunc sit amet
-          lacinia velit, a tincidunt nibh. Ut porttitor finibus dolor, non porta
-          dolor ornare sed. Aenean nunc dolor, congue quis sodales eu, viverra
-          tristique ipsum. Ut nec iaculis ipsum, at bibendum sem.
-        </p>
-      </div>
+      <div hidden={isYes === null || !isYes}>{children}</div>
     </div>
   );
 }
@@ -73,6 +66,10 @@ YesNoQuestion.propTypes = {
   inputName: PropTypes.string.isRequired,
   onChange: PropTypes.func,
   ifYes: PropTypes.bool,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
 };
 
 export default YesNoQuestion;
