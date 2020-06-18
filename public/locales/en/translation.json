@@ -181,6 +181,10 @@
   "tab5-blockquote1": "For more information, visit <2>CARES Act Provisions<2>.",
   "page-not-found-header": "Page Not Found",
   "page-not-found-text": "The page or form you requested cannot be found. If your link worked before but does not work now, then this page has moved or was deleted as part of our ongoing efforts to make our website work better for you.",
+  "yesnoquestion": {
+    "Yes": "Yes",
+    "No": "No"
+  },
   "retrocert-login": {
     "title": "Retroactive Unemployment Certification",
     "subheader": "Help us find you",
@@ -222,6 +226,7 @@
     "form-header": "Week {{weekForUser}}: {{weekString}}",
     "q-tooSick": "Were you too sick or injured to work?",
     "qhelp-tooSick": "You must be well enough to work every day of the week to receive full benefits.",
+    "q-tooSickNumberOfDays": "Enter the number of days (1 through 7) you were unable to work.",
     "q-fullTime": "Was there any reason (other than sickness or injury) that you could not have accepted full-time work each workday?",
     "qhelp-fullTime": "Available means you are ready and willing to accept work that matches your occupational skills and educational background.",
     "q-didYouLook": "Did you look for work?",
