@@ -6,14 +6,19 @@ exports[`<DaysSickQuestion /> renders the component 1`] = `
 >
   <FormGroup>
     <FormLabel
-      column={true}
-      md="10"
+      column={false}
       srOnly={false}
     >
       Enter the number of days (1 through 7) you were unable to work.
     </FormLabel>
     <FormControl
+      maxLength={1}
       onChange={[Function]}
+      style={
+        Object {
+          "width": "3rem",
+        }
+      }
       type="text"
       value=""
     />

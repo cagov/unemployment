@@ -26,10 +26,16 @@ function DaysSickQuestion(props) {
   return (
     <Form>
       <Form.Group>
-        <Form.Label column md="10">
+        <Form.Label>
           {t("retrocerts-certification.q-tooSickNumberOfDays")}
         </Form.Label>
-        <Form.Control type="text" value={numDays} onChange={onChange} />
+        <Form.Control
+          style={{ width: "3rem" }}
+          type="text"
+          value={numDays}
+          onChange={onChange}
+          maxLength={1}
+        />
       </Form.Group>
     </Form>
   );
