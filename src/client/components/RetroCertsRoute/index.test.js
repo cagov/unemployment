@@ -54,6 +54,7 @@ describe("<RetroCertsRoute />", () => {
         setUserData: () => {},
       },
       requiresAuthentication: true,
+      computedMatch: {},
     });
 
     expect(wrapper).toMatchSnapshot();

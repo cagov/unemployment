@@ -31,6 +31,7 @@ describe("<RetroCertsCertificationPage />", () => {
         userData: {
           status: AUTH_STRINGS.statusCode.ok,
           weeksToCertify: [0, 1],
+          formData: [{ weekIndex: 0, tooSick: false, fullTime: true }],
         },
         setUserData: () => {},
         routeComputedMatch: {
@@ -52,6 +53,26 @@ describe("<RetroCertsCertificationPage />", () => {
         userData: {
           status: AUTH_STRINGS.statusCode.ok,
           weeksToCertify: [0, 1],
+          formData: [
+            {
+              weekIndex: 0,
+              tooSick: true,
+              fullTime: true,
+              didYouLook: true,
+              refuseWork: true,
+              schoolOrTraining: true,
+              workOrEarn: true,
+            },
+            {
+              weekIndex: 0,
+              tooSick: false,
+              fullTime: false,
+              didYouLook: false,
+              refuseWork: false,
+              schoolOrTraining: false,
+              workOrEarn: false,
+            },
+          ],
         },
         setUserData: () => {},
         routeComputedMatch: {

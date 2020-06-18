@@ -28,9 +28,11 @@ exports[`<RetroCertsRoute /> route needing auth with authToken 1`] = `
 
 exports[`<RetroCertsRoute /> route needing auth with user data 1`] = `
 <Route
+  computedMatch={Object {}}
   path="/path"
 >
   <AuthorizedPageWrapper
+    computedMatch={Object {}}
     pageComponent={[Function]}
     pageProps={
       Object {

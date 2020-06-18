@@ -6,10 +6,13 @@ exports[`<App /> renders application with retro-certs 1`] = `
 >
   <Switch>
     <Route
-      component={[Function]}
       exact={true}
       path="/"
-    />
+    >
+      <Redirect
+        to="/guide/benefits"
+      />
+    </Route>
     <Route
       component={[Function]}
       path="/guide"
@@ -25,7 +28,7 @@ exports[`<App /> renders application with retro-certs 1`] = `
           },
         }
       }
-      path="/retroactive-certification/landing"
+      path="/retroactive-certification/weeks-to-certify"
       requiresAuthentication={true}
     />
     <RetroCertsRoute
@@ -96,10 +99,13 @@ exports[`<App /> renders application without retro-certs 1`] = `
 >
   <Switch>
     <Route
-      component={[Function]}
       exact={true}
       path="/"
-    />
+    >
+      <Redirect
+        to="/guide/benefits"
+      />
+    </Route>
     <Route
       component={[Function]}
       path="/guide"
@@ -115,7 +121,7 @@ exports[`<App /> renders application without retro-certs 1`] = `
           },
         }
       }
-      path="/retroactive-certification/landing"
+      path="/retroactive-certification/weeks-to-certify"
       requiresAuthentication={true}
     />
     <RetroCertsRoute

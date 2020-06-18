@@ -7,6 +7,7 @@ import Alert from "react-bootstrap/Alert";
 import ReCAPTCHA from "react-google-recaptcha";
 import React, { useState } from "react";
 import AUTH_STRINGS from "../../../data/authStrings";
+import routes from "../../../data/routes";
 import { userDataPropType, setUserDataPropType } from "../../commonPropTypes";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
@@ -73,43 +74,39 @@ function RetroCertsAuthPage(props) {
 
     setValidated(true);
 
-    if (isValid) {
-      fetch(AUTH_STRINGS.apiPath.login, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          lastName,
-          eddcan,
-          ssn,
-          reCaptcha: recaptchaRef.current.getValue(),
-        }),
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          if (recaptchaRef && recaptchaRef.current) {
-            recaptchaRef.current.reset();
-          }
-          setUserData(data);
-          if (data.authToken) {
-            // Session storage is destroyed when the tab is closed! That's a bit weird.
-            // If we want to allow the user to use multiple tabs, we could sync the
-            // value across tabs:
-            // https://medium.com/@marciomariani/sharing-sessionstorage-between-tabs-5b6f42c6348c
-            sessionStorage.setItem(AUTH_STRINGS.authToken, data.authToken);
-            if (data.confirmationNumber) {
-              // The user has already completed the retro-certs process.
-              history.push("/retroactive-certification/confirmation");
-            } else {
-              history.push("/retroactive-certification/what-to-expect");
-            }
+    if (!isValid) return;
+
+    fetch(AUTH_STRINGS.apiPath.login, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        lastName,
+        eddcan,
+        ssn,
+        reCaptcha: recaptchaRef.current.getValue(),
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        recaptchaRef.current.reset();
+        setUserData(data);
+        if (data.authToken) {
+          // Session storage is destroyed when the tab is closed! That's a bit weird.
+          // If we want to allow the user to use multiple tabs, we could sync the
+          // value across tabs:
+          // https://medium.com/@marciomariani/sharing-sessionstorage-between-tabs-5b6f42c6348c
+          sessionStorage.setItem(AUTH_STRINGS.authToken, data.authToken);
+          if (data.confirmationNumber) {
+            // The user has already completed the retro-certs process.
+            history.push(routes.retroCertsConfirmation);
           } else {
-            sessionStorage.removeItem(AUTH_STRINGS.authToken);
+            history.push(routes.retroCertsWhatToExpect);
           }
-        })
-        .catch((error) => console.error(error));
-    }
+        }
+      })
+      .catch((error) => console.error(error));
   };
 
   const handleChange = (event, setter) => {
