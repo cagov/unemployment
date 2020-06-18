@@ -17,6 +17,7 @@ import AUTH_STRINGS from "../../../data/authStrings";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import YesNoQuestion from "../../components/YesNoQuestion";
+import DaysSickQuestion from "../../components/DaysSickQuestion";
 
 function RetroCertsCertificationPage(props) {
   const { t } = useTranslation();
@@ -50,7 +51,7 @@ function RetroCertsCertificationPage(props) {
   const formDataArray = userData.formData || [];
   const formData = formDataArray[weekForUser - 1] || { weekIndex };
 
-  const handleYesNoChange = (event) => {
+  const handleFormDataChange = (event) => {
     const { value, name } = event;
     formDataArray[weekForUser - 1] = {
       ...formData,
@@ -107,22 +108,39 @@ function RetroCertsCertificationPage(props) {
               values={{ weekForUser, weekString: toWeekString(weekIndex) }}
             />
           </h3>
+          <Row>
+            <Col>
+              <YesNoQuestion
+                key={weekIndex + "tooSick"}
+                questionNumber={1}
+                questionText={t("retrocerts-certification.q-tooSick")}
+                helpText={t("retrocerts-certification.qhelp-tooSick")}
+                ifYes={formData.tooSick}
+                onChange={(e) => handleFormDataChange(e)}
+                inputName="tooSick"
+              >
+                <DaysSickQuestion
+                  numDays={formData.tooSickNumberOfDays}
+                  onChange={(e) => handleFormDataChange(e)}
+                />
+              </YesNoQuestion>
+            </Col>
+          </Row>
           {[
-            "tooSick",
             "fullTime",
             "didYouLook",
             "refuseWork",
             "schoolOrTraining",
             "workOrEarn",
           ].map((name, index) => (
-            <Row key={`${weekIndex}-${index}`}>
+            <Row key={weekIndex + name}>
               <Col>
                 <YesNoQuestion
-                  questionNumber={index + 1}
+                  questionNumber={index + 2}
                   questionText={t(`retrocerts-certification.q-${name}`)}
                   helpText={t(`retrocerts-certification.qhelp-${name}`)}
                   ifYes={formData[name]}
-                  onChange={(e) => handleYesNoChange(e)}
+                  onChange={(e) => handleFormDataChange(e)}
                   inputName={name}
                 />
               </Col>

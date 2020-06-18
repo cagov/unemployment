@@ -8,7 +8,6 @@ import { fromIndexToPathString } from "../../../utils/retroCertsWeeks";
 import routes from "../../../data/routes";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
-import YesNoQuestion from "../../components/YesNoQuestion";
 
 function RetroCertsWeeksToCertifyPage(props) {
   const userData = props.userData;
@@ -46,16 +45,6 @@ function RetroCertsWeeksToCertifyPage(props) {
               </Button>
             </div>
           </Row>
-
-          {[1, 2, 3].map((index) => (
-            <YesNoQuestion
-              key={index}
-              questionNumber={index}
-              questionText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque."
-              helpText="Aliquam fermentum, tortor in pulvinar."
-              inputName={`YesNo${index}`}
-            />
-          ))}
         </div>
       </main>
       <Footer />

@@ -37,7 +37,6 @@ exports[`<RetroCertsCertificationPage /> Certify for 2nd week of 2 1`] = `
         />
       </h3>
       <Row
-        key="1-0"
         noGutters={false}
       >
         <Col>
@@ -45,14 +44,19 @@ exports[`<RetroCertsCertificationPage /> Certify for 2nd week of 2 1`] = `
             helpText="You must be well enough to work every day of the week to receive full benefits."
             ifYes={false}
             inputName="tooSick"
+            key="1tooSick"
             onChange={[Function]}
             questionNumber={1}
             questionText="Were you too sick or injured to work?"
-          />
+          >
+            <DaysSickQuestion
+              onChange={[Function]}
+            />
+          </YesNoQuestion>
         </Col>
       </Row>
       <Row
-        key="1-1"
+        key="1fullTime"
         noGutters={false}
       >
         <Col>
@@ -67,7 +71,7 @@ exports[`<RetroCertsCertificationPage /> Certify for 2nd week of 2 1`] = `
         </Col>
       </Row>
       <Row
-        key="1-2"
+        key="1didYouLook"
         noGutters={false}
       >
         <Col>
@@ -82,7 +86,7 @@ exports[`<RetroCertsCertificationPage /> Certify for 2nd week of 2 1`] = `
         </Col>
       </Row>
       <Row
-        key="1-3"
+        key="1refuseWork"
         noGutters={false}
       >
         <Col>
@@ -97,7 +101,7 @@ exports[`<RetroCertsCertificationPage /> Certify for 2nd week of 2 1`] = `
         </Col>
       </Row>
       <Row
-        key="1-4"
+        key="1schoolOrTraining"
         noGutters={false}
       >
         <Col>
@@ -112,7 +116,7 @@ exports[`<RetroCertsCertificationPage /> Certify for 2nd week of 2 1`] = `
         </Col>
       </Row>
       <Row
-        key="1-5"
+        key="1workOrEarn"
         noGutters={false}
       >
         <Col>
@@ -216,7 +220,6 @@ exports[`<RetroCertsCertificationPage /> Certify for one week of 2 1`] = `
         />
       </h3>
       <Row
-        key="0-0"
         noGutters={false}
       >
         <Col>
@@ -224,14 +227,19 @@ exports[`<RetroCertsCertificationPage /> Certify for one week of 2 1`] = `
             helpText="You must be well enough to work every day of the week to receive full benefits."
             ifYes={false}
             inputName="tooSick"
+            key="0tooSick"
             onChange={[Function]}
             questionNumber={1}
             questionText="Were you too sick or injured to work?"
-          />
+          >
+            <DaysSickQuestion
+              onChange={[Function]}
+            />
+          </YesNoQuestion>
         </Col>
       </Row>
       <Row
-        key="0-1"
+        key="0fullTime"
         noGutters={false}
       >
         <Col>
@@ -246,7 +254,7 @@ exports[`<RetroCertsCertificationPage /> Certify for one week of 2 1`] = `
         </Col>
       </Row>
       <Row
-        key="0-2"
+        key="0didYouLook"
         noGutters={false}
       >
         <Col>
@@ -260,7 +268,7 @@ exports[`<RetroCertsCertificationPage /> Certify for one week of 2 1`] = `
         </Col>
       </Row>
       <Row
-        key="0-3"
+        key="0refuseWork"
         noGutters={false}
       >
         <Col>
@@ -274,7 +282,7 @@ exports[`<RetroCertsCertificationPage /> Certify for one week of 2 1`] = `
         </Col>
       </Row>
       <Row
-        key="0-4"
+        key="0schoolOrTraining"
         noGutters={false}
       >
         <Col>
@@ -288,7 +296,7 @@ exports[`<RetroCertsCertificationPage /> Certify for one week of 2 1`] = `
         </Col>
       </Row>
       <Row
-        key="0-5"
+        key="0workOrEarn"
         noGutters={false}
       >
         <Col>

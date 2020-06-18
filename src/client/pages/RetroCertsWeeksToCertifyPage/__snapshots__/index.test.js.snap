@@ -75,27 +75,6 @@ exports[`<RetroCertsWeeksToCertifyPage /> has user data 1`] = `
           </Button>
         </div>
       </Row>
-      <YesNoQuestion
-        helpText="Aliquam fermentum, tortor in pulvinar."
-        inputName="YesNo1"
-        key="1"
-        questionNumber={1}
-        questionText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque."
-      />
-      <YesNoQuestion
-        helpText="Aliquam fermentum, tortor in pulvinar."
-        inputName="YesNo2"
-        key="2"
-        questionNumber={2}
-        questionText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque."
-      />
-      <YesNoQuestion
-        helpText="Aliquam fermentum, tortor in pulvinar."
-        inputName="YesNo3"
-        key="3"
-        questionNumber={3}
-        questionText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque."
-      />
     </div>
   </main>
   <Footer />
