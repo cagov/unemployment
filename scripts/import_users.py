@@ -5,7 +5,7 @@ import pandas as pd
 
 # Options to set before running the script
 use_subset_of_data = False  # Set to True if you're developing and want operations to take less time
-generate_from_source = True  # Set to True to regenerate intermediate data first, vs loading saved intermediate data
+generate_from_source = False  # Set to True to regenerate intermediate data first, vs loading saved intermediate data
 
 # Increase amount of data displayed in terminal
 pd.set_option('display.max_rows', 500)
@@ -36,9 +36,10 @@ VALID_PLANS = ["UI part time", "UI full time", "PUA full time"]
 SOURCE_DATA_FILENAME = "users.csv"
 INTERMEDIATE_DATA_FILENAME = "intermediate.pkl"
 INTERMEDIATE_DATA_100K_FILENAME = "100k.pkl"  # Generate a smaller file of 100k rows during development process
-DUPLICATE_HASHES_FILENAME = "duplicate_hashes.json"
+DUPLICATE_HASHES_FILENAME = "duplicate_hashes.xlsx"
 FINAL_DATA_100K_FILENAME = "100k.json"
 FINAL_DATA_FILENAME = "users.json"
+FINAL_COLUMN_NAMES = ["willBeNamedId", "seekWorkPlan", "weeksToCertify"]
 
 intermediate_filename = INTERMEDIATE_DATA_FILENAME
 final_filename = FINAL_DATA_FILENAME
@@ -64,19 +65,24 @@ def generate_final_file():
 
     def print_duplicate_hashes(df):
         # df.pivot_table(index=["SHA256_hash"], aggfunc="size").sort_values()
+        df["WeekEndingDates"] = df["WeekEndingDates"].apply(lambda x: [INDEX_TO_WEEKS[y] for y in x])
         dupe_hashes = df[df.duplicated("SHA256_hash", keep=False)]
         dupe_hashes_count = len(dupe_hashes)
         print(f"There are {dupe_hashes_count} duplicate hashes:")
         print(dupe_hashes)
+        dupe_hashes.to_excel(DUPLICATE_HASHES_FILENAME)
+
 
     print(f"Importing {intermediate_filename}. Delete it to import {intermediate_filename} instead")
     df = pd.read_pickle(intermediate_filename)
     # insert your code here or choose one of the print_* functions above
+    print_duplicate_hashes(df)
     df.drop(columns="Program", inplace=True)
-    df.columns = ["willBeNamedId", "seekWorkPlan", "weeksToCertify"]
+    df.columns = FINAL_COLUMN_NAMES
     df.to_json(final_filename, orient="records")
 
-
+# We generate an intermediate file and write it to disk because the groupby is the biggest chunk of work
+# and doesn't need to be repeated unless the source CSV has changed
 def generate_intermediate_file():
     invalid_input = False
 
