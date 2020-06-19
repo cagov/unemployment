@@ -25,6 +25,7 @@ function RetroCertsAuthPage(props) {
   const [eddcan, setEddcan] = useState("");
   const [ssn, setSsn] = useState("");
   const [validated, setValidated] = useState(false);
+  const [showSsn, setShowSsn] = useState(false);
 
   const status = userData && userData.status;
   const errorTransKey = new Map([
@@ -116,9 +117,28 @@ function RetroCertsAuthPage(props) {
   };
 
   useEffect(() => {
-    const ssnRef = document.getElementById("ssn");
-    Inputmask("999-99-9999").mask(ssnRef);
+    const ssnRef = document.getElementById("formSsn");
+    if (showSsn) {
+      Inputmask.remove(ssnRef);
+      Inputmask("ssn").mask(ssnRef);
+      ssnRef.type = "text";
+      // ssnRef.style = "null";
+    } else {
+      Inputmask.remove(ssnRef);
+      Inputmask("9", { repeat: "9", jitMasking: true }).mask(ssnRef);
+      ssnRef.type = "password";
+      // ssnRef.style = "-webkit-text-security: disc;-moz-text-security: circle;text-security: circle;";
+    }
   });
+
+  function toggleSsn() {
+    const toggle = !showSsn;
+    setShowSsn(toggle);
+  }
+
+  function getSsnToggleText() {
+    return showSsn ? t("hide") : t("show");
+  }
 
   return (
     <div id="overflow-wrapper">
@@ -166,11 +186,15 @@ function RetroCertsAuthPage(props) {
                   value={ssn}
                   onChange={(e) => handleChange(e, setSsn)}
                   required
-                  id="ssn"
                 />
                 <Form.Control.Feedback type="invalid">
                   {t("retrocert-login.ssn-required-error")}
                 </Form.Control.Feedback>
+                <div className="d-flex justify-content-end">
+                  <Button onClick={toggleSsn} variant="link" size="sm">
+                    {getSsnToggleText()}
+                  </Button>
+                </div>
               </Form.Group>
             </Row>
             <Row>

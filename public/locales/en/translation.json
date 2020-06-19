@@ -253,5 +253,7 @@
     "header2": "Weeks certified",
     "list-item": "Week {{number}}: {{formattedDateRange}}",
     "button-print": "Print this page"
-  }
+  },
+  "show":"Show",
+  "hide":"Hide"
 }

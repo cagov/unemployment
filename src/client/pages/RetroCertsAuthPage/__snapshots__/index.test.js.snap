@@ -94,7 +94,6 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
             <FormControl
               onChange={[Function]}
               required={true}
-              type="password"
               value=""
             />
             <Feedback
@@ -102,6 +101,20 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
             >
               Please provide your SSN.
             </Feedback>
+            <div
+              className="d-flex justify-content-end"
+            >
+              <Button
+                active={false}
+                disabled={false}
+                onClick={[Function]}
+                size="sm"
+                type="button"
+                variant="link"
+              >
+                Show
+              </Button>
+            </div>
           </FormGroup>
         </Row>
         <Row
@@ -234,7 +247,6 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
             <FormControl
               onChange={[Function]}
               required={true}
-              type="password"
               value=""
             />
             <Feedback
@@ -242,6 +254,20 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
             >
               Please provide your SSN.
             </Feedback>
+            <div
+              className="d-flex justify-content-end"
+            >
+              <Button
+                active={false}
+                disabled={false}
+                onClick={[Function]}
+                size="sm"
+                type="button"
+                variant="link"
+              >
+                Show
+              </Button>
+            </div>
           </FormGroup>
         </Row>
         <Row
@@ -432,7 +458,6 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
             <FormControl
               onChange={[Function]}
               required={true}
-              type="password"
               value=""
             />
             <Feedback
@@ -440,6 +465,20 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
             >
               Please provide your SSN.
             </Feedback>
+            <div
+              className="d-flex justify-content-end"
+            >
+              <Button
+                active={false}
+                disabled={false}
+                onClick={[Function]}
+                size="sm"
+                type="button"
+                variant="link"
+              >
+                Show
+              </Button>
+            </div>
           </FormGroup>
         </Row>
         <Row
@@ -572,7 +611,6 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
             <FormControl
               onChange={[Function]}
               required={true}
-              type="password"
               value=""
             />
             <Feedback
@@ -580,6 +618,20 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
             >
               Please provide your SSN.
             </Feedback>
+            <div
+              className="d-flex justify-content-end"
+            >
+              <Button
+                active={false}
+                disabled={false}
+                onClick={[Function]}
+                size="sm"
+                type="button"
+                variant="link"
+              >
+                Show
+              </Button>
+            </div>
           </FormGroup>
         </Row>
         <Row
