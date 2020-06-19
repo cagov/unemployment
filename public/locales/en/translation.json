@@ -228,9 +228,26 @@
     "title":"Retroactive Unemployment Certification",
     "p1-multiple": "You are on Week {{weekForUser}} of {{numberOfWeeks}} to certify.",
     "form-header": "Week {{weekForUser}}: {{weekString}}",
-    "q-tooSick": "Were you too sick or injured to work?",
-    "qhelp-tooSick": "You must be well enough to work every day of the week to receive full benefits.",
-    "q-tooSickNumberOfDays": "Enter the number of days (1 through 7) you were unable to work.",
+    "questions": {
+      "ui-full-time": {
+        "tooSick": "Were you too sick or injured to work?",
+        "help-tooSick": "You must be well enough to work everyday of the week to receive full benefits. Check ‘yes’ if a workday was missed due to being sick or injured.",
+        "tooSickNumberOfDays": "If Yes, enter the number of days (1 - 7) you were unable to work.",
+        "help-tooSickNumberOfDays": "You must report the numbers of days that you could not work during this week. Unemployment benefits are paid according to the number of days you are able to work this week."
+      },
+      "ui-part-time": {
+        "tooSick": "Were you too sick or injured to work?",
+        "help-tooSick": "You must be well enough to work everyday of the week to receive full benefits. Check ‘yes’ if a workday was missed due to being sick or injured.",
+        "tooSickNumberOfDays": "If Yes, enter the number of days (1 - 7) you were unable to work.",
+        "help-tooSickNumberOfDays": "You must report the numbers of days that you could not work during this week. Unemployment benefits are paid according to the number of days you are able to work this week."
+      },
+      "pua-full-time": {
+        "tooSick": "Were you too sick or injured to work for reasons other than disaster?",
+        "help-tooSick": "You must be well enough to receive full benefits. Other than disaster, was a workday missed due to sickness or injury?",
+        "tooSickNumberOfDays": "If Yes, enter the number of days (1 - 7) you were unable to work.",
+        "help-tooSickNumberOfDays": "You must report the number of days that work was missed."
+      }
+    },
     "q-fullTime": "Was there any reason (other than sickness or injury) that you could not have accepted full-time work each workday?",
     "qhelp-fullTime": "Available means you are ready and willing to accept work that matches your occupational skills and educational background.",
     "q-didYouLook": "Did you look for work?",

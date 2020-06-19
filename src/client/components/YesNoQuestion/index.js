@@ -35,10 +35,12 @@ function YesNoQuestion(props) {
 
   return (
     <div className="bg-light p-2 m-2">
-      {questionNumber}.&nbsp;{questionText}
-      <p className="ml-3">{helpText}</p>
       <Form>
         <Form.Group>
+          <Form.Label>
+            {questionNumber}.&nbsp;{questionText}
+          </Form.Label>
+          <Form.Text muted>{helpText}</Form.Text>
           {["Yes", "No"].map((value) => (
             <Form.Check
               key={value}

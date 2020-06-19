@@ -32,6 +32,7 @@ function createRouter() {
       responseJson.status = AUTH_STRINGS.statusCode.ok;
       responseJson.authToken = formRecord.authToken;
       responseJson.weeksToCertify = Array.from(userRecord.weeksToCertify);
+      responseJson.seekWorkPlan = Array.from(userRecord.seekWorkPlan);
       responseJson.confirmationNumber = formRecord.confirmationNumber;
     }
     return responseJson;
@@ -47,6 +48,7 @@ function createRouter() {
         const userRecord = await cosmos.getUserById(formRecord.id);
         responseJson.status = AUTH_STRINGS.statusCode.ok;
         responseJson.weeksToCertify = Array.from(userRecord.weeksToCertify);
+        responseJson.seekWorkPlan = Array.from(userRecord.seekWorkPlan);
         responseJson.confirmationNumber = formRecord.confirmationNumber;
       }
     }

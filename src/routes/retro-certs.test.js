@@ -80,20 +80,29 @@ describe("Router: API tests", () => {
       [
         { lastName: "Last", eddcan: "1234567890", ssn: "123456789" },
         true,
-        { id: "hash", weeksToCertify: [0, 1] },
+        {
+          id: "hash",
+          weeksToCertify: [0, 1],
+          seekWorkPlan: ["UI full time", "UI part time"],
+        },
         { authToken: "test auth token" },
         200,
         {
           status: AUTH_STRINGS.statusCode.ok,
           authToken: "test auth token",
           weeksToCertify: [0, 1],
+          seekWorkPlan: ["UI full time", "UI part time"],
         },
       ],
       // User has correct credentails, but recaptcha is not valid.
       [
         { lastName: "Last", eddcan: "1234567890", ssn: "123456789" },
         false,
-        { id: "hash", weeksToCertify: [0, 1] },
+        {
+          id: "hash",
+          weeksToCertify: [0, 1],
+          seekWorkPlan: ["UI full time", "UI part time"],
+        },
         { authToken: "test auth token" },
         401,
         {
@@ -168,21 +177,27 @@ describe("Router: API tests", () => {
       [
         { authToken: "valid uuid" },
         { id: "hash", authToken: "auth token" },
-        { id: "hash", weeksToCertify: [0, 1] },
+        {
+          id: "hash",
+          weeksToCertify: [0, 1],
+          seekWorkPlan: ["UI full time", "UI part time"],
+        },
         200,
         {
           status: AUTH_STRINGS.statusCode.ok,
           weeksToCertify: [0, 1],
+          seekWorkPlan: ["UI full time", "UI part time"],
         },
       ],
       [
         { authToken: "valid uuid" },
         { id: "hash", authToken: "auth token" },
-        { id: "hash", weeksToCertify: [2] },
+        { id: "hash", weeksToCertify: [2], seekWorkPlan: ["PUA full time"] },
         200,
         {
           status: AUTH_STRINGS.statusCode.ok,
           weeksToCertify: [2],
+          seekWorkPlan: ["PUA full time"],
         },
       ],
     ];

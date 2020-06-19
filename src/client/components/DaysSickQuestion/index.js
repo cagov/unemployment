@@ -1,11 +1,8 @@
 import Form from "react-bootstrap/Form";
 import PropTypes from "prop-types";
 import React, { useState } from "react";
-import { useTranslation } from "react-i18next";
 
 function DaysSickQuestion(props) {
-  const { t } = useTranslation();
-
   const [numDays, setNumDays] = useState(
     props.numDays !== undefined ? String(props.numDays) : ""
   );
@@ -26,9 +23,8 @@ function DaysSickQuestion(props) {
   return (
     <Form>
       <Form.Group>
-        <Form.Label>
-          {t("retrocerts-certification.q-tooSickNumberOfDays")}
-        </Form.Label>
+        <Form.Label>{props.questionText}</Form.Label>
+        <Form.Text muted>{props.helpText}</Form.Text>
         <Form.Control
           style={{ width: "3rem" }}
           type="text"
@@ -44,6 +40,8 @@ function DaysSickQuestion(props) {
 DaysSickQuestion.propTypes = {
   onChange: PropTypes.func.isRequired,
   numDays: PropTypes.number,
+  questionText: PropTypes.string,
+  helpText: PropTypes.string,
 };
 
 export default DaysSickQuestion;
