@@ -58,17 +58,26 @@ exports[`<RetroCertsCertificationPage /> Certify for 2nd week of 2 1`] = `
         </Col>
       </Row>
       <Row
-        key="1fullTime"
+        key="1couldNotAcceptWork"
         noGutters={false}
       >
         <Col>
           <YesNoQuestion
-            helpText="Available means you are ready and willing to accept work that matches your occupational skills and educational background."
-            ifYes={false}
-            inputName="fullTime"
+            helpText={
+              <Trans
+                i18nKey="retrocerts-certification.questions.ui-part-time.help-couldNotAcceptWork"
+                t={[Function]}
+              />
+            }
+            inputName="couldNotAcceptWork"
             onChange={[Function]}
             questionNumber={2}
-            questionText="Was there any reason (other than sickness or injury) that you could not have accepted full-time work each workday?"
+            questionText={
+              <Trans
+                i18nKey="retrocerts-certification.questions.ui-part-time.couldNotAcceptWork"
+                t={[Function]}
+              />
+            }
           />
         </Col>
       </Row>
@@ -78,12 +87,22 @@ exports[`<RetroCertsCertificationPage /> Certify for 2nd week of 2 1`] = `
       >
         <Col>
           <YesNoQuestion
-            helpText="You must look for work, according to your Notice of Unemployment Insurance Award. Work searches may include in-person, mail, telephone, or Internet contacts with employers."
+            helpText={
+              <Trans
+                i18nKey="retrocerts-certification.questions.ui-part-time.help-didYouLook"
+                t={[Function]}
+              />
+            }
             ifYes={false}
             inputName="didYouLook"
             onChange={[Function]}
             questionNumber={3}
-            questionText="Did you look for work?"
+            questionText={
+              <Trans
+                i18nKey="retrocerts-certification.questions.ui-part-time.didYouLook"
+                t={[Function]}
+              />
+            }
           />
         </Col>
       </Row>
@@ -93,12 +112,22 @@ exports[`<RetroCertsCertificationPage /> Certify for 2nd week of 2 1`] = `
       >
         <Col>
           <YesNoQuestion
-            helpText="You will not be penalized for however you answer this question, due to COVID-19."
+            helpText={
+              <Trans
+                i18nKey="retrocerts-certification.questions.ui-part-time.help-refuseWork"
+                t={[Function]}
+              />
+            }
             ifYes={false}
             inputName="refuseWork"
             onChange={[Function]}
             questionNumber={4}
-            questionText="Did you refuse any work?"
+            questionText={
+              <Trans
+                i18nKey="retrocerts-certification.questions.ui-part-time.refuseWork"
+                t={[Function]}
+              />
+            }
           />
         </Col>
       </Row>
@@ -108,12 +137,22 @@ exports[`<RetroCertsCertificationPage /> Certify for 2nd week of 2 1`] = `
       >
         <Col>
           <YesNoQuestion
-            helpText="Answer ‘yes’ only if school or training began during this week."
+            helpText={
+              <Trans
+                i18nKey="retrocerts-certification.questions.ui-part-time.help-schoolOrTraining"
+                t={[Function]}
+              />
+            }
             ifYes={false}
             inputName="schoolOrTraining"
             onChange={[Function]}
             questionNumber={5}
-            questionText="Did you begin attending any kind of school or training?"
+            questionText={
+              <Trans
+                i18nKey="retrocerts-certification.questions.ui-part-time.schoolOrTraining"
+                t={[Function]}
+              />
+            }
           />
         </Col>
       </Row>
@@ -247,17 +286,26 @@ exports[`<RetroCertsCertificationPage /> Certify for one week of 2 1`] = `
         </Col>
       </Row>
       <Row
-        key="0fullTime"
+        key="0couldNotAcceptWork"
         noGutters={false}
       >
         <Col>
           <YesNoQuestion
-            helpText="Available means you are ready and willing to accept work that matches your occupational skills and educational background."
-            ifYes={true}
-            inputName="fullTime"
+            helpText={
+              <Trans
+                i18nKey="retrocerts-certification.questions.ui-full-time.help-couldNotAcceptWork"
+                t={[Function]}
+              />
+            }
+            inputName="couldNotAcceptWork"
             onChange={[Function]}
             questionNumber={2}
-            questionText="Was there any reason (other than sickness or injury) that you could not have accepted full-time work each workday?"
+            questionText={
+              <Trans
+                i18nKey="retrocerts-certification.questions.ui-full-time.couldNotAcceptWork"
+                t={[Function]}
+              />
+            }
           />
         </Col>
       </Row>
@@ -267,11 +315,21 @@ exports[`<RetroCertsCertificationPage /> Certify for one week of 2 1`] = `
       >
         <Col>
           <YesNoQuestion
-            helpText="You must look for work, according to your Notice of Unemployment Insurance Award. Work searches may include in-person, mail, telephone, or Internet contacts with employers."
+            helpText={
+              <Trans
+                i18nKey="retrocerts-certification.questions.ui-full-time.help-didYouLook"
+                t={[Function]}
+              />
+            }
             inputName="didYouLook"
             onChange={[Function]}
             questionNumber={3}
-            questionText="Did you look for work?"
+            questionText={
+              <Trans
+                i18nKey="retrocerts-certification.questions.ui-full-time.didYouLook"
+                t={[Function]}
+              />
+            }
           />
         </Col>
       </Row>
@@ -281,11 +339,21 @@ exports[`<RetroCertsCertificationPage /> Certify for one week of 2 1`] = `
       >
         <Col>
           <YesNoQuestion
-            helpText="You will not be penalized for however you answer this question, due to COVID-19."
+            helpText={
+              <Trans
+                i18nKey="retrocerts-certification.questions.ui-full-time.help-refuseWork"
+                t={[Function]}
+              />
+            }
             inputName="refuseWork"
             onChange={[Function]}
             questionNumber={4}
-            questionText="Did you refuse any work?"
+            questionText={
+              <Trans
+                i18nKey="retrocerts-certification.questions.ui-full-time.refuseWork"
+                t={[Function]}
+              />
+            }
           />
         </Col>
       </Row>
@@ -295,11 +363,21 @@ exports[`<RetroCertsCertificationPage /> Certify for one week of 2 1`] = `
       >
         <Col>
           <YesNoQuestion
-            helpText="Answer ‘yes’ only if school or training began during this week."
+            helpText={
+              <Trans
+                i18nKey="retrocerts-certification.questions.ui-full-time.help-schoolOrTraining"
+                t={[Function]}
+              />
+            }
             inputName="schoolOrTraining"
             onChange={[Function]}
             questionNumber={5}
-            questionText="Did you begin attending any kind of school or training?"
+            questionText={
+              <Trans
+                i18nKey="retrocerts-certification.questions.ui-full-time.schoolOrTraining"
+                t={[Function]}
+              />
+            }
           />
         </Col>
       </Row>
