@@ -21,6 +21,7 @@ import YesNoQuestion from "../../components/YesNoQuestion";
 import DaysSickQuestion from "../../components/DaysSickQuestion";
 import EmployersQuestions from "../../components/EmployersQuestions";
 import DisasterQuestion from "../../components/DisasterQuestion";
+import PerjuryCheckbox from "../../components/PerjuryCheckbox";
 
 function RetroCertsCertificationPage(props) {
   const { t } = useTranslation();
@@ -252,6 +253,8 @@ function RetroCertsCertificationPage(props) {
                 />
               </YesNoQuestion>
             )}
+            {weekForUser === numberOfWeeks && <PerjuryCheckbox />}
+
             <Form.Row>
               <Col>
                 <Button

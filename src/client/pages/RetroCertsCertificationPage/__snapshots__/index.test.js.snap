@@ -170,6 +170,7 @@ exports[`<RetroCertsCertificationPage /> Certify for 2nd week of 2 1`] = `
             onChange={[Function]}
           />
         </YesNoQuestion>
+        <PerjuryCheckbox />
         <FormRow>
           <Col>
             <Button

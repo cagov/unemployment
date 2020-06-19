@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PerjuryCheckbox /> renders the component 1`] = `
+<FormGroup
+  className="prejury-checkbox"
+>
+  <FormText
+    as="h3"
+  >
+    Acknowledgement
+  </FormText>
+  <FormText
+    as="p"
+  >
+    I understand the questions I answered through this automated system. I know the law provides penalties if I make false statements or  withhold facts to receive benefits; and my answers are true and correct. I declare under penalty of perjury that I am a US Citizen or National; or an Alien in satisfactory immigration status and permitted to work by the United States Citizenship and Immigration Service. I understand when submitting my request for benefits my submission is considered the same as my written signature.
+  </FormText>
+  <FormRow>
+    <Col
+      md="auto"
+    >
+      <FormCheck
+        checked={false}
+        disabled={false}
+        inline={false}
+        isInvalid={false}
+        isValid={false}
+        onChange={[Function]}
+        required={true}
+        title=""
+        type="checkbox"
+      />
+    </Col>
+    <Col>
+      <FormLabel
+        column={false}
+        srOnly={false}
+      >
+        You must indicate your acceptance of the statement by checking the box before your certification can be submitted.
+      </FormLabel>
+    </Col>
+  </FormRow>
+</FormGroup>
+`;
