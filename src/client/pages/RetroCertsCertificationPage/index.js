@@ -14,6 +14,7 @@ import {
 import mockedFormData from "../../../data/mockedFormData";
 import routes from "../../../data/routes";
 import AUTH_STRINGS from "../../../data/authStrings";
+import seekWorkPlan from "../../../data/seekWorkPlan";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import YesNoQuestion from "../../components/YesNoQuestion";
@@ -52,6 +53,9 @@ function RetroCertsCertificationPage(props) {
   const formDataArray = userData.formData || [];
   const formData = formDataArray[weekForUser - 1] || { weekIndex };
 
+  const weekSeekWorkPlan =
+    userData.seekWorkPlan[userData.weeksToCertify.indexOf(weekIndex)];
+
   const handleFormDataChange = (event) => {
     const { value, name } = event;
     formDataArray[weekForUser - 1] = {
@@ -75,6 +79,18 @@ function RetroCertsCertificationPage(props) {
     });
   };
 
+  function questionText(transKey) {
+    if (weekSeekWorkPlan === seekWorkPlan.uiPartTime) {
+      return "retrocerts-certification.questions.ui-part-time." + transKey;
+    }
+    if (weekSeekWorkPlan === seekWorkPlan.uiFullTime) {
+      return "retrocerts-certification.questions.ui-full-time." + transKey;
+    }
+    if (weekSeekWorkPlan === seekWorkPlan.puaFullTime) {
+      return "retrocerts-certification.questions.pua-full-time." + transKey;
+    }
+  }
+
   function handleSubmit() {
     fetch(AUTH_STRINGS.apiPath.save, {
       method: "POST",
@@ -97,6 +113,11 @@ function RetroCertsCertificationPage(props) {
       })
       .catch((error) => console.error(error));
   }
+
+  const questionsTwoThroughFive =
+    weekSeekWorkPlan === seekWorkPlan.puaFullTime
+      ? ["couldNotAcceptWork", "didYouLook", "refuseWork", "otherBenefits"]
+      : ["couldNotAcceptWork", "didYouLook", "refuseWork", "schoolOrTraining"];
 
   return (
     <div id="overflow-wrapper">
@@ -125,8 +146,8 @@ function RetroCertsCertificationPage(props) {
               <YesNoQuestion
                 key={weekIndex + "tooSick"}
                 questionNumber={1}
-                questionText={t("retrocerts-certification.q-tooSick")}
-                helpText={t("retrocerts-certification.qhelp-tooSick")}
+                questionText={t(questionText("tooSick"))}
+                helpText={t(questionText("help-tooSick"))}
                 ifYes={formData.tooSick}
                 onChange={(e) => handleFormDataChange(e)}
                 inputName="tooSick"
@@ -134,26 +155,28 @@ function RetroCertsCertificationPage(props) {
                 <DaysSickQuestion
                   numDays={formData.tooSickNumberOfDays}
                   onChange={(e) => handleFormDataChange(e)}
+                  questionText={t(questionText("tooSickNumberOfDays"))}
+                  helpText={t(questionText("help-tooSickNumberOfDays"))}
                 />
               </YesNoQuestion>
             </Col>
           </Row>
-          {["fullTime", "didYouLook", "refuseWork", "schoolOrTraining"].map(
-            (name, index) => (
-              <Row key={weekIndex + name}>
-                <Col>
-                  <YesNoQuestion
-                    questionNumber={index + 2}
-                    questionText={t(`retrocerts-certification.q-${name}`)}
-                    helpText={t(`retrocerts-certification.qhelp-${name}`)}
-                    ifYes={formData[name]}
-                    onChange={(e) => handleFormDataChange(e)}
-                    inputName={name}
-                  />
-                </Col>
-              </Row>
-            )
-          )}
+          {questionsTwoThroughFive.map((name, index) => (
+            <Row key={weekIndex + name}>
+              <Col>
+                <YesNoQuestion
+                  questionNumber={index + 2}
+                  questionText={<Trans t={t} i18nKey={questionText(name)} />}
+                  helpText={
+                    <Trans t={t} i18nKey={questionText(`help-${name}`)} />
+                  }
+                  ifYes={formData[name]}
+                  onChange={(e) => handleFormDataChange(e)}
+                  inputName={name}
+                />
+              </Col>
+            </Row>
+          ))}
           <Row>
             <Col>
               <YesNoQuestion
