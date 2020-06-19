@@ -9,8 +9,13 @@ exports[`<DaysSickQuestion /> renders the component 1`] = `
       column={false}
       srOnly={false}
     >
-      Enter the number of days (1 through 7) you were unable to work.
+      If Yes, enter the number of days (1 - 7) you were unable to work.
     </FormLabel>
+    <FormText
+      muted={true}
+    >
+      You must report the numbers of days that you could not work during this week.
+    </FormText>
     <FormControl
       maxLength={1}
       onChange={[Function]}

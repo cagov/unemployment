@@ -35,10 +35,12 @@ function YesNoQuestion(props) {
 
   return (
     <div className="bg-light p-2 m-2">
-      {questionNumber}.&nbsp;{questionText}
-      <p className="ml-3">{helpText}</p>
       <Form>
         <Form.Group>
+          <Form.Label>
+            {questionNumber}.&nbsp;{questionText}
+          </Form.Label>
+          <Form.Text muted>{helpText}</Form.Text>
           {["Yes", "No"].map((value) => (
             <Form.Check
               key={value}
@@ -61,8 +63,10 @@ function YesNoQuestion(props) {
 
 YesNoQuestion.propTypes = {
   questionNumber: PropTypes.number.isRequired,
-  questionText: PropTypes.string.isRequired,
-  helpText: PropTypes.string.isRequired,
+  questionText: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
+    .isRequired,
+  helpText: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
+    .isRequired,
   inputName: PropTypes.string.isRequired,
   onChange: PropTypes.func,
   ifYes: PropTypes.bool,
