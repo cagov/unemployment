@@ -106,7 +106,7 @@ exports[`<RetroCertsCertificationPage /> Certify for 2nd week of 2 1`] = `
       >
         <Col>
           <YesNoQuestion
-            helpText="Answer ‘yes’ only if school or training <strong>began</strong> during this week."
+            helpText="Answer ‘yes’ only if school or training began during this week."
             ifYes={false}
             inputName="schoolOrTraining"
             onChange={[Function]}
@@ -116,7 +116,6 @@ exports[`<RetroCertsCertificationPage /> Certify for 2nd week of 2 1`] = `
         </Col>
       </Row>
       <Row
-        key="1workOrEarn"
         noGutters={false}
       >
         <Col>
@@ -124,10 +123,15 @@ exports[`<RetroCertsCertificationPage /> Certify for 2nd week of 2 1`] = `
             helpText="Look at the date each week begins and ends. If you performed any work during this week, all earnings must be reported regardless if payment has been received."
             ifYes={false}
             inputName="workOrEarn"
+            key="1workOrEarn"
             onChange={[Function]}
             questionNumber={6}
             questionText="Did you work or earn any money, whether you were paid or not?"
-          />
+          >
+            <EmployersQuestions
+              onChange={[Function]}
+            />
+          </YesNoQuestion>
         </Col>
       </Row>
       <Row
@@ -287,7 +291,7 @@ exports[`<RetroCertsCertificationPage /> Certify for one week of 2 1`] = `
       >
         <Col>
           <YesNoQuestion
-            helpText="Answer ‘yes’ only if school or training <strong>began</strong> during this week."
+            helpText="Answer ‘yes’ only if school or training began during this week."
             inputName="schoolOrTraining"
             onChange={[Function]}
             questionNumber={5}
@@ -296,17 +300,21 @@ exports[`<RetroCertsCertificationPage /> Certify for one week of 2 1`] = `
         </Col>
       </Row>
       <Row
-        key="0workOrEarn"
         noGutters={false}
       >
         <Col>
           <YesNoQuestion
             helpText="Look at the date each week begins and ends. If you performed any work during this week, all earnings must be reported regardless if payment has been received."
             inputName="workOrEarn"
+            key="0workOrEarn"
             onChange={[Function]}
             questionNumber={6}
             questionText="Did you work or earn any money, whether you were paid or not?"
-          />
+          >
+            <EmployersQuestions
+              onChange={[Function]}
+            />
+          </YesNoQuestion>
         </Col>
       </Row>
       <Row

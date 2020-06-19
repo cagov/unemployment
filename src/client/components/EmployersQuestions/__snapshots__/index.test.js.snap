@@ -1,0 +1,227 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<EmployersQuestions /> renders the component 1`] = `
+<div>
+  <p>
+    Tell us about your income.
+  </p>
+  <div
+    key="employerData00000000"
+  >
+    <hr />
+    <Row
+      className="align-items-baseline"
+      noGutters={false}
+    >
+      <Col
+        md="auto"
+      >
+        <h3>
+          <Trans
+            i18nKey="retrocerts-certification.employers.heading"
+            t={[Function]}
+            values={
+              Object {
+                "incomeNumber": 1,
+              }
+            }
+          />
+        </h3>
+      </Col>
+    </Row>
+    <EmployerQuestions
+      employerData={
+        Object {
+          "address1": "",
+          "address2": "",
+          "city": "",
+          "employerName": "",
+          "grossEarnings": "",
+          "id": "00000000",
+          "lastDateWorked": "",
+          "moreDetails": "",
+          "reason": "still-working",
+          "state": "",
+          "totalHoursWorked": "",
+          "zipcode": "",
+        }
+      }
+      onChange={[Function]}
+    />
+  </div>
+  <hr />
+  <Row
+    noGutters={false}
+  >
+    <Col
+      md="auto"
+    >
+      <NavLink
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "SafeAnchor",
+            "render": [Function],
+          }
+        }
+        disabled={false}
+        onClick={[Function]}
+      >
+        + Add another source of income
+      </NavLink>
+    </Col>
+  </Row>
+</div>
+`;
+
+exports[`<EmployersQuestions /> renders with 2 income sources 1`] = `
+<div>
+  <p>
+    Tell us about your income.
+  </p>
+  <div
+    key="employerData12345678"
+  >
+    <hr />
+    <Row
+      className="align-items-baseline"
+      noGutters={false}
+    >
+      <Col
+        md="auto"
+      >
+        <h3>
+          <Trans
+            i18nKey="retrocerts-certification.employers.heading"
+            t={[Function]}
+            values={
+              Object {
+                "incomeNumber": 1,
+              }
+            }
+          />
+        </h3>
+      </Col>
+      <Col
+        md="auto"
+      >
+        <NavLink
+          as={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "displayName": "SafeAnchor",
+              "render": [Function],
+            }
+          }
+          disabled={false}
+          onClick={[Function]}
+        >
+          Remove this source of income
+        </NavLink>
+      </Col>
+    </Row>
+    <EmployerQuestions
+      employerData={
+        Object {
+          "address1": "e1 - address 1",
+          "address2": "",
+          "city": "city",
+          "employerName": "employer name 1",
+          "grossEarnings": "$200",
+          "id": "12345678",
+          "lastDateWorked": "02/22/2020",
+          "moreDetails": "",
+          "reason": "still-working",
+          "state": "CA",
+          "totalHoursWorked": "10",
+          "zipcode": "94100",
+        }
+      }
+      onChange={[Function]}
+    />
+  </div>
+  <div
+    key="employerData22222222"
+  >
+    <hr />
+    <Row
+      className="align-items-baseline"
+      noGutters={false}
+    >
+      <Col
+        md="auto"
+      >
+        <h3>
+          <Trans
+            i18nKey="retrocerts-certification.employers.heading"
+            t={[Function]}
+            values={
+              Object {
+                "incomeNumber": 2,
+              }
+            }
+          />
+        </h3>
+      </Col>
+      <Col
+        md="auto"
+      >
+        <NavLink
+          as={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "displayName": "SafeAnchor",
+              "render": [Function],
+            }
+          }
+          disabled={false}
+          onClick={[Function]}
+        >
+          Remove this source of income
+        </NavLink>
+      </Col>
+    </Row>
+    <EmployerQuestions
+      employerData={
+        Object {
+          "address1": "e2 - address 1",
+          "address2": "",
+          "city": "city 2",
+          "employerName": "employer name 2",
+          "grossEarnings": "$300",
+          "id": "22222222",
+          "lastDateWorked": "02/24/2020",
+          "moreDetails": "unable to travel",
+          "reason": "quit",
+          "state": "OR",
+          "totalHoursWorked": "12",
+          "zipcode": "97035",
+        }
+      }
+      onChange={[Function]}
+    />
+  </div>
+  <hr />
+  <Row
+    noGutters={false}
+  >
+    <Col
+      md="auto"
+    >
+      <NavLink
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "SafeAnchor",
+            "render": [Function],
+          }
+        }
+        disabled={false}
+        onClick={[Function]}
+      >
+        + Add another source of income
+      </NavLink>
+    </Col>
+  </Row>
+</div>
+`;
