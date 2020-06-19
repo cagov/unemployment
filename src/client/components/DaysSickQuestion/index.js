@@ -21,19 +21,19 @@ function DaysSickQuestion(props) {
   }
 
   return (
-    <Form>
-      <Form.Group>
-        <Form.Label>{props.questionText}</Form.Label>
-        <Form.Text muted>{props.helpText}</Form.Text>
-        <Form.Control
-          style={{ width: "3rem" }}
-          type="text"
-          value={numDays}
-          onChange={onChange}
-          maxLength={1}
-        />
-      </Form.Group>
-    </Form>
+    <Form.Group>
+      <Form.Label>{props.questionText}</Form.Label>
+      <Form.Text muted>{props.helpText}</Form.Text>
+      <Form.Control
+        style={{ width: "6rem" }}
+        type="text"
+        value={numDays}
+        onChange={onChange}
+        maxLength={1}
+        required
+        pattern="[1234567]"
+      />
+    </Form.Group>
   );
 }
 
