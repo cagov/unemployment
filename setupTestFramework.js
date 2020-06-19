@@ -38,3 +38,11 @@ jest.mock("react-router-dom", () => {
     }),
   };
 });
+
+jest.mock("uuid", () => {
+  const actual = jest.requireActual("uuid");
+  return {
+    ...actual,
+    v4: () => "00000000-fake-mock-fake-123456789012",
+  };
+})

@@ -18,6 +18,7 @@ import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import YesNoQuestion from "../../components/YesNoQuestion";
 import DaysSickQuestion from "../../components/DaysSickQuestion";
+import EmployersQuestions from "../../components/EmployersQuestions";
 
 function RetroCertsCertificationPage(props) {
   const { t } = useTranslation();
@@ -56,6 +57,17 @@ function RetroCertsCertificationPage(props) {
     formDataArray[weekForUser - 1] = {
       ...formData,
       [name]: value,
+    };
+    setUserData({
+      ...userData,
+      formData: [...formDataArray],
+    });
+  };
+
+  const handleEmployersChange = (employersArray) => {
+    formDataArray[weekForUser - 1] = {
+      ...formData,
+      employers: employersArray,
     };
     setUserData({
       ...userData,
@@ -126,26 +138,40 @@ function RetroCertsCertificationPage(props) {
               </YesNoQuestion>
             </Col>
           </Row>
-          {[
-            "fullTime",
-            "didYouLook",
-            "refuseWork",
-            "schoolOrTraining",
-            "workOrEarn",
-          ].map((name, index) => (
-            <Row key={weekIndex + name}>
-              <Col>
-                <YesNoQuestion
-                  questionNumber={index + 2}
-                  questionText={t(`retrocerts-certification.q-${name}`)}
-                  helpText={t(`retrocerts-certification.qhelp-${name}`)}
-                  ifYes={formData[name]}
-                  onChange={(e) => handleFormDataChange(e)}
-                  inputName={name}
+          {["fullTime", "didYouLook", "refuseWork", "schoolOrTraining"].map(
+            (name, index) => (
+              <Row key={weekIndex + name}>
+                <Col>
+                  <YesNoQuestion
+                    questionNumber={index + 2}
+                    questionText={t(`retrocerts-certification.q-${name}`)}
+                    helpText={t(`retrocerts-certification.qhelp-${name}`)}
+                    ifYes={formData[name]}
+                    onChange={(e) => handleFormDataChange(e)}
+                    inputName={name}
+                  />
+                </Col>
+              </Row>
+            )
+          )}
+          <Row>
+            <Col>
+              <YesNoQuestion
+                key={weekIndex + "workOrEarn"}
+                questionNumber={6}
+                questionText={t("retrocerts-certification.q-workOrEarn")}
+                helpText={t("retrocerts-certification.qhelp-workOrEarn")}
+                ifYes={formData.workOrEarn}
+                onChange={(e) => handleFormDataChange(e)}
+                inputName="workOrEarn"
+              >
+                <EmployersQuestions
+                  employers={formData.employers}
+                  onChange={(employers) => handleEmployersChange(employers)}
                 />
-              </Col>
-            </Row>
-          ))}
+              </YesNoQuestion>
+            </Col>
+          </Row>
           <Row>
             <Col>
               <Button
