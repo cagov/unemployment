@@ -205,7 +205,13 @@ function RetroCertsCertificationPage(props) {
               <YesNoQuestion
                 key={weekIndex + name}
                 questionNumber={index + 2}
-                questionText={<Trans t={t} i18nKey={questionText(name)} />}
+                questionText={
+                  <Trans
+                    t={t}
+                    i18nKey={questionText(name)}
+                    values={{ weekString: toWeekString(weekIndex) }}
+                  />
+                }
                 helpText={
                   <Trans t={t} i18nKey={questionText(`help-${name}`)} />
                 }
