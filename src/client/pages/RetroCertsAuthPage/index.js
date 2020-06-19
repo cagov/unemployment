@@ -5,13 +5,14 @@ import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Alert from "react-bootstrap/Alert";
 import ReCAPTCHA from "react-google-recaptcha";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import AUTH_STRINGS from "../../../data/authStrings";
 import routes from "../../../data/routes";
 import { userDataPropType, setUserDataPropType } from "../../commonPropTypes";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import SessionTimer from "../../components/SessionTimer";
+import Inputmask from "inputmask";
 
 function RetroCertsAuthPage(props) {
   const { t } = useTranslation();
@@ -114,6 +115,11 @@ function RetroCertsAuthPage(props) {
     setter(event.target.value);
   };
 
+  useEffect(() => {
+    const ssnRef = document.getElementById("ssn");
+    Inputmask("999-99-9999").mask(ssnRef);
+  });
+
   return (
     <div id="overflow-wrapper">
       <Header />
@@ -157,10 +163,10 @@ function RetroCertsAuthPage(props) {
               <Form.Group controlId="formSsn" className="col-md-6">
                 <Form.Label>{t("retrocert-login.ssn-label")}</Form.Label>
                 <Form.Control
-                  type="password"
                   value={ssn}
                   onChange={(e) => handleChange(e, setSsn)}
                   required
+                  id="ssn"
                 />
                 <Form.Control.Feedback type="invalid">
                   {t("retrocert-login.ssn-required-error")}
