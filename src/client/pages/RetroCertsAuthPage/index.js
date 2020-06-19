@@ -86,7 +86,7 @@ function RetroCertsAuthPage(props) {
       body: JSON.stringify({
         lastName: lastName.trim(),
         eddcan: eddcan.trim(),
-        ssn: ssn.trim(),
+        ssn: ssn.inputmask ? ssn.inputmask.unmaskedvalue() : ssn.trim(),
         reCaptcha: recaptchaRef.current.getValue(),
       }),
     })
@@ -112,7 +112,6 @@ function RetroCertsAuthPage(props) {
   };
 
   const handleChange = (event, setter) => {
-    // TODO: Remove whitespace and normalize (e.g., remove hyphens).
     setter(event.target.value);
   };
 
@@ -120,14 +119,13 @@ function RetroCertsAuthPage(props) {
     const ssnRef = document.getElementById("formSsn");
     if (showSsn) {
       Inputmask.remove(ssnRef);
-      Inputmask("ssn").mask(ssnRef);
+      Inputmask("ssn", { placeholder: "#" }).mask(ssnRef);
       ssnRef.type = "text";
-      // ssnRef.style = "null";
     } else {
       Inputmask.remove(ssnRef);
       Inputmask("9", { repeat: "9", jitMasking: true }).mask(ssnRef);
       ssnRef.type = "password";
-      // ssnRef.style = "-webkit-text-security: disc;-moz-text-security: circle;text-security: circle;";
+      ssnRef.placeholder = "###-##-####";
     }
   });
 
