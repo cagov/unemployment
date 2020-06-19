@@ -50,7 +50,7 @@ function EmployerQuestions(props) {
   /**
    * Create a text input element.
    * @param {string} name The name for the employer data field.
-   * @param {Object?} options Optional controls:
+   * @param {object?} options Optional controls:
    *     className: The classname for applying styles.
    *     required: defaults to true, but set to false to make the input not required.
    *     pattern: A regex if the field requires specific values.
