@@ -47,15 +47,28 @@ function EmployerQuestions(props) {
     dateTokens.length === 3 ? dateTokens[1] : ""
   );
 
-  function renderTextInput(name, className) {
+  /**
+   * Create a text input element.
+   * @param {string} name The name for the employer data field.
+   * @param {object?} options Optional controls:
+   *     className: The classname for applying styles.
+   *     required: defaults to true, but set to false to make the input not required.
+   *     pattern: A regex if the field requires specific values.
+   * @returns {React.ReactElement}
+   */
+  function renderTextInput(name, options) {
+    options = options || {};
+    const required = options.required === undefined ? true : options.required;
     return (
       <Form.Group>
         <Form.Label>{t(tk(name))}</Form.Label>
         <Form.Control
-          className={className}
+          className={options.className}
           type="text"
           value={stateFuncs[name].get}
           onChange={(e) => handleChange(name, e.target.value)}
+          required={required}
+          pattern={options.pattern}
         />
       </Form.Group>
     );
@@ -81,10 +94,10 @@ function EmployerQuestions(props) {
   }
 
   return (
-    <Form>
+    <React.Fragment>
       {renderTextInput("employerName")}
       {renderTextInput("address1")}
-      {renderTextInput("address2")}
+      {renderTextInput("address2", { required: false })}
       <Form.Row>
         <Col md={8}>{renderTextInput("city")}</Col>
         <Form.Group as={Col}>
@@ -93,6 +106,7 @@ function EmployerQuestions(props) {
             as="select"
             value={stateFuncs.state.get}
             onChange={(e) => handleChange("state", e.target.value)}
+            required
           >
             <option />
             {stateCodes.map((code) => (
@@ -101,7 +115,10 @@ function EmployerQuestions(props) {
           </Form.Control>
         </Form.Group>
       </Form.Row>
-      {renderTextInput("zipcode", "col-md-2")}
+      {renderTextInput("zipcode", {
+        className: "col-md-3",
+        pattern: "\\d{5}|\\d{5}-\\d{4}",
+      })}
 
       <p>{t(tk("lastDateWorked"))}</p>
       <Form.Row>
@@ -112,6 +129,8 @@ function EmployerQuestions(props) {
             value={lastDateWorkedMonth}
             maxLength={2}
             onChange={(e) => handleDateChange("month", e.target.value)}
+            required
+            pattern="0?[1-9]|10|11|12"
           />
         </Form.Group>
         <Form.Group as={Col} md={2}>
@@ -121,6 +140,8 @@ function EmployerQuestions(props) {
             value={lastDateWorkedDay}
             maxLength={2}
             onChange={(e) => handleDateChange("day", e.target.value)}
+            required
+            pattern="0?[1-9]|1\d|2\d|3[01]"
           />
         </Form.Group>
         <Form.Group as={Col} md={2}>
@@ -128,8 +149,14 @@ function EmployerQuestions(props) {
           <Form.Control type="text" value="2020" disabled />
         </Form.Group>
       </Form.Row>
-      {renderTextInput("totalHoursWorked", "col-md-2")}
-      {renderTextInput("grossEarnings", "col-md-2")}
+      {renderTextInput("totalHoursWorked", {
+        className: "col-md-2",
+        pattern: "\\d+[.]?\\d*",
+      })}
+      {renderTextInput("grossEarnings", {
+        className: "col-md-2",
+        pattern: "[$]?\\d+[.]?(\\d{2})?",
+      })}
       <Form.Group>
         <Form.Label>{t(tk("reason"))}</Form.Label>
         <Form.Control
@@ -154,10 +181,11 @@ function EmployerQuestions(props) {
             rows="3"
             value={stateFuncs.moreDetails.get}
             onChange={(e) => handleChange("moreDetails", e.target.value)}
+            required
           />
         </Form.Group>
       )}
-    </Form>
+    </React.Fragment>
   );
 }
 
