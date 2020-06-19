@@ -63,8 +63,10 @@ function YesNoQuestion(props) {
 
 YesNoQuestion.propTypes = {
   questionNumber: PropTypes.number.isRequired,
-  questionText: PropTypes.string.isRequired,
-  helpText: PropTypes.string.isRequired,
+  questionText: PropTypes.oneOfType([PropTypes.string, PropTypes.object])
+    .isRequired,
+  helpText: PropTypes.oneOfType([PropTypes.string, PropTypes.object])
+    .isRequired,
   inputName: PropTypes.string.isRequired,
   onChange: PropTypes.func,
   ifYes: PropTypes.bool,

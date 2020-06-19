@@ -114,6 +114,11 @@ function RetroCertsCertificationPage(props) {
       .catch((error) => console.error(error));
   }
 
+  const questionsTwoThroughFive =
+    weekSeekWorkPlan === seekWorkPlan.puaFullTime
+      ? ["couldNotAcceptWork", "didYouLook", "refuseWork", "otherBenefits"]
+      : ["couldNotAcceptWork", "didYouLook", "refuseWork", "schoolOrTraining"];
+
   return (
     <div id="overflow-wrapper">
       <Header />
@@ -156,22 +161,22 @@ function RetroCertsCertificationPage(props) {
               </YesNoQuestion>
             </Col>
           </Row>
-          {["fullTime", "didYouLook", "refuseWork", "schoolOrTraining"].map(
-            (name, index) => (
-              <Row key={weekIndex + name}>
-                <Col>
-                  <YesNoQuestion
-                    questionNumber={index + 2}
-                    questionText={t(`retrocerts-certification.q-${name}`)}
-                    helpText={t(`retrocerts-certification.qhelp-${name}`)}
-                    ifYes={formData[name]}
-                    onChange={(e) => handleFormDataChange(e)}
-                    inputName={name}
-                  />
-                </Col>
-              </Row>
-            )
-          )}
+          {questionsTwoThroughFive.map((name, index) => (
+            <Row key={weekIndex + name}>
+              <Col>
+                <YesNoQuestion
+                  questionNumber={index + 2}
+                  questionText={<Trans t={t} i18nKey={questionText(name)} />}
+                  helpText={
+                    <Trans t={t} i18nKey={questionText(`help-${name}`)} />
+                  }
+                  ifYes={formData[name]}
+                  onChange={(e) => handleFormDataChange(e)}
+                  inputName={name}
+                />
+              </Col>
+            </Row>
+          ))}
           <Row>
             <Col>
               <YesNoQuestion
