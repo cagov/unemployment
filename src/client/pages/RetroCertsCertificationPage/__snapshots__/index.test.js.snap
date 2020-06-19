@@ -132,26 +132,24 @@ exports[`<RetroCertsCertificationPage /> Certify for 2nd week of 2 1`] = `
             />
           }
         />
-        <Col>
-          <YesNoQuestion
-            helpText="Look at the date each week begins and ends. If you performed any work during this week, all earnings must be reported regardless if payment has been received."
-            ifYes={false}
-            inputName="workOrEarn"
-            key="1workOrEarn"
-            onChange={[Function]}
-            questionNumber={6}
-            questionText={
-              <Trans
-                i18nKey="retrocerts-certification.questions.ui-part-time.workOrEarn"
-                t={[Function]}
-              />
-            }
-          >
-            <EmployersQuestions
-              onChange={[Function]}
+        <YesNoQuestion
+          helpText="Look at the date each week begins and ends. If you performed any work during this week, all earnings must be reported regardless if payment has been received."
+          ifYes={false}
+          inputName="workOrEarn"
+          key="1workOrEarn"
+          onChange={[Function]}
+          questionNumber={6}
+          questionText={
+            <Trans
+              i18nKey="retrocerts-certification.questions.ui-part-time.workOrEarn"
+              t={[Function]}
             />
-          </YesNoQuestion>
-        </Col>
+          }
+        >
+          <EmployersQuestions
+            onChange={[Function]}
+          />
+        </YesNoQuestion>
         <FormRow>
           <Col>
             <Button
@@ -332,25 +330,23 @@ exports[`<RetroCertsCertificationPage /> Certify for one week of 2 1`] = `
             />
           }
         />
-        <Col>
-          <YesNoQuestion
-            helpText="Look at the date each week begins and ends. If you performed any work during this week, all earnings must be reported regardless if payment has been received."
-            inputName="workOrEarn"
-            key="0workOrEarn"
-            onChange={[Function]}
-            questionNumber={6}
-            questionText={
-              <Trans
-                i18nKey="retrocerts-certification.questions.ui-full-time.workOrEarn"
-                t={[Function]}
-              />
-            }
-          >
-            <EmployersQuestions
-              onChange={[Function]}
+        <YesNoQuestion
+          helpText="Look at the date each week begins and ends. If you performed any work during this week, all earnings must be reported regardless if payment has been received."
+          inputName="workOrEarn"
+          key="0workOrEarn"
+          onChange={[Function]}
+          questionNumber={6}
+          questionText={
+            <Trans
+              i18nKey="retrocerts-certification.questions.ui-full-time.workOrEarn"
+              t={[Function]}
             />
-          </YesNoQuestion>
-        </Col>
+          }
+        >
+          <EmployersQuestions
+            onChange={[Function]}
+          />
+        </YesNoQuestion>
         <FormRow>
           <Col>
             <Button

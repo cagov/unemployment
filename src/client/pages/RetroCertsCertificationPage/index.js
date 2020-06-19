@@ -214,41 +214,37 @@ function RetroCertsCertificationPage(props) {
                 inputName={name}
               />
             ))}
-            <Col>
+            <YesNoQuestion
+              key={weekIndex + "workOrEarn"}
+              questionNumber={6}
+              questionText={
+                <Trans t={t} i18nKey={questionText("workOrEarn")} />
+              }
+              helpText={t(questionText("help-workOrEarn"))}
+              ifYes={formData.workOrEarn}
+              onChange={(e) => handleFormDataChange(e)}
+              inputName="workOrEarn"
+            >
+              <EmployersQuestions
+                employers={formData.employers}
+                onChange={(employers) => handleEmployersChange(employers)}
+              />
+            </YesNoQuestion>
+            {weekSeekWorkPlan === seekWorkPlan.puaFullTime && (
               <YesNoQuestion
-                key={weekIndex + "workOrEarn"}
-                questionNumber={6}
-                questionText={
-                  <Trans t={t} i18nKey={questionText("workOrEarn")} />
-                }
-                helpText={t(questionText("help-workOrEarn"))}
-                ifYes={formData.workOrEarn}
+                key={weekIndex + "recentDisaster"}
+                questionNumber={7}
+                questionText={t(questionText("recentDisaster"))}
+                helpText=""
+                ifYes={formData.recentDisaster}
                 onChange={(e) => handleFormDataChange(e)}
-                inputName="workOrEarn"
+                inputName="recentDisaster"
               >
-                <EmployersQuestions
-                  employers={formData.employers}
-                  onChange={(employers) => handleEmployersChange(employers)}
+                <DisasterQuestion
+                  questionText={t(questionText("recentDisasterChoice"))}
+                  onChange={(e) => handleFormDataChange(e)}
                 />
               </YesNoQuestion>
-            </Col>
-            {weekSeekWorkPlan === seekWorkPlan.puaFullTime && (
-              <Col>
-                <YesNoQuestion
-                  key={weekIndex + "recentDisaster"}
-                  questionNumber={7}
-                  questionText={t(questionText("recentDisaster"))}
-                  helpText=""
-                  ifYes={formData.recentDisaster}
-                  onChange={(e) => handleFormDataChange(e)}
-                  inputName="recentDisaster"
-                >
-                  <DisasterQuestion
-                    questionText={t(questionText("recentDisasterChoice"))}
-                    onChange={(e) => handleFormDataChange(e)}
-                  />
-                </YesNoQuestion>
-              </Col>
             )}
             <Form.Row>
               <Col>
