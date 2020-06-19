@@ -90,7 +90,9 @@ function RetroCertsAuthPage(props) {
     })
       .then((response) => response.json())
       .then((data) => {
-        recaptchaRef.current.reset();
+        if (recaptchaRef.current) {
+          recaptchaRef.current.reset();
+        }
         setUserData(data);
         if (data.authToken) {
           // Session storage is destroyed when the tab is closed! That's a bit weird.

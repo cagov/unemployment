@@ -72,6 +72,11 @@ exports[`<RetroCertsCertificationPage /> Certify for 2nd week of 2 1`] = `
             <Trans
               i18nKey="retrocerts-certification.questions.ui-part-time.couldNotAcceptWork"
               t={[Function]}
+              values={
+                Object {
+                  "weekString": "02/09/20 - 02/15/20",
+                }
+              }
             />
           }
         />
@@ -91,6 +96,11 @@ exports[`<RetroCertsCertificationPage /> Certify for 2nd week of 2 1`] = `
             <Trans
               i18nKey="retrocerts-certification.questions.ui-part-time.didYouLook"
               t={[Function]}
+              values={
+                Object {
+                  "weekString": "02/09/20 - 02/15/20",
+                }
+              }
             />
           }
         />
@@ -110,6 +120,11 @@ exports[`<RetroCertsCertificationPage /> Certify for 2nd week of 2 1`] = `
             <Trans
               i18nKey="retrocerts-certification.questions.ui-part-time.refuseWork"
               t={[Function]}
+              values={
+                Object {
+                  "weekString": "02/09/20 - 02/15/20",
+                }
+              }
             />
           }
         />
@@ -129,6 +144,11 @@ exports[`<RetroCertsCertificationPage /> Certify for 2nd week of 2 1`] = `
             <Trans
               i18nKey="retrocerts-certification.questions.ui-part-time.schoolOrTraining"
               t={[Function]}
+              values={
+                Object {
+                  "weekString": "02/09/20 - 02/15/20",
+                }
+              }
             />
           }
         />
@@ -139,7 +159,12 @@ exports[`<RetroCertsCertificationPage /> Certify for 2nd week of 2 1`] = `
           key="1workOrEarn"
           onChange={[Function]}
           questionNumber={6}
-          questionText="Did you work or earn any money, whether you were paid or not?"
+          questionText={
+            <Trans
+              i18nKey="retrocerts-certification.questions.ui-part-time.workOrEarn"
+              t={[Function]}
+            />
+          }
         >
           <EmployersQuestions
             onChange={[Function]}
@@ -268,6 +293,11 @@ exports[`<RetroCertsCertificationPage /> Certify for one week of 2 1`] = `
             <Trans
               i18nKey="retrocerts-certification.questions.ui-full-time.couldNotAcceptWork"
               t={[Function]}
+              values={
+                Object {
+                  "weekString": "02/02/20 - 02/08/20",
+                }
+              }
             />
           }
         />
@@ -286,6 +316,11 @@ exports[`<RetroCertsCertificationPage /> Certify for one week of 2 1`] = `
             <Trans
               i18nKey="retrocerts-certification.questions.ui-full-time.didYouLook"
               t={[Function]}
+              values={
+                Object {
+                  "weekString": "02/02/20 - 02/08/20",
+                }
+              }
             />
           }
         />
@@ -304,6 +339,11 @@ exports[`<RetroCertsCertificationPage /> Certify for one week of 2 1`] = `
             <Trans
               i18nKey="retrocerts-certification.questions.ui-full-time.refuseWork"
               t={[Function]}
+              values={
+                Object {
+                  "weekString": "02/02/20 - 02/08/20",
+                }
+              }
             />
           }
         />
@@ -322,6 +362,11 @@ exports[`<RetroCertsCertificationPage /> Certify for one week of 2 1`] = `
             <Trans
               i18nKey="retrocerts-certification.questions.ui-full-time.schoolOrTraining"
               t={[Function]}
+              values={
+                Object {
+                  "weekString": "02/02/20 - 02/08/20",
+                }
+              }
             />
           }
         />
@@ -331,7 +376,12 @@ exports[`<RetroCertsCertificationPage /> Certify for one week of 2 1`] = `
           key="0workOrEarn"
           onChange={[Function]}
           questionNumber={6}
-          questionText="Did you work or earn any money, whether you were paid or not?"
+          questionText={
+            <Trans
+              i18nKey="retrocerts-certification.questions.ui-full-time.workOrEarn"
+              t={[Function]}
+            />
+          }
         >
           <EmployersQuestions
             onChange={[Function]}
