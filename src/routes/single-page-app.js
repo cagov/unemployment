@@ -16,8 +16,11 @@ singlePageAppRouter.get("/*", (req, res) => {
   const is404 = Object.values(pageRoutes).indexOf(req.path) === -1;
   const statusCode = is404 ? 404 : 200;
 
-  res.status(statusCode).send(
-    `<!doctype html>
+  res
+    .status(statusCode)
+    .set("Referrer-Policy", "strict-origin-when-cross-origin")
+    .send(
+      `<!doctype html>
     <html lang="en">
     <head>
       <base href="/">
@@ -49,7 +52,7 @@ singlePageAppRouter.get("/*", (req, res) => {
       <div id="root"></div>
     </body>
 </html>`
-  );
+    );
 });
 
 module.exports = singlePageAppRouter;
