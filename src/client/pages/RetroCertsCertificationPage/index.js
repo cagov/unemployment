@@ -20,6 +20,7 @@ import Header from "../../components/Header";
 import YesNoQuestion from "../../components/YesNoQuestion";
 import DaysSickQuestion from "../../components/DaysSickQuestion";
 import EmployersQuestions from "../../components/EmployersQuestions";
+import DisasterQuestion from "../../components/DisasterQuestion";
 
 function RetroCertsCertificationPage(props) {
   const { t } = useTranslation();
@@ -166,7 +167,13 @@ function RetroCertsCertificationPage(props) {
               <Col>
                 <YesNoQuestion
                   questionNumber={index + 2}
-                  questionText={<Trans t={t} i18nKey={questionText(name)} />}
+                  questionText={
+                    <Trans
+                      t={t}
+                      i18nKey={questionText(name)}
+                      values={{ weekString: toWeekString(weekIndex) }}
+                    />
+                  }
                   helpText={
                     <Trans t={t} i18nKey={questionText(`help-${name}`)} />
                   }
@@ -182,8 +189,10 @@ function RetroCertsCertificationPage(props) {
               <YesNoQuestion
                 key={weekIndex + "workOrEarn"}
                 questionNumber={6}
-                questionText={t("retrocerts-certification.q-workOrEarn")}
-                helpText={t("retrocerts-certification.qhelp-workOrEarn")}
+                questionText={
+                  <Trans t={t} i18nKey={questionText("workOrEarn")} />
+                }
+                helpText={t(questionText("help-workOrEarn"))}
                 ifYes={formData.workOrEarn}
                 onChange={(e) => handleFormDataChange(e)}
                 inputName="workOrEarn"
@@ -195,6 +204,26 @@ function RetroCertsCertificationPage(props) {
               </YesNoQuestion>
             </Col>
           </Row>
+          {weekSeekWorkPlan === seekWorkPlan.puaFullTime && (
+            <Row>
+              <Col>
+                <YesNoQuestion
+                  key={weekIndex + "recentDisaster"}
+                  questionNumber={7}
+                  questionText={t(questionText("recentDisaster"))}
+                  helpText=""
+                  ifYes={formData.recentDisaster}
+                  onChange={(e) => handleFormDataChange(e)}
+                  inputName="recentDisaster"
+                >
+                  <DisasterQuestion
+                    questionText={t(questionText("recentDisasterChoice"))}
+                    onChange={(e) => handleFormDataChange(e)}
+                  />
+                </YesNoQuestion>
+              </Col>
+            </Row>
+          )}
           <Row>
             <Col>
               <Button

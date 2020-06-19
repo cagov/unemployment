@@ -240,8 +240,10 @@
         "help-didYouLook": "The work search requirements on your Notice of Unemployment Insurance Award must be followed. Work searches may be in-person, mail, telephone, or Internet contacts with employers.",
         "refuseWork": "Did you refuse any work?",
         "help-refuseWork": "If work was refused, a determination will be scheduled. Union members answer ‘yes’ if a union referral to a job was refused.",
-        "schoolOrTraining": "Did you <strong>begin</strong> attending any kind of school or training?",
-        "help-schoolOrTraining": "Answer ‘yes’ only if school or training <strong>began</strong> during this work week."
+        "schoolOrTraining": "Did you <strong>begin</strong> attending any kind of school or training? Select Yes only if you began attending school between {{weekString}}.",
+        "help-schoolOrTraining": "Answer ‘yes’ only if school or training <strong>began</strong> during this work week.",
+        "workOrEarn": "Did you work or earn any money, <strong>whether you were paid or not</strong>?",
+        "help-workOrEarn": "Look at the date each week begins and ends. If you performed any work during this week, all earnings must be reported regardless if payment has been received."
       },
       "ui-part-time": {
         "tooSick": "Were you too sick or injured to work?",
@@ -254,8 +256,10 @@
         "help-didYouLook": "The work search requirements on your Notice of Unemployment Insurance Award must be followed. Work searches may include in-person, mail, telephone, or Internet contacts with employers.",
         "refuseWork": "Did you refuse any work?",
         "help-refuseWork": "If work was refused, a determination will be scheduled. Union members answer ‘yes’ if a union referral to a job was refused.",
-        "schoolOrTraining": "Did you <strong>begin</strong> attending any kind of school or training?",
-        "help-schoolOrTraining": "Answer ‘yes’ only if school or training <strong>began</strong> during this work week."
+        "schoolOrTraining": "Did you <strong>begin</strong> attending any kind of school or training? Select Yes only if you began attending school between {{weekString}}.",
+        "help-schoolOrTraining": "Answer ‘yes’ only if school or training <strong>began</strong> during this work week.",
+        "workOrEarn": "Did you work or earn any money, <strong>whether you were paid or not</strong>?",
+        "help-workOrEarn": "Look at the date each week begins and ends. If you performed any work during this week, all earnings must be reported regardless if payment has been received."
        },
       "pua-full-time": {
         "tooSick": "Were you too sick or injured to work for reasons other than disaster?",
@@ -269,7 +273,11 @@
         "refuseWork": "Did you refuse any work?",
         "help-refuseWork": "If work was refused, a determination will be scheduled. Union members answer ‘yes’ if a union referral to a job was refused.",
         "otherBenefits": "Did you receive disability, private income insurance, or supplemental unemployment benefits?",
-        "help-otherBenefits": "Disability Insurance, Private Income Insurance and Supplemental Unemployment Benefits are considered into the final amount of unemployment benefits."
+        "help-otherBenefits": "Disability Insurance, Private Income Insurance and Supplemental Unemployment Benefits are considered into the final amount of unemployment benefits.",
+        "workOrEarn": "Did you work or earn money, <strong>whether you were paid or not</strong>? If self-employed, report earnings during the week you receive the money.",
+        "help-workOrEarn": "Look at the date each week begins and ends. If you performed any work during this week, the earnings must be reported regardless if you received payment or not. This does not include self employment.",
+        "recentDisaster": "Are you unemployed as a direct result of a recent disaster (for example: COVID-19, earthquake, flood, mudslide, or fire) in California?",
+        "recentDisasterChoice": "Select the option for how you were impacted by the COVID-19 pandemic."
        }
     },
     "q-workOrEarn": "Did you work or earn any money, whether you were paid or not?",
@@ -300,6 +308,22 @@
       "moreDetails": "Provide more details.",
       "addIncomeLink": "+ Add another source of income",
       "removeIncomeLink": "Remove this source of income"
+    },
+    "disaster-choices": {
+      "choice-1": "You have been diagnosed with COVID-19.",
+      "choice-2": "You have COVID-19 symptoms and are seeking a diagnosis.",
+      "choice-3": "A member of your household has COVID-19.",
+      "choice-4": "You are taking care of your family or household member who has COVID-19.",
+      "choice-5": "You had to quit your job as a direct result of COVID-19.",
+      "choice-6": "Your place of employment is closed as a direct result of COVID-19. (This may apply if your business is open or partially re-opened but your position is not needed due to COVID-19 limitations on the business).",
+      "choice-7": "You cannot reach your workplace because of a quarantine as a direct result of COVID-19. (This may apply if you cannot reach your workplace because of a state or municipal order restricting travel to combat the spread of COVID-19, such as a stay-home or shelter-in-place order.)",
+      "choice-8": "You cannot reach your workplace because your health care provider advised you to quarantine due to COVID-19 concerns.",
+      "choice-9": "You cannot work because you have primary responsibility for caring for a child or another person and their school or care facility is closed as a direct result of COVID-19.",
+      "choice-10": "You had a definite date to start a job that is no longer available as a direct result of COVID-19.",
+      "choice-11": "You had a definite date to start a job but cannot reach that job as a direct result of COVID-19.",
+      "choice-12": "You are an independent contractor with reportable income (ex. IRS Form 1099) and you are forced to stop working because COVID-19 has severely limited your ability to continue performing your customary work activities.",
+      "choice-13": "You became the major financial support for your household because the head of household died as a direct result of COVID-19.",
+      "choice-14": "None of these options apply to me."
     },
     "button-back": "Back",
     "button-next": "Next, certify Week {{nextWeekForUser}}",
