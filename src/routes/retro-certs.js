@@ -31,8 +31,8 @@ function createRouter() {
       );
       responseJson.status = AUTH_STRINGS.statusCode.ok;
       responseJson.authToken = formRecord.authToken;
-      responseJson.weeksToCertify = Array.from(userRecord.weeksToCertify);
-      responseJson.seekWorkPlan = Array.from(userRecord.seekWorkPlan);
+      responseJson.weeksToCertify = userRecord.weeksToCertify;
+      responseJson.seekWorkPlan = userRecord.seekWorkPlan;
       responseJson.confirmationNumber = formRecord.confirmationNumber;
     }
     return responseJson;
