@@ -60,7 +60,7 @@ function EmployerQuestions(props) {
     options = options || {};
     const required = options.required === undefined ? true : options.required;
     return (
-      <Form.Group>
+      <Form.Group controlId={props.employerData.id + name}>
         <Form.Label>{t(tk(name))}</Form.Label>
         <Form.Control
           className={options.className}
@@ -100,7 +100,7 @@ function EmployerQuestions(props) {
       {renderTextInput("address2", { required: false })}
       <Form.Row>
         <Col md={8}>{renderTextInput("city")}</Col>
-        <Form.Group as={Col}>
+        <Form.Group controlId={props.employerData.id + "state-select"} as={Col}>
           <Form.Label>{t(tk("state"))}</Form.Label>
           <Form.Control
             as="select"
@@ -122,7 +122,11 @@ function EmployerQuestions(props) {
 
       <p>{t(tk("lastDateWorked"))}</p>
       <Form.Row>
-        <Form.Group as={Col} md={2}>
+        <Form.Group
+          controlId={props.employerData.id + "lastDateWorked-month-question"}
+          as={Col}
+          md={2}
+        >
           <Form.Label>{t(tk("month"))}</Form.Label>
           <Form.Control
             type="text"
@@ -133,7 +137,11 @@ function EmployerQuestions(props) {
             pattern="0?[1-9]|10|11|12"
           />
         </Form.Group>
-        <Form.Group as={Col} md={2}>
+        <Form.Group
+          controlId={props.employerData.id + "lastDateWorked-day-question"}
+          as={Col}
+          md={2}
+        >
           <Form.Label>{t(tk("day"))}</Form.Label>
           <Form.Control
             type="text"
@@ -157,7 +165,7 @@ function EmployerQuestions(props) {
         className: "col-md-2",
         pattern: "[$]?\\d+[.]?(\\d{2})?",
       })}
-      <Form.Group>
+      <Form.Group controlId={props.employerData.id + "reason-select"}>
         <Form.Label>{t(tk("reason"))}</Form.Label>
         <Form.Control
           as="select"
@@ -174,7 +182,7 @@ function EmployerQuestions(props) {
         </Form.Control>
       </Form.Group>
       {stateFuncs.reason.get !== "still-working" && (
-        <Form.Group>
+        <Form.Group controlId={props.employerData.id + "reason-details"}>
           <Form.Label>{t(tk("moreDetails"))}</Form.Label>
           <Form.Control
             as="textarea"
