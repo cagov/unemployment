@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Form } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
 
 function YesNoQuestion(props) {
   const {
@@ -10,8 +11,10 @@ function YesNoQuestion(props) {
     inputName,
     onChange,
     ifYes,
+    children,
   } = props;
   const [isYes, setIsYes] = useState(ifYes);
+  const { t } = useTranslation();
 
   function onSelectionChanged(e) {
     const value = e.target.value;
@@ -32,47 +35,45 @@ function YesNoQuestion(props) {
 
   return (
     <div className="bg-light p-2 m-2">
-      {questionNumber}.&nbsp;{questionText}
-      <p className="ml-3">{helpText}</p>
-      <Form>
-        <Form.Group>
-          {["Yes", "No"].map((value) => (
-            <Form.Check
-              key={value}
-              inline
-              label={value}
-              type="radio"
-              id={`radio${value}`}
-              onChange={onSelectionChanged}
-              name={inputName}
-              value={value}
-              checked={isChecked(value)}
-            />
-          ))}
-        </Form.Group>
-      </Form>
-      <div hidden={isYes === null || !isYes}>
-        <p className="text-muted">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-          cursus neque risus, id efficitur felis tincidunt in. Mauris pretium
-          tortor orci, ac pharetra ipsum vulputate quis. Maecenas sit amet
-          libero ut elit ornare imperdiet sit amet ac velit. Nunc sit amet
-          lacinia velit, a tincidunt nibh. Ut porttitor finibus dolor, non porta
-          dolor ornare sed. Aenean nunc dolor, congue quis sodales eu, viverra
-          tristique ipsum. Ut nec iaculis ipsum, at bibendum sem.
-        </p>
-      </div>
+      <Form.Group>
+        <Form.Label>
+          {questionNumber}.&nbsp;{questionText}
+        </Form.Label>
+        <Form.Text muted>{helpText}</Form.Text>
+
+        {["Yes", "No"].map((value) => (
+          <Form.Check
+            key={value}
+            inline
+            label={t(`yesnoquestion.${value}`)}
+            type="radio"
+            id={`${inputName}radio${value}`}
+            onChange={onSelectionChanged}
+            name={inputName}
+            value={value}
+            checked={isChecked(value)}
+            required
+          />
+        ))}
+      </Form.Group>
+      {isYes === true && children}
     </div>
   );
 }
 
 YesNoQuestion.propTypes = {
   questionNumber: PropTypes.number.isRequired,
-  questionText: PropTypes.string.isRequired,
-  helpText: PropTypes.string.isRequired,
+  questionText: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
+    .isRequired,
+  helpText: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
+    .isRequired,
   inputName: PropTypes.string.isRequired,
   onChange: PropTypes.func,
   ifYes: PropTypes.bool,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
 };
 
 export default YesNoQuestion;

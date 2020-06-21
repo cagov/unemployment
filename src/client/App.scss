@@ -97,3 +97,9 @@ main {
 footer {
   flex: 0 0 auto;
 }
+
+// This removes the green border around validated fields.
+.form-control.is-valid,
+.was-validated .form-control:valid {
+  border-color: rgb(206, 212, 218) !important;
+}

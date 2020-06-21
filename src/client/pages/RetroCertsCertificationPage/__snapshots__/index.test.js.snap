@@ -36,143 +36,186 @@ exports[`<RetroCertsCertificationPage /> Certify for 2nd week of 2 1`] = `
           }
         />
       </h3>
-      <Row
-        key="1-0"
-        noGutters={false}
+      <Form
+        inline={false}
+        noValidate={true}
+        onSubmit={[Function]}
+        validated={false}
       >
-        <Col>
-          <YesNoQuestion
-            helpText="You must be well enough to work every day of the week to receive full benefits."
-            ifYes={false}
-            inputName="tooSick"
+        <YesNoQuestion
+          helpText="You must be well enough to work everyday of the week to receive full benefits. Check ‘yes’ if a workday was missed due to being sick or injured."
+          ifYes={false}
+          inputName="tooSick"
+          key="1tooSick"
+          onChange={[Function]}
+          questionNumber={1}
+          questionText="Were you too sick or injured to work?"
+        >
+          <DaysSickQuestion
+            helpText="You must report the numbers of days that you could not work during this week. Unemployment benefits are paid according to the number of days you are able to work this week."
             onChange={[Function]}
-            questionNumber={1}
-            questionText="Were you too sick or injured to work?"
+            questionText="If Yes, enter the number of days (1 - 7) you were unable to work."
           />
-        </Col>
-      </Row>
-      <Row
-        key="1-1"
-        noGutters={false}
-      >
-        <Col>
-          <YesNoQuestion
-            helpText="Available means you are ready and willing to accept work that matches your occupational skills and educational background."
-            ifYes={false}
-            inputName="fullTime"
-            onChange={[Function]}
-            questionNumber={2}
-            questionText="Was there any reason (other than sickness or injury) that you could not have accepted full-time work each workday?"
-          />
-        </Col>
-      </Row>
-      <Row
-        key="1-2"
-        noGutters={false}
-      >
-        <Col>
-          <YesNoQuestion
-            helpText="You must look for work, according to your Notice of Unemployment Insurance Award. Work searches may include in-person, mail, telephone, or Internet contacts with employers."
-            ifYes={false}
-            inputName="didYouLook"
-            onChange={[Function]}
-            questionNumber={3}
-            questionText="Did you look for work?"
-          />
-        </Col>
-      </Row>
-      <Row
-        key="1-3"
-        noGutters={false}
-      >
-        <Col>
-          <YesNoQuestion
-            helpText="You will not be penalized for however you answer this question, due to COVID-19."
-            ifYes={false}
-            inputName="refuseWork"
-            onChange={[Function]}
-            questionNumber={4}
-            questionText="Did you refuse any work?"
-          />
-        </Col>
-      </Row>
-      <Row
-        key="1-4"
-        noGutters={false}
-      >
-        <Col>
-          <YesNoQuestion
-            helpText="Answer ‘yes’ only if school or training <strong>began</strong> during this week."
-            ifYes={false}
-            inputName="schoolOrTraining"
-            onChange={[Function]}
-            questionNumber={5}
-            questionText="Did you begin attending any kind of school or training?"
-          />
-        </Col>
-      </Row>
-      <Row
-        key="1-5"
-        noGutters={false}
-      >
-        <Col>
-          <YesNoQuestion
-            helpText="Look at the date each week begins and ends. If you performed any work during this week, all earnings must be reported regardless if payment has been received."
-            ifYes={false}
-            inputName="workOrEarn"
-            onChange={[Function]}
-            questionNumber={6}
-            questionText="Did you work or earn any money, whether you were paid or not?"
-          />
-        </Col>
-      </Row>
-      <Row
-        noGutters={false}
-      >
-        <Col>
-          <Button
-            active={false}
-            as={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "displayName": "Link",
-                "propTypes": Object {
-                  "innerRef": [Function],
-                  "onClick": [Function],
-                  "replace": [Function],
-                  "target": [Function],
-                  "to": [Function],
-                },
-                "render": [Function],
+        </YesNoQuestion>
+        <YesNoQuestion
+          helpText={
+            <Trans
+              i18nKey="retrocerts-certification.questions.ui-part-time.help-couldNotAcceptWork"
+              t={[Function]}
+            />
+          }
+          inputName="couldNotAcceptWork"
+          key="1couldNotAcceptWork"
+          onChange={[Function]}
+          questionNumber={2}
+          questionText={
+            <Trans
+              i18nKey="retrocerts-certification.questions.ui-part-time.couldNotAcceptWork"
+              t={[Function]}
+              values={
+                Object {
+                  "weekString": "02/09/20 - 02/15/20",
+                }
               }
-            }
-            className="text-dark bg-light"
-            disabled={false}
-            to="/retroactive-certification/certify/2020-02-08"
-            type="button"
-            variant="outline-secondary"
-          >
-            Back
-          </Button>
-        </Col>
-        <Col
-          style={
-            Object {
-              "textAlign": "end",
-            }
+            />
+          }
+        />
+        <YesNoQuestion
+          helpText={
+            <Trans
+              i18nKey="retrocerts-certification.questions.ui-part-time.help-didYouLook"
+              t={[Function]}
+            />
+          }
+          ifYes={false}
+          inputName="didYouLook"
+          key="1didYouLook"
+          onChange={[Function]}
+          questionNumber={3}
+          questionText={
+            <Trans
+              i18nKey="retrocerts-certification.questions.ui-part-time.didYouLook"
+              t={[Function]}
+              values={
+                Object {
+                  "weekString": "02/09/20 - 02/15/20",
+                }
+              }
+            />
+          }
+        />
+        <YesNoQuestion
+          helpText={
+            <Trans
+              i18nKey="retrocerts-certification.questions.ui-part-time.help-refuseWork"
+              t={[Function]}
+            />
+          }
+          ifYes={false}
+          inputName="refuseWork"
+          key="1refuseWork"
+          onChange={[Function]}
+          questionNumber={4}
+          questionText={
+            <Trans
+              i18nKey="retrocerts-certification.questions.ui-part-time.refuseWork"
+              t={[Function]}
+              values={
+                Object {
+                  "weekString": "02/09/20 - 02/15/20",
+                }
+              }
+            />
+          }
+        />
+        <YesNoQuestion
+          helpText={
+            <Trans
+              i18nKey="retrocerts-certification.questions.ui-part-time.help-schoolOrTraining"
+              t={[Function]}
+            />
+          }
+          ifYes={false}
+          inputName="schoolOrTraining"
+          key="1schoolOrTraining"
+          onChange={[Function]}
+          questionNumber={5}
+          questionText={
+            <Trans
+              i18nKey="retrocerts-certification.questions.ui-part-time.schoolOrTraining"
+              t={[Function]}
+              values={
+                Object {
+                  "weekString": "02/09/20 - 02/15/20",
+                }
+              }
+            />
+          }
+        />
+        <YesNoQuestion
+          helpText="Look at the date each week begins and ends. If you performed any work during this week, all earnings must be reported regardless if payment has been received."
+          ifYes={false}
+          inputName="workOrEarn"
+          key="1workOrEarn"
+          onChange={[Function]}
+          questionNumber={6}
+          questionText={
+            <Trans
+              i18nKey="retrocerts-certification.questions.ui-part-time.workOrEarn"
+              t={[Function]}
+            />
           }
         >
-          <Button
-            active={false}
-            disabled={false}
-            onClick={[Function]}
-            type="button"
-            variant="secondary"
+          <EmployersQuestions
+            onChange={[Function]}
+          />
+        </YesNoQuestion>
+        <PerjuryCheckbox />
+        <FormRow>
+          <Col>
+            <Button
+              active={false}
+              as={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "displayName": "Link",
+                  "propTypes": Object {
+                    "innerRef": [Function],
+                    "onClick": [Function],
+                    "replace": [Function],
+                    "target": [Function],
+                    "to": [Function],
+                  },
+                  "render": [Function],
+                }
+              }
+              className="text-dark bg-light"
+              disabled={false}
+              to="/retroactive-certification/certify/2020-02-08"
+              type="button"
+              variant="outline-secondary"
+            >
+              Back
+            </Button>
+          </Col>
+          <Col
+            style={
+              Object {
+                "textAlign": "end",
+              }
+            }
           >
-            Submit your certification
-          </Button>
-        </Col>
-      </Row>
+            <Button
+              active={false}
+              disabled={false}
+              type="submit"
+              variant="secondary"
+            >
+              Submit your certification
+            </Button>
+          </Col>
+        </FormRow>
+      </Form>
     </div>
   </main>
   <Footer />
@@ -215,161 +258,189 @@ exports[`<RetroCertsCertificationPage /> Certify for one week of 2 1`] = `
           }
         />
       </h3>
-      <Row
-        key="0-0"
-        noGutters={false}
+      <Form
+        inline={false}
+        noValidate={true}
+        onSubmit={[Function]}
+        validated={false}
       >
-        <Col>
-          <YesNoQuestion
-            helpText="You must be well enough to work every day of the week to receive full benefits."
-            ifYes={false}
-            inputName="tooSick"
-            onChange={[Function]}
-            questionNumber={1}
-            questionText="Were you too sick or injured to work?"
-          />
-        </Col>
-      </Row>
-      <Row
-        key="0-1"
-        noGutters={false}
-      >
-        <Col>
-          <YesNoQuestion
-            helpText="Available means you are ready and willing to accept work that matches your occupational skills and educational background."
-            ifYes={true}
-            inputName="fullTime"
-            onChange={[Function]}
-            questionNumber={2}
-            questionText="Was there any reason (other than sickness or injury) that you could not have accepted full-time work each workday?"
-          />
-        </Col>
-      </Row>
-      <Row
-        key="0-2"
-        noGutters={false}
-      >
-        <Col>
-          <YesNoQuestion
-            helpText="You must look for work, according to your Notice of Unemployment Insurance Award. Work searches may include in-person, mail, telephone, or Internet contacts with employers."
-            inputName="didYouLook"
-            onChange={[Function]}
-            questionNumber={3}
-            questionText="Did you look for work?"
-          />
-        </Col>
-      </Row>
-      <Row
-        key="0-3"
-        noGutters={false}
-      >
-        <Col>
-          <YesNoQuestion
-            helpText="You will not be penalized for however you answer this question, due to COVID-19."
-            inputName="refuseWork"
-            onChange={[Function]}
-            questionNumber={4}
-            questionText="Did you refuse any work?"
-          />
-        </Col>
-      </Row>
-      <Row
-        key="0-4"
-        noGutters={false}
-      >
-        <Col>
-          <YesNoQuestion
-            helpText="Answer ‘yes’ only if school or training <strong>began</strong> during this week."
-            inputName="schoolOrTraining"
-            onChange={[Function]}
-            questionNumber={5}
-            questionText="Did you begin attending any kind of school or training?"
-          />
-        </Col>
-      </Row>
-      <Row
-        key="0-5"
-        noGutters={false}
-      >
-        <Col>
-          <YesNoQuestion
-            helpText="Look at the date each week begins and ends. If you performed any work during this week, all earnings must be reported regardless if payment has been received."
-            inputName="workOrEarn"
-            onChange={[Function]}
-            questionNumber={6}
-            questionText="Did you work or earn any money, whether you were paid or not?"
-          />
-        </Col>
-      </Row>
-      <Row
-        noGutters={false}
-      >
-        <Col>
-          <Button
-            active={false}
-            as={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "displayName": "Link",
-                "propTypes": Object {
-                  "innerRef": [Function],
-                  "onClick": [Function],
-                  "replace": [Function],
-                  "target": [Function],
-                  "to": [Function],
-                },
-                "render": [Function],
-              }
-            }
-            className="text-dark bg-light"
-            disabled={false}
-            to="/retroactive-certification/weeks-to-certify"
-            type="button"
-            variant="outline-secondary"
-          >
-            Back
-          </Button>
-        </Col>
-        <Col
-          style={
-            Object {
-              "textAlign": "end",
-            }
-          }
+        <YesNoQuestion
+          helpText="You must be well enough to work everyday of the week to receive full benefits. Check ‘yes’ if a workday was missed due to being sick or injured."
+          ifYes={false}
+          inputName="tooSick"
+          key="0tooSick"
+          onChange={[Function]}
+          questionNumber={1}
+          questionText="Were you too sick or injured to work?"
         >
-          <Button
-            active={false}
-            as={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "displayName": "Link",
-                "propTypes": Object {
-                  "innerRef": [Function],
-                  "onClick": [Function],
-                  "replace": [Function],
-                  "target": [Function],
-                  "to": [Function],
-                },
-                "render": [Function],
-              }
-            }
-            disabled={false}
-            to="/retroactive-certification/certify/2020-02-15"
-            type="submit"
-            variant="secondary"
-          >
+          <DaysSickQuestion
+            helpText="You must report the numbers of days that you could not work during this week. Unemployment benefits are paid according to the number of days you are able to work this week."
+            onChange={[Function]}
+            questionText="If Yes, enter the number of days (1 - 7) you were unable to work."
+          />
+        </YesNoQuestion>
+        <YesNoQuestion
+          helpText={
             <Trans
-              i18nKey="retrocerts-certification.button-next"
+              i18nKey="retrocerts-certification.questions.ui-full-time.help-couldNotAcceptWork"
+              t={[Function]}
+            />
+          }
+          inputName="couldNotAcceptWork"
+          key="0couldNotAcceptWork"
+          onChange={[Function]}
+          questionNumber={2}
+          questionText={
+            <Trans
+              i18nKey="retrocerts-certification.questions.ui-full-time.couldNotAcceptWork"
               t={[Function]}
               values={
                 Object {
-                  "nextWeekForUser": 2,
+                  "weekString": "02/02/20 - 02/08/20",
                 }
               }
             />
-          </Button>
-        </Col>
-      </Row>
+          }
+        />
+        <YesNoQuestion
+          helpText={
+            <Trans
+              i18nKey="retrocerts-certification.questions.ui-full-time.help-didYouLook"
+              t={[Function]}
+            />
+          }
+          inputName="didYouLook"
+          key="0didYouLook"
+          onChange={[Function]}
+          questionNumber={3}
+          questionText={
+            <Trans
+              i18nKey="retrocerts-certification.questions.ui-full-time.didYouLook"
+              t={[Function]}
+              values={
+                Object {
+                  "weekString": "02/02/20 - 02/08/20",
+                }
+              }
+            />
+          }
+        />
+        <YesNoQuestion
+          helpText={
+            <Trans
+              i18nKey="retrocerts-certification.questions.ui-full-time.help-refuseWork"
+              t={[Function]}
+            />
+          }
+          inputName="refuseWork"
+          key="0refuseWork"
+          onChange={[Function]}
+          questionNumber={4}
+          questionText={
+            <Trans
+              i18nKey="retrocerts-certification.questions.ui-full-time.refuseWork"
+              t={[Function]}
+              values={
+                Object {
+                  "weekString": "02/02/20 - 02/08/20",
+                }
+              }
+            />
+          }
+        />
+        <YesNoQuestion
+          helpText={
+            <Trans
+              i18nKey="retrocerts-certification.questions.ui-full-time.help-schoolOrTraining"
+              t={[Function]}
+            />
+          }
+          inputName="schoolOrTraining"
+          key="0schoolOrTraining"
+          onChange={[Function]}
+          questionNumber={5}
+          questionText={
+            <Trans
+              i18nKey="retrocerts-certification.questions.ui-full-time.schoolOrTraining"
+              t={[Function]}
+              values={
+                Object {
+                  "weekString": "02/02/20 - 02/08/20",
+                }
+              }
+            />
+          }
+        />
+        <YesNoQuestion
+          helpText="Look at the date each week begins and ends. If you performed any work during this week, all earnings must be reported regardless if payment has been received."
+          inputName="workOrEarn"
+          key="0workOrEarn"
+          onChange={[Function]}
+          questionNumber={6}
+          questionText={
+            <Trans
+              i18nKey="retrocerts-certification.questions.ui-full-time.workOrEarn"
+              t={[Function]}
+            />
+          }
+        >
+          <EmployersQuestions
+            onChange={[Function]}
+          />
+        </YesNoQuestion>
+        <FormRow>
+          <Col>
+            <Button
+              active={false}
+              as={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "displayName": "Link",
+                  "propTypes": Object {
+                    "innerRef": [Function],
+                    "onClick": [Function],
+                    "replace": [Function],
+                    "target": [Function],
+                    "to": [Function],
+                  },
+                  "render": [Function],
+                }
+              }
+              className="text-dark bg-light"
+              disabled={false}
+              to="/retroactive-certification/weeks-to-certify"
+              type="button"
+              variant="outline-secondary"
+            >
+              Back
+            </Button>
+          </Col>
+          <Col
+            style={
+              Object {
+                "textAlign": "end",
+              }
+            }
+          >
+            <Button
+              active={false}
+              disabled={false}
+              type="submit"
+              variant="secondary"
+            >
+              <Trans
+                i18nKey="retrocerts-certification.button-next"
+                t={[Function]}
+                values={
+                  Object {
+                    "nextWeekForUser": 2,
+                  }
+                }
+              />
+            </Button>
+          </Col>
+        </FormRow>
+      </Form>
     </div>
   </main>
   <Footer />
