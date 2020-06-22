@@ -200,7 +200,5 @@
     "missing-fields-error":"It looks like you missed some information. Please fill out all fields and try again.",
     "show-ssn":"Show SSN",
     "hide-ssn":"Hide SSN"
-  },
-  "show":"Show",
-  "hide":"Hide"
+  }
 }
