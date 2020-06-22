@@ -32,7 +32,7 @@ function DisasterQuestion(props) {
 
   return (
     <Form>
-      <Form.Group>
+      <Form.Group controlId="disaster-question">
         <Form.Label>{props.questionText}</Form.Label>
         <Form.Control as="select" onChange={onChange}>
           {disasterDropDownChoices.map((choice) => (

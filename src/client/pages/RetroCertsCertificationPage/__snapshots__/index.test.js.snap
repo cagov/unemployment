@@ -5,7 +5,9 @@ exports[`<RetroCertsCertificationPage /> Certify for 2nd week of 2 1`] = `
   id="overflow-wrapper"
 >
   <Header />
-  <main>
+  <main
+    className="pb-5"
+  >
     <div
       className="container p-4"
     >
@@ -227,7 +229,9 @@ exports[`<RetroCertsCertificationPage /> Certify for one week of 2 1`] = `
   id="overflow-wrapper"
 >
   <Header />
-  <main>
+  <main
+    className="pb-5"
+  >
     <div
       className="container p-4"
     >

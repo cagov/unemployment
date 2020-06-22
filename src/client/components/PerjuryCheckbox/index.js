@@ -1,16 +1,21 @@
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import React, { useState } from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslation, Trans } from "react-i18next";
 
 function PerjuryCheckbox(props) {
   const [isChecked, setIsChecked] = useState(false);
   const { t } = useTranslation();
 
   return (
-    <Form.Group className="prejury-checkbox">
+    <Form.Group controlId="perjury-checkbox" className="prejury-checkbox">
       <Form.Text as="h3">{t("retrocerts-certification.ack-header")}</Form.Text>
-      <Form.Text as="p">{t("retrocerts-certification.ack-p")}</Form.Text>
+      <ul>
+        <li>{t("retrocerts-certification.ack-list-item-1")}</li>
+        <li>{t("retrocerts-certification.ack-list-item-2")}</li>
+        <li>{t("retrocerts-certification.ack-list-item-3")}</li>
+        <li>{t("retrocerts-certification.ack-list-item-4")}</li>
+      </ul>
 
       <Form.Row>
         <Col md="auto">
@@ -25,6 +30,13 @@ function PerjuryCheckbox(props) {
           <Form.Label>{t("retrocerts-certification.ack-label")}</Form.Label>
         </Col>
       </Form.Row>
+
+      <Form.Text as="p">
+        <Trans t={t} i18nKey="retrocerts-certification.submit-p1" />
+      </Form.Text>
+      <Form.Text as="p">
+        <Trans t={t} i18nKey="retrocerts-certification.submit-p2" />
+      </Form.Text>
     </Form.Group>
   );
 }
