@@ -109,10 +109,15 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
                 disabled={false}
                 onClick={[Function]}
                 size="sm"
+                style={
+                  Object {
+                    "fontWeight": "normal",
+                  }
+                }
                 type="button"
                 variant="link"
               >
-                Show
+                Show SSN
               </Button>
             </div>
           </FormGroup>
@@ -262,10 +267,15 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
                 disabled={false}
                 onClick={[Function]}
                 size="sm"
+                style={
+                  Object {
+                    "fontWeight": "normal",
+                  }
+                }
                 type="button"
                 variant="link"
               >
-                Show
+                Show SSN
               </Button>
             </div>
           </FormGroup>
@@ -473,10 +483,15 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
                 disabled={false}
                 onClick={[Function]}
                 size="sm"
+                style={
+                  Object {
+                    "fontWeight": "normal",
+                  }
+                }
                 type="button"
                 variant="link"
               >
-                Show
+                Show SSN
               </Button>
             </div>
           </FormGroup>
@@ -626,10 +641,15 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
                 disabled={false}
                 onClick={[Function]}
                 size="sm"
+                style={
+                  Object {
+                    "fontWeight": "normal",
+                  }
+                }
                 type="button"
                 variant="link"
               >
-                Show
+                Show SSN
               </Button>
             </div>
           </FormGroup>

@@ -137,7 +137,9 @@ function RetroCertsAuthPage(props) {
   }
 
   function getSsnToggleText() {
-    return showSsn ? t("hide") : t("show");
+    return showSsn
+      ? t("retrocert-login.hide-ssn")
+      : t("retrocert-login.show-ssn");
   }
 
   return (
@@ -191,7 +193,12 @@ function RetroCertsAuthPage(props) {
                   {t("retrocert-login.ssn-required-error")}
                 </Form.Control.Feedback>
                 <div className="d-flex justify-content-end">
-                  <Button onClick={toggleSsn} variant="link" size="sm">
+                  <Button
+                    onClick={toggleSsn}
+                    variant="link"
+                    style={{ fontWeight: "normal" }}
+                    size="sm"
+                  >
                     {getSsnToggleText()}
                   </Button>
                 </div>
