@@ -2,7 +2,7 @@
 
 exports[`<RetroCertsConfirmationPage /> no confirmation number 1`] = `
 <Redirect
-  to="/retroactive-certification/what-to-expect"
+  to="/retroactive-certification/weeks-to-certify"
 />
 `;
 
@@ -16,9 +16,10 @@ exports[`<RetroCertsConfirmationPage /> with confirmation number 1`] = `
       className="container p-4"
     >
       <h1>
-        Retroactive Unemployment Certification
+        Retroactive Certification for Unemployment
       </h1>
       <Alert
+        className="mt-5"
         closeLabel="Close alert"
         show={true}
         transition={
@@ -42,114 +43,63 @@ exports[`<RetroCertsConfirmationPage /> with confirmation number 1`] = `
           className="checkmark"
           src="/images/check-circle-fill.svg"
         />
-        We have received your certification. Thank you.
+        You have successfully submitted your retroactive certification. No further action is required.
       </Alert>
-      <h2>
-        Save this certification confirmation number
+      <h2
+        className="mt-5"
+      >
+        Retroactive Certification Confirmation
+      </h2>
+      <p>
+        We received your retroactive certification(s). You’ve been logged out of the system and may close this window.
+      </p>
+      <h2
+        className="mt-5"
+      >
+        Retroactive Certification Weeks
+      </h2>
+      <ListOfWeeks
+        showChecks={false}
+        weeksToCertify={
+          Array [
+            0,
+            1,
+            2,
+            5,
+            6,
+          ]
+        }
+      />
+      <h2
+        className="mt-5"
+      >
+        Next Steps
       </h2>
       <p>
         <Trans
-          i18nKey="retrocerts-confirmation.p1"
+          i18nKey="retrocerts-confirmation.p2"
           t={[Function]}
-          values={
-            Object {
-              "confirmationNumber": "CONFIRMATION_NUMBER",
-            }
-          }
-        />
+        >
+          If you are still unemployed, continue to certify for benefits every two weeks. The fastest way is to use
+           
+          <a
+            href="https://portal.edd.ca.gov/WebApp/Login?resource_url=https://portal.edd.ca.gov/WebApp/Home"
+          >
+            UI Online
+          </a>
+          .
+        </Trans>
       </p>
-      <h2>
-        Weeks certified
-      </h2>
-      <ul>
-        <li
-          key="week0"
-        >
-          <Trans
-            i18nKey="retrocerts-confirmation.list-item"
-            t={[Function]}
-            values={
-              Object {
-                "formattedDateRange": "02/02/20 - 02/08/20",
-                "number": 1,
-              }
-            }
-          />
-           
-        </li>
-        <li
-          key="week1"
-        >
-          <Trans
-            i18nKey="retrocerts-confirmation.list-item"
-            t={[Function]}
-            values={
-              Object {
-                "formattedDateRange": "02/09/20 - 02/15/20",
-                "number": 2,
-              }
-            }
-          />
-           
-        </li>
-        <li
-          key="week2"
-        >
-          <Trans
-            i18nKey="retrocerts-confirmation.list-item"
-            t={[Function]}
-            values={
-              Object {
-                "formattedDateRange": "02/16/20 - 02/22/20",
-                "number": 3,
-              }
-            }
-          />
-           
-        </li>
-        <li
-          key="week3"
-        >
-          <Trans
-            i18nKey="retrocerts-confirmation.list-item"
-            t={[Function]}
-            values={
-              Object {
-                "formattedDateRange": "03/08/20 - 03/14/20",
-                "number": 4,
-              }
-            }
-          />
-           
-        </li>
-        <li
-          key="week4"
-        >
-          <Trans
-            i18nKey="retrocerts-confirmation.list-item"
-            t={[Function]}
-            values={
-              Object {
-                "formattedDateRange": "03/15/20 - 03/21/20",
-                "number": 5,
-              }
-            }
-          />
-           
-        </li>
-      </ul>
-      <p>
-        <Button
-          active={false}
-          className="text-dark bg-light"
-          disabled={false}
-          onClick={[Function]}
-          type="button"
-          variant="outline-secondary"
-        >
-          Print this page
-        </Button>
-      </p>
+      <Button
+        active={false}
+        className="text-dark bg-light mt-5"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+        variant="outline-secondary"
+      >
+        Print this page
+      </Button>
     </div>
   </main>
   <Footer />
