@@ -335,6 +335,7 @@
     "button-next": "Next, certify Week {{nextWeekForUser}}",
     "button-submit": "Submit your certification"
   },
+
   "retrocerts-confirmation": {
     "title": "Retroactive Certification for Unemployment",
     "alert": "You have successfully submitted your retroactive certification.",
