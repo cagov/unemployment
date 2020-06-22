@@ -1,6 +1,7 @@
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
+import Alert from "react-bootstrap/Alert";
 import { Redirect, useHistory, Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import React, { useRef, useState } from "react";
@@ -11,7 +12,6 @@ import {
   fromPathStringToIndex,
   toWeekString,
 } from "../../../utils/retroCertsWeeks";
-import mockedFormData from "../../../data/mockedFormData";
 import routes from "../../../data/routes";
 import AUTH_STRINGS from "../../../data/authStrings";
 import seekWorkPlan from "../../../data/seekWorkPlan";
@@ -142,7 +142,7 @@ function RetroCertsCertificationPage(props) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        formData: mockedFormData,
+        formData: userData.formData,
         authToken: sessionStorage.getItem(AUTH_STRINGS.authToken),
       }),
     })
@@ -152,10 +152,15 @@ function RetroCertsCertificationPage(props) {
           ...userData,
           confirmationNumber: data.confirmationNumber,
         });
-
         history.push(routes.retroCertsConfirmation);
       })
-      .catch((error) => console.error(error));
+      .catch((error) => {
+        console.error(error);
+        setUserData({
+          ...userData,
+          saveError: true,
+        });
+      });
   }
 
   const questionsTwoThroughFive =
@@ -249,12 +254,17 @@ function RetroCertsCertificationPage(props) {
               >
                 <DisasterQuestion
                   questionText={t(questionText("recentDisasterChoice"))}
+                  choice={formData.disasterChoice}
                   onChange={(e) => handleFormDataChange(e)}
                 />
               </YesNoQuestion>
             )}
             {weekForUser === numberOfWeeks && <PerjuryCheckbox />}
-
+            {userData.saveError && (
+              <Alert variant="danger">
+                {t("retrocerts-certification.save-error")}
+              </Alert>
+            )}
             <Form.Row>
               <Col>
                 <Button

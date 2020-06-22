@@ -234,6 +234,7 @@
     "title":"Retroactive Unemployment Certification",
     "p1-multiple": "You are on Week {{weekForUser}} of {{numberOfWeeks}} to certify.",
     "form-header": "Week {{weekForUser}}: {{weekString}}",
+    "save-error": "Something went wrong. Please try again later.",
     "questions": {
       "ui-full-time": {
         "tooSick": "Were you too sick or injured to work?",
