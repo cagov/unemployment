@@ -92,7 +92,7 @@ function RetroCertsAuthPage(props) {
       body: JSON.stringify({
         lastName: lastName.trim(),
         dob: `${dobYear}-${month}-${day}`.trim(),
-        ssn: ssn.inputmask ? ssn.inputmask.unmaskedvalue() : ssn.trim(),
+        ssn: ssn.inputmask ? ssn.inputmask.unmaskedvalue() : ssn.trim().replace(/-/g, ""),
         reCaptcha: recaptchaRef.current.getValue(),
       }),
     })
