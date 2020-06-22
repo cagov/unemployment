@@ -35,7 +35,7 @@ function YesNoQuestion(props) {
 
   return (
     <div className="bg-light p-2 m-2">
-      <Form.Group>
+      <Form.Group controlId={inputName}>
         <Form.Label>
           {questionNumber}.&nbsp;{questionText}
         </Form.Label>

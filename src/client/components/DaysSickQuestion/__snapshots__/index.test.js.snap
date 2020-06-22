@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<DaysSickQuestion /> renders the component 1`] = `
-<FormGroup>
+<FormGroup
+  controlId="days-sick"
+>
   <FormLabel
     column={false}
     srOnly={false}

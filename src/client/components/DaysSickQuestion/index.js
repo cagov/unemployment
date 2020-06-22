@@ -21,7 +21,7 @@ function DaysSickQuestion(props) {
   }
 
   return (
-    <Form.Group>
+    <Form.Group controlId="days-sick">
       <Form.Label>{props.questionText}</Form.Label>
       <Form.Text muted>{props.helpText}</Form.Text>
       <Form.Control

@@ -166,7 +166,7 @@ function RetroCertsCertificationPage(props) {
   return (
     <div id="overflow-wrapper">
       <Header />
-      <main>
+      <main className="pb-5">
         <div className="container p-4">
           <h1 ref={headingElement}>{t("retrocerts-certification.title")}</h1>
           {numberOfWeeks > 1 && (
