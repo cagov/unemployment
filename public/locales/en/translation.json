@@ -328,8 +328,13 @@
       "choice-14": "None of these options apply to me."
     },
     "ack-header": "Acknowledgement",
-    "ack-p": "I understand the questions I answered through this automated system. I know the law provides penalties if I make false statements or  withhold facts to receive benefits; and my answers are true and correct. I declare under penalty of perjury that I am a US Citizen or National; or an Alien in satisfactory immigration status and permitted to work by the United States Citizenship and Immigration Service. I understand when submitting my request for benefits my submission is considered the same as my written signature.",
-    "ack-label": "You must indicate your acceptance of the statement by checking the box before your certification can be submitted.",
+    "ack-list-item-1": "I understand the questions I answered through this automated system.",
+    "ack-list-item-2": "I know the law provides penalties if I make false statements or withhold facts to receive benefits; and my answers are true and correct.",
+    "ack-list-item-3": "I declare under penalty of perjury that I am a US Citizen or National; or an Alien in satisfactory immigration status and permitted to work by the United States Citizenship and Immigration Service.",
+    "ack-list-item-4": "I understand when submitting my request for benefits my submission is considered the same as my written signature.",
+    "ack-label": "I agree and accept the statement above.",
+    "submit-p1": "You are about to submit your retroactive certification(s). You will <strong>not</strong> be able to change your answers once you select Submit.",
+    "submit-p2": "To complete your retroactive certification(s), select Submit.",
     "button-back": "Back",
     "button-next": "Next, certify Week {{nextWeekForUser}}",
     "button-submit": "Submit your certification"
