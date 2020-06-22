@@ -52,21 +52,40 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
             </Feedback>
           </FormGroup>
         </Row>
+        <div
+          className="mb-n2"
+        >
+          Date of Birth
+        </div>
+        <small
+          className="text-muted"
+        >
+          For example, 4 28 1990
+        </small>
         <Row
           noGutters={false}
         >
           <FormGroup
-            className="col-md-6"
-            controlId="formEddcan"
+            as={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "displayName": "Col",
+                "render": [Function],
+              }
+            }
+            controlId="formDobMonth"
+            md={2}
           >
             <FormLabel
               column={false}
               srOnly={false}
             >
-              EDDCAN
+              Month
             </FormLabel>
             <FormControl
+              maxLength={2}
               onChange={[Function]}
+              pattern="0?[1-9]|10|11|12"
               required={true}
               type="text"
               value=""
@@ -74,7 +93,69 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
             <Feedback
               type="invalid"
             >
-              Please provide your EDDCAN number.
+              Please provide your birth month.
+            </Feedback>
+          </FormGroup>
+          <FormGroup
+            as={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "displayName": "Col",
+                "render": [Function],
+              }
+            }
+            controlId="formDobDay"
+            md={2}
+          >
+            <FormLabel
+              column={false}
+              srOnly={false}
+            >
+              Day
+            </FormLabel>
+            <FormControl
+              maxLength={2}
+              onChange={[Function]}
+              pattern="0?[1-9]|1\\\\d|2\\\\d|3[01]"
+              required={true}
+              type="text"
+              value=""
+            />
+            <Feedback
+              type="invalid"
+            >
+              Please provide your birth day.
+            </Feedback>
+          </FormGroup>
+          <FormGroup
+            as={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "displayName": "Col",
+                "render": [Function],
+              }
+            }
+            controlId="formDobYear"
+            md={3}
+          >
+            <FormLabel
+              column={false}
+              srOnly={false}
+            >
+              Year
+            </FormLabel>
+            <FormControl
+              maxLength={4}
+              onChange={[Function]}
+              pattern="[12][890]\\\\d\\\\d"
+              required={true}
+              type="text"
+              value=""
+            />
+            <Feedback
+              type="invalid"
+            >
+              Please provide your birth year.
             </Feedback>
           </FormGroup>
         </Row>
@@ -210,21 +291,40 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
             </Feedback>
           </FormGroup>
         </Row>
+        <div
+          className="mb-n2"
+        >
+          Date of Birth
+        </div>
+        <small
+          className="text-muted"
+        >
+          For example, 4 28 1990
+        </small>
         <Row
           noGutters={false}
         >
           <FormGroup
-            className="col-md-6"
-            controlId="formEddcan"
+            as={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "displayName": "Col",
+                "render": [Function],
+              }
+            }
+            controlId="formDobMonth"
+            md={2}
           >
             <FormLabel
               column={false}
               srOnly={false}
             >
-              EDDCAN
+              Month
             </FormLabel>
             <FormControl
+              maxLength={2}
               onChange={[Function]}
+              pattern="0?[1-9]|10|11|12"
               required={true}
               type="text"
               value=""
@@ -232,7 +332,69 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
             <Feedback
               type="invalid"
             >
-              Please provide your EDDCAN number.
+              Please provide your birth month.
+            </Feedback>
+          </FormGroup>
+          <FormGroup
+            as={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "displayName": "Col",
+                "render": [Function],
+              }
+            }
+            controlId="formDobDay"
+            md={2}
+          >
+            <FormLabel
+              column={false}
+              srOnly={false}
+            >
+              Day
+            </FormLabel>
+            <FormControl
+              maxLength={2}
+              onChange={[Function]}
+              pattern="0?[1-9]|1\\\\d|2\\\\d|3[01]"
+              required={true}
+              type="text"
+              value=""
+            />
+            <Feedback
+              type="invalid"
+            >
+              Please provide your birth day.
+            </Feedback>
+          </FormGroup>
+          <FormGroup
+            as={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "displayName": "Col",
+                "render": [Function],
+              }
+            }
+            controlId="formDobYear"
+            md={3}
+          >
+            <FormLabel
+              column={false}
+              srOnly={false}
+            >
+              Year
+            </FormLabel>
+            <FormControl
+              maxLength={4}
+              onChange={[Function]}
+              pattern="[12][890]\\\\d\\\\d"
+              required={true}
+              type="text"
+              value=""
+            />
+            <Feedback
+              type="invalid"
+            >
+              Please provide your birth year.
             </Feedback>
           </FormGroup>
         </Row>
@@ -426,21 +588,40 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
             </Feedback>
           </FormGroup>
         </Row>
+        <div
+          className="mb-n2"
+        >
+          Date of Birth
+        </div>
+        <small
+          className="text-muted"
+        >
+          For example, 4 28 1990
+        </small>
         <Row
           noGutters={false}
         >
           <FormGroup
-            className="col-md-6"
-            controlId="formEddcan"
+            as={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "displayName": "Col",
+                "render": [Function],
+              }
+            }
+            controlId="formDobMonth"
+            md={2}
           >
             <FormLabel
               column={false}
               srOnly={false}
             >
-              EDDCAN
+              Month
             </FormLabel>
             <FormControl
+              maxLength={2}
               onChange={[Function]}
+              pattern="0?[1-9]|10|11|12"
               required={true}
               type="text"
               value=""
@@ -448,7 +629,69 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
             <Feedback
               type="invalid"
             >
-              Please provide your EDDCAN number.
+              Please provide your birth month.
+            </Feedback>
+          </FormGroup>
+          <FormGroup
+            as={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "displayName": "Col",
+                "render": [Function],
+              }
+            }
+            controlId="formDobDay"
+            md={2}
+          >
+            <FormLabel
+              column={false}
+              srOnly={false}
+            >
+              Day
+            </FormLabel>
+            <FormControl
+              maxLength={2}
+              onChange={[Function]}
+              pattern="0?[1-9]|1\\\\d|2\\\\d|3[01]"
+              required={true}
+              type="text"
+              value=""
+            />
+            <Feedback
+              type="invalid"
+            >
+              Please provide your birth day.
+            </Feedback>
+          </FormGroup>
+          <FormGroup
+            as={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "displayName": "Col",
+                "render": [Function],
+              }
+            }
+            controlId="formDobYear"
+            md={3}
+          >
+            <FormLabel
+              column={false}
+              srOnly={false}
+            >
+              Year
+            </FormLabel>
+            <FormControl
+              maxLength={4}
+              onChange={[Function]}
+              pattern="[12][890]\\\\d\\\\d"
+              required={true}
+              type="text"
+              value=""
+            />
+            <Feedback
+              type="invalid"
+            >
+              Please provide your birth year.
             </Feedback>
           </FormGroup>
         </Row>
@@ -584,21 +827,40 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
             </Feedback>
           </FormGroup>
         </Row>
+        <div
+          className="mb-n2"
+        >
+          Date of Birth
+        </div>
+        <small
+          className="text-muted"
+        >
+          For example, 4 28 1990
+        </small>
         <Row
           noGutters={false}
         >
           <FormGroup
-            className="col-md-6"
-            controlId="formEddcan"
+            as={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "displayName": "Col",
+                "render": [Function],
+              }
+            }
+            controlId="formDobMonth"
+            md={2}
           >
             <FormLabel
               column={false}
               srOnly={false}
             >
-              EDDCAN
+              Month
             </FormLabel>
             <FormControl
+              maxLength={2}
               onChange={[Function]}
+              pattern="0?[1-9]|10|11|12"
               required={true}
               type="text"
               value=""
@@ -606,7 +868,69 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
             <Feedback
               type="invalid"
             >
-              Please provide your EDDCAN number.
+              Please provide your birth month.
+            </Feedback>
+          </FormGroup>
+          <FormGroup
+            as={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "displayName": "Col",
+                "render": [Function],
+              }
+            }
+            controlId="formDobDay"
+            md={2}
+          >
+            <FormLabel
+              column={false}
+              srOnly={false}
+            >
+              Day
+            </FormLabel>
+            <FormControl
+              maxLength={2}
+              onChange={[Function]}
+              pattern="0?[1-9]|1\\\\d|2\\\\d|3[01]"
+              required={true}
+              type="text"
+              value=""
+            />
+            <Feedback
+              type="invalid"
+            >
+              Please provide your birth day.
+            </Feedback>
+          </FormGroup>
+          <FormGroup
+            as={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "displayName": "Col",
+                "render": [Function],
+              }
+            }
+            controlId="formDobYear"
+            md={3}
+          >
+            <FormLabel
+              column={false}
+              srOnly={false}
+            >
+              Year
+            </FormLabel>
+            <FormControl
+              maxLength={4}
+              onChange={[Function]}
+              pattern="[12][890]\\\\d\\\\d"
+              required={true}
+              type="text"
+              value=""
+            />
+            <Feedback
+              type="invalid"
+            >
+              Please provide your birth year.
             </Feedback>
           </FormGroup>
         </Row>

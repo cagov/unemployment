@@ -13,9 +13,9 @@ function createRouter() {
 
     const [reCaptchaResponse, userRecord] = await Promise.all([
       reCaptcha.validateUser(),
-      cosmos.getUserByNameEddcanSsn(
+      cosmos.getUserByNameDobSsn(
         postJson.lastName || "",
-        postJson.eddcan,
+        postJson.dob,
         postJson.ssn
       ),
     ]);

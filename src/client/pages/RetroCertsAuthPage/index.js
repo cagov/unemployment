@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Alert from "react-bootstrap/Alert";
 import ReCAPTCHA from "react-google-recaptcha";
@@ -22,7 +23,9 @@ function RetroCertsAuthPage(props) {
   const setUserData = props.setUserData;
 
   const [lastName, setLastName] = useState("");
-  const [eddcan, setEddcan] = useState("");
+  const [dobMonth, setDobMonth] = useState("");
+  const [dobDay, setDobDay] = useState("");
+  const [dobYear, setDobYear] = useState("");
   const [ssn, setSsn] = useState("");
   const [validated, setValidated] = useState(false);
   const [showSsn, setShowSsn] = useState(false);
@@ -52,7 +55,7 @@ function RetroCertsAuthPage(props) {
   );
 
   function hasMissingFields() {
-    return validated && (!lastName || !eddcan || !ssn);
+    return validated && (!lastName || !dobMonth || !dobDay || !dobYear || !ssn);
   }
 
   const missingFieldsAlert = (
@@ -78,6 +81,9 @@ function RetroCertsAuthPage(props) {
 
     if (!isValid) return;
 
+    const month = dobMonth.length < 2 ? "0" + dobMonth : dobMonth;
+    const day = dobDay.length < 2 ? "0" + dobDay : dobDay;
+
     fetch(AUTH_STRINGS.apiPath.login, {
       method: "POST",
       headers: {
@@ -85,8 +91,10 @@ function RetroCertsAuthPage(props) {
       },
       body: JSON.stringify({
         lastName: lastName.trim(),
-        eddcan: eddcan.trim(),
-        ssn: ssn.inputmask ? ssn.inputmask.unmaskedvalue() : ssn.trim(),
+        dob: `${dobYear}-${month}-${day}`.trim(),
+        ssn: ssn.inputmask
+          ? ssn.inputmask.unmaskedvalue()
+          : ssn.trim().replace(/-/g, ""),
         reCaptcha: recaptchaRef.current.getValue(),
       }),
     })
@@ -167,17 +175,51 @@ function RetroCertsAuthPage(props) {
                 </Form.Control.Feedback>
               </Form.Group>
             </Row>
+            <div className="mb-n2">{t("retrocert-login.dob-heading")}</div>
+            <small className="text-muted">
+              {t("retrocert-login.dob-hint")}
+            </small>
             <Row>
-              <Form.Group controlId="formEddcan" className="col-md-6">
-                <Form.Label>{t("retrocert-login.eddcan-label")}</Form.Label>
+              <Form.Group controlId="formDobMonth" as={Col} md={2}>
+                <Form.Label>{t("retrocert-login.dob-month")}</Form.Label>
                 <Form.Control
                   type="text"
-                  value={eddcan}
-                  onChange={(e) => handleChange(e, setEddcan)}
+                  value={dobMonth}
+                  maxLength={2}
+                  onChange={(e) => handleChange(e, setDobMonth)}
                   required
+                  pattern="0?[1-9]|10|11|12"
                 />
                 <Form.Control.Feedback type="invalid">
-                  {t("retrocert-login.eddcan-required-error")}
+                  {t("retrocert-login.dob-month-required-error")}
+                </Form.Control.Feedback>
+              </Form.Group>
+              <Form.Group controlId="formDobDay" as={Col} md={2}>
+                <Form.Label>{t("retrocert-login.dob-day")}</Form.Label>
+                <Form.Control
+                  type="text"
+                  value={dobDay}
+                  maxLength={2}
+                  onChange={(e) => handleChange(e, setDobDay)}
+                  required
+                  pattern="0?[1-9]|1\d|2\d|3[01]"
+                />
+                <Form.Control.Feedback type="invalid">
+                  {t("retrocert-login.dob-day-required-error")}
+                </Form.Control.Feedback>
+              </Form.Group>
+              <Form.Group controlId="formDobYear" as={Col} md={3}>
+                <Form.Label>{t("retrocert-login.dob-year")}</Form.Label>
+                <Form.Control
+                  type="text"
+                  value={dobYear}
+                  maxLength={4}
+                  onChange={(e) => handleChange(e, setDobYear)}
+                  required
+                  pattern="[12][890]\d\d"
+                />
+                <Form.Control.Feedback type="invalid">
+                  {t("retrocert-login.dob-year-required-error")}
                 </Form.Control.Feedback>
               </Form.Group>
             </Row>
