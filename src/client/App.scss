@@ -103,3 +103,10 @@ footer {
 .was-validated .form-control:valid {
   border-color: rgb(206, 212, 218) !important;
 }
+
+// Use grey for secondary alerts rather than our secondary color yellowish gold.
+.alert-secondary {
+  color: #383d41;
+  background-color: #e2e3e5;
+  border-color: #d6d8db;
+}

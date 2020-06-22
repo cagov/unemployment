@@ -4,11 +4,11 @@ import Alert from "react-bootstrap/Alert";
 import React from "react";
 import { useTranslation, Trans } from "react-i18next";
 import { userDataPropType } from "../../commonPropTypes";
-import { toWeekString } from "../../../utils/retroCertsWeeks";
 import AUTH_STRINGS from "../../../data/authStrings";
 import routes from "../../../data/routes";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import ListOfWeeks from "../../components/ListOfWeeks";
 
 function RetroCertsConfirmationPage(props) {
   const { t } = useTranslation();
@@ -18,11 +18,17 @@ function RetroCertsConfirmationPage(props) {
   if (!userData.confirmationNumber) {
     // For now, send them to the what-to-expect page, but
     // in the future, go to the first week without data.
-    return <Redirect to={routes.retroCertsWhatToExpect} />;
+    return <Redirect to={routes.retroCertsWeeksToCertify} />;
   }
 
   // Log out the user since they are done!
   sessionStorage.removeItem(AUTH_STRINGS.authToken);
+
+  // If the user is checking after they submitted data, formData
+  // will be empty. NOTE: if we implement partial save, we need
+  // to make sure not to return form data if the user has a
+  // confirmation number.
+  const isReturning = !userData.formData;
 
   return (
     <div id="overflow-wrapper">
@@ -30,48 +36,48 @@ function RetroCertsConfirmationPage(props) {
       <main>
         <div className="container p-4">
           <h1>{t("retrocerts-confirmation.title")}</h1>
-          <Alert variant="success">
+          <Alert variant="success" className="mt-5">
             <img
               className="checkmark"
               src="/images/check-circle-fill.svg"
               alt={t("iconAltText.checkmark")}
             />
-            {t("retrocerts-confirmation.subheader")}
+            {t(
+              isReturning
+                ? "retrocerts-confirmation.alert-returning"
+                : "retrocerts-confirmation.alert"
+            )}
           </Alert>
-          <h2>{t("retrocerts-confirmation.header1")}</h2>
+          <h2 className="mt-5">{t("retrocerts-confirmation.header1")}</h2>
           <p>
-            <Trans
-              t={t}
-              i18nKey="retrocerts-confirmation.p1"
-              values={{ confirmationNumber: userData.confirmationNumber }}
-            />
+            {t(
+              isReturning
+                ? "retrocerts-confirmation.p1-returning"
+                : "retrocerts-confirmation.p1"
+            )}
           </p>
-          <h2>{t("retrocerts-confirmation.header2")}</h2>
-          <ul>
-            {userData.weeksToCertify.map((weekId, i) => {
-              return (
-                <li key={"week" + i}>
-                  <Trans
-                    t={t}
-                    i18nKey="retrocerts-confirmation.list-item"
-                    values={{
-                      number: i + 1,
-                      formattedDateRange: toWeekString(weekId),
-                    }}
-                  />{" "}
-                </li>
-              );
-            })}
-          </ul>
+          <h2 className="mt-5">{t("retrocerts-confirmation.header2")}</h2>
+          <ListOfWeeks
+            weeksToCertify={userData.weeksToCertify}
+            showChecks={!isReturning}
+          />
+
+          <h2 className="mt-5">{t("retrocerts-confirmation.header3")}</h2>
           <p>
-            <Button
-              variant="outline-secondary"
-              className="text-dark bg-light"
-              onClick={print}
-            >
-              {t("retrocerts-confirmation.button-print")}
-            </Button>
+            <Trans t={t} i18nKey="retrocerts-confirmation.p2">
+              If you are still unemployed, continue to certify for benefits
+              every two weeks. The fastest way is to use{" "}
+              <a href={t("links.edd-webapp")}>UI Online</a>.
+            </Trans>
           </p>
+
+          <Button
+            variant="outline-secondary"
+            className="text-dark bg-light mt-5"
+            onClick={print}
+          >
+            {t("retrocerts-confirmation.button-print")}
+          </Button>
         </div>
       </main>
       <Footer />

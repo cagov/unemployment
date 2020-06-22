@@ -114,7 +114,7 @@ function RetroCertsAuthPage(props) {
             // The user has already completed the retro-certs process.
             history.push(routes.retroCertsConfirmation);
           } else {
-            history.push(routes.retroCertsWhatToExpect);
+            history.push(routes.retroCertsWeeksToCertify);
           }
         }
       })

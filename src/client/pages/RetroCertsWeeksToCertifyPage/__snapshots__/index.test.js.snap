@@ -5,48 +5,72 @@ exports[`<RetroCertsWeeksToCertifyPage /> has user data 1`] = `
   id="overflow-wrapper"
 >
   <Header />
-  <main>
+  <main
+    className="pb-5"
+  >
     <div
       className="container p-4"
     >
       <h1>
-        Hello
+        Retroactive Certification for Unemployment
       </h1>
+      <Alert
+        className="mt-5"
+        closeLabel="Close alert"
+        show={true}
+        transition={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": Object {
+              "appear": false,
+              "in": false,
+              "mountOnEnter": false,
+              "timeout": 300,
+              "unmountOnExit": false,
+            },
+            "displayName": "Fade",
+            "render": [Function],
+          }
+        }
+        variant="success"
+      >
+        <img
+          alt="checkmark"
+          className="checkmark"
+          src="/images/check-circle-fill.svg"
+        />
+        You have at least one week available to retroactively certify.
+      </Alert>
+      <h2
+        className="mt-4"
+      >
+        Important Next Steps
+      </h2>
       <p>
-        Weeks to certify: 
-        0
+        You must retroactively certify for the following weeks:
+      </p>
+      <ListOfWeeks
+        weeksToCertify={
+          Array [
+            0,
+          ]
+        }
+      />
+      <p>
+        Answer all retroactive certification questions truthfully and correctly to avoid committing fraud.
+      </p>
+      <h2>
+        Important Information
+      </h2>
+      <p>
+        The retroactive certification does not have an auto-save feature and cannot save any progress. You should complete all retroactive certifications in one session.
+      </p>
+      <p>
+        To protect the security of your information, this application will automatically time out after 30 minutes of inactivity. To avoid timing out, select any button every 25 minutes.
       </p>
       <Row
         noGutters={false}
       >
-        <div
-          className="col-md-4"
-        >
-          <Button
-            active={false}
-            as={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "displayName": "Link",
-                "propTypes": Object {
-                  "innerRef": [Function],
-                  "onClick": [Function],
-                  "replace": [Function],
-                  "target": [Function],
-                  "to": [Function],
-                },
-                "render": [Function],
-              }
-            }
-            className="text-dark bg-light"
-            disabled={false}
-            to="/retroactive-certification/what-to-expect"
-            type="button"
-            variant="outline-secondary"
-          >
-            Back
-          </Button>
-        </div>
         <div
           className="col-md-4"
         >
@@ -71,7 +95,7 @@ exports[`<RetroCertsWeeksToCertifyPage /> has user data 1`] = `
             type="button"
             variant="secondary"
           >
-            Certify Week 1
+            Start Certifying
           </Button>
         </div>
       </Row>
