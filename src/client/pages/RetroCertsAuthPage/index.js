@@ -5,13 +5,14 @@ import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Alert from "react-bootstrap/Alert";
 import ReCAPTCHA from "react-google-recaptcha";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import AUTH_STRINGS from "../../../data/authStrings";
 import routes from "../../../data/routes";
 import { userDataPropType, setUserDataPropType } from "../../commonPropTypes";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import SessionTimer from "../../components/SessionTimer";
+import Inputmask from "inputmask";
 
 function RetroCertsAuthPage(props) {
   const { t } = useTranslation();
@@ -24,6 +25,7 @@ function RetroCertsAuthPage(props) {
   const [eddcan, setEddcan] = useState("");
   const [ssn, setSsn] = useState("");
   const [validated, setValidated] = useState(false);
+  const [showSsn, setShowSsn] = useState(false);
 
   const status = userData && userData.status;
   const errorTransKey = new Map([
@@ -84,7 +86,7 @@ function RetroCertsAuthPage(props) {
       body: JSON.stringify({
         lastName: lastName.trim(),
         eddcan: eddcan.trim(),
-        ssn: ssn.trim(),
+        ssn: ssn.inputmask ? ssn.inputmask.unmaskedvalue() : ssn.trim(),
         reCaptcha: recaptchaRef.current.getValue(),
       }),
     })
@@ -112,9 +114,33 @@ function RetroCertsAuthPage(props) {
   };
 
   const handleChange = (event, setter) => {
-    // TODO: Remove whitespace and normalize (e.g., remove hyphens).
     setter(event.target.value);
   };
+
+  useEffect(() => {
+    const ssnRef = document.getElementById("formSsn");
+    if (showSsn) {
+      Inputmask.remove(ssnRef);
+      Inputmask("ssn", { placeholder: "#" }).mask(ssnRef);
+      ssnRef.type = "text";
+    } else {
+      Inputmask.remove(ssnRef);
+      Inputmask("9", { repeat: "9", jitMasking: true }).mask(ssnRef);
+      ssnRef.type = "password";
+      ssnRef.placeholder = "###-##-####";
+    }
+  });
+
+  function toggleSsn() {
+    const toggle = !showSsn;
+    setShowSsn(toggle);
+  }
+
+  function getSsnToggleText() {
+    return showSsn
+      ? t("retrocert-login.hide-ssn")
+      : t("retrocert-login.show-ssn");
+  }
 
   return (
     <div id="overflow-wrapper">
@@ -159,7 +185,6 @@ function RetroCertsAuthPage(props) {
               <Form.Group controlId="formSsn" className="col-md-6">
                 <Form.Label>{t("retrocert-login.ssn-label")}</Form.Label>
                 <Form.Control
-                  type="password"
                   value={ssn}
                   onChange={(e) => handleChange(e, setSsn)}
                   required
@@ -167,6 +192,16 @@ function RetroCertsAuthPage(props) {
                 <Form.Control.Feedback type="invalid">
                   {t("retrocert-login.ssn-required-error")}
                 </Form.Control.Feedback>
+                <div className="d-flex justify-content-end">
+                  <Button
+                    onClick={toggleSsn}
+                    variant="link"
+                    style={{ fontWeight: "normal" }}
+                    size="sm"
+                  >
+                    {getSsnToggleText()}
+                  </Button>
+                </div>
               </Form.Group>
             </Row>
             <Row>

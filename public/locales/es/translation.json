@@ -197,6 +197,8 @@
     "last-name-required-error": "Please provide your Last name.",
     "eddcan-required-error": "Please provide your EDDCAN number.",
     "ssn-required-error": "Please provide your SSN.",
-    "missing-fields-error":"It looks like you missed some information. Please fill out all fields and try again."
+    "missing-fields-error":"It looks like you missed some information. Please fill out all fields and try again.",
+    "show-ssn":"Show SSN",
+    "hide-ssn":"Hide SSN"
   }
 }

@@ -45,4 +45,4 @@ jest.mock("uuid", () => {
     ...actual,
     v4: () => "00000000-fake-mock-fake-123456789012",
   };
-})
+});
