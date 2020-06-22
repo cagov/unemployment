@@ -11,6 +11,11 @@ describe("Router: Single page app", () => {
     for (const testPath of testPaths) {
       const res = await request(server).get(testPath);
       expect(res.status).toBe(200);
+      expect(res.header["referrer-policy"]).toBe(
+        "strict-origin-when-cross-origin"
+      );
+      expect(res.header["x-frame-options"]).toBe("SAMEORIGIN");
+      expect(res.header["x-content-type-options"]).toBe("nosniff");
       expect(res.text).toMatch(/<html/);
       expect(res.text).toMatch(/<base href="\/">/);
     }
