@@ -85,8 +85,8 @@ async function getUserById(id) {
   return resources.length === 1 ? resources[0] : null;
 }
 
-async function getUserByNameEddcanSsn(lastName, eddcan, ssn) {
-  const hashKey = lastName.toLowerCase() + eddcan + ssn;
+async function getUserByNameDobSsn(lastName, dob, ssn) {
+  const hashKey = lastName.toLowerCase() + dob + ssn;
   const id = shajs("sha256").update(hashKey).digest("hex");
   return await getUserById(id);
 }
@@ -139,7 +139,7 @@ async function saveFormData(authToken, formData) {
 module.exports = {
   createRetroCertDatabaseIfNeeded,
   getFormDataByAuthToken,
-  getUserByNameEddcanSsn,
+  getUserByNameDobSsn,
   getUserById,
   getFormDataByUserIdWithNewAuthToken,
   saveFormData,

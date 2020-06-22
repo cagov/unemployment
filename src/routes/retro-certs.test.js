@@ -24,11 +24,8 @@ describe("Router: API tests", () => {
 
   it("retro-certs POST feature enabled", async () => {
     fflip.features.retroCerts.enabled = true;
-    const getUserByNameEddcanSsnMock = jest.spyOn(
-      cosmos,
-      "getUserByNameEddcanSsn"
-    );
-    getUserByNameEddcanSsnMock.mockImplementation(
+    const getUserByNameDobSsnMock = jest.spyOn(cosmos, "getUserByNameDobSsn");
+    getUserByNameDobSsnMock.mockImplementation(
       jest.fn(() => Promise.resolve(null))
     );
 
@@ -42,11 +39,11 @@ describe("Router: API tests", () => {
         status: AUTH_STRINGS.statusCode.userNotFound,
       });
     }
-    expect(getUserByNameEddcanSsnMock.mock.calls).toEqual([
+    expect(getUserByNameDobSsnMock.mock.calls).toEqual([
       ["", undefined, undefined],
     ]);
 
-    getUserByNameEddcanSsnMock.mockRestore();
+    getUserByNameDobSsnMock.mockRestore();
   });
 
   it("retro-certs /api/login tests", async () => {
@@ -55,7 +52,7 @@ describe("Router: API tests", () => {
     // Format of each test case is:
     //   post body,
     //   recaptchaResponse,
-    //   getUserByNameEddcanSsn promise response,
+    //   getUserByNameDobSsn promise response,
     //   getFormDataByUserIdWithNewAuthToken promise response,
     //   expected http status,
     //   expected request response
@@ -78,7 +75,7 @@ describe("Router: API tests", () => {
       ],
       // User has correct credentials.
       [
-        { lastName: "Last", eddcan: "1234567890", ssn: "123456789" },
+        { lastName: "Last", dob: "2000-01-01", ssn: "123456789" },
         true,
         {
           id: "hash",
@@ -96,7 +93,7 @@ describe("Router: API tests", () => {
       ],
       // User has correct credentails, but recaptcha is not valid.
       [
-        { lastName: "Last", eddcan: "1234567890", ssn: "123456789" },
+        { lastName: "Last", dob: "2000-0101", ssn: "123456789" },
         false,
         {
           id: "hash",
@@ -122,11 +119,8 @@ describe("Router: API tests", () => {
       ] = testCase;
       const validateUserMock = jest.spyOn(ReCaptcha.prototype, "validateUser");
       validateUserMock.mockImplementation(() => recaptchaResponse);
-      const getUserByNameEddcanSsnMock = jest.spyOn(
-        cosmos,
-        "getUserByNameEddcanSsn"
-      );
-      getUserByNameEddcanSsnMock.mockImplementation(
+      const getUserByNameDobSsnMock = jest.spyOn(cosmos, "getUserByNameDobSsn");
+      getUserByNameDobSsnMock.mockImplementation(
         jest.fn(() => Promise.resolve(getUserResponse))
       );
       const getFormDataByUserIdWithNewAuthTokenMock = jest.spyOn(
@@ -148,7 +142,7 @@ describe("Router: API tests", () => {
       expect(res.body).toEqual(responseJson);
 
       validateUserMock.mockRestore();
-      getUserByNameEddcanSsnMock.mockRestore();
+      getUserByNameDobSsnMock.mockRestore();
       getFormDataByUserIdWithNewAuthTokenMock.mockRestore();
     }
   });
