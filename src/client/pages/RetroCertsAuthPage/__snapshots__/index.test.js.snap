@@ -12,13 +12,11 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
       <h1>
         Retroactive Certification for Unemployment
       </h1>
-      <h2
-        className="mt-4"
-      >
-        Help us find you
-      </h2>
       <p>
-        We need to make sure your identity matches EDD records so that we show you accurate records.
+        You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits from the week ending February 9, 2020, through week ending May 9, 2020.
+      </p>
+      <p>
+        Enter your information to confirm if you have any benefit weeks that you need to retroactively certify.
       </p>
       <Form
         inline={false}
@@ -37,7 +35,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
               column={false}
               srOnly={false}
             >
-              Last name
+              * Last Name
             </FormLabel>
             <FormControl
               onChange={[Function]}
@@ -48,14 +46,14 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
             <Feedback
               type="invalid"
             >
-              Please provide your Last name.
+              This field is required.
             </Feedback>
           </FormGroup>
         </Row>
         <div
           className="mb-n2"
         >
-          Date of Birth
+          * Date of Birth
         </div>
         <small
           className="text-muted"
@@ -93,7 +91,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
             <Feedback
               type="invalid"
             >
-              Please provide your birth month.
+              This field is required.
             </Feedback>
           </FormGroup>
           <FormGroup
@@ -124,7 +122,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
             <Feedback
               type="invalid"
             >
-              Please provide your birth day.
+              This field is required.
             </Feedback>
           </FormGroup>
           <FormGroup
@@ -155,7 +153,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
             <Feedback
               type="invalid"
             >
-              Please provide your birth year.
+              This field is required.
             </Feedback>
           </FormGroup>
         </Row>
@@ -170,8 +168,13 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
               column={false}
               srOnly={false}
             >
-              Social Security Number
+              * Social Security Number
             </FormLabel>
+            <FormText
+              muted={true}
+            >
+              Enter your Social Security number with or without dashes.
+            </FormText>
             <FormControl
               onChange={[Function]}
               required={true}
@@ -180,7 +183,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
             <Feedback
               type="invalid"
             >
-              Please provide your SSN.
+              This field is required.
             </Feedback>
             <div
               className="d-flex justify-content-end"
@@ -251,13 +254,11 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
       <h1>
         Retroactive Certification for Unemployment
       </h1>
-      <h2
-        className="mt-4"
-      >
-        Help us find you
-      </h2>
       <p>
-        We need to make sure your identity matches EDD records so that we show you accurate records.
+        You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits from the week ending February 9, 2020, through week ending May 9, 2020.
+      </p>
+      <p>
+        Enter your information to confirm if you have any benefit weeks that you need to retroactively certify.
       </p>
       <Form
         inline={false}
@@ -276,7 +277,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
               column={false}
               srOnly={false}
             >
-              Last name
+              * Last Name
             </FormLabel>
             <FormControl
               onChange={[Function]}
@@ -287,14 +288,14 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
             <Feedback
               type="invalid"
             >
-              Please provide your Last name.
+              This field is required.
             </Feedback>
           </FormGroup>
         </Row>
         <div
           className="mb-n2"
         >
-          Date of Birth
+          * Date of Birth
         </div>
         <small
           className="text-muted"
@@ -332,7 +333,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
             <Feedback
               type="invalid"
             >
-              Please provide your birth month.
+              This field is required.
             </Feedback>
           </FormGroup>
           <FormGroup
@@ -363,7 +364,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
             <Feedback
               type="invalid"
             >
-              Please provide your birth day.
+              This field is required.
             </Feedback>
           </FormGroup>
           <FormGroup
@@ -394,7 +395,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
             <Feedback
               type="invalid"
             >
-              Please provide your birth year.
+              This field is required.
             </Feedback>
           </FormGroup>
         </Row>
@@ -409,8 +410,13 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
               column={false}
               srOnly={false}
             >
-              Social Security Number
+              * Social Security Number
             </FormLabel>
+            <FormText
+              muted={true}
+            >
+              Enter your Social Security number with or without dashes.
+            </FormText>
             <FormControl
               onChange={[Function]}
               required={true}
@@ -419,7 +425,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
             <Feedback
               type="invalid"
             >
-              Please provide your SSN.
+              This field is required.
             </Feedback>
             <div
               className="d-flex justify-content-end"
@@ -519,13 +525,11 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
       <h1>
         Retroactive Certification for Unemployment
       </h1>
-      <h2
-        className="mt-4"
-      >
-        Help us find you
-      </h2>
       <p>
-        We need to make sure your identity matches EDD records so that we show you accurate records.
+        You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits from the week ending February 9, 2020, through week ending May 9, 2020.
+      </p>
+      <p>
+        Enter your information to confirm if you have any benefit weeks that you need to retroactively certify.
       </p>
       <Form
         inline={false}
@@ -573,7 +577,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
               column={false}
               srOnly={false}
             >
-              Last name
+              * Last Name
             </FormLabel>
             <FormControl
               onChange={[Function]}
@@ -584,14 +588,14 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
             <Feedback
               type="invalid"
             >
-              Please provide your Last name.
+              This field is required.
             </Feedback>
           </FormGroup>
         </Row>
         <div
           className="mb-n2"
         >
-          Date of Birth
+          * Date of Birth
         </div>
         <small
           className="text-muted"
@@ -629,7 +633,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
             <Feedback
               type="invalid"
             >
-              Please provide your birth month.
+              This field is required.
             </Feedback>
           </FormGroup>
           <FormGroup
@@ -660,7 +664,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
             <Feedback
               type="invalid"
             >
-              Please provide your birth day.
+              This field is required.
             </Feedback>
           </FormGroup>
           <FormGroup
@@ -691,7 +695,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
             <Feedback
               type="invalid"
             >
-              Please provide your birth year.
+              This field is required.
             </Feedback>
           </FormGroup>
         </Row>
@@ -706,8 +710,13 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
               column={false}
               srOnly={false}
             >
-              Social Security Number
+              * Social Security Number
             </FormLabel>
+            <FormText
+              muted={true}
+            >
+              Enter your Social Security number with or without dashes.
+            </FormText>
             <FormControl
               onChange={[Function]}
               required={true}
@@ -716,7 +725,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
             <Feedback
               type="invalid"
             >
-              Please provide your SSN.
+              This field is required.
             </Feedback>
             <div
               className="d-flex justify-content-end"
@@ -787,13 +796,11 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
       <h1>
         Retroactive Certification for Unemployment
       </h1>
-      <h2
-        className="mt-4"
-      >
-        Help us find you
-      </h2>
       <p>
-        We need to make sure your identity matches EDD records so that we show you accurate records.
+        You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits from the week ending February 9, 2020, through week ending May 9, 2020.
+      </p>
+      <p>
+        Enter your information to confirm if you have any benefit weeks that you need to retroactively certify.
       </p>
       <Form
         inline={false}
@@ -812,7 +819,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
               column={false}
               srOnly={false}
             >
-              Last name
+              * Last Name
             </FormLabel>
             <FormControl
               onChange={[Function]}
@@ -823,14 +830,14 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
             <Feedback
               type="invalid"
             >
-              Please provide your Last name.
+              This field is required.
             </Feedback>
           </FormGroup>
         </Row>
         <div
           className="mb-n2"
         >
-          Date of Birth
+          * Date of Birth
         </div>
         <small
           className="text-muted"
@@ -868,7 +875,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
             <Feedback
               type="invalid"
             >
-              Please provide your birth month.
+              This field is required.
             </Feedback>
           </FormGroup>
           <FormGroup
@@ -899,7 +906,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
             <Feedback
               type="invalid"
             >
-              Please provide your birth day.
+              This field is required.
             </Feedback>
           </FormGroup>
           <FormGroup
@@ -930,7 +937,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
             <Feedback
               type="invalid"
             >
-              Please provide your birth year.
+              This field is required.
             </Feedback>
           </FormGroup>
         </Row>
@@ -945,8 +952,13 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
               column={false}
               srOnly={false}
             >
-              Social Security Number
+              * Social Security Number
             </FormLabel>
+            <FormText
+              muted={true}
+            >
+              Enter your Social Security number with or without dashes.
+            </FormText>
             <FormControl
               onChange={[Function]}
               required={true}
@@ -955,7 +967,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
             <Feedback
               type="invalid"
             >
-              Please provide your SSN.
+              This field is required.
             </Feedback>
             <div
               className="d-flex justify-content-end"
@@ -1020,7 +1032,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
               }
               variant="danger"
             >
-              We couldn't find you in the system.
+              Review and verify the information you entered is correct. If your information is correct, then you don’t need to certify.
             </Alert>
           </div>
         </Row>
