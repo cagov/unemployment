@@ -54,20 +54,6 @@ function RetroCertsAuthPage(props) {
     </Row>
   );
 
-  function hasMissingFields() {
-    return validated && (!lastName || !dobMonth || !dobDay || !dobYear || !ssn);
-  }
-
-  const missingFieldsAlert = (
-    <Row>
-      <div className="col-md-6">
-        <Alert variant="danger">
-          {t("retrocert-login.missing-fields-error")}
-        </Alert>
-      </div>
-    </Row>
-  );
-
   const recaptchaRef = React.createRef();
 
   const handleSubmit = (event) => {
@@ -156,8 +142,8 @@ function RetroCertsAuthPage(props) {
       <main>
         <div className="container p-4">
           <h1>{t("retrocert-login.title")}</h1>
-          <h2 className="mt-4">{t("retrocert-login.subheader")}</h2>
-          <p>{t("retrocert-login.help-text")}</p>
+          <p>{t("retrocert-login.help")}</p>
+          <p>{t("retrocert-login.instructions")}</p>
           <Form noValidate validated={validated} onSubmit={handleSubmit}>
             {errorTransKey === "retrocert-login.session-timed-out" &&
               errorAlert}
@@ -171,7 +157,7 @@ function RetroCertsAuthPage(props) {
                   required
                 />
                 <Form.Control.Feedback type="invalid">
-                  {t("retrocert-login.last-name-required-error")}
+                  {t("retrocert-login.required-error")}
                 </Form.Control.Feedback>
               </Form.Group>
             </Row>
@@ -191,7 +177,7 @@ function RetroCertsAuthPage(props) {
                   pattern="0?[1-9]|10|11|12"
                 />
                 <Form.Control.Feedback type="invalid">
-                  {t("retrocert-login.dob-month-required-error")}
+                  {t("retrocert-login.required-error")}
                 </Form.Control.Feedback>
               </Form.Group>
               <Form.Group controlId="formDobDay" as={Col} md={2}>
@@ -205,7 +191,7 @@ function RetroCertsAuthPage(props) {
                   pattern="0?[1-9]|1\d|2\d|3[01]"
                 />
                 <Form.Control.Feedback type="invalid">
-                  {t("retrocert-login.dob-day-required-error")}
+                  {t("retrocert-login.required-error")}
                 </Form.Control.Feedback>
               </Form.Group>
               <Form.Group controlId="formDobYear" as={Col} md={3}>
@@ -219,20 +205,21 @@ function RetroCertsAuthPage(props) {
                   pattern="[12][890]\d\d"
                 />
                 <Form.Control.Feedback type="invalid">
-                  {t("retrocert-login.dob-year-required-error")}
+                  {t("retrocert-login.required-error")}
                 </Form.Control.Feedback>
               </Form.Group>
             </Row>
             <Row>
               <Form.Group controlId="formSsn" className="col-md-6">
                 <Form.Label>{t("retrocert-login.ssn-label")}</Form.Label>
+                <Form.Text muted>{t("retrocert-login.ssn-hint")}</Form.Text>
                 <Form.Control
                   value={ssn}
                   onChange={(e) => handleChange(e, setSsn)}
                   required
                 />
                 <Form.Control.Feedback type="invalid">
-                  {t("retrocert-login.ssn-required-error")}
+                  {t("retrocert-login.required-error")}
                 </Form.Control.Feedback>
                 <div className="d-flex justify-content-end">
                   <Button
@@ -260,7 +247,6 @@ function RetroCertsAuthPage(props) {
             {(errorTransKey === "retrocert-login.invalid-user-error" ||
               errorTransKey === "retrocert-login.invalid-recaptcha-error") &&
               errorAlert}
-            {hasMissingFields() === true && missingFieldsAlert}
             <Button variant="secondary" type="submit">
               {t("retrocert-login.submit")}
             </Button>
