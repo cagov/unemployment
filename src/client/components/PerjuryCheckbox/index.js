@@ -41,9 +41,6 @@ function PerjuryCheckbox(props) {
       <Form.Text as="p">
         <Trans t={t} i18nKey="retrocerts-certification.submit-p1" />
       </Form.Text>
-      <Form.Text as="p">
-        <Trans t={t} i18nKey="retrocerts-certification.submit-p2" />
-      </Form.Text>
     </Form.Group>
   );
 }

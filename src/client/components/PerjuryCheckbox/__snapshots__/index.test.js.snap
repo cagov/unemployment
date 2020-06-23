@@ -62,13 +62,5 @@ exports[`<PerjuryCheckbox /> renders the component 1`] = `
       t={[Function]}
     />
   </FormText>
-  <FormText
-    as="p"
-  >
-    <Trans
-      i18nKey="retrocerts-certification.submit-p2"
-      t={[Function]}
-    />
-  </FormText>
 </FormGroup>
 `;
