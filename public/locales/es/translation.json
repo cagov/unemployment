@@ -184,7 +184,8 @@
   "yesnoquestion": {
     "Yes": "Yes",
     "No": "No"
-  },  
+  },
+  "required-error": "This field is required.",
   "retrocert-login": {
     "title": "Retroactive Certification for Unemployment",
     "help": "You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits from the week ending February 9, 2020, through week ending May 9, 2020.",
@@ -202,7 +203,6 @@
     "invalid-user-error": "Review and verify the information you entered is correct. If your information is correct, then you don’t need to certify.",
     "invalid-recaptcha-error": "Please check the box next to \"I'm not a robot\" to continue.",
     "session-timed-out": "We logged you out after 30 minutes of inactivity. Please provide your information again to certify your weeks.",
-    "required-error": "This field is required.",
     "show-ssn":"Show SSN",
     "hide-ssn":"Hide SSN"
   },
@@ -327,6 +327,7 @@
     "ack-list-item-3": "I declare under penalty of perjury that I am a US Citizen or National; or an Alien in satisfactory immigration status and permitted to work by the United States Citizenship and Immigration Service.",
     "ack-list-item-4": "I understand when submitting my request for benefits my submission is considered the same as my written signature.",
     "ack-label": "I agree and accept the statement above.",
+    "ack-feedback": "You must indicate your acceptance of the statement by checking the box before your certification can be submitted.",
     "submit-p1": "You are about to submit your retroactive certification. You will <strong>not</strong> be able to change your answers once you select Submit.",
     "submit-p2": "To complete your retroactive certification(s), select Submit.",
     "button-back": "Back",

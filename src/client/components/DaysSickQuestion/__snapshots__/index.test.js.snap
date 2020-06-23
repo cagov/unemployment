@@ -28,5 +28,10 @@ exports[`<DaysSickQuestion /> renders the component 1`] = `
     type="text"
     value=""
   />
+  <Feedback
+    type="invalid"
+  >
+    This field is required.
+  </Feedback>
 </FormGroup>
 `;

@@ -70,6 +70,9 @@ function EmployerQuestions(props) {
           required={required}
           pattern={options.pattern}
         />
+        <Form.Control.Feedback type="invalid">
+          {t("required-error")}
+        </Form.Control.Feedback>
       </Form.Group>
     );
   }
@@ -113,6 +116,9 @@ function EmployerQuestions(props) {
               <option key={code}>{code}</option>
             ))}
           </Form.Control>
+          <Form.Control.Feedback type="invalid">
+            {t("required-error")}
+          </Form.Control.Feedback>
         </Form.Group>
       </Form.Row>
       {renderTextInput("zipcode", {
@@ -136,6 +142,9 @@ function EmployerQuestions(props) {
             required
             pattern="0?[1-9]|10|11|12"
           />
+          <Form.Control.Feedback type="invalid">
+            {t("required-error")}
+          </Form.Control.Feedback>
         </Form.Group>
         <Form.Group
           controlId={props.employerData.id + "lastDateWorked-day-question"}
@@ -151,6 +160,9 @@ function EmployerQuestions(props) {
             required
             pattern="0?[1-9]|1\d|2\d|3[01]"
           />
+          <Form.Control.Feedback type="invalid">
+            {t("required-error")}
+          </Form.Control.Feedback>
         </Form.Group>
         <Form.Group as={Col} md={2}>
           <Form.Label>{t(tk("year"))}</Form.Label>

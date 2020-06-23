@@ -104,9 +104,23 @@ footer {
   border-color: rgb(206, 212, 218) !important;
 }
 
+// This removes the green/red text on Yes/No radio labels.
+.form-check-input.is-valid ~ .form-check-label,
+.was-validated .form-check-input:valid ~ .form-check-label,
+.form-check-input.is-invalid ~ .form-check-label,
+.was-validated .form-check-input:invalid ~ .form-check-label {
+  color: inherit;
+}
+
 // Use grey for secondary alerts rather than our secondary color yellowish gold.
 .alert-secondary {
   color: #383d41;
   background-color: #e2e3e5;
   border-color: #d6d8db;
+}
+
+// For radio Form.Checks, we need to manually see if the
+// radio question was answered for the feedback to show.
+.was-validated .unchecked .invalid-feedback {
+  display: block;
 }

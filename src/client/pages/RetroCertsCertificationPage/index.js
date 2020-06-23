@@ -176,7 +176,7 @@ function RetroCertsCertificationPage(props) {
           <h1 ref={headingElement}>
             {t("retrocerts-certification.question-page-title")}
           </h1>
-          <h2 className="h3 font-weight-bold">
+          <h2 className="h3 font-weight-bold mt-5">
             <Trans
               t={t}
               i18nKey="retrocerts-certification.form-header"
