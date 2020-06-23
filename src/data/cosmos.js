@@ -146,10 +146,14 @@ async function saveFormData(authToken, formData) {
     return;
   }
 
-  item.formData = formData;
-  item.confirmationNumber = uuidv4();
-  await insertItem(item, formsContainerName);
-  return item;
+  // If the user already submitted data, don't overwrite it.
+  if (!item.confirmationNumber) {
+    item.formData = formData;
+    item.confirmationNumber = uuidv4();
+    await insertItem(item, formsContainerName);
+  }
+
+  return { confirmationNumber: item.confirmationNumber };
 }
 
 module.exports = {
