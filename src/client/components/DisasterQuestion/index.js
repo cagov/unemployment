@@ -6,14 +6,14 @@ import { useTranslation } from "react-i18next";
 function DisasterQuestion(props) {
   const { t } = useTranslation();
 
-  const [choice, setChoice] = useState(
+  const [userChoice, setUserChoice] = useState(
     props.choice !== undefined
       ? props.choice
       : t("retrocerts-certification.disaster-choices.choice-14")
   );
 
   function onChange(event) {
-    setChoice(event.target.value);
+    setUserChoice(event.target.value);
 
     props.onChange({
       name: "disasterChoice",
@@ -21,7 +21,7 @@ function DisasterQuestion(props) {
     });
   }
 
-  const disasterDropDownChoices = [
+  const disasterRadioChoices = [
     t("retrocerts-certification.disaster-choices.choice-1"),
     t("retrocerts-certification.disaster-choices.choice-2"),
     t("retrocerts-certification.disaster-choices.choice-3"),
@@ -41,13 +41,19 @@ function DisasterQuestion(props) {
   return (
     <Form.Group controlId="disaster-question">
       <Form.Label>{props.questionText}</Form.Label>
-      <Form.Control as="select" onChange={onChange} value={choice}>
-        {disasterDropDownChoices.map((choice) => (
-          <option key={choice} value={choice}>
-            {choice}
-          </option>
+      <div>
+        {disasterRadioChoices.map((disasterChoice, index) => (
+          <Form.Check
+            type="radio"
+            label={disasterChoice}
+            onChange={onChange}
+            value={userChoice}
+            name="disaster-choice"
+            key={`disaster-choice-${index}`}
+            id={`disaster-choice-${index}`}
+          />
         ))}
-      </Form.Control>
+      </div>
     </Form.Group>
   );
 }
