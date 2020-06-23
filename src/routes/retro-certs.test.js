@@ -80,7 +80,7 @@ describe("Router: API tests", () => {
         {
           id: "hash",
           weeksToCertify: [0, 1],
-          seekWorkPlan: ["UI full time", "UI part time"],
+          programPlan: ["UI full time", "UI part time"],
         },
         { authToken: "test auth token" },
         200,
@@ -88,7 +88,7 @@ describe("Router: API tests", () => {
           status: AUTH_STRINGS.statusCode.ok,
           authToken: "test auth token",
           weeksToCertify: [0, 1],
-          seekWorkPlan: ["UI full time", "UI part time"],
+          programPlan: ["UI full time", "UI part time"],
         },
       ],
       // User has correct credentails, but recaptcha is not valid.
@@ -98,7 +98,7 @@ describe("Router: API tests", () => {
         {
           id: "hash",
           weeksToCertify: [0, 1],
-          seekWorkPlan: ["UI full time", "UI part time"],
+          programPlan: ["UI full time", "UI part time"],
         },
         { authToken: "test auth token" },
         401,
@@ -174,24 +174,39 @@ describe("Router: API tests", () => {
         {
           id: "hash",
           weeksToCertify: [0, 1],
-          seekWorkPlan: ["UI full time", "UI part time"],
+          programPlan: ["UI full time", "UI part time"],
         },
         200,
         {
           status: AUTH_STRINGS.statusCode.ok,
           weeksToCertify: [0, 1],
-          seekWorkPlan: ["UI full time", "UI part time"],
+          programPlan: ["UI full time", "UI part time"],
         },
       ],
       [
         { authToken: "valid uuid" },
         { id: "hash", authToken: "auth token" },
-        { id: "hash", weeksToCertify: [2], seekWorkPlan: ["PUA full time"] },
+        {
+          id: "hash",
+          weeksToCertify: [0, 1],
+          programPlan: ["UI full time"],
+        },
+        200,
+        {
+          status: AUTH_STRINGS.statusCode.ok,
+          weeksToCertify: [0, 1],
+          programPlan: ["UI full time"],
+        },
+      ],
+      [
+        { authToken: "valid uuid" },
+        { id: "hash", authToken: "auth token" },
+        { id: "hash", weeksToCertify: [2], programPlan: ["PUA full time"] },
         200,
         {
           status: AUTH_STRINGS.statusCode.ok,
           weeksToCertify: [2],
-          seekWorkPlan: ["PUA full time"],
+          programPlan: ["PUA full time"],
         },
       ],
     ];

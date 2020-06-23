@@ -14,7 +14,7 @@ import {
 } from "../../../utils/retroCertsWeeks";
 import routes from "../../../data/routes";
 import AUTH_STRINGS from "../../../data/authStrings";
-import seekWorkPlan from "../../../data/seekWorkPlan";
+import programPlan from "../../../data/programPlan";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import YesNoQuestion from "../../components/YesNoQuestion";
@@ -75,8 +75,12 @@ function RetroCertsCertificationPage(props) {
     }
   }
 
-  const weekSeekWorkPlan =
-    userData.seekWorkPlan[userData.weeksToCertify.indexOf(weekIndex)];
+  // Most (99.99%) users have the same programPlan for all weeks in
+  // weeksToCertify, in which case their programPlan is a one element array.
+  // The rest have an array whose length matches the weeksToCertify length.
+  const programPlanIndex =
+    userData.programPlan.length === 1 ? 0 : weekForUser - 1;
+  const weekProgramPlan = userData.programPlan[programPlanIndex];
 
   const handleFormDataChange = (event) => {
     const { value, name } = event;
@@ -102,13 +106,13 @@ function RetroCertsCertificationPage(props) {
   };
 
   function questionText(transKey) {
-    if (weekSeekWorkPlan === seekWorkPlan.uiPartTime) {
+    if (weekProgramPlan === programPlan.uiPartTime) {
       return "retrocerts-certification.questions.ui-part-time." + transKey;
     }
-    if (weekSeekWorkPlan === seekWorkPlan.uiFullTime) {
+    if (weekProgramPlan === programPlan.uiFullTime) {
       return "retrocerts-certification.questions.ui-full-time." + transKey;
     }
-    if (weekSeekWorkPlan === seekWorkPlan.puaFullTime) {
+    if (weekProgramPlan === programPlan.puaFullTime) {
       return "retrocerts-certification.questions.pua-full-time." + transKey;
     }
   }
@@ -164,7 +168,7 @@ function RetroCertsCertificationPage(props) {
   }
 
   const questionsTwoThroughFive =
-    weekSeekWorkPlan === seekWorkPlan.puaFullTime
+    weekProgramPlan === programPlan.puaFullTime
       ? ["couldNotAcceptWork", "didYouLook", "refuseWork", "otherBenefits"]
       : ["couldNotAcceptWork", "didYouLook", "refuseWork", "schoolOrTraining"];
 
@@ -244,7 +248,7 @@ function RetroCertsCertificationPage(props) {
                 onChange={(employers) => handleEmployersChange(employers)}
               />
             </YesNoQuestion>
-            {weekSeekWorkPlan === seekWorkPlan.puaFullTime && (
+            {weekProgramPlan === programPlan.puaFullTime && (
               <YesNoQuestion
                 key={weekIndex + "recentDisaster"}
                 questionNumber={7}
