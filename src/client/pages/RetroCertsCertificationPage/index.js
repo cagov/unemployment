@@ -287,7 +287,9 @@ function RetroCertsCertificationPage(props) {
                         )
                   }
                 >
-                  {t("retrocerts-certification.button-back")}
+                  {weekForUser === 1
+                    ? t("retrocerts-certification.button-back")
+                    : t("retrocerts-certification.button-back-week")}
                 </Button>
               </Col>
               <Col style={{ textAlign: "end" }}>
