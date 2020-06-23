@@ -186,6 +186,21 @@ describe("Router: API tests", () => {
       [
         { authToken: "valid uuid" },
         { id: "hash", authToken: "auth token" },
+        {
+          id: "hash",
+          weeksToCertify: [0, 1],
+          seekWorkPlan: ["UI full time"],
+        },
+        200,
+        {
+          status: AUTH_STRINGS.statusCode.ok,
+          weeksToCertify: [0, 1],
+          seekWorkPlan: ["UI full time"],
+        },
+      ],
+      [
+        { authToken: "valid uuid" },
+        { id: "hash", authToken: "auth token" },
         { id: "hash", weeksToCertify: [2], seekWorkPlan: ["PUA full time"] },
         200,
         {
