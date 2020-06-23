@@ -79,9 +79,7 @@ function RetroCertsCertificationPage(props) {
   // weeksToCertify, in which case their seekWorkPlan is a one element array.
   // The rest have an array whose length matches the weeksToCertify length.
   const seekWorkPlanIndex =
-    userData.seekWorkPlan.length === 1
-      ? 0
-      : userData.weeksToCertify.indexOf(weekIndex);
+    userData.seekWorkPlan.length === 1 ? 0 : weekForUser - 1;
   const weekSeekWorkPlan = userData.seekWorkPlan[seekWorkPlanIndex];
 
   const handleFormDataChange = (event) => {
