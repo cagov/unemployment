@@ -7,6 +7,8 @@ import hashlib
 import json
 import random
 
+SOURCE = 'script' + datetime.datetime.now().strftime('%Y%m%d.%H%M%S')
+
 NUM_WEEKS = 14
 PUA_FULL_TIME = 'PUA full-time'
 UI_FULL_TIME = 'UI full-time'
@@ -34,7 +36,7 @@ TEST_USERS = [
 
 def get_hash(name, dob, ssn):
   assert len(ssn) == 9
-  h = hashlib.sha256(bytes(name.lower() + dob.strftime('%Y-%M-%d') + ssn, 'utf-8'))
+  h = hashlib.sha256(bytes(name.lower() + dob.strftime('%Y-%m-%d') + ssn, 'utf-8'))
   return h.hexdigest()
 
 def generate_test_users():
@@ -44,6 +46,7 @@ def generate_test_users():
           'id': get_hash(*user[:3]),
           'seekWorkPlan': user[3],
           'weeksToCertify': user[4],
+          'source': SOURCE,
       })
   with open('test_users.json', 'w') as outfile:
       outfile.write(json.dumps(sorted(users, key=lambda d: d['id'])))
@@ -65,6 +68,7 @@ def generate_batch_users(num_users=30):
             'id': get_hash(name, dob, ssn),
             'seekWorkPlan': WORK_PLANS[i % 3],
             'weeksToCertify': weeks_to_certify,
+            'source': 'batch' + SOURCE
         })
 
     with open('batch_users.json', 'w') as outfile:
