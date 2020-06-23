@@ -44,7 +44,7 @@ def generate_test_users():
   for user in TEST_USERS:
       users.append({
           'id': get_hash(*user[:3]),
-          'seekWorkPlan': user[3],
+          'seekWorkPlan': [user[3]],
           'weeksToCertify': user[4],
           'source': SOURCE,
       })
@@ -66,7 +66,7 @@ def generate_batch_users(num_users=30):
 
         users.append({
             'id': get_hash(name, dob, ssn),
-            'seekWorkPlan': WORK_PLANS[i % 3],
+            'seekWorkPlan': [WORK_PLANS[i % 3]],
             'weeksToCertify': weeks_to_certify,
             'source': 'batch' + SOURCE
         })
