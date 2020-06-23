@@ -329,7 +329,6 @@
     "ack-label": "I agree and accept the statement above.",
     "ack-feedback": "You must indicate your acceptance of the statement by checking the box before your certification can be submitted.",
     "submit-p1": "You are about to submit your retroactive certifications. You will <strong>not</strong> be able to change your answers once you select <strong>Submit</strong>.",
-    "submit-p2": "To complete your retroactive certification(s), select Submit.",
     "button-back": "Back",
     "button-back-week": "Back to Previous Week",
     "button-next": "Next, Certify Week {{nextWeekForUser}}",
