@@ -173,7 +173,16 @@ function RetroCertsCertificationPage(props) {
       <Header />
       <main className="pb-5">
         <div className="container p-4">
-          <h1 ref={headingElement}>{t("retrocerts-certification.title")}</h1>
+          <h1 ref={headingElement}>
+            {t("retrocerts-certification.question-page-title")}
+          </h1>
+          <h2 className="h3 font-weight-bold">
+            <Trans
+              t={t}
+              i18nKey="retrocerts-certification.form-header"
+              values={{ weekForUser, weekString: toWeekString(weekIndex) }}
+            />
+          </h2>
           {numberOfWeeks > 1 && (
             <p>
               <Trans
@@ -183,13 +192,6 @@ function RetroCertsCertificationPage(props) {
               />
             </p>
           )}
-          <h3>
-            <Trans
-              t={t}
-              i18nKey="retrocerts-certification.form-header"
-              values={{ weekForUser, weekString: toWeekString(weekIndex) }}
-            />
-          </h3>
           <Form noValidate validated={validated} onSubmit={handleSubmit}>
             <YesNoQuestion
               key={weekIndex + "tooSick"}
