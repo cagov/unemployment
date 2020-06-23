@@ -1,8 +1,10 @@
 import Form from "react-bootstrap/Form";
+import { useTranslation } from "react-i18next";
 import PropTypes from "prop-types";
 import React, { useState } from "react";
 
 function DaysSickQuestion(props) {
+  const { t } = useTranslation();
   const [numDays, setNumDays] = useState(
     props.numDays !== undefined ? String(props.numDays) : ""
   );
@@ -33,6 +35,9 @@ function DaysSickQuestion(props) {
         required
         pattern="[1234567]"
       />
+      <Form.Control.Feedback type="invalid">
+        {t("required-error")}
+      </Form.Control.Feedback>
     </Form.Group>
   );
 }

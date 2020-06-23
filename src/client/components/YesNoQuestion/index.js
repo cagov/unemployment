@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Feedback from "react-bootstrap/Feedback";
+
 import PropTypes from "prop-types";
 import { Form } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
@@ -35,7 +37,10 @@ function YesNoQuestion(props) {
 
   return (
     <div className="bg-light p-2 m-2">
-      <Form.Group controlId={inputName}>
+      <Form.Group
+        controlId={inputName}
+        className={isYes === undefined ? "unchecked" : ""}
+      >
         <Form.Label>
           {questionNumber}.&nbsp;{questionText}
         </Form.Label>
@@ -55,6 +60,7 @@ function YesNoQuestion(props) {
             required
           />
         ))}
+        <Feedback type="invalid">{t("required-error")}</Feedback>
       </Form.Group>
       {isYes === true && children}
     </div>

@@ -159,7 +159,7 @@ function RetroCertsAuthPage(props) {
                   required
                 />
                 <Form.Control.Feedback type="invalid">
-                  {t("retrocert-login.required-error")}
+                  {t("required-error")}
                 </Form.Control.Feedback>
               </Form.Group>
             </Row>
@@ -181,7 +181,7 @@ function RetroCertsAuthPage(props) {
                   pattern="0?[1-9]|10|11|12"
                 />
                 <Form.Control.Feedback type="invalid">
-                  {t("retrocert-login.required-error")}
+                  {t("required-error")}
                 </Form.Control.Feedback>
               </Form.Group>
               <Form.Group controlId="formDobDay" as={Col} md={2}>
@@ -195,7 +195,7 @@ function RetroCertsAuthPage(props) {
                   pattern="0?[1-9]|1\d|2\d|3[01]"
                 />
                 <Form.Control.Feedback type="invalid">
-                  {t("retrocert-login.required-error")}
+                  {t("required-error")}
                 </Form.Control.Feedback>
               </Form.Group>
               <Form.Group controlId="formDobYear" as={Col} md={3}>
@@ -209,7 +209,7 @@ function RetroCertsAuthPage(props) {
                   pattern="[12][890]\d\d"
                 />
                 <Form.Control.Feedback type="invalid">
-                  {t("retrocert-login.required-error")}
+                  {t("required-error")}
                 </Form.Control.Feedback>
               </Form.Group>
             </Row>
@@ -223,7 +223,7 @@ function RetroCertsAuthPage(props) {
                   required
                 />
                 <Form.Control.Feedback type="invalid">
-                  {t("retrocert-login.required-error")}
+                  {t("required-error")}
                 </Form.Control.Feedback>
                 <div className="d-flex justify-content-end">
                   <Button
