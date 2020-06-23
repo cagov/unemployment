@@ -1,25 +1,25 @@
 [
   {
     "id": "0xA379A66C0D59F2DD5DF47D664F1E47C6DADF490235A30CB3F05E8B234015A710",
-    "seekWorkPlan": ["UI full-time"],
+    "programPlan": ["UI full-time"],
     "weeksToCertify": [0, 1, 4, 5],
     "source": "test users from EDD: Doe 03/21/1980 123-00-0000"
   },
   {
     "id": "0x87B11A80708DB8A1AEAB2DA8C0CD23DC2DBE8BD46637A1617F07D1010638913F",
-    "seekWorkPlan": ["PUA full-time"],
+    "programPlan": ["PUA full-time"],
     "weeksToCertify": [13],
     "source": "test users from EDD: Guzmán 02/08/1975 321-00-3210"
   },
   {
     "id": "0xBA4747FA83571024BA807A044814E6A9153A7F9A129FAE71310F627194771501",
-    "seekWorkPlan": ["UI part-time"],
+    "programPlan": ["UI part-time"],
     "weeksToCertify": [2, 3],
     "source": "test users from EDD: O'YOUNG 03/28/1983 111-11-0000"
   },
   {
     "id": "0xAB5EB4CA55CC3DFEE6F3A47448D8EEC6DF5A0413214B7C03D4E818EB59C9A023",
-    "seekWorkPlan": ["UI full-time"],
+    "programPlan": ["UI full-time"],
     "weeksToCertify": [0, 1, 4, 5, 9, 10],
     "source": "test users from EDD: YUNG 03-28-1985 111-22-0000"
   }
