@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const { Router } = require("express");
 const AUTH_STRINGS = require("../data/authStrings");
 const ReCaptcha = require("../services/reCaptcha");
@@ -21,11 +22,13 @@ function createRouter() {
     ]);
 
     if (!reCaptchaResponse) {
+      console.log("failed recaptcha");
       responseJson.status = AUTH_STRINGS.statusCode.recaptchaInvalid;
       return responseJson;
     }
 
     if (userRecord) {
+      console.log("login",  userRecord.id);
       const formRecord = await cosmos.getFormDataByUserIdWithNewAuthToken(
         userRecord.id
       );
@@ -34,6 +37,8 @@ function createRouter() {
       responseJson.weeksToCertify = userRecord.weeksToCertify;
       responseJson.seekWorkPlan = userRecord.seekWorkPlan;
       responseJson.confirmationNumber = formRecord.confirmationNumber;
+    } else {
+      console.log("failed login");
     }
     return responseJson;
   }
@@ -45,11 +50,14 @@ function createRouter() {
         postJson.authToken
       );
       if (formRecord) {
+        console.log("data with token", formRecord.id);
         const userRecord = await cosmos.getUserById(formRecord.id);
         responseJson.status = AUTH_STRINGS.statusCode.ok;
         responseJson.weeksToCertify = Array.from(userRecord.weeksToCertify);
         responseJson.seekWorkPlan = Array.from(userRecord.seekWorkPlan);
         responseJson.confirmationNumber = formRecord.confirmationNumber;
+      } else {
+        console.log("data with invalid token", postJson.authToken);
       }
     }
     return responseJson;
@@ -87,6 +95,11 @@ function createRouter() {
         req.body.authToken,
         req.body.formData
       );
+      if (responseJson) {
+        console.log("saved data", responseJson.id);
+      } else {
+        console.log("save with invalid token", req.body.authToken);
+      }
       res.status(200).type("json").send(JSON.stringify(responseJson));
     } catch (e) {
       console.error("Error during /api/save", e);
