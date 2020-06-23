@@ -10,7 +10,7 @@ import bisect
 
 # Options to set before running the script
 use_subset_of_data = False  # Set to True if you're developing and want operations to take less time
-generate_from_source = False  # Set to True to regenerate intermediate data first, vs loading saved intermediate data
+generate_from_source = True  # Set to True to regenerate intermediate data first, vs loading saved intermediate data
 
 # Increase amount of data displayed in terminal
 pd.set_option('display.max_rows', 500)
@@ -39,7 +39,8 @@ INDEX_TO_WEEKS = dict(enumerate(VALID_WEEKS))  # { 0: "2020-04-15"... }
 VALID_PROGRAMS = ["DUA", "UI"]
 VALID_FT_PLANS = ["A", "B", "AB", "C1", "C2", "C4", "C5", "C6", "T"]
 VALID_PT_PLANS = ["PT", "P", "PB", "P1", "P2", "P4", "P5", "P6"]
-VALID_PLANS = VALID_FT_PLANS + VALID_PT_PLANS + ["X", "C3"]
+PUA_PLANS = ["X", "C3"] # We ignore plans if the Program is DUA/PUA, but accept these values for validation
+VALID_PLANS = VALID_FT_PLANS + VALID_PT_PLANS + PUA_PLANS
 SOURCE_DATA_FILENAME = "users.csv"
 INTERMEDIATE_DATA_FILENAME = "intermediate.pkl"
 INTERMEDIATE_DATA_100K_FILENAME = "100k.pkl"  # Generate a smaller file of 100k rows during development process
@@ -87,9 +88,6 @@ def generate_final_file():
         plans_from_row1 = row1["SeekWorkPlan"].values[0]
         combined_plans = plans_from_row2
         if is_both_ui:
-            if (len(np.intersect1d(weeks_from_row2, weeks_from_row1)) != 0):
-                print(row1)
-                print(row2)
             # There should never be UI full time and UI part time in the same week
             assert (len(np.intersect1d(weeks_from_row2, weeks_from_row1)) == 0)
         for num, week in enumerate(weeks_from_row1):
@@ -117,7 +115,7 @@ def generate_final_file():
         user_rows = dupe_hashes.loc[dupe_hashes["SHA256_hash"] == row["SHA256_hash"]].copy()
         assert(len(user_rows) == 2)
         # Check value in SeekWorkPlan BEFORE expanding it into a filled array
-        mask = user_rows["SeekWorkPlan"] == "PUA full time" # creates a Series of booleans
+        mask = user_rows["SeekWorkPlan"] == "PUA" # creates a Series of booleans
         user_rows["SeekWorkPlan"] = user_rows.apply(
             lambda x: [x["SeekWorkPlan"]] * len(x["WeekEndingDates"]), axis=1)
 
@@ -170,7 +168,7 @@ def generate_intermediate_file():
             print("Selecting first 100,000 rows (use_subset_of_data)")
             df = df.head(100000)
         mask = df["Program"] == "DUA" # creates a Series of booleans
-        df["SeekWorkPlan"][mask] = "PUA full time"
+        df["SeekWorkPlan"][mask] = "PUA"
         df["SeekWorkPlan"].replace(VALID_FT_PLANS, "UI full time", inplace=True)
         df["SeekWorkPlan"].replace(VALID_PT_PLANS, "UI part time", inplace=True)
         df.drop(columns="Program", inplace=True)
