@@ -1,14 +1,22 @@
 import Form from "react-bootstrap/Form";
 import PropTypes from "prop-types";
-import React from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 function DisasterQuestion(props) {
   const { t } = useTranslation();
 
+  const [choice, setChoice] = useState(
+    props.choice !== undefined
+      ? props.choice
+      : t("retrocerts-certification.disaster-choices.choice-14")
+  );
+
   function onChange(event) {
+    setChoice(event.target.value);
+
     props.onChange({
-      name: "recentDisasterChoice",
+      name: "disasterChoice",
       value: event.target.value,
     });
   }
@@ -31,21 +39,22 @@ function DisasterQuestion(props) {
   ];
 
   return (
-    <Form>
-      <Form.Group controlId="disaster-question">
-        <Form.Label>{props.questionText}</Form.Label>
-        <Form.Control as="select" onChange={onChange}>
-          {disasterDropDownChoices.map((choice) => (
-            <option key={choice}>{choice}</option>
-          ))}
-        </Form.Control>
-      </Form.Group>
-    </Form>
+    <Form.Group controlId="disaster-question">
+      <Form.Label>{props.questionText}</Form.Label>
+      <Form.Control as="select" onChange={onChange} value={choice}>
+        {disasterDropDownChoices.map((choice) => (
+          <option key={choice} value={choice}>
+            {choice}
+          </option>
+        ))}
+      </Form.Control>
+    </Form.Group>
   );
 }
 
 DisasterQuestion.propTypes = {
   onChange: PropTypes.func.isRequired,
+  choice: PropTypes.string,
   questionText: PropTypes.string,
 };
 
