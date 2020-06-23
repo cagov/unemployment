@@ -187,26 +187,22 @@
   },
   "retrocert-login": {
     "title": "Retroactive Certification for Unemployment",
-    "subheader": "Help us find you",
-    "help-text": "We need to make sure your identity matches EDD records so that we show you accurate records.",
-    "last-name-label": "Last name",
+    "help": "You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits from the week ending February 9, 2020, through week ending May 9, 2020.",
+    "instructions": "Enter your information to confirm if you have any benefit weeks that you need to retroactively certify.",
+    "last-name-label": "Last Name",
     "dob-heading": "Date of Birth",
     "dob-hint": "For example, 4 28 1990",
     "dob-month": "Month",
     "dob-day": "Day",
     "dob-year": "Year",
     "ssn-label": "Social Security Number",
+    "ssn-hint": "Enter your Social Security number with or without dashes.",
     "recaptcha-text": "Security check provided by reCAPTCHA.",
     "submit": "Find me",
-    "invalid-user-error": "We couldn't find you in the system.",
+    "invalid-user-error": "Review and verify the information you entered is correct. If your information is correct, then you don’t need to certify.",
     "invalid-recaptcha-error": "Please check the box next to \"I'm not a robot\" to continue.",
     "session-timed-out": "We logged you out after 30 minutes of inactivity. Please provide your information again to certify your weeks.",
-    "last-name-required-error": "Please provide your Last name.",
-    "dob-month-required-error": "Please provide your birth month.",
-    "dob-day-required-error": "Please provide your birth day.",
-    "dob-year-required-error": "Please provide your birth year.",
-    "ssn-required-error": "Please provide your SSN.",
-    "missing-fields-error":"It looks like you missed some information. Please fill out all fields and try again.",
+    "required-error": "This field is required.",
     "show-ssn":"Show SSN",
     "hide-ssn":"Hide SSN"
   },
@@ -224,8 +220,10 @@
   },
   "retrocerts-certification": {
     "title":"Retroactive Certification for Unemployment",
+    "question-page-title": "Retroactively Certify and Review",
     "p1-multiple": "You are on Week {{weekForUser}} of {{numberOfWeeks}} to certify.",
     "form-header": "Week {{weekForUser}}: {{weekString}}",
+    "save-error": "Something went wrong. Please try again later.",
     "questions": {
       "ui-full-time": {
         "tooSick": "Were you too sick or injured to work?",
@@ -332,10 +330,9 @@
     "submit-p1": "You are about to submit your retroactive certification(s). You will <strong>not</strong> be able to change your answers once you select Submit.",
     "submit-p2": "To complete your retroactive certification(s), select Submit.",
     "button-back": "Back",
-    "button-next": "Next, certify Week {{nextWeekForUser}}",
+    "button-next": "Next, Certify Week {{nextWeekForUser}}",
     "button-submit": "Submit your certification"
   },
-
   "retrocerts-confirmation": {
     "title": "Retroactive Certification for Unemployment",
     "alert": "You have successfully submitted your retroactive certification.",
