@@ -28,7 +28,7 @@ function createRouter() {
     }
 
     if (userRecord) {
-      console.log("login",  userRecord.id);
+      console.log("login", userRecord.id);
       const formRecord = await cosmos.getFormDataByUserIdWithNewAuthToken(
         userRecord.id
       );
