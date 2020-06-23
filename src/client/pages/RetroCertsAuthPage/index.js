@@ -149,7 +149,9 @@ function RetroCertsAuthPage(props) {
               errorAlert}
             <Row>
               <Form.Group controlId="formLastName" className="col-md-6">
-                <Form.Label>{t("retrocert-login.last-name-label")}</Form.Label>
+                <Form.Label>{`* ${t(
+                  "retrocert-login.last-name-label"
+                )}`}</Form.Label>
                 <Form.Control
                   type="text"
                   value={lastName}
@@ -161,7 +163,9 @@ function RetroCertsAuthPage(props) {
                 </Form.Control.Feedback>
               </Form.Group>
             </Row>
-            <div className="mb-n2">{t("retrocert-login.dob-heading")}</div>
+            <div className="mb-n2">{`* ${t(
+              "retrocert-login.dob-heading"
+            )}`}</div>
             <small className="text-muted">
               {t("retrocert-login.dob-hint")}
             </small>
@@ -211,7 +215,7 @@ function RetroCertsAuthPage(props) {
             </Row>
             <Row>
               <Form.Group controlId="formSsn" className="col-md-6">
-                <Form.Label>{t("retrocert-login.ssn-label")}</Form.Label>
+                <Form.Label>{`* ${t("retrocert-login.ssn-label")}`}</Form.Label>
                 <Form.Text muted>{t("retrocert-login.ssn-hint")}</Form.Text>
                 <Form.Control
                   value={ssn}

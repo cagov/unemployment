@@ -189,13 +189,13 @@
     "title": "Retroactive Certification for Unemployment",
     "help": "You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits from the week ending February 9, 2020, through week ending May 9, 2020.",
     "instructions": "Enter your information to confirm if you have any benefit weeks that you need to retroactively certify.",
-    "last-name-label": "* Last Name",
-    "dob-heading": "* Date of Birth",
+    "last-name-label": "Last Name",
+    "dob-heading": "Date of Birth",
     "dob-hint": "For example, 4 28 1990",
     "dob-month": "Month",
     "dob-day": "Day",
     "dob-year": "Year",
-    "ssn-label": "* Social Security Number",
+    "ssn-label": "Social Security Number",
     "ssn-hint": "Enter your Social Security number with or without dashes.",
     "recaptcha-text": "Security check provided by reCAPTCHA.",
     "submit": "Find me",
@@ -220,6 +220,7 @@
   },
   "retrocerts-certification": {
     "title":"Retroactive Certification for Unemployment",
+    "question-page-title": "Retroactively Certify and Review",
     "p1-multiple": "You are on Week {{weekForUser}} of {{numberOfWeeks}} to certify.",
     "form-header": "Week {{weekForUser}}: {{weekString}}",
     "save-error": "Something went wrong. Please try again later.",
@@ -329,7 +330,7 @@
     "submit-p1": "You are about to submit your retroactive certification(s). You will <strong>not</strong> be able to change your answers once you select Submit.",
     "submit-p2": "To complete your retroactive certification(s), select Submit.",
     "button-back": "Back",
-    "button-next": "Next, certify Week {{nextWeekForUser}}",
+    "button-next": "Next, Certify Week {{nextWeekForUser}}",
     "button-submit": "Submit your certification"
   },
   "retrocerts-confirmation": {
