@@ -87,6 +87,9 @@ def generate_final_file():
         plans_from_row1 = row1["SeekWorkPlan"].values[0]
         combined_plans = plans_from_row2
         if is_both_ui:
+            if (len(np.intersect1d(weeks_from_row2, weeks_from_row1)) != 0):
+                print(row1)
+                print(row2)
             # There should never be UI full time and UI part time in the same week
             assert (len(np.intersect1d(weeks_from_row2, weeks_from_row1)) == 0)
         for num, week in enumerate(weeks_from_row1):
@@ -111,23 +114,22 @@ def generate_final_file():
 
     counter = 0
     for index, row in first_hashes.iterrows():
-        hash = row["SHA256_hash"]
-        user_rows = dupe_hashes.loc[dupe_hashes["SHA256_hash"] == hash].copy()
+        user_rows = dupe_hashes.loc[dupe_hashes["SHA256_hash"] == row["SHA256_hash"]].copy()
+        assert(len(user_rows) == 2)
+        # Check value in SeekWorkPlan BEFORE expanding it into a filled array
+        mask = user_rows["SeekWorkPlan"] == "PUA full time" # creates a Series of booleans
         user_rows["SeekWorkPlan"] = user_rows.apply(
             lambda x: [x["SeekWorkPlan"]] * len(x["WeekEndingDates"]), axis=1)
 
-        ui_rows = user_rows.loc[user_rows["Program"] == "UI"]
-        pua_row = user_rows.loc[user_rows["Program"] == "DUA"]
-
-        # if there's one PUA entry, merge in non-duplicate UI row weeks
+        pua_row = user_rows[mask]
+        ui_rows = user_rows[~mask] # apply inverse of mask
         if len(pua_row) == 1:
-            assert len(ui_rows) == 1
-            ui_row = ui_rows
-            insert_sorted(ui_row, pua_row, first_hashes, False)
-
-        # if there's two UI entries (UI part time and UI full time), merge and check no overlap on the same week
-        if len(ui_rows) == 2:
-            assert len(pua_row) == 0
+            assert(len(ui_rows) == 1)
+            # there's one PUA entry and one UI, merge in UI row weeks, making sure PUA overrides UI if same week
+            insert_sorted(ui_rows, pua_row, first_hashes, False)
+        else:
+            assert (len(ui_rows) == 2)
+            # there's two UI entries (UI part time and UI full time), merge and check no overlap on the same week
             insert_sorted(ui_rows.iloc[[0]], ui_rows.iloc[[1]], first_hashes, True)
 
         counter += 1
@@ -137,7 +139,6 @@ def generate_final_file():
           "users who were part of more than one plan (DUA/PUA, UI full time, UI part time)")
     assert len(df) - len(first_hashes) == len(processed)
 
-    processed.drop(columns="Program", inplace=True)
     processed.columns = FINAL_COLUMN_NAMES
     processed.to_json(final_filename, orient="records")
 
@@ -168,11 +169,13 @@ def generate_intermediate_file():
         if use_subset_of_data:
             print("Selecting first 100,000 rows (use_subset_of_data)")
             df = df.head(100000)
-        df["SeekWorkPlan"] = df["SeekWorkPlan"].replace(VALID_FT_PLANS, "UI full time") \
-            .replace(VALID_PT_PLANS, "UI part time") \
-            .replace(["X", "C3"], "PUA full time")
+        mask = df["Program"] == "DUA" # creates a Series of booleans
+        df["SeekWorkPlan"][mask] = "PUA full time"
+        df["SeekWorkPlan"].replace(VALID_FT_PLANS, "UI full time", inplace=True)
+        df["SeekWorkPlan"].replace(VALID_PT_PLANS, "UI part time", inplace=True)
+        df.drop(columns="Program", inplace=True)
         output = df.replace({"WeekEndingDate": WEEKS_TO_INDEX}) \
-            .groupby(["SHA256_hash", "Program", "SeekWorkPlan"]).agg(list) \
+            .groupby(["SHA256_hash", "SeekWorkPlan"]).agg(list) \
             .reset_index().rename(columns={"WeekEndingDate": "WeekEndingDates"})
         result_count = len(output)
 
