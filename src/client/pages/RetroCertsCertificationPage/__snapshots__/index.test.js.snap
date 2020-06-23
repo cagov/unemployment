@@ -12,8 +12,22 @@ exports[`<RetroCertsCertificationPage /> Certify for 2nd week of 2 1`] = `
       className="container p-4"
     >
       <h1>
-        Retroactive Certification for Unemployment
+        Retroactively Certify and Review
       </h1>
+      <h2
+        className="h3 font-weight-bold"
+      >
+        <Trans
+          i18nKey="retrocerts-certification.form-header"
+          t={[Function]}
+          values={
+            Object {
+              "weekForUser": 2,
+              "weekString": "02/09/2020 - 02/15/2020",
+            }
+          }
+        />
+      </h2>
       <p>
         <Trans
           i18nKey="retrocerts-certification.p1-multiple"
@@ -26,18 +40,6 @@ exports[`<RetroCertsCertificationPage /> Certify for 2nd week of 2 1`] = `
           }
         />
       </p>
-      <h3>
-        <Trans
-          i18nKey="retrocerts-certification.form-header"
-          t={[Function]}
-          values={
-            Object {
-              "weekForUser": 2,
-              "weekString": "02/09/2020 - 02/15/2020",
-            }
-          }
-        />
-      </h3>
       <Form
         inline={false}
         noValidate={true}
@@ -236,8 +238,22 @@ exports[`<RetroCertsCertificationPage /> Certify for one week of 2 1`] = `
       className="container p-4"
     >
       <h1>
-        Retroactive Certification for Unemployment
+        Retroactively Certify and Review
       </h1>
+      <h2
+        className="h3 font-weight-bold"
+      >
+        <Trans
+          i18nKey="retrocerts-certification.form-header"
+          t={[Function]}
+          values={
+            Object {
+              "weekForUser": 1,
+              "weekString": "02/02/2020 - 02/08/2020",
+            }
+          }
+        />
+      </h2>
       <p>
         <Trans
           i18nKey="retrocerts-certification.p1-multiple"
@@ -250,18 +266,6 @@ exports[`<RetroCertsCertificationPage /> Certify for one week of 2 1`] = `
           }
         />
       </p>
-      <h3>
-        <Trans
-          i18nKey="retrocerts-certification.form-header"
-          t={[Function]}
-          values={
-            Object {
-              "weekForUser": 1,
-              "weekString": "02/02/2020 - 02/08/2020",
-            }
-          }
-        />
-      </h3>
       <Form
         inline={false}
         noValidate={true}
