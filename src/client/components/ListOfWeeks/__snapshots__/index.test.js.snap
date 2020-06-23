@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ListOfWeeks /> renders the component 1`] = `
+Array [
+  <Alert
+    className="d-flex"
+    closeLabel="Close alert"
+    key="weekToCertify0"
+    show={true}
+    transition={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "defaultProps": Object {
+          "appear": false,
+          "in": false,
+          "mountOnEnter": false,
+          "timeout": 300,
+          "unmountOnExit": false,
+        },
+        "displayName": "Fade",
+        "render": [Function],
+      }
+    }
+    variant="secondary"
+  >
+    <div
+      className="flex-fill"
+    >
+      <Trans
+        i18nKey="retrocerts-week-list-item"
+        t={[Function]}
+        values={
+          Object {
+            "endDate": "02/08/2020",
+            "startDate": "02/02/2020",
+            "weekForUser": 1,
+          }
+        }
+      />
+    </div>
+  </Alert>,
+  <Alert
+    className="d-flex"
+    closeLabel="Close alert"
+    key="weekToCertify5"
+    show={true}
+    transition={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "defaultProps": Object {
+          "appear": false,
+          "in": false,
+          "mountOnEnter": false,
+          "timeout": 300,
+          "unmountOnExit": false,
+        },
+        "displayName": "Fade",
+        "render": [Function],
+      }
+    }
+    variant="secondary"
+  >
+    <div
+      className="flex-fill"
+    >
+      <Trans
+        i18nKey="retrocerts-week-list-item"
+        t={[Function]}
+        values={
+          Object {
+            "endDate": "03/14/2020",
+            "startDate": "03/08/2020",
+            "weekForUser": 2,
+          }
+        }
+      />
+    </div>
+  </Alert>,
+]
+`;
+
+exports[`<ListOfWeeks /> with checks 1`] = `
+<Alert
+  className="d-flex"
+  closeLabel="Close alert"
+  key="weekToCertify1"
+  show={true}
+  transition={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "defaultProps": Object {
+        "appear": false,
+        "in": false,
+        "mountOnEnter": false,
+        "timeout": 300,
+        "unmountOnExit": false,
+      },
+      "displayName": "Fade",
+      "render": [Function],
+    }
+  }
+  variant="secondary"
+>
+  <div
+    className="flex-fill"
+  >
+    <Trans
+      i18nKey="retrocerts-week-list-item"
+      t={[Function]}
+      values={
+        Object {
+          "endDate": "02/15/2020",
+          "startDate": "02/09/2020",
+          "weekForUser": 1,
+        }
+      }
+    />
+  </div>
+  <img
+    alt="checkmark"
+    className="checkmark"
+    src="/images/check-circle-fill.svg"
+  />
+</Alert>
+`;

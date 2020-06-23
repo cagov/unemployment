@@ -14,7 +14,6 @@ const routes = {
   guideMoreResources: "/guide/more-resources",
 
   retroCertsAuth: "/retroactive-certification",
-  retroCertsWhatToExpect: "/retroactive-certification/what-to-expect",
   retroCertsWeeksToCertify: "/retroactive-certification/weeks-to-certify",
   retroCertsCertify: "/retroactive-certification/certify",
   retroCertsCertifyWeek0: "/retroactive-certification/certify/2020-02-08",

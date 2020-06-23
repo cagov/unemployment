@@ -8,7 +8,6 @@ import RetroCertsAuthPage from "./pages/RetroCertsAuthPage";
 import RetroCertsWeeksToCertifyPage from "./pages/RetroCertsWeeksToCertifyPage";
 import RetroCertsCertificationPage from "./pages/RetroCertsCertificationPage";
 import RetroCertsConfirmationPage from "./pages/RetroCertsConfirmationPage";
-import RetroCertsWhatToExpectPage from "./pages/RetroCertsWhatToExpectPage";
 import AUTH_STRINGS from "../data/authStrings";
 import routes from "../data/routes";
 
@@ -31,16 +30,6 @@ export default function App(props) {
           path={routes.retroCertsWeeksToCertify}
           isProduction={isProduction}
           pageComponent={RetroCertsWeeksToCertifyPage}
-          pageProps={{
-            userData: retroCertsUserData,
-            setUserData: setRetroCertsUserData,
-          }}
-          requiresAuthentication
-        />
-        <RetroCertsRoute
-          path={routes.retroCertsWhatToExpect}
-          isProduction={isProduction}
-          pageComponent={RetroCertsWhatToExpectPage}
           pageProps={{
             userData: retroCertsUserData,
             setUserData: setRetroCertsUserData,

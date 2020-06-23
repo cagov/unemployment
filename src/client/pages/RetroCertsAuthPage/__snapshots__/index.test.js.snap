@@ -10,7 +10,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
       className="container p-4"
     >
       <h1>
-        Retroactive Unemployment Certification
+        Retroactive Certification for Unemployment
       </h1>
       <h2
         className="mt-4"
@@ -249,7 +249,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
       className="container p-4"
     >
       <h1>
-        Retroactive Unemployment Certification
+        Retroactive Certification for Unemployment
       </h1>
       <h2
         className="mt-4"
@@ -517,7 +517,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
       className="container p-4"
     >
       <h1>
-        Retroactive Unemployment Certification
+        Retroactive Certification for Unemployment
       </h1>
       <h2
         className="mt-4"
@@ -785,7 +785,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
       className="container p-4"
     >
       <h1>
-        Retroactive Unemployment Certification
+        Retroactive Certification for Unemployment
       </h1>
       <h2
         className="mt-4"
