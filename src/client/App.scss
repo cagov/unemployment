@@ -110,3 +110,8 @@ footer {
   background-color: #e2e3e5;
   border-color: #d6d8db;
 }
+
+// This adds a margin for the "If yes" question for PUA #7 responses
+div#disaster-list > div.form-check > label.form-check-label {
+  margin-left: 10px;
+}

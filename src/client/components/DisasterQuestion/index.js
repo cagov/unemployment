@@ -41,7 +41,7 @@ function DisasterQuestion(props) {
   return (
     <Form.Group controlId="disaster-question">
       <Form.Label>{props.questionText}</Form.Label>
-      <div>
+      <div id="disaster-list">
         {disasterRadioChoices.map((disasterChoice, index) => (
           <Form.Check
             type="radio"
