@@ -11,7 +11,7 @@ describe("<RetroCertsCertificationPage />", () => {
         userData: {
           status: AUTH_STRINGS.statusCode.ok,
           weeksToCertify: [0, 1],
-          seekWorkPlan: ["UI full time", "UI part time"],
+          programPlan: ["UI full time", "UI part time"],
         },
         setUserData: () => {},
         routeComputedMatch: {
@@ -32,7 +32,7 @@ describe("<RetroCertsCertificationPage />", () => {
         userData: {
           status: AUTH_STRINGS.statusCode.ok,
           weeksToCertify: [0, 1],
-          seekWorkPlan: ["UI full time", "UI part time"],
+          programPlan: ["UI full time", "UI part time"],
           formData: [{ weekIndex: 0, tooSick: false, fullTime: true }],
         },
         setUserData: () => {},
@@ -55,7 +55,7 @@ describe("<RetroCertsCertificationPage />", () => {
         userData: {
           status: AUTH_STRINGS.statusCode.ok,
           weeksToCertify: [0, 1],
-          seekWorkPlan: ["UI full time", "UI part time"],
+          programPlan: ["UI full time", "UI part time"],
           formData: [
             {
               weekIndex: 0,

@@ -18,7 +18,7 @@ WORK_PLANS = [
   UI_FULL_TIME,
   UI_PART_TIME,
 ]
-# last name, dob, ssn, seekWorkPlan, weeksToCertify
+# last name, dob, ssn, programPlan, weeksToCertify
 TEST_USERS = [
     ['Villanueva', datetime.date(2000, 1, 1), '123456789', PUA_FULL_TIME, [0]],
     ['Jarvis', datetime.date(1989, 2, 2), '987654321', UI_FULL_TIME, [5, 6, 7]],
@@ -44,7 +44,7 @@ def generate_test_users():
   for user in TEST_USERS:
       users.append({
           'id': get_hash(*user[:3]),
-          'seekWorkPlan': [user[3]],
+          'programPlan': [user[3]],
           'weeksToCertify': user[4],
           'source': SOURCE,
       })
@@ -66,7 +66,7 @@ def generate_batch_users(num_users=30):
 
         users.append({
             'id': get_hash(name, dob, ssn),
-            'seekWorkPlan': [WORK_PLANS[i % 3]],
+            'programPlan': [WORK_PLANS[i % 3]],
             'weeksToCertify': weeks_to_certify,
             'source': 'batch' + SOURCE
         })
