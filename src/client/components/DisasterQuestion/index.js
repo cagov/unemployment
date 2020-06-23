@@ -12,8 +12,13 @@ function DisasterQuestion(props) {
       : t("retrocerts-certification.disaster-choices.choice-14")
   );
 
+  const [isDirty, setIsDirty] = useState(
+    props.choice !== undefined || userChoice !== undefined
+  );
+
   function onChange(event) {
     setUserChoice(event.target.value);
+    setIsDirty(true);
 
     props.onChange({
       name: "disasterChoice",
@@ -38,22 +43,25 @@ function DisasterQuestion(props) {
     t("retrocerts-certification.disaster-choices.choice-14"),
   ];
 
+  function getValidationClass() {
+    return isDirty ? "" : "unchecked";
+  }
+
   return (
-    <Form.Group controlId="disaster-question">
+    <Form.Group controlId="disaster-question" className={getValidationClass()}>
       <Form.Label>{props.questionText}</Form.Label>
-      <div id="disaster-list">
-        {disasterRadioChoices.map((disasterChoice, index) => (
-          <Form.Check
-            type="radio"
-            label={disasterChoice}
-            onChange={onChange}
-            value={userChoice}
-            name="disaster-choice"
-            key={`disaster-choice-${index}`}
-            id={`disaster-choice-${index}`}
-          />
-        ))}
-      </div>
+      {disasterRadioChoices.map((disasterChoice, index) => (
+        <Form.Check
+          type="radio"
+          label={disasterChoice}
+          onChange={onChange}
+          value={userChoice}
+          name="disaster-choice"
+          key={`disaster-choice-${index}`}
+          id={`disaster-choice-${index}`}
+        />
+      ))}
+      <div className="invalid-feedback">{t("required-error")}</div>
     </Form.Group>
   );
 }
