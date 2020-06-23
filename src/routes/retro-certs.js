@@ -35,7 +35,7 @@ function createRouter() {
       responseJson.status = AUTH_STRINGS.statusCode.ok;
       responseJson.authToken = formRecord.authToken;
       responseJson.weeksToCertify = userRecord.weeksToCertify;
-      responseJson.seekWorkPlan = userRecord.seekWorkPlan;
+      responseJson.programPlan = userRecord.programPlan;
       responseJson.confirmationNumber = formRecord.confirmationNumber;
     } else {
       console.log("failed login");
@@ -54,7 +54,7 @@ function createRouter() {
         const userRecord = await cosmos.getUserById(formRecord.id);
         responseJson.status = AUTH_STRINGS.statusCode.ok;
         responseJson.weeksToCertify = Array.from(userRecord.weeksToCertify);
-        responseJson.seekWorkPlan = Array.from(userRecord.seekWorkPlan);
+        responseJson.programPlan = Array.from(userRecord.programPlan);
         responseJson.confirmationNumber = formRecord.confirmationNumber;
       } else {
         console.log("data with invalid token", postJson.authToken);

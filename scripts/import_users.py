@@ -41,7 +41,7 @@ INTERMEDIATE_DATA_100K_FILENAME = "100k.pkl"  # Generate a smaller file of 100k 
 DUPLICATE_HASHES_FILENAME = "duplicate_hashes.xlsx"
 FINAL_DATA_100K_FILENAME = "100k.json"
 FINAL_DATA_FILENAME = "users.json"
-FINAL_COLUMN_NAMES = ["willBeNamedId", "seekWorkPlan", "weeksToCertify"]
+FINAL_COLUMN_NAMES = ["willBeNamedId", "programPlan", "weeksToCertify"]
 
 intermediate_filename = INTERMEDIATE_DATA_FILENAME
 final_filename = FINAL_DATA_FILENAME
