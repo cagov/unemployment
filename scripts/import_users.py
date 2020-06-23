@@ -9,8 +9,8 @@ import bisect
 # and isn't optimized for the groupby operation used in this script
 
 # Options to set before running the script
-use_subset_of_data = True  # Set to True if you're developing and want operations to take less time
-generate_from_source = True  # Set to True to regenerate intermediate data first, vs loading saved intermediate data
+use_subset_of_data = False  # Set to True if you're developing and want operations to take less time
+generate_from_source = False  # Set to True to regenerate intermediate data first, vs loading saved intermediate data
 
 # Increase amount of data displayed in terminal
 pd.set_option('display.max_rows', 500)
@@ -46,7 +46,7 @@ INTERMEDIATE_DATA_100K_FILENAME = "100k.pkl"  # Generate a smaller file of 100k 
 DUPLICATE_HASHES_FILENAME = "duplicate_hashes.xlsx"
 FINAL_DATA_100K_FILENAME = "100k.json"
 FINAL_DATA_FILENAME = "users.json"
-FINAL_COLUMN_NAMES = ["willBeNamedId", "seekWorkPlan", "weeksToCertify"]
+FINAL_COLUMN_NAMES = ["id", "programSeekWorkPlan", "weeksToCertify"]
 
 intermediate_filename = INTERMEDIATE_DATA_FILENAME
 final_filename = FINAL_DATA_FILENAME
@@ -105,8 +105,6 @@ def generate_final_file():
     dupe_hashes = df[df.duplicated("SHA256_hash", keep=False)]  # keep all duplicates
     first_hashes = dupe_hashes[dupe_hashes.duplicated("SHA256_hash", keep="first")]
 
-    print(dupe_hashes)
-
     # A user should only have up to two Program+SeekWorkPlan combinations
     # E.g. no user should have entries for all three of DUA/PUA + UI full time + UI part time
     assert 2 * len(first_hashes) == len(dupe_hashes)
@@ -134,15 +132,14 @@ def generate_final_file():
 
         counter += 1
 
-    print(first_hashes)
     processed = df.drop_duplicates("SHA256_hash", keep=False).append(first_hashes)
-    print(f"There are now {len(processed)} rows remaining due to {len(first_hashes)} ",
+    print(f"There are now {len(processed)} rows remaining due to {len(first_hashes)}",
           "users who were part of more than one plan (DUA/PUA, UI full time, UI part time)")
     assert len(df) - len(first_hashes) == len(processed)
 
-    df.drop(columns="Program", inplace=True)
-    df.columns = FINAL_COLUMN_NAMES
-    df.to_json(final_filename, orient="records")
+    processed.drop(columns="Program", inplace=True)
+    processed.columns = FINAL_COLUMN_NAMES
+    processed.to_json(final_filename, orient="records")
 
 
 # We generate an intermediate file and write it to disk because the groupby is the biggest chunk of work
