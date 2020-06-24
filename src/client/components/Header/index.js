@@ -9,7 +9,11 @@ function Header() {
   return (
     <header className="header border-bottom border-secondary">
       <Navbar className="justify-content-between" variant="custom" bg="primary">
-        <Navbar.Brand href="https://ca.gov">
+        <Navbar.Brand
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://ca.gov"
+        >
           <img
             src="images/Ca-Gov-Logo-Gold.svg"
             width="30"
@@ -18,7 +22,11 @@ function Header() {
           />
         </Navbar.Brand>
         <Nav>
-          <Nav.Link href="https://edd.ca.gov">
+          <Nav.Link
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://edd.ca.gov"
+          >
             <img
               className="icon"
               src="images/home.svg"
@@ -28,7 +36,11 @@ function Header() {
             />{" "}
             <span className="text">{t("header.home")}</span>
           </Nav.Link>
-          <Nav.Link href="https://edd.ca.gov/login.htm">
+          <Nav.Link
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://edd.ca.gov/login.htm"
+          >
             <span>
               <img
                 className="icon"
@@ -43,7 +55,11 @@ function Header() {
         </Nav>
       </Navbar>
       <Navbar collapseOnSelect expand="md" variant="light">
-        <Navbar.Brand href="https://edd.ca.gov">
+        <Navbar.Brand
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://edd.ca.gov"
+        >
           <img
             src="images/edd-logo-2-Color.svg"
             height="50"
@@ -54,19 +70,39 @@ function Header() {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse className="justify-content-between ml-5 mr-5 pl-5">
-          <Nav.Link href="https://edd.ca.gov/jobs.htm">
+          <Nav.Link
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://edd.ca.gov/jobs.htm"
+          >
             <span>{t("header.jobs")}</span>
           </Nav.Link>
-          <Nav.Link href="https://edd.ca.gov/claims.htm">
+          <Nav.Link
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://edd.ca.gov/claims.htm"
+          >
             <span>{t("header.claims")}</span>
           </Nav.Link>
-          <Nav.Link href="https://edd.ca.gov/employers.htm">
+          <Nav.Link
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://edd.ca.gov/employers.htm"
+          >
             <span>{t("header.employers")}</span>
           </Nav.Link>
-          <Nav.Link href="https://edd.ca.gov/newsroom.htm">
+          <Nav.Link
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://edd.ca.gov/newsroom.htm"
+          >
             <span>{t("header.newsroom")}</span>
           </Nav.Link>
-          <Nav.Link href="https://edd.ca.gov/serp.html?q=">
+          <Nav.Link
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://edd.ca.gov/serp.html?q="
+          >
             <span>{t("header.search")}</span>
           </Nav.Link>
         </Navbar.Collapse>
