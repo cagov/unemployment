@@ -2,9 +2,6 @@
 
 exports[`<EmployersQuestions /> renders the component 1`] = `
 <div>
-  <p>
-    Tell us about your income.
-  </p>
   <div
     key="employerData00000000"
   >
@@ -76,9 +73,6 @@ exports[`<EmployersQuestions /> renders the component 1`] = `
 
 exports[`<EmployersQuestions /> renders with 2 income sources 1`] = `
 <div>
-  <p>
-    Tell us about your income.
-  </p>
   <div
     key="employerData12345678"
   >
