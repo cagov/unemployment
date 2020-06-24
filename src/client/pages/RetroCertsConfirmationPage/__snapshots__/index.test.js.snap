@@ -43,7 +43,19 @@ exports[`<RetroCertsConfirmationPage /> with confirmation number 1`] = `
           className="checkmark"
           src="/images/check-circle-fill.svg"
         />
+<<<<<<< HEAD
         You have successfully submitted your retroactive certifications. No further action is required.
+=======
+        <Trans
+          i18nKey="retrocerts-confirmation.alert-returning"
+          t={[Function]}
+          values={
+            Object {
+              "confirmationNumber": "CONFIRMATION_NUMBER",
+            }
+          }
+        />
+>>>>>>> add confirmation number
       </Alert>
       <h2
         className="mt-5"

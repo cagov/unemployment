@@ -203,8 +203,8 @@
     "invalid-user-error": "Review and verify the information you entered is correct. If your information is correct, then you don’t need to certify.",
     "invalid-recaptcha-error": "Please check the box next to \"I'm not a robot\" to continue.",
     "session-timed-out": "We logged you out after 30 minutes of inactivity. Please provide your information again to certify your weeks.",
-    "show-ssn":"Show SSN",
-    "hide-ssn":"Hide SSN"
+    "show-ssn": "Show SSN",
+    "hide-ssn": "Hide SSN"
   },
   "retrocerts-week-list-item": "<strong>Week {{weekForUser}}</strong>: Sunday, {{startDate}} – Saturday, {{endDate}}",
   "retrocerts-weeks": {
@@ -219,7 +219,7 @@
     "button-start": "Start Certifying"
   },
   "retrocerts-certification": {
-    "title":"Retroactive Certification for Unemployment",
+    "title": "Retroactive Certification for Unemployment",
     "question-page-title": "Retroactively Certify and Review",
     "p1-multiple": "You are on Week {{weekForUser}} of {{numberOfWeeks}} to certify.",
     "form-header": "Week {{weekForUser}}: {{weekString}}",
@@ -256,7 +256,7 @@
         "help-schoolOrTraining": "Check <strong>Yes</strong> only if school or training <strong>began</strong> during this work week.",
         "workOrEarn": "Did you work or earn any money, <strong>whether you were paid or not</strong>?",
         "help-workOrEarn": "Look at the date each week begins and ends. If you performed any work during this week, all earnings must be reported regardless if payment has been received."
-       },
+      },
       "pua-full-time": {
         "tooSick": "Were you too sick or injured to work for reasons other than disaster?",
         "help-tooSick": "You must be well enough to receive full benefits. Other than disaster, was a workday missed due to sickness or injury?",
@@ -274,7 +274,7 @@
         "help-workOrEarn": "Look at the date each week begins and ends. If you performed any work during this week, the earnings must be reported regardless if you received payment or not. This does not include self-employment.",
         "recentDisaster": "Are you unemployed as a direct result of a recent disaster (for example: COVID-19, earthquake, flood, mudslide, or fire) in California?",
         "recentDisasterChoice": "Select the option for how you were impacted by the COVID-19 pandemic."
-       }
+      }
     },
     "q-workOrEarn": "Did you work or earn any money, whether you were paid or not?",
     "qhelp-workOrEarn": "Look at the date each week begins and ends. If you performed any work during this week, all earnings must be reported regardless if payment has been received.",
@@ -343,11 +343,11 @@
   },
   "retrocerts-confirmation": {
     "title": "Retroactive Certification for Unemployment",
-    "alert": "You have successfully submitted your retroactive certifications.",
-    "alert-returning": "You have successfully submitted your retroactive certifications. No further action is required.",
+    "alert": "You have successfully submitted your retroactive certification. Your confirmation number is <strong>{{confirmationNumber}}</strong>.",
+    "alert-returning": "You have successfully submitted your retroactive certification. No further action is required. Your confirmation number is <strong>{{confirmationNumber}}</strong>.",
     "header1": "Retroactive Certification Confirmation",
-    "p1": "Your retroactive certification(s) has been submitted.",
-    "p1-returning": "We received your retroactive certification(s). You’ve been logged out of the system and may close this window.",
+    "p1": "Your retroactive certification has been submitted.",
+    "p1-returning": "We received your retroactive certification. You’ve been logged out of the system and may close this window.",
     "header2": "Retroactive Certification Weeks",
     "header3": "Next Steps",
     "p2": "If you are still unemployed, continue to certify for benefits every two weeks. The fastest way is to use <2>UI Online</2>.",

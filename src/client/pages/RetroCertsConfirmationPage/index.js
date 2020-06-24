@@ -30,6 +30,12 @@ function RetroCertsConfirmationPage(props) {
   // confirmation number.
   const isReturning = !userData.formData;
 
+  function getAlertKey(isReturning) {
+    return isReturning
+      ? "retrocerts-confirmation.alert-returning"
+      : "retrocerts-confirmation.alert";
+  }
+
   return (
     <div id="overflow-wrapper">
       <Header />
@@ -42,11 +48,11 @@ function RetroCertsConfirmationPage(props) {
               src="/images/check-circle-fill.svg"
               alt={t("iconAltText.checkmark")}
             />
-            {t(
-              isReturning
-                ? "retrocerts-confirmation.alert-returning"
-                : "retrocerts-confirmation.alert"
-            )}
+            <Trans
+              t={t}
+              i18nKey={getAlertKey(isReturning)}
+              values={{ confirmationNumber: userData.confirmationNumber }}
+            />
           </Alert>
           <h2 className="mt-5">{t("retrocerts-confirmation.header1")}</h2>
           <p>
