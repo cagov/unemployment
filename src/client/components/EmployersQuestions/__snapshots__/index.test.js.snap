@@ -2,9 +2,6 @@
 
 exports[`<EmployersQuestions /> renders the component 1`] = `
 <div>
-  <p>
-    Tell us about your income.
-  </p>
   <div
     key="employerData00000000"
   >
@@ -67,7 +64,7 @@ exports[`<EmployersQuestions /> renders the component 1`] = `
         disabled={false}
         onClick={[Function]}
       >
-        + Add another source of income
+        + Add another employer
       </NavLink>
     </Col>
   </Row>
@@ -76,9 +73,6 @@ exports[`<EmployersQuestions /> renders the component 1`] = `
 
 exports[`<EmployersQuestions /> renders with 2 income sources 1`] = `
 <div>
-  <p>
-    Tell us about your income.
-  </p>
   <div
     key="employerData12345678"
   >
@@ -116,7 +110,7 @@ exports[`<EmployersQuestions /> renders with 2 income sources 1`] = `
           disabled={false}
           onClick={[Function]}
         >
-          Remove this source of income
+          Remove this employer
         </NavLink>
       </Col>
     </Row>
@@ -177,7 +171,7 @@ exports[`<EmployersQuestions /> renders with 2 income sources 1`] = `
           disabled={false}
           onClick={[Function]}
         >
-          Remove this source of income
+          Remove this employer
         </NavLink>
       </Col>
     </Row>
@@ -219,7 +213,7 @@ exports[`<EmployersQuestions /> renders with 2 income sources 1`] = `
         disabled={false}
         onClick={[Function]}
       >
-        + Add another source of income
+        + Add another employer
       </NavLink>
     </Col>
   </Row>
