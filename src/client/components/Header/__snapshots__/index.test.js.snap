@@ -13,6 +13,8 @@ exports[`<Header /> renders the component 1`] = `
   >
     <NavbarBrand
       href="https://ca.gov"
+      rel="noopener noreferrer"
+      target="_blank"
     >
       <img
         alt="California gov logo"
@@ -35,6 +37,8 @@ exports[`<Header /> renders the component 1`] = `
         }
         disabled={false}
         href="https://edd.ca.gov"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         <img
           alt="home icon"
@@ -60,6 +64,8 @@ exports[`<Header /> renders the component 1`] = `
         }
         disabled={false}
         href="https://edd.ca.gov/login.htm"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         <span>
           <img
@@ -86,6 +92,8 @@ exports[`<Header /> renders the component 1`] = `
   >
     <NavbarBrand
       href="https://edd.ca.gov"
+      rel="noopener noreferrer"
+      target="_blank"
     >
       <img
         alt="California gov logo"
@@ -112,6 +120,8 @@ exports[`<Header /> renders the component 1`] = `
         }
         disabled={false}
         href="https://edd.ca.gov/jobs.htm"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         <span>
           Jobs
@@ -127,6 +137,8 @@ exports[`<Header /> renders the component 1`] = `
         }
         disabled={false}
         href="https://edd.ca.gov/claims.htm"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         <span>
           Claims
@@ -142,6 +154,8 @@ exports[`<Header /> renders the component 1`] = `
         }
         disabled={false}
         href="https://edd.ca.gov/employers.htm"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         <span>
           Employers
@@ -157,6 +171,8 @@ exports[`<Header /> renders the component 1`] = `
         }
         disabled={false}
         href="https://edd.ca.gov/newsroom.htm"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         <span>
           Newsroom
@@ -172,6 +188,8 @@ exports[`<Header /> renders the component 1`] = `
         }
         disabled={false}
         href="https://edd.ca.gov/serp.html?q="
+        rel="noopener noreferrer"
+        target="_blank"
       >
         <span>
           Search

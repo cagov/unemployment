@@ -39,6 +39,8 @@ exports[`<Footer /> renders the component 1`] = `
         }
         disabled={false}
         href="https://edd.ca.gov/about_edd/"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         About EDD
       </NavLink>
@@ -52,6 +54,8 @@ exports[`<Footer /> renders the component 1`] = `
         }
         disabled={false}
         href="https://edd.ca.gov/about_edd/contact_edd.htm"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         Contact EDD
       </NavLink>
@@ -65,6 +69,8 @@ exports[`<Footer /> renders the component 1`] = `
         }
         disabled={false}
         href="https://edd.ca.gov/about_edd/conditions_of_use.htm"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         Conditions of Use
       </NavLink>
@@ -78,6 +84,8 @@ exports[`<Footer /> renders the component 1`] = `
         }
         disabled={false}
         href="https://edd.ca.gov/about_edd/privacy_policy.htm"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         Privacy Policy
       </NavLink>
@@ -91,6 +99,8 @@ exports[`<Footer /> renders the component 1`] = `
         }
         disabled={false}
         href="https://edd.ca.gov/about_edd/accessibility.htm"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         Accessibility
       </NavLink>
@@ -104,6 +114,8 @@ exports[`<Footer /> renders the component 1`] = `
         }
         disabled={false}
         href="https://edd.ca.gov/sitemap.htm"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         Site Map
       </NavLink>
@@ -123,6 +135,8 @@ exports[`<Footer /> renders the component 1`] = `
         }
         disabled={false}
         href="https://www.facebook.com/californiaedd/"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         <img
           alt="Facebook icon"
@@ -142,6 +156,8 @@ exports[`<Footer /> renders the component 1`] = `
         }
         disabled={false}
         href="https://twitter.com/CA_EDD"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         <img
           alt="Twitter icon"
@@ -161,6 +177,8 @@ exports[`<Footer /> renders the component 1`] = `
         }
         disabled={false}
         href="https://www.linkedin.com/company/californiaedd/"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         <img
           alt="LinkedIn icon"
@@ -180,6 +198,8 @@ exports[`<Footer /> renders the component 1`] = `
         }
         disabled={false}
         href="https://www.instagram.com/ca_edd/"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         <img
           alt="Instagram icon"
@@ -199,6 +219,8 @@ exports[`<Footer /> renders the component 1`] = `
         }
         disabled={false}
         href="https://www.youtube.com/user/CaliforniaEDDD"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         <img
           alt="YouTube icon"
