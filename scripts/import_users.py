@@ -1,16 +1,24 @@
 #!/usr/bin/env python3
-
 import pandas as pd
 import numpy as np
 import bisect
 
-# Note on the modin library: modin enables using multiple cores for pandas
-# but is "not yet optimized" for all groupby operations,
-# and isn't optimized for the groupby operation used in this script
+# Each element of the output has the following properties: id (the hash), programSeekWorkPlan
+# (PUA, UI full time, or UI part time; or an array of these three values), and weeksToCertify
+# (an array of integer indices corresponding to possible weeks)
 
 # Options to set before running the script
 use_subset_of_data = False  # Set to True if you're developing and want operations to take less time
 generate_from_source = True  # Set to True to regenerate intermediate data first, vs loading saved intermediate data
+
+# A couple notes for future readers:
+#
+# On performance: modin enables using multiple cores for pandas
+# but is "not yet optimized" for all groupby operations,
+# and isn't optimized for the groupby operation used in this script
+
+# On storing lists, like in this script: Pandas isn't designed to hold lists in series
+# https://meta.stackoverflow.com/questions/373714/generic-dont-do-it-answer
 
 # Increase amount of data displayed in terminal
 pd.set_option('display.max_rows', 500)
@@ -37,9 +45,9 @@ VALID_WEEKS = [
 WEEKS_TO_INDEX = dict(map(reversed, enumerate(VALID_WEEKS)))  # { "2020-04-15": 0 ... }
 INDEX_TO_WEEKS = dict(enumerate(VALID_WEEKS))  # { 0: "2020-04-15"... }
 VALID_PROGRAMS = ["DUA", "UI"]
-VALID_FT_PLANS = ["A", "B", "AB", "C1", "C2", "C4", "C5", "C6", "T"]
+VALID_FT_PLANS = ["A", "B", "AB", "C1", "C2", "C4", "C5", "C6", "X"]
 VALID_PT_PLANS = ["PT", "P", "PB", "P1", "P2", "P4", "P5", "P6"]
-PUA_PLANS = ["X", "C3"] # We ignore plans if the Program is DUA/PUA, but accept these values for validation
+PUA_PLANS = ["C3"] # We ignore plans if the Program is DUA/PUA, but accept these values for validation's sake
 VALID_PLANS = VALID_FT_PLANS + VALID_PT_PLANS + PUA_PLANS
 SOURCE_DATA_FILENAME = "users.csv"
 INTERMEDIATE_DATA_FILENAME = "intermediate.pkl"
@@ -47,7 +55,7 @@ INTERMEDIATE_DATA_100K_FILENAME = "100k.pkl"  # Generate a smaller file of 100k 
 DUPLICATE_HASHES_FILENAME = "duplicate_hashes.xlsx"
 FINAL_DATA_100K_FILENAME = "100k.json"
 FINAL_DATA_FILENAME = "users.json"
-FINAL_COLUMN_NAMES = ["id", "programSeekWorkPlan", "weeksToCertify"]
+FINAL_COLUMN_NAMES = ["id", "programPlan", "weeksToCertify"]
 
 intermediate_filename = INTERMEDIATE_DATA_FILENAME
 final_filename = FINAL_DATA_FILENAME
@@ -115,7 +123,7 @@ def generate_final_file():
         user_rows = dupe_hashes.loc[dupe_hashes["SHA256_hash"] == row["SHA256_hash"]].copy()
         assert(len(user_rows) == 2)
         # Check value in SeekWorkPlan BEFORE expanding it into a filled array
-        mask = user_rows["SeekWorkPlan"] == "PUA" # creates a Series of booleans
+        mask = user_rows["SeekWorkPlan"] == "PUA full time" # creates a Series of booleans
         user_rows["SeekWorkPlan"] = user_rows.apply(
             lambda x: [x["SeekWorkPlan"]] * len(x["WeekEndingDates"]), axis=1)
 
@@ -132,6 +140,7 @@ def generate_final_file():
 
         counter += 1
 
+    df["SeekWorkPlan"] = df["SeekWorkPlan"].apply(lambda x: [x])
     processed = df.drop_duplicates("SHA256_hash", keep=False).append(first_hashes)
     print(f"There are now {len(processed)} rows remaining due to {len(first_hashes)}",
           "users who were part of more than one plan (DUA/PUA, UI full time, UI part time)")
@@ -161,16 +170,16 @@ def generate_intermediate_file():
         print("All values valid!\n")
 
     def generate_intermediate_data(df):
+        df = df.copy() # TODO(kalvin): figure out if there's a better way to avoid SettingWithCopyWarning error
         print(
             "Grouping by SHA256_hash/user, replacing WeekEndingDates with indices, ",
             "merging all WeekEndingDates into one array per user...")
         if use_subset_of_data:
             print("Selecting first 100,000 rows (use_subset_of_data)")
             df = df.head(100000)
-        mask = df["Program"] == "DUA" # creates a Series of booleans
-        df["SeekWorkPlan"][mask] = "PUA"
-        df["SeekWorkPlan"].replace(VALID_FT_PLANS, "UI full time", inplace=True)
-        df["SeekWorkPlan"].replace(VALID_PT_PLANS, "UI part time", inplace=True)
+        df["SeekWorkPlan"][df["Program"] == "DUA"] = "PUA full time"
+        df["SeekWorkPlan"] = df["SeekWorkPlan"].replace(VALID_FT_PLANS, "UI full time") \
+            .replace(VALID_PT_PLANS, "UI part time")
         df.drop(columns="Program", inplace=True)
         output = df.replace({"WeekEndingDate": WEEKS_TO_INDEX}) \
             .groupby(["SHA256_hash", "SeekWorkPlan"]).agg(list) \
