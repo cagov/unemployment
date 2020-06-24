@@ -228,7 +228,7 @@
       "ui-full-time": {
         "tooSick": "Were you too sick or injured to work?",
         "help-tooSick": "You must be well enough to work everyday of the week to receive full benefits. Check <strong>Yes</strong> if a workday was missed due to being sick or injured.",
-        "tooSickNumberOfDays": "If yes, enter the number of days (1 - 7) you were unable to work.",
+        "tooSickNumberOfDays": "If yes, enter the number of days (1-7) you were unable to work.",
         "help-tooSickNumberOfDays": "You must report the numbers of days that you could not work during this week. Unemployment benefits are paid according to the number of days you are able to work this week.",
         "couldNotAcceptWork": "Was there any reason (other than sickness or injury) that you could not have accepted full-time work <strong>each workday</strong>?",
         "help-couldNotAcceptWork": "You must be available for work to receive unemployment benefits. Available means you are ready and willing to accept work that matches your occupational skills and educational background. If full-time work was refused for any reason other than being sick or injured, check <strong>Yes</strong>.",
@@ -244,7 +244,7 @@
       "ui-part-time": {
         "tooSick": "Were you too sick or injured to work?",
         "help-tooSick": "You must be well enough to work everyday of the week to receive full benefits. Check ‘yes’ if a workday was missed due to being sick or injured.",
-        "tooSickNumberOfDays": "If Yes, enter the number of days (1 - 7) you were unable to work.",
+        "tooSickNumberOfDays": "If yes, enter the number of days (1-7) you were unable to work.",
         "help-tooSickNumberOfDays": "You must report the numbers of days that you could not work during this week. Unemployment benefits are paid according to the number of days you are able to work this week.",
         "couldNotAcceptWork": "Was there any reason (other than sickness or injury) that you could not have accepted part-time work, <strong>as instructed by EDD</strong>?",
         "help-couldNotAcceptWork": "You must be available for work to receive unemployment benefits. Available means you are ready and willing to accept work that matches your occupational skills and educational background. Check 'yes' if you refused fulltime work for any reason other than being sick or injured.",
@@ -260,7 +260,7 @@
       "pua-full-time": {
         "tooSick": "Were you too sick or injured to work for reasons other than disaster?",
         "help-tooSick": "You must be well enough to receive full benefits. Other than disaster, was a workday missed due to sickness or injury?",
-        "tooSickNumberOfDays": "If Yes, enter the number of days (1 - 7) you were unable to work.",
+        "tooSickNumberOfDays": "If yes, enter the number of days (1-7) you were unable to work.",
         "help-tooSickNumberOfDays": "You must report the number of days that work was missed.",
         "couldNotAcceptWork": "Was there any reason (other than sickness, injury or the disaster) that you could not have accepted full-time work, each workday?",
         "help-couldNotAcceptWork": "Other than being sick, injured or disaster, could full-time work have been accepted?",
