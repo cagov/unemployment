@@ -201,7 +201,7 @@ function RetroCertsCertificationPage(props) {
               key={weekIndex + "tooSick"}
               questionNumber={1}
               questionText={t(questionText("tooSick"))}
-              helpText={t(questionText("help-tooSick"))}
+              helpText={<Trans t={t} i18nKey={questionText("help-tooSick")} />}
               ifYes={formData.tooSick}
               onChange={(e) => handleFormDataChange(e)}
               inputName="tooSick"

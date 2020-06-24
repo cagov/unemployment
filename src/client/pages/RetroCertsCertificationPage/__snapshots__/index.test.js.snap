@@ -47,7 +47,12 @@ exports[`<RetroCertsCertificationPage /> Certify for 2nd week of 2 1`] = `
         validated={false}
       >
         <YesNoQuestion
-          helpText="You must be well enough to work everyday of the week to receive full benefits. Check ‘yes’ if a workday was missed due to being sick or injured."
+          helpText={
+            <Trans
+              i18nKey="retrocerts-certification.questions.ui-part-time.help-tooSick"
+              t={[Function]}
+            />
+          }
           ifYes={false}
           inputName="tooSick"
           key="1tooSick"
@@ -273,7 +278,12 @@ exports[`<RetroCertsCertificationPage /> Certify for one week of 2 1`] = `
         validated={false}
       >
         <YesNoQuestion
-          helpText="You must be well enough to work everyday of the week to receive full benefits. Check ‘yes’ if a workday was missed due to being sick or injured."
+          helpText={
+            <Trans
+              i18nKey="retrocerts-certification.questions.ui-full-time.help-tooSick"
+              t={[Function]}
+            />
+          }
           ifYes={false}
           inputName="tooSick"
           key="0tooSick"
@@ -284,7 +294,7 @@ exports[`<RetroCertsCertificationPage /> Certify for one week of 2 1`] = `
           <DaysSickQuestion
             helpText="You must report the numbers of days that you could not work during this week. Unemployment benefits are paid according to the number of days you are able to work this week."
             onChange={[Function]}
-            questionText="If Yes, enter the number of days (1 - 7) you were unable to work."
+            questionText="If yes, enter the number of days (1 - 7) you were unable to work."
           />
         </YesNoQuestion>
         <YesNoQuestion
