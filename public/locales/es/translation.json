@@ -262,7 +262,7 @@
         "help-tooSick": "You must be well enough to receive full benefits. Other than disaster, was a workday missed due to sickness or injury?",
         "tooSickNumberOfDays": "If yes, enter the number of days (1-7) you were unable to work.",
         "help-tooSickNumberOfDays": "You must report the number of days that work was missed.",
-        "couldNotAcceptWork": "Was there any reason (other than sickness, injury or the disaster) that you could not have accepted full-time work, each workday?",
+        "couldNotAcceptWork": "Was there any reason (other than sickness, injury or the disaster) that you could not have accepted full-time work, <strong>each workday</strong>?",
         "help-couldNotAcceptWork": "Other than being sick, injured, or the disaster, could full-time work have been accepted?",
         "didYouLook": "Did you look for work or contact your last employer, or, if self-employed, did you attempt to resume self-employment?",
         "help-didYouLook": "Work searches may include in person, mail, telephone, or internet contacts with employers. Was there any attempt to look for work or resume work?",
