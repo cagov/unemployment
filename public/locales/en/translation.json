@@ -227,7 +227,7 @@
     "questions": {
       "ui-full-time": {
         "tooSick": "Were you too sick or injured to work?",
-        "help-tooSick": "You must be well enough to work everyday of the week to receive full benefits. Check <strong>Yes</strong> if a workday was missed due to being sick or injured.",
+        "help-tooSick": "You must be well enough to work every day of the week to receive full benefits. Check <strong>Yes</strong> if a workday was missed due to being sick or injured.",
         "tooSickNumberOfDays": "If yes, enter the number of days (1-7) you were unable to work.",
         "help-tooSickNumberOfDays": "You must report the numbers of days that you could not work during this week. Unemployment benefits are paid according to the number of days you are able to work this week.",
         "couldNotAcceptWork": "Was there any reason (other than sickness or injury) that you could not have accepted full-time work <strong>each workday</strong>?",
