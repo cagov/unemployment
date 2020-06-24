@@ -173,7 +173,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
             <FormText
               muted={true}
             >
-              Enter your Social Security number with or without dashes.
+              Enter your Social Security number without dashes.
             </FormText>
             <FormControl
               onChange={[Function]}
@@ -415,7 +415,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
             <FormText
               muted={true}
             >
-              Enter your Social Security number with or without dashes.
+              Enter your Social Security number without dashes.
             </FormText>
             <FormControl
               onChange={[Function]}
@@ -715,7 +715,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
             <FormText
               muted={true}
             >
-              Enter your Social Security number with or without dashes.
+              Enter your Social Security number without dashes.
             </FormText>
             <FormControl
               onChange={[Function]}
@@ -957,7 +957,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
             <FormText
               muted={true}
             >
-              Enter your Social Security number with or without dashes.
+              Enter your Social Security number without dashes.
             </FormText>
             <FormControl
               onChange={[Function]}
