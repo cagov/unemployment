@@ -270,7 +270,6 @@ function EmployersQuestions(props) {
 
   return (
     <div>
-      <p>{t(tk("p1"))}</p>
       {employersArray.map((employerData, employerIndex) => {
         return (
           <div key={"employerData" + employerData.id}>

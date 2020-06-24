@@ -235,8 +235,8 @@
         "didYouLook": "Did you look for work?",
         "help-didYouLook": "Work searches may include in person, mail, telephone, or internet contacts with employers.",
         "refuseWork": "Did you refuse any work?",
-        "help-refuseWork": "If work was refused, a determination will be scheduled. Union members check <strong>Yes</strong> if a union referral to a job was refused.",
-        "schoolOrTraining": "Did you <strong>begin</strong> attending any kind of school or training? Select Yes only if you began attending school between {{weekString}}.",
+        "help-refuseWork": "If work was refused, a determination will be scheduled. Union members, check <strong>Yes</strong> if a union referral to a job was refused.",
+        "schoolOrTraining": "Did you <strong>begin</strong> attending any kind of school or training? Select <strong>Yes</strong> only if you began attending school between {{weekString}}.",
         "help-schoolOrTraining": "Check <strong>Yes</strong> only if school or training <strong>began</strong> during this work week.",
         "workOrEarn": "Did you work or earn any money, <strong>whether you were paid or not</strong>?",
         "help-workOrEarn": "Look at the date each week begins and ends. If you performed any work during this week, all earnings must be reported regardless if payment has been received."
@@ -279,8 +279,7 @@
     "q-workOrEarn": "Did you work or earn any money, whether you were paid or not?",
     "qhelp-workOrEarn": "Look at the date each week begins and ends. If you performed any work during this week, all earnings must be reported regardless if payment has been received.",
     "employers": {
-      "p1": "Tell us about your income.",
-      "heading": "Income {{incomeNumber}}",
+      "heading": "Employer {{incomeNumber}}",
       "employerName": "Employer Name",
       "help-employerName": "The employer's name that work was performed for this week.",
       "address1": "Address Line 1",
