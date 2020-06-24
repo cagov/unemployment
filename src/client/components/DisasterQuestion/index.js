@@ -6,11 +6,7 @@ import { useTranslation } from "react-i18next";
 function DisasterQuestion(props) {
   const { t } = useTranslation();
 
-  const [userChoice, setUserChoice] = useState(
-    props.choice !== undefined
-      ? props.choice
-      : t("retrocerts-certification.disaster-choices.choice-14")
-  );
+  const [userChoice, setUserChoice] = useState(props.choice);
 
   const [isDirty, setIsDirty] = useState(
     props.choice !== undefined || userChoice !== undefined
