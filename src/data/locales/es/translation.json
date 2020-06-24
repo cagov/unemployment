@@ -215,14 +215,16 @@
     "p1": "Usted debe certificar retroactivamente en todas las semanas disponibles.",
     "p2": "Responda todas las preguntas de la certificación retroactiva de manera correcta y verdadera para evitar cometer fraude.",
     "header2": "Información importante",
-    "p3": "La certificación retroactiva no cuenta con una función para guardar la información de manera automática y no puede guardar ningún proceso. Usted debe completar las certificaciones retroactivas en una sesión.",
+    "p3": "Your answers for each weekly certification will be saved automatically once you continue to the next week. Partially-completed weeks are not saved. Try to complete all retroactive certifications in one session.",
     "p4": "Para proteger la seguridad de su información, esta solicitud expirará automáticamente después de 30 minutos de inactividad. Para evitar que se le termine su tiempo, seleccione cualquier botón cada 25 minutos.",
     "button-start": "Comenzar certificación"
   },
   "retrocerts-certification": {
     "title": "Certificación retroactiva para el Seguro de Desempleo",
     "question-page-title": "Certificar retroactivamente y revisar",
+    "alert-found-save": "We found your information! Pick up where you last left off. Your previous weeks have been saved.",
     "p1-multiple": "Usted está en la semana {{weekForUser}} de {{numberOfWeeks}} semanas para certificar retroactivamente.",
+    "previous-saved": "Your previous weeks are saved.",
     "form-header": "Semana {{weekForUser}}: {{weekString}}",
     "save-error": "Algo salió mal. Por favor intente de nuevo más tarde.",
     "questions": {
@@ -340,7 +342,7 @@
     "submit-p1": "Usted está a punto de presentar sus certificaciones retroactivas. <strong>No</strong> podrá cambiar sus respuestas una vez que seleccione el botón <strong>Enviar</strong>.",
     "button-back": "Regresar",
     "button-back-week": "Regresar a la semana anterior",
-    "button-next": "Siguiente, certificar semana {{nextWeekForUser}}",
+    "button-next": "Save and Continue to Week {{nextWeekForUser}}",
     "button-submit": "Enviar"
   },
   "retrocerts-confirmation": {

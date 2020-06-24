@@ -67,7 +67,7 @@ exports[`<RetroCertsWeeksToCertifyPage /> has user data 1`] = `
         Important Information
       </h2>
       <p>
-        The retroactive certification does not have an auto-save feature and cannot save any progress. You should complete all retroactive certifications in one session.
+        Your answers for each weekly certification will be saved automatically once you continue to the next week. Partially-completed weeks are not saved. Try to complete all retroactive certifications in one session.
       </p>
       <p>
         To protect the security of your information, this application will automatically time out after 30 minutes of inactivity. To avoid timing out, select any button every 25 minutes.
