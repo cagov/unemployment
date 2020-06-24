@@ -16,3 +16,7 @@ test-output
 
 # Config data that shouldn't be checked into the repo
 .env
+
+# User json files
+batch_users.json
+test_users.json

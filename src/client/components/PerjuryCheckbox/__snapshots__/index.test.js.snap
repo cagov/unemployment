@@ -2,7 +2,7 @@
 
 exports[`<PerjuryCheckbox /> renders the component 1`] = `
 <FormGroup
-  className="prejury-checkbox"
+  className="unchecked"
   controlId="perjury-checkbox"
 >
   <FormText
@@ -49,19 +49,16 @@ exports[`<PerjuryCheckbox /> renders the component 1`] = `
       </FormLabel>
     </Col>
   </FormRow>
+  <Feedback
+    type="invalid"
+  >
+    You must indicate your acceptance of the statement by checking the box before your certification can be submitted.
+  </Feedback>
   <FormText
     as="p"
   >
     <Trans
       i18nKey="retrocerts-certification.submit-p1"
-      t={[Function]}
-    />
-  </FormText>
-  <FormText
-    as="p"
-  >
-    <Trans
-      i18nKey="retrocerts-certification.submit-p2"
       t={[Function]}
     />
   </FormText>

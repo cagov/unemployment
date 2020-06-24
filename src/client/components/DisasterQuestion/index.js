@@ -6,14 +6,15 @@ import { useTranslation } from "react-i18next";
 function DisasterQuestion(props) {
   const { t } = useTranslation();
 
-  const [choice, setChoice] = useState(
-    props.choice !== undefined
-      ? props.choice
-      : t("retrocerts-certification.disaster-choices.choice-14")
+  const [userChoice, setUserChoice] = useState(props.choice);
+
+  const [isDirty, setIsDirty] = useState(
+    props.choice !== undefined || userChoice !== undefined
   );
 
   function onChange(event) {
-    setChoice(event.target.value);
+    setUserChoice(event.target.value);
+    setIsDirty(true);
 
     props.onChange({
       name: "disasterChoice",
@@ -21,7 +22,7 @@ function DisasterQuestion(props) {
     });
   }
 
-  const disasterDropDownChoices = [
+  const disasterRadioChoices = [
     t("retrocerts-certification.disaster-choices.choice-1"),
     t("retrocerts-certification.disaster-choices.choice-2"),
     t("retrocerts-certification.disaster-choices.choice-3"),
@@ -38,16 +39,25 @@ function DisasterQuestion(props) {
     t("retrocerts-certification.disaster-choices.choice-14"),
   ];
 
+  function getValidationClass() {
+    return isDirty ? "" : "unchecked";
+  }
+
   return (
-    <Form.Group controlId="disaster-question">
+    <Form.Group controlId="disaster-question" className={getValidationClass()}>
       <Form.Label>{props.questionText}</Form.Label>
-      <Form.Control as="select" onChange={onChange} value={choice}>
-        {disasterDropDownChoices.map((choice) => (
-          <option key={choice} value={choice}>
-            {choice}
-          </option>
-        ))}
-      </Form.Control>
+      {disasterRadioChoices.map((disasterChoice, index) => (
+        <Form.Check
+          type="radio"
+          label={disasterChoice}
+          onChange={onChange}
+          value={userChoice}
+          name="disaster-choice"
+          key={`disaster-choice-${index}`}
+          id={`disaster-choice-${index}`}
+        />
+      ))}
+      <div className="invalid-feedback">{t("required-error")}</div>
     </Form.Group>
   );
 }
