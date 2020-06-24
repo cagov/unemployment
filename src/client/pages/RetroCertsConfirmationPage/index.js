@@ -50,12 +50,13 @@ function RetroCertsConfirmationPage(props) {
           </Alert>
           <h2 className="mt-5">{t("retrocerts-confirmation.header1")}</h2>
           <p>
-            {t(
-              isReturning
-                ? "retrocerts-confirmation.p1-returning"
-                : "retrocerts-confirmation.p1"
-            )}
+            <Trans
+              t={t}
+              i18nKey="retrocerts-confirmation.p1"
+              values={{ confirmationNumber: userData.confirmationNumber }}
+            />
           </p>
+          <p>{t("retrocerts-confirmation.p1b")}</p>
           <h2 className="mt-5">{t("retrocerts-confirmation.header2")}</h2>
           <ListOfWeeks
             weeksToCertify={userData.weeksToCertify}

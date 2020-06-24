@@ -43,7 +43,7 @@ exports[`<RetroCertsConfirmationPage /> with confirmation number 1`] = `
           className="checkmark"
           src="/images/check-circle-fill.svg"
         />
-        You have successfully submitted your retroactive certifications. No further action is required.
+        You have successfully submitted your retroactive certification. No further action is required.
       </Alert>
       <h2
         className="mt-5"
@@ -51,7 +51,18 @@ exports[`<RetroCertsConfirmationPage /> with confirmation number 1`] = `
         Retroactive Certification Confirmation
       </h2>
       <p>
-        We received your retroactive certification(s). You’ve been logged out of the system and may close this window.
+        <Trans
+          i18nKey="retrocerts-confirmation.p1"
+          t={[Function]}
+          values={
+            Object {
+              "confirmationNumber": "CONFIRMATION_NUMBER",
+            }
+          }
+        />
+      </p>
+      <p>
+        You’ve been logged out of the system and may close this window.
       </p>
       <h2
         className="mt-5"
