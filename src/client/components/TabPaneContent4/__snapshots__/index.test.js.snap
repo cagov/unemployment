@@ -254,7 +254,7 @@ exports[`<TabPaneContent4 /> renders the TabPaneContent component 1`] = `
           >
             The fastest way to certify is on 
             <a
-              href="https://edd.ca.gov/Unemployment/UI_Online.htm"
+              href="https://portal.edd.ca.gov/WebApp/Login?resource_url=https://portal.edd.ca.gov/WebApp/Home"
               key="1"
             >
               UI Online
