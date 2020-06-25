@@ -214,7 +214,7 @@
     "p1": "You must retroactively certify for all available weeks.",
     "p2": "Answer all retroactive certification questions truthfully and correctly to avoid committing fraud.",
     "header2": "Important Information",
-    "p3": "Your answers for each weekly certification will be saved automatically once you continue to the next week. Partially-completed weeks are not saved. Try to complete all retroactive certifications in one session.",
+    "p3": "The retroactive certification does not have an auto-save feature and cannot save any progress. You should complete all retroactive certifications in one session.",
     "p4": "To protect the security of your information, this application will automatically time out after 30 minutes of inactivity. To avoid timing out, select any button every 25 minutes.",
     "button-start": "Start Certifying"
   },
