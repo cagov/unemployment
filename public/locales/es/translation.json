@@ -353,5 +353,6 @@
     "header3": "Next Steps",
     "p2": "If you are still unemployed, continue to certify for benefits every two weeks. The fastest way is to use <2>UI Online</2>.",
     "button-print": "Print this page"
-  }
+  },
+  "generic-validation-error-message" : "There are one or more errors on this page. Review and correct them to continue. Complete all fields and try again."
 }

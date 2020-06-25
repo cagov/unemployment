@@ -30,6 +30,9 @@ function RetroCertsAuthPage(props) {
   const [ssn, setSsn] = useState("");
   const [validated, setValidated] = useState(false);
   const [showSsn, setShowSsn] = useState(false);
+  const [showGenericValidationError, setShowGenericValidaitonError] = useState(
+    false
+  );
 
   const status = userData && userData.status;
   const errorTransKey = new Map([
@@ -67,9 +70,12 @@ function RetroCertsAuthPage(props) {
     setValidated(true);
 
     if (!isValid) {
+      setShowGenericValidaitonError(true);
       autoScroll(TOP);
       return;
     }
+
+    setShowGenericValidaitonError(false);
 
     const month = dobMonth.length < 2 ? "0" + dobMonth : dobMonth;
     const day = dobDay.length < 2 ? "0" + dobDay : dobDay;
@@ -140,12 +146,21 @@ function RetroCertsAuthPage(props) {
       : t("retrocert-login.show-ssn");
   }
 
+  const genericValidationError = (
+    <Row>
+      <div className="col-md-8">
+        <Alert variant="danger">{t("generic-validation-error-message")}</Alert>
+      </div>
+    </Row>
+  );
+
   return (
     <div id="overflow-wrapper">
       <Header />
       <main>
         <div className="container p-4">
           <h1>{t("retrocert-login.title")}</h1>
+          {showGenericValidationError && validated && genericValidationError}
           <p>{t("retrocert-login.help")}</p>
           <p>{t("retrocert-login.instructions")}</p>
           <Form noValidate validated={validated} onSubmit={handleSubmit}>
