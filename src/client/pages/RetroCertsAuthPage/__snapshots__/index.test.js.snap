@@ -83,7 +83,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
             <FormControl
               maxLength={2}
               onChange={[Function]}
-              pattern="0?[1-9]|10|11|12"
+              pattern="(^0[1-9])|(^1[0-2])|(^[1-9]$)"
               required={true}
               type="text"
               value=""
@@ -114,7 +114,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
             <FormControl
               maxLength={2}
               onChange={[Function]}
-              pattern="0?[1-9]|1\\\\d|2\\\\d|3[01]"
+              pattern="(^0[1-9])|(^1[0-9])|(^2[0-9])|(^3[0-1])|(^[1-9]$)"
               required={true}
               type="text"
               value=""
@@ -325,7 +325,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
             <FormControl
               maxLength={2}
               onChange={[Function]}
-              pattern="0?[1-9]|10|11|12"
+              pattern="(^0[1-9])|(^1[0-2])|(^[1-9]$)"
               required={true}
               type="text"
               value=""
@@ -356,7 +356,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
             <FormControl
               maxLength={2}
               onChange={[Function]}
-              pattern="0?[1-9]|1\\\\d|2\\\\d|3[01]"
+              pattern="(^0[1-9])|(^1[0-9])|(^2[0-9])|(^3[0-1])|(^[1-9]$)"
               required={true}
               type="text"
               value=""
@@ -625,7 +625,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
             <FormControl
               maxLength={2}
               onChange={[Function]}
-              pattern="0?[1-9]|10|11|12"
+              pattern="(^0[1-9])|(^1[0-2])|(^[1-9]$)"
               required={true}
               type="text"
               value=""
@@ -656,7 +656,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
             <FormControl
               maxLength={2}
               onChange={[Function]}
-              pattern="0?[1-9]|1\\\\d|2\\\\d|3[01]"
+              pattern="(^0[1-9])|(^1[0-9])|(^2[0-9])|(^3[0-1])|(^[1-9]$)"
               required={true}
               type="text"
               value=""
@@ -867,7 +867,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
             <FormControl
               maxLength={2}
               onChange={[Function]}
-              pattern="0?[1-9]|10|11|12"
+              pattern="(^0[1-9])|(^1[0-2])|(^[1-9]$)"
               required={true}
               type="text"
               value=""
@@ -898,7 +898,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
             <FormControl
               maxLength={2}
               onChange={[Function]}
-              pattern="0?[1-9]|1\\\\d|2\\\\d|3[01]"
+              pattern="(^0[1-9])|(^1[0-9])|(^2[0-9])|(^3[0-1])|(^[1-9]$)"
               required={true}
               type="text"
               value=""
