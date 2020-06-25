@@ -7,7 +7,11 @@ import routes from "../../../data/routes";
 import PageNotFound from "../../pages/PageNotFound";
 import SessionTimer from "../../components/SessionTimer";
 
-function userIsAuthenticated(userData) {
+function userIsAuthenticated() {
+  return !!sessionStorage.getItem(AUTH_STRINGS.authToken);
+}
+
+function userDataIsSet(userData) {
   return !!userData.weeksToCertify;
 }
 
@@ -57,7 +61,7 @@ function RetroCertsRoute(props) {
     routeChild = <PageNotFound />;
   } else if (!requiresAuthentication) {
     routeChild = <Component {...pageProps} />;
-  } else if (userIsAuthenticated(pageProps.userData)) {
+  } else if (userIsAuthenticated() && userDataIsSet(pageProps.userData)) {
     routeChild = <AuthorizedPageWrapper {...props} />;
   } else {
     // This page requires authentication and the user is not authenticated.

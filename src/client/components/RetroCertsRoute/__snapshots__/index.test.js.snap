@@ -31,21 +31,9 @@ exports[`<RetroCertsRoute /> route needing auth with user data 1`] = `
   computedMatch={Object {}}
   path="/path"
 >
-  <AuthorizedPageWrapper
-    computedMatch={Object {}}
-    pageComponent={[Function]}
-    pageProps={
-      Object {
-        "setUserData": [Function],
-        "userData": Object {
-          "weeksToCertify": Array [
-            0,
-          ],
-        },
-      }
-    }
-    path="/path"
-    requiresAuthentication={true}
+  <Redirect
+    push={true}
+    to="/retroactive-certification"
   />
 </Route>
 `;
