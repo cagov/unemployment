@@ -94,7 +94,7 @@ exports[`<RetroCertsConfirmationPage /> with confirmation number 1`] = `
           If you are still unemployed, continue to certify for benefits every two weeks. The fastest way is to use
            
           <a
-            href="https://portal.edd.ca.gov/WebApp/Login?resource_url=https://portal.edd.ca.gov/WebApp/Home"
+            href="https://edd.ca.gov/Unemployment/UI_Online.htm"
           >
             UI Online
           </a>

@@ -45,14 +45,14 @@ exports[`<PerjuryCheckbox /> renders the component 1`] = `
         column={false}
         srOnly={false}
       >
-        I agree and accept the statement above.
+        You must indicate your acceptance of the statement by checking the box before your certification can be submitted.
       </FormLabel>
     </Col>
   </FormRow>
   <Feedback
     type="invalid"
   >
-    You must indicate your acceptance of the statement by checking the box before your certification can be submitted.
+    This field is required.
   </Feedback>
   <FormText
     as="p"
