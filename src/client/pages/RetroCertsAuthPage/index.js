@@ -17,6 +17,7 @@ import Inputmask from "inputmask";
 
 function RetroCertsAuthPage(props) {
   const { t } = useTranslation();
+  document.title = t("retrocert-login.title");
   const history = useHistory();
 
   const userData = props.userData;
