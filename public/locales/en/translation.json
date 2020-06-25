@@ -53,6 +53,7 @@
     "edd-cares": "https://edd.ca.gov/about_edd/coronavirus-2019/cares-act.htm",
     "edd-pua": "https://edd.ca.gov/about_edd/coronavirus-2019/pandemic-unemployment-assistance.htm",
     "edd-webapp": "https://portal.edd.ca.gov/WebApp/Login?resource_url=https://portal.edd.ca.gov/WebApp/Home",
+    "edd-login": "https://edd.ca.gov/Unemployment/UI_Online.htm",
     "caljobs": "https://www.caljobs.ca.gov/vosnet/Default.aspx",
     "edd-debit": "https://www.edd.ca.gov/about_edd/The_EDD_Debit_Card.htm",
     "edd-coronavirus-faqs": "https://edd.ca.gov/about_edd/coronavirus-2019/faqs.htm",
@@ -188,7 +189,7 @@
   "required-error": "This field is required.",
   "retrocert-login": {
     "title": "Retroactive Certification for Unemployment",
-    "help": "You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits from the week ending February 9, 2020, through the week ending May 9, 2020.",
+    "help": "You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits from the week ending February 8, 2020, through the week ending May 9, 2020.",
     "instructions": "Enter your information to confirm if you have any benefit weeks that you need to retroactively certify.",
     "last-name-label": "Last Name",
     "dob-heading": "Date of Birth",
@@ -199,9 +200,9 @@
     "ssn-label": "Social Security Number",
     "ssn-hint": "Enter your Social Security number without dashes.",
     "recaptcha-text": "Security check provided by reCAPTCHA.",
-    "submit": "Find me",
+    "submit": "Find Me",
     "invalid-user-error": "Review and verify the information you entered is correct. If your information is correct, then you don’t need to certify.",
-    "invalid-recaptcha-error": "Please check the box next to \"I'm not a robot\" to continue.",
+    "invalid-recaptcha-error": "Security check is not complete.",
     "session-timed-out": "We logged you out after 30 minutes of inactivity. Please provide your information again to certify your weeks.",
     "show-ssn": "Show SSN",
     "hide-ssn": "Hide SSN"
@@ -221,7 +222,7 @@
   "retrocerts-certification": {
     "title": "Retroactive Certification for Unemployment",
     "question-page-title": "Retroactively Certify and Review",
-    "p1-multiple": "You are on Week {{weekForUser}} of {{numberOfWeeks}} to certify.",
+    "p1-multiple": "You are on Week {{weekForUser}} of {{numberOfWeeks}} weeks to retroactively certify.",
     "form-header": "Week {{weekForUser}}: {{weekString}}",
     "save-error": "Something went wrong. Please try again later.",
     "questions": {
@@ -333,8 +334,7 @@
     "ack-list-item-2": "I know the law provides penalties if I make false statements or withhold facts to receive benefits; and my answers are true and correct.",
     "ack-list-item-3": "I declare under penalty of perjury that I am a US Citizen or National; or an Alien in satisfactory immigration status and permitted to work by the United States Citizenship and Immigration Service.",
     "ack-list-item-4": "I understand when submitting my request for benefits my submission is considered the same as my written signature.",
-    "ack-label": "I agree and accept the statement above.",
-    "ack-feedback": "You must indicate your acceptance of the statement by checking the box before your certification can be submitted.",
+    "ack-label": "You must indicate your acceptance of the statement by checking the box before your certification can be submitted.",
     "submit-p1": "You are about to submit your retroactive certifications. You will <strong>not</strong> be able to change your answers once you select <strong>Submit</strong>.",
     "button-back": "Back",
     "button-back-week": "Back to Previous Week",

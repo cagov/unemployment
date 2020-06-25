@@ -68,7 +68,7 @@ function RetroCertsConfirmationPage(props) {
             <Trans t={t} i18nKey="retrocerts-confirmation.p2">
               If you are still unemployed, continue to certify for benefits
               every two weeks. The fastest way is to use{" "}
-              <a href={t("links.edd-webapp")}>UI Online</a>.
+              <a href={t("links.edd-login")}>UI Online</a>.
             </Trans>
           </p>
 

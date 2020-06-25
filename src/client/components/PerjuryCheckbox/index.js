@@ -34,9 +34,7 @@ function PerjuryCheckbox(props) {
           <Form.Label>{t("retrocerts-certification.ack-label")}</Form.Label>
         </Col>
       </Form.Row>
-      <Feedback type="invalid">
-        {t("retrocerts-certification.ack-feedback")}
-      </Feedback>
+      <Feedback type="invalid">{t("required-error")}</Feedback>
 
       <Form.Text as="p">
         <Trans t={t} i18nKey="retrocerts-certification.submit-p1" />

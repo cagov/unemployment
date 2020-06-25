@@ -13,7 +13,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
         Retroactive Certification for Unemployment
       </h1>
       <p>
-        You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits from the week ending February 9, 2020, through the week ending May 9, 2020.
+        You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits from the week ending February 8, 2020, through the week ending May 9, 2020.
       </p>
       <p>
         Enter your information to confirm if you have any benefit weeks that you need to retroactively certify.
@@ -229,7 +229,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
           type="submit"
           variant="secondary"
         >
-          Find me
+          Find Me
         </Button>
       </Form>
     </div>
@@ -255,7 +255,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
         Retroactive Certification for Unemployment
       </h1>
       <p>
-        You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits from the week ending February 9, 2020, through the week ending May 9, 2020.
+        You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits from the week ending February 8, 2020, through the week ending May 9, 2020.
       </p>
       <p>
         Enter your information to confirm if you have any benefit weeks that you need to retroactively certify.
@@ -490,7 +490,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
               }
               variant="danger"
             >
-              Please check the box next to "I'm not a robot" to continue.
+              Security check is not complete.
             </Alert>
           </div>
         </Row>
@@ -500,7 +500,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
           type="submit"
           variant="secondary"
         >
-          Find me
+          Find Me
         </Button>
       </Form>
     </div>
@@ -526,7 +526,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
         Retroactive Certification for Unemployment
       </h1>
       <p>
-        You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits from the week ending February 9, 2020, through the week ending May 9, 2020.
+        You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits from the week ending February 8, 2020, through the week ending May 9, 2020.
       </p>
       <p>
         Enter your information to confirm if you have any benefit weeks that you need to retroactively certify.
@@ -771,7 +771,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
           type="submit"
           variant="secondary"
         >
-          Find me
+          Find Me
         </Button>
       </Form>
     </div>
@@ -797,7 +797,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
         Retroactive Certification for Unemployment
       </h1>
       <p>
-        You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits from the week ending February 9, 2020, through the week ending May 9, 2020.
+        You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits from the week ending February 8, 2020, through the week ending May 9, 2020.
       </p>
       <p>
         Enter your information to confirm if you have any benefit weeks that you need to retroactively certify.
@@ -1042,7 +1042,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
           type="submit"
           variant="secondary"
         >
-          Find me
+          Find Me
         </Button>
       </Form>
     </div>
