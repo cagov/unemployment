@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 const { Router } = require("express");
 const AUTH_STRINGS = require("../data/authStrings");
-// const ReCaptcha = require("../services/reCaptcha");
+const ReCaptcha = require("../services/reCaptcha");
 const cosmos = require("../data/cosmos");
 
 function createRouter() {
@@ -10,11 +10,10 @@ function createRouter() {
   async function authStatus(postJson, responseJson) {
     responseJson.status = AUTH_STRINGS.statusCode.userNotFound;
 
-    // const reCaptcha = new ReCaptcha(postJson.reCaptcha);
-
+    const reCaptcha = new ReCaptcha(postJson.reCaptcha);
+    const isDev = process.env.NODE_ENV === "development";
     const [reCaptchaResponse, userRecord] = await Promise.all([
-      // reCaptcha.validateUser(),
-      true,
+      isDev || reCaptcha.validateUser(),
       cosmos.getUserByNameDobSsn(
         postJson.lastName || "",
         postJson.dob,
