@@ -7,7 +7,7 @@ import AUTH_STRINGS from "../data/authStrings";
 import cosmos from "../data/cosmos";
 import fflip from "fflip";
 import request from "supertest";
-// import ReCaptcha from "../services/reCaptcha";
+import ReCaptcha from "../services/reCaptcha";
 
 describe("Router: API tests", () => {
   it("retro-certs POST feature disabled", async () => {
@@ -46,106 +46,106 @@ describe("Router: API tests", () => {
     getUserByNameDobSsnMock.mockRestore();
   });
 
-  // it("retro-certs /api/login tests", async () => {
-  //   fflip.features.retroCerts.enabled = true;
-  //   const server = init();
-  //   // Format of each test case is:
-  //   //   post body,
-  //   //   recaptchaResponse,
-  //   //   getUserByNameDobSsn promise response,
-  //   //   getFormDataByUserIdWithNewAuthToken promise response,
-  //   //   expected http status,
-  //   //   expected request response
-  //   const testCases = [
-  //     [
-  //       {},
-  //       true,
-  //       null,
-  //       null,
-  //       401,
-  //       { status: AUTH_STRINGS.statusCode.userNotFound },
-  //     ],
-  //     [
-  //       {},
-  //       false,
-  //       null,
-  //       null,
-  //       401,
-  //       { status: AUTH_STRINGS.statusCode.recaptchaInvalid },
-  //     ],
-  //     // User has correct credentials.
-  //     [
-  //       { lastName: "Last", dob: "2000-01-01", ssn: "123456789" },
-  //       true,
-  //       {
-  //         id: "hash",
-  //         weeksToCertify: [0, 1],
-  //         programPlan: ["UI full time", "UI part time"],
-  //       },
-  //       { authToken: "test auth token" },
-  //       200,
-  //       {
-  //         status: AUTH_STRINGS.statusCode.ok,
-  //         authToken: "test auth token",
-  //         weeksToCertify: [0, 1],
-  //         programPlan: ["UI full time", "UI part time"],
-  //       },
-  //     ],
-  //     // User has correct credentails, but recaptcha is not valid.
-  //     [
-  //       { lastName: "Last", dob: "2000-0101", ssn: "123456789" },
-  //       false,
-  //       {
-  //         id: "hash",
-  //         weeksToCertify: [0, 1],
-  //         programPlan: ["UI full time", "UI part time"],
-  //       },
-  //       { authToken: "test auth token" },
-  //       401,
-  //       {
-  //         status: AUTH_STRINGS.statusCode.recaptchaInvalid,
-  //       },
-  //     ],
-  //   ];
+  it("retro-certs /api/login tests", async () => {
+    fflip.features.retroCerts.enabled = true;
+    const server = init();
+    // Format of each test case is:
+    //   post body,
+    //   recaptchaResponse,
+    //   getUserByNameDobSsn promise response,
+    //   getFormDataByUserIdWithNewAuthToken promise response,
+    //   expected http status,
+    //   expected request response
+    const testCases = [
+      [
+        {},
+        true,
+        null,
+        null,
+        401,
+        { status: AUTH_STRINGS.statusCode.userNotFound },
+      ],
+      [
+        {},
+        false,
+        null,
+        null,
+        401,
+        { status: AUTH_STRINGS.statusCode.recaptchaInvalid },
+      ],
+      // User has correct credentials.
+      [
+        { lastName: "Last", dob: "2000-01-01", ssn: "123456789" },
+        true,
+        {
+          id: "hash",
+          weeksToCertify: [0, 1],
+          programPlan: ["UI full time", "UI part time"],
+        },
+        { authToken: "test auth token" },
+        200,
+        {
+          status: AUTH_STRINGS.statusCode.ok,
+          authToken: "test auth token",
+          weeksToCertify: [0, 1],
+          programPlan: ["UI full time", "UI part time"],
+        },
+      ],
+      // User has correct credentails, but recaptcha is not valid.
+      [
+        { lastName: "Last", dob: "2000-0101", ssn: "123456789" },
+        false,
+        {
+          id: "hash",
+          weeksToCertify: [0, 1],
+          programPlan: ["UI full time", "UI part time"],
+        },
+        { authToken: "test auth token" },
+        401,
+        {
+          status: AUTH_STRINGS.statusCode.recaptchaInvalid,
+        },
+      ],
+    ];
 
-  //   for (const testCase of testCases) {
-  //     const [
-  //       reqJson,
-  //       recaptchaResponse,
-  //       getUserResponse,
-  //       getFormDataByUserIdWithNewAuthTokenResponse,
-  //       httpStatus,
-  //       responseJson,
-  //     ] = testCase;
-  //     const validateUserMock = jest.spyOn(ReCaptcha.prototype, "validateUser");
-  //     validateUserMock.mockImplementation(() => recaptchaResponse);
-  //     const getUserByNameDobSsnMock = jest.spyOn(cosmos, "getUserByNameDobSsn");
-  //     getUserByNameDobSsnMock.mockImplementation(
-  //       jest.fn(() => Promise.resolve(getUserResponse))
-  //     );
-  //     const getFormDataByUserIdWithNewAuthTokenMock = jest.spyOn(
-  //       cosmos,
-  //       "getFormDataByUserIdWithNewAuthToken"
-  //     );
-  //     getFormDataByUserIdWithNewAuthTokenMock.mockImplementation(
-  //       jest.fn(() =>
-  //         Promise.resolve(getFormDataByUserIdWithNewAuthTokenResponse)
-  //       )
-  //     );
+    for (const testCase of testCases) {
+      const [
+        reqJson,
+        recaptchaResponse,
+        getUserResponse,
+        getFormDataByUserIdWithNewAuthTokenResponse,
+        httpStatus,
+        responseJson,
+      ] = testCase;
+      const validateUserMock = jest.spyOn(ReCaptcha.prototype, "validateUser");
+      validateUserMock.mockImplementation(() => recaptchaResponse);
+      const getUserByNameDobSsnMock = jest.spyOn(cosmos, "getUserByNameDobSsn");
+      getUserByNameDobSsnMock.mockImplementation(
+        jest.fn(() => Promise.resolve(getUserResponse))
+      );
+      const getFormDataByUserIdWithNewAuthTokenMock = jest.spyOn(
+        cosmos,
+        "getFormDataByUserIdWithNewAuthToken"
+      );
+      getFormDataByUserIdWithNewAuthTokenMock.mockImplementation(
+        jest.fn(() =>
+          Promise.resolve(getFormDataByUserIdWithNewAuthTokenResponse)
+        )
+      );
 
-  //     const res = await request(server)
-  //       .post(AUTH_STRINGS.apiPath.login)
-  //       .send(JSON.stringify(reqJson))
-  //       .type("json");
-  //     expect(res.status).toBe(httpStatus);
-  //     expect(res.header["content-type"]).toMatch(/json/);
-  //     expect(res.body).toEqual(responseJson);
+      const res = await request(server)
+        .post(AUTH_STRINGS.apiPath.login)
+        .send(JSON.stringify(reqJson))
+        .type("json");
+      expect(res.status).toBe(httpStatus);
+      expect(res.header["content-type"]).toMatch(/json/);
+      expect(res.body).toEqual(responseJson);
 
-  //     validateUserMock.mockRestore();
-  //     getUserByNameDobSsnMock.mockRestore();
-  //     getFormDataByUserIdWithNewAuthTokenMock.mockRestore();
-  //   }
-  // });
+      validateUserMock.mockRestore();
+      getUserByNameDobSsnMock.mockRestore();
+      getFormDataByUserIdWithNewAuthTokenMock.mockRestore();
+    }
+  });
 
   it("retro-certs /api/data tests", async () => {
     fflip.features.retroCerts.enabled = true;
