@@ -178,7 +178,7 @@ function RetroCertsAuthPage(props) {
                   maxLength={2}
                   onChange={(e) => handleChange(e, setDobMonth)}
                   required
-                  pattern="0?[1-9]|10|11|12"
+                  pattern="0?[1-9]|1[0-2]"
                 />
                 <Form.Control.Feedback type="invalid">
                   {t("required-error")}
@@ -192,7 +192,7 @@ function RetroCertsAuthPage(props) {
                   maxLength={2}
                   onChange={(e) => handleChange(e, setDobDay)}
                   required
-                  pattern="0?[1-9]|1\d|2\d|3[01]"
+                  pattern="0?[1-9]|[1-2][0-9]|3[0-1]"
                 />
                 <Form.Control.Feedback type="invalid">
                   {t("required-error")}
