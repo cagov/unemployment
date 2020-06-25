@@ -26,6 +26,7 @@ import { autoScroll, TOP } from "../../../utils/autoScroll";
 
 function RetroCertsCertificationPage(props) {
   const { t } = useTranslation();
+  document.title = t("retrocerts-certification.question-page-title");
   const history = useHistory();
   const [validated, setValidated] = useState(false);
   const [showGenericValidationError, setShowGenericValidaitonError] = useState(
