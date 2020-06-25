@@ -2,9 +2,9 @@ const cagovPropertyId = "UA-3419582-2";
 const eddPropertyId = "UA-3419582-31";
 
 // log event to Google Analytics
-export function logEvent(label) {
-  window.gtag("event", "Navigate", {
-    event_category: "Unemployment",
+export function logEvent(category, action, label) {
+  window.gtag("event", action, {
+    event_category: category,
     event_label: label,
   });
 }

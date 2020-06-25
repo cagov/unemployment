@@ -35,6 +35,7 @@ jest.mock("react-router-dom", () => {
     useHistory: () => ({
       push: jest.fn(),
       listen: jest.fn(),
+      location: {state: {isReturning: true}},
     }),
   };
 });
@@ -44,5 +45,15 @@ jest.mock("uuid", () => {
   return {
     ...actual,
     v4: () => "00000000-fake-mock-fake-123456789012",
+  };
+});
+
+// This is added by Google Analytics.
+jest.mock("./src/client/utils", () => {
+  const actual = jest.requireActual("./src/client/utils");
+  return {
+    ...actual,
+    logEvent: (a, b, c) => {},
+    logPage: (a) => {},
   };
 });

@@ -10,7 +10,7 @@ function BPOButton() {
     <Button
       variant="secondary"
       href={t("links.edd-bpo")}
-      onClick={() => logEvent("register-or-login")}
+      onClick={() => logEvent("Unemployment", "Navigate", "register-or-login")}
       target="_blank"
     >
       {t("subheaderButton")}
