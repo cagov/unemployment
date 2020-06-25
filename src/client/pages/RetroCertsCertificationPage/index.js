@@ -22,11 +22,15 @@ import DaysSickQuestion from "../../components/DaysSickQuestion";
 import EmployersQuestions from "../../components/EmployersQuestions";
 import DisasterQuestion from "../../components/DisasterQuestion";
 import PerjuryCheckbox from "../../components/PerjuryCheckbox";
+import { autoScroll, TOP } from "../../../utils/autoScroll";
 
 function RetroCertsCertificationPage(props) {
   const { t } = useTranslation();
   const history = useHistory();
   const [validated, setValidated] = useState(false);
+  const [showGenericValidationError, setShowGenericValidaitonError] = useState(
+    false
+  );
 
   const { userData, setUserData, routeComputedMatch } = props;
   const numberOfWeeks = userData.weeksToCertify.length;
@@ -126,7 +130,12 @@ function RetroCertsCertificationPage(props) {
 
     setValidated(true);
 
-    if (!isValid) return;
+    if (!isValid) {
+      setShowGenericValidaitonError(true);
+      autoScroll(TOP);
+      return;
+    }
+    setShowGenericValidaitonError(true);
 
     if (weekForUser !== numberOfWeeks) {
       history.push(
@@ -172,6 +181,11 @@ function RetroCertsCertificationPage(props) {
       ? ["couldNotAcceptWork", "didYouLook", "refuseWork", "otherBenefits"]
       : ["couldNotAcceptWork", "didYouLook", "refuseWork", "schoolOrTraining"];
 
+  const genericValidationError = (
+    <div className="col-md-8">
+      <Alert variant="danger">{t("generic-validation-error-message")}</Alert>
+    </div>
+  );
   return (
     <div id="overflow-wrapper">
       <Header />
@@ -180,6 +194,7 @@ function RetroCertsCertificationPage(props) {
           <h1 ref={headingElement}>
             {t("retrocerts-certification.question-page-title")}
           </h1>
+          {showGenericValidationError && validated && genericValidationError}
           <h2 className="h3 font-weight-bold mt-5">
             <Trans
               t={t}
