@@ -14,6 +14,7 @@ import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import SessionTimer from "../../components/SessionTimer";
 import Inputmask from "inputmask";
+import { autoScroll, TOP } from "../../../utils/autoScroll";
 
 function RetroCertsAuthPage(props) {
   const { t } = useTranslation();
@@ -65,7 +66,10 @@ function RetroCertsAuthPage(props) {
 
     setValidated(true);
 
-    if (!isValid) return;
+    if (!isValid) {
+      autoScroll(TOP);
+      return;
+    }
 
     const month = dobMonth.length < 2 ? "0" + dobMonth : dobMonth;
     const day = dobDay.length < 2 ? "0" + dobDay : dobDay;
