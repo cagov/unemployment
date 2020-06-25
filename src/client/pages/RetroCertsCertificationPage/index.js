@@ -25,6 +25,7 @@ import PerjuryCheckbox from "../../components/PerjuryCheckbox";
 
 function RetroCertsCertificationPage(props) {
   const { t } = useTranslation();
+  document.title = t("retrocerts-certification.question-page-title");
   const history = useHistory();
   const [validated, setValidated] = useState(false);
 
