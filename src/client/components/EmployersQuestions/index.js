@@ -143,7 +143,7 @@ function EmployerQuestions(props) {
             maxLength={2}
             onChange={(e) => handleDateChange("month", e.target.value)}
             required
-            pattern="0?[1-9]|1[0-2]"
+            pattern="(^0[1-9])|(^1[0-2])|(^[1-9]$)"
           />
           <Form.Control.Feedback type="invalid">
             {t("required-error")}
@@ -161,7 +161,7 @@ function EmployerQuestions(props) {
             maxLength={2}
             onChange={(e) => handleDateChange("day", e.target.value)}
             required
-            pattern="0?[1-9]|[1-2][0-9]|3[0-1]"
+            pattern="(^0[1-9])|(^1[0-9])|(^2[0-9])|(^3[0-1])|(^[1-9]$)"
           />
           <Form.Control.Feedback type="invalid">
             {t("required-error")}
