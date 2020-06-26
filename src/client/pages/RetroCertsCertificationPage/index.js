@@ -133,8 +133,9 @@ function RetroCertsCertificationPage(props) {
 
     setValidated(true);
 
+    setShowGenericValidaitonError(!isValid);
+
     if (!isValid) {
-      setShowGenericValidaitonError(true);
       autoScroll({
         y: TOP.y,
         x: TOP.x,
@@ -142,7 +143,6 @@ function RetroCertsCertificationPage(props) {
       });
       return;
     }
-    setShowGenericValidaitonError(true);
 
     if (weekForUser !== numberOfWeeks) {
       history.push(
