@@ -12,6 +12,7 @@ import ListOfWeeks from "../../components/ListOfWeeks";
 
 function RetroCertsConfirmationPage(props) {
   const { t } = useTranslation();
+  document.title = t("retrocerts-confirmation.title");
   const userData = props.userData;
 
   // The user is here by accident. Send them back.
