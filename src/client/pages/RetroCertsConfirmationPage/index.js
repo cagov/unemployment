@@ -4,12 +4,12 @@ import Alert from "react-bootstrap/Alert";
 import React from "react";
 import { useTranslation, Trans } from "react-i18next";
 import { userDataPropType } from "../../commonPropTypes";
-import AUTH_STRINGS from "../../../data/authStrings";
 import routes from "../../../data/routes";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import ListOfWeeks from "../../components/ListOfWeeks";
 import { logEvent } from "../../utils";
+import { clearAuthToken } from "../../components/SessionTimer";
 
 function RetroCertsConfirmationPage(props) {
   const { t } = useTranslation();
@@ -25,7 +25,7 @@ function RetroCertsConfirmationPage(props) {
   }
 
   // Log out the user since they are done!
-  sessionStorage.removeItem(AUTH_STRINGS.authToken);
+  clearAuthToken();
 
   const isReturning =
     history.location.state && history.location.state.isReturning;
