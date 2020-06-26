@@ -351,6 +351,7 @@
     "alert-returning": "You have successfully submitted your retroactive certification. No further action is required.",
     "header1": "Retroactive Certification Confirmation",
     "p1": "Your retroactive certification has been submitted. Your confirmation number is <strong>{{confirmationNumber}}</strong>.",
+    "p1a": "Keep this number for your records.",
     "p1b": "You’ve been logged out of the system and may close this window.",
     "header2": "Retroactive Certification Weeks",
     "header3": "Next Steps",
