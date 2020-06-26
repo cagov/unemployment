@@ -36,7 +36,7 @@ function YesNoQuestion(props) {
   }
 
   return (
-    <div className="bg-light p-2 m-2">
+    <div className="bg-light p-2 mt-2 mb-2">
       <Form.Group
         controlId={inputName}
         className={isYes === undefined ? "unchecked" : ""}
