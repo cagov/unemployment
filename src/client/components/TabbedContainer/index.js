@@ -13,6 +13,7 @@ import TabPaneContent3 from "../TabPaneContent3";
 import TabPaneContent4 from "../TabPaneContent4";
 import TabPaneContent5 from "../TabPaneContent5";
 import { useTranslation } from "react-i18next";
+import { autoScroll, BEHAVIOR } from "../../../utils/autoScroll";
 
 function TabbedContainer() {
   const { t } = useTranslation();
@@ -94,10 +95,10 @@ function TabbedContainer() {
       }
 
       // we use smoothscroll-polyfill for Edge/IE
-      window.scroll({
-        top: tabbedContainer.current.offsetTop,
-        left: 0,
-        behavior: "smooth",
+      autoScroll({
+        y: tabbedContainer.current.offsetTop,
+        x: 0,
+        behavior: BEHAVIOR.smooth,
       });
     });
 

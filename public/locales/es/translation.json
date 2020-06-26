@@ -353,5 +353,6 @@
     "header3": "Siguientes pasos",
     "p2": "Si todavía está desempleado, continúe realizando la certificación para los beneficios cada dos semanas. La manera más rápida es a través de <2>UI Online</2>.",
     "button-print": "Imprimir esta página"
-  }
+  },
+  "generic-validation-error-message" : "There are one or more errors on this page. Review and correct them to continue. Complete all fields and try again."
 }

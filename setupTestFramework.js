@@ -35,7 +35,7 @@ jest.mock("react-router-dom", () => {
     useHistory: () => ({
       push: jest.fn(),
       listen: jest.fn(),
-      location: {state: {isReturning: true}},
+      location: { state: { isReturning: true } },
     }),
   };
 });
