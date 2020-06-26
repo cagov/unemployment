@@ -91,6 +91,14 @@ function createRouter() {
 
   router.post(AUTH_STRINGS.apiPath.save, async (req, res) => {
     try {
+      const formDataAsString = JSON.stringify(req.body.formData || {});
+      // Reject inputs that might be trying to inject malicious scripts.
+      if (formDataAsString.match(/<[^ ]/)) {
+        console.log("rejected input", req.body.authToken);
+        res.status(400).type("json").send();
+        return;
+      }
+
       const responseJson = await cosmos.saveFormData(
         req.body.authToken,
         req.body.formData

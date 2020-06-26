@@ -155,15 +155,20 @@ function RetroCertsCertificationPage(props) {
   };
 
   function postUserDataToServer() {
+    let body = JSON.stringify({
+      formData: userData.formData,
+      authToken: sessionStorage.getItem(AUTH_STRINGS.authToken),
+    });
+    // The server rejects < followed by non-whitespace,
+    // so change the input from the form to add a space.
+    body = body.replace(/</g, "< ");
+
     fetch(AUTH_STRINGS.apiPath.save, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({
-        formData: userData.formData,
-        authToken: sessionStorage.getItem(AUTH_STRINGS.authToken),
-      }),
+      body,
     })
       .then((response) => response.json())
       .then((data) => {
