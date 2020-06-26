@@ -44,11 +44,7 @@ function DisasterQuestion(props) {
   }
 
   function isChecked(value) {
-    if (value === userChoice) {
-      return true;
-    } else {
-      return false;
-    }
+    return value === userChoice;
   }
 
   return (
