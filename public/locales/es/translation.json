@@ -208,7 +208,7 @@
     "hide-ssn": "Ocultar SSN",
     "required-text": "*Indica un campo requerido que falta completar"
   },
-  "retrocerts-week-list-item": "<strong>Week {{weekForUser}}</strong>: Domingo, {{startDate}} – Sábado, {{endDate}}",
+  "retrocerts-week-list-item": "<strong>Semana {{weekForUser}}</strong>: Domingo, {{startDate}} – Sábado, {{endDate}}",
   "retrocerts-weeks": {
     "title": "Certificación retroactiva para el Seguro de Desempleo",
     "alert": "Usted tiene al menos una semana disponible para certificar retroactivamente.",
@@ -338,13 +338,13 @@
     "submit-p1": "Usted está a punto de presentar sus certificaciones retroactivas. <strong>No</strong> podrá cambiar sus respuestas una vez que seleccione el botón <strong>Enviar</strong>.",
     "button-back": "Back",
     "button-back-week": "Back to Previous Week",
-    "button-next": "Next, Certify Week {{nextWeekForUser}}",
+    "button-next": "Siguiente, certificar semana {{nextWeekForUser}}",
     "button-submit": "Enviar"
   },
   "retrocerts-confirmation": {
     "title": "Certificación retroactiva para el Seguro de Desempleo",
     "alert": "Usted ha presentado de manera exitosa sus certificaciones retroactivas.",
-    "alert-returning": "You have successfully submitted your retroactive certification. No further action is required.",
+    "alert-returning": "Usted ha presentado de manera exitosa sus certificaciones retroactivas. No se requiere ninguna otra acción.",
     "header1": "Confirmación de la certificación retroactiva",
     "p1": "Su certificación retroactiva ha sido presentada. Su número de confirmación es <strong>{{confirmationNumber}}</strong>.",
     "p1b": "Se ha cerrado la sesión en este sistema y puede cerrar esta página.",
