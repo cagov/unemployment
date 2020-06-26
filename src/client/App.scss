@@ -30,6 +30,7 @@ $font-family-sans-serif: "Source Sans Pro", sans-serif !default;
 @import "components/Header/index";
 @import "components/Footer/index";
 @import "components/TabbedContainer/index";
+@import "components/DisasterQuestion/index";
 
 h1,
 h2,
@@ -46,6 +47,10 @@ h2 {
 
 h3 {
   margin-bottom: 0.8rem;
+}
+
+legend {
+  font-size: inherit;
 }
 
 a {

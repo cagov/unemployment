@@ -36,31 +36,33 @@ function YesNoQuestion(props) {
   }
 
   return (
-    <div className="bg-light p-2 m-2">
+    <div className="bg-light p-2 mt-2 mb-2">
       <Form.Group
         controlId={inputName}
         className={isYes === undefined ? "unchecked" : ""}
       >
-        <Form.Label>
-          {questionNumber}.&nbsp;{questionText}
-        </Form.Label>
-        <Form.Text className="help-text">{helpText}</Form.Text>
+        <fieldset>
+          <Form.Label as="legend">
+            {questionNumber}.&nbsp;{questionText}
+          </Form.Label>
+          <Form.Text className="help-text">{helpText}</Form.Text>
 
-        {["Yes", "No"].map((value) => (
-          <Form.Check
-            key={value}
-            inline
-            label={t(`yesnoquestion.${value}`)}
-            type="radio"
-            id={`${inputName}radio${value}`}
-            onChange={onSelectionChanged}
-            name={inputName}
-            value={value}
-            checked={isChecked(value)}
-            required
-          />
-        ))}
-        <Feedback type="invalid">{t("required-error")}</Feedback>
+          {["Yes", "No"].map((value) => (
+            <Form.Check
+              key={value}
+              inline
+              label={t(`yesnoquestion.${value}`)}
+              type="radio"
+              id={`${inputName}radio${value}`}
+              onChange={onSelectionChanged}
+              name={inputName}
+              value={value}
+              checked={isChecked(value)}
+              required
+            />
+          ))}
+          <Feedback type="invalid">{t("required-error")}</Feedback>
+        </fieldset>
       </Form.Group>
       {isYes === true && children}
     </div>
