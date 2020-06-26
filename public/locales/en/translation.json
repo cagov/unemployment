@@ -198,14 +198,15 @@
     "dob-day": "Day",
     "dob-year": "Year",
     "ssn-label": "Social Security Number",
-    "ssn-hint": "Enter your Social Security number without dashes.",
+    "ssn-hint": "Enter your Social Security number with or without dashes.",
     "recaptcha-text": "Security check provided by reCAPTCHA.",
     "submit": "Find Me",
     "invalid-user-error": "Review and verify the information you entered is correct. If your information is correct, then you don’t need to certify.",
     "invalid-recaptcha-error": "Security check is not complete.",
-    "session-timed-out": "We logged you out after 30 minutes of inactivity. Please provide your information again to certify your weeks.",
+    "session-timed-out": "You were logged out after 30 minutes of inactivity. Provide your information again to certify your weeks.",
     "show-ssn": "Show SSN",
-    "hide-ssn": "Hide SSN"
+    "hide-ssn": "Hide SSN",
+    "required-text": "* Indicates required text"
   },
   "retrocerts-week-list-item": "<strong>Week {{weekForUser}}</strong>: Sunday, {{startDate}} – Saturday, {{endDate}}",
   "retrocerts-weeks": {

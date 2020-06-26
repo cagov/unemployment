@@ -18,6 +18,9 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
       <p>
         Enter your information to confirm if you have any benefit weeks that you need to retroactively certify.
       </p>
+      <p>
+        * Indicates required text
+      </p>
       <Form
         inline={false}
         noValidate={true}
@@ -173,7 +176,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
             <FormText
               muted={true}
             >
-              Enter your Social Security number without dashes.
+              Enter your Social Security number with or without dashes.
             </FormText>
             <FormControl
               onChange={[Function]}
@@ -260,6 +263,9 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
       <p>
         Enter your information to confirm if you have any benefit weeks that you need to retroactively certify.
       </p>
+      <p>
+        * Indicates required text
+      </p>
       <Form
         inline={false}
         noValidate={true}
@@ -415,7 +421,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
             <FormText
               muted={true}
             >
-              Enter your Social Security number without dashes.
+              Enter your Social Security number with or without dashes.
             </FormText>
             <FormControl
               onChange={[Function]}
@@ -531,6 +537,9 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
       <p>
         Enter your information to confirm if you have any benefit weeks that you need to retroactively certify.
       </p>
+      <p>
+        * Indicates required text
+      </p>
       <Form
         inline={false}
         noValidate={true}
@@ -562,7 +571,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
               }
               variant="danger"
             >
-              We logged you out after 30 minutes of inactivity. Please provide your information again to certify your weeks.
+              You were logged out after 30 minutes of inactivity. Provide your information again to certify your weeks.
             </Alert>
           </div>
         </Row>
@@ -715,7 +724,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
             <FormText
               muted={true}
             >
-              Enter your Social Security number without dashes.
+              Enter your Social Security number with or without dashes.
             </FormText>
             <FormControl
               onChange={[Function]}
@@ -801,6 +810,9 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
       </p>
       <p>
         Enter your information to confirm if you have any benefit weeks that you need to retroactively certify.
+      </p>
+      <p>
+        * Indicates required text
       </p>
       <Form
         inline={false}
@@ -957,7 +969,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
             <FormText
               muted={true}
             >
-              Enter your Social Security number without dashes.
+              Enter your Social Security number with or without dashes.
             </FormText>
             <FormControl
               onChange={[Function]}
