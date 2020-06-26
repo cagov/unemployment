@@ -15,7 +15,7 @@ function PerjuryCheckbox(props) {
       className={isChecked ? "" : "unchecked"}
     >
       <Form.Text as="h3">{t("retrocerts-certification.ack-header")}</Form.Text>
-      {props.isPua ? (
+      {props.isAnyWeekPua ? (
         <ul>
           <li>{t("retrocerts-certification.ack-list-pua-item-1")}</li>
           <li>{t("retrocerts-certification.ack-list-pua-item-2")}</li>
@@ -52,7 +52,7 @@ function PerjuryCheckbox(props) {
 }
 
 PerjuryCheckbox.propTypes = {
-  isPua: PropTypes.bool,
+  isAnyWeekPua: PropTypes.bool,
 };
 
 export default PerjuryCheckbox;

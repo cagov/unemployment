@@ -298,7 +298,9 @@ function RetroCertsCertificationPage(props) {
             )}
             {weekForUser === numberOfWeeks && (
               <PerjuryCheckbox
-                isPua={userData.programPlan.includes(programPlan.puaFullTime)}
+                isAnyWeekPua={userData.programPlan.includes(
+                  programPlan.puaFullTime
+                )}
               />
             )}
             {userData.saveError && (
