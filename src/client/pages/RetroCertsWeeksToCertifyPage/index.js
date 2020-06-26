@@ -9,6 +9,7 @@ import { fromIndexToPathString } from "../../../utils/retroCertsWeeks";
 import routes from "../../../data/routes";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import LanguageSelector from "../../components/LanguageSelector";
 import ListOfWeeks from "../../components/ListOfWeeks";
 
 function RetroCertsWeeksToCertifyPage(props) {
@@ -22,6 +23,7 @@ function RetroCertsWeeksToCertifyPage(props) {
       <main className="pb-5">
         <div className="container p-4">
           <h1>{t("retrocerts-weeks.title")}</h1>
+          <LanguageSelector className="mt-3 mb-4" />
           <Alert variant="success" className="mt-5">
             <img
               className="checkmark"
