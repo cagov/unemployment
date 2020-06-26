@@ -203,9 +203,10 @@
     "submit": "Encuéntrame",
     "invalid-user-error": "Revise y verifique que la información que ingresó sea correcta. Si su información es correcta, entonces no necesita certificar.",
     "invalid-recaptcha-error": "Please check the box next to \"I'm not a robot\" to continue.",
-    "session-timed-out": "We logged you out after 30 minutes of inactivity. Please provide your information again to certify your weeks.",
+    "session-timed-out": "You were logged out after 30 minutes of inactivity. Provide your information again to certify your weeks.",
     "show-ssn": "Show SSN",
-    "hide-ssn": "Hide SSN"
+    "hide-ssn": "Hide SSN",
+    "required-text": "* Indicates required text"
   },
   "retrocerts-week-list-item": "<strong>Week {{weekForUser}}</strong>: Sunday, {{startDate}} – Saturday, {{endDate}}",
   "retrocerts-weeks": {
