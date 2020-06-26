@@ -347,7 +347,7 @@
     "alert": "Usted ha presentado de manera exitosa sus certificaciones retroactivas.",
     "alert-returning": "You have successfully submitted your retroactive certification. No further action is required.",
     "header1": "Confirmación de la certificación retroactiva",
-    "p1": "Su certificación retroactiva ha sido presentada. Su número de confirmación es <strong>{{confirmationNumber}}</strong>. Guarde este número para sus archivos.",
+    "p1": "<p>Su certificación retroactiva ha sido presentada. Su número de confirmación es <strong>{{confirmationNumber}}</strong>.</p><p>Guarde este número para sus archivos.</p>",
     "p1b": "You’ve been logged out of the system and may close this window.",
     "header2": "Semanas de la certificación retroactiva",
     "header3": "Siguientes pasos",
