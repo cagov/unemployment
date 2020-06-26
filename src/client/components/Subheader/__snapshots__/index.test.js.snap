@@ -28,7 +28,9 @@ exports[`<Subheader /> renders vertical navigation bar 1`] = `
       >
         <BPOButton />
       </div>
-      <LanguageSelector />
+      <div>
+        <LanguageSelector />
+      </div>
     </div>
   </div>
 </div>
