@@ -12,6 +12,9 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
       <h1>
         Retroactive Certification for Unemployment
       </h1>
+      <LanguageSelector
+        className="mt-3 mb-4"
+      />
       <p>
         You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits from the week ending February 8, 2020, through the week ending May 9, 2020.
       </p>
@@ -257,6 +260,9 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
       <h1>
         Retroactive Certification for Unemployment
       </h1>
+      <LanguageSelector
+        className="mt-3 mb-4"
+      />
       <p>
         You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits from the week ending February 8, 2020, through the week ending May 9, 2020.
       </p>
@@ -531,6 +537,9 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
       <h1>
         Retroactive Certification for Unemployment
       </h1>
+      <LanguageSelector
+        className="mt-3 mb-4"
+      />
       <Row
         noGutters={false}
       >
@@ -805,6 +814,9 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
       <h1>
         Retroactive Certification for Unemployment
       </h1>
+      <LanguageSelector
+        className="mt-3 mb-4"
+      />
       <p>
         You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits from the week ending February 8, 2020, through the week ending May 9, 2020.
       </p>
