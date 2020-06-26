@@ -64,6 +64,7 @@ function RetroCertsConfirmationPage(props) {
               values={{ confirmationNumber: userData.confirmationNumber }}
             />
           </p>
+          <p>{t("retrocerts-confirmation.p1a")}</p>
           <p>{t("retrocerts-confirmation.p1b")}</p>
           <h2 className="mt-5">{t("retrocerts-confirmation.header2")}</h2>
           <ListOfWeeks
