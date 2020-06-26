@@ -5,7 +5,9 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
   id="overflow-wrapper"
 >
   <Header />
-  <main>
+  <main
+    id="certification-page"
+  >
     <div
       className="container p-4"
     >
@@ -253,7 +255,9 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
   id="overflow-wrapper"
 >
   <Header />
-  <main>
+  <main
+    id="certification-page"
+  >
     <div
       className="container p-4"
     >
@@ -530,7 +534,9 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
   id="overflow-wrapper"
 >
   <Header />
-  <main>
+  <main
+    id="certification-page"
+  >
     <div
       className="container p-4"
     >
@@ -807,7 +813,9 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
   id="overflow-wrapper"
 >
   <Header />
-  <main>
+  <main
+    id="certification-page"
+  >
     <div
       className="container p-4"
     >

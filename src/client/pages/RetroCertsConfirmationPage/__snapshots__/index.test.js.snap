@@ -11,7 +11,9 @@ exports[`<RetroCertsConfirmationPage /> with confirmation number 1`] = `
   id="overflow-wrapper"
 >
   <Header />
-  <main>
+  <main
+    id="certification-page"
+  >
     <div
       className="container p-4"
     >
