@@ -30,7 +30,7 @@ function RetroCertsCertificationPage(props) {
   document.title = t("retrocerts-certification.question-page-title");
   const history = useHistory();
   const [validated, setValidated] = useState(false);
-  const [showGenericValidationError, setShowGenericValidaitonError] = useState(
+  const [showGenericValidationError, setShowGenericValidationError] = useState(
     false
   );
 
@@ -132,7 +132,7 @@ function RetroCertsCertificationPage(props) {
 
     setValidated(true);
 
-    setShowGenericValidaitonError(!isValid);
+    setShowGenericValidationError(!isValid);
 
     if (!isValid) {
       autoScroll({
