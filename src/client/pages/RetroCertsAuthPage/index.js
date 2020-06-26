@@ -165,7 +165,7 @@ function RetroCertsAuthPage(props) {
   return (
     <div id="overflow-wrapper">
       <Header />
-      <main>
+      <main id="certification-page">
         <div className="container p-4">
           <h1>{t("retrocert-login.title")}</h1>
           <LanguageSelector className="mt-3 mb-4" />
