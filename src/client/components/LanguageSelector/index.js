@@ -1,34 +1,25 @@
+import Button from "react-bootstrap/Button";
 import React from "react";
-import { useTranslation } from "react-i18next";
-import Dropdown from "react-bootstrap/Dropdown";
 import PropTypes from "prop-types";
 import i18n from "../../i18n";
 
 function LanguageSelector(props) {
-  const { t } = useTranslation();
+  function isEnglish() {
+    return i18n.language.startsWith("en");
+  }
 
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
+  const toggleLanguage = () => {
+    i18n.changeLanguage(isEnglish() ? "es" : "en");
   };
 
   return (
-    <Dropdown className={props.className}>
-      <Dropdown.Toggle
-        variant="outline-secondary"
-        className="text-dark bg-light"
-      >
-        {t("subheaderLanguageButton")}
-      </Dropdown.Toggle>
-
-      <Dropdown.Menu>
-        <Dropdown.Item onClick={() => changeLanguage("en")}>
-          English
-        </Dropdown.Item>
-        <Dropdown.Item onClick={() => changeLanguage("es")}>
-          Español
-        </Dropdown.Item>
-      </Dropdown.Menu>
-    </Dropdown>
+    <Button
+      variant="outline-secondary"
+      className={`text-dark bg-light ${props.className}`}
+      onClick={toggleLanguage}
+    >
+      {isEnglish() ? "Español" : "English"}
+    </Button>
   );
 }
 
