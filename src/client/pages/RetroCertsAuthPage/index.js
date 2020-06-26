@@ -168,12 +168,11 @@ function RetroCertsAuthPage(props) {
         <div className="container p-4">
           <h1>{t("retrocert-login.title")}</h1>
           {showGenericValidationError && validated && genericValidationError}
+          {errorTransKey === "retrocert-login.session-timed-out" && errorAlert}
           <p>{t("retrocert-login.help")}</p>
           <p>{t("retrocert-login.instructions")}</p>
           <p>{t("retrocert-login.required-text")}</p>
           <Form noValidate validated={validated} onSubmit={handleSubmit}>
-            {errorTransKey === "retrocert-login.session-timed-out" &&
-              errorAlert}
             <Row>
               <Form.Group controlId="formLastName" className="col-md-6">
                 <Form.Label>{`* ${t(
