@@ -1,5 +1,5 @@
 import Button from "react-bootstrap/Button";
-import { Redirect } from "react-router-dom";
+import { Redirect, useHistory } from "react-router-dom";
 import Alert from "react-bootstrap/Alert";
 import React from "react";
 import { useTranslation, Trans } from "react-i18next";
@@ -9,9 +9,12 @@ import routes from "../../../data/routes";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import ListOfWeeks from "../../components/ListOfWeeks";
+import { logEvent } from "../../utils";
 
 function RetroCertsConfirmationPage(props) {
   const { t } = useTranslation();
+  document.title = t("retrocerts-confirmation.title");
+  const history = useHistory();
   const userData = props.userData;
 
   // The user is here by accident. Send them back.
@@ -24,11 +27,16 @@ function RetroCertsConfirmationPage(props) {
   // Log out the user since they are done!
   sessionStorage.removeItem(AUTH_STRINGS.authToken);
 
-  // If the user is checking after they submitted data, formData
-  // will be empty. NOTE: if we implement partial save, we need
-  // to make sure not to return form data if the user has a
-  // confirmation number.
-  const isReturning = !userData.formData;
+  const isReturning =
+    history.location.state && history.location.state.isReturning;
+  if (isReturning) {
+    logEvent("RetroCerts", "AlreadyCompletedReturn");
+  }
+
+  function handlePrint() {
+    logEvent("RetroCerts", "PrintConfirmation");
+    window.print();
+  }
 
   return (
     <div id="overflow-wrapper">
@@ -68,14 +76,14 @@ function RetroCertsConfirmationPage(props) {
             <Trans t={t} i18nKey="retrocerts-confirmation.p2">
               If you are still unemployed, continue to certify for benefits
               every two weeks. The fastest way is to use{" "}
-              <a href={t("links.edd-webapp")}>UI Online</a>.
+              <a href={t("links.edd-login")}>UI Online</a>.
             </Trans>
           </p>
 
           <Button
             variant="outline-secondary"
             className="text-dark bg-light mt-5"
-            onClick={print}
+            onClick={handlePrint}
           >
             {t("retrocerts-confirmation.button-print")}
           </Button>

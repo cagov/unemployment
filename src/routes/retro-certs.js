@@ -11,9 +11,9 @@ function createRouter() {
     responseJson.status = AUTH_STRINGS.statusCode.userNotFound;
 
     const reCaptcha = new ReCaptcha(postJson.reCaptcha);
-
+    const isDev = process.env.NODE_ENV === "development";
     const [reCaptchaResponse, userRecord] = await Promise.all([
-      reCaptcha.validateUser(),
+      isDev || reCaptcha.validateUser(),
       cosmos.getUserByNameDobSsn(
         postJson.lastName || "",
         postJson.dob,

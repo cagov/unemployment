@@ -14,9 +14,11 @@ import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import SessionTimer from "../../components/SessionTimer";
 import Inputmask from "inputmask";
+import { logEvent } from "../../utils";
 
 function RetroCertsAuthPage(props) {
   const { t } = useTranslation();
+  document.title = t("retrocert-login.title");
   const history = useHistory();
 
   const userData = props.userData;
@@ -98,11 +100,12 @@ function RetroCertsAuthPage(props) {
           sessionStorage.setItem(AUTH_STRINGS.authToken, data.authToken);
           if (data.confirmationNumber) {
             // The user has already completed the retro-certs process.
-            history.push(routes.retroCertsConfirmation);
+            history.push(routes.retroCertsConfirmation, { isReturning: true });
           } else {
             history.push(routes.retroCertsWeeksToCertify);
           }
         }
+        logEvent("RetroCerts", "LoginResponse", data.status);
       })
       .catch((error) => console.error(error));
   };
@@ -178,7 +181,7 @@ function RetroCertsAuthPage(props) {
                   maxLength={2}
                   onChange={(e) => handleChange(e, setDobMonth)}
                   required
-                  pattern="0?[1-9]|10|11|12"
+                  pattern="(^0[1-9])|(^1[0-2])|(^[1-9]$)"
                 />
                 <Form.Control.Feedback type="invalid">
                   {t("required-error")}
@@ -192,7 +195,7 @@ function RetroCertsAuthPage(props) {
                   maxLength={2}
                   onChange={(e) => handleChange(e, setDobDay)}
                   required
-                  pattern="0?[1-9]|1\d|2\d|3[01]"
+                  pattern="(^0[1-9])|(^1[0-9])|(^2[0-9])|(^3[0-1])|(^[1-9]$)"
                 />
                 <Form.Control.Feedback type="invalid">
                   {t("required-error")}
