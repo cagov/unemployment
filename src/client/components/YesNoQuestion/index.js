@@ -44,7 +44,7 @@ function YesNoQuestion(props) {
         <Form.Label>
           {questionNumber}.&nbsp;{questionText}
         </Form.Label>
-        <Form.Text muted>{helpText}</Form.Text>
+        <Form.Text className="help-text">{helpText}</Form.Text>
 
         {["Yes", "No"].map((value) => (
           <Form.Check
