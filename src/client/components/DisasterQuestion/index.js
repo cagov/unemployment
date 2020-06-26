@@ -49,23 +49,25 @@ function DisasterQuestion(props) {
 
   return (
     <Form.Group controlId="disaster-question" className={getValidationClass()}>
-      <Form.Label>{props.questionText}</Form.Label>
-      {disasterRadioChoices.map((value) => (
-        <Form.Check
-          key={value}
-          label={value}
-          type="radio"
-          id={`disaster-question-radio${value}`}
-          onChange={onChange}
-          name="disaster-question"
-          value={value}
-          required
-          checked={isChecked(value)}
-        />
-      ))}
-      <Form.Control.Feedback type="invalid">
-        {t("required-error")}
-      </Form.Control.Feedback>
+      <fieldset>
+        <Form.Label as="legend">{props.questionText}</Form.Label>
+        {disasterRadioChoices.map((value) => (
+          <Form.Check
+            key={value}
+            label={value}
+            type="radio"
+            id={`disaster-question-radio${value}`}
+            onChange={onChange}
+            name="disaster-question"
+            value={value}
+            required
+            checked={isChecked(value)}
+          />
+        ))}
+        <Form.Control.Feedback type="invalid">
+          {t("required-error")}
+        </Form.Control.Feedback>
+      </fieldset>
     </Form.Group>
   );
 }
