@@ -224,7 +224,7 @@
     "question-page-title": "Certificar retroactivamente y revisar",
     "p1-multiple": "Usted está en la semana {{weekForUser}} de {{numberOfWeeks}} semanas para certificar retroactivamente.",
     "form-header": "Semana {{weekForUser}}: {{weekString}}",
-    "save-error": "Something went wrong. Please try again later.",
+    "save-error": "Algo salió mal. Por favor intente de nuevo más tarde.",
     "questions": {
       "ui-full-time": {
         "tooSick": "¿Estuvo usted muy enfermo o lesionado para trabajar?",
@@ -338,8 +338,8 @@
     "ack-label": "Antes de que usted pueda presentar su Solicitud de Beneficios Continuos, debe indicar que acepta lo declarado marcando la casilla.",
     "ack-feedback": "Antes de que usted pueda presentar su Solicitud de Beneficios Continuos, debe indicar que acepta lo declarado marcando la casilla.",
     "submit-p1": "Usted está a punto de presentar sus certificaciones retroactivas. <strong>No</strong> podrá cambiar sus respuestas una vez que seleccione el botón <strong>Enviar</strong>.",
-    "button-back": "Back",
-    "button-back-week": "Back to Previous Week",
+    "button-back": "Regresar",
+    "button-back-week": "Regresar a la semana anterior",
     "button-next": "Siguiente, certificar semana {{nextWeekForUser}}",
     "button-submit": "Enviar"
   },
