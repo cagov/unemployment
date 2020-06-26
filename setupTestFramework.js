@@ -48,7 +48,7 @@ jest.mock("uuid", () => {
   };
 });
 
-// This is added by Google Analytics.
+// window.gtag is added by Google Analytics. Mock out the calls.
 jest.mock("./src/client/utils", () => {
   const actual = jest.requireActual("./src/client/utils");
   return {

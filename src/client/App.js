@@ -25,7 +25,7 @@ export default function App(props) {
   if (initialPageLoad.current) {
     initialPageLoad.current = false;
 
-    // App re-mounts every time user data is changed. To have only one
+    // <App> re-mounts every time user data is changed. To have only one
     // history listener, add it during the initial page load only.
     history.listen((location) => logPage(location.pathname));
     // Log the current page.
