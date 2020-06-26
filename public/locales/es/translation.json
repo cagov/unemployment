@@ -185,7 +185,7 @@
     "Yes": "Yes",
     "No": "No"
   },
-  "required-error": "This field is required.",
+  "required-error": "Este campo es requerido.",
   "retrocert-login": {
     "title": "Certificación retroactiva para el Seguro de Desempleo",
     "help": "Usted debe realizar la certificación para los beneficios del Seguro de Desempleo (UI, por sus siglas en inglés) y de la Asistencia de Desempleo por la Pandemia (PUA, por sus siglas en inglés) correspondiente a las semanas que terminan el 9 de febrero de 2020 hasta el 9 de mayo de 2020.",
@@ -193,21 +193,21 @@
     "last-name-label": "Apellido",
     "dob-heading": "Fecha de nacimiento",
     "dob-hint": "Por ejemplo, 4 28 1990",
-    "dob-month": "Month",
-    "dob-day": "Day",
-    "dob-year": "Year",
+    "dob-month": "Mes",
+    "dob-day": "Día",
+    "dob-year": "Año",
     "ssn-label": "Número de Seguro Social",
     "ssn-hint": "Ingrese su número de Seguro Social con o sin guiones.",
-    "recaptcha-text": "Security check provided by reCAPTCHA.",
+    "recaptcha-text": "Control de seguridad proporcionado por reCAPTCHA.",
     "submit": "Encuéntrame",
     "invalid-user-error": "Revise y verifique que la información que ingresó sea correcta. Si su información es correcta, entonces no necesita certificar.",
-    "invalid-recaptcha-error": "Please check the box next to \"I'm not a robot\" to continue.",
-    "session-timed-out": "You were logged out after 30 minutes of inactivity. Provide your information again to certify your weeks.",
-    "show-ssn": "Show SSN",
-    "hide-ssn": "Hide SSN",
-    "required-text": "* Indicates required text"
+    "invalid-recaptcha-error": "El control de seguridad no está completo.",
+    "session-timed-out": "Su sesión se cerró después de 30 minutos de inactividad. Proporcione su información nuevamente para certificar sus semanas.",
+    "show-ssn": "Mostrar SSN",
+    "hide-ssn": "Ocultar SSN",
+    "required-text": "*Indica un campo requerido que falta completar"
   },
-  "retrocerts-week-list-item": "<strong>Week {{weekForUser}}</strong>: Sunday, {{startDate}} – Saturday, {{endDate}}",
+  "retrocerts-week-list-item": "<strong>Semana {{weekForUser}}</strong>: Domingo, {{startDate}} – Sábado, {{endDate}}",
   "retrocerts-weeks": {
     "title": "Certificación retroactiva para el Seguro de Desempleo",
     "alert": "Usted tiene al menos una semana disponible para certificar retroactivamente.",
@@ -230,7 +230,7 @@
         "tooSick": "¿Estuvo usted muy enfermo o lesionado para trabajar?",
         "help-tooSick": "Usted debe de estar lo suficientemente bien para trabajar cada día de la semana para poder recibir el total de los beneficios. Marque <strong>Sí</strong> si faltó a su trabajo debido a que estuvo enfermo o lesionado.",
         "tooSickNumberOfDays": "Si la respuesta es, \"Sí\", ingrese el número de días (de 1 a 7) que no pudo trabajar.",
-        "help-tooSickNumberOfDays": "You must report the numbers of days that you could not work during this week. Unemployment benefits are paid according to the number of days you are able to work this week.",
+        "help-tooSickNumberOfDays": "Si usted contestó que \"Sí\", a la pregunta número uno, usted debe reportar el número de días de la semana en los cuales no pudo trabajar. Los beneficios del Seguro del Desempleo son pagados de acuerdo al número de días de la semana en los que estuvo disponible para trabajar. Si usted no estuvo disponible durante los 7 días de la semana, se le hará una cita para una entrevista telefónica para determinar su elegibilidad.",
         "couldNotAcceptWork": "¿Hubo alguna razón (aparte de enfermedad o lesión) que le haya impedido aceptar trabajo de tiempo completo, todos los días laborables?",
         "help-couldNotAcceptWork": "Usted debe estar disponible para trabajar para poder recibir beneficios del Seguro de Desempleo. Estar disponible significa que debe estar listo y dispuesto a aceptar un trabajo que coincida con sus habilidades profesionales e historial educativo. Si rechazó un trabajo de tiempo completo por algún motivo que no sea estar enfermo o lesionado, marque <strong>Sí.</strong>.",
         "didYouLook": "¿Buscó usted trabajo?",
@@ -240,13 +240,13 @@
         "schoolOrTraining": "¿Usted <strong>empezó</strong> a asistir a algún tipo de escuela o entrenamiento laboral? Seleccione la respuesta <strong>Sí</strong> solamente si usted comenzó a asistir a la escuela entre {{weekString}}.",
         "help-schoolOrTraining": "Marque Sí únicamente si la escuela o el entrenamiento laboral comenzó durante esta semana de trabajo.",
         "workOrEarn": "¿Trabajó o ganó algún dinero, sin importar si le pagaron o no?",
-        "help-workOrEarn": "Look at the date each week begins and ends. If you performed any work during this week, all earnings must be reported regardless if payment has been received."
+        "help-workOrEarn": "Conteste, \"Sí\", si usted trabajó durante esta semana, o si recibió otros tipos de ingresos tal como pensiones, pago de salarios/sueldos atrasados, etc. Todo tipo de trabajo e ingresos deben ser reportados sin importar si su empleador no le haya pagado todavía. Conteste, “No”, si usted no trabajó esta semana y no ganó ningún dinero."
       },
       "ui-part-time": {
         "tooSick": "¿Estuvo usted muy enfermo o lesionado para trabajar?",
         "help-tooSick": "Usted debe de estar lo suficientemente bien para trabajar cada día de la semana para poder recibir el total de los beneficios. Marque <strong>Sí</strong> si faltó a su trabajo debido a que estuvo enfermo o lesionado.",
         "tooSickNumberOfDays": "Si la respuesta es, \"Sí\", ingrese el número de días (de 1 a 7) que no pudo trabajar.",
-        "help-tooSickNumberOfDays": "You must report the numbers of days that you could not work during this week. Unemployment benefits are paid according to the number of days you are able to work this week.",
+        "help-tooSickNumberOfDays": "Si usted contestó que \"Sí\", a la pregunta número uno, usted debe reportar el número de días de la semana en los cuales no pudo trabajar. Los beneficios del Seguro del Desempleo son pagados de acuerdo al número de días de la semana en los que estuvo disponible para trabajar. Si usted no estuvo disponible durante los 7 días de la semana, se le hará una cita para una entrevista telefónica para determinar su elegibilidad.",
         "couldNotAcceptWork": "¿Hubo alguna razón (aparte de enfermedad o lesión) que le haya impedido aceptar trabajo de tiempo parcial, tal como se lo indicó el Departamento del Desarrollo del Empleo?",
         "help-couldNotAcceptWork": "Usted debe estar disponible para trabajar para poder recibir beneficios del Seguro de Desempleo. Estar disponible significa que debe estar listo y dispuesto a aceptar un trabajo que coincida con sus habilidades profesionales e historial educativo. Si rechazó un trabajo de tiempo parcial por algún motivo que no sea estar enfermo o lesionado, marque Sí.",
         "didYouLook": "¿Buscó usted trabajo?",
@@ -256,7 +256,7 @@
         "schoolOrTraining": "¿Usted <strong>empezó</strong> a asistir a algún tipo de escuela o entrenamiento laboral? Seleccione la respuesta <strong>Sí</strong> solamente si usted comenzó a asistir a la escuela entre {{weekString}}.",
         "help-schoolOrTraining": "Marque Sí únicamente si la escuela o el entrenamiento laboral comenzó durante esta semana de trabajo.",
         "workOrEarn": "¿Trabajó o ganó algún dinero, sin importar si le pagaron o no?",
-        "help-workOrEarn": "Look at the date each week begins and ends. If you performed any work during this week, all earnings must be reported regardless if payment has been received."
+        "help-workOrEarn": "Conteste, \"Sí\", si usted trabajó durante esta semana, o si recibió otros tipos de ingresos tal como pensiones, pago de salarios/sueldos atrasados, etc. Todo tipo de trabajo e ingresos deben ser reportados sin importar si su empleador no le haya pagado todavía. Conteste, “No”, si usted no trabajó esta semana y no ganó ningún dinero."
       },
       "pua-full-time": {
         "tooSick": "¿Estuvo usted muy enfermo o lesionado para trabajar por motivos no relacionados a un desastre?",
@@ -277,10 +277,8 @@
         "recentDisasterChoice": "Seleccione la opción de cómo se vio afectado por la pandemia de COVID-19."
       }
     },
-    "q-workOrEarn": "¿Trabajó o ganó algún dinero, sin importar si le pagaron o no?",
-    "qhelp-workOrEarn": "Look at the date each week begins and ends. If you performed any work during this week, all earnings must be reported regardless if payment has been received.",
     "employers": {
-      "heading": "Employer {{incomeNumber}}",
+      "heading": "Empleador {{incomeNumber}}",
       "employerName": "Nombre del empleador",
       "help-employerName": "Indique el nombre del empleador para el que trabajó esta semana.",
       "address1": "Dirección 1",
@@ -295,9 +293,9 @@
       "help-zipcode": "Indique el código postal del empleador para el que trabajó esta semana.",
       "lastDateWorked": "Última Fecha Trabajada",
       "help-lastDateWorked": "Proporcione el último día que trabajó durante la semana indicada para este empleador.",
-      "month": "Month",
-      "day": "Day",
-      "year": "Year",
+      "month": "Mes",
+      "day": "Día",
+      "year": "Año",
       "totalHoursWorked": "Total de horas que trabajó para el empleador",
       "help-totalHoursWorked": "Proporcione el total de horas trabajadas para este empleador durante la semana indicada.",
       "grossEarnings": "Salarios/Sueldos ganados en bruto antes de deducciones con este empleador (sin importar si le pagaron o no)",
@@ -310,8 +308,8 @@
       "reason-laid-off": "Despido por falta de trabajo",
       "moreDetails": "Proporcione más información:",
       "help-moreDetails": "Proporcione el motivo por el cual ya no está trabajando para este empleador.",
-      "addIncomeLink": "+ Add another employer",
-      "removeIncomeLink": "Remove this employer"
+      "addIncomeLink": "+ Agregar otro empleador",
+      "removeIncomeLink": "Eliminar este empleador"
     },
     "disaster-choices": {
       "choice-1": "Usted fue diagnosticado con el COVID-19.",
@@ -334,25 +332,28 @@
     "ack-list-item-2": "Mis respuestas son verdaderas y correctas. Sé que la ley impone sanciones/multas en caso de que haga declaraciones falsas u oculte información con el fin de recibir beneficios.",
     "ack-list-item-3": "Declaro bajo pena de perjurio que soy ciudadano o nacional de los Estados Unidos; o soy extranjero en estado migratorio satisfactorio y con permiso de trabajo concedido por el Servicio de Ciudadanía e Inmigración de los Estados Unidos (United States Citizenship and Immigration Service) (USCIS, por sus siglas en inglés)",
     "ack-list-item-4": "Entiendo que al presentar mi Solicitud de Beneficios Continuos a través de este medio automatizado, mi solicitud se considerara como una firma escrita.",
-    "ack-label": "I agree and accept the statement above.",
+    "ack-list-pua-item-1": "Yo declaro bajo pena de perjurio que la información que proporcioné es verdadera y correcta a mi mejor saber o entender, incluyendo la razón por la que estoy desempleado debido a la pandemia COVID-19.",
+    "ack-list-pua-item-2": "Yo entiendo que la falsa representación intencional al auto certificar que estoy dentro de una o más categorías del COVID-19 es un fraude y puedo estar sujeto a un enjuiciamiento penal, si se descubre que he cometido un fraude para recibir los beneficios de Asistencia de Desempleo por la Pandemia.",
+    "ack-list-pua-item-3": "Entiendo que al presentar mi Solicitud de Beneficios Continuos a través de este medio automatizado, mi solicitud se considerara como una firma escrita.",
+    "ack-label": "Antes de que usted pueda presentar su Solicitud de Beneficios Continuos, debe indicar que acepta lo declarado marcando la casilla.",
     "ack-feedback": "Antes de que usted pueda presentar su Solicitud de Beneficios Continuos, debe indicar que acepta lo declarado marcando la casilla.",
     "submit-p1": "Usted está a punto de presentar sus certificaciones retroactivas. <strong>No</strong> podrá cambiar sus respuestas una vez que seleccione el botón <strong>Enviar</strong>.",
     "button-back": "Back",
     "button-back-week": "Back to Previous Week",
-    "button-next": "Next, Certify Week {{nextWeekForUser}}",
+    "button-next": "Siguiente, certificar semana {{nextWeekForUser}}",
     "button-submit": "Enviar"
   },
   "retrocerts-confirmation": {
     "title": "Certificación retroactiva para el Seguro de Desempleo",
     "alert": "Usted ha presentado de manera exitosa sus certificaciones retroactivas.",
-    "alert-returning": "You have successfully submitted your retroactive certification. No further action is required.",
+    "alert-returning": "Usted ha presentado de manera exitosa sus certificaciones retroactivas. No se requiere ninguna otra acción.",
     "header1": "Confirmación de la certificación retroactiva",
     "p1": "<p>Su certificación retroactiva ha sido presentada. Su número de confirmación es <strong>{{confirmationNumber}}</strong>.</p><p>Guarde este número para sus archivos.</p>",
-    "p1b": "You’ve been logged out of the system and may close this window.",
+    "p1b": "Se ha cerrado la sesión en este sistema y puede cerrar esta página.",
     "header2": "Semanas de la certificación retroactiva",
     "header3": "Siguientes pasos",
     "p2": "Si todavía está desempleado, continúe realizando la certificación para los beneficios cada dos semanas. La manera más rápida es a través de <2>UI Online</2>.",
     "button-print": "Imprimir esta página"
   },
-  "generic-validation-error-message" : "There are one or more errors on this page. Review and correct them to continue. Complete all fields and try again."
+  "generic-validation-error-message": "Hay más de un error en esta página. Revise y corrija los errores para continuar. Complete todo los campos e intente de nuevo."
 }
