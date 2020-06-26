@@ -7,6 +7,7 @@ import { userDataPropType } from "../../commonPropTypes";
 import routes from "../../../data/routes";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import LanguageSelector from "../../components/LanguageSelector";
 import ListOfWeeks from "../../components/ListOfWeeks";
 import { logEvent } from "../../utils";
 import { clearAuthToken } from "../../components/SessionTimer";
@@ -44,6 +45,7 @@ function RetroCertsConfirmationPage(props) {
       <main>
         <div className="container p-4">
           <h1>{t("retrocerts-confirmation.title")}</h1>
+          <LanguageSelector className="mt-3 mb-4" />
           <Alert variant="success" className="mt-5">
             <img
               className="checkmark"

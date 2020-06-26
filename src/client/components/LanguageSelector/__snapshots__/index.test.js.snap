@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LanguageSelector /> renders the component 1`] = `
+<Dropdown
+  navbar={false}
+>
+  <DropdownToggle
+    className="text-dark bg-light"
+    variant="outline-secondary"
+  >
+    Language
+  </DropdownToggle>
+  <DropdownMenu
+    alignRight={false}
+    flip={true}
+  >
+    <DropdownItem
+      as={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "displayName": "SafeAnchor",
+          "render": [Function],
+        }
+      }
+      disabled={false}
+      onClick={[Function]}
+    >
+      English
+    </DropdownItem>
+    <DropdownItem
+      as={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "displayName": "SafeAnchor",
+          "render": [Function],
+        }
+      }
+      disabled={false}
+      onClick={[Function]}
+    >
+      Español
+    </DropdownItem>
+  </DropdownMenu>
+</Dropdown>
+`;

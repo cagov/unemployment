@@ -12,6 +12,7 @@ import routes from "../../../data/routes";
 import { userDataPropType, setUserDataPropType } from "../../commonPropTypes";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import LanguageSelector from "../../components/LanguageSelector";
 import SessionTimer from "../../components/SessionTimer";
 import Inputmask from "inputmask";
 import { autoScroll, TOP, BEHAVIOR } from "../../../utils/autoScroll";
@@ -167,6 +168,7 @@ function RetroCertsAuthPage(props) {
       <main>
         <div className="container p-4">
           <h1>{t("retrocert-login.title")}</h1>
+          <LanguageSelector className="mt-3 mb-4" />
           {showGenericValidationError && validated && genericValidationError}
           {errorTransKey === "retrocert-login.session-timed-out" && errorAlert}
           <p>{t("retrocert-login.help")}</p>
