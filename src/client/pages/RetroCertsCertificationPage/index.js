@@ -18,6 +18,7 @@ import programPlan from "../../../data/programPlan";
 import { logEvent } from "../../utils";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import LanguageSelector from "../../components/LanguageSelector";
 import YesNoQuestion from "../../components/YesNoQuestion";
 import DaysSickQuestion from "../../components/DaysSickQuestion";
 import EmployersQuestions from "../../components/EmployersQuestions";
@@ -210,6 +211,7 @@ function RetroCertsCertificationPage(props) {
           <h1 ref={headingElement}>
             {t("retrocerts-certification.question-page-title")}
           </h1>
+          <LanguageSelector className="mt-3 mb-4" />
           {showGenericValidationError && validated && genericValidationError}
           <h2 className="h3 font-weight-bold mt-5">
             <Trans

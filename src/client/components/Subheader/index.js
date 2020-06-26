@@ -1,15 +1,10 @@
 import BPOButton from "../BPOButton";
-import Dropdown from "react-bootstrap/Dropdown";
+import LanguageSelector from "../LanguageSelector";
 import React from "react";
-import i18n from "../../i18n";
 import { useTranslation } from "react-i18next";
 
 function Subheader() {
   const { t } = useTranslation();
-
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
-  };
 
   return (
     <div className="bg-light">
@@ -22,23 +17,7 @@ function Subheader() {
           <div className="mr-4 mb-4">
             <BPOButton />
           </div>
-          <Dropdown>
-            <Dropdown.Toggle
-              variant="outline-secondary"
-              className="text-dark bg-light"
-            >
-              {t("subheaderLanguageButton")}
-            </Dropdown.Toggle>
-
-            <Dropdown.Menu>
-              <Dropdown.Item onClick={() => changeLanguage("en")}>
-                English
-              </Dropdown.Item>
-              <Dropdown.Item onClick={() => changeLanguage("es")}>
-                Español
-              </Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
+          <LanguageSelector />
         </div>
       </div>
     </div>
