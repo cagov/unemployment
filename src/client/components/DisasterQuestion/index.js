@@ -43,21 +43,29 @@ function DisasterQuestion(props) {
     return isDirty ? "" : "unchecked";
   }
 
+  function isChecked(value) {
+    return value === userChoice;
+  }
+
   return (
     <Form.Group controlId="disaster-question" className={getValidationClass()}>
       <Form.Label>{props.questionText}</Form.Label>
-      {disasterRadioChoices.map((disasterChoice, index) => (
+      {disasterRadioChoices.map((value) => (
         <Form.Check
+          key={value}
+          label={value}
           type="radio"
-          label={disasterChoice}
+          id={`disaster-question-radio${value}`}
           onChange={onChange}
-          value={userChoice}
-          name="disaster-choice"
-          key={`disaster-choice-${index}`}
-          id={`disaster-choice-${index}`}
+          name="disaster-question"
+          value={value}
+          required
+          checked={isChecked(value)}
         />
       ))}
-      <div className="invalid-feedback">{t("required-error")}</div>
+      <Form.Control.Feedback type="invalid">
+        {t("required-error")}
+      </Form.Control.Feedback>
     </Form.Group>
   );
 }
