@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { setUserDataPropType } from "../../commonPropTypes";
 import AUTH_STRINGS from "../../../data/authStrings";
 import routes from "../../../data/routes";
+import { logEvent } from "../../utils";
 
 let timerId = null;
 
@@ -16,6 +17,8 @@ function SessionTimer(props) {
     timerId = setTimeout(() => {
       if (sessionStorage.getItem(AUTH_STRINGS.authToken)) {
         sessionStorage.removeItem(AUTH_STRINGS.authToken);
+        logEvent("RetroCerts", "SessionTimeout", history.location.pathname);
+
         history.push(routes.retroCertsAuth);
         setUserData({
           status: AUTH_STRINGS.statusCode.sessionTimedOut,

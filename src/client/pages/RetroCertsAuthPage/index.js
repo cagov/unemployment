@@ -15,6 +15,7 @@ import Header from "../../components/Header";
 import SessionTimer from "../../components/SessionTimer";
 import Inputmask from "inputmask";
 import { autoScroll, TOP, BEHAVIOR } from "../../../utils/autoScroll";
+import { logEvent } from "../../utils";
 
 function RetroCertsAuthPage(props) {
   const { t } = useTranslation();
@@ -113,11 +114,12 @@ function RetroCertsAuthPage(props) {
           sessionStorage.setItem(AUTH_STRINGS.authToken, data.authToken);
           if (data.confirmationNumber) {
             // The user has already completed the retro-certs process.
-            history.push(routes.retroCertsConfirmation);
+            history.push(routes.retroCertsConfirmation, { isReturning: true });
           } else {
             history.push(routes.retroCertsWeeksToCertify);
           }
         }
+        logEvent("RetroCerts", "LoginResponse", data.status);
       })
       .catch((error) => console.error(error));
   };
