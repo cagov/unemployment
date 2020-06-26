@@ -5,7 +5,7 @@ import { userDataPropType, setUserDataPropType } from "../../commonPropTypes";
 import AUTH_STRINGS from "../../../data/authStrings";
 import routes from "../../../data/routes";
 import PageNotFound from "../../pages/PageNotFound";
-import SessionTimer from "../../components/SessionTimer";
+import SessionTimer, { clearAuthToken } from "../../components/SessionTimer";
 
 function userIsAuthenticated() {
   return !!sessionStorage.getItem(AUTH_STRINGS.authToken);
@@ -83,7 +83,7 @@ function RetroCertsRoute(props) {
         .then((data) => {
           pageProps.setUserData(data);
           if (data.status !== AUTH_STRINGS.statusCode.ok) {
-            sessionStorage.removeItem(AUTH_STRINGS.authToken);
+            clearAuthToken();
           }
         })
         .catch((error) => console.error(error));
