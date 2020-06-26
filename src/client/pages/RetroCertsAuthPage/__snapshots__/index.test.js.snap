@@ -531,6 +531,35 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
       <h1>
         Retroactive Certification for Unemployment
       </h1>
+      <Row
+        noGutters={false}
+      >
+        <div
+          className="col-md-6"
+        >
+          <Alert
+            closeLabel="Close alert"
+            show={true}
+            transition={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "defaultProps": Object {
+                  "appear": false,
+                  "in": false,
+                  "mountOnEnter": false,
+                  "timeout": 300,
+                  "unmountOnExit": false,
+                },
+                "displayName": "Fade",
+                "render": [Function],
+              }
+            }
+            variant="danger"
+          >
+            You were logged out after 30 minutes of inactivity. Provide your information again to certify your weeks.
+          </Alert>
+        </div>
+      </Row>
       <p>
         You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits from the week ending February 8, 2020, through the week ending May 9, 2020.
       </p>
@@ -546,35 +575,6 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
         onSubmit={[Function]}
         validated={false}
       >
-        <Row
-          noGutters={false}
-        >
-          <div
-            className="col-md-6"
-          >
-            <Alert
-              closeLabel="Close alert"
-              show={true}
-              transition={
-                Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "defaultProps": Object {
-                    "appear": false,
-                    "in": false,
-                    "mountOnEnter": false,
-                    "timeout": 300,
-                    "unmountOnExit": false,
-                  },
-                  "displayName": "Fade",
-                  "render": [Function],
-                }
-              }
-              variant="danger"
-            >
-              You were logged out after 30 minutes of inactivity. Provide your information again to certify your weeks.
-            </Alert>
-          </div>
-        </Row>
         <Row
           noGutters={false}
         >
