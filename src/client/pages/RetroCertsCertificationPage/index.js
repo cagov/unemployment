@@ -15,6 +15,7 @@ import {
 import routes from "../../../data/routes";
 import AUTH_STRINGS from "../../../data/authStrings";
 import programPlan from "../../../data/programPlan";
+import { logEvent } from "../../utils";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import YesNoQuestion from "../../components/YesNoQuestion";
@@ -153,6 +154,11 @@ function RetroCertsCertificationPage(props) {
     })
       .then((response) => response.json())
       .then((data) => {
+        logEvent(
+          "RetroCerts",
+          "CompletedCertification",
+          `weeks-${numberOfWeeks}`
+        );
         setUserData({
           ...userData,
           confirmationNumber: data.confirmationNumber,

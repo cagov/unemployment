@@ -12,7 +12,6 @@ import TabPaneContent2 from "../TabPaneContent2";
 import TabPaneContent3 from "../TabPaneContent3";
 import TabPaneContent4 from "../TabPaneContent4";
 import TabPaneContent5 from "../TabPaneContent5";
-import { logPage } from "../../utils.js";
 import { useTranslation } from "react-i18next";
 
 function TabbedContainer() {
@@ -77,7 +76,6 @@ function TabbedContainer() {
   const prefix = "/guide/";
   const initialPageLoad = useRef(true);
   const history = useHistory();
-  history.listen((location) => logPage(location.pathname));
 
   // Runs when a tab content pane loads.
   function TabPaneContentOnMount({ tabIndex }) {
