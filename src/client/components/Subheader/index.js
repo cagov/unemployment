@@ -17,7 +17,9 @@ function Subheader() {
           <div className="mr-4 mb-4">
             <BPOButton />
           </div>
-          <LanguageSelector />
+          <div>
+            <LanguageSelector />
+          </div>
         </div>
       </div>
     </div>
