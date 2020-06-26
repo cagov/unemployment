@@ -180,7 +180,7 @@ exports[`<RetroCertsCertificationPage /> Certify for 2nd week of 2 1`] = `
           />
         </YesNoQuestion>
         <PerjuryCheckbox
-          isPua={false}
+          isAnyWeekPua={false}
         />
         <FormRow>
           <Col>
