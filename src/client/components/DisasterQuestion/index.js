@@ -48,7 +48,10 @@ function DisasterQuestion(props) {
   }
 
   return (
-    <Form.Group controlId="disaster-question" className={getValidationClass()}>
+    <Form.Group
+      controlId="disaster-question"
+      className={`disaster-question ${getValidationClass()}`}
+    >
       <fieldset>
         <Form.Label as="legend">{props.questionText}</Form.Label>
         {disasterRadioChoices.map((value) => (
@@ -61,6 +64,7 @@ function DisasterQuestion(props) {
             name="disaster-question"
             value={value}
             required
+            inline
             checked={isChecked(value)}
           />
         ))}
