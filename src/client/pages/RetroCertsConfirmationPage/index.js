@@ -42,7 +42,7 @@ function RetroCertsConfirmationPage(props) {
   return (
     <div id="overflow-wrapper">
       <Header />
-      <main id="certification-page">
+      <main id="certification-page" className="pb-5">
         <div className="container p-4">
           <h1>{t("retrocerts-confirmation.title")}</h1>
           <LanguageSelector className="mt-3 mb-4" />
@@ -71,7 +71,7 @@ function RetroCertsConfirmationPage(props) {
           <h2 className="mt-5">{t("retrocerts-confirmation.header2")}</h2>
           <ListOfWeeks
             weeksToCertify={userData.weeksToCertify}
-            showChecks={!isReturning}
+            showChecks
           />
 
           <h2 className="mt-5">{t("retrocerts-confirmation.header3")}</h2>
