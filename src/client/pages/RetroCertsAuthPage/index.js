@@ -14,9 +14,12 @@ import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import SessionTimer from "../../components/SessionTimer";
 import Inputmask from "inputmask";
+import { autoScroll, TOP, BEHAVIOR } from "../../../utils/autoScroll";
+import { logEvent } from "../../utils";
 
 function RetroCertsAuthPage(props) {
   const { t } = useTranslation();
+  document.title = t("retrocert-login.title");
   const history = useHistory();
 
   const userData = props.userData;
@@ -29,6 +32,9 @@ function RetroCertsAuthPage(props) {
   const [ssn, setSsn] = useState("");
   const [validated, setValidated] = useState(false);
   const [showSsn, setShowSsn] = useState(false);
+  const [showGenericValidationError, setShowGenericValidaitonError] = useState(
+    false
+  );
 
   const status = userData && userData.status;
   const errorTransKey = new Map([
@@ -65,7 +71,17 @@ function RetroCertsAuthPage(props) {
 
     setValidated(true);
 
-    if (!isValid) return;
+    if (!isValid) {
+      setShowGenericValidaitonError(true);
+      autoScroll({
+        y: TOP.y,
+        x: TOP.x,
+        behavior: BEHAVIOR.smooth,
+      });
+      return;
+    }
+
+    setShowGenericValidaitonError(false);
 
     const month = dobMonth.length < 2 ? "0" + dobMonth : dobMonth;
     const day = dobDay.length < 2 ? "0" + dobDay : dobDay;
@@ -98,11 +114,12 @@ function RetroCertsAuthPage(props) {
           sessionStorage.setItem(AUTH_STRINGS.authToken, data.authToken);
           if (data.confirmationNumber) {
             // The user has already completed the retro-certs process.
-            history.push(routes.retroCertsConfirmation);
+            history.push(routes.retroCertsConfirmation, { isReturning: true });
           } else {
             history.push(routes.retroCertsWeeksToCertify);
           }
         }
+        logEvent("RetroCerts", "LoginResponse", data.status);
       })
       .catch((error) => console.error(error));
   };
@@ -136,12 +153,21 @@ function RetroCertsAuthPage(props) {
       : t("retrocert-login.show-ssn");
   }
 
+  const genericValidationError = (
+    <Row>
+      <div className="col-md-8">
+        <Alert variant="danger">{t("generic-validation-error-message")}</Alert>
+      </div>
+    </Row>
+  );
+
   return (
     <div id="overflow-wrapper">
       <Header />
       <main>
         <div className="container p-4">
           <h1>{t("retrocert-login.title")}</h1>
+          {showGenericValidationError && validated && genericValidationError}
           <p>{t("retrocert-login.help")}</p>
           <p>{t("retrocert-login.instructions")}</p>
           <Form noValidate validated={validated} onSubmit={handleSubmit}>

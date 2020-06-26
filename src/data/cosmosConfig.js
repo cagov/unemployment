@@ -4,7 +4,7 @@ const COSMOS_CONFIG = {
   databaseName: "retrocert",
   formsContainerName: "forms",
   usersContainerName: "users",
-  partitionKey: { kind: "Hash", paths: ["/category"] },
+  partitionKey: { kind: "Hash", paths: ["/id"] },
 };
 
 function getRetrocertDbKey() {

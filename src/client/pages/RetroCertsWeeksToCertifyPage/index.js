@@ -14,6 +14,7 @@ import ListOfWeeks from "../../components/ListOfWeeks";
 function RetroCertsWeeksToCertifyPage(props) {
   const userData = props.userData;
   const { t } = useTranslation();
+  document.title = t("retrocerts-weeks.title");
 
   return (
     <div id="overflow-wrapper">
