@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import Col from "react-bootstrap/Col";
 import Feedback from "react-bootstrap/Feedback";
 import Form from "react-bootstrap/Form";
@@ -14,13 +15,20 @@ function PerjuryCheckbox(props) {
       className={isChecked ? "" : "unchecked"}
     >
       <Form.Text as="h3">{t("retrocerts-certification.ack-header")}</Form.Text>
-      <ul>
-        <li>{t("retrocerts-certification.ack-list-item-1")}</li>
-        <li>{t("retrocerts-certification.ack-list-item-2")}</li>
-        <li>{t("retrocerts-certification.ack-list-item-3")}</li>
-        <li>{t("retrocerts-certification.ack-list-item-4")}</li>
-      </ul>
-
+      {props.isPua ? (
+        <ul>
+          <li>{t("retrocerts-certification.ack-list-pua-item-1")}</li>
+          <li>{t("retrocerts-certification.ack-list-pua-item-2")}</li>
+          <li>{t("retrocerts-certification.ack-list-pua-item-3")}</li>
+        </ul>
+      ) : (
+        <ul>
+          <li>{t("retrocerts-certification.ack-list-item-1")}</li>
+          <li>{t("retrocerts-certification.ack-list-item-2")}</li>
+          <li>{t("retrocerts-certification.ack-list-item-3")}</li>
+          <li>{t("retrocerts-certification.ack-list-item-4")}</li>
+        </ul>
+      )}
       <Form.Row>
         <Col md="auto">
           <Form.Check
@@ -42,5 +50,9 @@ function PerjuryCheckbox(props) {
     </Form.Group>
   );
 }
+
+PerjuryCheckbox.propTypes = {
+  isPua: PropTypes.bool,
+};
 
 export default PerjuryCheckbox;
