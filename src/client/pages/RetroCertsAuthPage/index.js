@@ -14,7 +14,7 @@ import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import SessionTimer from "../../components/SessionTimer";
 import Inputmask from "inputmask";
-import { autoScroll, TOP } from "../../../utils/autoScroll";
+import { autoScroll, TOP, BEHAVIOR } from "../../../utils/autoScroll";
 
 function RetroCertsAuthPage(props) {
   const { t } = useTranslation();
@@ -71,7 +71,11 @@ function RetroCertsAuthPage(props) {
 
     if (!isValid) {
       setShowGenericValidaitonError(true);
-      autoScroll(TOP);
+      autoScroll({
+        y: TOP.y,
+        x: TOP.x,
+        behavior: BEHAVIOR.smooth,
+      });
       return;
     }
 

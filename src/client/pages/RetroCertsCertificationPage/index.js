@@ -22,7 +22,7 @@ import DaysSickQuestion from "../../components/DaysSickQuestion";
 import EmployersQuestions from "../../components/EmployersQuestions";
 import DisasterQuestion from "../../components/DisasterQuestion";
 import PerjuryCheckbox from "../../components/PerjuryCheckbox";
-import { autoScroll, TOP } from "../../../utils/autoScroll";
+import { autoScroll, TOP, BEHAVIOR } from "../../../utils/autoScroll";
 
 function RetroCertsCertificationPage(props) {
   const { t } = useTranslation();
@@ -71,10 +71,10 @@ function RetroCertsCertificationPage(props) {
 
     setValidated(false);
     if (headingElement.current) {
-      window.scroll({
-        top: headingElement.current.offsetTop,
-        left: 0,
-        behavior: "smooth",
+      autoScroll({
+        y: headingElement.current.offsetTop,
+        x: 0,
+        behavior: BEHAVIOR.smooth,
       });
     }
   }
@@ -132,7 +132,11 @@ function RetroCertsCertificationPage(props) {
 
     if (!isValid) {
       setShowGenericValidaitonError(true);
-      autoScroll(TOP);
+      autoScroll({
+        y: TOP.y,
+        x: TOP.x,
+        behavior: BEHAVIOR.smooth,
+      });
       return;
     }
     setShowGenericValidaitonError(true);
