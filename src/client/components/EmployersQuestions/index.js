@@ -62,7 +62,7 @@ function EmployerQuestions(props) {
     return (
       <Form.Group controlId={props.employerData.id + name}>
         <Form.Label>{t(tk(name))}</Form.Label>
-        <Form.Text muted>{t(tk(`help-${name}`))}</Form.Text>
+        <Form.Text className="help-text">{t(tk(`help-${name}`))}</Form.Text>
         <Form.Control
           className={options.className}
           type="text"
@@ -106,7 +106,7 @@ function EmployerQuestions(props) {
         <Col md={8}>{renderTextInput("city")}</Col>
         <Form.Group controlId={props.employerData.id + "state-select"} as={Col}>
           <Form.Label>{t(tk("state"))}</Form.Label>
-          <Form.Text muted>{t(tk("help-state"))}</Form.Text>
+          <Form.Text className="help-text">{t(tk("help-state"))}</Form.Text>
           <Form.Control
             as="select"
             value={stateFuncs.state.get}
@@ -129,7 +129,7 @@ function EmployerQuestions(props) {
       })}
 
       <p>{t(tk("lastDateWorked"))}</p>
-      <small className="text-muted">{t(tk("help-lastDateWorked"))}</small>
+      <small className="help-text">{t(tk("help-lastDateWorked"))}</small>
       <Form.Row>
         <Form.Group
           controlId={props.employerData.id + "lastDateWorked-month-question"}
@@ -197,7 +197,9 @@ function EmployerQuestions(props) {
       {stateFuncs.reason.get !== "still-working" && (
         <Form.Group controlId={props.employerData.id + "reason-details"}>
           <Form.Label>{t(tk("moreDetails"))}</Form.Label>
-          <Form.Text muted>{t(tk("help-moreDetails"))}</Form.Text>
+          <Form.Text className="help-text">
+            {t(tk("help-moreDetails"))}
+          </Form.Text>
           <Form.Control
             as="textarea"
             rows="3"

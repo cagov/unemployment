@@ -11,7 +11,7 @@ exports[`<DaysSickQuestion /> renders the component 1`] = `
     If Yes, enter the number of days (1 - 7) you were unable to work.
   </FormLabel>
   <FormText
-    muted={true}
+    className="help-text"
   >
     You must report the numbers of days that you could not work during this week.
   </FormText>

@@ -9,7 +9,7 @@ function PageNotFound() {
   return (
     <div id="overflow-wrapper">
       <Header />
-      <main>
+      <main id="certification-page">
         <div className="container p-4">
           <h1>{t("page-not-found-header")}</h1>
           <p>{t("page-not-found-text")}</p>

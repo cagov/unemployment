@@ -5,7 +5,9 @@ exports[`<PageNotFound /> renders a 404 page 1`] = `
   id="overflow-wrapper"
 >
   <Header />
-  <main>
+  <main
+    id="certification-page"
+  >
     <div
       className="container p-4"
     >

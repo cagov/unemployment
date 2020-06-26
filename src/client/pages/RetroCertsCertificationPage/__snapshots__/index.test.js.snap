@@ -7,6 +7,7 @@ exports[`<RetroCertsCertificationPage /> Certify for 2nd week of 2 1`] = `
   <Header />
   <main
     className="pb-5"
+    id="certification-page"
   >
     <div
       className="container p-4"
@@ -243,6 +244,7 @@ exports[`<RetroCertsCertificationPage /> Certify for one week of 2 1`] = `
   <Header />
   <main
     className="pb-5"
+    id="certification-page"
   >
     <div
       className="container p-4"
