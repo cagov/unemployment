@@ -98,7 +98,7 @@ function EmployerQuestions(props) {
   }
 
   return (
-    <React.Fragment>
+    <div className="follow-up">
       {renderTextInput("employerName")}
       {renderTextInput("address1")}
       {renderTextInput("address2", { required: false })}
@@ -216,7 +216,7 @@ function EmployerQuestions(props) {
           />
         </Form.Group>
       )}
-    </React.Fragment>
+    </div>
   );
 }
 
@@ -285,7 +285,7 @@ function EmployersQuestions(props) {
             <hr />
             <Row className="align-items-baseline">
               <Col md="auto">
-                <h3>
+                <h3 style={{ marginLeft: "1rem" }}>
                   <Trans
                     t={t}
                     i18nKey={tk("heading")}
