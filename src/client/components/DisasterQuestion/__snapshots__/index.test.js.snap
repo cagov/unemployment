@@ -2,7 +2,7 @@
 
 exports[`<DisasterQuestion /> renders the component 1`] = `
 <FormGroup
-  className="disaster-question unchecked"
+  className="follow-up disaster-question unchecked"
   controlId="disaster-question"
 >
   <fieldset>
