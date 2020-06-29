@@ -57,7 +57,7 @@ function RetroCertsWeeksToCertifyPage(props) {
           </Row>
         </div>
       </main>
-      <Footer />
+      <Footer backToTopTag="certification-page" />
     </div>
   );
 }

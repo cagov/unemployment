@@ -19,6 +19,8 @@ exports[`<PageNotFound /> renders a 404 page 1`] = `
       </p>
     </div>
   </main>
-  <Footer />
+  <Footer
+    backToTopTag="certification-page"
+  />
 </div>
 `;

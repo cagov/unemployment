@@ -291,7 +291,7 @@ function RetroCertsAuthPage(props) {
         </div>
       </main>
       <SessionTimer action="clear" setUserData={setUserDataPropType} />
-      <Footer />
+      <Footer backToTopTag="certification-page" />
     </div>
   );
 }

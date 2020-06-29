@@ -233,7 +233,9 @@ exports[`<RetroCertsCertificationPage /> Certify for 2nd week of 2 1`] = `
       </Form>
     </div>
   </main>
-  <Footer />
+  <Footer
+    backToTopTag="certification-page"
+  />
 </div>
 `;
 
@@ -471,7 +473,9 @@ exports[`<RetroCertsCertificationPage /> Certify for one week of 2 1`] = `
       </Form>
     </div>
   </main>
-  <Footer />
+  <Footer
+    backToTopTag="certification-page"
+  />
 </div>
 `;
 
