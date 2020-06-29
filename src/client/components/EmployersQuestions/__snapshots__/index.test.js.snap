@@ -13,13 +13,7 @@ exports[`<EmployersQuestions /> renders the component 1`] = `
       <Col
         md="auto"
       >
-        <h3
-          style={
-            Object {
-              "marginLeft": "1rem",
-            }
-          }
-        >
+        <h3>
           <Trans
             i18nKey="retrocerts-certification.employers.heading"
             t={[Function]}
@@ -90,13 +84,7 @@ exports[`<EmployersQuestions /> renders with 2 income sources 1`] = `
       <Col
         md="auto"
       >
-        <h3
-          style={
-            Object {
-              "marginLeft": "1rem",
-            }
-          }
-        >
+        <h3>
           <Trans
             i18nKey="retrocerts-certification.employers.heading"
             t={[Function]}
@@ -157,13 +145,7 @@ exports[`<EmployersQuestions /> renders with 2 income sources 1`] = `
       <Col
         md="auto"
       >
-        <h3
-          style={
-            Object {
-              "marginLeft": "1rem",
-            }
-          }
-        >
+        <h3>
           <Trans
             i18nKey="retrocerts-certification.employers.heading"
             t={[Function]}
