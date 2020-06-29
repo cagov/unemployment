@@ -156,6 +156,13 @@ input[name="disaster-question"].form-check-input {
 }
 
 #certification-page {
+
+  // This resets the language toggle button to not inherit the changes we made to the form questions background
+  button.bg-light {
+    padding: 6px 12px !important;
+    background-color: #f8f9fa !important;
+  }
+
   .bg-light {
     background-color: #f5f5f5 !important;
     padding: 1rem 1rem 0.5rem 1rem !important;
