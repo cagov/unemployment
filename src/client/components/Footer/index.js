@@ -1,17 +1,25 @@
+import PropTypes from "prop-types";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-function Footer() {
+function Footer(props) {
   const { t } = useTranslation();
+
+  const basePathName = window.location.pathname;
+  const backToTopPathName = basePathName.includes("#")
+    ? `${basePathName.substring(0, basePathName.indexOf("#"))}#${
+        props.backToTopTag
+      }`
+    : `${basePathName}#${props.backToTopTag}`;
 
   return (
     <footer className="footer">
       <Navbar className="justify-content-between" variant="custom" bg="dark">
         <Nav className="flex-wrap">
-          <Nav.Link href="#back-to-top">{t("footer.toTop")}</Nav.Link>
+          <Nav.Link href={backToTopPathName}>{t("footer.toTop")}</Nav.Link>
           <Nav.Link
             target="_blank"
             rel="noopener noreferrer"
@@ -107,7 +115,7 @@ function Footer() {
           <Nav.Link
             target="_blank"
             rel="noopener noreferrer"
-            href="https://www.youtube.com/user/CaliforniaEDDD"
+            href="https://www.youtube.com/user/CaliforniaEDD"
           >
             <img
               src="images/youtube.svg"
@@ -124,5 +132,9 @@ function Footer() {
     </footer>
   );
 }
+
+Footer.propTypes = {
+  backToTopTag: PropTypes.string.isRequired,
+};
 
 export default Footer;

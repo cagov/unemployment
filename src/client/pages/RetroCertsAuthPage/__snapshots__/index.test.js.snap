@@ -246,7 +246,9 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
     action="clear"
     setUserData={[Function]}
   />
-  <Footer />
+  <Footer
+    backToTopTag="certification-page"
+  />
 </div>
 `;
 
@@ -525,7 +527,9 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
     action="clear"
     setUserData={[Function]}
   />
-  <Footer />
+  <Footer
+    backToTopTag="certification-page"
+  />
 </div>
 `;
 
@@ -804,7 +808,9 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
     action="clear"
     setUserData={[Function]}
   />
-  <Footer />
+  <Footer
+    backToTopTag="certification-page"
+  />
 </div>
 `;
 
@@ -1083,6 +1089,8 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
     action="clear"
     setUserData={[Function]}
   />
-  <Footer />
+  <Footer
+    backToTopTag="certification-page"
+  />
 </div>
 `;

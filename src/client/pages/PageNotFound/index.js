@@ -15,7 +15,7 @@ function PageNotFound() {
           <p>{t("page-not-found-text")}</p>
         </div>
       </main>
-      <Footer />
+      <Footer backToTopTag="certification-page" />
     </div>
   );
 }

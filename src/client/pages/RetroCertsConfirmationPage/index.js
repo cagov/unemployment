@@ -69,10 +69,7 @@ function RetroCertsConfirmationPage(props) {
           <p>{t("retrocerts-confirmation.p1a")}</p>
           <p>{t("retrocerts-confirmation.p1b")}</p>
           <h2 className="mt-5">{t("retrocerts-confirmation.header2")}</h2>
-          <ListOfWeeks
-            weeksToCertify={userData.weeksToCertify}
-            showChecks
-          />
+          <ListOfWeeks weeksToCertify={userData.weeksToCertify} showChecks />
 
           <h2 className="mt-5">{t("retrocerts-confirmation.header3")}</h2>
           <p>
@@ -92,7 +89,7 @@ function RetroCertsConfirmationPage(props) {
           </Button>
         </div>
       </main>
-      <Footer />
+      <Footer backToTopTag="certification-page" />
     </div>
   );
 }
