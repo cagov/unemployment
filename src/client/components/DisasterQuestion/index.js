@@ -54,7 +54,7 @@ function DisasterQuestion(props) {
     >
       <fieldset>
         <Form.Label as="legend">{props.questionText}</Form.Label>
-        {disasterRadioChoices.map((value) => (
+        {disasterRadioChoices.map((value, index) => (
           <Form.Check
             key={value}
             label={value}
@@ -62,10 +62,10 @@ function DisasterQuestion(props) {
             id={`disaster-question-radio${value}`}
             onChange={onChange}
             name="disaster-question"
-            value={value}
+            value={`choice-${index + 1}`}
             required
             inline
-            checked={isChecked(value)}
+            checked={isChecked(`choice-${index + 1}`)}
           />
         ))}
         <Form.Control.Feedback type="invalid">
