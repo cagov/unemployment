@@ -17,6 +17,7 @@ import SessionTimer from "../../components/SessionTimer";
 import Inputmask from "inputmask";
 import { autoScroll, TOP, BEHAVIOR } from "../../../utils/autoScroll";
 import { logEvent } from "../../utils";
+import i18n from "../../i18n";
 
 function RetroCertsAuthPage(props) {
   const { t } = useTranslation();
@@ -162,6 +163,8 @@ function RetroCertsAuthPage(props) {
     </Row>
   );
 
+  const currentLanguage = i18n.language;
+
   return (
     <div id="overflow-wrapper">
       <Header />
@@ -268,8 +271,10 @@ function RetroCertsAuthPage(props) {
             <Row>
               <Form.Group controlId="formReCaptcha" className="col-md-6">
                 <ReCAPTCHA
+                  key={currentLanguage}
                   sitekey="6Lf-DQEVAAAAABCMwJ-Gnbqec08RuiPhMZPtZPm9"
                   ref={recaptchaRef}
+                  hl={currentLanguage}
                 />
                 <Form.Text className="text-muted">
                   {t("retrocert-login.recaptcha-text")}
