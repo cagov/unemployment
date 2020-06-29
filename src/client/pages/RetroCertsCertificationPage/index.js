@@ -67,19 +67,11 @@ function RetroCertsCertificationPage(props) {
     );
   }
 
-  // When the user transitions to a new week, return to the top
-  // of the form and reset the form.
+  // When the user transitions to a new week, reset the form.
   if (weekIndexRef.current !== weekIndex) {
     weekIndexRef.current = weekIndex;
 
     setValidated(false);
-    if (headingElement.current) {
-      autoScroll({
-        y: headingElement.current.offsetTop,
-        x: 0,
-        behavior: BEHAVIOR.smooth,
-      });
-    }
   }
 
   // Most (99.99%) users have the same programPlan for all weeks in

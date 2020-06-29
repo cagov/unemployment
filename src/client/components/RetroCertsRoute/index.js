@@ -5,7 +5,8 @@ import { userDataPropType, setUserDataPropType } from "../../commonPropTypes";
 import AUTH_STRINGS from "../../../data/authStrings";
 import routes from "../../../data/routes";
 import PageNotFound from "../../pages/PageNotFound";
-import SessionTimer, { clearAuthToken } from "../../components/SessionTimer";
+import SessionTimer, { clearAuthToken } from "../SessionTimer";
+import ScrollToTop from "../ScrollToTop";
 
 function userIsAuthenticated() {
   return !!sessionStorage.getItem(AUTH_STRINGS.authToken);
@@ -29,6 +30,7 @@ function AuthorizedPageWrapper(props) {
 
   return (
     <React.Fragment>
+      <ScrollToTop />
       <Component routeComputedMatch={computedMatch} {...pageProps} />
       <SessionTimer
         action="startOrUpdate"
