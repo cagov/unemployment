@@ -132,7 +132,7 @@ function Footer(props) {
 }
 
 Footer.propTypes = {
-  backToTopTag: PropTypes.string,
+  backToTopTag: PropTypes.string.isRequired,
 };
 
 export default Footer;
