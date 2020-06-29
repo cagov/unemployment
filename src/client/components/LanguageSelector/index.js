@@ -10,9 +10,6 @@ function LanguageSelector(props) {
 
   const toggleLanguage = () => {
     i18n.changeLanguage(isEnglish() ? "es" : "en");
-    if (props.reloadPage) {
-      location.reload();
-    }
   };
 
   return (
@@ -28,7 +25,6 @@ function LanguageSelector(props) {
 
 LanguageSelector.propTypes = {
   className: PropTypes.string,
-  reloadPage: PropTypes.bool,
 };
 
 export default LanguageSelector;

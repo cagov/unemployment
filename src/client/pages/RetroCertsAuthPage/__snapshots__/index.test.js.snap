@@ -16,7 +16,6 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
       </h1>
       <LanguageSelector
         className="mt-3 mb-4"
-        reloadPage={true}
       />
       <p>
         You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits from the week ending February 8, 2020, through the week ending May 9, 2020.
@@ -224,6 +223,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
           >
             <AsyncScriptLoader(ReCAPTCHA)
               hl="en"
+              key="en"
               sitekey="6Lf-DQEVAAAAABCMwJ-Gnbqec08RuiPhMZPtZPm9"
             />
             <FormText
@@ -268,7 +268,6 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
       </h1>
       <LanguageSelector
         className="mt-3 mb-4"
-        reloadPage={true}
       />
       <p>
         You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits from the week ending February 8, 2020, through the week ending May 9, 2020.
@@ -476,6 +475,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
           >
             <AsyncScriptLoader(ReCAPTCHA)
               hl="en"
+              key="en"
               sitekey="6Lf-DQEVAAAAABCMwJ-Gnbqec08RuiPhMZPtZPm9"
             />
             <FormText
@@ -549,7 +549,6 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
       </h1>
       <LanguageSelector
         className="mt-3 mb-4"
-        reloadPage={true}
       />
       <Row
         noGutters={false}
@@ -786,6 +785,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
           >
             <AsyncScriptLoader(ReCAPTCHA)
               hl="en"
+              key="en"
               sitekey="6Lf-DQEVAAAAABCMwJ-Gnbqec08RuiPhMZPtZPm9"
             />
             <FormText
@@ -830,7 +830,6 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
       </h1>
       <LanguageSelector
         className="mt-3 mb-4"
-        reloadPage={true}
       />
       <p>
         You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits from the week ending February 8, 2020, through the week ending May 9, 2020.
@@ -1038,6 +1037,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
           >
             <AsyncScriptLoader(ReCAPTCHA)
               hl="en"
+              key="en"
               sitekey="6Lf-DQEVAAAAABCMwJ-Gnbqec08RuiPhMZPtZPm9"
             />
             <FormText
