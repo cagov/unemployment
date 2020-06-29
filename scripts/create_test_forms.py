@@ -25,7 +25,7 @@ def generate_test_form_json(test_form_data):
       forms.append({
           'id': uuid,
           'authToken': uuid,
-          'formData': "test"
+          'formData': "initial data"
       })
   with open('test_forms.json', 'w') as outfile:
       outfile.write(json.dumps(sorted(forms, key=lambda d: d['id'])))
@@ -33,9 +33,9 @@ def generate_test_form_json(test_form_data):
 def generate_test_form_csv(test_form_data):
   with open('test_forms.csv', 'w') as outfile:
       writer = csv.writer(outfile, delimiter=',', lineterminator='\n')
-      writer.writerow(['authToken'])
+      writer.writerow(['authToken', 'formData'])
       for uuid in test_form_data:
-        writer.writerow([uuid])
+        writer.writerow([uuid, 'updated data'])
 
 data = generate_test_form_data(NUM_TEST_FORMS)
 generate_test_form_json(data)
