@@ -25,7 +25,7 @@ exports[`<Footer /> renders the component 1`] = `
           }
         }
         disabled={false}
-        href="http://localhost/#back-to-top"
+        href="/#back-to-top"
       >
         Back to Top
       </NavLink>

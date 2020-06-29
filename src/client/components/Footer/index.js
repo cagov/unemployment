@@ -8,16 +8,18 @@ import { useTranslation } from "react-i18next";
 function Footer(props) {
   const { t } = useTranslation();
 
-  const baseUrl = window.location.href;
-  const backToTopUrl = baseUrl.includes("#")
-    ? `${baseUrl.substring(0, baseUrl.indexOf("#"))}#${props.backToTopTag}`
-    : `${baseUrl}#${props.backToTopTag}`;
+  const basePathName = window.location.pathname;
+  const backToTopPathName = basePathName.includes("#")
+    ? `${basePathName.substring(0, basePathName.indexOf("#"))}#${
+        props.backToTopTag
+      }`
+    : `${basePathName}#${props.backToTopTag}`;
 
   return (
     <footer className="footer">
       <Navbar className="justify-content-between" variant="custom" bg="dark">
         <Nav className="flex-wrap">
-          <Nav.Link href={backToTopUrl}>{t("footer.toTop")}</Nav.Link>
+          <Nav.Link href={backToTopPathName}>{t("footer.toTop")}</Nav.Link>
           <Nav.Link
             target="_blank"
             rel="noopener noreferrer"
