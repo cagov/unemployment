@@ -6,19 +6,25 @@ import { useTranslation } from "react-i18next";
 function DisasterQuestion(props) {
   const { t } = useTranslation();
 
-  const [userChoice, setUserChoice] = useState(props.choice);
+  const propsValue = props.choice && props.choice.split(" ")[0];
+
+  // userChoice is a value from choice-1 to choice-14.
+  const [userChoice, setUserChoice] = useState(propsValue);
 
   const [isDirty, setIsDirty] = useState(
     props.choice !== undefined || userChoice !== undefined
   );
 
   function onChange(event) {
-    setUserChoice(event.target.value);
+    const value = event.target.value;
+    setUserChoice(value);
     setIsDirty(true);
 
     props.onChange({
       name: "disasterChoice",
-      value: event.target.value,
+      value: `${value} ${t(
+        "retrocerts-certification.disaster-choices." + value
+      )}`,
     });
   }
 
@@ -54,7 +60,7 @@ function DisasterQuestion(props) {
     >
       <fieldset>
         <Form.Label as="legend">{props.questionText}</Form.Label>
-        {disasterRadioChoices.map((value) => (
+        {disasterRadioChoices.map((value, index) => (
           <Form.Check
             key={value}
             label={value}
@@ -62,10 +68,10 @@ function DisasterQuestion(props) {
             id={`disaster-question-radio${value}`}
             onChange={onChange}
             name="disaster-question"
-            value={value}
+            value={`choice-${index + 1}`}
             required
             inline
-            checked={isChecked(value)}
+            checked={isChecked(`choice-${index + 1}`)}
           />
         ))}
         <Form.Control.Feedback type="invalid">
