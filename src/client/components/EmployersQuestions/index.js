@@ -104,7 +104,13 @@ function EmployerQuestions(props) {
       {renderTextInput("address2", { required: false })}
       <Form.Row>
         <Col md={8}>{renderTextInput("city")}</Col>
-        <Form.Group controlId={props.employerData.id + "state-select"} as={Col}>
+      </Form.Row>
+      <Form.Row>
+        <Form.Group
+          className="col-md-8"
+          controlId={props.employerData.id + "state-select"}
+          as={Col}
+        >
           <Form.Label>{t(tk("state"))}</Form.Label>
           <Form.Text className="help-text">{t(tk("help-state"))}</Form.Text>
           <Form.Control
@@ -112,6 +118,7 @@ function EmployerQuestions(props) {
             value={stateFuncs.state.get}
             onChange={(e) => handleChange("state", e.target.value)}
             required
+            className="col-md-4"
           >
             <option />
             {stateCodes.map((code) => (
