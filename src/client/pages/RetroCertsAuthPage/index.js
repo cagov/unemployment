@@ -17,6 +17,7 @@ import SessionTimer from "../../components/SessionTimer";
 import Inputmask from "inputmask";
 import { autoScroll, TOP, BEHAVIOR } from "../../../utils/autoScroll";
 import { logEvent } from "../../utils";
+import i18n from "../../i18n";
 
 function RetroCertsAuthPage(props) {
   const { t } = useTranslation();
@@ -162,13 +163,15 @@ function RetroCertsAuthPage(props) {
     </Row>
   );
 
+  const currentLanguage = i18n.language;
+
   return (
     <div id="overflow-wrapper">
       <Header />
       <main id="certification-page">
         <div className="container p-4">
           <h1>{t("retrocert-login.title")}</h1>
-          <LanguageSelector className="mt-3 mb-4" />
+          <LanguageSelector className="mt-3 mb-4" reloadPage />
           {showGenericValidationError && validated && genericValidationError}
           {errorTransKey === "retrocert-login.session-timed-out" && errorAlert}
           <p>{t("retrocert-login.help")}</p>
@@ -270,6 +273,7 @@ function RetroCertsAuthPage(props) {
                 <ReCAPTCHA
                   sitekey="6Lf-DQEVAAAAABCMwJ-Gnbqec08RuiPhMZPtZPm9"
                   ref={recaptchaRef}
+                  hl={currentLanguage}
                 />
                 <Form.Text className="text-muted">
                   {t("retrocert-login.recaptcha-text")}
