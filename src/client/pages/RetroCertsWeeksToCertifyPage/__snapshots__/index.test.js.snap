@@ -105,6 +105,8 @@ exports[`<RetroCertsWeeksToCertifyPage /> has user data 1`] = `
       </Row>
     </div>
   </main>
-  <Footer />
+  <Footer
+    backToTopTag="certification-page"
+  />
 </div>
 `;

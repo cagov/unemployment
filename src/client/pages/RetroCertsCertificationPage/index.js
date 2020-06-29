@@ -348,7 +348,7 @@ function RetroCertsCertificationPage(props) {
           </Form>
         </div>
       </main>
-      <Footer />
+      <Footer backToTopTag="certification-page" />
     </div>
   );
 }

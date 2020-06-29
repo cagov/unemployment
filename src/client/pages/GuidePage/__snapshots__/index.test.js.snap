@@ -11,6 +11,8 @@ exports[`<GuidePage /> renders the component 1`] = `
     <Subheader />
     <TabbedContainer />
   </main>
-  <Footer />
+  <Footer
+    backToTopTag="back-to-top"
+  />
 </div>
 `;

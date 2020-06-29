@@ -13,7 +13,7 @@ function GuidePage() {
         <Subheader />
         <TabbedContainer />
       </main>
-      <Footer />
+      <Footer backToTopTag="back-to-top" />
     </div>
   );
 }
