@@ -285,7 +285,7 @@ function EmployersQuestions(props) {
             <hr />
             <Row className="align-items-baseline">
               <Col md="auto">
-                <h3 style={{ marginLeft: "1rem" }}>
+                <h3>
                   <Trans
                     t={t}
                     i18nKey={tk("heading")}
