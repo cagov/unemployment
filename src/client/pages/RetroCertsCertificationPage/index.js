@@ -199,7 +199,7 @@ function RetroCertsCertificationPage(props) {
       : ["couldNotAcceptWork", "didYouLook", "refuseWork", "schoolOrTraining"];
 
   const genericValidationError = (
-    <div className="col-md-8">
+    <div className="col-md-12">
       <Alert variant="danger">{t("generic-validation-error-message")}</Alert>
     </div>
   );
