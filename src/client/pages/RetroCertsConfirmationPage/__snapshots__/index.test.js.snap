@@ -12,6 +12,7 @@ exports[`<RetroCertsConfirmationPage /> with confirmation number 1`] = `
 >
   <Header />
   <main
+    className="pb-5"
     id="certification-page"
   >
     <div
@@ -78,7 +79,7 @@ exports[`<RetroCertsConfirmationPage /> with confirmation number 1`] = `
         Retroactive Certification Weeks
       </h2>
       <ListOfWeeks
-        showChecks={false}
+        showChecks={true}
         weeksToCertify={
           Array [
             0,
