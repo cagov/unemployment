@@ -56,7 +56,7 @@ function RetroCertsAuthPage(props) {
 
   const errorAlert = errorTransKey && (
     <Row>
-      <div className="col-md-6">
+      <div className="col-md-12">
         <Alert variant="danger">{t(errorTransKey)}</Alert>
       </div>
     </Row>
@@ -157,7 +157,7 @@ function RetroCertsAuthPage(props) {
 
   const genericValidationError = (
     <Row>
-      <div className="col-md-8">
+      <div className="col-md-12">
         <Alert variant="danger">{t("generic-validation-error-message")}</Alert>
       </div>
     </Row>

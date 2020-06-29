@@ -491,7 +491,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
           noGutters={false}
         >
           <div
-            className="col-md-6"
+            className="col-md-12"
           >
             <Alert
               closeLabel="Close alert"
@@ -558,7 +558,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
         noGutters={false}
       >
         <div
-          className="col-md-6"
+          className="col-md-12"
         >
           <Alert
             closeLabel="Close alert"
@@ -1057,7 +1057,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
           noGutters={false}
         >
           <div
-            className="col-md-6"
+            className="col-md-12"
           >
             <Alert
               closeLabel="Close alert"

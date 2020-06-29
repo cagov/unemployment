@@ -56,7 +56,7 @@ function DisasterQuestion(props) {
   return (
     <Form.Group
       controlId="disaster-question"
-      className={`disaster-question ${getValidationClass()}`}
+      className={`follow-up disaster-question ${getValidationClass()}`}
     >
       <fieldset>
         <Form.Label as="legend">{props.questionText}</Form.Label>

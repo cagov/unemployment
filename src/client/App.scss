@@ -128,12 +128,13 @@ footer {
 // radio question was answered for the feedback to show.
 .was-validated .unchecked .invalid-feedback {
   display: block;
+  color:  #CC2435;
 }
 
 // For help text on pages and components
 .help-text {
-  font-size: 20px;
-  color: #595959;
+  font-size: 18px;
+  color: #666;
 }
 
 // This helps keep the certification pages from becoming too wide
@@ -141,4 +142,46 @@ footer {
   .container {
     max-width: 800px !important;
   }
+}
+
+// This is for increasing the contrast of follow-up questions
+.follow-up {
+  margin: 8px -8px 0px;
+  padding: 0.5rem;
+  background-color: white;
+}
+
+input[name="disaster-question"].form-check-input {
+  margin-right: .5rem;
+}
+
+#certification-page {
+
+  // This resets the language toggle button to not inherit the changes we made to the form questions background
+  button.bg-light, .bg-light.btn {
+    padding: 6px 12px !important;
+    background-color: #f8f9fa !important;
+  }
+
+  .bg-light {
+    background-color: #f5f5f5 !important;
+    padding: 1rem 1rem 0.5rem 1rem !important;
+  }
+
+  .form-group {
+    margin-bottom: 0;
+  }
+
+  legend.form-label {
+    margin-bottom: 4px;
+  }
+
+  small.help-text {
+    margin-top: 0px;
+    margin-bottom: 1.5rem;
+  }
+}
+
+body {
+  color: #222222;
 }

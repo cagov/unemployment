@@ -23,7 +23,7 @@ function DaysSickQuestion(props) {
   }
 
   return (
-    <Form.Group controlId="days-sick">
+    <Form.Group controlId="days-sick" className="follow-up">
       <Form.Label>{props.questionText}</Form.Label>
       <Form.Text className="help-text">{props.helpText}</Form.Text>
       <Form.Control
