@@ -222,6 +222,8 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
             controlId="formReCaptcha"
           >
             <AsyncScriptLoader(ReCAPTCHA)
+              hl="en"
+              key="en"
               sitekey="6Lf-DQEVAAAAABCMwJ-Gnbqec08RuiPhMZPtZPm9"
             />
             <FormText
@@ -474,6 +476,8 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
             controlId="formReCaptcha"
           >
             <AsyncScriptLoader(ReCAPTCHA)
+              hl="en"
+              key="en"
               sitekey="6Lf-DQEVAAAAABCMwJ-Gnbqec08RuiPhMZPtZPm9"
             />
             <FormText
@@ -784,6 +788,8 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
             controlId="formReCaptcha"
           >
             <AsyncScriptLoader(ReCAPTCHA)
+              hl="en"
+              key="en"
               sitekey="6Lf-DQEVAAAAABCMwJ-Gnbqec08RuiPhMZPtZPm9"
             />
             <FormText
@@ -1036,6 +1042,8 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
             controlId="formReCaptcha"
           >
             <AsyncScriptLoader(ReCAPTCHA)
+              hl="en"
+              key="en"
               sitekey="6Lf-DQEVAAAAABCMwJ-Gnbqec08RuiPhMZPtZPm9"
             />
             <FormText
