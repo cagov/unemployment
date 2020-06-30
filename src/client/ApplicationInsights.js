@@ -18,7 +18,7 @@ class ApplicationInsights extends Component {
   componentDidMount() {
     const { history } = this.props;
     const { initialized } = this.state;
-    const AppInsightsInstrumentationKey = this.props.instrumentationKey; // PUT YOUR KEY HERE
+    const AppInsightsInstrumentationKey = this.props.instrumentationKey;
     if (
       !initialized &&
       Boolean(AppInsightsInstrumentationKey) &&

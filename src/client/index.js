@@ -7,6 +7,7 @@ import { BrowserRouter } from "react-router-dom";
 import React from "react";
 import { render } from "react-dom";
 import ApplicationInsights from "./ApplicationInsights";
+import AZURE_CONFIG from "../data/azureConfig.js";
 import smoothscroll from "smoothscroll-polyfill";
 
 // Enables scrolling (not just smooth scrolling) on Edge and IE
@@ -15,7 +16,7 @@ smoothscroll.polyfill();
 render(
   <BrowserRouter>
     <ApplicationInsights
-      instrumentationKey="57ab6c1e-220e-47fa-96ab-fe49b6a9dc73"
+      instrumentationKey={AZURE_CONFIG.applicationInsightsKey}
       after={() => {}}
     >
       <App />
