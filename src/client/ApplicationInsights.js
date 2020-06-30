@@ -1,3 +1,4 @@
+// From: https://github.com/Azure-Samples/application-insights-react-demo/blob/master/src/telemetry-provider.jsx
 import React, { Component, Fragment } from "react";
 import { withAITracking } from "@microsoft/applicationinsights-react-js";
 import { ai } from "../services/azureApplicationInsights";
