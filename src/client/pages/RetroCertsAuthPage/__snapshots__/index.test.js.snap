@@ -17,6 +17,30 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
       <LanguageSelector
         className="mt-3 mb-4"
       />
+      <Alert
+        closeLabel="Close alert"
+        show={true}
+        transition={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": Object {
+              "appear": false,
+              "in": false,
+              "mountOnEnter": false,
+              "timeout": 300,
+              "unmountOnExit": false,
+            },
+            "displayName": "Fade",
+            "render": [Function],
+          }
+        }
+        variant="danger"
+      >
+        <h2>
+          Retroactive Certification for Unemployment is Unavailable
+        </h2>
+        We're working to restore it as soon as possible. We apologize for any inconvenience. Please check back later.
+      </Alert>
       <p>
         You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits from the week ending February 8, 2020, through the week ending May 9, 2020.
       </p>
@@ -273,6 +297,30 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
       <LanguageSelector
         className="mt-3 mb-4"
       />
+      <Alert
+        closeLabel="Close alert"
+        show={true}
+        transition={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": Object {
+              "appear": false,
+              "in": false,
+              "mountOnEnter": false,
+              "timeout": 300,
+              "unmountOnExit": false,
+            },
+            "displayName": "Fade",
+            "render": [Function],
+          }
+        }
+        variant="danger"
+      >
+        <h2>
+          Retroactive Certification for Unemployment is Unavailable
+        </h2>
+        We're working to restore it as soon as possible. We apologize for any inconvenience. Please check back later.
+      </Alert>
       <p>
         You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits from the week ending February 8, 2020, through the week ending May 9, 2020.
       </p>
@@ -558,6 +606,30 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
       <LanguageSelector
         className="mt-3 mb-4"
       />
+      <Alert
+        closeLabel="Close alert"
+        show={true}
+        transition={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": Object {
+              "appear": false,
+              "in": false,
+              "mountOnEnter": false,
+              "timeout": 300,
+              "unmountOnExit": false,
+            },
+            "displayName": "Fade",
+            "render": [Function],
+          }
+        }
+        variant="danger"
+      >
+        <h2>
+          Retroactive Certification for Unemployment is Unavailable
+        </h2>
+        We're working to restore it as soon as possible. We apologize for any inconvenience. Please check back later.
+      </Alert>
       <Row
         noGutters={false}
       >
@@ -843,6 +915,30 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
       <LanguageSelector
         className="mt-3 mb-4"
       />
+      <Alert
+        closeLabel="Close alert"
+        show={true}
+        transition={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": Object {
+              "appear": false,
+              "in": false,
+              "mountOnEnter": false,
+              "timeout": 300,
+              "unmountOnExit": false,
+            },
+            "displayName": "Fade",
+            "render": [Function],
+          }
+        }
+        variant="danger"
+      >
+        <h2>
+          Retroactive Certification for Unemployment is Unavailable
+        </h2>
+        We're working to restore it as soon as possible. We apologize for any inconvenience. Please check back later.
+      </Alert>
       <p>
         You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits from the week ending February 8, 2020, through the week ending May 9, 2020.
       </p>
