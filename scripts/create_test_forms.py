@@ -6,7 +6,7 @@ import json
 import csv
 import uuid
 
-NUM_TEST_FORMS = 100
+NUM_TEST_FORMS = 100000
 
 def get_uuid():
   return 'test' + str(uuid.uuid4())
@@ -33,9 +33,9 @@ def generate_test_form_json(test_form_data):
 def generate_test_form_csv(test_form_data):
   with open('test_forms.csv', 'w') as outfile:
       writer = csv.writer(outfile, delimiter=',', lineterminator='\n')
-      writer.writerow(['authToken', 'formData'])
+      writer.writerow(['authToken'])
       for uuid in test_form_data:
-        writer.writerow([uuid, 'updated data'])
+        writer.writerow([uuid])
 
 data = generate_test_form_data(NUM_TEST_FORMS)
 generate_test_form_json(data)
