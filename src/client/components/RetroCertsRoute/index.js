@@ -4,7 +4,6 @@ import React from "react";
 import { userDataPropType, setUserDataPropType } from "../../commonPropTypes";
 import AUTH_STRINGS from "../../../data/authStrings";
 import routes from "../../../data/routes";
-import PageNotFound from "../../pages/PageNotFound";
 import SessionTimer, { clearAuthToken } from "../SessionTimer";
 import ScrollToTop from "../ScrollToTop";
 
@@ -52,16 +51,13 @@ AuthorizedPageWrapper.propTypes = {
 function RetroCertsRoute(props) {
   const {
     pageComponent: Component,
-    isProduction,
     pageProps,
     requiresAuthentication,
     ...routeProps
   } = props;
 
   let routeChild = <div>Loading...</div>;
-  if (isProduction) {
-    routeChild = <PageNotFound />;
-  } else if (!requiresAuthentication) {
+  if (!requiresAuthentication) {
     routeChild = <Component {...pageProps} />;
   } else if (userIsAuthenticated() && userDataIsSet(pageProps.userData)) {
     routeChild = <AuthorizedPageWrapper {...props} />;
@@ -98,7 +94,6 @@ function RetroCertsRoute(props) {
 
 RetroCertsRoute.propTypes = {
   exact: PropTypes.bool,
-  isProduction: PropTypes.bool,
   pageComponent: PropTypes.func.isRequired,
   pageProps: PropTypes.shape({
     userData: userDataPropType,
