@@ -18,7 +18,6 @@ exports[`<App /> renders application with retro-certs 1`] = `
       path="/guide"
     />
     <RetroCertsRoute
-      isProduction={false}
       pageComponent={[Function]}
       pageProps={
         Object {
@@ -32,7 +31,6 @@ exports[`<App /> renders application with retro-certs 1`] = `
       requiresAuthentication={true}
     />
     <RetroCertsRoute
-      isProduction={false}
       pageComponent={[Function]}
       pageProps={
         Object {
@@ -46,7 +44,6 @@ exports[`<App /> renders application with retro-certs 1`] = `
       requiresAuthentication={true}
     />
     <RetroCertsRoute
-      isProduction={false}
       pageComponent={[Function]}
       pageProps={
         Object {
@@ -60,7 +57,6 @@ exports[`<App /> renders application with retro-certs 1`] = `
       requiresAuthentication={true}
     />
     <RetroCertsRoute
-      isProduction={false}
       pageComponent={[Function]}
       pageProps={
         Object {
@@ -97,7 +93,6 @@ exports[`<App /> renders application without retro-certs 1`] = `
       path="/guide"
     />
     <RetroCertsRoute
-      isProduction={true}
       pageComponent={[Function]}
       pageProps={
         Object {
@@ -111,7 +106,6 @@ exports[`<App /> renders application without retro-certs 1`] = `
       requiresAuthentication={true}
     />
     <RetroCertsRoute
-      isProduction={true}
       pageComponent={[Function]}
       pageProps={
         Object {
@@ -125,7 +119,6 @@ exports[`<App /> renders application without retro-certs 1`] = `
       requiresAuthentication={true}
     />
     <RetroCertsRoute
-      isProduction={true}
       pageComponent={[Function]}
       pageProps={
         Object {
@@ -139,7 +132,6 @@ exports[`<App /> renders application without retro-certs 1`] = `
       requiresAuthentication={true}
     />
     <RetroCertsRoute
-      isProduction={true}
       pageComponent={[Function]}
       pageProps={
         Object {

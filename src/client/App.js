@@ -1,6 +1,5 @@
 import React, { Suspense, useState, useRef } from "react";
 import { Switch, Route, Redirect, useHistory } from "react-router-dom";
-import PropTypes from "prop-types";
 import RetroCertsRoute from "./components/RetroCertsRoute";
 import GuidePage from "./pages/GuidePage";
 import PageNotFound from "./pages/PageNotFound";
@@ -12,9 +11,7 @@ import AUTH_STRINGS from "../data/authStrings";
 import routes from "../data/routes";
 import { logPage } from "./utils.js";
 
-export default function App(props) {
-  const hostname = props.hostname || window.location.hostname;
-  const isProduction = hostname === "unemployment.edd.ca.gov";
+export default function App() {
   const history = useHistory();
   const initialPageLoad = useRef(true);
 
@@ -41,7 +38,6 @@ export default function App(props) {
         <Route path="/guide" component={GuidePage} />
         <RetroCertsRoute
           path={routes.retroCertsWeeksToCertify}
-          isProduction={isProduction}
           pageComponent={RetroCertsWeeksToCertifyPage}
           pageProps={{
             userData: retroCertsUserData,
@@ -51,7 +47,6 @@ export default function App(props) {
         />
         <RetroCertsRoute
           path={routes.retroCertsCertify + "/:week"}
-          isProduction={isProduction}
           pageComponent={RetroCertsCertificationPage}
           pageProps={{
             userData: retroCertsUserData,
@@ -61,7 +56,6 @@ export default function App(props) {
         />
         <RetroCertsRoute
           path={routes.retroCertsConfirmation}
-          isProduction={isProduction}
           pageComponent={RetroCertsConfirmationPage}
           pageProps={{
             userData: retroCertsUserData,
@@ -71,7 +65,6 @@ export default function App(props) {
         />
         <RetroCertsRoute
           path={routes.retroCertsAuth}
-          isProduction={isProduction}
           pageComponent={RetroCertsAuthPage}
           pageProps={{
             userData: retroCertsUserData,
@@ -85,7 +78,3 @@ export default function App(props) {
     </Suspense>
   );
 }
-
-App.propTypes = {
-  hostname: PropTypes.string,
-};

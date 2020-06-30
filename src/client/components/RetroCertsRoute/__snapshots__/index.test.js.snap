@@ -10,9 +10,10 @@ exports[`<RetroCertsRoute /> basic route 1`] = `
 
 exports[`<RetroCertsRoute /> route in production (should be PageNotFound) 1`] = `
 <Route
+  isProduction={true}
   path="/path"
 >
-  <PageNotFound />
+  <TestComponent />
 </Route>
 `;
 
