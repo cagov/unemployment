@@ -182,6 +182,12 @@ input[name="disaster-question"].form-check-input {
   }
 }
 
+#certification-page.questions {
+  label.form-label {
+    margin-bottom: 0;
+  }
+}
+
 body {
   color: #222222;
 }
