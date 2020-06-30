@@ -186,6 +186,10 @@ input[name="disaster-question"].form-check-input {
   label.form-label {
     margin-bottom: 0;
   }
+  div.form-group {
+    margin-top: 0 !important;
+    margin-bottom: 1rem;
+  }
 }
 
 body {
