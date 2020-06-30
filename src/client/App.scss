@@ -62,6 +62,16 @@ a {
   text-decoration: none;
 }
 
+input[type="radio"]
+{
+  -ms-transform: scale(1.01); /* IE */
+  -moz-transform: scale(1.01); /* FF */
+  -webkit-transform: scale(1.01); /* Safari and Chrome */
+  -o-transform: scale(1.01); /* Opera */
+  transform: scale(1.01);
+  padding: 10px;
+}
+
 .btn {
   font-weight: bold;
 }
