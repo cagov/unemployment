@@ -194,7 +194,7 @@ function RetroCertsAuthPage(props) {
                 </Form.Control.Feedback>
               </Form.Group>
             </Row>
-            <div className="mb-n2">{`* ${t(
+            <div className="mb-n2 mt-4">{`* ${t(
               "retrocert-login.dob-heading"
             )}`}</div>
             <small className="text-muted">
@@ -244,7 +244,7 @@ function RetroCertsAuthPage(props) {
                 </Form.Control.Feedback>
               </Form.Group>
             </Row>
-            <Row>
+            <Row className="mt-4">
               <Form.Group controlId="formSsn" className="col-md-6">
                 <Form.Label>{`* ${t("retrocert-login.ssn-label")}`}</Form.Label>
                 <Form.Text muted>{t("retrocert-login.ssn-hint")}</Form.Text>
@@ -284,7 +284,7 @@ function RetroCertsAuthPage(props) {
             {(errorTransKey === "retrocert-login.invalid-user-error" ||
               errorTransKey === "retrocert-login.invalid-recaptcha-error") &&
               errorAlert}
-            <Button variant="secondary" type="submit">
+            <Button variant="secondary" type="submit" className="mt-4">
               {t("retrocert-login.submit")}
             </Button>
           </Form>

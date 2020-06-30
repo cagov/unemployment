@@ -59,7 +59,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
           </FormGroup>
         </Row>
         <div
-          className="mb-n2"
+          className="mb-n2 mt-4"
         >
           * Date of Birth
         </div>
@@ -166,6 +166,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
           </FormGroup>
         </Row>
         <Row
+          className="mt-4"
           noGutters={false}
         >
           <FormGroup
@@ -235,6 +236,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
         </Row>
         <Button
           active={false}
+          className="mt-4"
           disabled={false}
           type="submit"
           variant="secondary"
@@ -313,7 +315,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
           </FormGroup>
         </Row>
         <div
-          className="mb-n2"
+          className="mb-n2 mt-4"
         >
           * Date of Birth
         </div>
@@ -420,6 +422,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
           </FormGroup>
         </Row>
         <Row
+          className="mt-4"
           noGutters={false}
         >
           <FormGroup
@@ -518,6 +521,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
         </Row>
         <Button
           active={false}
+          className="mt-4"
           disabled={false}
           type="submit"
           variant="secondary"
@@ -625,7 +629,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
           </FormGroup>
         </Row>
         <div
-          className="mb-n2"
+          className="mb-n2 mt-4"
         >
           * Date of Birth
         </div>
@@ -732,6 +736,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
           </FormGroup>
         </Row>
         <Row
+          className="mt-4"
           noGutters={false}
         >
           <FormGroup
@@ -801,6 +806,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
         </Row>
         <Button
           active={false}
+          className="mt-4"
           disabled={false}
           type="submit"
           variant="secondary"
@@ -879,7 +885,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
           </FormGroup>
         </Row>
         <div
-          className="mb-n2"
+          className="mb-n2 mt-4"
         >
           * Date of Birth
         </div>
@@ -986,6 +992,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
           </FormGroup>
         </Row>
         <Row
+          className="mt-4"
           noGutters={false}
         >
           <FormGroup
@@ -1084,6 +1091,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
         </Row>
         <Button
           active={false}
+          className="mt-4"
           disabled={false}
           type="submit"
           variant="secondary"
