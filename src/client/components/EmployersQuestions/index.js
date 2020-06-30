@@ -60,7 +60,7 @@ function EmployerQuestions(props) {
     options = options || {};
     const required = options.required === undefined ? true : options.required;
     return (
-      <Form.Group controlId={props.employerData.id + name}>
+      <Form.Group controlId={props.employerData.id + name} className="mb-3">
         <Form.Label>{t(tk(name))}</Form.Label>
         <Form.Text className="help-text">{t(tk(`help-${name}`))}</Form.Text>
         <Form.Control
@@ -105,7 +105,7 @@ function EmployerQuestions(props) {
       <Form.Row>
         <Col md={8}>{renderTextInput("city")}</Col>
       </Form.Row>
-      <Form.Row>
+      <Form.Row className="mb-3">
         <Form.Group
           className="col-md-8"
           controlId={props.employerData.id + "state-select"}
@@ -137,7 +137,7 @@ function EmployerQuestions(props) {
 
       <p>{t(tk("lastDateWorked"))}</p>
       <small className="help-text">{t(tk("help-lastDateWorked"))}</small>
-      <Form.Row>
+      <Form.Row className="mb-3">
         <Form.Group
           controlId={props.employerData.id + "lastDateWorked-month-question"}
           as={Col}

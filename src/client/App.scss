@@ -177,8 +177,18 @@ input[name="disaster-question"].form-check-input {
   }
 
   small.help-text {
-    margin-top: 0px;
-    margin-bottom: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+#certification-page.questions {
+  label.form-label {
+    margin-bottom: 0;
+  }
+  div.form-group {
+    margin-top: 0 !important;
+    margin-bottom: 1rem;
   }
 }
 
