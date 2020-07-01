@@ -95,7 +95,7 @@ function RetroCertsAuthPage(props) {
       },
       body: JSON.stringify({
         lastName: lastName.trim(),
-        dob: `${dobYear}-${month}-${day}`.trim(),
+        dob: `${month}-${day}-${dobYear}`.trim(),
         ssn: ssn.inputmask
           ? ssn.inputmask.unmaskedvalue()
           : ssn.trim().replace(/-/g, ""),
