@@ -95,7 +95,7 @@ function RetroCertsAuthPage(props) {
       },
       body: JSON.stringify({
         lastName: lastName.trim(),
-        dob: `${dobYear}-${month}-${day}`.trim(),
+        dob: `${month}-${day}-${dobYear}`.trim(),
         ssn: ssn.inputmask
           ? ssn.inputmask.unmaskedvalue()
           : ssn.trim().replace(/-/g, ""),
@@ -172,10 +172,6 @@ function RetroCertsAuthPage(props) {
         <div className="container p-4">
           <h1>{t("retrocert-login.title")}</h1>
           <LanguageSelector className="mt-3 mb-4" />
-          <Alert variant="danger">
-            <h2>{t("maintenance-header")}</h2>
-            {t("maintenance-error")}
-          </Alert>
           {showGenericValidationError && validated && genericValidationError}
           {errorTransKey === "retrocert-login.session-timed-out" && errorAlert}
           <p>{t("retrocert-login.help")}</p>
