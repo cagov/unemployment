@@ -25,6 +25,14 @@ function RetroCertsConfirmationPage(props) {
     return <Redirect to={routes.retroCertsWeeksToCertify} />;
   }
 
+  // For historical reasons the confirmation code is stored as a uuidv4
+  // hash in the database, but we display only the last 7 characters to the user.
+  const shorterLength = 7;
+  const startIndex = userData.confirmationNumber.length - shorterLength;
+  const shortConfirmationNumber = userData.confirmationNumber
+    .substr(startIndex)
+    .toUpperCase();
+
   // Log out the user since they are done!
   clearAuthToken();
 
@@ -63,7 +71,7 @@ function RetroCertsConfirmationPage(props) {
             <Trans
               t={t}
               i18nKey="retrocerts-confirmation.p1"
-              values={{ confirmationNumber: userData.confirmationNumber }}
+              values={{ confirmationNumber: shortConfirmationNumber }}
             />
           </p>
           <p>{t("retrocerts-confirmation.p1a")}</p>
