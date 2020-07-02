@@ -69,8 +69,8 @@ TEST_USERS = [
 
 def get_hash(name, dob, ssn):
   assert len(ssn) == 9
-  h = hashlib.sha256(bytes(name.lower() + dob.strftime('%Y-%m-%d') + ssn, 'utf-8'))
-  return h.hexdigest()
+  h = hashlib.sha256(bytes(name.lower() + dob.strftime('%m-%d-%Y') + ssn, 'utf-8'))
+  return '0x' + h.hexdigest().upper()
 
 def generate_test_users():
   users = []
