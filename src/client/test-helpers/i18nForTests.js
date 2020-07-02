@@ -3,7 +3,7 @@
  * is what we'll then use for rendering locale strings in our UI.
  * @see https://react.i18next.com/
  */
-import englishLocale from "../../../public/locales/en/translation.json";
+import englishLocale from "../locales/en/translation.json";
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
