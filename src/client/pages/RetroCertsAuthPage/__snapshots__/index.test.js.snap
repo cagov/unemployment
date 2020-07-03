@@ -18,7 +18,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
         className="mt-3 mb-4"
       />
       <p>
-        You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits from the week ending February 8, 2020, through the week ending May 9, 2020.
+        You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits you received for weeks of your claim early in the pandemic through the week ending May 9, 2020. The exact dates you are required to certify for will depend on your specific claim history.
       </p>
       <p>
         Enter your information to confirm if you have any benefit weeks that you need to retroactively certify.
@@ -274,7 +274,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
         className="mt-3 mb-4"
       />
       <p>
-        You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits from the week ending February 8, 2020, through the week ending May 9, 2020.
+        You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits you received for weeks of your claim early in the pandemic through the week ending May 9, 2020. The exact dates you are required to certify for will depend on your specific claim history.
       </p>
       <p>
         Enter your information to confirm if you have any benefit weeks that you need to retroactively certify.
@@ -588,7 +588,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
         </div>
       </Row>
       <p>
-        You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits from the week ending February 8, 2020, through the week ending May 9, 2020.
+        You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits you received for weeks of your claim early in the pandemic through the week ending May 9, 2020. The exact dates you are required to certify for will depend on your specific claim history.
       </p>
       <p>
         Enter your information to confirm if you have any benefit weeks that you need to retroactively certify.
@@ -844,7 +844,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
         className="mt-3 mb-4"
       />
       <p>
-        You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits from the week ending February 8, 2020, through the week ending May 9, 2020.
+        You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits you received for weeks of your claim early in the pandemic through the week ending May 9, 2020. The exact dates you are required to certify for will depend on your specific claim history.
       </p>
       <p>
         Enter your information to confirm if you have any benefit weeks that you need to retroactively certify.
