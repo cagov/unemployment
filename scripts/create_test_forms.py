@@ -2,8 +2,8 @@
 '''Generate test form entries/items as JSON to use for load testing.
 '''
 
-import json
 import csv
+import json
 import uuid
 
 NUM_TEST_FORMS = 100000
