@@ -13,7 +13,7 @@ import bisect
 use_subset_of_data = False  # Set to True if you're developing and want operations to take less time
 generate_from_source = False  # Set to True to regenerate intermediate data first, vs loading saved intermediate data
 
-# A couple notes for future readers:
+# A few caveats for future readers:
 #
 # On performance: modin enables using multiple cores for pandas
 # but is "not yet optimized" for all groupby operations,
@@ -21,6 +21,9 @@ generate_from_source = False  # Set to True to regenerate intermediate data firs
 
 # On storing lists, like in this script: Pandas isn't designed to hold lists in series
 # https://meta.stackoverflow.com/questions/373714/generic-dont-do-it-answer
+
+# This script was used for a one-off import, and debugging of that import, so there hasn't
+# been effort put into making it usable by anyone other than the author.
 
 # Increase amount of data displayed in terminal
 pd.set_option('display.max_rows', 500)
@@ -113,6 +116,7 @@ def generate_final_file():
 
     # pass in a dataframe with deduplicated hashes
     # returns the rows with hashes present in SOURCE_DATA and not in HASHES_INCOMPLETE_FILENAME
+    # outputs them to MISSING_HASHES_FILENAME
     def find_missing_hashes(source):
         INCOMPLETE_HASH_LIST_HASH_LENGTH = 8 # incomplete list has truncated hashes
         START_INDEX = HASH_LENGTH - INCOMPLETE_HASH_LIST_HASH_LENGTH
