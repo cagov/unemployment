@@ -1,7 +1,13 @@
 const COSMOS_CONFIG = require("./cosmosConfig");
 const CosmosClient = require("@azure/cosmos").CosmosClient;
 const { v4: uuidv4 } = require("uuid");
+const https = require("https");
 const shajs = require("sha.js");
+
+const agent = new https.Agent({
+  keepAlive: true,
+  maxSockets: 20,
+});
 
 const {
   endpoint,
@@ -12,7 +18,7 @@ const {
   partitionKey,
 } = COSMOS_CONFIG;
 
-const client = new CosmosClient({ endpoint, key });
+const client = new CosmosClient({ agent, endpoint, key });
 /**
  * Create the database if it does not exist
  */
@@ -88,21 +94,8 @@ async function getUserById(id) {
 async function getUserByNameDobSsn(lastName, dob, ssn) {
   const hashKey = lastName.toLowerCase() + dob + ssn;
 
-  // The hash values from EDD are of UTF-16 LE strings.
-  // From https://stackoverflow.com/a/24386744
-  const hashKeyUtf16LE = new Uint8Array(hashKey.length * 2);
-  for (let i = 0; i < hashKey.length; i++) {
-    hashKeyUtf16LE[i * 2] = hashKey.charCodeAt(i); // & 0xff;
-    hashKeyUtf16LE[i * 2 + 1] = hashKey.charCodeAt(i) >> 8; // & 0xff;
-  }
-
-  const eddId = shajs("sha256").update(hashKeyUtf16LE).digest("hex");
-  let user = await getUserById(`0x${eddId.toUpperCase()}`);
-  if (!user) {
-    // If we don't find the user, try a hash of the bytes as utf8 (for compat with the staging server).
-    const oldId = shajs("sha256").update(hashKey).digest("hex");
-    user = await getUserById(oldId);
-  }
+  const hashId = shajs("sha256").update(hashKey).digest("hex");
+  const user = await getUserById(`0x${hashId.toUpperCase()}`);
 
   return user;
 }

@@ -7,11 +7,13 @@ import bisect
 # (PUA, UI full time, or UI part time; or an array of these three values), and weeksToCertify
 # (an array of integer indices corresponding to possible weeks)
 
+# Input csv should have these headers: SHA256_hash,WeekEndingDate,Program,SeekWorkPlan
+
 # Options to set before running the script
 use_subset_of_data = False  # Set to True if you're developing and want operations to take less time
-generate_from_source = True  # Set to True to regenerate intermediate data first, vs loading saved intermediate data
+generate_from_source = False  # Set to True to regenerate intermediate data first, vs loading saved intermediate data
 
-# A couple notes for future readers:
+# A few caveats for future readers:
 #
 # On performance: modin enables using multiple cores for pandas
 # but is "not yet optimized" for all groupby operations,
@@ -19,6 +21,9 @@ generate_from_source = True  # Set to True to regenerate intermediate data first
 
 # On storing lists, like in this script: Pandas isn't designed to hold lists in series
 # https://meta.stackoverflow.com/questions/373714/generic-dont-do-it-answer
+
+# This script was used for a one-off import, and debugging of that import, so there hasn't
+# been effort put into making it usable by anyone other than the author.
 
 # Increase amount of data displayed in terminal
 pd.set_option('display.max_rows', 500)
@@ -55,7 +60,10 @@ INTERMEDIATE_DATA_100K_FILENAME = "100k.pkl"  # Generate a smaller file of 100k 
 DUPLICATE_HASHES_FILENAME = "duplicate_hashes.xlsx"
 FINAL_DATA_100K_FILENAME = "100k.json"
 FINAL_DATA_FILENAME = "users.json"
+HASHES_INCOMPLETE_FILENAME = "prod_db_users.csv"
+MISSING_HASHES_FILENAME = "missing_prod_db_users.json"
 FINAL_COLUMN_NAMES = ["id", "programPlan", "weeksToCertify"]
+
 
 intermediate_filename = INTERMEDIATE_DATA_FILENAME
 final_filename = FINAL_DATA_FILENAME
@@ -106,6 +114,26 @@ def generate_final_file():
         first_hashes.at[index, "WeekEndingDates"] = combined_weeks
         first_hashes.at[index, "SeekWorkPlan"] = combined_plans
 
+    # pass in a dataframe with deduplicated hashes
+    # returns the rows with hashes present in SOURCE_DATA and not in HASHES_INCOMPLETE_FILENAME
+    # outputs them to MISSING_HASHES_FILENAME
+    def find_missing_hashes(source):
+        INCOMPLETE_HASH_LIST_HASH_LENGTH = 8 # incomplete list has truncated hashes
+        START_INDEX = HASH_LENGTH - INCOMPLETE_HASH_LIST_HASH_LENGTH
+        df = pd.read_csv(HASHES_INCOMPLETE_FILENAME)
+        correct_hash_list = source["SHA256_hash"].str.slice(start=START_INDEX).values.tolist()
+        print(f"There are {len(correct_hash_list)} entries in the correct list")
+        incomplete_hash_list = df["hash"].values.tolist()
+        print(f"There are {len(incomplete_hash_list)} entries in the incomplete list")
+        missing_hashes = np.sort(np.setdiff1d(correct_hash_list, incomplete_hash_list, True))
+        print(f"There are {len(missing_hashes)} missing hashes which end in:")
+        print(missing_hashes)
+        missing_rows = source[source["SHA256_hash"].str.endswith("|".join(missing_hashes))]
+        missing_rows.columns = FINAL_COLUMN_NAMES
+        missing_rows.to_json(MISSING_HASHES_FILENAME, orient="records")
+        print(f"There are {len(missing_rows)} entries in {MISSING_HASHES_FILENAME}")
+        print(missing_rows)
+
     print(f"Importing {intermediate_filename}...")
     df = pd.read_pickle(intermediate_filename)
     print(f"Processing {len(df)} rows...")
@@ -145,6 +173,8 @@ def generate_final_file():
     print(f"There are now {len(processed)} rows remaining due to {len(first_hashes)}",
           "users who were part of more than one plan (DUA/PUA, UI full time, UI part time)")
     assert len(df) - len(first_hashes) == len(processed)
+
+    # find_missing_hashes(processed)
 
     processed.columns = FINAL_COLUMN_NAMES
     processed.to_json(final_filename, orient="records")
