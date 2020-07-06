@@ -122,6 +122,8 @@ exports[`<RetroCertsConfirmationPage /> with confirmation number 1`] = `
       </Button>
     </div>
   </main>
-  <Footer />
+  <Footer
+    backToTopTag="certification-page"
+  />
 </div>
 `;

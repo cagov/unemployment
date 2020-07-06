@@ -25,7 +25,7 @@ exports[`<Footer /> renders the component 1`] = `
           }
         }
         disabled={false}
-        href="#back-to-top"
+        href="/#back-to-top"
       >
         Back to Top
       </NavLink>
@@ -218,7 +218,7 @@ exports[`<Footer /> renders the component 1`] = `
           }
         }
         disabled={false}
-        href="https://www.youtube.com/user/CaliforniaEDDD"
+        href="https://www.youtube.com/user/CaliforniaEDD"
         rel="noopener noreferrer"
         target="_blank"
       >

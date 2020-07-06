@@ -67,19 +67,11 @@ function RetroCertsCertificationPage(props) {
     );
   }
 
-  // When the user transitions to a new week, return to the top
-  // of the form and reset the form.
+  // When the user transitions to a new week, reset the form.
   if (weekIndexRef.current !== weekIndex) {
     weekIndexRef.current = weekIndex;
 
     setValidated(false);
-    if (headingElement.current) {
-      autoScroll({
-        y: headingElement.current.offsetTop,
-        x: 0,
-        behavior: BEHAVIOR.smooth,
-      });
-    }
   }
 
   // Most (99.99%) users have the same programPlan for all weeks in
@@ -199,14 +191,14 @@ function RetroCertsCertificationPage(props) {
       : ["couldNotAcceptWork", "didYouLook", "refuseWork", "schoolOrTraining"];
 
   const genericValidationError = (
-    <div className="col-md-8">
+    <div className="row col-md-12">
       <Alert variant="danger">{t("generic-validation-error-message")}</Alert>
     </div>
   );
   return (
     <div id="overflow-wrapper">
       <Header />
-      <main id="certification-page" className="pb-5">
+      <main id="certification-page" className="pb-5 questions">
         <div className="container p-4">
           <h1 ref={headingElement}>
             {t("retrocerts-certification.question-page-title")}
@@ -348,7 +340,7 @@ function RetroCertsCertificationPage(props) {
           </Form>
         </div>
       </main>
-      <Footer />
+      <Footer backToTopTag="certification-page" />
     </div>
   );
 }

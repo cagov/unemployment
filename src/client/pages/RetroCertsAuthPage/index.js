@@ -17,6 +17,7 @@ import SessionTimer from "../../components/SessionTimer";
 import Inputmask from "inputmask";
 import { autoScroll, TOP, BEHAVIOR } from "../../../utils/autoScroll";
 import { logEvent } from "../../utils";
+import i18n from "../../i18n";
 
 function RetroCertsAuthPage(props) {
   const { t } = useTranslation();
@@ -55,7 +56,7 @@ function RetroCertsAuthPage(props) {
 
   const errorAlert = errorTransKey && (
     <Row>
-      <div className="col-md-6">
+      <div className="col-md-12">
         <Alert variant="danger">{t(errorTransKey)}</Alert>
       </div>
     </Row>
@@ -94,7 +95,7 @@ function RetroCertsAuthPage(props) {
       },
       body: JSON.stringify({
         lastName: lastName.trim(),
-        dob: `${dobYear}-${month}-${day}`.trim(),
+        dob: `${month}-${day}-${dobYear}`.trim(),
         ssn: ssn.inputmask
           ? ssn.inputmask.unmaskedvalue()
           : ssn.trim().replace(/-/g, ""),
@@ -156,11 +157,13 @@ function RetroCertsAuthPage(props) {
 
   const genericValidationError = (
     <Row>
-      <div className="col-md-8">
+      <div className="col-md-12">
         <Alert variant="danger">{t("generic-validation-error-message")}</Alert>
       </div>
     </Row>
   );
+
+  const currentLanguage = i18n.language;
 
   return (
     <div id="overflow-wrapper">
@@ -191,7 +194,7 @@ function RetroCertsAuthPage(props) {
                 </Form.Control.Feedback>
               </Form.Group>
             </Row>
-            <div className="mb-n2">{`* ${t(
+            <div className="mb-n2 mt-4">{`* ${t(
               "retrocert-login.dob-heading"
             )}`}</div>
             <small className="text-muted">
@@ -241,7 +244,7 @@ function RetroCertsAuthPage(props) {
                 </Form.Control.Feedback>
               </Form.Group>
             </Row>
-            <Row>
+            <Row className="mt-4">
               <Form.Group controlId="formSsn" className="col-md-6">
                 <Form.Label>{`* ${t("retrocert-login.ssn-label")}`}</Form.Label>
                 <Form.Text muted>{t("retrocert-login.ssn-hint")}</Form.Text>
@@ -268,8 +271,10 @@ function RetroCertsAuthPage(props) {
             <Row>
               <Form.Group controlId="formReCaptcha" className="col-md-6">
                 <ReCAPTCHA
+                  key={currentLanguage}
                   sitekey="6Lf-DQEVAAAAABCMwJ-Gnbqec08RuiPhMZPtZPm9"
                   ref={recaptchaRef}
+                  hl={currentLanguage}
                 />
                 <Form.Text className="text-muted">
                   {t("retrocert-login.recaptcha-text")}
@@ -279,14 +284,14 @@ function RetroCertsAuthPage(props) {
             {(errorTransKey === "retrocert-login.invalid-user-error" ||
               errorTransKey === "retrocert-login.invalid-recaptcha-error") &&
               errorAlert}
-            <Button variant="secondary" type="submit">
+            <Button variant="secondary" type="submit" className="mt-4">
               {t("retrocert-login.submit")}
             </Button>
           </Form>
         </div>
       </main>
       <SessionTimer action="clear" setUserData={setUserDataPropType} />
-      <Footer />
+      <Footer backToTopTag="certification-page" />
     </div>
   );
 }

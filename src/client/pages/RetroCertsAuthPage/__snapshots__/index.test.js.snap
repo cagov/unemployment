@@ -18,7 +18,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
         className="mt-3 mb-4"
       />
       <p>
-        You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits from the week ending February 8, 2020, through the week ending May 9, 2020.
+        You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits you received for weeks of your claim early in the pandemic through the week ending May 9, 2020. The exact dates you are required to certify for will depend on your specific claim history.
       </p>
       <p>
         Enter your information to confirm if you have any benefit weeks that you need to retroactively certify.
@@ -59,7 +59,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
           </FormGroup>
         </Row>
         <div
-          className="mb-n2"
+          className="mb-n2 mt-4"
         >
           * Date of Birth
         </div>
@@ -166,6 +166,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
           </FormGroup>
         </Row>
         <Row
+          className="mt-4"
           noGutters={false}
         >
           <FormGroup
@@ -222,6 +223,8 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
             controlId="formReCaptcha"
           >
             <AsyncScriptLoader(ReCAPTCHA)
+              hl="en"
+              key="en"
               sitekey="6Lf-DQEVAAAAABCMwJ-Gnbqec08RuiPhMZPtZPm9"
             />
             <FormText
@@ -233,6 +236,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
         </Row>
         <Button
           active={false}
+          className="mt-4"
           disabled={false}
           type="submit"
           variant="secondary"
@@ -246,7 +250,9 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
     action="clear"
     setUserData={[Function]}
   />
-  <Footer />
+  <Footer
+    backToTopTag="certification-page"
+  />
 </div>
 `;
 
@@ -268,7 +274,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
         className="mt-3 mb-4"
       />
       <p>
-        You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits from the week ending February 8, 2020, through the week ending May 9, 2020.
+        You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits you received for weeks of your claim early in the pandemic through the week ending May 9, 2020. The exact dates you are required to certify for will depend on your specific claim history.
       </p>
       <p>
         Enter your information to confirm if you have any benefit weeks that you need to retroactively certify.
@@ -309,7 +315,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
           </FormGroup>
         </Row>
         <div
-          className="mb-n2"
+          className="mb-n2 mt-4"
         >
           * Date of Birth
         </div>
@@ -416,6 +422,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
           </FormGroup>
         </Row>
         <Row
+          className="mt-4"
           noGutters={false}
         >
           <FormGroup
@@ -472,6 +479,8 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
             controlId="formReCaptcha"
           >
             <AsyncScriptLoader(ReCAPTCHA)
+              hl="en"
+              key="en"
               sitekey="6Lf-DQEVAAAAABCMwJ-Gnbqec08RuiPhMZPtZPm9"
             />
             <FormText
@@ -485,7 +494,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
           noGutters={false}
         >
           <div
-            className="col-md-6"
+            className="col-md-12"
           >
             <Alert
               closeLabel="Close alert"
@@ -512,6 +521,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
         </Row>
         <Button
           active={false}
+          className="mt-4"
           disabled={false}
           type="submit"
           variant="secondary"
@@ -525,7 +535,9 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
     action="clear"
     setUserData={[Function]}
   />
-  <Footer />
+  <Footer
+    backToTopTag="certification-page"
+  />
 </div>
 `;
 
@@ -550,7 +562,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
         noGutters={false}
       >
         <div
-          className="col-md-6"
+          className="col-md-12"
         >
           <Alert
             closeLabel="Close alert"
@@ -576,7 +588,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
         </div>
       </Row>
       <p>
-        You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits from the week ending February 8, 2020, through the week ending May 9, 2020.
+        You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits you received for weeks of your claim early in the pandemic through the week ending May 9, 2020. The exact dates you are required to certify for will depend on your specific claim history.
       </p>
       <p>
         Enter your information to confirm if you have any benefit weeks that you need to retroactively certify.
@@ -617,7 +629,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
           </FormGroup>
         </Row>
         <div
-          className="mb-n2"
+          className="mb-n2 mt-4"
         >
           * Date of Birth
         </div>
@@ -724,6 +736,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
           </FormGroup>
         </Row>
         <Row
+          className="mt-4"
           noGutters={false}
         >
           <FormGroup
@@ -780,6 +793,8 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
             controlId="formReCaptcha"
           >
             <AsyncScriptLoader(ReCAPTCHA)
+              hl="en"
+              key="en"
               sitekey="6Lf-DQEVAAAAABCMwJ-Gnbqec08RuiPhMZPtZPm9"
             />
             <FormText
@@ -791,6 +806,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
         </Row>
         <Button
           active={false}
+          className="mt-4"
           disabled={false}
           type="submit"
           variant="secondary"
@@ -804,7 +820,9 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
     action="clear"
     setUserData={[Function]}
   />
-  <Footer />
+  <Footer
+    backToTopTag="certification-page"
+  />
 </div>
 `;
 
@@ -826,7 +844,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
         className="mt-3 mb-4"
       />
       <p>
-        You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits from the week ending February 8, 2020, through the week ending May 9, 2020.
+        You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits you received for weeks of your claim early in the pandemic through the week ending May 9, 2020. The exact dates you are required to certify for will depend on your specific claim history.
       </p>
       <p>
         Enter your information to confirm if you have any benefit weeks that you need to retroactively certify.
@@ -867,7 +885,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
           </FormGroup>
         </Row>
         <div
-          className="mb-n2"
+          className="mb-n2 mt-4"
         >
           * Date of Birth
         </div>
@@ -974,6 +992,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
           </FormGroup>
         </Row>
         <Row
+          className="mt-4"
           noGutters={false}
         >
           <FormGroup
@@ -1030,6 +1049,8 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
             controlId="formReCaptcha"
           >
             <AsyncScriptLoader(ReCAPTCHA)
+              hl="en"
+              key="en"
               sitekey="6Lf-DQEVAAAAABCMwJ-Gnbqec08RuiPhMZPtZPm9"
             />
             <FormText
@@ -1043,7 +1064,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
           noGutters={false}
         >
           <div
-            className="col-md-6"
+            className="col-md-12"
           >
             <Alert
               closeLabel="Close alert"
@@ -1070,6 +1091,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
         </Row>
         <Button
           active={false}
+          className="mt-4"
           disabled={false}
           type="submit"
           variant="secondary"
@@ -1083,6 +1105,8 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
     action="clear"
     setUserData={[Function]}
   />
-  <Footer />
+  <Footer
+    backToTopTag="certification-page"
+  />
 </div>
 `;

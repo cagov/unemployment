@@ -2,6 +2,7 @@
 
 exports[`<DaysSickQuestion /> renders the component 1`] = `
 <FormGroup
+  className="follow-up"
   controlId="days-sick"
 >
   <FormLabel

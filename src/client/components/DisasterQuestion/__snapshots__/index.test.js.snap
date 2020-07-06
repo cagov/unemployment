@@ -2,7 +2,7 @@
 
 exports[`<DisasterQuestion /> renders the component 1`] = `
 <FormGroup
-  className="disaster-question unchecked"
+  className="follow-up disaster-question unchecked"
   controlId="disaster-question"
 >
   <fieldset>
@@ -25,7 +25,7 @@ exports[`<DisasterQuestion /> renders the component 1`] = `
       required={true}
       title=""
       type="radio"
-      value="You have been diagnosed with COVID-19."
+      value="choice-1"
     />
     <FormCheck
       checked={false}
@@ -41,7 +41,7 @@ exports[`<DisasterQuestion /> renders the component 1`] = `
       required={true}
       title=""
       type="radio"
-      value="You have COVID-19 symptoms and are seeking a diagnosis."
+      value="choice-2"
     />
     <FormCheck
       checked={false}
@@ -57,7 +57,7 @@ exports[`<DisasterQuestion /> renders the component 1`] = `
       required={true}
       title=""
       type="radio"
-      value="A member of your household has COVID-19."
+      value="choice-3"
     />
     <FormCheck
       checked={false}
@@ -73,7 +73,7 @@ exports[`<DisasterQuestion /> renders the component 1`] = `
       required={true}
       title=""
       type="radio"
-      value="You are taking care of your family or household member who has COVID-19."
+      value="choice-4"
     />
     <FormCheck
       checked={false}
@@ -89,7 +89,7 @@ exports[`<DisasterQuestion /> renders the component 1`] = `
       required={true}
       title=""
       type="radio"
-      value="You had to quit your job as a direct result of COVID-19."
+      value="choice-5"
     />
     <FormCheck
       checked={false}
@@ -105,7 +105,7 @@ exports[`<DisasterQuestion /> renders the component 1`] = `
       required={true}
       title=""
       type="radio"
-      value="Your place of employment is closed as a direct result of COVID-19. (This may apply if your business is open or partially re-opened but your position is not needed due to COVID-19 limitations on the business)."
+      value="choice-6"
     />
     <FormCheck
       checked={false}
@@ -121,7 +121,7 @@ exports[`<DisasterQuestion /> renders the component 1`] = `
       required={true}
       title=""
       type="radio"
-      value="You cannot reach your workplace because of a quarantine as a direct result of COVID-19. (This may apply if you cannot reach your workplace because of a state or municipal order restricting travel to combat the spread of COVID-19, such as a stay-home or shelter-in-place order.)"
+      value="choice-7"
     />
     <FormCheck
       checked={false}
@@ -137,7 +137,7 @@ exports[`<DisasterQuestion /> renders the component 1`] = `
       required={true}
       title=""
       type="radio"
-      value="You cannot reach your workplace because your health care provider advised you to quarantine due to COVID-19 concerns."
+      value="choice-8"
     />
     <FormCheck
       checked={false}
@@ -153,7 +153,7 @@ exports[`<DisasterQuestion /> renders the component 1`] = `
       required={true}
       title=""
       type="radio"
-      value="You cannot work because you have primary responsibility for caring for a child or another person and their school or care facility is closed as a direct result of COVID-19."
+      value="choice-9"
     />
     <FormCheck
       checked={false}
@@ -169,7 +169,7 @@ exports[`<DisasterQuestion /> renders the component 1`] = `
       required={true}
       title=""
       type="radio"
-      value="You had a definite date to start a job that is no longer available as a direct result of COVID-19."
+      value="choice-10"
     />
     <FormCheck
       checked={false}
@@ -185,7 +185,7 @@ exports[`<DisasterQuestion /> renders the component 1`] = `
       required={true}
       title=""
       type="radio"
-      value="You had a definite date to start a job but cannot reach that job as a direct result of COVID-19."
+      value="choice-11"
     />
     <FormCheck
       checked={false}
@@ -201,7 +201,7 @@ exports[`<DisasterQuestion /> renders the component 1`] = `
       required={true}
       title=""
       type="radio"
-      value="You are an independent contractor with reportable income (ex. IRS Form 1099) and you are forced to stop working because COVID-19 has severely limited your ability to continue performing your customary work activities."
+      value="choice-12"
     />
     <FormCheck
       checked={false}
@@ -217,7 +217,7 @@ exports[`<DisasterQuestion /> renders the component 1`] = `
       required={true}
       title=""
       type="radio"
-      value="You became the major financial support for your household because the head of household died as a direct result of COVID-19."
+      value="choice-13"
     />
     <FormCheck
       checked={false}
@@ -233,7 +233,7 @@ exports[`<DisasterQuestion /> renders the component 1`] = `
       required={true}
       title=""
       type="radio"
-      value="None of these options apply to me."
+      value="choice-14"
     />
     <Feedback
       type="invalid"
