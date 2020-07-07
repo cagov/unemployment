@@ -4,6 +4,7 @@ node_modules
 public/**/*.css
 public/**/*.js
 public/**/*.map
+public/**/*.js.license.txt
 
 # .hot files are generated for hot reloading
 public/.hot/*
@@ -20,5 +21,3 @@ test-output
 # User json files
 batch_users.json
 test_users.json
-
-*.js.license.txt
