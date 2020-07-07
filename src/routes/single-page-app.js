@@ -16,7 +16,7 @@ singlePageAppRouter.get(
   "^/locales/:lang([a-zA-Z]{2})/translation.json",
   (req, res) => {
     try {
-      const translation = require(`../client/locales/${req.params.lang}/translation.json`);
+      const translation = require(`../data/locales/${req.params.lang}/translation.json`);
       res
         .status(200)
         .set({ Accept: "application/json" })
