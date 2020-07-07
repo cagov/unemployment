@@ -1,7 +1,13 @@
 const COSMOS_CONFIG = require("./cosmosConfig");
 const CosmosClient = require("@azure/cosmos").CosmosClient;
 const { v4: uuidv4 } = require("uuid");
+const https = require("https");
 const shajs = require("sha.js");
+
+const agent = new https.Agent({
+  keepAlive: true,
+  maxSockets: 20,
+});
 
 const {
   endpoint,
@@ -12,7 +18,7 @@ const {
   partitionKey,
 } = COSMOS_CONFIG;
 
-const client = new CosmosClient({ endpoint, key });
+const client = new CosmosClient({ agent, endpoint, key });
 /**
  * Create the database if it does not exist
  */
