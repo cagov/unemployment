@@ -8,14 +8,12 @@ const manifestScripts = require("../data/manifest-scripts.json");
 const manifestStyles = require("../data/manifest-styles.json");
 const pageRoutes = require("../data/routes");
 
-const cryptoRandomString = require("crypto-random-string");
 const buildPolicies = require("../utils/csp");
 
 const singlePageAppRouter = Router();
 
 singlePageAppRouter.get("/*", (req, res) => {
-  const nonce = cryptoRandomString({ length: 32, type: "base64" });
-  const contentSecurityPolicy = buildPolicies(nonce);
+  const contentSecurityPolicy = buildPolicies();
 
   const cssURL = getCdnPath(`/build/css/${manifestStyles["App.css"]}`);
 
@@ -33,7 +31,6 @@ singlePageAppRouter.get("/*", (req, res) => {
       <base href="/">
       <!-- Global site tag (gtag.js) - Google Analytics -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=UA-3419582-2"></script>
-      <script src="/gtag.js" nonce="${nonce}"></script>
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -45,9 +42,7 @@ singlePageAppRouter.get("/*", (req, res) => {
       <link rel="icon" href="${getCdnPath(
         "/favicon.ico"
       )}" type="image/x-icon" />
-      <script src="${getCdnPath(
-        manifestScripts.client.js
-      )}" nonce="${nonce}" defer></script>
+      <script src="${getCdnPath(manifestScripts.client.js)}" defer></script>
     </head>
     <body>
       <div id="root"></div>

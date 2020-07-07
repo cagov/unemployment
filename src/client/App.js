@@ -19,6 +19,16 @@ export default function App() {
     status: AUTH_STRINGS.statusCode.notLoggedIn,
   });
 
+  /*eslint-disable */
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = (...args) => dataLayer.push(args);
+  gtag("js", new Date());
+  // For details see: https://support.google.com/analytics/answer/9310895?hl=en
+  // https://developers.google.com/analytics/devguides/collection/gtagjs/ip-anonymization
+  gtag("config", "UA-3419582-2", { anonymize_ip: true }); // www.ca.gov
+  gtag("config", "UA-3419582-31", { anonymize_ip: true }); // edd.ca.gov
+  /* eslint-enable */
+
   if (initialPageLoad.current) {
     initialPageLoad.current = false;
 

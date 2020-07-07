@@ -1,4 +1,4 @@
-function buildPolicies(nonce) {
+function buildPolicies() {
   const policies = {
     default: ["'self'"],
     img: ["'self'", "www.google-analytics.com", "*.doubleclick.net"],
@@ -6,13 +6,20 @@ function buildPolicies(nonce) {
     frame: ["www.google.com"],
     font: ["fonts.googleapis.com", "fonts.gstatic.com"],
     script: [
+      "'self'",
       "www.googletagmanager.com",
       "www.google-analytics.com",
       "*.google.com",
-      `'nonce-${nonce}'`,
     ],
     connect: ["'self'"],
     object: ["'none'"],
+    scriptElem: [
+      "'self'",
+      "*.google.com",
+      "www.googletagmanager.com",
+      "www.google-analytics.com",
+      "www.gstatic.com",
+    ],
   };
 
   if (process.env.NODE_ENV === "development") {
@@ -29,7 +36,8 @@ function buildPolicies(nonce) {
     `font-src ${policies.font.join(" ")};` +
     `script-src ${policies.script.join(" ")};` +
     `connect-src ${policies.connect.join(" ")};` +
-    `object-src ${policies.object.join(" ")};`
+    `object-src ${policies.object.join(" ")};` +
+    `script-src-elem ${policies.scriptElem.join(" ")}`
   );
 }
 
