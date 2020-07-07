@@ -67,13 +67,13 @@ TEST_USERS = [
 def get_hash(name, dob, ssn):
   assert len(ssn) == 9
   h = hashlib.sha256(bytes(name.lower() + dob.strftime('%m-%d-%Y') + ssn, 'utf-8'))
-  return h.hexdigest()
+  return h.hexdigest().upper()
 
 def generate_test_users():
   users = []
   for user in TEST_USERS:
       users.append({
-          'id': get_hash(*user[:3]),
+          'id': '0x' + get_hash(*user[:3]),
           'programPlan': user[3],
           'weeksToCertify': user[4],
           'source': SOURCE,
