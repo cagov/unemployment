@@ -12,6 +12,27 @@ const buildPolicies = require("../utils/csp");
 
 const singlePageAppRouter = Router();
 
+singlePageAppRouter.get(
+  "^/locales/:lang([a-zA-Z]{2})/translation.json",
+  (req, res) => {
+    try {
+      const translation = require(`../data/locales/${req.params.lang}/translation.json`);
+      res
+        .status(200)
+        .set({ Accept: "application/json" })
+        .set("Cache-Control", "public, must-revalidate")
+        .set("Referrer-Policy", "strict-origin-when-cross-origin")
+        .send(translation);
+    } catch {
+      // Handles a request where the desired language does not exist
+      res
+        .status(404)
+        .set("Referrer-Policy", "strict-origin-when-cross-origin")
+        .send();
+    }
+  }
+);
+
 singlePageAppRouter.get("/*", (req, res) => {
   const contentSecurityPolicy = buildPolicies();
 
