@@ -20,3 +20,5 @@ test-output
 # User json files
 batch_users.json
 test_users.json
+
+*.js.license.txt
