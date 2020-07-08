@@ -43,6 +43,7 @@ exports[`<RetroCertsCertificationPage /> Certify for 2nd week of 2 1`] = `
             }
           }
         />
+         Your previous weeks are saved.
       </p>
       <Form
         inline={false}

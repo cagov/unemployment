@@ -37,6 +37,9 @@ jest.mock("react-router-dom", () => {
       listen: jest.fn(),
       location: { state: { isReturning: true } },
     }),
+    useLocation: () => {
+      return {};
+    },
   };
 });
 

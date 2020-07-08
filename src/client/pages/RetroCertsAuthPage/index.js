@@ -14,6 +14,8 @@ import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import LanguageSelector from "../../components/LanguageSelector";
 import SessionTimer from "../../components/SessionTimer";
+import weeksCompleted from "../../../utils/checkFormData";
+import { fromIndexToPathString } from "../../../utils/retroCertsWeeks";
 import Inputmask from "inputmask";
 import { autoScroll, TOP, BEHAVIOR } from "../../../utils/autoScroll";
 import { logEvent } from "../../utils";
@@ -114,11 +116,27 @@ function RetroCertsAuthPage(props) {
           // value across tabs:
           // https://medium.com/@marciomariani/sharing-sessionstorage-between-tabs-5b6f42c6348c
           sessionStorage.setItem(AUTH_STRINGS.authToken, data.authToken);
+
           if (data.confirmationNumber) {
             // The user has already completed the retro-certs process.
             history.push(routes.retroCertsConfirmation, { isReturning: true });
           } else {
-            history.push(routes.retroCertsWeeksToCertify);
+            const completedWeeks = weeksCompleted(
+              data.formData,
+              data.programPlan
+            );
+            if (completedWeeks === 0) {
+              history.push(routes.retroCertsWeeksToCertify);
+            } else {
+              history.push(
+                `${routes.retroCertsCertify}/${fromIndexToPathString(
+                  data.weeksToCertify[
+                    Math.min(completedWeeks, data.weeksToCertify.length - 1)
+                  ]
+                )}`,
+                { returningUser: true }
+              );
+            }
           }
         }
         logEvent("RetroCerts", "LoginResponse", data.status);

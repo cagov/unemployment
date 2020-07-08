@@ -4,4 +4,4 @@ const programPlan = {
   puaFullTime: "PUA full time",
 };
 
-export default programPlan;
+module.exports = programPlan;
