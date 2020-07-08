@@ -62,7 +62,7 @@ exports[`<RetroCertsConfirmationPage /> with confirmation number 1`] = `
           t={[Function]}
           values={
             Object {
-              "confirmationNumber": "CONFIRMATION_NUMBER",
+              "confirmationNumber": "_NUMBER",
             }
           }
         />
