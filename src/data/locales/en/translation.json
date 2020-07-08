@@ -189,7 +189,7 @@
   "required-error": "This field is required.",
   "retrocert-login": {
     "title": "Retroactive Certification for Unemployment",
-    "help": "You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits from the week ending February 8, 2020, through the week ending May 9, 2020.",
+    "help": "You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits you received for weeks of your claim early in the pandemic through the week ending May 9, 2020. The exact dates you are required to certify for will depend on your specific claim history.",
     "instructions": "Enter your information to confirm if you have any benefit weeks that you need to retroactively certify.",
     "last-name-label": "Last Name",
     "dob-heading": "Date of Birth",
@@ -358,5 +358,5 @@
     "p2": "If you are still unemployed, continue to certify for benefits every two weeks. The fastest way is to use <2>UI Online</2>.",
     "button-print": "Print this page"
   },
-  "generic-validation-error-message" : "There are one or more errors on this page. Review and correct them to continue. Complete all fields and try again."
+  "generic-validation-error-message": "There are one or more errors on this page. Review and correct them to continue. Complete all fields and try again."
 }

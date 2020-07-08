@@ -20,7 +20,6 @@ WORK_PLANS = [
 ]
 # last name, dob, ssn, programPlan, weeksToCertify
 TEST_USERS = [
-    # For ISO review
     ['Villanueva', datetime.date(2000, 1, 1), '123456789', [PUA_FULL_TIME], [0]],
     ['Jarvis', datetime.date(1989, 2, 2), '098765432', [UI_FULL_TIME], [5, 6, 7]],
     ['Summers', datetime.date(1991, 3, 3), '111223333', [UI_PART_TIME], [0, 1, 2, 3]],
@@ -33,7 +32,6 @@ TEST_USERS = [
     ['Ward', datetime.date(1977, 10, 24), '888776666', [PUA_FULL_TIME], [4, 6]],
     ['Hardin', datetime.date(1988, 11, 28), '135792468', [UI_FULL_TIME], [0]],
     ['Franco', datetime.date(1972, 12, 25), '086429753', [UI_PART_TIME], [5, 6, 7]],
-    # For UAT review
     ['Bentley', datetime.date(1974, 1, 12), '842602372', [PUA_FULL_TIME], [0]],
     ['Perry', datetime.date(1979, 8, 10), '442122888', [PUA_FULL_TIME], [5, 6, 7]],
     ['Ochoa', datetime.date(1987, 11, 14), '164092346', [PUA_FULL_TIME], [5, 6, 7]],
@@ -56,7 +54,6 @@ TEST_USERS = [
     ['Wyatt', datetime.date(1971, 3, 19), '450745912', [PUA_FULL_TIME, UI_PART_TIME], [8, 9]],
     ['Dunn', datetime.date(1997, 1, 4), '172089111', [PUA_FULL_TIME, UI_FULL_TIME, UI_PART_TIME], [5, 6, 7]],
     ['Neal', datetime.date(1939, 2, 8), '236990877', [PUA_FULL_TIME, UI_FULL_TIME, UI_PART_TIME], [5, 6, 7]],
-    # For internal use
     ['Fernandez', datetime.date(1944, 9, 8), '701516075', [PUA_FULL_TIME, UI_FULL_TIME, UI_PART_TIME], [5, 6, 7]],
     ['Mahoney', datetime.date(1982, 10, 18), '556982378', [PUA_FULL_TIME, UI_FULL_TIME, UI_PART_TIME], [5, 6, 7]],
     ['Dickson', datetime.date(1989, 12, 25), '242203500', [PUA_FULL_TIME, UI_FULL_TIME, UI_PART_TIME], [5, 6, 7]],
@@ -69,14 +66,14 @@ TEST_USERS = [
 
 def get_hash(name, dob, ssn):
   assert len(ssn) == 9
-  h = hashlib.sha256(bytes(name.lower() + dob.strftime('%Y-%m-%d') + ssn, 'utf-8'))
-  return h.hexdigest()
+  h = hashlib.sha256(bytes(name.lower() + dob.strftime('%m-%d-%Y') + ssn, 'utf-8'))
+  return h.hexdigest().upper()
 
 def generate_test_users():
   users = []
   for user in TEST_USERS:
       users.append({
-          'id': get_hash(*user[:3]),
+          'id': '0x' + get_hash(*user[:3]),
           'programPlan': user[3],
           'weeksToCertify': user[4],
           'source': SOURCE,

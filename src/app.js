@@ -9,6 +9,12 @@ const fflip = require("fflip");
 const fflipConfig = require("./data/fflipConfig");
 const { createRetroCertDatabaseIfNeeded } = require("./data/cosmos");
 
+const http = require("http");
+const https = require("https");
+
+http.globalAgent.maxSockets = 50;
+https.globalAgent.maxSockets = 50;
+
 // Load default feature flag values.
 fflip.config(fflipConfig);
 
