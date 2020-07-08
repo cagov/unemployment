@@ -4,7 +4,6 @@ node_modules
 public/**/*.css
 public/**/*.js
 public/**/*.map
-public/**/*.js.license.txt
 
 # .hot files are generated for hot reloading
 public/.hot/*
