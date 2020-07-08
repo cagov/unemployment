@@ -22,7 +22,7 @@ module.exports = merge(common, {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new I18NextHMRPlugin({
-      localesDir: path.resolve(__dirname, "public/locales"),
+      localesDir: path.resolve(__dirname, "src/data/locales"),
     }),
   ],
   stats: "errors-warnings",
