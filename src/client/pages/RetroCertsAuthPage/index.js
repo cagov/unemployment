@@ -181,6 +181,10 @@ function RetroCertsAuthPage(props) {
     </Row>
   );
 
+  const setOnlyNumberValue = (event, setter) => {
+    setter(event.target.value.replace(/\D/, ""));
+  };
+
   const currentLanguage = i18n.language;
 
   return (
@@ -225,7 +229,7 @@ function RetroCertsAuthPage(props) {
                   type="text"
                   value={dobMonth}
                   maxLength={2}
-                  onChange={(e) => handleChange(e, setDobMonth)}
+                  onChange={(e) => setOnlyNumberValue(e, setDobMonth)}
                   required
                   pattern="(^0[1-9])|(^1[0-2])|(^[1-9]$)"
                 />
@@ -239,7 +243,7 @@ function RetroCertsAuthPage(props) {
                   type="text"
                   value={dobDay}
                   maxLength={2}
-                  onChange={(e) => handleChange(e, setDobDay)}
+                  onChange={(e) => setOnlyNumberValue(e, setDobDay)}
                   required
                   pattern="(^0[1-9])|(^1[0-9])|(^2[0-9])|(^3[0-1])|(^[1-9]$)"
                 />
@@ -253,7 +257,7 @@ function RetroCertsAuthPage(props) {
                   type="text"
                   value={dobYear}
                   maxLength={4}
-                  onChange={(e) => handleChange(e, setDobYear)}
+                  onChange={(e) => setOnlyNumberValue(e, setDobYear)}
                   required
                   pattern="[12][890]\d\d"
                 />
