@@ -62,8 +62,7 @@ a {
   text-decoration: none;
 }
 
-input[type="radio"]
-{
+input[type="radio"] {
   -ms-transform: scale(1.01); /* IE */
   -moz-transform: scale(1.01); /* FF */
   -webkit-transform: scale(1.01); /* Safari and Chrome */
@@ -138,7 +137,7 @@ footer {
 // radio question was answered for the feedback to show.
 .was-validated .unchecked .invalid-feedback {
   display: block;
-  color:  #CC2435;
+  color: #cc2435;
 }
 
 // For help text on pages and components
@@ -162,13 +161,13 @@ footer {
 }
 
 input[name="disaster-question"].form-check-input {
-  margin-right: .5rem;
+  margin-right: 0.5rem;
 }
 
 #certification-page {
-
   // This resets the language toggle button to not inherit the changes we made to the form questions background
-  button.bg-light, .bg-light.btn {
+  button.bg-light,
+  .bg-light.btn {
     padding: 6px 12px !important;
     background-color: #f8f9fa !important;
   }

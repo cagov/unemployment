@@ -212,7 +212,9 @@ function RetroCertsCertificationPage(props) {
           </h1>
           <LanguageSelector className="mt-3 mb-4" />
           {history.location.state && history.location.state.returningUser && (
-            <Alert variant="success">{t("retrocerts-certification.alert-found-save")}</Alert>
+            <Alert variant="success">
+              {t("retrocerts-certification.alert-found-save")}
+            </Alert>
           )}
           {showGenericValidationError && validated && genericValidationError}
           <h2 className="h3 font-weight-bold mt-5">
