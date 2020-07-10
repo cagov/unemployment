@@ -49,8 +49,8 @@ function getContainer(containerName) {
   return container;
 }
 
-async function upsertFormData(item) {
-  const container = await getContainer(formsContainerName);
+async function insertItem(item, containerName) {
+  const container = await getContainer(containerName);
 
   try {
     const { resource: upsertedItem } = await container.items.upsert(item);
@@ -128,8 +128,25 @@ async function getFormDataByUserIdWithNewAuthToken(userId) {
   const item = (await getFormDataByUserId(userId)) || {};
   item.id = userId;
   item.authToken = uuidv4();
-  await upsertFormData(item);
+  await insertItem(item, formsContainerName);
   return item;
+}
+
+async function saveFormData(authToken, formData) {
+  const item = await getFormDataByAuthToken(authToken);
+
+  if (!item) {
+    return;
+  }
+
+  // If the user already submitted data, don't overwrite it.
+  if (!item.confirmationNumber) {
+    item.formData = formData;
+    item.confirmationNumber = uuidv4();
+    await insertItem(item, formsContainerName);
+  }
+
+  return { confirmationNumber: item.confirmationNumber };
 }
 
 module.exports = {
@@ -138,5 +155,5 @@ module.exports = {
   getUserByNameDobSsn,
   getUserById,
   getFormDataByUserIdWithNewAuthToken,
-  upsertFormData,
+  saveFormData,
 };

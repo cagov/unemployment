@@ -53,7 +53,6 @@
     "edd-cares": "https://edd.ca.gov/about_edd/coronavirus-2019/cares-act.htm",
     "edd-pua": "https://edd.ca.gov/about_edd/coronavirus-2019/pandemic-unemployment-assistance-espanol.htm",
     "edd-webapp": "https://portal.edd.ca.gov/WebApp/Login?resource_url=https://portal.edd.ca.gov/WebApp/Home&l=es",
-    "edd-login": "https://edd.ca.gov/Unemployment/UI_Online_Espanol.htm",
     "caljobs": "https://www.caljobs.ca.gov/vosnet/Default.aspx?enc=KrXBHc1OhrZGzl2XGVPM3g==",
     "edd-debit": "https://www.edd.ca.gov/about_edd/The_EDD_Debit_Card_Espanol.htm",
     "edd-coronavirus-faqs": "https://edd.ca.gov/about_edd/coronavirus-2019/faqs-espanol.htm",
@@ -216,16 +215,14 @@
     "p1": "Usted debe certificar retroactivamente en todas las semanas disponibles.",
     "p2": "Responda todas las preguntas de la certificación retroactiva de manera correcta y verdadera para evitar cometer fraude.",
     "header2": "Información importante",
-    "p3": "Sus respuestas para cada semana de certificación completada se guardarán automáticamente cuando continúe con la siguiente semana. Las semanas que se completan parcialmente no se guardan. Intente completar todas las certificaciones retroactivas en una sesión.",
+    "p3": "La certificación retroactiva no cuenta con una función para guardar la información de manera automática y no puede guardar ningún proceso. Usted debe completar las certificaciones retroactivas en una sesión.",
     "p4": "Para proteger la seguridad de su información, esta solicitud expirará automáticamente después de 30 minutos de inactividad. Para evitar que se le termine su tiempo, seleccione cualquier botón cada 25 minutos.",
     "button-start": "Comenzar certificación"
   },
   "retrocerts-certification": {
     "title": "Certificación retroactiva para el Seguro de Desempleo",
     "question-page-title": "Certificar retroactivamente y revisar",
-    "alert-found-save": "Usted tiene al menos una semana disponible para certificar retroactivamente. Comience donde se quedó la última vez. Sus semanas anteriores han sido guardadas.",
     "p1-multiple": "Usted está en la semana {{weekForUser}} de {{numberOfWeeks}} semanas para certificar retroactivamente.",
-    "previous-saved": "Sus semanas anteriores están guaradadas.",
     "form-header": "Semana {{weekForUser}}: {{weekString}}",
     "save-error": "Algo salió mal. Por favor intente de nuevo más tarde.",
     "questions": {
@@ -343,7 +340,7 @@
     "submit-p1": "Usted está a punto de presentar sus certificaciones retroactivas. <strong>No</strong> podrá cambiar sus respuestas una vez que seleccione el botón <strong>Enviar</strong>.",
     "button-back": "Regresar",
     "button-back-week": "Regresar a la semana anterior",
-    "button-next": "Guardar y continuar con la semana {{nextWeekForUser}}",
+    "button-next": "Siguiente, certificar semana {{nextWeekForUser}}",
     "button-submit": "Enviar"
   },
   "retrocerts-confirmation": {

@@ -216,16 +216,14 @@
     "p1": "You must retroactively certify for all available weeks.",
     "p2": "Answer all retroactive certification questions truthfully and correctly to avoid committing fraud.",
     "header2": "Important Information",
-    "p3": "Your answers for each completed certification week will save automatically when you continue to the next week. Partially completed weeks are not saved. Try to complete all retroactive certifications in one session.",
+    "p3": "The retroactive certification does not have an auto-save feature and cannot save any progress. You should complete all retroactive certifications in one session.",
     "p4": "To protect the security of your information, this application will automatically time out after 30 minutes of inactivity. To avoid timing out, select any button every 25 minutes.",
     "button-start": "Start Certifying"
   },
   "retrocerts-certification": {
     "title": "Retroactive Certification for Unemployment",
     "question-page-title": "Retroactively Certify and Review",
-    "alert-found-save": "You have at least one week available to retroactively certify. Start where you last stopped. Your previous weeks have been saved.",
     "p1-multiple": "You are on Week {{weekForUser}} of {{numberOfWeeks}} weeks to retroactively certify.",
-    "previous-saved": "Your previous weeks are saved.",
     "form-header": "Week {{weekForUser}}: {{weekString}}",
     "save-error": "Something went wrong. Please try again later.",
     "questions": {
@@ -344,7 +342,7 @@
     "submit-p1": "You are about to submit your retroactive certifications. You will <strong>not</strong> be able to change your answers once you select <strong>Submit</strong>.",
     "button-back": "Back",
     "button-back-week": "Back to Previous Week",
-    "button-next": "Save and Continue to Week {{nextWeekForUser}}",
+    "button-next": "Next, Certify Week {{nextWeekForUser}}",
     "button-submit": "Submit"
   },
   "retrocerts-confirmation": {

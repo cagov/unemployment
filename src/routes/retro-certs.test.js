@@ -8,7 +8,6 @@ import cosmos from "../data/cosmos";
 import fflip from "fflip";
 import request from "supertest";
 import ReCaptcha from "../services/reCaptcha";
-import programPlan from "../data/programPlan";
 
 describe("Router: API tests", () => {
   it("retro-certs POST feature disabled", async () => {
@@ -242,110 +241,6 @@ describe("Router: API tests", () => {
 
       getFormDataByAuthTokenMock.mockRestore();
       getUserByIdMock.mockRestore();
-    }
-  });
-
-  it("retro-certs /api/save tests", async () => {
-    fflip.features.retroCerts.enabled = true;
-    const server = init();
-    // Format of each test case is:
-    //   post body,
-    //   getFormDataByAuthToken promise response,
-    //   getUserById promise response,
-    //   expected http status,
-    //   expected request response
-
-    const weekOfAnswers = {
-      tooSick: false,
-      couldNotAcceptWork: false,
-      didYouLook: false,
-      refuseWork: false,
-      schoolOrTraining: false,
-      workOrEarn: false,
-    };
-
-    const testCases = [
-      [{}, null, null, 401, {}],
-      [{ authToken: "INVALID_TOKEN" }, null, null, 401, {}],
-      // Test the malicious input filter.
-      [
-        { authTOken: "TOKEN", formData: "<script>alert('hi')</script>" },
-        { id: "ID" },
-        { programPlan: [programPlan.uiFullTime], weeksToCertify: [0, 1] },
-        400,
-        "",
-      ],
-      // Save one week of 2.
-      [
-        {
-          authToken: "TOKEN",
-          formData: [weekOfAnswers],
-        },
-        { id: "ID" },
-        { programPlan: [programPlan.uiFullTime], weeksToCertify: [0, 1] },
-        200,
-        { status: "ok" },
-      ],
-      // Save 2 weeks of 2.
-      [
-        {
-          authToken: "TOKEN",
-          formData: [weekOfAnswers, weekOfAnswers],
-        },
-        { id: "ID" },
-        { programPlan: [programPlan.uiFullTime], weeksToCertify: [0, 1] },
-        200,
-        {
-          status: "ok",
-          confirmationNumber: "00000000-fake-mock-fake-123456789012",
-        },
-      ],
-      // Already have a confirmation number.
-      [
-        {
-          authToken: "TOKEN",
-          formData: [weekOfAnswers, weekOfAnswers],
-        },
-        { id: "ID", confirmationNumber: "alreadyExists" },
-        { programPlan: [programPlan.uiFullTime], weeksToCertify: [0, 1] },
-        200,
-        { status: "ok", confirmationNumber: "alreadyExists" },
-      ],
-    ];
-
-    for (const testCase of testCases) {
-      const [
-        reqJson,
-        getFormDataByAuthTokenResponse,
-        getUserByIdResponse,
-        httpStatus,
-        responseJson,
-      ] = testCase;
-      const getFormDataByAuthTokenMock = jest.spyOn(
-        cosmos,
-        "getFormDataByAuthToken"
-      );
-      getFormDataByAuthTokenMock.mockImplementation(
-        jest.fn(() => Promise.resolve(getFormDataByAuthTokenResponse))
-      );
-      const getUserByIdMock = jest.spyOn(cosmos, "getUserById");
-      getUserByIdMock.mockImplementation(
-        jest.fn(() => Promise.resolve(getUserByIdResponse))
-      );
-      const upsertFormDataMock = jest.spyOn(cosmos, "upsertFormData");
-      upsertFormDataMock.mockImplementation(jest.fn(() => Promise.resolve()));
-
-      const res = await request(server)
-        .post(AUTH_STRINGS.apiPath.save)
-        .send(JSON.stringify(reqJson))
-        .type("json");
-      expect(res.status).toBe(httpStatus);
-      expect(res.header["content-type"]).toMatch(/json/);
-      expect(res.body).toEqual(responseJson);
-
-      getFormDataByAuthTokenMock.mockRestore();
-      getUserByIdMock.mockRestore();
-      upsertFormDataMock.mockRestore();
     }
   });
 });

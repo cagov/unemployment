@@ -136,16 +136,18 @@ function RetroCertsCertificationPage(props) {
       return;
     }
 
-    const nextPage =
-      weekForUser !== numberOfWeeks
-        ? `${routes.retroCertsCertify}/${fromIndexToPathString(
-            userData.weeksToCertify[weekForUser]
-          )}`
-        : routes.retroCertsConfirmation;
-    postUserDataToServer(nextPage);
+    if (weekForUser !== numberOfWeeks) {
+      history.push(
+        routes.retroCertsCertify +
+          "/" +
+          fromIndexToPathString(userData.weeksToCertify[weekForUser])
+      );
+    } else if (weekForUser === numberOfWeeks) {
+      postUserDataToServer();
+    }
   };
 
-  function postUserDataToServer(nextPage) {
+  function postUserDataToServer() {
     let body = JSON.stringify({
       formData: userData.formData,
       authToken: sessionStorage.getItem(AUTH_STRINGS.authToken),
@@ -163,24 +165,16 @@ function RetroCertsCertificationPage(props) {
     })
       .then((response) => response.json())
       .then((data) => {
-        if (data.confirmationNumber) {
-          logEvent(
-            "RetroCerts",
-            "CompletedCertification",
-            `weeks-${numberOfWeeks}`
-          );
-        } else {
-          logEvent(
-            "RetroCerts",
-            "PartialSave",
-            `week-${weekForUser}-of-${numberOfWeeks}`
-          );
-        }
+        logEvent(
+          "RetroCerts",
+          "CompletedCertification",
+          `weeks-${numberOfWeeks}`
+        );
         setUserData({
           ...userData,
           confirmationNumber: data.confirmationNumber,
         });
-        history.push(nextPage);
+        history.push(routes.retroCertsConfirmation);
       })
       .catch((error) => {
         console.error(error);
@@ -210,9 +204,6 @@ function RetroCertsCertificationPage(props) {
             {t("retrocerts-certification.question-page-title")}
           </h1>
           <LanguageSelector className="mt-3 mb-4" />
-          {history.location.state && history.location.state.returningUser && (
-            <Alert variant="success">{t("retrocerts-certification.alert-found-save")}</Alert>
-          )}
           {showGenericValidationError && validated && genericValidationError}
           <h2 className="h3 font-weight-bold mt-5">
             <Trans
@@ -228,8 +219,6 @@ function RetroCertsCertificationPage(props) {
                 i18nKey="retrocerts-certification.p1-multiple"
                 values={{ weekForUser, numberOfWeeks }}
               />
-              {weekForUser > 1 &&
-                " " + t("retrocerts-certification.previous-saved")}
             </p>
           )}
           <Form noValidate validated={validated} onSubmit={handleSubmit}>
