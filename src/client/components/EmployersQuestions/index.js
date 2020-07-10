@@ -70,6 +70,7 @@ function EmployerQuestions(props) {
           onChange={(e) => handleChange(name, e.target.value)}
           required={required}
           pattern={options.pattern}
+          maxLength={options.maxLength}
         />
         <Form.Control.Feedback type="invalid">
           {t("required-error")}
@@ -99,11 +100,11 @@ function EmployerQuestions(props) {
 
   return (
     <div className="follow-up">
-      {renderTextInput("employerName")}
-      {renderTextInput("address1")}
-      {renderTextInput("address2", { required: false })}
+      {renderTextInput("employerName", { maxLength: 500 })}
+      {renderTextInput("address1", { maxLength: 500 })}
+      {renderTextInput("address2", { required: false, maxLength: 500 })}
       <Form.Row>
-        <Col md={8}>{renderTextInput("city")}</Col>
+        <Col md={8}>{renderTextInput("city", { maxLength: 100 })}</Col>
       </Form.Row>
       <Form.Row className="mb-3">
         <Form.Group
@@ -133,6 +134,7 @@ function EmployerQuestions(props) {
       {renderTextInput("zipcode", {
         className: "col-md-3",
         pattern: "\\d{5}|\\d{5}-\\d{4}",
+        maxLength: 10,
       })}
 
       <p>{t(tk("lastDateWorked"))}</p>
@@ -182,10 +184,12 @@ function EmployerQuestions(props) {
       {renderTextInput("totalHoursWorked", {
         className: "col-md-2",
         pattern: "\\d+[.]?\\d*",
+        maxLength: 3,
       })}
       {renderTextInput("grossEarnings", {
         className: "col-md-2",
         pattern: "[$]?\\d+[.]?(\\d{2})?",
+        maxLength: 11,
       })}
       <Form.Group controlId={props.employerData.id + "reason-select"}>
         <Form.Label>{t(tk("reason"))}</Form.Label>
@@ -213,6 +217,7 @@ function EmployerQuestions(props) {
             value={stateFuncs.moreDetails.get}
             onChange={(e) => handleChange("moreDetails", e.target.value)}
             required
+            maxLength={2000}
           />
         </Form.Group>
       )}
