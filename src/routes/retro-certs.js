@@ -83,13 +83,18 @@ function createRouter() {
           formRecord.formData = postJson.formData;
           if (
             userRecord.weeksToCertify.length ===
-            weeksCompleted(formRecord.formData, userRecord.programPlan)
+              weeksCompleted(formRecord.formData, userRecord.programPlan) &&
+            postJson.completed === true
           ) {
             formRecord.confirmationNumber = uuidv4();
             responseJson.confirmationNumber = formRecord.confirmationNumber;
           }
           await cosmos.upsertFormData(formRecord);
-          console.log("saved data", postJson.authToken, responseJson.confirmationNumber || "");
+          console.log(
+            "saved data",
+            postJson.authToken,
+            responseJson.confirmationNumber || ""
+          );
         }
       } else {
         console.log("save with invalid token", postJson.authToken);
@@ -134,7 +139,6 @@ function createRouter() {
     }
 
     try {
-
       const responseJson = await saveFormData(req.body, {});
       const httpStatus =
         responseJson.status === AUTH_STRINGS.statusCode.ok ? 200 : 401;
