@@ -149,6 +149,7 @@ function RetroCertsCertificationPage(props) {
     let body = JSON.stringify({
       formData: userData.formData,
       authToken: sessionStorage.getItem(AUTH_STRINGS.authToken),
+      completed: weekForUser === numberOfWeeks,
     });
     // The server rejects < followed by non-whitespace,
     // so change the input from the form to add a space.
