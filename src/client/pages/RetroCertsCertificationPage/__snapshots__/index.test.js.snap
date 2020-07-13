@@ -207,6 +207,7 @@ exports[`<RetroCertsCertificationPage /> Certify for 2nd week of 2 1`] = `
               }
               className="text-dark bg-light"
               disabled={false}
+              onClick={[Function]}
               to="/retroactive-certification/certify/2020-02-08"
               type="button"
               variant="outline-secondary"
@@ -439,6 +440,7 @@ exports[`<RetroCertsCertificationPage /> Certify for one week of 2 1`] = `
               }
               className="text-dark bg-light"
               disabled={false}
+              onClick={[Function]}
               to="/retroactive-certification/weeks-to-certify"
               type="button"
               variant="outline-secondary"

@@ -331,6 +331,13 @@ function RetroCertsCertificationPage(props) {
                           userData.weeksToCertify[weekForUser - 2]
                         )
                   }
+                  onClick={() =>
+                    logEvent(
+                      "RetroCerts",
+                      "BackButton",
+                      `weeks-for-user-${weekForUser}`
+                    )
+                  }
                 >
                   {weekForUser === 1
                     ? t("retrocerts-certification.button-back")
