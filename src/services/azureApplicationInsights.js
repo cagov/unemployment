@@ -43,9 +43,14 @@ const createTelemetryService = () => {
     });
 
     appInsights.loadAppInsights();
+    if (process.env.NODE_ENV === "development") {
+      // Normally metrics are sent as batches. In development mode, send immediately.
+      // https://docs.microsoft.com/en-us/azure/azure-monitor/app/api-custom-events-metrics#debug
+      appInsights.config.maxBatchSizeInBytes = 0;
+    }
   };
 
-  return { reactPlugin, appInsights, initialize };
+  return { reactPlugin, initialize };
 };
 
 export const ai = createTelemetryService();
