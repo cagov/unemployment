@@ -36,7 +36,7 @@ function RetroCertsAuthPage(props) {
   const [ssn, setSsn] = useState("");
   const [validated, setValidated] = useState(false);
   const [showSsn, setShowSsn] = useState(false);
-  const [showGenericValidationError, setShowGenericValidaitonError] = useState(
+  const [showGenericValidationError, setShowGenericValidationError] = useState(
     false
   );
 
@@ -76,7 +76,7 @@ function RetroCertsAuthPage(props) {
     setValidated(true);
 
     if (!isValid) {
-      setShowGenericValidaitonError(true);
+      setShowGenericValidationError(true);
       autoScroll({
         y: TOP.y,
         x: TOP.x,
@@ -85,7 +85,7 @@ function RetroCertsAuthPage(props) {
       return;
     }
 
-    setShowGenericValidaitonError(false);
+    setShowGenericValidationError(false);
 
     const month = dobMonth.length < 2 ? "0" + dobMonth : dobMonth;
     const day = dobDay.length < 2 ? "0" + dobDay : dobDay;
