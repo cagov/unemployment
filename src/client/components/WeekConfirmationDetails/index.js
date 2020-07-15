@@ -47,7 +47,7 @@ function WeekConfirmationDetails(props) {
             <EmployerAddress employerIndex={employerIndex} />
           </strong>
         </p>
-        <EmployerLast5Items employerIndex={employerIndex} />
+        <EmployerDetails employerIndex={employerIndex} />
       </React.Fragment>
     );
   }
@@ -71,7 +71,7 @@ function WeekConfirmationDetails(props) {
     employerIndex: PropTypes.number,
   };
 
-  function EmployerLast5Items(props) {
+  function EmployerDetails(props) {
     const { employerIndex } = props;
 
     return employerDetailsFieldKeys.map((questionKey, index) => {
@@ -90,7 +90,7 @@ function WeekConfirmationDetails(props) {
       );
     });
   }
-  EmployerLast5Items.propTypes = {
+  EmployerDetails.propTypes = {
     employerIndex: PropTypes.number,
   };
 
