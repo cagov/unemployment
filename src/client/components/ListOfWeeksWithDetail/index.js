@@ -95,7 +95,6 @@ function ListOfWeeksWithDetail(props) {
       return getSubmittedAnswer(questionName, weekData);
     });
 
-    console.log(weekData);
     return (
       <Alert
         key={`weekToCertify${weekIndex}`}

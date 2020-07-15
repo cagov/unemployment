@@ -15,7 +15,7 @@ function WeekConfirmationDetails(props) {
     "zipcode",
   ];
 
-  const employerLast5QuestionNames = [
+  const employerDetailsFieldNames = [
     "lastDateWorked",
     "totalHoursWorked",
     "grossEarnings",
@@ -23,7 +23,7 @@ function WeekConfirmationDetails(props) {
     "moreDetails",
   ];
 
-  const employerLast5QuestionKeys = employerLast5QuestionNames.map((name) =>
+  const employerDetailsFieldKeys = employerDetailsFieldNames.map((name) =>
     prefix(name)
   );
 
@@ -74,10 +74,10 @@ function WeekConfirmationDetails(props) {
   function EmployerLast5Items(props) {
     const { employerIndex } = props;
 
-    return employerLast5QuestionKeys.map((questionKey, index) => {
+    return employerDetailsFieldKeys.map((questionKey, index) => {
       const question = t(questionKey);
       const employer = employers[employerIndex];
-      const questionName = employerLast5QuestionNames[index];
+      const questionName = employerDetailsFieldNames[index];
       const answer = getSubmittedAnswer(questionName, employer);
 
       return (
@@ -97,16 +97,15 @@ function WeekConfirmationDetails(props) {
   function getSubmittedAnswer(questionName, employer) {
     const answer = employer[questionName];
     if (answer === "") {
-      // The only case where the answer should be undefined is for
-      // the "number of days you were sick" question, and then only
-      // if the answer to "were you sick" was yes
-      // if (questionName !== "tooSickNumberOfDays" || weekData.tooSick) {
-      //   // TODO turn this into an error we log
-      //   console.log("missing answer", questionName, weekData);
-      // }
+      // The only case where the answer should be an empty string is for
+      // the "provide more details" question, and then only
+      // if the answer to "reason you're not working" was "still working PT"
       return "N/A";
     }
-    if (answer === undefined) {
+    if (
+      answer === undefined ||
+      (answer === "" && employer.reason !== "still-working")
+    ) {
       // TODO turn this into an error we log
       console.log("missing answer", questionName, employer);
     }
