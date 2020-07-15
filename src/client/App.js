@@ -22,13 +22,8 @@ export default function App() {
   if (initialPageLoad.current) {
     initialPageLoad.current = false;
 
-    // <App> re-mounts every time user data is changed. To have only one
-    // history listener, add it during the initial page load only.
-    history.listen((location) => logPage(location.pathname));
-    // Log the current page.
-    logPage(history.location.pathname);
-
-    /*eslint-disable */
+    // Initialize Google Analytics.
+    /* eslint-disable */
     window.dataLayer = window.dataLayer || [];
     window.gtag = (...args) => dataLayer.push(args);
     gtag("js", new Date());
@@ -37,6 +32,12 @@ export default function App() {
     gtag("config", "UA-3419582-2", { anonymize_ip: true }); // www.ca.gov
     gtag("config", "UA-3419582-31", { anonymize_ip: true }); // edd.ca.gov
     /* eslint-enable */
+
+    // <App> re-mounts every time user data is changed. To have only one
+    // history listener, add it during the initial page load only.
+    history.listen((location) => logPage(location.pathname));
+    // Log the current page.
+    logPage(history.location.pathname);
   }
 
   return (

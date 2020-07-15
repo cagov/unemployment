@@ -1,7 +1,7 @@
 function buildPolicies() {
   const policies = {
     default: ["'self'"],
-    img: ["'self'", "www.google-analytics.com", "*.doubleclick.net"],
+    img: ["'self'", "data:", "www.google-analytics.com", "*.doubleclick.net"],
     style: ["'self'", "fonts.googleapis.com"],
     frame: ["www.google.com"],
     font: ["fonts.googleapis.com", "fonts.gstatic.com"],
@@ -11,7 +11,7 @@ function buildPolicies() {
       "www.google-analytics.com",
       "*.google.com",
     ],
-    connect: ["'self'"],
+    connect: ["'self'", "*.visualstudio.com"],
     object: ["'none'"],
     scriptElem: [
       "'self'",
@@ -25,7 +25,6 @@ function buildPolicies() {
   if (process.env.NODE_ENV === "development") {
     policies.script.unshift(`localhost:${process.env.PORT}`);
     policies.script.push("'unsafe-eval'"); // This is needed since webpack for Dev environment is configured to use eval()
-    policies.connect.push("*.visualstudio.com");
   }
 
   return (
