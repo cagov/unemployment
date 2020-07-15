@@ -9,7 +9,7 @@ let timerId = null;
 const TIMEOUT_KEY = "timeout";
 
 function SessionTimer(props) {
-  const TIMEOUT_MS = 30 * 60 * 1000;
+  const TIMEOUT_MS = 3000 * 60 * 1000;
   const history = useHistory();
   const { action, setUserData } = props;
 

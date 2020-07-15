@@ -61,15 +61,19 @@ function ListOfWeeksWithDetail(props) {
       return "Yes";
     } else if (answer === false) {
       return "No";
-    } else {
-      return answer;
     }
+    return answer;
   }
 
   return userData.weeksToCertify.map((weekIndex, index) => {
     const weekForUser = index + 1;
     const dates = startAndEndDate(weekIndex);
     const weekData = userData.formData[index];
+    const weekHasEmployers = weekData.workOrEarn;
+    if (weekHasEmployers && !weekData.employers) {
+      // TODO turn this into an error we log
+      console.log("missing employer(s)");
+    }
 
     // TODO(kalvin): also used in RCCertificationPage, refactor to common place
     const programPlanIndex =
@@ -91,6 +95,7 @@ function ListOfWeeksWithDetail(props) {
       return getSubmittedAnswer(questionName, weekData);
     });
 
+    console.log(weekData);
     return (
       <Alert
         key={`weekToCertify${weekIndex}`}
@@ -104,6 +109,7 @@ function ListOfWeeksWithDetail(props) {
             values={{ ...dates, weekForUser }}
           />
           <WeekConfirmationDetails
+            employers={weekHasEmployers ? weekData.employers : undefined}
             questionAnswers={questionAnswers}
             questionKeys={questionKeys}
             weekString={toWeekString(weekIndex)}
