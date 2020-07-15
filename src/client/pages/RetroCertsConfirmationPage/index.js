@@ -8,7 +8,7 @@ import routes from "../../../data/routes";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import LanguageSelector from "../../components/LanguageSelector";
-import ListOfWeeks from "../../components/ListOfWeeks";
+import ListOfWeeksWithDetail from "../../components/ListOfWeeksWithDetail";
 import { logEvent } from "../../utils";
 import { clearAuthToken } from "../../components/SessionTimer";
 
@@ -34,7 +34,7 @@ function RetroCertsConfirmationPage(props) {
     .toUpperCase();
 
   // Log out the user since they are done!
-  clearAuthToken();
+  // clearAuthToken();
 
   const isReturning =
     history.location.state && history.location.state.isReturning;
@@ -77,7 +77,7 @@ function RetroCertsConfirmationPage(props) {
           <p>{t("retrocerts-confirmation.p1a")}</p>
           <p>{t("retrocerts-confirmation.p1b")}</p>
           <h2 className="mt-5">{t("retrocerts-confirmation.header2")}</h2>
-          <ListOfWeeks weeksToCertify={userData.weeksToCertify} showChecks />
+          <ListOfWeeksWithDetail userData={userData} />
 
           <h2 className="mt-5">{t("retrocerts-confirmation.header3")}</h2>
           <p>
