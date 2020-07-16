@@ -58,9 +58,9 @@ function ListOfWeeksWithDetail(props) {
     }
 
     if (answer === true) {
-      return "Yes";
+      return t("yesnoquestion.Yes");
     } else if (answer === false) {
-      return "No";
+      return t("yesnoquestion.No");
     }
     return answer;
   }

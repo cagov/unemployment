@@ -113,7 +113,7 @@ function WeekConfirmationDetails(props) {
     if (questionName === "reason") {
       return t(prefix("reason-" + answer));
     } else if (questionName === "grossEarnings") {
-      return "$" + answer;
+      return answer.startsWith("$") ? answer : "$" + answer;
     }
 
     return answer;
