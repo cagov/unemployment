@@ -277,8 +277,7 @@
         "workOrEarn": "Did you work or earn money, <strong>whether you were paid or not</strong>? If self-employed, report earnings during the week you receive the money.",
         "help-workOrEarn": "Look at the date each week begins and ends. If you performed any work during this week, the earnings must be reported regardless if you received payment or not. This does not include self-employment.",
         "recentDisaster": "Are you unemployed as a direct result of a recent disaster (for example: COVID-19, earthquake, flood, mudslide, or fire) in California?",
-        "disasterChoice": "Select the option for how you were impacted by the COVID-19 pandemic.",
-        "recentDisasterChoice": "Select the option for how you were impacted by the COVID-19 pandemic."
+        "disasterChoice": "Select the option for how you were impacted by the COVID-19 pandemic."
       }
     },
     "q-workOrEarn": "Did you work or earn any money, whether you were paid or not?",
