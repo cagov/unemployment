@@ -1,6 +1,6 @@
 import Alert from "react-bootstrap/Alert";
 import PropTypes from "prop-types";
-import React from "react";
+import React, { useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { startAndEndDate, toWeekString } from "../../../utils/retroCertsWeeks";
 import programPlan from "../../../data/programPlan";
@@ -9,6 +9,8 @@ import WeekConfirmationDetails from "../WeekConfirmationDetails";
 function WeekWithDetail(props) {
   const { index, weekData, weekIndex, weekProgramPlan } = props;
   const { t } = useTranslation();
+
+  const [showDetail, setShowDetail] = useState(false);
 
   const baseQuestionNames = [
     "tooSick",
@@ -90,17 +92,22 @@ function WeekWithDetail(props) {
   return (
     <Alert variant="secondary" className="d-flex">
       <div className="flex-fill">
+        <button onClick={() => setShowDetail(!showDetail)}>
+          {showDetail ? "-" : "+"}
+        </button>
         <Trans
           t={t}
           i18nKey="retrocerts-week-list-item"
           values={{ ...dates, weekForUser }}
         />
-        <WeekConfirmationDetails
-          employers={weekHasEmployers ? weekData.employers : undefined}
-          questionAnswers={questionAnswers}
-          questionKeys={questionKeys}
-          weekString={toWeekString(weekIndex)}
-        />
+        {showDetail && (
+          <WeekConfirmationDetails
+            employers={weekHasEmployers ? weekData.employers : undefined}
+            questionAnswers={questionAnswers}
+            questionKeys={questionKeys}
+            weekString={toWeekString(weekIndex)}
+          />
+        )}
       </div>
     </Alert>
   );
