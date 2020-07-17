@@ -123,6 +123,7 @@ function WeekConfirmationDetails(props) {
     const questionNumber = index + 1;
     const answer = questionAnswers[index];
     const showEmployers = questionKey.endsWith("workOrEarn") && employers;
+    const isNotLastItem = index !== questionKeys.length - 1;
 
     return (
       <React.Fragment key={index}>
@@ -134,6 +135,7 @@ function WeekConfirmationDetails(props) {
           <strong>{answer}</strong>
         </p>
         {showEmployers && <ListOfEmployers />}
+        {isNotLastItem && <hr />}
       </React.Fragment>
     );
   });

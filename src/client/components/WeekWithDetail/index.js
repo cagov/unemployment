@@ -89,27 +89,40 @@ function WeekWithDetail(props) {
     return getSubmittedAnswer(questionName, weekData);
   });
 
+  // TODO(kalvin): refactor collapsible accordion item from here and Acknowledgement
+  // in RetroCertsConfirmationPage out to common file
+  const EN_DASH = "–";
   return (
-    <Alert variant="secondary" className="d-flex">
-      <div className="flex-fill">
-        <button onClick={() => setShowDetail(!showDetail)}>
-          {showDetail ? "-" : "+"}
-        </button>
-        <Trans
-          t={t}
-          i18nKey="retrocerts-week-list-item"
-          values={{ ...dates, weekForUser }}
-        />
-        {showDetail && (
+    <React.Fragment>
+      <Alert variant="secondary" className="d-flex">
+        <div className="flex-fill">
+          <button
+            className="toggleAccordion"
+            onClick={() => setShowDetail(!showDetail)}
+          >
+            <span className="toggleCharacter">
+              {showDetail ? EN_DASH : "+"}
+            </span>
+            <Trans
+              t={t}
+              i18nKey="retrocerts-week-list-item"
+              values={{ ...dates, weekForUser }}
+            />
+          </button>
+        </div>
+      </Alert>
+
+      {showDetail && (
+        <div className="detail">
           <WeekConfirmationDetails
             employers={weekHasEmployers ? weekData.employers : undefined}
             questionAnswers={questionAnswers}
             questionKeys={questionKeys}
             weekString={toWeekString(weekIndex)}
           />
-        )}
-      </div>
-    </Alert>
+        </div>
+      )}
+    </React.Fragment>
   );
 }
 
