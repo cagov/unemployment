@@ -18,7 +18,7 @@
         "start": "npm-run-all -p start:dev watch:css watch:js",
         "prestart": "npm run clean-build-dir",
         "start:dev": "PORT=3000 NODE_ENV=development nodemon --inspect=0.0.0.0:9222 src --config nodemon.config.json",
-        "start:prod": "NODE_ENV=production node src",
+        "start:prod": "INLINE_RUNTIME_CHUNK=false NODE_ENV=production node src",
         "test": "jest --ci --coverage",
         "test:update-snapshots": "jest -u",
         "test:watch": "jest --watch",
