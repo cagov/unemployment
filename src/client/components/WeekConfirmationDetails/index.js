@@ -79,14 +79,17 @@ function WeekConfirmationDetails(props) {
       const employer = employers[employerIndex];
       const questionName = employerDetailsFieldNames[index];
       const answer = getSubmittedAnswer(questionName, employer);
+      const showQuestion = answer !== false;
 
       return (
-        <React.Fragment key={index}>
-          <p>{question}</p>
-          <p>
-            <strong>{answer}</strong>
-          </p>
-        </React.Fragment>
+        showQuestion && (
+          <React.Fragment key={index}>
+            <p>{question}</p>
+            <p>
+              <strong>{answer}</strong>
+            </p>
+          </React.Fragment>
+        )
       );
     });
   }
@@ -100,7 +103,7 @@ function WeekConfirmationDetails(props) {
       // The only case where the answer should be an empty string is for
       // the "provide more details" question, and then only
       // if the answer to "reason you're not working" was "still working PT"
-      return "N/A";
+      return false;
     }
     if (
       answer === undefined ||
@@ -120,8 +123,10 @@ function WeekConfirmationDetails(props) {
   }
 
   return questionKeys.map((questionKey, index) => {
-    const questionNumber = index + 1;
+    // Ugly hack to avoid prefixing the second question (a subquestion) with a number
+    const questionNumber = index === 0 ? 1 : index;
     const answer = questionAnswers[index];
+    const showQuestion = answer !== false;
     // Don't prefix sub-questions with numbers, in order to match actual application
     const showQuestionNumber = !(
       questionKey.endsWith("tooSickNumberOfDays") ||
@@ -131,17 +136,19 @@ function WeekConfirmationDetails(props) {
     const isNotLastItem = index !== questionKeys.length - 1;
 
     return (
-      <React.Fragment key={index}>
-        <p>
-          {showQuestionNumber && questionNumber + ". "}
-          <Trans t={t} i18nKey={questionKey} values={{ weekString }} />
-        </p>
-        <p>
-          <strong>{answer}</strong>
-        </p>
-        {showEmployers && <ListOfEmployers />}
-        {isNotLastItem && <hr />}
-      </React.Fragment>
+      showQuestion && (
+        <React.Fragment key={index}>
+          <p>
+            {showQuestionNumber && questionNumber + ". "}
+            <Trans t={t} i18nKey={questionKey} values={{ weekString }} />
+          </p>
+          <p>
+            <strong>{answer}</strong>
+          </p>
+          {showEmployers && <ListOfEmployers />}
+          {isNotLastItem && <hr />}
+        </React.Fragment>
+      )
     );
   });
 }

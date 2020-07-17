@@ -50,7 +50,7 @@ function WeekWithDetail(props) {
         // TODO turn this into an error we log
         console.log("missing answer", questionName, weekData);
       }
-      return "N/A";
+      return false;
     }
 
     // disasterChoice answers are stored in the format "choice-3 TEXT OF Q..."
