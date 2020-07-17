@@ -122,13 +122,18 @@ function WeekConfirmationDetails(props) {
   return questionKeys.map((questionKey, index) => {
     const questionNumber = index + 1;
     const answer = questionAnswers[index];
+    // Don't prefix sub-questions with numbers, in order to match actual application
+    const showQuestionNumber = !(
+      questionKey.endsWith("tooSickNumberOfDays") ||
+      questionKey.endsWith("disasterChoice")
+    );
     const showEmployers = questionKey.endsWith("workOrEarn") && employers;
     const isNotLastItem = index !== questionKeys.length - 1;
 
     return (
       <React.Fragment key={index}>
         <p>
-          {questionNumber}.{" "}
+          {showQuestionNumber && questionNumber + ". "}
           <Trans t={t} i18nKey={questionKey} values={{ weekString }} />
         </p>
         <p>

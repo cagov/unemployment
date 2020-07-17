@@ -54,6 +54,7 @@ function WeekWithDetail(props) {
     }
 
     // disasterChoice answers are stored in the format "choice-3 TEXT OF Q..."
+    // Show answer in language selected on the page, not the original language submitted
     if (questionName === "disasterChoice") {
       return t(
         "retrocerts-certification.disaster-choices." + answer.split(" ")[0]
