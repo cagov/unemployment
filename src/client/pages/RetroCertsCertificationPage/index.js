@@ -298,7 +298,7 @@ function RetroCertsCertificationPage(props) {
                 inputName="recentDisaster"
               >
                 <DisasterQuestion
-                  questionText={t(questionText("recentDisasterChoice"))}
+                  questionText={t(questionText("disasterChoice"))}
                   choice={formData.disasterChoice}
                   onChange={(e) => handleFormDataChange(e)}
                 />
