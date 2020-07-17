@@ -55,7 +55,9 @@ function WeekWithDetail(props) {
 
     // disasterChoice answers are stored in the format "choice-3 TEXT OF Q..."
     if (questionName === "disasterChoice") {
-      return answer.substring(answer.indexOf(" ") + 1);
+      return t(
+        "retrocerts-certification.disaster-choices." + answer.split(" ")[0]
+      );
     }
 
     if (answer === true) {
