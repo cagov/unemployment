@@ -38,7 +38,7 @@ function RetroCertsConfirmationPage(props) {
     .toUpperCase();
 
   // Log out the user since they are done!
-  // clearAuthToken();
+  clearAuthToken();
 
   const isReturning =
     history.location.state && history.location.state.isReturning;
