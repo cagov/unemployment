@@ -1,7 +1,7 @@
 import Button from "react-bootstrap/Button";
 import { Redirect, useHistory } from "react-router-dom";
 import Alert from "react-bootstrap/Alert";
-import React from "react";
+import React, { useState } from "react";
 import { useTranslation, Trans } from "react-i18next";
 import { userDataPropType } from "../../commonPropTypes";
 import routes from "../../../data/routes";
@@ -11,12 +11,16 @@ import LanguageSelector from "../../components/LanguageSelector";
 import ListOfWeeksWithDetail from "../../components/ListOfWeeksWithDetail";
 import { logEvent } from "../../utils";
 import { clearAuthToken } from "../../components/SessionTimer";
+import programPlan from "../../../data/programPlan";
 
 function RetroCertsConfirmationPage(props) {
   const { t } = useTranslation();
   document.title = t("retrocerts-confirmation.title");
   const history = useHistory();
   const userData = props.userData;
+  const isAnyWeekPua = userData.programPlan.includes(programPlan.puaFullTime);
+
+  const [showDetail, setShowDetail] = useState(false);
 
   // The user is here by accident. Send them back.
   if (!userData.confirmationNumber) {
@@ -47,6 +51,30 @@ function RetroCertsConfirmationPage(props) {
     window.print();
   }
 
+  function AcknowledgementDetail(props) {
+    return (
+      <div className="detail">
+        {isAnyWeekPua ? (
+          <ul>
+            <li>{t("retrocerts-certification.ack-list-pua-item-1")}</li>
+            <li>{t("retrocerts-certification.ack-list-pua-item-2")}</li>
+            <li>{t("retrocerts-certification.ack-list-pua-item-3")}</li>
+          </ul>
+        ) : (
+          <ul>
+            <li>{t("retrocerts-certification.ack-list-item-1")}</li>
+            <li>{t("retrocerts-certification.ack-list-item-2")}</li>
+            <li>{t("retrocerts-certification.ack-list-item-3")}</li>
+            <li>{t("retrocerts-certification.ack-list-item-4")}</li>
+          </ul>
+        )}
+        <input type="checkbox" checked disabled />
+        {t("retrocerts-certification.ack-label")}
+      </div>
+    );
+  }
+
+  const EN_DASH = "–";
   return (
     <div id="overflow-wrapper">
       <Header />
@@ -78,6 +106,20 @@ function RetroCertsConfirmationPage(props) {
           <p>{t("retrocerts-confirmation.p1b")}</p>
           <h2 className="mt-5">{t("retrocerts-confirmation.header2")}</h2>
           <ListOfWeeksWithDetail userData={userData} />
+          <Alert variant="secondary" className="d-flex">
+            <div className="flex-fill">
+              <button
+                className="toggleAccordion"
+                onClick={() => setShowDetail(!showDetail)}
+              >
+                <span className="toggleCharacter">
+                  {showDetail ? EN_DASH : "+"}
+                </span>
+                <strong>{t("retrocerts-certification.ack-header")}</strong>
+              </button>
+            </div>
+          </Alert>
+          {showDetail && <AcknowledgementDetail className="detail" />}
 
           <h2 className="mt-5">{t("retrocerts-confirmation.header3")}</h2>
           <p>

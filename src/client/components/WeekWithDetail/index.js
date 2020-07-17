@@ -1,6 +1,6 @@
 import Alert from "react-bootstrap/Alert";
 import PropTypes from "prop-types";
-import React from "react";
+import React, { useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { startAndEndDate, toWeekString } from "../../../utils/retroCertsWeeks";
 import programPlan from "../../../data/programPlan";
@@ -9,6 +9,8 @@ import WeekConfirmationDetails from "../WeekConfirmationDetails";
 function WeekWithDetail(props) {
   const { index, weekData, weekIndex, weekProgramPlan } = props;
   const { t } = useTranslation();
+
+  const [showDetail, setShowDetail] = useState(false);
 
   const baseQuestionNames = [
     "tooSick",
@@ -45,15 +47,17 @@ function WeekWithDetail(props) {
       // the "number of days you were sick" question, and then only
       // if the answer to "were you sick" was yes
       if (questionName !== "tooSickNumberOfDays" || weekData.tooSick) {
-        // TODO turn this into an error we log
-        console.log("missing answer", questionName, weekData);
+        // TODO(kalvin): log this error in Azure
       }
-      return "N/A";
+      return false;
     }
 
     // disasterChoice answers are stored in the format "choice-3 TEXT OF Q..."
+    // Show answer in language selected on the page, not the original language submitted
     if (questionName === "disasterChoice") {
-      return answer.substring(answer.indexOf(" ") + 1);
+      return t(
+        "retrocerts-certification.disaster-choices." + answer.split(" ")[0]
+      );
     }
 
     if (answer === true) {
@@ -68,8 +72,7 @@ function WeekWithDetail(props) {
   const dates = startAndEndDate(weekIndex);
   const weekHasEmployers = weekData.workOrEarn;
   if (weekHasEmployers && !weekData.employers) {
-    // TODO turn this into an error we log
-    console.log("missing employer(s)");
+    // TODO(kalvin): log this "missing employer(s)" error in Azure
   }
 
   let questionNames;
@@ -87,22 +90,40 @@ function WeekWithDetail(props) {
     return getSubmittedAnswer(questionName, weekData);
   });
 
+  // TODO(kalvin): refactor collapsible accordion item from here and Acknowledgement
+  // in RetroCertsConfirmationPage out to common file
+  const EN_DASH = "–";
   return (
-    <Alert variant="secondary" className="d-flex">
-      <div className="flex-fill">
-        <Trans
-          t={t}
-          i18nKey="retrocerts-week-list-item"
-          values={{ ...dates, weekForUser }}
-        />
-        <WeekConfirmationDetails
-          employers={weekHasEmployers ? weekData.employers : undefined}
-          questionAnswers={questionAnswers}
-          questionKeys={questionKeys}
-          weekString={toWeekString(weekIndex)}
-        />
-      </div>
-    </Alert>
+    <React.Fragment>
+      <Alert variant="secondary" className="d-flex">
+        <div className="flex-fill">
+          <button
+            className="toggleAccordion"
+            onClick={() => setShowDetail(!showDetail)}
+          >
+            <span className="toggleCharacter">
+              {showDetail ? EN_DASH : "+"}
+            </span>
+            <Trans
+              t={t}
+              i18nKey="retrocerts-week-list-item"
+              values={{ ...dates, weekForUser }}
+            />
+          </button>
+        </div>
+      </Alert>
+
+      {showDetail && (
+        <div className="detail">
+          <WeekConfirmationDetails
+            employers={weekHasEmployers ? weekData.employers : undefined}
+            questionAnswers={questionAnswers}
+            questionKeys={questionKeys}
+            weekString={toWeekString(weekIndex)}
+          />
+        </div>
+      )}
+    </React.Fragment>
   );
 }
 
