@@ -109,8 +109,7 @@ function WeekConfirmationDetails(props) {
       answer === undefined ||
       (answer === "" && employer.reason !== "still-working")
     ) {
-      // TODO turn this into an error we log
-      console.log("missing answer", questionName, employer);
+      // TODO(kalvin): log this "missing answer" error in Azure
     }
 
     if (questionName === "reason") {

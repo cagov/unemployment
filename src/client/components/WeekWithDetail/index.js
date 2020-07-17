@@ -47,8 +47,7 @@ function WeekWithDetail(props) {
       // the "number of days you were sick" question, and then only
       // if the answer to "were you sick" was yes
       if (questionName !== "tooSickNumberOfDays" || weekData.tooSick) {
-        // TODO turn this into an error we log
-        console.log("missing answer", questionName, weekData);
+        // TODO(kalvin): log this error in Azure
       }
       return false;
     }
@@ -73,8 +72,7 @@ function WeekWithDetail(props) {
   const dates = startAndEndDate(weekIndex);
   const weekHasEmployers = weekData.workOrEarn;
   if (weekHasEmployers && !weekData.employers) {
-    // TODO turn this into an error we log
-    console.log("missing employer(s)");
+    // TODO(kalvin): log this "missing employer(s)" error in Azure
   }
 
   let questionNames;
