@@ -22,6 +22,17 @@ export default function App() {
   if (initialPageLoad.current) {
     initialPageLoad.current = false;
 
+    // Initialize Google Analytics.
+    /* eslint-disable */
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = (...args) => dataLayer.push(args);
+    gtag("js", new Date());
+    // For details see: https://support.google.com/analytics/answer/9310895?hl=en
+    // https://developers.google.com/analytics/devguides/collection/gtagjs/ip-anonymization
+    gtag("config", "UA-3419582-2", { anonymize_ip: true }); // www.ca.gov
+    gtag("config", "UA-3419582-31", { anonymize_ip: true }); // edd.ca.gov
+    /* eslint-enable */
+
     // <App> re-mounts every time user data is changed. To have only one
     // history listener, add it during the initial page load only.
     history.listen((location) => logPage(location.pathname));

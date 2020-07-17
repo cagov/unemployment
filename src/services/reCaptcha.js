@@ -14,11 +14,25 @@ class ReCaptcha {
 
   async askGoogle() {
     const postUrl = `${this.url}?secret=${this.secret}&response=${this.userToken}`;
+    const postData = {};
+    // The 99th percentile of requests takes 128ms. 2s should be plenty of time.
+    const timeoutMs = 2 * 1000;
+    const numAttempts = 3;
+    const config = {
+      timeout: timeoutMs,
+    };
 
-    // TODO: Add error handling
-    const response = await axios.post(postUrl, {});
-
-    return response;
+    let axiosError = null;
+    for (let i = 0; i < numAttempts; ++i) {
+      try {
+        const response = await axios.post(postUrl, postData, config);
+        return response;
+      } catch (e) {
+        // There was a timeout or some other error. Try again.
+        axiosError = e;
+      }
+    }
+    throw axiosError;
   }
 }
 
