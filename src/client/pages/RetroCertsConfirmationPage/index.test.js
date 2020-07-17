@@ -12,6 +12,7 @@ describe("<RetroCertsConfirmationPage />", () => {
           status: AUTH_STRINGS.statusCode.ok,
           weeksToCertify: [0, 1, 2, 5, 6],
           confirmationNumber: "CONFIRMATION_NUMBER",
+          programPlan: ["PUA full time"],
         },
         setUserData: () => {},
       }
@@ -28,6 +29,7 @@ describe("<RetroCertsConfirmationPage />", () => {
         userData: {
           status: AUTH_STRINGS.statusCode.ok,
           weeksToCertify: [0, 1, 2, 5, 6],
+          programPlan: ["UI full time"],
         },
         setUserData: () => {},
       }

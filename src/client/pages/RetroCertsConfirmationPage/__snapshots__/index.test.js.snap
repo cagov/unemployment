@@ -78,18 +78,62 @@ exports[`<RetroCertsConfirmationPage /> with confirmation number 1`] = `
       >
         Retroactive Certification Weeks
       </h2>
-      <ListOfWeeks
-        showChecks={true}
-        weeksToCertify={
-          Array [
-            0,
-            1,
-            2,
-            5,
-            6,
-          ]
+      <ListOfWeeksWithDetail
+        userData={
+          Object {
+            "confirmationNumber": "CONFIRMATION_NUMBER",
+            "programPlan": Array [
+              "PUA full time",
+            ],
+            "status": "ok",
+            "weeksToCertify": Array [
+              0,
+              1,
+              2,
+              5,
+              6,
+            ],
+          }
         }
       />
+      <Alert
+        className="d-flex"
+        closeLabel="Close alert"
+        show={true}
+        transition={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": Object {
+              "appear": false,
+              "in": false,
+              "mountOnEnter": false,
+              "timeout": 300,
+              "unmountOnExit": false,
+            },
+            "displayName": "Fade",
+            "render": [Function],
+          }
+        }
+        variant="secondary"
+      >
+        <div
+          className="flex-fill"
+        >
+          <button
+            className="toggleAccordion"
+            onClick={[Function]}
+          >
+            <span
+              className="toggleCharacter"
+            >
+              +
+            </span>
+            <strong>
+              Acknowledgement
+            </strong>
+          </button>
+        </div>
+      </Alert>
       <h2
         className="mt-5"
       >
