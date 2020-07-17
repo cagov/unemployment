@@ -1,3 +1,5 @@
+import { getAppInsights } from "../services/azureApplicationInsights";
+
 const cagovPropertyId = "UA-3419582-2";
 const eddPropertyId = "UA-3419582-31";
 
@@ -6,6 +8,16 @@ export function logEvent(category, action, label) {
   window.gtag("event", action, {
     event_category: category,
     event_label: label,
+  });
+
+  // Also track the event in Azure App Insights.
+  const appInsights = getAppInsights();
+  appInsights.trackEvent({
+    name: action,
+    properties: {
+      category,
+      label,
+    },
   });
 }
 
