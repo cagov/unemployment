@@ -199,6 +199,7 @@
     "dob-year": "Año",
     "ssn-label": "Número de Seguro Social",
     "ssn-hint": "Ingrese su número de Seguro Social con o sin guiones.",
+    "ssn-screen-reader": "Puede seleccionar Mostrar SSN después de este campo de entrada",
     "recaptcha-text": "Control de seguridad proporcionado por reCAPTCHA.",
     "submit": "Encuéntrame",
     "invalid-user-error": "Revise y verifique que la información que ingresó sea correcta. Si su información es correcta, entonces no necesita certificar.",
