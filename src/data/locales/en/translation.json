@@ -199,6 +199,7 @@
     "dob-year": "Year",
     "ssn-label": "Social Security Number",
     "ssn-hint": "Enter your Social Security number with or without dashes.",
+    "ssn-screen-reader": "You can select Show SSN after this input field",
     "recaptcha-text": "Security check provided by reCAPTCHA.",
     "submit": "Find Me",
     "invalid-user-error": "Review and verify the information you entered is correct. If your information is correct, then you don’t need to certify.",
