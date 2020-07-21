@@ -87,7 +87,7 @@ exports[`<Footer /> renders the component 1`] = `
         rel="noopener noreferrer"
         target="_blank"
       >
-        footer.privacyPolicy
+        Privacy Policy
       </NavLink>
       <NavLink
         as={
