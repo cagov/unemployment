@@ -31,7 +31,7 @@ function RetroCertsCertificationPage(props) {
   document.title = t("retrocerts-certification.question-page-title");
   const history = useHistory();
   const [validated, setValidated] = useState(false);
-  const [showGenericValidationError, setShowGenericValidaitonError] = useState(
+  const [showGenericValidationError, setShowGenericValidationError] = useState(
     false
   );
 
@@ -125,7 +125,7 @@ function RetroCertsCertificationPage(props) {
 
     setValidated(true);
 
-    setShowGenericValidaitonError(!isValid);
+    setShowGenericValidationError(!isValid);
 
     if (!isValid) {
       autoScroll({
@@ -298,7 +298,7 @@ function RetroCertsCertificationPage(props) {
                 inputName="recentDisaster"
               >
                 <DisasterQuestion
-                  questionText={t(questionText("recentDisasterChoice"))}
+                  questionText={t(questionText("disasterChoice"))}
                   choice={formData.disasterChoice}
                   onChange={(e) => handleFormDataChange(e)}
                 />
@@ -330,6 +330,13 @@ function RetroCertsCertificationPage(props) {
                         fromIndexToPathString(
                           userData.weeksToCertify[weekForUser - 2]
                         )
+                  }
+                  onClick={() =>
+                    logEvent(
+                      "RetroCerts",
+                      "BackButton",
+                      `weeks-for-user-${weekForUser}`
+                    )
                   }
                 >
                   {weekForUser === 1

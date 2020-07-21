@@ -199,6 +199,7 @@
     "dob-year": "Año",
     "ssn-label": "Número de Seguro Social",
     "ssn-hint": "Ingrese su número de Seguro Social con o sin guiones.",
+    "ssn-screen-reader": "Puede seleccionar Mostrar SSN después de este campo de entrada",
     "recaptcha-text": "Control de seguridad proporcionado por reCAPTCHA.",
     "submit": "Encuéntrame",
     "invalid-user-error": "Revise y verifique que la información que ingresó sea correcta. Si su información es correcta, entonces no necesita certificar.",
@@ -277,7 +278,7 @@
         "workOrEarn": "¿Trabajó o ganó algún dinero, sin importar si le pagaron o no? Si trabaja por cuenta propia, reporte sus ingresos durante la semana en que recibe el dinero.",
         "help-workOrEarn": "Revise la fecha en que comienza y termina cada semana. Si realizó algún trabajo durante esta semana, los ingresos deben reportarse independientemente si recibió paga o no. Esto no incluye empleo por cuenta propia.",
         "recentDisaster": "¿Está usted desempleado(a) como resultado directo de un desastre reciente (por ejemplo: COVID-19, terremoto, inundación, deslizamiento de tierra, incendio, etc.) que haya ocurrido en California?",
-        "recentDisasterChoice": "Seleccione la opción de cómo se vio afectado por la pandemia de COVID-19."
+        "disasterChoice": "Seleccione la opción de cómo se vio afectado por la pandemia de COVID-19."
       }
     },
     "employers": {
