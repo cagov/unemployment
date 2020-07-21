@@ -41,6 +41,19 @@ singlePageAppRouter.get("/*", (req, res) => {
   const is404 = Object.values(pageRoutes).indexOf(req.path) === -1;
   const statusCode = is404 ? 404 : 200;
 
+  // NOTE: If you change the GA script code, you need to update the hash in
+  // csp.js to allow this script to run. Chrome dev tools will have an error
+  // with the correct hash value to use.
+  // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#Unsafe_inline_script
+  const gaScript = `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      // For details see: https://support.google.com/analytics/answer/9310895?hl=en
+      // https://developers.google.com/analytics/devguides/collection/gtagjs/ip-anonymization
+      gtag('config', 'UA-3419582-2', { 'anonymize_ip': true }); // www.ca.gov
+      gtag('config', 'UA-3419582-31', { 'anonymize_ip': true }); // edd.ca.gov`;
+
   res
     .status(statusCode)
     .set("Referrer-Policy", "strict-origin-when-cross-origin")
@@ -52,6 +65,7 @@ singlePageAppRouter.get("/*", (req, res) => {
       <base href="/">
       <!-- Global site tag (gtag.js) - Google Analytics -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=UA-3419582-2"></script>
+      <script>${gaScript}</script>
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1">
