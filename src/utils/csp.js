@@ -19,6 +19,7 @@ function buildPolicies() {
       "www.googletagmanager.com",
       "www.google-analytics.com",
       "www.gstatic.com",
+      "'sha256-y7pLeNIruC+hCYcWLjrAKfMTQoptl6BVn8PcBOXd+aw='", // GA inline script
     ],
   };
 
