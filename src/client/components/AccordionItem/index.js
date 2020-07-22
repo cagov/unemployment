@@ -30,8 +30,8 @@ function AccordionItem(props) {
 }
 
 AccordionItem.propTypes = {
-  header: PropTypes.element,
-  expandedBody: PropTypes.element,
+  header: PropTypes.element.isRequired,
+  expandedBody: PropTypes.element.isRequired,
 };
 
 export default AccordionItem;

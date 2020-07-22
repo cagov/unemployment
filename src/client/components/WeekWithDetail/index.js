@@ -110,10 +110,10 @@ function WeekWithDetail(props) {
 }
 
 WeekWithDetail.propTypes = {
-  index: PropTypes.number,
-  weekData: PropTypes.object,
-  weekIndex: PropTypes.number,
-  weekProgramPlan: PropTypes.string,
+  index: PropTypes.number.isRequired,
+  weekData: PropTypes.object.isRequired,
+  weekIndex: PropTypes.number.isRequired,
+  weekProgramPlan: PropTypes.string.isRequired,
 };
 
 export default WeekWithDetail;

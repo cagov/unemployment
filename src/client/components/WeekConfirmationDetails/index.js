@@ -152,10 +152,10 @@ function WeekConfirmationDetails(props) {
   });
 }
 WeekConfirmationDetails.propTypes = {
-  employers: PropTypes.arrayOf(PropTypes.object),
-  questionAnswers: PropTypes.array,
-  questionKeys: PropTypes.arrayOf(PropTypes.string),
-  weekString: PropTypes.string,
+  employers: PropTypes.arrayOf(PropTypes.object).isRequired,
+  questionAnswers: PropTypes.array.isRequired,
+  questionKeys: PropTypes.arrayOf(PropTypes.string).isRequired,
+  weekString: PropTypes.string.isRequired,
 };
 
 export default WeekConfirmationDetails;

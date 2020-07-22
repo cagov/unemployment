@@ -27,7 +27,7 @@ function ListOfWeeksWithDetail(props) {
 }
 
 ListOfWeeksWithDetail.propTypes = {
-  userData: userDataPropType,
+  userData: userDataPropType.isRequired,
 };
 
 export default ListOfWeeksWithDetail;

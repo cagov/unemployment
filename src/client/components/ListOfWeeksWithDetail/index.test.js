@@ -16,7 +16,7 @@ describe("<ListOfWeeksWithDetail />", () => {
       userData: {
         formData: weekOfAnswers,
         weeksToCertify: [1, 2, 3],
-        programPlan: "UI full time",
+        programPlan: ["UI full time"],
       },
     });
 
