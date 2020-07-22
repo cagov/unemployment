@@ -6,19 +6,19 @@ Array [
     index={0}
     key="0"
     weekIndex={1}
-    weekProgramPlan="U"
+    weekProgramPlan="UI full time"
   />,
   <WeekWithDetail
     index={1}
     key="1"
     weekIndex={2}
-    weekProgramPlan="I"
+    weekProgramPlan="UI full time"
   />,
   <WeekWithDetail
     index={2}
     key="2"
     weekIndex={3}
-    weekProgramPlan=" "
+    weekProgramPlan="UI full time"
   />,
 ]
 `;
