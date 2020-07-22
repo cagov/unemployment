@@ -15,6 +15,9 @@ import {
 import routes from "../../../data/routes";
 import AUTH_STRINGS from "../../../data/authStrings";
 import programPlan from "../../../data/programPlan";
+import getWeekProgramPlan from "../../../utils/getWeekProgramPlan";
+import getRetroCertQuestionKey from "../../../utils/getRetroCertQuestionKey";
+
 import { logEvent } from "../../utils";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
@@ -74,12 +77,7 @@ function RetroCertsCertificationPage(props) {
     setValidated(false);
   }
 
-  // Most (99.99%) users have the same programPlan for all weeks in
-  // weeksToCertify, in which case their programPlan is a one element array.
-  // The rest have an array whose length matches the weeksToCertify length.
-  const programPlanIndex =
-    userData.programPlan.length === 1 ? 0 : weekForUser - 1;
-  const weekProgramPlan = userData.programPlan[programPlanIndex];
+  const weekProgramPlan = getWeekProgramPlan(userData.programPlan, weekForUser);
 
   const handleFormDataChange = (event) => {
     const { value, name } = event;
@@ -104,16 +102,8 @@ function RetroCertsCertificationPage(props) {
     });
   };
 
-  function questionText(transKey) {
-    if (weekProgramPlan === programPlan.uiPartTime) {
-      return "retrocerts-certification.questions.ui-part-time." + transKey;
-    }
-    if (weekProgramPlan === programPlan.uiFullTime) {
-      return "retrocerts-certification.questions.ui-full-time." + transKey;
-    }
-    if (weekProgramPlan === programPlan.puaFullTime) {
-      return "retrocerts-certification.questions.pua-full-time." + transKey;
-    }
+  function getQuestionKey(transKey) {
+    return getRetroCertQuestionKey(transKey, weekProgramPlan);
   }
 
   const handleSubmit = (event) => {
@@ -239,8 +229,10 @@ function RetroCertsCertificationPage(props) {
             <YesNoQuestion
               key={weekIndex + "tooSick"}
               questionNumber={1}
-              questionText={t(questionText("tooSick"))}
-              helpText={<Trans t={t} i18nKey={questionText("help-tooSick")} />}
+              questionText={t(getQuestionKey("tooSick"))}
+              helpText={
+                <Trans t={t} i18nKey={getQuestionKey("help-tooSick")} />
+              }
               ifYes={formData.tooSick}
               onChange={(e) => handleFormDataChange(e)}
               inputName="tooSick"
@@ -248,8 +240,8 @@ function RetroCertsCertificationPage(props) {
               <DaysSickQuestion
                 numDays={formData.tooSickNumberOfDays}
                 onChange={(e) => handleFormDataChange(e)}
-                questionText={t(questionText("tooSickNumberOfDays"))}
-                helpText={t(questionText("help-tooSickNumberOfDays"))}
+                questionText={t(getQuestionKey("tooSickNumberOfDays"))}
+                helpText={t(getQuestionKey("help-tooSickNumberOfDays"))}
               />
             </YesNoQuestion>
             {questionsTwoThroughFive.map((name, index) => (
@@ -259,12 +251,12 @@ function RetroCertsCertificationPage(props) {
                 questionText={
                   <Trans
                     t={t}
-                    i18nKey={questionText(name)}
+                    i18nKey={getQuestionKey(name)}
                     values={{ weekString: toWeekString(weekIndex) }}
                   />
                 }
                 helpText={
-                  <Trans t={t} i18nKey={questionText(`help-${name}`)} />
+                  <Trans t={t} i18nKey={getQuestionKey(`help-${name}`)} />
                 }
                 ifYes={formData[name]}
                 onChange={(e) => handleFormDataChange(e)}
@@ -275,9 +267,9 @@ function RetroCertsCertificationPage(props) {
               key={weekIndex + "workOrEarn"}
               questionNumber={6}
               questionText={
-                <Trans t={t} i18nKey={questionText("workOrEarn")} />
+                <Trans t={t} i18nKey={getQuestionKey("workOrEarn")} />
               }
-              helpText={t(questionText("help-workOrEarn"))}
+              helpText={t(getQuestionKey("help-workOrEarn"))}
               ifYes={formData.workOrEarn}
               onChange={(e) => handleFormDataChange(e)}
               inputName="workOrEarn"
@@ -291,14 +283,14 @@ function RetroCertsCertificationPage(props) {
               <YesNoQuestion
                 key={weekIndex + "recentDisaster"}
                 questionNumber={7}
-                questionText={t(questionText("recentDisaster"))}
+                questionText={t(getQuestionKey("recentDisaster"))}
                 helpText=""
                 ifYes={formData.recentDisaster}
                 onChange={(e) => handleFormDataChange(e)}
                 inputName="recentDisaster"
               >
                 <DisasterQuestion
-                  questionText={t(questionText("disasterChoice"))}
+                  questionText={t(getQuestionKey("disasterChoice"))}
                   choice={formData.disasterChoice}
                   onChange={(e) => handleFormDataChange(e)}
                 />

@@ -1,6 +1,7 @@
 import React from "react";
 import { userDataPropType } from "../../commonPropTypes";
 import WeekWithDetail from "../WeekWithDetail";
+import getWeekProgramPlan from "../../../utils/getWeekProgramPlan";
 
 function ListOfWeeksWithDetail(props) {
   const { userData } = props;
@@ -8,11 +9,10 @@ function ListOfWeeksWithDetail(props) {
   return userData.weeksToCertify.map((weekIndex, index) => {
     const weekForUser = index + 1;
     const weekData = userData.formData[index];
-
-    // TODO(kalvin): also used in RCCertificationPage, refactor to common place
-    const programPlanIndex =
-      userData.programPlan.length === 1 ? 0 : weekForUser - 1;
-    const weekProgramPlan = userData.programPlan[programPlanIndex];
+    const weekProgramPlan = getWeekProgramPlan(
+      userData.programPlan,
+      weekForUser
+    );
 
     return (
       <WeekWithDetail

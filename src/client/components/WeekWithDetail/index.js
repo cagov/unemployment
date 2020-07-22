@@ -5,6 +5,7 @@ import { startAndEndDate, toWeekString } from "../../../utils/retroCertsWeeks";
 import programPlan from "../../../data/programPlan";
 import WeekConfirmationDetails from "../WeekConfirmationDetails";
 import AccordionItem from "../AccordionItem";
+import getRetroCertQuestionKey from "../../../utils/getRetroCertQuestionKey";
 
 function WeekWithDetail(props) {
   const { index, weekData, weekIndex, weekProgramPlan } = props;
@@ -25,17 +26,8 @@ function WeekWithDetail(props) {
     "disasterChoice",
   ];
 
-  // TODO(kalvin): also used in RCCertificationPage, refactor to common place
-  function getQuestionKey(transKey, weekProgramPlan) {
-    if (weekProgramPlan === programPlan.uiPartTime) {
-      return "retrocerts-certification.questions.ui-part-time." + transKey;
-    }
-    if (weekProgramPlan === programPlan.uiFullTime) {
-      return "retrocerts-certification.questions.ui-full-time." + transKey;
-    }
-    if (weekProgramPlan === programPlan.puaFullTime) {
-      return "retrocerts-certification.questions.pua-full-time." + transKey;
-    }
+  function getQuestionKey(transKey) {
+    return getRetroCertQuestionKey(transKey, weekProgramPlan);
   }
 
   function getSubmittedAnswer(questionName, weekData) {
