@@ -54,7 +54,7 @@ exports[`<RetroCertsConfirmationPage /> with confirmation number 1`] = `
       <h2
         className="mt-5"
       >
-        Retroactive Certification Confirmation
+        Confirmation Number
       </h2>
       <p>
         <Trans
@@ -76,7 +76,7 @@ exports[`<RetroCertsConfirmationPage /> with confirmation number 1`] = `
       <h2
         className="mt-5"
       >
-        Retroactive Certification Weeks
+        Certifications Submitted
       </h2>
       <ListOfWeeksWithDetail
         userData={
@@ -96,44 +96,18 @@ exports[`<RetroCertsConfirmationPage /> with confirmation number 1`] = `
           }
         }
       />
-      <Alert
-        className="d-flex"
-        closeLabel="Close alert"
-        show={true}
-        transition={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "defaultProps": Object {
-              "appear": false,
-              "in": false,
-              "mountOnEnter": false,
-              "timeout": 300,
-              "unmountOnExit": false,
-            },
-            "displayName": "Fade",
-            "render": [Function],
-          }
+      <AccordionItem
+        expandedBody={
+          <AcknowledgementDetail
+            className="detail"
+          />
         }
-        variant="secondary"
-      >
-        <div
-          className="flex-fill"
-        >
-          <button
-            className="toggleAccordion"
-            onClick={[Function]}
-          >
-            <span
-              className="toggleCharacter"
-            >
-              +
-            </span>
-            <strong>
-              Acknowledgement
-            </strong>
-          </button>
-        </div>
-      </Alert>
+        header={
+          <strong>
+            Acknowledgement
+          </strong>
+        }
+      />
       <h2
         className="mt-5"
       >

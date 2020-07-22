@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AccordionItem /> renders the component 1`] = `
+<Fragment>
+  <Alert
+    aria-label="Show details for this week"
+    className="d-flex toggleAccordion"
+    closeLabel="Close alert"
+    onClick={[Function]}
+    role="button"
+    show={true}
+    transition={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "defaultProps": Object {
+          "appear": false,
+          "in": false,
+          "mountOnEnter": false,
+          "timeout": 300,
+          "unmountOnExit": false,
+        },
+        "displayName": "Fade",
+        "render": [Function],
+      }
+    }
+    variant="secondary"
+  >
+    <div
+      className="flex-fill"
+    >
+      <span
+        className="toggleCharacter"
+      >
+        +
+      </span>
+    </div>
+  </Alert>
+</Fragment>
+`;
