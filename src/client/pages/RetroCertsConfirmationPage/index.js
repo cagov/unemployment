@@ -1,7 +1,7 @@
 import Button from "react-bootstrap/Button";
 import { Redirect, useHistory } from "react-router-dom";
 import Alert from "react-bootstrap/Alert";
-import React, { useState } from "react";
+import React from "react";
 import { useTranslation, Trans } from "react-i18next";
 import { userDataPropType } from "../../commonPropTypes";
 import routes from "../../../data/routes";
@@ -12,6 +12,7 @@ import ListOfWeeksWithDetail from "../../components/ListOfWeeksWithDetail";
 import { logEvent } from "../../utils";
 import { clearAuthToken } from "../../components/SessionTimer";
 import programPlan from "../../../data/programPlan";
+import AccordionItem from "../../components/AccordionItem";
 
 function RetroCertsConfirmationPage(props) {
   const { t } = useTranslation();
@@ -19,8 +20,6 @@ function RetroCertsConfirmationPage(props) {
   const history = useHistory();
   const userData = props.userData;
   const isAnyWeekPua = userData.programPlan.includes(programPlan.puaFullTime);
-
-  const [showDetail, setShowDetail] = useState(false);
 
   // The user is here by accident. Send them back.
   if (!userData.confirmationNumber) {
@@ -53,7 +52,7 @@ function RetroCertsConfirmationPage(props) {
 
   function AcknowledgementDetail(props) {
     return (
-      <div className="detail">
+      <React.Fragment>
         {isAnyWeekPua ? (
           <ul>
             <li>{t("retrocerts-certification.ack-list-pua-item-1")}</li>
@@ -70,11 +69,10 @@ function RetroCertsConfirmationPage(props) {
         )}
         <input type="checkbox" checked disabled />
         {t("retrocerts-certification.ack-label")}
-      </div>
+      </React.Fragment>
     );
   }
 
-  const EN_DASH = "–";
   return (
     <div id="overflow-wrapper">
       <Header />
@@ -106,20 +104,10 @@ function RetroCertsConfirmationPage(props) {
           <p>{t("retrocerts-confirmation.p1b")}</p>
           <h2 className="mt-5">{t("retrocerts-confirmation.header2")}</h2>
           <ListOfWeeksWithDetail userData={userData} />
-          <Alert variant="secondary" className="d-flex">
-            <div className="flex-fill">
-              <button
-                className="toggleAccordion"
-                onClick={() => setShowDetail(!showDetail)}
-              >
-                <span className="toggleCharacter">
-                  {showDetail ? EN_DASH : "+"}
-                </span>
-                <strong>{t("retrocerts-certification.ack-header")}</strong>
-              </button>
-            </div>
-          </Alert>
-          {showDetail && <AcknowledgementDetail className="detail" />}
+          <AccordionItem
+            header={<strong>{t("retrocerts-certification.ack-header")}</strong>}
+            expandedBody={<AcknowledgementDetail className="detail" />}
+          />
 
           <h2 className="mt-5">{t("retrocerts-confirmation.header3")}</h2>
           <p>

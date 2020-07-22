@@ -1,0 +1,152 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<WeekWithDetail /> renders the WeekWithDetail component 1`] = `
+<WeekWithDetail
+  index={0}
+  weekData={
+    Object {
+      "couldNotAcceptWork": false,
+      "didYouLook": false,
+      "refuseWork": false,
+      "schoolOrTraining": false,
+      "tooSick": false,
+      "workOrEarn": false,
+    }
+  }
+  weekIndex={1}
+  weekProgramPlan="UI full time"
+>
+  <AccordionItem
+    expandedBody={
+      <WeekConfirmationDetails
+        questionAnswers={
+          Array [
+            "No",
+            false,
+            "No",
+            "No",
+            "No",
+            "No",
+            "No",
+          ]
+        }
+        questionKeys={
+          Array [
+            "retrocerts-certification.questions.ui-full-time.tooSick",
+            "retrocerts-certification.questions.ui-full-time.tooSickNumberOfDays",
+            "retrocerts-certification.questions.ui-full-time.couldNotAcceptWork",
+            "retrocerts-certification.questions.ui-full-time.didYouLook",
+            "retrocerts-certification.questions.ui-full-time.refuseWork",
+            "retrocerts-certification.questions.ui-full-time.schoolOrTraining",
+            "retrocerts-certification.questions.ui-full-time.workOrEarn",
+          ]
+        }
+        weekString="02/09/2020 - 02/15/2020"
+      />
+    }
+    header={
+      <Trans
+        i18nKey="retrocerts-week-list-item"
+        t={[Function]}
+        values={
+          Object {
+            "endDate": "02/15/2020",
+            "startDate": "02/09/2020",
+            "weekForUser": 1,
+          }
+        }
+      />
+    }
+  >
+    <Alert
+      aria-label="Show details for this week"
+      className="d-flex toggleAccordion"
+      closeLabel="Close alert"
+      onClick={[Function]}
+      role="button"
+      show={true}
+      transition={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "defaultProps": Object {
+            "appear": false,
+            "in": false,
+            "mountOnEnter": false,
+            "timeout": 300,
+            "unmountOnExit": false,
+          },
+          "displayName": "Fade",
+          "render": [Function],
+        }
+      }
+      variant="secondary"
+    >
+      <Fade
+        appear={false}
+        aria-label="Show details for this week"
+        in={true}
+        mountOnEnter={false}
+        onClick={[Function]}
+        role="button"
+        timeout={300}
+        unmountOnExit={true}
+      >
+        <Transition
+          addEndListener={[Function]}
+          appear={false}
+          aria-label="Show details for this week"
+          enter={true}
+          exit={true}
+          in={true}
+          mountOnEnter={false}
+          onClick={[Function]}
+          onEnter={[Function]}
+          onEntered={[Function]}
+          onEntering={[Function]}
+          onExit={[Function]}
+          onExited={[Function]}
+          onExiting={[Function]}
+          role="button"
+          timeout={300}
+          unmountOnExit={true}
+        >
+          <div
+            aria-label="Show details for this week"
+            className="fade d-flex toggleAccordion alert alert-secondary show"
+            onClick={[Function]}
+            role="button"
+          >
+            <div
+              className="flex-fill"
+            >
+              <span
+                className="toggleCharacter"
+              >
+                +
+              </span>
+              <Trans
+                i18nKey="retrocerts-week-list-item"
+                t={[Function]}
+                values={
+                  Object {
+                    "endDate": "02/15/2020",
+                    "startDate": "02/09/2020",
+                    "weekForUser": 1,
+                  }
+                }
+              >
+                <strong
+                  key="strong-0"
+                >
+                  Week 1
+                </strong>
+                : Sunday, 02/09/2020 – Saturday, 02/15/2020
+              </Trans>
+            </div>
+          </div>
+        </Transition>
+      </Fade>
+    </Alert>
+  </AccordionItem>
+</WeekWithDetail>
+`;

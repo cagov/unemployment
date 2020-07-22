@@ -1,16 +1,14 @@
-import Alert from "react-bootstrap/Alert";
 import PropTypes from "prop-types";
-import React, { useState } from "react";
+import React from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { startAndEndDate, toWeekString } from "../../../utils/retroCertsWeeks";
 import programPlan from "../../../data/programPlan";
 import WeekConfirmationDetails from "../WeekConfirmationDetails";
+import AccordionItem from "../AccordionItem";
 
 function WeekWithDetail(props) {
   const { index, weekData, weekIndex, weekProgramPlan } = props;
   const { t } = useTranslation();
-
-  const [showDetail, setShowDetail] = useState(false);
 
   const baseQuestionNames = [
     "tooSick",
@@ -90,48 +88,32 @@ function WeekWithDetail(props) {
     return getSubmittedAnswer(questionName, weekData);
   });
 
-  // TODO(kalvin): refactor collapsible accordion item from here and Acknowledgement
-  // in RetroCertsConfirmationPage out to common file
-  const EN_DASH = "–";
   return (
-    <React.Fragment>
-      <Alert variant="secondary" className="d-flex">
-        <div className="flex-fill">
-          <button
-            className="toggleAccordion"
-            onClick={() => setShowDetail(!showDetail)}
-          >
-            <span className="toggleCharacter">
-              {showDetail ? EN_DASH : "+"}
-            </span>
-            <Trans
-              t={t}
-              i18nKey="retrocerts-week-list-item"
-              values={{ ...dates, weekForUser }}
-            />
-          </button>
-        </div>
-      </Alert>
-
-      {showDetail && (
-        <div className="detail">
-          <WeekConfirmationDetails
-            employers={weekHasEmployers ? weekData.employers : undefined}
-            questionAnswers={questionAnswers}
-            questionKeys={questionKeys}
-            weekString={toWeekString(weekIndex)}
-          />
-        </div>
-      )}
-    </React.Fragment>
+    <AccordionItem
+      header={
+        <Trans
+          t={t}
+          i18nKey="retrocerts-week-list-item"
+          values={{ ...dates, weekForUser }}
+        />
+      }
+      expandedBody={
+        <WeekConfirmationDetails
+          employers={weekHasEmployers ? weekData.employers : undefined}
+          questionAnswers={questionAnswers}
+          questionKeys={questionKeys}
+          weekString={toWeekString(weekIndex)}
+        />
+      }
+    />
   );
 }
 
 WeekWithDetail.propTypes = {
-  index: PropTypes.number,
-  weekData: PropTypes.object,
-  weekIndex: PropTypes.number,
-  weekProgramPlan: PropTypes.string,
+  index: PropTypes.number.isRequired,
+  weekData: PropTypes.object.isRequired,
+  weekIndex: PropTypes.number.isRequired,
+  weekProgramPlan: PropTypes.string.isRequired,
 };
 
 export default WeekWithDetail;

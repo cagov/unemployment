@@ -122,8 +122,6 @@ function WeekConfirmationDetails(props) {
   }
 
   return questionKeys.map((questionKey, index) => {
-    // Ugly hack to avoid prefixing the second question (a subquestion) with a number
-    const questionNumber = index === 0 ? 1 : index;
     const answer = questionAnswers[index];
     const showQuestion = answer !== false;
     // Don't prefix sub-questions with numbers, in order to match actual application
@@ -131,6 +129,8 @@ function WeekConfirmationDetails(props) {
       questionKey.endsWith("tooSickNumberOfDays") ||
       questionKey.endsWith("disasterChoice")
     );
+    // Second question is a subquestion with no number, so re-index remaining questions
+    const questionNumber = index === 0 ? 1 : index;
     const showEmployers = questionKey.endsWith("workOrEarn") && employers;
     const isNotLastItem = index !== questionKeys.length - 1;
 
@@ -152,10 +152,10 @@ function WeekConfirmationDetails(props) {
   });
 }
 WeekConfirmationDetails.propTypes = {
-  employers: PropTypes.arrayOf(PropTypes.object),
-  questionAnswers: PropTypes.array,
-  questionKeys: PropTypes.arrayOf(PropTypes.string),
-  weekString: PropTypes.string,
+  employers: PropTypes.arrayOf(PropTypes.object).isRequired,
+  questionAnswers: PropTypes.array.isRequired,
+  questionKeys: PropTypes.arrayOf(PropTypes.string).isRequired,
+  weekString: PropTypes.string.isRequired,
 };
 
 export default WeekConfirmationDetails;
