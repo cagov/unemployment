@@ -147,6 +147,184 @@ exports[`<WeekWithDetail /> renders the WeekWithDetail component 1`] = `
         </Transition>
       </Fade>
     </Alert>
+    <div
+      className="detail"
+      style={
+        Object {
+          "display": "none",
+        }
+      }
+    >
+      <WeekConfirmationDetails
+        questionAnswers={
+          Array [
+            "No",
+            false,
+            "No",
+            "No",
+            "No",
+            "No",
+            "No",
+          ]
+        }
+        questionKeys={
+          Array [
+            "retrocerts-certification.questions.ui-full-time.tooSick",
+            "retrocerts-certification.questions.ui-full-time.tooSickNumberOfDays",
+            "retrocerts-certification.questions.ui-full-time.couldNotAcceptWork",
+            "retrocerts-certification.questions.ui-full-time.didYouLook",
+            "retrocerts-certification.questions.ui-full-time.refuseWork",
+            "retrocerts-certification.questions.ui-full-time.schoolOrTraining",
+            "retrocerts-certification.questions.ui-full-time.workOrEarn",
+          ]
+        }
+        weekString="02/09/2020 - 02/15/2020"
+      >
+        <p>
+          1. 
+          <Trans
+            i18nKey="retrocerts-certification.questions.ui-full-time.tooSick"
+            t={[Function]}
+            values={
+              Object {
+                "weekString": "02/09/2020 - 02/15/2020",
+              }
+            }
+          >
+            Were you too sick or injured to work?
+          </Trans>
+        </p>
+        <p>
+          <strong>
+            No
+          </strong>
+        </p>
+        <hr />
+        <p>
+          2. 
+          <Trans
+            i18nKey="retrocerts-certification.questions.ui-full-time.couldNotAcceptWork"
+            t={[Function]}
+            values={
+              Object {
+                "weekString": "02/09/2020 - 02/15/2020",
+              }
+            }
+          >
+            Was there any reason (other than sickness or injury) that you could not have accepted full-time work 
+            <strong
+              key="strong-1"
+            >
+              each workday
+            </strong>
+            ?
+          </Trans>
+        </p>
+        <p>
+          <strong>
+            No
+          </strong>
+        </p>
+        <hr />
+        <p>
+          3. 
+          <Trans
+            i18nKey="retrocerts-certification.questions.ui-full-time.didYouLook"
+            t={[Function]}
+            values={
+              Object {
+                "weekString": "02/09/2020 - 02/15/2020",
+              }
+            }
+          >
+            Did you look for work?
+          </Trans>
+        </p>
+        <p>
+          <strong>
+            No
+          </strong>
+        </p>
+        <hr />
+        <p>
+          4. 
+          <Trans
+            i18nKey="retrocerts-certification.questions.ui-full-time.refuseWork"
+            t={[Function]}
+            values={
+              Object {
+                "weekString": "02/09/2020 - 02/15/2020",
+              }
+            }
+          >
+            Did you refuse any work?
+          </Trans>
+        </p>
+        <p>
+          <strong>
+            No
+          </strong>
+        </p>
+        <hr />
+        <p>
+          5. 
+          <Trans
+            i18nKey="retrocerts-certification.questions.ui-full-time.schoolOrTraining"
+            t={[Function]}
+            values={
+              Object {
+                "weekString": "02/09/2020 - 02/15/2020",
+              }
+            }
+          >
+            Did you 
+            <strong
+              key="strong-1"
+            >
+              begin
+            </strong>
+             attending any kind of school or training? Select 
+            <strong
+              key="strong-3"
+            >
+              Yes
+            </strong>
+             only if you began attending school between 02/09/2020 - 02/15/2020.
+          </Trans>
+        </p>
+        <p>
+          <strong>
+            No
+          </strong>
+        </p>
+        <hr />
+        <p>
+          6. 
+          <Trans
+            i18nKey="retrocerts-certification.questions.ui-full-time.workOrEarn"
+            t={[Function]}
+            values={
+              Object {
+                "weekString": "02/09/2020 - 02/15/2020",
+              }
+            }
+          >
+            Did you work or earn any money, 
+            <strong
+              key="strong-1"
+            >
+              whether you were paid or not
+            </strong>
+            ?
+          </Trans>
+        </p>
+        <p>
+          <strong>
+            No
+          </strong>
+        </p>
+      </WeekConfirmationDetails>
+    </div>
   </AccordionItem>
 </WeekWithDetail>
 `;

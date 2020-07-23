@@ -1,9 +1,9 @@
 import renderTransContent from "../../test-helpers/renderTransContent";
-import TabPaneContent from "./index";
+import Component from "./index";
 
 describe("<WeekConfirmationDetails />", () => {
   it("renders the WeekConfirmationDetails component", async () => {
-    const content = renderTransContent(TabPaneContent, {
+    const content = renderTransContent(Component, {
       employers: [
         {
           address1: "200 Test st.",

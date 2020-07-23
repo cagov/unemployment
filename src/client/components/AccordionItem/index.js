@@ -8,6 +8,9 @@ function AccordionItem(props) {
   const { t } = useTranslation();
 
   const [showDetail, setShowDetail] = useState(false);
+  const displayStyle = {
+    display: showDetail ? "block" : "none",
+  };
 
   const EN_DASH = "–";
   return (
@@ -24,7 +27,9 @@ function AccordionItem(props) {
           {header}
         </div>
       </Alert>
-      {showDetail && <div className="detail">{expandedBody}</div>}
+      <div className="detail" style={displayStyle}>
+        {expandedBody}
+      </div>
     </React.Fragment>
   );
 }

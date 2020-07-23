@@ -23,3 +23,10 @@ input[type="checkbox"] {
   height: 15px;
   width: 15px;
 }
+
+/* Expand all weeks when user prints */
+@media print {
+  .detail {
+    display: block !important;
+  }
+}
