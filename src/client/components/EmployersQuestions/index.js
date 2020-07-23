@@ -184,7 +184,7 @@ function EmployerQuestions(props) {
       {renderTextInput("totalHoursWorked", {
         className: "col-md-2",
         pattern: "\\d+[.]?\\d*",
-        maxLength: 3,
+        maxLength: 6,
       })}
       {renderTextInput("grossEarnings", {
         className: "col-md-2",
