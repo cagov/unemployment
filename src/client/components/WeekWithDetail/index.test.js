@@ -1,5 +1,5 @@
 import renderTransContent from "../../test-helpers/renderTransContent";
-import TabPaneContent from "./index";
+import Component from "./index";
 
 describe("<WeekWithDetail />", () => {
   it("renders the WeekWithDetail component", async () => {
@@ -12,7 +12,7 @@ describe("<WeekWithDetail />", () => {
       workOrEarn: false,
     };
 
-    const content = renderTransContent(TabPaneContent, {
+    const content = renderTransContent(Component, {
       index: 0,
       weekData: weekOfAnswers,
       weekIndex: 1,
