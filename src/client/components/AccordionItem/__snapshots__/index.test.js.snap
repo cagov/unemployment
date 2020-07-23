@@ -3,11 +3,9 @@
 exports[`<AccordionItem /> renders the component 1`] = `
 <Fragment>
   <Alert
-    aria-label="Show details for this week"
     className="d-flex toggleAccordion"
     closeLabel="Close alert"
     onClick={[Function]}
-    role="button"
     show={true}
     transition={
       Object {
@@ -25,18 +23,22 @@ exports[`<AccordionItem /> renders the component 1`] = `
     }
     variant="secondary"
   >
-    <div
-      className="flex-fill"
+    <button
+      aria-label="Show details for this week"
     >
-      <span
-        className="toggleCharacter"
+      <div
+        className="flex-fill"
       >
-        +
-      </span>
-      <div>
-        header react element
+        <span
+          className="toggleCharacter"
+        >
+          +
+        </span>
+        <div>
+          header react element
+        </div>
       </div>
-    </div>
+    </button>
   </Alert>
   <div
     className="detail"

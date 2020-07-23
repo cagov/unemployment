@@ -19,13 +19,15 @@ function AccordionItem(props) {
         variant="secondary"
         className="d-flex toggleAccordion"
         onClick={() => setShowDetail(!showDetail)}
-        role="button"
-        aria-label={t("retrocerts-confirmation.show-details")}
       >
-        <div className="flex-fill">
-          <span className="toggleCharacter">{showDetail ? EN_DASH : "+"}</span>
-          {header}
-        </div>
+        <button aria-label={t("retrocerts-confirmation.show-details")}>
+          <div className="flex-fill">
+            <span className="toggleCharacter">
+              {showDetail ? EN_DASH : "+"}
+            </span>
+            {header}
+          </div>
+        </button>
       </Alert>
       <div className="detail" style={displayStyle}>
         {expandedBody}
