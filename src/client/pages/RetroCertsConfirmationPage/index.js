@@ -8,15 +8,18 @@ import routes from "../../../data/routes";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import LanguageSelector from "../../components/LanguageSelector";
-import ListOfWeeks from "../../components/ListOfWeeks";
+import ListOfWeeksWithDetail from "../../components/ListOfWeeksWithDetail";
 import { logEvent } from "../../utils";
 import { clearAuthToken } from "../../components/SessionTimer";
+import programPlan from "../../../data/programPlan";
+import AccordionItem from "../../components/AccordionItem";
 
 function RetroCertsConfirmationPage(props) {
   const { t } = useTranslation();
   document.title = t("retrocerts-confirmation.title");
   const history = useHistory();
   const userData = props.userData;
+  const isAnyWeekPua = userData.programPlan.includes(programPlan.puaFullTime);
 
   // The user is here by accident. Send them back.
   if (!userData.confirmationNumber) {
@@ -45,6 +48,29 @@ function RetroCertsConfirmationPage(props) {
   function handlePrint() {
     logEvent("RetroCerts", "PrintConfirmation");
     window.print();
+  }
+
+  function AcknowledgementDetail(props) {
+    return (
+      <React.Fragment>
+        {isAnyWeekPua ? (
+          <ul>
+            <li>{t("retrocerts-certification.ack-list-pua-item-1")}</li>
+            <li>{t("retrocerts-certification.ack-list-pua-item-2")}</li>
+            <li>{t("retrocerts-certification.ack-list-pua-item-3")}</li>
+          </ul>
+        ) : (
+          <ul>
+            <li>{t("retrocerts-certification.ack-list-item-1")}</li>
+            <li>{t("retrocerts-certification.ack-list-item-2")}</li>
+            <li>{t("retrocerts-certification.ack-list-item-3")}</li>
+            <li>{t("retrocerts-certification.ack-list-item-4")}</li>
+          </ul>
+        )}
+        <input type="checkbox" checked disabled />
+        {t("retrocerts-certification.ack-label")}
+      </React.Fragment>
+    );
   }
 
   return (
@@ -77,7 +103,11 @@ function RetroCertsConfirmationPage(props) {
           <p>{t("retrocerts-confirmation.p1a")}</p>
           <p>{t("retrocerts-confirmation.p1b")}</p>
           <h2 className="mt-5">{t("retrocerts-confirmation.header2")}</h2>
-          <ListOfWeeks weeksToCertify={userData.weeksToCertify} showChecks />
+          <ListOfWeeksWithDetail userData={userData} />
+          <AccordionItem
+            header={<strong>{t("retrocerts-certification.ack-header")}</strong>}
+            expandedBody={<AcknowledgementDetail className="detail" />}
+          />
 
           <h2 className="mt-5">{t("retrocerts-confirmation.header3")}</h2>
           <p>

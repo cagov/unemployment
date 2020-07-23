@@ -184,7 +184,14 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
             >
               Enter your Social Security number with or without dashes.
             </FormText>
+            <span
+              className="sr-only"
+              id="ssn-sr-desc"
+            >
+              You can select Show SSN after this input field
+            </span>
             <FormControl
+              aria-describedby="ssn-sr-desc"
               onChange={[Function]}
               required={true}
               value=""
@@ -440,7 +447,14 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
             >
               Enter your Social Security number with or without dashes.
             </FormText>
+            <span
+              className="sr-only"
+              id="ssn-sr-desc"
+            >
+              You can select Show SSN after this input field
+            </span>
             <FormControl
+              aria-describedby="ssn-sr-desc"
               onChange={[Function]}
               required={true}
               value=""
@@ -754,7 +768,14 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
             >
               Enter your Social Security number with or without dashes.
             </FormText>
+            <span
+              className="sr-only"
+              id="ssn-sr-desc"
+            >
+              You can select Show SSN after this input field
+            </span>
             <FormControl
+              aria-describedby="ssn-sr-desc"
               onChange={[Function]}
               required={true}
               value=""
@@ -1010,7 +1031,14 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
             >
               Enter your Social Security number with or without dashes.
             </FormText>
+            <span
+              className="sr-only"
+              id="ssn-sr-desc"
+            >
+              You can select Show SSN after this input field
+            </span>
             <FormControl
+              aria-describedby="ssn-sr-desc"
               onChange={[Function]}
               required={true}
               value=""

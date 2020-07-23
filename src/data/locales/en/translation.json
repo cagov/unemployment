@@ -199,6 +199,7 @@
     "dob-year": "Year",
     "ssn-label": "Social Security Number",
     "ssn-hint": "Enter your Social Security number with or without dashes.",
+    "ssn-screen-reader": "You can select Show SSN after this input field",
     "recaptcha-text": "Security check provided by reCAPTCHA.",
     "submit": "Find Me",
     "invalid-user-error": "Review and verify the information you entered is correct. If your information is correct, then you don’t need to certify.",
@@ -277,7 +278,7 @@
         "workOrEarn": "Did you work or earn money, <strong>whether you were paid or not</strong>? If self-employed, report earnings during the week you receive the money.",
         "help-workOrEarn": "Look at the date each week begins and ends. If you performed any work during this week, the earnings must be reported regardless if you received payment or not. This does not include self-employment.",
         "recentDisaster": "Are you unemployed as a direct result of a recent disaster (for example: COVID-19, earthquake, flood, mudslide, or fire) in California?",
-        "recentDisasterChoice": "Select the option for how you were impacted by the COVID-19 pandemic."
+        "disasterChoice": "Select the option for how you were impacted by the COVID-19 pandemic."
       }
     },
     "q-workOrEarn": "Did you work or earn any money, whether you were paid or not?",
@@ -351,11 +352,12 @@
     "title": "Retroactive Certification for Unemployment",
     "alert": "You have successfully submitted your retroactive certification.",
     "alert-returning": "You have successfully submitted your retroactive certification. No further action is required.",
-    "header1": "Retroactive Certification Confirmation",
+    "header1": "Confirmation Number",
     "p1": "Your retroactive certification has been submitted. Your confirmation number is <strong>{{confirmationNumber}}</strong>.",
     "p1a": "Keep this number for your records.",
     "p1b": "You’ve been logged out of the system and may close this window.",
-    "header2": "Retroactive Certification Weeks",
+    "header2": "Certifications Submitted",
+    "show-details": "Show details for this week",
     "header3": "Next Steps",
     "p2": "If you are still unemployed, continue to certify for benefits every two weeks. The fastest way is to use <2>UI Online</2>.",
     "button-print": "Print this page"

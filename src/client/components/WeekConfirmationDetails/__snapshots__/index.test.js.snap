@@ -1,0 +1,307 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<WeekConfirmationDetails /> renders the WeekConfirmationDetails component 1`] = `
+<WeekConfirmationDetails
+  employers={
+    Array [
+      Object {
+        "address1": "200 Test st.",
+        "address2": "asdf",
+        "city": "City",
+        "employerName": "employer",
+        "grossEarnings": "123",
+        "id": "0323032",
+        "lastDateWorked": "4/4/2020",
+        "moreDetails": "",
+        "reason": "still-working",
+        "state": "CA",
+        "totalHoursWorked": "23",
+        "zipcode": "23212",
+      },
+    ]
+  }
+  questionAnswers={
+    Array [
+      "Yes",
+      2,
+      "Yes",
+      "Yes",
+      "Yes",
+      "Yes",
+      "Yes",
+      "Yes",
+      "A member of your house has COVID-19",
+    ]
+  }
+  questionKeys={
+    Array [
+      "retrocerts-certification.questions.pua-full-time.tooSick",
+      "retrocerts-certification.questions.pua-full-time.tooSickNumberOfDays",
+      "retrocerts-certification.questions.pua-full-time.couldNotAcceptWork",
+      "retrocerts-certification.questions.pua-full-time.didYouLook",
+      "retrocerts-certification.questions.pua-full-time.refuseWork",
+      "retrocerts-certification.questions.pua-full-time.otherBenefits",
+      "retrocerts-certification.questions.pua-full-time.workOrEarn",
+      "retrocerts-certification.questions.pua-full-time.recentDisaster",
+      "retrocerts-certification.questions.pua-full-time.disasterChoice",
+    ]
+  }
+  weekString="03/08/2020 - 03/14/2020"
+>
+  <p>
+    1. 
+    <Trans
+      i18nKey="retrocerts-certification.questions.pua-full-time.tooSick"
+      t={[Function]}
+      values={
+        Object {
+          "weekString": "03/08/2020 - 03/14/2020",
+        }
+      }
+    >
+      Were you too sick or injured to work for reasons other than disaster?
+    </Trans>
+  </p>
+  <p>
+    <strong>
+      Yes
+    </strong>
+  </p>
+  <hr />
+  <p>
+    <Trans
+      i18nKey="retrocerts-certification.questions.pua-full-time.tooSickNumberOfDays"
+      t={[Function]}
+      values={
+        Object {
+          "weekString": "03/08/2020 - 03/14/2020",
+        }
+      }
+    >
+      If yes, enter the number of days (1-7) you were unable to work.
+    </Trans>
+  </p>
+  <p>
+    <strong>
+      2
+    </strong>
+  </p>
+  <hr />
+  <p>
+    2. 
+    <Trans
+      i18nKey="retrocerts-certification.questions.pua-full-time.couldNotAcceptWork"
+      t={[Function]}
+      values={
+        Object {
+          "weekString": "03/08/2020 - 03/14/2020",
+        }
+      }
+    >
+      Was there any reason (other than sickness, injury or the disaster) that you could not have accepted full-time work, 
+      <strong
+        key="strong-1"
+      >
+        each workday
+      </strong>
+      ?
+    </Trans>
+  </p>
+  <p>
+    <strong>
+      Yes
+    </strong>
+  </p>
+  <hr />
+  <p>
+    3. 
+    <Trans
+      i18nKey="retrocerts-certification.questions.pua-full-time.didYouLook"
+      t={[Function]}
+      values={
+        Object {
+          "weekString": "03/08/2020 - 03/14/2020",
+        }
+      }
+    >
+      Did you look for work or contact your last employer, or, if self-employed, did you attempt to resume self-employment?
+    </Trans>
+  </p>
+  <p>
+    <strong>
+      Yes
+    </strong>
+  </p>
+  <hr />
+  <p>
+    4. 
+    <Trans
+      i18nKey="retrocerts-certification.questions.pua-full-time.refuseWork"
+      t={[Function]}
+      values={
+        Object {
+          "weekString": "03/08/2020 - 03/14/2020",
+        }
+      }
+    >
+      Did you refuse any work?
+    </Trans>
+  </p>
+  <p>
+    <strong>
+      Yes
+    </strong>
+  </p>
+  <hr />
+  <p>
+    5. 
+    <Trans
+      i18nKey="retrocerts-certification.questions.pua-full-time.otherBenefits"
+      t={[Function]}
+      values={
+        Object {
+          "weekString": "03/08/2020 - 03/14/2020",
+        }
+      }
+    >
+      Did you receive disability, private income insurance, or supplemental unemployment benefits?
+    </Trans>
+  </p>
+  <p>
+    <strong>
+      Yes
+    </strong>
+  </p>
+  <hr />
+  <p>
+    6. 
+    <Trans
+      i18nKey="retrocerts-certification.questions.pua-full-time.workOrEarn"
+      t={[Function]}
+      values={
+        Object {
+          "weekString": "03/08/2020 - 03/14/2020",
+        }
+      }
+    >
+      Did you work or earn money, 
+      <strong
+        key="strong-1"
+      >
+        whether you were paid or not
+      </strong>
+      ? If self-employed, report earnings during the week you receive the money.
+    </Trans>
+  </p>
+  <p>
+    <strong>
+      Yes
+    </strong>
+  </p>
+  <ListOfEmployers>
+    <Employer
+      employerIndex={0}
+      key="0"
+    >
+      <p>
+        Employer 1
+      </p>
+      <p>
+        <strong>
+          <EmployerAddress
+            employerIndex={0}
+          >
+            employer
+            <br />
+            200 Test st.
+            <br />
+            asdf
+            <br />
+            City
+            <br />
+            CA
+            <br />
+            23212
+            <br />
+          </EmployerAddress>
+        </strong>
+      </p>
+      <EmployerDetails
+        employerIndex={0}
+      >
+        <p>
+          Last Date Worked
+        </p>
+        <p>
+          <strong>
+            4/4/2020
+          </strong>
+        </p>
+        <p>
+          Total hours worked for this employer
+        </p>
+        <p>
+          <strong>
+            23
+          </strong>
+        </p>
+        <p>
+          Gross earnings before deductions for this employer (whether you were paid or not)
+        </p>
+        <p>
+          <strong>
+            $123
+          </strong>
+        </p>
+        <p>
+          Select the reason you are no longer working:
+        </p>
+        <p>
+          <strong>
+            Still Working Part Time
+          </strong>
+        </p>
+      </EmployerDetails>
+    </Employer>
+  </ListOfEmployers>
+  <hr />
+  <p>
+    7. 
+    <Trans
+      i18nKey="retrocerts-certification.questions.pua-full-time.recentDisaster"
+      t={[Function]}
+      values={
+        Object {
+          "weekString": "03/08/2020 - 03/14/2020",
+        }
+      }
+    >
+      Are you unemployed as a direct result of a recent disaster (for example: COVID-19, earthquake, flood, mudslide, or fire) in California?
+    </Trans>
+  </p>
+  <p>
+    <strong>
+      Yes
+    </strong>
+  </p>
+  <hr />
+  <p>
+    <Trans
+      i18nKey="retrocerts-certification.questions.pua-full-time.disasterChoice"
+      t={[Function]}
+      values={
+        Object {
+          "weekString": "03/08/2020 - 03/14/2020",
+        }
+      }
+    >
+      Select the option for how you were impacted by the COVID-19 pandemic.
+    </Trans>
+  </p>
+  <p>
+    <strong>
+      A member of your house has COVID-19
+    </strong>
+  </p>
+</WeekConfirmationDetails>
+`;

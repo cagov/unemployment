@@ -31,7 +31,7 @@ function RetroCertsCertificationPage(props) {
   document.title = t("retrocerts-certification.question-page-title");
   const history = useHistory();
   const [validated, setValidated] = useState(false);
-  const [showGenericValidationError, setShowGenericValidaitonError] = useState(
+  const [showGenericValidationError, setShowGenericValidationError] = useState(
     false
   );
 
@@ -125,7 +125,7 @@ function RetroCertsCertificationPage(props) {
 
     setValidated(true);
 
-    setShowGenericValidaitonError(!isValid);
+    setShowGenericValidationError(!isValid);
 
     if (!isValid) {
       autoScroll({
@@ -149,6 +149,7 @@ function RetroCertsCertificationPage(props) {
     let body = JSON.stringify({
       formData: userData.formData,
       authToken: sessionStorage.getItem(AUTH_STRINGS.authToken),
+      completed: weekForUser === numberOfWeeks,
     });
     // The server rejects < followed by non-whitespace,
     // so change the input from the form to add a space.
@@ -211,7 +212,9 @@ function RetroCertsCertificationPage(props) {
           </h1>
           <LanguageSelector className="mt-3 mb-4" />
           {history.location.state && history.location.state.returningUser && (
-            <Alert variant="success">{t("retrocerts-certification.alert-found-save")}</Alert>
+            <Alert variant="success">
+              {t("retrocerts-certification.alert-found-save")}
+            </Alert>
           )}
           {showGenericValidationError && validated && genericValidationError}
           <h2 className="h3 font-weight-bold mt-5">
@@ -295,7 +298,7 @@ function RetroCertsCertificationPage(props) {
                 inputName="recentDisaster"
               >
                 <DisasterQuestion
-                  questionText={t(questionText("recentDisasterChoice"))}
+                  questionText={t(questionText("disasterChoice"))}
                   choice={formData.disasterChoice}
                   onChange={(e) => handleFormDataChange(e)}
                 />
@@ -327,6 +330,13 @@ function RetroCertsCertificationPage(props) {
                         fromIndexToPathString(
                           userData.weeksToCertify[weekForUser - 2]
                         )
+                  }
+                  onClick={() =>
+                    logEvent(
+                      "RetroCerts",
+                      "BackButton",
+                      `weeks-for-user-${weekForUser}`
+                    )
                   }
                 >
                   {weekForUser === 1

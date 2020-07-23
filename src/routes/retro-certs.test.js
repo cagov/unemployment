@@ -280,6 +280,7 @@ describe("Router: API tests", () => {
         {
           authToken: "TOKEN",
           formData: [weekOfAnswers],
+          completed: false,
         },
         { id: "ID" },
         { programPlan: [programPlan.uiFullTime], weeksToCertify: [0, 1] },
@@ -291,6 +292,7 @@ describe("Router: API tests", () => {
         {
           authToken: "TOKEN",
           formData: [weekOfAnswers, weekOfAnswers],
+          completed: true,
         },
         { id: "ID" },
         { programPlan: [programPlan.uiFullTime], weeksToCertify: [0, 1] },
@@ -300,11 +302,26 @@ describe("Router: API tests", () => {
           confirmationNumber: "00000000-fake-mock-fake-123456789012",
         },
       ],
+      // Save 2 weeks of 2, but not submitting the final page (user went back to week 1, then forward).
+      [
+        {
+          authToken: "TOKEN",
+          formData: [weekOfAnswers, weekOfAnswers],
+          completed: false,
+        },
+        { id: "ID" },
+        { programPlan: [programPlan.uiFullTime], weeksToCertify: [0, 1] },
+        200,
+        {
+          status: "ok",
+        },
+      ],
       // Already have a confirmation number.
       [
         {
           authToken: "TOKEN",
           formData: [weekOfAnswers, weekOfAnswers],
+          completed: true,
         },
         { id: "ID", confirmationNumber: "alreadyExists" },
         { programPlan: [programPlan.uiFullTime], weeksToCertify: [0, 1] },

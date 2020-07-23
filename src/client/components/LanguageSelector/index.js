@@ -2,6 +2,7 @@ import Button from "react-bootstrap/Button";
 import React from "react";
 import PropTypes from "prop-types";
 import i18n from "../../i18n";
+import { logEvent } from "../../utils";
 
 function LanguageSelector(props) {
   function isEnglish() {
@@ -9,7 +10,9 @@ function LanguageSelector(props) {
   }
 
   const toggleLanguage = () => {
-    i18n.changeLanguage(isEnglish() ? "es" : "en");
+    const newLanguage = isEnglish() ? "es" : "en";
+    i18n.changeLanguage(newLanguage);
+    logEvent("Unemployment", "ChangeLanguage", "to-" + newLanguage);
   };
 
   return (

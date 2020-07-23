@@ -36,7 +36,7 @@ function RetroCertsAuthPage(props) {
   const [ssn, setSsn] = useState("");
   const [validated, setValidated] = useState(false);
   const [showSsn, setShowSsn] = useState(false);
-  const [showGenericValidationError, setShowGenericValidaitonError] = useState(
+  const [showGenericValidationError, setShowGenericValidationError] = useState(
     false
   );
 
@@ -76,7 +76,7 @@ function RetroCertsAuthPage(props) {
     setValidated(true);
 
     if (!isValid) {
-      setShowGenericValidaitonError(true);
+      setShowGenericValidationError(true);
       autoScroll({
         y: TOP.y,
         x: TOP.x,
@@ -85,7 +85,7 @@ function RetroCertsAuthPage(props) {
       return;
     }
 
-    setShowGenericValidaitonError(false);
+    setShowGenericValidationError(false);
 
     const month = dobMonth.length < 2 ? "0" + dobMonth : dobMonth;
     const day = dobDay.length < 2 ? "0" + dobDay : dobDay;
@@ -266,9 +266,15 @@ function RetroCertsAuthPage(props) {
               <Form.Group controlId="formSsn" className="col-md-6">
                 <Form.Label>{`* ${t("retrocert-login.ssn-label")}`}</Form.Label>
                 <Form.Text muted>{t("retrocert-login.ssn-hint")}</Form.Text>
+                {/* sr-only is invisible and used for screen readers:
+                https://v4-alpha.getbootstrap.com/getting-started/accessibility/#skip-navigation */}
+                <span id="ssn-sr-desc" className="sr-only">
+                  {t("retrocert-login.ssn-screen-reader")}
+                </span>
                 <Form.Control
                   value={ssn}
                   onChange={(e) => handleChange(e, setSsn)}
+                  aria-describedby="ssn-sr-desc"
                   required
                 />
                 <Form.Control.Feedback type="invalid">
