@@ -14,7 +14,7 @@ describe("<ListOfWeeksWithDetail />", () => {
 
     const wrapper = renderNonTransContent(Component, "ListOfWeeksWithDetail", {
       userData: {
-        formData: weekOfAnswers,
+        formData: [weekOfAnswers, weekOfAnswers, weekOfAnswers],
         weeksToCertify: [1, 2, 3],
         programPlan: ["UI full time"],
       },

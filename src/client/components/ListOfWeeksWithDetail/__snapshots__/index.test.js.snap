@@ -5,18 +5,48 @@ Array [
   <WeekWithDetail
     index={0}
     key="0"
+    weekData={
+      Object {
+        "couldNotAcceptWork": false,
+        "didYouLook": false,
+        "refuseWork": false,
+        "schoolOrTraining": false,
+        "tooSick": false,
+        "workOrEarn": false,
+      }
+    }
     weekIndex={1}
     weekProgramPlan="UI full time"
   />,
   <WeekWithDetail
     index={1}
     key="1"
+    weekData={
+      Object {
+        "couldNotAcceptWork": false,
+        "didYouLook": false,
+        "refuseWork": false,
+        "schoolOrTraining": false,
+        "tooSick": false,
+        "workOrEarn": false,
+      }
+    }
     weekIndex={2}
     weekProgramPlan="UI full time"
   />,
   <WeekWithDetail
     index={2}
     key="2"
+    weekData={
+      Object {
+        "couldNotAcceptWork": false,
+        "didYouLook": false,
+        "refuseWork": false,
+        "schoolOrTraining": false,
+        "tooSick": false,
+        "workOrEarn": false,
+      }
+    }
     weekIndex={3}
     weekProgramPlan="UI full time"
   />,

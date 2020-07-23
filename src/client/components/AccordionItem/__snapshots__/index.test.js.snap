@@ -33,7 +33,22 @@ exports[`<AccordionItem /> renders the component 1`] = `
       >
         +
       </span>
+      <div>
+        header react element
+      </div>
     </div>
   </Alert>
+  <div
+    className="detail"
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+  >
+    <div>
+      detailed body react element
+    </div>
+  </div>
 </Fragment>
 `;
