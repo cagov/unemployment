@@ -180,6 +180,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
               * Social Security Number
             </FormLabel>
             <FormText
+              className="ssn-hint"
               muted={true}
             >
               Enter your Social Security number with or without dashes.
@@ -443,6 +444,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
               * Social Security Number
             </FormLabel>
             <FormText
+              className="ssn-hint"
               muted={true}
             >
               Enter your Social Security number with or without dashes.
@@ -764,6 +766,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
               * Social Security Number
             </FormLabel>
             <FormText
+              className="ssn-hint"
               muted={true}
             >
               Enter your Social Security number with or without dashes.
@@ -1027,6 +1030,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
               * Social Security Number
             </FormLabel>
             <FormText
+              className="ssn-hint"
               muted={true}
             >
               Enter your Social Security number with or without dashes.
