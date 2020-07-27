@@ -10,8 +10,14 @@ function buildPolicies() {
       "www.googletagmanager.com",
       "www.google-analytics.com",
       "*.google.com",
+      "'sha256-y7pLeNIruC+hCYcWLjrAKfMTQoptl6BVn8PcBOXd+aw='", // GA inline script, needed on Safari
     ],
-    connect: ["'self'", "*.visualstudio.com"],
+    connect: [
+      "'self'",
+      "*.visualstudio.com",
+      "www.google-analytics.com", // For Safari
+      "*.doubleclick.net", // For Safari
+    ],
     object: ["'none'"],
     scriptElem: [
       "'self'",
