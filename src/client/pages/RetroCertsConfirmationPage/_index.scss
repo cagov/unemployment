@@ -3,7 +3,7 @@
 
   button {
     border: 0;
-    background-color: inherit;
+    background-color: transparent; /* note: inherit is ignored by IE11 */
   }
 }
 
