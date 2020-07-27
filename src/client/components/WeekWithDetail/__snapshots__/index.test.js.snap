@@ -59,11 +59,9 @@ exports[`<WeekWithDetail /> renders the WeekWithDetail component 1`] = `
     }
   >
     <Alert
-      aria-label="Show details for this week"
       className="d-flex toggleAccordion"
       closeLabel="Close alert"
       onClick={[Function]}
-      role="button"
       show={true}
       transition={
         Object {
@@ -83,18 +81,15 @@ exports[`<WeekWithDetail /> renders the WeekWithDetail component 1`] = `
     >
       <Fade
         appear={false}
-        aria-label="Show details for this week"
         in={true}
         mountOnEnter={false}
         onClick={[Function]}
-        role="button"
         timeout={300}
         unmountOnExit={true}
       >
         <Transition
           addEndListener={[Function]}
           appear={false}
-          aria-label="Show details for this week"
           enter={true}
           exit={true}
           in={true}
@@ -106,43 +101,45 @@ exports[`<WeekWithDetail /> renders the WeekWithDetail component 1`] = `
           onExit={[Function]}
           onExited={[Function]}
           onExiting={[Function]}
-          role="button"
           timeout={300}
           unmountOnExit={true}
         >
           <div
-            aria-label="Show details for this week"
             className="fade d-flex toggleAccordion alert alert-secondary show"
             onClick={[Function]}
-            role="button"
+            role="alert"
           >
-            <div
-              className="flex-fill"
+            <button
+              aria-label="Show details for this week"
             >
-              <span
-                className="toggleCharacter"
+              <div
+                className="flex-fill"
               >
-                +
-              </span>
-              <Trans
-                i18nKey="retrocerts-week-list-item"
-                t={[Function]}
-                values={
-                  Object {
-                    "endDate": "02/15/2020",
-                    "startDate": "02/09/2020",
-                    "weekForUser": 1,
-                  }
-                }
-              >
-                <strong
-                  key="strong-0"
+                <span
+                  className="toggleCharacter"
                 >
-                  Week 1
-                </strong>
-                : Sunday, 02/09/2020 – Saturday, 02/15/2020
-              </Trans>
-            </div>
+                  +
+                </span>
+                <Trans
+                  i18nKey="retrocerts-week-list-item"
+                  t={[Function]}
+                  values={
+                    Object {
+                      "endDate": "02/15/2020",
+                      "startDate": "02/09/2020",
+                      "weekForUser": 1,
+                    }
+                  }
+                >
+                  <strong
+                    key="strong-0"
+                  >
+                    Week 1
+                  </strong>
+                  : Sunday, 02/09/2020 – Saturday, 02/15/2020
+                </Trans>
+              </div>
+            </button>
           </div>
         </Transition>
       </Fade>

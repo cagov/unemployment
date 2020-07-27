@@ -1,5 +1,10 @@
 .toggleAccordion {
   cursor: pointer;
+
+  button {
+    border: 0;
+    background-color: transparent; /* note: inherit is ignored by IE11 */
+  }
 }
 
 .toggleCharacter {

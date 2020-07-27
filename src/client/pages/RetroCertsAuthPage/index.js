@@ -265,7 +265,9 @@ function RetroCertsAuthPage(props) {
             <Row className="mt-4">
               <Form.Group controlId="formSsn" className="col-md-6">
                 <Form.Label>{`* ${t("retrocert-login.ssn-label")}`}</Form.Label>
-                <Form.Text muted>{t("retrocert-login.ssn-hint")}</Form.Text>
+                <Form.Text muted className="ssn-hint">
+                  {t("retrocert-login.ssn-hint")}
+                </Form.Text>
                 {/* sr-only is invisible and used for screen readers:
                 https://v4-alpha.getbootstrap.com/getting-started/accessibility/#skip-navigation */}
                 <span id="ssn-sr-desc" className="sr-only">
