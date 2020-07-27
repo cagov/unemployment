@@ -73,12 +73,43 @@ exports[`<RetroCertsConfirmationPage /> with confirmation number 1`] = `
       <p>
         You’ve been logged out of the system and may close this window.
       </p>
+      <Button
+        active={false}
+        className="text-dark bg-light"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+        variant="outline-secondary"
+      >
+        Print
+      </Button>
       <h2
         className="mt-5"
       >
         Certifications Submitted
       </h2>
+      <Button
+        active={false}
+        className="text-dark bg-light mb-3"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+        variant="outline-secondary"
+      >
+        Show all
+      </Button>
       <ListOfWeeksWithDetail
+        showContent={
+          Array [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+          ]
+        }
+        toggleContent={[Function]}
         userData={
           Object {
             "confirmationNumber": "CONFIRMATION_NUMBER",
@@ -97,7 +128,7 @@ exports[`<RetroCertsConfirmationPage /> with confirmation number 1`] = `
         }
       />
       <AccordionItem
-        expandedBody={
+        content={
           <AcknowledgementDetail
             className="detail"
           />
@@ -107,6 +138,8 @@ exports[`<RetroCertsConfirmationPage /> with confirmation number 1`] = `
             Acknowledgement
           </strong>
         }
+        showContent={false}
+        toggleContent={[Function]}
       />
       <h2
         className="mt-5"
@@ -128,16 +161,6 @@ exports[`<RetroCertsConfirmationPage /> with confirmation number 1`] = `
           .
         </Trans>
       </p>
-      <Button
-        active={false}
-        className="text-dark bg-light mt-5"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
-        variant="outline-secondary"
-      >
-        Print this page
-      </Button>
     </div>
   </main>
   <Footer

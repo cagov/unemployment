@@ -6,7 +6,9 @@ describe("<AccordionItem />", () => {
   it("renders the component", async () => {
     const wrapper = renderNonTransContent(Component, "AccordionItem", {
       header: <div>header react element</div>,
-      expandedBody: <div>detailed body react element</div>,
+      content: <div>detailed body react element</div>,
+      showContent: [true, true, true, true],
+      toggleContent: jest.fn(),
     });
 
     expect(wrapper).toMatchSnapshot();

@@ -1,7 +1,7 @@
 import Button from "react-bootstrap/Button";
 import { Redirect, useHistory } from "react-router-dom";
 import Alert from "react-bootstrap/Alert";
-import React from "react";
+import React, { useState } from "react";
 import { useTranslation, Trans } from "react-i18next";
 import { userDataPropType } from "../../commonPropTypes";
 import routes from "../../../data/routes";
@@ -16,10 +16,15 @@ import AccordionItem from "../../components/AccordionItem";
 
 function RetroCertsConfirmationPage(props) {
   const { t } = useTranslation();
-  document.title = t("retrocerts-confirmation.title");
   const history = useHistory();
+
   const userData = props.userData;
-  const isAnyWeekPua = userData.programPlan.includes(programPlan.puaFullTime);
+  const numAccordions = userData.weeksToCertify.length + 1; // add 1 for Acknowledgement
+  const acknowledgementIndex = numAccordions - 1;
+  const [showAll, setShowAll] = useState(false);
+  const [accordionsExpanded, setAccordionsExpanded] = useState(
+    Array(numAccordions).fill(false)
+  );
 
   // The user is here by accident. Send them back.
   if (!userData.confirmationNumber) {
@@ -27,6 +32,9 @@ function RetroCertsConfirmationPage(props) {
     // in the future, go to the first week without data.
     return <Redirect to={routes.retroCertsWeeksToCertify} />;
   }
+
+  document.title = t("retrocerts-confirmation.title");
+  const isAnyWeekPua = userData.programPlan.includes(programPlan.puaFullTime);
 
   // For historical reasons the confirmation code is stored as a uuidv4
   // hash in the database, but we display only the last 7 characters to the user.
@@ -48,6 +56,24 @@ function RetroCertsConfirmationPage(props) {
   function handlePrint() {
     logEvent("RetroCerts", "PrintConfirmation");
     window.print();
+  }
+
+  function toggleAllAccordions() {
+    setShowAll(!showAll);
+    setAccordionsExpanded(Array(numAccordions).fill(!showAll));
+  }
+
+  function toggleAccordion(index) {
+    // Need to clone the state variable here, React doesn't allow mutating them
+    const newAccordionsExpanded = [...accordionsExpanded];
+    newAccordionsExpanded[index] = !newAccordionsExpanded[index];
+    setAccordionsExpanded(newAccordionsExpanded);
+
+    // If all the accordions are now either closed or open,
+    // update the Show all / Hide all button to match
+    if (newAccordionsExpanded.every((x) => x === newAccordionsExpanded[0])) {
+      setShowAll(newAccordionsExpanded[index]);
+    }
   }
 
   function AcknowledgementDetail(props) {
@@ -102,11 +128,35 @@ function RetroCertsConfirmationPage(props) {
           </p>
           <p>{t("retrocerts-confirmation.p1a")}</p>
           <p>{t("retrocerts-confirmation.p1b")}</p>
+
+          <Button
+            variant="outline-secondary"
+            className="text-dark bg-light"
+            onClick={handlePrint}
+          >
+            {t("retrocerts-confirmation.button-print")}
+          </Button>
+
           <h2 className="mt-5">{t("retrocerts-confirmation.header2")}</h2>
-          <ListOfWeeksWithDetail userData={userData} />
+          <Button
+            variant="outline-secondary"
+            className="text-dark bg-light mb-3"
+            onClick={toggleAllAccordions}
+          >
+            {showAll
+              ? t("retrocerts-confirmation.button-hide-all")
+              : t("retrocerts-confirmation.button-show-all")}
+          </Button>
+          <ListOfWeeksWithDetail
+            showContent={accordionsExpanded}
+            toggleContent={toggleAccordion}
+            userData={userData}
+          />
           <AccordionItem
             header={<strong>{t("retrocerts-certification.ack-header")}</strong>}
-            expandedBody={<AcknowledgementDetail className="detail" />}
+            content={<AcknowledgementDetail className="detail" />}
+            showContent={accordionsExpanded[acknowledgementIndex]}
+            toggleContent={() => toggleAccordion(acknowledgementIndex)}
           />
 
           <h2 className="mt-5">{t("retrocerts-confirmation.header3")}</h2>
@@ -117,14 +167,6 @@ function RetroCertsConfirmationPage(props) {
               <a href={t("links.edd-login")}>UI Online</a>.
             </Trans>
           </p>
-
-          <Button
-            variant="outline-secondary"
-            className="text-dark bg-light mt-5"
-            onClick={handlePrint}
-          >
-            {t("retrocerts-confirmation.button-print")}
-          </Button>
         </div>
       </main>
       <Footer backToTopTag="certification-page" />

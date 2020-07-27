@@ -8,7 +8,14 @@ import AccordionItem from "../AccordionItem";
 import getRetroCertQuestionKey from "../../../utils/getRetroCertQuestionKey";
 
 function WeekWithDetail(props) {
-  const { index, weekData, weekIndex, weekProgramPlan } = props;
+  const {
+    index,
+    showContent,
+    toggleContent,
+    weekData,
+    weekIndex,
+    weekProgramPlan,
+  } = props;
   const { t } = useTranslation();
 
   const baseQuestionNames = [
@@ -89,7 +96,7 @@ function WeekWithDetail(props) {
           values={{ ...dates, weekForUser }}
         />
       }
-      expandedBody={
+      content={
         <WeekConfirmationDetails
           employers={weekHasEmployers ? weekData.employers : undefined}
           questionAnswers={questionAnswers}
@@ -97,12 +104,16 @@ function WeekWithDetail(props) {
           weekString={toWeekString(weekIndex)}
         />
       }
+      showContent={showContent[index]}
+      toggleContent={() => toggleContent(index)}
     />
   );
 }
 
 WeekWithDetail.propTypes = {
   index: PropTypes.number.isRequired,
+  showContent: PropTypes.arrayOf(PropTypes.bool).isRequired,
+  toggleContent: PropTypes.func.isRequired,
   weekData: PropTypes.object.isRequired,
   weekIndex: PropTypes.number.isRequired,
   weekProgramPlan: PropTypes.string.isRequired,

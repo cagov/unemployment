@@ -1,10 +1,11 @@
 import React from "react";
 import { userDataPropType } from "../../commonPropTypes";
+import PropTypes from "prop-types";
 import WeekWithDetail from "../WeekWithDetail";
 import getWeekProgramPlan from "../../../utils/getWeekProgramPlan";
 
 function ListOfWeeksWithDetail(props) {
-  const { userData } = props;
+  const { userData, showContent, toggleContent } = props;
 
   return userData.weeksToCertify.map((weekIndex, index) => {
     const weekForUser = index + 1;
@@ -18,6 +19,8 @@ function ListOfWeeksWithDetail(props) {
       <WeekWithDetail
         index={index}
         key={index}
+        showContent={showContent}
+        toggleContent={toggleContent}
         weekData={weekData}
         weekIndex={weekIndex}
         weekProgramPlan={weekProgramPlan}
@@ -28,6 +31,8 @@ function ListOfWeeksWithDetail(props) {
 
 ListOfWeeksWithDetail.propTypes = {
   userData: userDataPropType.isRequired,
+  showContent: PropTypes.arrayOf(PropTypes.bool).isRequired,
+  toggleContent: PropTypes.func.isRequired,
 };
 
 export default ListOfWeeksWithDetail;
