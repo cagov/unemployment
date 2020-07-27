@@ -7,10 +7,11 @@ function buildPolicies() {
     font: ["fonts.googleapis.com", "fonts.gstatic.com"],
     script: [
       "'self'",
+      "*.google.com",
       "www.googletagmanager.com",
       "www.google-analytics.com",
-      "*.google.com",
-      "'sha256-y7pLeNIruC+hCYcWLjrAKfMTQoptl6BVn8PcBOXd+aw='", // GA inline script, needed on Safari
+      "www.gstatic.com",
+      "'sha256-y7pLeNIruC+hCYcWLjrAKfMTQoptl6BVn8PcBOXd+aw='", // GA inline script
     ],
     connect: [
       "'self'",
@@ -19,6 +20,7 @@ function buildPolicies() {
       "*.doubleclick.net", // For Safari
     ],
     object: ["'none'"],
+    // Not yet supported by Safari or Firefox.
     scriptElem: [
       "'self'",
       "*.google.com",
