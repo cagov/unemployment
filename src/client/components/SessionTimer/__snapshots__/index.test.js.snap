@@ -2,9 +2,11 @@
 
 exports[`<SessionTimer /> clear 1`] = `
 <Bootstrap(Modal)
+  centered={true}
   onHide={[Function]}
 >
   <ModalHeader
+    className="border-0"
     closeButton={true}
     closeLabel="Close"
   >
@@ -17,7 +19,9 @@ exports[`<SessionTimer /> clear 1`] = `
   <ModalBody>
     To protect your information, you will be logged out in 5 minutes if you do not continue working. Any unsaved changes will be lost.
   </ModalBody>
-  <ModalFooter>
+  <ModalFooter
+    className="border-0"
+  >
     <Button
       active={false}
       disabled={false}
@@ -33,9 +37,11 @@ exports[`<SessionTimer /> clear 1`] = `
 
 exports[`<SessionTimer /> startOrUpdate 1`] = `
 <Bootstrap(Modal)
+  centered={true}
   onHide={[Function]}
 >
   <ModalHeader
+    className="border-0"
     closeButton={true}
     closeLabel="Close"
   >
@@ -48,7 +54,9 @@ exports[`<SessionTimer /> startOrUpdate 1`] = `
   <ModalBody>
     To protect your information, you will be logged out in 5 minutes if you do not continue working. Any unsaved changes will be lost.
   </ModalBody>
-  <ModalFooter>
+  <ModalFooter
+    className="border-0"
+  >
     <Button
       active={false}
       disabled={false}
