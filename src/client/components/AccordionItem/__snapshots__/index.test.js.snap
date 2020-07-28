@@ -32,7 +32,7 @@ exports[`<AccordionItem /> renders the component 1`] = `
         <span
           className="toggleCharacter"
         >
-          +
+          –
         </span>
         <div>
           header react element
@@ -44,7 +44,7 @@ exports[`<AccordionItem /> renders the component 1`] = `
     className="detail"
     style={
       Object {
-        "display": "none",
+        "display": "block",
       }
     }
   >

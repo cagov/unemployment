@@ -18,6 +18,8 @@ describe("<ListOfWeeksWithDetail />", () => {
         weeksToCertify: [1, 2, 3],
         programPlan: ["UI full time"],
       },
+      showContentArray: [true, true, true, true],
+      toggleContent: jest.fn(),
     });
 
     expect(wrapper).toMatchSnapshot();
