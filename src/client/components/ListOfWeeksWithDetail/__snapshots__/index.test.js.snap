@@ -5,6 +5,15 @@ Array [
   <WeekWithDetail
     index={0}
     key="0"
+    showContentArray={
+      Array [
+        true,
+        true,
+        true,
+        true,
+      ]
+    }
+    toggleContent={[MockFunction]}
     weekData={
       Object {
         "couldNotAcceptWork": false,
@@ -21,6 +30,15 @@ Array [
   <WeekWithDetail
     index={1}
     key="1"
+    showContentArray={
+      Array [
+        true,
+        true,
+        true,
+        true,
+      ]
+    }
+    toggleContent={[MockFunction]}
     weekData={
       Object {
         "couldNotAcceptWork": false,
@@ -37,6 +55,15 @@ Array [
   <WeekWithDetail
     index={2}
     key="2"
+    showContentArray={
+      Array [
+        true,
+        true,
+        true,
+        true,
+      ]
+    }
+    toggleContent={[MockFunction]}
     weekData={
       Object {
         "couldNotAcceptWork": false,

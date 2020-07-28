@@ -1,15 +1,14 @@
 import Alert from "react-bootstrap/Alert";
 import { useTranslation } from "react-i18next";
 import PropTypes from "prop-types";
-import React, { useState } from "react";
+import React from "react";
 
 function AccordionItem(props) {
-  const { header, expandedBody } = props;
+  const { header, content, showContent, toggleContent } = props;
   const { t } = useTranslation();
 
-  const [showDetail, setShowDetail] = useState(false);
   const displayStyle = {
-    display: showDetail ? "block" : "none",
+    display: showContent ? "block" : "none",
   };
 
   const EN_DASH = "–";
@@ -18,19 +17,19 @@ function AccordionItem(props) {
       <Alert
         variant="secondary"
         className="d-flex toggleAccordion"
-        onClick={() => setShowDetail(!showDetail)}
+        onClick={() => toggleContent()}
       >
-        <button aria-label={t("retrocerts-confirmation.show-details")}>
+        <button aria-label={t("retrocerts-confirmation.aria-show-details")}>
           <div className="flex-fill">
             <span className="toggleCharacter">
-              {showDetail ? EN_DASH : "+"}
+              {showContent ? EN_DASH : "+"}
             </span>
             {header}
           </div>
         </button>
       </Alert>
       <div className="detail" style={displayStyle}>
-        {expandedBody}
+        {content}
       </div>
     </React.Fragment>
   );
@@ -38,7 +37,9 @@ function AccordionItem(props) {
 
 AccordionItem.propTypes = {
   header: PropTypes.element.isRequired,
-  expandedBody: PropTypes.element.isRequired,
+  content: PropTypes.element.isRequired,
+  showContent: PropTypes.bool.isRequired,
+  toggleContent: PropTypes.func.isRequired,
 };
 
 export default AccordionItem;

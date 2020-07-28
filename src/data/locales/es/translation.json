@@ -355,11 +355,13 @@
     "p1": "Su certificación retroactiva ha sido presentada. Su número de confirmación es <strong>{{confirmationNumber}}</strong>.",
     "p1a": "Guarde este número para sus archivos.",
     "p1b": "Se ha cerrado la sesión en este sistema y puede cerrar esta página.",
+    "button-print": "Imprimir",
     "header2": "Certificaciones presentadas",
-    "show-details": "Mostrar detalles para esta semana",
+    "button-show-all": "Mostrar todo",
+    "button-hide-all": "Ocultar todo",
+    "aria-show-details": "Mostrar detalles para esta semana",
     "header3": "Siguientes pasos",
-    "p2": "Si todavía está desempleado, continúe realizando la certificación para los beneficios cada dos semanas. La manera más rápida es a través de <2>UI Online</2>.",
-    "button-print": "Imprimir esta página"
+    "p2": "Si todavía está desempleado, continúe realizando la certificación para los beneficios cada dos semanas. La manera más rápida es a través de <2>UI Online</2>."
   },
   "generic-validation-error-message": "Hay más de un error en esta página. Revise y corrija los errores para continuar. Complete todo los campos e intente de nuevo.",
   "timeout-modal": {

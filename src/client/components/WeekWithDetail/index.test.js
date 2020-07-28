@@ -14,6 +14,8 @@ describe("<WeekWithDetail />", () => {
 
     const content = renderTransContent(Component, {
       index: 0,
+      showContentArray: [true, true, true, true],
+      toggleContent: jest.fn(),
       weekData: weekOfAnswers,
       weekIndex: 1,
       weekProgramPlan: "UI full time",
