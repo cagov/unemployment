@@ -69,7 +69,8 @@ function SessionTimer(props) {
     sessionStorage.removeItem(TIMEOUT_KEY);
   }
 
-  if (action === "startOrUpdate") {
+  // If the modal is showing, we don't want to restart the timer.
+  if (action === "startOrUpdate" && !showWarningModal) {
     startOrUpdate();
   } else if (action === "clear") {
     clear();
