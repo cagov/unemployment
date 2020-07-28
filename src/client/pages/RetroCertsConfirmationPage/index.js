@@ -1,30 +1,22 @@
 import Button from "react-bootstrap/Button";
 import { Redirect, useHistory } from "react-router-dom";
 import Alert from "react-bootstrap/Alert";
-import React, { useState } from "react";
+import React from "react";
 import { useTranslation, Trans } from "react-i18next";
 import { userDataPropType } from "../../commonPropTypes";
 import routes from "../../../data/routes";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import LanguageSelector from "../../components/LanguageSelector";
-import ListOfWeeksWithDetail from "../../components/ListOfWeeksWithDetail";
 import { logEvent } from "../../utils";
 import { clearAuthToken } from "../../components/SessionTimer";
-import programPlan from "../../../data/programPlan";
-import AccordionItem from "../../components/AccordionItem";
+import ListOfCertifications from "../../components/ListOfCertifications";
 
 function RetroCertsConfirmationPage(props) {
   const { t } = useTranslation();
   const history = useHistory();
 
   const userData = props.userData;
-  const numAccordions = userData.weeksToCertify.length + 1; // add 1 for Acknowledgement
-  const acknowledgementIndex = numAccordions - 1;
-  const [showAll, setShowAll] = useState(false);
-  const [accordionsExpanded, setAccordionsExpanded] = useState(
-    Array(numAccordions).fill(false)
-  );
 
   // The user is here by accident. Send them back.
   if (!userData.confirmationNumber) {
@@ -34,7 +26,6 @@ function RetroCertsConfirmationPage(props) {
   }
 
   document.title = t("retrocerts-confirmation.title");
-  const isAnyWeekPua = userData.programPlan.includes(programPlan.puaFullTime);
 
   // For historical reasons the confirmation code is stored as a uuidv4
   // hash in the database, but we display only the last 7 characters to the user.
@@ -56,47 +47,6 @@ function RetroCertsConfirmationPage(props) {
   function handlePrint() {
     logEvent("RetroCerts", "PrintConfirmation");
     window.print();
-  }
-
-  function toggleAllAccordions() {
-    setShowAll(!showAll);
-    setAccordionsExpanded(Array(numAccordions).fill(!showAll));
-  }
-
-  function toggleAccordion(index) {
-    // Need to clone the state variable here, React doesn't allow mutating them
-    const newAccordionsExpanded = [...accordionsExpanded];
-    newAccordionsExpanded[index] = !newAccordionsExpanded[index];
-    setAccordionsExpanded(newAccordionsExpanded);
-
-    // If all the accordions are now either closed or open,
-    // update the Show all / Hide all button to match
-    if (newAccordionsExpanded.every((x) => x === newAccordionsExpanded[0])) {
-      setShowAll(newAccordionsExpanded[index]);
-    }
-  }
-
-  function AcknowledgementDetail(props) {
-    return (
-      <React.Fragment>
-        {isAnyWeekPua ? (
-          <ul>
-            <li>{t("retrocerts-certification.ack-list-pua-item-1")}</li>
-            <li>{t("retrocerts-certification.ack-list-pua-item-2")}</li>
-            <li>{t("retrocerts-certification.ack-list-pua-item-3")}</li>
-          </ul>
-        ) : (
-          <ul>
-            <li>{t("retrocerts-certification.ack-list-item-1")}</li>
-            <li>{t("retrocerts-certification.ack-list-item-2")}</li>
-            <li>{t("retrocerts-certification.ack-list-item-3")}</li>
-            <li>{t("retrocerts-certification.ack-list-item-4")}</li>
-          </ul>
-        )}
-        <input type="checkbox" checked disabled />
-        {t("retrocerts-certification.ack-label")}
-      </React.Fragment>
-    );
   }
 
   return (
@@ -137,28 +87,10 @@ function RetroCertsConfirmationPage(props) {
             {t("retrocerts-confirmation.button-print")}
           </Button>
 
-          <h2 className="mt-5">{t("retrocerts-confirmation.header2")}</h2>
-          <Button
-            variant="outline-secondary"
-            className="text-dark bg-light mb-3"
-            onClick={toggleAllAccordions}
-          >
-            {showAll
-              ? t("retrocerts-confirmation.button-hide-all")
-              : t("retrocerts-confirmation.button-show-all")}
-          </Button>
-          <ListOfWeeksWithDetail
-            showContentArray={accordionsExpanded}
-            toggleContent={toggleAccordion}
+          <ListOfCertifications
+            header={t("retrocerts-confirmation.header2")}
             userData={userData}
           />
-          <AccordionItem
-            header={<strong>{t("retrocerts-certification.ack-header")}</strong>}
-            content={<AcknowledgementDetail className="detail" />}
-            showContent={accordionsExpanded[acknowledgementIndex]}
-            toggleContent={() => toggleAccordion(acknowledgementIndex)}
-          />
-
           <h2 className="mt-5">{t("retrocerts-confirmation.header3")}</h2>
           <p>
             <Trans t={t} i18nKey="retrocerts-confirmation.p2">
