@@ -3,7 +3,7 @@
 exports[`<WeekWithDetail /> renders the WeekWithDetail component 1`] = `
 <WeekWithDetail
   index={0}
-  showContent={
+  showContentArray={
     Array [
       true,
       true,

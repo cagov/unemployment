@@ -7,7 +7,7 @@ describe("<AccordionItem />", () => {
     const wrapper = renderNonTransContent(Component, "AccordionItem", {
       header: <div>header react element</div>,
       content: <div>detailed body react element</div>,
-      showContent: [true, true, true, true],
+      showContent: true,
       toggleContent: jest.fn(),
     });
 

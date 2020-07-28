@@ -10,7 +10,7 @@ import getRetroCertQuestionKey from "../../../utils/getRetroCertQuestionKey";
 function WeekWithDetail(props) {
   const {
     index,
-    showContent,
+    showContentArray,
     toggleContent,
     weekData,
     weekIndex,
@@ -104,7 +104,7 @@ function WeekWithDetail(props) {
           weekString={toWeekString(weekIndex)}
         />
       }
-      showContent={showContent[index]}
+      showContent={showContentArray[index]}
       toggleContent={() => toggleContent(index)}
     />
   );
@@ -112,7 +112,7 @@ function WeekWithDetail(props) {
 
 WeekWithDetail.propTypes = {
   index: PropTypes.number.isRequired,
-  showContent: PropTypes.arrayOf(PropTypes.bool).isRequired,
+  showContentArray: PropTypes.arrayOf(PropTypes.bool).isRequired,
   toggleContent: PropTypes.func.isRequired,
   weekData: PropTypes.object.isRequired,
   weekIndex: PropTypes.number.isRequired,

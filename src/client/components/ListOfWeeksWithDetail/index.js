@@ -5,7 +5,7 @@ import WeekWithDetail from "../WeekWithDetail";
 import getWeekProgramPlan from "../../../utils/getWeekProgramPlan";
 
 function ListOfWeeksWithDetail(props) {
-  const { userData, showContent, toggleContent } = props;
+  const { userData, showContentArray, toggleContent } = props;
 
   return userData.weeksToCertify.map((weekIndex, index) => {
     const weekForUser = index + 1;
@@ -19,7 +19,7 @@ function ListOfWeeksWithDetail(props) {
       <WeekWithDetail
         index={index}
         key={index}
-        showContent={showContent}
+        showContentArray={showContentArray}
         toggleContent={toggleContent}
         weekData={weekData}
         weekIndex={weekIndex}
@@ -31,7 +31,7 @@ function ListOfWeeksWithDetail(props) {
 
 ListOfWeeksWithDetail.propTypes = {
   userData: userDataPropType.isRequired,
-  showContent: PropTypes.arrayOf(PropTypes.bool).isRequired,
+  showContentArray: PropTypes.arrayOf(PropTypes.bool).isRequired,
   toggleContent: PropTypes.func.isRequired,
 };
 

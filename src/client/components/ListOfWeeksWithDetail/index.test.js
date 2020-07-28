@@ -18,7 +18,7 @@ describe("<ListOfWeeksWithDetail />", () => {
         weeksToCertify: [1, 2, 3],
         programPlan: ["UI full time"],
       },
-      showContent: [true, true, true, true],
+      showContentArray: [true, true, true, true],
       toggleContent: jest.fn(),
     });
 

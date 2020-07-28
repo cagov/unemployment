@@ -5,7 +5,7 @@ Array [
   <WeekWithDetail
     index={0}
     key="0"
-    showContent={
+    showContentArray={
       Array [
         true,
         true,
@@ -30,7 +30,7 @@ Array [
   <WeekWithDetail
     index={1}
     key="1"
-    showContent={
+    showContentArray={
       Array [
         true,
         true,
@@ -55,7 +55,7 @@ Array [
   <WeekWithDetail
     index={2}
     key="2"
-    showContent={
+    showContentArray={
       Array [
         true,
         true,

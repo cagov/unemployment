@@ -148,7 +148,7 @@ function RetroCertsConfirmationPage(props) {
               : t("retrocerts-confirmation.button-show-all")}
           </Button>
           <ListOfWeeksWithDetail
-            showContent={accordionsExpanded}
+            showContentArray={accordionsExpanded}
             toggleContent={toggleAccordion}
             userData={userData}
           />

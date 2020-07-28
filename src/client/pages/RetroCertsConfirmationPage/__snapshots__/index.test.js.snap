@@ -99,7 +99,7 @@ exports[`<RetroCertsConfirmationPage /> with confirmation number 1`] = `
         Show all
       </Button>
       <ListOfWeeksWithDetail
-        showContent={
+        showContentArray={
           Array [
             false,
             false,
