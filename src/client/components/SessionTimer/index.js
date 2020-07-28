@@ -1,17 +1,31 @@
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import PropTypes from "prop-types";
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
+import { useTranslation } from "react-i18next";
 import { setUserDataPropType } from "../../commonPropTypes";
 import AUTH_STRINGS from "../../../data/authStrings";
 import routes from "../../../data/routes";
 import { logEvent } from "../../utils";
 
-let timerId = null;
+let timeOutTimerId = null;
+let warningTimerId = null;
 const TIMEOUT_KEY = "timeout";
 
 function SessionTimer(props) {
+  const { t } = useTranslation();
   const TIMEOUT_MS = 30 * 60 * 1000;
+  const TIMEOUT_WARNING_MS = TIMEOUT_MS - 5 * 60 * 1000;
   const history = useHistory();
   const { action, setUserData } = props;
+
+  const [showWarningModal, setShowWarningModal] = useState();
+
+  function closeWarningModal() {
+    setShowWarningModal(false);
+    startOrUpdate();
+  }
 
   function timeOutUser() {
     clearAuthToken();
@@ -34,7 +48,12 @@ function SessionTimer(props) {
     }
 
     clear();
-    timerId = setTimeout(() => {
+    warningTimerId = setTimeout(() => {
+      if (sessionStorage.getItem(AUTH_STRINGS.authToken)) {
+        setShowWarningModal(true);
+      }
+    }, TIMEOUT_WARNING_MS);
+    timeOutTimerId = setTimeout(() => {
       if (sessionStorage.getItem(AUTH_STRINGS.authToken)) {
         timeOutUser();
       }
@@ -43,8 +62,10 @@ function SessionTimer(props) {
   }
 
   function clear() {
-    clearTimeout(timerId);
-    timerId = null;
+    clearTimeout(timeOutTimerId);
+    timeOutTimerId = null;
+    clearTimeout(warningTimerId);
+    warningTimerId = null;
     sessionStorage.removeItem(TIMEOUT_KEY);
   }
 
@@ -54,8 +75,21 @@ function SessionTimer(props) {
     clear();
   }
 
-  // No HTML to render.
-  return false;
+  return (
+    <Modal show={showWarningModal} onHide={closeWarningModal}>
+      <Modal.Header closeButton>
+        <Modal.Title>
+          <strong>{t("timeout-modal.header")}</strong>
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body>{t("timeout-modal.warning")}</Modal.Body>
+      <Modal.Footer>
+        <Button variant="secondary" onClick={closeWarningModal}>
+          {t("timeout-modal.button")}
+        </Button>
+      </Modal.Footer>
+    </Modal>
+  );
 }
 
 SessionTimer.propTypes = {
@@ -69,7 +103,7 @@ export function clearAuthToken() {
 }
 
 SessionTimer.getTimerIdForTest = function () {
-  return timerId;
+  return timeOutTimerId;
 };
 
 export default SessionTimer;
