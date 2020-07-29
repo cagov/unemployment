@@ -363,5 +363,10 @@
     "header3": "Siguientes pasos",
     "p2": "Si todavía está desempleado, continúe realizando la certificación para los beneficios cada dos semanas. La manera más rápida es a través de <2>UI Online</2>."
   },
-  "generic-validation-error-message": "Hay más de un error en esta página. Revise y corrija los errores para continuar. Complete todo los campos e intente de nuevo."
+  "generic-validation-error-message": "Hay más de un error en esta página. Revise y corrija los errores para continuar. Complete todo los campos e intente de nuevo.",
+  "timeout-modal": {
+    "header": "Su sesión cerrara pronto",
+    "warning": "Para proteger su información, se cerrará su sesión en 5 minutos si no continúa teniendo actividad en su cuenta. Se perderá cualquier cambio que no haya sido guardado.",
+    "button": "Continuar actividad en su cuenta"
+  }  
 }
