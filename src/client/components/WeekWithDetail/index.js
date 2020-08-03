@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import React from "react";
 import { Trans, useTranslation } from "react-i18next";
+import { logError } from "../../utils";
 import { startAndEndDate, toWeekString } from "../../../utils/retroCertsWeeks";
 import programPlan from "../../../data/programPlan";
 import WeekConfirmationDetails from "../WeekConfirmationDetails";
@@ -44,7 +45,8 @@ function WeekWithDetail(props) {
       // the "number of days you were sick" question, and then only
       // if the answer to "were you sick" was yes
       if (questionName !== "tooSickNumberOfDays" || weekData.tooSick) {
-        // TODO(kalvin): log this error in Azure
+        logError(`The answer is undefined for question ${questionName} with
+        weekData ${weekData}, which should never occur`);
       }
       return false;
     }
@@ -69,7 +71,8 @@ function WeekWithDetail(props) {
   const dates = startAndEndDate(weekIndex);
   const weekHasEmployers = weekData.workOrEarn;
   if (weekHasEmployers && !weekData.employers) {
-    // TODO(kalvin): log this "missing employer(s)" error in Azure
+    logError(`The employers field is missing from weekData ${weekData},
+      which should never occur`);
   }
 
   let questionNames;

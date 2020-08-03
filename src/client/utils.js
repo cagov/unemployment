@@ -32,3 +32,10 @@ export function logPage(path) {
     page_path: path,
   });
 }
+
+// To view these errors, go to production Azure and click through:
+// Application Insights > Failures > Browser > Exceptions
+export function logError(errorMessage) {
+  const appInsights = getAppInsights();
+  appInsights.trackException({ exception: new Error(errorMessage) });
+}
