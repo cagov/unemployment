@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import React from "react";
 import { Trans, useTranslation } from "react-i18next";
+import { logError } from "../../utils";
 
 function WeekConfirmationDetails(props) {
   const { employers, questionAnswers, questionKeys, weekString } = props;
@@ -109,7 +110,8 @@ function WeekConfirmationDetails(props) {
       answer === undefined ||
       (answer === "" && employer.reason !== "still-working")
     ) {
-      // TODO(kalvin): log this "missing answer" error in Azure
+      logError(`The answer is ${answer} for question ${questionName} on employer
+        ${employer}, which should never occur`);
     }
 
     if (questionName === "reason") {
