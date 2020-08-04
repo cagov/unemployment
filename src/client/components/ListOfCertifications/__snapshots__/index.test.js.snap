@@ -2,11 +2,6 @@
 
 exports[`<ListOfCertifications /> renders the component 1`] = `
 <Fragment>
-  <h2
-    className="mt-5"
-  >
-    Certifications Submitted
-  </h2>
   <Button
     active={false}
     className="text-dark bg-light mb-3"

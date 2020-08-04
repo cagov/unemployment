@@ -1,0 +1,302 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StaffViewConfirmationPage /> when claimant completed 1`] = `
+<div
+  id="overflow-wrapper"
+>
+  <Header />
+  <main
+    className="pb-5"
+    id="certification-page"
+  >
+    <div
+      className="container p-4"
+    >
+      <h1>
+        Retroactive Certification for Unemployment
+      </h1>
+      <h2
+        className="h3 font-weight-bold mb-3"
+      >
+        Staff View
+      </h2>
+      <Button
+        active={false}
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "Link",
+            "propTypes": Object {
+              "innerRef": [Function],
+              "onClick": [Function],
+              "replace": [Function],
+              "target": [Function],
+              "to": [Function],
+            },
+            "render": [Function],
+          }
+        }
+        className="text-dark bg-light"
+        disabled={false}
+        to="/retroactive-certification"
+        type="button"
+        variant="outline-secondary"
+      >
+        Search New Claimant
+      </Button>
+      <h2
+        className="h3 font-weight-bold mt-5 mb-3"
+      >
+        Certification Status
+      </h2>
+      <CertificationStatus />
+      <Button
+        active={false}
+        className="text-dark bg-light"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+        variant="outline-secondary"
+      >
+        Print
+      </Button>
+      <h2
+        className="h3 font-weight-bold mt-5 mb-3"
+      >
+        Certification Weeks
+      </h2>
+      <ListOfCertifications
+        userData={
+          Object {
+            "confirmationNumber": "33a6f278-eaa3-41c5-8d08-276fa0364833",
+            "programPlan": Array [
+              "UI full time",
+            ],
+            "status": "ok",
+            "weeksToCertify": Array [
+              0,
+              1,
+              2,
+              5,
+              6,
+            ],
+          }
+        }
+      />
+      <h2
+        className="h3 font-weight-bold mt-5 mb-3"
+      >
+        Retroactive Certification Application Details
+      </h2>
+      <p>
+        The claimant is shown the following on the Retroactive Certification Application.
+      </p>
+      <ClaimantContent />
+    </div>
+  </main>
+  <Footer
+    backToTopTag="certification-page"
+  />
+</div>
+`;
+
+exports[`<StaffViewConfirmationPage /> when claimant in progress 1`] = `
+<div
+  id="overflow-wrapper"
+>
+  <Header />
+  <main
+    className="pb-5"
+    id="certification-page"
+  >
+    <div
+      className="container p-4"
+    >
+      <h1>
+        Retroactive Certification for Unemployment
+      </h1>
+      <h2
+        className="h3 font-weight-bold mb-3"
+      >
+        Staff View
+      </h2>
+      <Button
+        active={false}
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "Link",
+            "propTypes": Object {
+              "innerRef": [Function],
+              "onClick": [Function],
+              "replace": [Function],
+              "target": [Function],
+              "to": [Function],
+            },
+            "render": [Function],
+          }
+        }
+        className="text-dark bg-light"
+        disabled={false}
+        to="/retroactive-certification"
+        type="button"
+        variant="outline-secondary"
+      >
+        Search New Claimant
+      </Button>
+      <h2
+        className="h3 font-weight-bold mt-5 mb-3"
+      >
+        Certification Status
+      </h2>
+      <CertificationStatus />
+      <Button
+        active={false}
+        className="text-dark bg-light"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+        variant="outline-secondary"
+      >
+        Print
+      </Button>
+      <h2
+        className="h3 font-weight-bold mt-5 mb-3"
+      >
+        Certification Weeks
+      </h2>
+      <ListOfCertifications
+        userData={
+          Object {
+            "hasLoggedIn": true,
+            "programPlan": Array [
+              "UI full time",
+            ],
+            "status": "ok",
+            "weeksToCertify": Array [
+              0,
+              1,
+              2,
+              5,
+              6,
+            ],
+          }
+        }
+      />
+      <h2
+        className="h3 font-weight-bold mt-5 mb-3"
+      >
+        Retroactive Certification Application Details
+      </h2>
+      <p>
+        The claimant is shown the following on the Retroactive Certification Application.
+      </p>
+      <ClaimantContent />
+    </div>
+  </main>
+  <Footer
+    backToTopTag="certification-page"
+  />
+</div>
+`;
+
+exports[`<StaffViewConfirmationPage /> when claimant not started 1`] = `
+<div
+  id="overflow-wrapper"
+>
+  <Header />
+  <main
+    className="pb-5"
+    id="certification-page"
+  >
+    <div
+      className="container p-4"
+    >
+      <h1>
+        Retroactive Certification for Unemployment
+      </h1>
+      <h2
+        className="h3 font-weight-bold mb-3"
+      >
+        Staff View
+      </h2>
+      <Button
+        active={false}
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "Link",
+            "propTypes": Object {
+              "innerRef": [Function],
+              "onClick": [Function],
+              "replace": [Function],
+              "target": [Function],
+              "to": [Function],
+            },
+            "render": [Function],
+          }
+        }
+        className="text-dark bg-light"
+        disabled={false}
+        to="/retroactive-certification"
+        type="button"
+        variant="outline-secondary"
+      >
+        Search New Claimant
+      </Button>
+      <h2
+        className="h3 font-weight-bold mt-5 mb-3"
+      >
+        Certification Status
+      </h2>
+      <CertificationStatus />
+      <Button
+        active={false}
+        className="text-dark bg-light"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+        variant="outline-secondary"
+      >
+        Print
+      </Button>
+      <h2
+        className="h3 font-weight-bold mt-5 mb-3"
+      >
+        Certification Weeks
+      </h2>
+      <ListOfCertifications
+        userData={
+          Object {
+            "confirmationNumber": "CONFIRMATION_NUMBER",
+            "hasLoggedIn": false,
+            "programPlan": Array [
+              "PUA full time",
+            ],
+            "status": "ok",
+            "weeksToCertify": Array [
+              0,
+              1,
+              2,
+              5,
+              6,
+            ],
+          }
+        }
+      />
+      <h2
+        className="h3 font-weight-bold mt-5 mb-3"
+      >
+        Retroactive Certification Application Details
+      </h2>
+      <p>
+        The claimant is shown the following on the Retroactive Certification Application.
+      </p>
+      <ClaimantContent />
+    </div>
+  </main>
+  <Footer
+    backToTopTag="certification-page"
+  />
+</div>
+`;

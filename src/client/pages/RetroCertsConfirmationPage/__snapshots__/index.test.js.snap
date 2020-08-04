@@ -83,8 +83,12 @@ exports[`<RetroCertsConfirmationPage /> with confirmation number 1`] = `
       >
         Print
       </Button>
+      <h2
+        className="mt-5"
+      >
+        Certifications Submitted
+      </h2>
       <ListOfCertifications
-        header="Certifications Submitted"
         userData={
           Object {
             "confirmationNumber": "CONFIRMATION_NUMBER",
@@ -102,11 +106,6 @@ exports[`<RetroCertsConfirmationPage /> with confirmation number 1`] = `
           }
         }
       />
-      <h2
-        className="mt-5"
-      >
-        Next Steps
-      </h2>
       <p>
         <Trans
           i18nKey="retrocerts-confirmation.p2"

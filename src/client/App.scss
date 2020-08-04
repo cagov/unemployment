@@ -3,6 +3,9 @@
 
 $primary: #046b99 !default; //medium blue
 $secondary: #fdb81e !default; //yellowish gold
+$background: #e2e3e5 !default; // medium gray
+$success-bg: #d4edda !default; // light seafoam green
+$danger-bg: #f8d7da !default; // light red
 
 $font-size-base: 1.2rem !default;
 
@@ -32,6 +35,7 @@ $font-family-sans-serif: "Source Sans Pro", sans-serif !default;
 @import "components/TabbedContainer/index";
 @import "components/DisasterQuestion/index";
 @import "pages/RetroCertsConfirmationPage/index";
+@import "pages/StaffViewConfirmationPage/index";
 
 h1,
 h2,
@@ -130,7 +134,7 @@ footer {
 // Use grey for secondary alerts rather than our secondary color yellowish gold.
 .alert-secondary {
   color: #383d41;
-  background-color: #e2e3e5;
+  background-color: $background;
   border-color: #d6d8db;
 }
 
@@ -207,6 +211,20 @@ body {
 }
 
 .ssn-hint {
-  margin-bottom: .5rem;
-  margin-top: -.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: -0.5rem;
+}
+
+@mixin blockquote($color) {
+  padding: 0 1rem;
+  margin: 1rem 0;
+  border-left: 0.3rem solid $color;
+}
+
+.highlight-blockquote {
+  @include blockquote($secondary);
+}
+
+.subtle-blockquote {
+  @include blockquote($background);
 }

@@ -1,0 +1,56 @@
+.toggleAccordion {
+  cursor: pointer;
+
+  button {
+    border: 0;
+    background-color: transparent; /* note: inherit is ignored by IE11 */
+  }
+}
+
+.toggleCharacter {
+  padding-right: 20px;
+  font-weight: bold;
+}
+
+.detail {
+  padding: 20px;
+  border: 1px solid #d6d8db;
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+
+.detail ul {
+  padding-left: 20px;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+  height: 15px;
+  width: 15px;
+}
+
+/* Expand all weeks when user prints */
+@media print {
+  .detail {
+    display: block !important;
+  }
+}
+
+@mixin status($bg-color) {
+  font-size: 100%;
+  font-weight: normal;
+  padding: 0.5em 0.4em;
+  background-color: $bg-color;
+}
+
+.not-started {
+  @include status($danger-bg);
+}
+
+.in-progress {
+  @include status($secondary);
+}
+
+.completed {
+  @include status($success-bg);
+}
