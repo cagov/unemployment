@@ -141,8 +141,11 @@ function StaffViewAuthPage(props) {
       <main id="certification-page">
         <div className="container p-4">
           <h1>{t("retrocert-login.title")}</h1>
+          <h2 className="h3 font-weight-bold mb-3">
+            {t("retrocert-login.header1-staff-view")}
+          </h2>
           {showGenericValidationError && validated && genericValidationError}
-          {errorTransKey === "retrocert-login.session-timed-out" && errorAlert}
+          <p>{t("retrocert-login.instructions-staff-view")}</p>
           <p>{t("retrocert-login.required-text")}</p>
           <Form noValidate validated={validated} onSubmit={handleSubmit}>
             <Row>
