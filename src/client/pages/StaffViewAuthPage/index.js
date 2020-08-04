@@ -1,6 +1,6 @@
 // This page is identical to RetroCertsAuthPage, minus the captcha, Spanish
-// translation button, and helper text below the header. It also has a
-// different error message for userNotFound.
+// translation button, Show SSN button, and helper text below the header.
+// It also has a different error message for userNotFound.
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 import Button from "react-bootstrap/Button";
@@ -8,16 +8,14 @@ import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Alert from "react-bootstrap/Alert";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import AUTH_STRINGS from "../../../data/authStrings";
 import routes from "../../../data/routes";
 import { userDataPropType, setUserDataPropType } from "../../commonPropTypes";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
-import SessionTimer from "../../components/SessionTimer";
 import weeksCompleted from "../../../utils/checkFormData";
 import { fromIndexToPathString } from "../../../utils/retroCertsWeeks";
-import Inputmask from "inputmask";
 import { autoScroll, TOP, BEHAVIOR } from "../../../utils/autoScroll";
 
 function StaffViewAuthPage(props) {
@@ -34,7 +32,6 @@ function StaffViewAuthPage(props) {
   const [dobYear, setDobYear] = useState("");
   const [ssn, setSsn] = useState("");
   const [validated, setValidated] = useState(false);
-  const [showSsn, setShowSsn] = useState(false);
   const [showGenericValidationError, setShowGenericValidationError] = useState(
     false
   );
@@ -44,10 +41,6 @@ function StaffViewAuthPage(props) {
     [
       AUTH_STRINGS.statusCode.userNotFound,
       "retrocert-login.invalid-user-error-staff-view",
-    ],
-    [
-      AUTH_STRINGS.statusCode.sessionTimedOut,
-      "retrocert-login.session-timed-out",
     ],
   ]).get(status);
 
@@ -91,9 +84,7 @@ function StaffViewAuthPage(props) {
       body: JSON.stringify({
         lastName: lastName.trim(),
         dob: `${month}-${day}-${dobYear}`.trim(),
-        ssn: ssn.inputmask
-          ? ssn.inputmask.unmaskedvalue()
-          : ssn.trim().replace(/-/g, ""),
+        ssn: ssn.trim().replace(/-/g, ""),
       }),
     })
       .then((response) => response.json())
@@ -135,31 +126,6 @@ function StaffViewAuthPage(props) {
   const handleChange = (event, setter) => {
     setter(event.target.value);
   };
-
-  useEffect(() => {
-    const ssnRef = document.getElementById("formSsn");
-    if (showSsn) {
-      Inputmask.remove(ssnRef);
-      Inputmask("ssn", { placeholder: "#" }).mask(ssnRef);
-      ssnRef.type = "text";
-    } else {
-      Inputmask.remove(ssnRef);
-      Inputmask("9", { repeat: "9", jitMasking: true }).mask(ssnRef);
-      ssnRef.type = "password";
-      ssnRef.placeholder = "###-##-####";
-    }
-  });
-
-  function toggleSsn() {
-    const toggle = !showSsn;
-    setShowSsn(toggle);
-  }
-
-  function getSsnToggleText() {
-    return showSsn
-      ? t("retrocert-login.hide-ssn")
-      : t("retrocert-login.show-ssn");
-  }
 
   const genericValidationError = (
     <Row>
@@ -251,11 +217,6 @@ function StaffViewAuthPage(props) {
                 <Form.Text muted className="ssn-hint">
                   {t("retrocert-login.ssn-hint")}
                 </Form.Text>
-                {/* sr-only is invisible and used for screen readers:
-                https://v4-alpha.getbootstrap.com/getting-started/accessibility/#skip-navigation */}
-                <span id="ssn-sr-desc" className="sr-only">
-                  {t("retrocert-login.ssn-screen-reader")}
-                </span>
                 <Form.Control
                   value={ssn}
                   onChange={(e) => handleChange(e, setSsn)}
@@ -265,16 +226,6 @@ function StaffViewAuthPage(props) {
                 <Form.Control.Feedback type="invalid">
                   {t("required-error")}
                 </Form.Control.Feedback>
-                <div className="d-flex justify-content-end">
-                  <Button
-                    onClick={toggleSsn}
-                    variant="link"
-                    style={{ fontWeight: "normal" }}
-                    size="sm"
-                  >
-                    {getSsnToggleText()}
-                  </Button>
-                </div>
               </Form.Group>
             </Row>
             {errorTransKey ===
@@ -285,7 +236,6 @@ function StaffViewAuthPage(props) {
           </Form>
         </div>
       </main>
-      <SessionTimer action="clear" setUserData={setUserDataPropType} />
       <Footer backToTopTag="certification-page" />
     </div>
   );

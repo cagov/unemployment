@@ -16,12 +16,4 @@ describe("<StaffViewAuthPage />", () => {
 
     expect(wrapper).toMatchSnapshot();
   });
-
-  it("retro certs auth page with session timeout", async () => {
-    const wrapper = renderNonTransContent(Component, "StaffViewAuthPage", {
-      userData: { status: AUTH_STRINGS.statusCode.sessionTimedOut },
-    });
-
-    expect(wrapper).toMatchSnapshot();
-  });
 });
