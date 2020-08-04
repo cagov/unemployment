@@ -87,11 +87,8 @@ function RetroCertsConfirmationPage(props) {
             {t("retrocerts-confirmation.button-print")}
           </Button>
 
-          <ListOfCertifications
-            header={t("retrocerts-confirmation.header2")}
-            userData={userData}
-          />
-          <h2 className="mt-5">{t("retrocerts-confirmation.header3")}</h2>
+          <h2 className="mt-5">{t("retrocerts-confirmation.header2")}</h2>
+          <ListOfCertifications userData={userData} />
           <p>
             <Trans t={t} i18nKey="retrocerts-confirmation.p2">
               If you are still unemployed, continue to certify for benefits
