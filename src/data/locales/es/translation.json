@@ -209,6 +209,12 @@
     "hide-ssn": "Ocultar SSN",
     "required-text": "*Indica un campo requerido que falta completar"
   },
+  "staff-view-login": {
+    "header1": "Staff View",
+    "instructions": "Enter claimant information below.",
+    "invalid-user-error": "This claimant is not found in the database and does not need to retroactively certify.",
+    "submit": "Search"
+  },
   "retrocerts-week-list-item": "<strong>Semana {{weekForUser}}</strong>: Domingo, {{startDate}} – Sábado, {{endDate}}",
   "retrocerts-weeks": {
     "title": "Certificación retroactiva para el Seguro de Desempleo",
@@ -368,5 +374,5 @@
     "header": "Su sesión cerrara pronto",
     "warning": "Para proteger su información, se cerrará su sesión en 5 minutos si no continúa teniendo actividad en su cuenta. Se perderá cualquier cambio que no haya sido guardado.",
     "button": "Continuar actividad en su cuenta"
-  }  
+  }
 }
