@@ -45,7 +45,7 @@ function StaffViewAuthPage(props) {
   ]).get(status);
 
   const errorAlert = errorTransKey && (
-    <Row>
+    <Row className="mt-3">
       <div className="col-md-12">
         <Alert variant="danger">{t(errorTransKey)}</Alert>
       </div>
