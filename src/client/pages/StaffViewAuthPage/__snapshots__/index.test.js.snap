@@ -14,6 +14,14 @@ exports[`<StaffViewAuthPage /> retro certs auth page 1`] = `
       <h1>
         Retroactive Certification for Unemployment
       </h1>
+      <h2
+        className="h3 font-weight-bold mb-3"
+      >
+        Staff View
+      </h2>
+      <p>
+        Enter claimant information below.
+      </p>
       <p>
         * Indicates required text
       </p>
@@ -196,7 +204,7 @@ exports[`<StaffViewAuthPage /> retro certs auth page 1`] = `
           type="submit"
           variant="secondary"
         >
-          Find Me
+          Search
         </Button>
       </Form>
     </div>
@@ -221,6 +229,14 @@ exports[`<StaffViewAuthPage /> retro certs auth page with user not found error 1
       <h1>
         Retroactive Certification for Unemployment
       </h1>
+      <h2
+        className="h3 font-weight-bold mb-3"
+      >
+        Staff View
+      </h2>
+      <p>
+        Enter claimant information below.
+      </p>
       <p>
         * Indicates required text
       </p>
@@ -397,6 +413,7 @@ exports[`<StaffViewAuthPage /> retro certs auth page with user not found error 1
           </FormGroup>
         </Row>
         <Row
+          className="mt-3"
           noGutters={false}
         >
           <div
@@ -432,7 +449,7 @@ exports[`<StaffViewAuthPage /> retro certs auth page with user not found error 1
           type="submit"
           variant="secondary"
         >
-          Find Me
+          Search
         </Button>
       </Form>
     </div>

@@ -40,7 +40,7 @@ function StaffViewAuthPage(props) {
   const errorTransKey = new Map([
     [
       AUTH_STRINGS.statusCode.userNotFound,
-      "retrocert-login.invalid-user-error-staff-view",
+      "staff-view-login.invalid-user-error",
     ],
   ]).get(status);
 
@@ -142,10 +142,10 @@ function StaffViewAuthPage(props) {
         <div className="container p-4">
           <h1>{t("retrocert-login.title")}</h1>
           <h2 className="h3 font-weight-bold mb-3">
-            {t("retrocert-login.header1-staff-view")}
+            {t("staff-view-login.header1")}
           </h2>
           {showGenericValidationError && validated && genericValidationError}
-          <p>{t("retrocert-login.instructions-staff-view")}</p>
+          <p>{t("staff-view-login.instructions")}</p>
           <p>{t("retrocert-login.required-text")}</p>
           <Form noValidate validated={validated} onSubmit={handleSubmit}>
             <Row>
@@ -231,10 +231,10 @@ function StaffViewAuthPage(props) {
                 </Form.Control.Feedback>
               </Form.Group>
             </Row>
-            {errorTransKey ===
-              "retrocert-login.invalid-user-error-staff-view" && errorAlert}
+            {errorTransKey === "staff-view-login.invalid-user-error" &&
+              errorAlert}
             <Button variant="secondary" type="submit" className="mt-4">
-              {t("retrocert-login.submit")}
+              {t("staff-view-login.submit")}
             </Button>
           </Form>
         </div>

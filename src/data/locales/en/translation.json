@@ -189,10 +189,8 @@
   "required-error": "This field is required.",
   "retrocert-login": {
     "title": "Retroactive Certification for Unemployment",
-    "header1-staff-view": "Staff View",
     "help": "You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits you received for weeks of your claim early in the pandemic through the week ending May 9, 2020. The exact dates you are required to certify for will depend on your specific claim history.",
     "instructions": "Enter your information to confirm if you have any benefit weeks that you need to retroactively certify.",
-    "instructions-staff-view": "Enter claimant information below.",
     "last-name-label": "Last Name",
     "dob-heading": "Date of Birth",
     "dob-hint": "For example, 4 28 1990",
@@ -205,12 +203,17 @@
     "recaptcha-text": "Security check provided by reCAPTCHA.",
     "submit": "Find Me",
     "invalid-user-error": "Review and verify the information you entered is correct. If your information is correct, then you don’t need to certify.",
-    "invalid-user-error-staff-view": "This claimant is not found in the database and does not need to retroactively certify.",
     "invalid-recaptcha-error": "Security check is not complete.",
     "session-timed-out": "You were logged out after 30 minutes of inactivity. Provide your information again to certify your weeks.",
     "show-ssn": "Show SSN",
     "hide-ssn": "Hide SSN",
     "required-text": "* Indicates required text"
+  },
+  "staff-view-login": {
+    "header1": "Staff View",
+    "instructions": "Enter claimant information below.",
+    "invalid-user-error": "This claimant is not found in the database and does not need to retroactively certify.",
+    "submit": "Search"
   },
   "retrocerts-week-list-item": "<strong>Week {{weekForUser}}</strong>: Sunday, {{startDate}} – Saturday, {{endDate}}",
   "retrocerts-weeks": {

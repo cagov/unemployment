@@ -191,7 +191,6 @@
     "title": "Certificación retroactiva para el Seguro de Desempleo",
     "help": "Usted debe realizar la certificación para los beneficios del Seguro de Desempleo (UI, por sus siglas en inglés) y de la Asistencia de Desempleo por la Pandemia (PUA, por sus siglas en inglés) que recibió durante las semanas en que comenzó la pandemia correspondiente a su solicitud, hasta la semana que termina el 9 de mayo de 2020. Las fechas exactas para las que debe realizar la certificación dependerán específicamente del historial de su solicitud.",
     "instructions": "Ingrese su información para confirmar si usted tiene alguna semana de beneficios en que necesite certificar retroactivamente.",
-    "instructions-staff-view": "Enter claimant information below.",
     "last-name-label": "Apellido",
     "dob-heading": "Fecha de nacimiento",
     "dob-hint": "Por ejemplo, 4 28 1990",
@@ -204,12 +203,17 @@
     "recaptcha-text": "Control de seguridad proporcionado por reCAPTCHA.",
     "submit": "Encuéntrame",
     "invalid-user-error": "Revise y verifique que la información que ingresó sea correcta. Si su información es correcta, entonces no necesita certificar.",
-    "invalid-user-error-staff-view": "This claimant is not found in the database and does not need to retroactively certify",
     "invalid-recaptcha-error": "El control de seguridad no está completo.",
     "session-timed-out": "Su sesión se cerró después de 30 minutos de inactividad. Proporcione su información nuevamente para certificar sus semanas.",
     "show-ssn": "Mostrar SSN",
     "hide-ssn": "Ocultar SSN",
     "required-text": "*Indica un campo requerido que falta completar"
+  },
+  "staff-view-login": {
+    "header1": "Staff View",
+    "instructions": "Enter claimant information below.",
+    "invalid-user-error": "This claimant is not found in the database and does not need to retroactively certify.",
+    "submit": "Search"
   },
   "retrocerts-week-list-item": "<strong>Semana {{weekForUser}}</strong>: Domingo, {{startDate}} – Sábado, {{endDate}}",
   "retrocerts-weeks": {
@@ -225,7 +229,6 @@
   },
   "retrocerts-certification": {
     "title": "Certificación retroactiva para el Seguro de Desempleo",
-    "header1-staff-view": "Staff View",
     "question-page-title": "Certificar retroactivamente y revisar",
     "alert-found-save": "Usted tiene al menos una semana disponible para certificar retroactivamente. Comience donde se quedó la última vez. Sus semanas anteriores han sido guardadas.",
     "p1-multiple": "Usted está en la semana {{weekForUser}} de {{numberOfWeeks}} semanas para certificar retroactivamente.",
