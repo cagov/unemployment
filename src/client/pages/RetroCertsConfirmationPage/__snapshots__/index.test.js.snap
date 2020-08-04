@@ -83,33 +83,8 @@ exports[`<RetroCertsConfirmationPage /> with confirmation number 1`] = `
       >
         Print
       </Button>
-      <h2
-        className="mt-5"
-      >
-        Certifications Submitted
-      </h2>
-      <Button
-        active={false}
-        className="text-dark bg-light mb-3"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
-        variant="outline-secondary"
-      >
-        Show all
-      </Button>
-      <ListOfWeeksWithDetail
-        showContentArray={
-          Array [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-          ]
-        }
-        toggleContent={[Function]}
+      <ListOfCertifications
+        header="Certifications Submitted"
         userData={
           Object {
             "confirmationNumber": "CONFIRMATION_NUMBER",
@@ -126,20 +101,6 @@ exports[`<RetroCertsConfirmationPage /> with confirmation number 1`] = `
             ],
           }
         }
-      />
-      <AccordionItem
-        content={
-          <AcknowledgementDetail
-            className="detail"
-          />
-        }
-        header={
-          <strong>
-            Acknowledgement
-          </strong>
-        }
-        showContent={false}
-        toggleContent={[Function]}
       />
       <h2
         className="mt-5"
