@@ -203,6 +203,7 @@
     "recaptcha-text": "Control de seguridad proporcionado por reCAPTCHA.",
     "submit": "Encuéntrame",
     "invalid-user-error": "Revise y verifique que la información que ingresó sea correcta. Si su información es correcta, entonces no necesita certificar.",
+    "invalid-user-error-staff-view": "This claimant is not found in the database and does not need to retroactively certify",
     "invalid-recaptcha-error": "El control de seguridad no está completo.",
     "session-timed-out": "Su sesión se cerró después de 30 minutos de inactividad. Proporcione su información nuevamente para certificar sus semanas.",
     "show-ssn": "Mostrar SSN",
@@ -368,5 +369,5 @@
     "header": "Su sesión cerrara pronto",
     "warning": "Para proteger su información, se cerrará su sesión en 5 minutos si no continúa teniendo actividad en su cuenta. Se perderá cualquier cambio que no haya sido guardado.",
     "button": "Continuar actividad en su cuenta"
-  }  
+  }
 }

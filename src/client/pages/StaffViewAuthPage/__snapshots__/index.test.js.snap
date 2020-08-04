@@ -1,0 +1,767 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StaffViewAuthPage /> retro certs auth page 1`] = `
+<div
+  id="overflow-wrapper"
+>
+  <Header />
+  <main
+    id="certification-page"
+  >
+    <div
+      className="container p-4"
+    >
+      <h1>
+        Retroactive Certification for Unemployment
+      </h1>
+      <p>
+        * Indicates required text
+      </p>
+      <Form
+        inline={false}
+        noValidate={true}
+        onSubmit={[Function]}
+        validated={false}
+      >
+        <Row
+          noGutters={false}
+        >
+          <FormGroup
+            className="col-md-6"
+            controlId="formLastName"
+          >
+            <FormLabel
+              column={false}
+              srOnly={false}
+            >
+              * Last Name
+            </FormLabel>
+            <FormControl
+              onChange={[Function]}
+              required={true}
+              type="text"
+              value=""
+            />
+            <Feedback
+              type="invalid"
+            >
+              This field is required.
+            </Feedback>
+          </FormGroup>
+        </Row>
+        <div
+          className="mb-n2 mt-4"
+        >
+          * Date of Birth
+        </div>
+        <small
+          className="text-muted"
+        >
+          For example, 4 28 1990
+        </small>
+        <Row
+          noGutters={false}
+        >
+          <FormGroup
+            as={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "displayName": "Col",
+                "render": [Function],
+              }
+            }
+            controlId="formDobMonth"
+            md={2}
+          >
+            <FormLabel
+              column={false}
+              srOnly={false}
+            >
+              Month
+            </FormLabel>
+            <FormControl
+              maxLength={2}
+              onChange={[Function]}
+              pattern="(^0[1-9])|(^1[0-2])|(^[1-9]$)"
+              required={true}
+              type="text"
+              value=""
+            />
+            <Feedback
+              type="invalid"
+            >
+              This field is required.
+            </Feedback>
+          </FormGroup>
+          <FormGroup
+            as={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "displayName": "Col",
+                "render": [Function],
+              }
+            }
+            controlId="formDobDay"
+            md={2}
+          >
+            <FormLabel
+              column={false}
+              srOnly={false}
+            >
+              Day
+            </FormLabel>
+            <FormControl
+              maxLength={2}
+              onChange={[Function]}
+              pattern="(^0[1-9])|(^1[0-9])|(^2[0-9])|(^3[0-1])|(^[1-9]$)"
+              required={true}
+              type="text"
+              value=""
+            />
+            <Feedback
+              type="invalid"
+            >
+              This field is required.
+            </Feedback>
+          </FormGroup>
+          <FormGroup
+            as={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "displayName": "Col",
+                "render": [Function],
+              }
+            }
+            controlId="formDobYear"
+            md={3}
+          >
+            <FormLabel
+              column={false}
+              srOnly={false}
+            >
+              Year
+            </FormLabel>
+            <FormControl
+              maxLength={4}
+              onChange={[Function]}
+              pattern="[12][890]\\\\d\\\\d"
+              required={true}
+              type="text"
+              value=""
+            />
+            <Feedback
+              type="invalid"
+            >
+              This field is required.
+            </Feedback>
+          </FormGroup>
+        </Row>
+        <Row
+          className="mt-4"
+          noGutters={false}
+        >
+          <FormGroup
+            className="col-md-6"
+            controlId="formSsn"
+          >
+            <FormLabel
+              column={false}
+              srOnly={false}
+            >
+              * Social Security Number
+            </FormLabel>
+            <FormText
+              className="ssn-hint"
+              muted={true}
+            >
+              Enter your Social Security number with or without dashes.
+            </FormText>
+            <span
+              className="sr-only"
+              id="ssn-sr-desc"
+            >
+              You can select Show SSN after this input field
+            </span>
+            <FormControl
+              aria-describedby="ssn-sr-desc"
+              onChange={[Function]}
+              required={true}
+              value=""
+            />
+            <Feedback
+              type="invalid"
+            >
+              This field is required.
+            </Feedback>
+            <div
+              className="d-flex justify-content-end"
+            >
+              <Button
+                active={false}
+                disabled={false}
+                onClick={[Function]}
+                size="sm"
+                style={
+                  Object {
+                    "fontWeight": "normal",
+                  }
+                }
+                type="button"
+                variant="link"
+              >
+                Show SSN
+              </Button>
+            </div>
+          </FormGroup>
+        </Row>
+        <Button
+          active={false}
+          className="mt-4"
+          disabled={false}
+          type="submit"
+          variant="secondary"
+        >
+          Find Me
+        </Button>
+      </Form>
+    </div>
+  </main>
+  <SessionTimer
+    action="clear"
+    setUserData={[Function]}
+  />
+  <Footer
+    backToTopTag="certification-page"
+  />
+</div>
+`;
+
+exports[`<StaffViewAuthPage /> retro certs auth page with session timeout 1`] = `
+<div
+  id="overflow-wrapper"
+>
+  <Header />
+  <main
+    id="certification-page"
+  >
+    <div
+      className="container p-4"
+    >
+      <h1>
+        Retroactive Certification for Unemployment
+      </h1>
+      <Row
+        noGutters={false}
+      >
+        <div
+          className="col-md-12"
+        >
+          <Alert
+            closeLabel="Close alert"
+            show={true}
+            transition={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "defaultProps": Object {
+                  "appear": false,
+                  "in": false,
+                  "mountOnEnter": false,
+                  "timeout": 300,
+                  "unmountOnExit": false,
+                },
+                "displayName": "Fade",
+                "render": [Function],
+              }
+            }
+            variant="danger"
+          >
+            You were logged out after 30 minutes of inactivity. Provide your information again to certify your weeks.
+          </Alert>
+        </div>
+      </Row>
+      <p>
+        * Indicates required text
+      </p>
+      <Form
+        inline={false}
+        noValidate={true}
+        onSubmit={[Function]}
+        validated={false}
+      >
+        <Row
+          noGutters={false}
+        >
+          <FormGroup
+            className="col-md-6"
+            controlId="formLastName"
+          >
+            <FormLabel
+              column={false}
+              srOnly={false}
+            >
+              * Last Name
+            </FormLabel>
+            <FormControl
+              onChange={[Function]}
+              required={true}
+              type="text"
+              value=""
+            />
+            <Feedback
+              type="invalid"
+            >
+              This field is required.
+            </Feedback>
+          </FormGroup>
+        </Row>
+        <div
+          className="mb-n2 mt-4"
+        >
+          * Date of Birth
+        </div>
+        <small
+          className="text-muted"
+        >
+          For example, 4 28 1990
+        </small>
+        <Row
+          noGutters={false}
+        >
+          <FormGroup
+            as={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "displayName": "Col",
+                "render": [Function],
+              }
+            }
+            controlId="formDobMonth"
+            md={2}
+          >
+            <FormLabel
+              column={false}
+              srOnly={false}
+            >
+              Month
+            </FormLabel>
+            <FormControl
+              maxLength={2}
+              onChange={[Function]}
+              pattern="(^0[1-9])|(^1[0-2])|(^[1-9]$)"
+              required={true}
+              type="text"
+              value=""
+            />
+            <Feedback
+              type="invalid"
+            >
+              This field is required.
+            </Feedback>
+          </FormGroup>
+          <FormGroup
+            as={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "displayName": "Col",
+                "render": [Function],
+              }
+            }
+            controlId="formDobDay"
+            md={2}
+          >
+            <FormLabel
+              column={false}
+              srOnly={false}
+            >
+              Day
+            </FormLabel>
+            <FormControl
+              maxLength={2}
+              onChange={[Function]}
+              pattern="(^0[1-9])|(^1[0-9])|(^2[0-9])|(^3[0-1])|(^[1-9]$)"
+              required={true}
+              type="text"
+              value=""
+            />
+            <Feedback
+              type="invalid"
+            >
+              This field is required.
+            </Feedback>
+          </FormGroup>
+          <FormGroup
+            as={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "displayName": "Col",
+                "render": [Function],
+              }
+            }
+            controlId="formDobYear"
+            md={3}
+          >
+            <FormLabel
+              column={false}
+              srOnly={false}
+            >
+              Year
+            </FormLabel>
+            <FormControl
+              maxLength={4}
+              onChange={[Function]}
+              pattern="[12][890]\\\\d\\\\d"
+              required={true}
+              type="text"
+              value=""
+            />
+            <Feedback
+              type="invalid"
+            >
+              This field is required.
+            </Feedback>
+          </FormGroup>
+        </Row>
+        <Row
+          className="mt-4"
+          noGutters={false}
+        >
+          <FormGroup
+            className="col-md-6"
+            controlId="formSsn"
+          >
+            <FormLabel
+              column={false}
+              srOnly={false}
+            >
+              * Social Security Number
+            </FormLabel>
+            <FormText
+              className="ssn-hint"
+              muted={true}
+            >
+              Enter your Social Security number with or without dashes.
+            </FormText>
+            <span
+              className="sr-only"
+              id="ssn-sr-desc"
+            >
+              You can select Show SSN after this input field
+            </span>
+            <FormControl
+              aria-describedby="ssn-sr-desc"
+              onChange={[Function]}
+              required={true}
+              value=""
+            />
+            <Feedback
+              type="invalid"
+            >
+              This field is required.
+            </Feedback>
+            <div
+              className="d-flex justify-content-end"
+            >
+              <Button
+                active={false}
+                disabled={false}
+                onClick={[Function]}
+                size="sm"
+                style={
+                  Object {
+                    "fontWeight": "normal",
+                  }
+                }
+                type="button"
+                variant="link"
+              >
+                Show SSN
+              </Button>
+            </div>
+          </FormGroup>
+        </Row>
+        <Button
+          active={false}
+          className="mt-4"
+          disabled={false}
+          type="submit"
+          variant="secondary"
+        >
+          Find Me
+        </Button>
+      </Form>
+    </div>
+  </main>
+  <SessionTimer
+    action="clear"
+    setUserData={[Function]}
+  />
+  <Footer
+    backToTopTag="certification-page"
+  />
+</div>
+`;
+
+exports[`<StaffViewAuthPage /> retro certs auth page with user not found error 1`] = `
+<div
+  id="overflow-wrapper"
+>
+  <Header />
+  <main
+    id="certification-page"
+  >
+    <div
+      className="container p-4"
+    >
+      <h1>
+        Retroactive Certification for Unemployment
+      </h1>
+      <p>
+        * Indicates required text
+      </p>
+      <Form
+        inline={false}
+        noValidate={true}
+        onSubmit={[Function]}
+        validated={false}
+      >
+        <Row
+          noGutters={false}
+        >
+          <FormGroup
+            className="col-md-6"
+            controlId="formLastName"
+          >
+            <FormLabel
+              column={false}
+              srOnly={false}
+            >
+              * Last Name
+            </FormLabel>
+            <FormControl
+              onChange={[Function]}
+              required={true}
+              type="text"
+              value=""
+            />
+            <Feedback
+              type="invalid"
+            >
+              This field is required.
+            </Feedback>
+          </FormGroup>
+        </Row>
+        <div
+          className="mb-n2 mt-4"
+        >
+          * Date of Birth
+        </div>
+        <small
+          className="text-muted"
+        >
+          For example, 4 28 1990
+        </small>
+        <Row
+          noGutters={false}
+        >
+          <FormGroup
+            as={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "displayName": "Col",
+                "render": [Function],
+              }
+            }
+            controlId="formDobMonth"
+            md={2}
+          >
+            <FormLabel
+              column={false}
+              srOnly={false}
+            >
+              Month
+            </FormLabel>
+            <FormControl
+              maxLength={2}
+              onChange={[Function]}
+              pattern="(^0[1-9])|(^1[0-2])|(^[1-9]$)"
+              required={true}
+              type="text"
+              value=""
+            />
+            <Feedback
+              type="invalid"
+            >
+              This field is required.
+            </Feedback>
+          </FormGroup>
+          <FormGroup
+            as={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "displayName": "Col",
+                "render": [Function],
+              }
+            }
+            controlId="formDobDay"
+            md={2}
+          >
+            <FormLabel
+              column={false}
+              srOnly={false}
+            >
+              Day
+            </FormLabel>
+            <FormControl
+              maxLength={2}
+              onChange={[Function]}
+              pattern="(^0[1-9])|(^1[0-9])|(^2[0-9])|(^3[0-1])|(^[1-9]$)"
+              required={true}
+              type="text"
+              value=""
+            />
+            <Feedback
+              type="invalid"
+            >
+              This field is required.
+            </Feedback>
+          </FormGroup>
+          <FormGroup
+            as={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "displayName": "Col",
+                "render": [Function],
+              }
+            }
+            controlId="formDobYear"
+            md={3}
+          >
+            <FormLabel
+              column={false}
+              srOnly={false}
+            >
+              Year
+            </FormLabel>
+            <FormControl
+              maxLength={4}
+              onChange={[Function]}
+              pattern="[12][890]\\\\d\\\\d"
+              required={true}
+              type="text"
+              value=""
+            />
+            <Feedback
+              type="invalid"
+            >
+              This field is required.
+            </Feedback>
+          </FormGroup>
+        </Row>
+        <Row
+          className="mt-4"
+          noGutters={false}
+        >
+          <FormGroup
+            className="col-md-6"
+            controlId="formSsn"
+          >
+            <FormLabel
+              column={false}
+              srOnly={false}
+            >
+              * Social Security Number
+            </FormLabel>
+            <FormText
+              className="ssn-hint"
+              muted={true}
+            >
+              Enter your Social Security number with or without dashes.
+            </FormText>
+            <span
+              className="sr-only"
+              id="ssn-sr-desc"
+            >
+              You can select Show SSN after this input field
+            </span>
+            <FormControl
+              aria-describedby="ssn-sr-desc"
+              onChange={[Function]}
+              required={true}
+              value=""
+            />
+            <Feedback
+              type="invalid"
+            >
+              This field is required.
+            </Feedback>
+            <div
+              className="d-flex justify-content-end"
+            >
+              <Button
+                active={false}
+                disabled={false}
+                onClick={[Function]}
+                size="sm"
+                style={
+                  Object {
+                    "fontWeight": "normal",
+                  }
+                }
+                type="button"
+                variant="link"
+              >
+                Show SSN
+              </Button>
+            </div>
+          </FormGroup>
+        </Row>
+        <Row
+          noGutters={false}
+        >
+          <div
+            className="col-md-12"
+          >
+            <Alert
+              closeLabel="Close alert"
+              show={true}
+              transition={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "defaultProps": Object {
+                    "appear": false,
+                    "in": false,
+                    "mountOnEnter": false,
+                    "timeout": 300,
+                    "unmountOnExit": false,
+                  },
+                  "displayName": "Fade",
+                  "render": [Function],
+                }
+              }
+              variant="danger"
+            >
+              This claimant is not found in the database and does not need to retroactively certify.
+            </Alert>
+          </div>
+        </Row>
+        <Button
+          active={false}
+          className="mt-4"
+          disabled={false}
+          type="submit"
+          variant="secondary"
+        >
+          Find Me
+        </Button>
+      </Form>
+    </div>
+  </main>
+  <SessionTimer
+    action="clear"
+    setUserData={[Function]}
+  />
+  <Footer
+    backToTopTag="certification-page"
+  />
+</div>
+`;

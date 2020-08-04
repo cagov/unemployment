@@ -203,6 +203,7 @@
     "recaptcha-text": "Security check provided by reCAPTCHA.",
     "submit": "Find Me",
     "invalid-user-error": "Review and verify the information you entered is correct. If your information is correct, then you don’t need to certify.",
+    "invalid-user-error-staff-view": "This claimant is not found in the database and does not need to retroactively certify.",
     "invalid-recaptcha-error": "Security check is not complete.",
     "session-timed-out": "You were logged out after 30 minutes of inactivity. Provide your information again to certify your weeks.",
     "show-ssn": "Show SSN",
