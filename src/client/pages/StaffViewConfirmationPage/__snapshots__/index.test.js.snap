@@ -15,9 +15,11 @@ exports[`<StaffViewConfirmationPage /> when claimant completed 1`] = `
       <h1>
         Retroactive Certification for Unemployment
       </h1>
-      <h3>
+      <h2
+        className="h3 font-weight-bold mb-3"
+      >
         Staff View
-      </h3>
+      </h2>
       <Button
         active={false}
         as={
@@ -42,11 +44,11 @@ exports[`<StaffViewConfirmationPage /> when claimant completed 1`] = `
       >
         Search New Claimant
       </Button>
-      <h3
-        className="mt-5"
+      <h2
+        className="h3 font-weight-bold mt-5 mb-3"
       >
         Certification Status
-      </h3>
+      </h2>
       <CertificationStatus />
       <Button
         active={false}
@@ -58,11 +60,11 @@ exports[`<StaffViewConfirmationPage /> when claimant completed 1`] = `
       >
         Print
       </Button>
-      <h3
-        className="mt-5"
+      <h2
+        className="h3 font-weight-bold mt-5 mb-3"
       >
         Certification Weeks
-      </h3>
+      </h2>
       <ListOfCertifications
         userData={
           Object {
@@ -81,11 +83,11 @@ exports[`<StaffViewConfirmationPage /> when claimant completed 1`] = `
           }
         }
       />
-      <h3
-        className="mt-5"
+      <h2
+        className="h3 font-weight-bold mt-5 mb-3"
       >
         Retroactive Certification Application Details
-      </h3>
+      </h2>
       <p>
         The claimant is shown the following on the Retroactive Certification Application.
       </p>
@@ -113,9 +115,11 @@ exports[`<StaffViewConfirmationPage /> when claimant in progress 1`] = `
       <h1>
         Retroactive Certification for Unemployment
       </h1>
-      <h3>
+      <h2
+        className="h3 font-weight-bold mb-3"
+      >
         Staff View
-      </h3>
+      </h2>
       <Button
         active={false}
         as={
@@ -140,11 +144,11 @@ exports[`<StaffViewConfirmationPage /> when claimant in progress 1`] = `
       >
         Search New Claimant
       </Button>
-      <h3
-        className="mt-5"
+      <h2
+        className="h3 font-weight-bold mt-5 mb-3"
       >
         Certification Status
-      </h3>
+      </h2>
       <CertificationStatus />
       <Button
         active={false}
@@ -156,11 +160,11 @@ exports[`<StaffViewConfirmationPage /> when claimant in progress 1`] = `
       >
         Print
       </Button>
-      <h3
-        className="mt-5"
+      <h2
+        className="h3 font-weight-bold mt-5 mb-3"
       >
         Certification Weeks
-      </h3>
+      </h2>
       <ListOfCertifications
         userData={
           Object {
@@ -179,11 +183,11 @@ exports[`<StaffViewConfirmationPage /> when claimant in progress 1`] = `
           }
         }
       />
-      <h3
-        className="mt-5"
+      <h2
+        className="h3 font-weight-bold mt-5 mb-3"
       >
         Retroactive Certification Application Details
-      </h3>
+      </h2>
       <p>
         The claimant is shown the following on the Retroactive Certification Application.
       </p>
@@ -211,9 +215,11 @@ exports[`<StaffViewConfirmationPage /> when claimant not started 1`] = `
       <h1>
         Retroactive Certification for Unemployment
       </h1>
-      <h3>
+      <h2
+        className="h3 font-weight-bold mb-3"
+      >
         Staff View
-      </h3>
+      </h2>
       <Button
         active={false}
         as={
@@ -238,11 +244,11 @@ exports[`<StaffViewConfirmationPage /> when claimant not started 1`] = `
       >
         Search New Claimant
       </Button>
-      <h3
-        className="mt-5"
+      <h2
+        className="h3 font-weight-bold mt-5 mb-3"
       >
         Certification Status
-      </h3>
+      </h2>
       <CertificationStatus />
       <Button
         active={false}
@@ -254,11 +260,11 @@ exports[`<StaffViewConfirmationPage /> when claimant not started 1`] = `
       >
         Print
       </Button>
-      <h3
-        className="mt-5"
+      <h2
+        className="h3 font-weight-bold mt-5 mb-3"
       >
         Certification Weeks
-      </h3>
+      </h2>
       <ListOfCertifications
         userData={
           Object {
@@ -278,11 +284,11 @@ exports[`<StaffViewConfirmationPage /> when claimant not started 1`] = `
           }
         }
       />
-      <h3
-        className="mt-5"
+      <h2
+        className="h3 font-weight-bold mt-5 mb-3"
       >
         Retroactive Certification Application Details
-      </h3>
+      </h2>
       <p>
         The claimant is shown the following on the Retroactive Certification Application.
       </p>

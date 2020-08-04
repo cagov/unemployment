@@ -125,7 +125,9 @@ function StaffViewConfirmationPage(props) {
       <main id="certification-page" className="pb-5">
         <div className="container p-4">
           <h1>{t("staff-view-confirmation.title")}</h1>
-          <h3>{t("staff-view-confirmation.header1")}</h3>
+          <h2 className="h3 font-weight-bold mb-3">
+            {t("staff-view-confirmation.header1")}
+          </h2>
           <Button
             variant="outline-secondary"
             className="text-dark bg-light"
@@ -135,7 +137,9 @@ function StaffViewConfirmationPage(props) {
             {t("staff-view-confirmation.button-search")}
           </Button>
 
-          <h3 className="mt-5">{t("staff-view-confirmation.header2")}</h3>
+          <h2 className="h3 font-weight-bold mt-5 mb-3">
+            {t("staff-view-confirmation.header2")}
+          </h2>
           <CertificationStatus />
           <Button
             variant="outline-secondary"
@@ -145,10 +149,14 @@ function StaffViewConfirmationPage(props) {
             {t("staff-view-confirmation.button-print")}
           </Button>
 
-          <h3 className="mt-5">{t("staff-view-confirmation.header3")}</h3>
+          <h2 className="h3 font-weight-bold mt-5 mb-3">
+            {t("staff-view-confirmation.header3")}
+          </h2>
           <ListOfCertifications userData={userData} />
 
-          <h3 className="mt-5">{t("staff-view-confirmation.header4")}</h3>
+          <h2 className="h3 font-weight-bold mt-5 mb-3">
+            {t("staff-view-confirmation.header4")}
+          </h2>
           <p>{t("staff-view-confirmation.p2")}</p>
           <ClaimantContent />
         </div>
