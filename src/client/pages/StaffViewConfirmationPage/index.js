@@ -32,8 +32,8 @@ function StaffViewConfirmationPage(props) {
     shortConfirmationNumber = confirmationNumber
       .substr(startIndex)
       .toUpperCase();
-  } else if (userData.lastLoginTime) {
-    // TODO(kalvin): make lastLoginTime real
+  } else if (userData.hasLoggedIn) {
+    // TODO(kalvin): make hasLoggedIn real
     status = statuses.IN_PROGRESS;
   } else {
     status = statuses.NOT_STARTED;
