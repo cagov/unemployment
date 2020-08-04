@@ -188,7 +188,7 @@ function EmployerQuestions(props) {
       })}
       {renderTextInput("grossEarnings", {
         className: "col-md-2",
-        pattern: "[$]?\\d+[.]?(\\d{2})?",
+        pattern: "[$]?(\\d+|\\d{1,3},\\d{3})[.]?(\\d{2})?",
         maxLength: 11,
       })}
       <Form.Group controlId={props.employerData.id + "reason-select"}>
