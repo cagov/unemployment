@@ -294,7 +294,7 @@
       "state": "Provincia",
       "help-state": "Indique el estado donde reside el empleador para el que trabajó esta semana.",
       "zipcode": "Código Postal",
-      "help-zipcode": "Indique el código postal del empleador para el que trabajó esta semana.",
+      "help-zipcode": "Indique el código postal del empleador para el que trabajó esta semana. <p>Ingréselo en este formato ##### o #####-####.</p>",
       "lastDateWorked": "Última Fecha Trabajada",
       "help-lastDateWorked": "Proporcione el último día que trabajó durante la semana indicada para este empleador.",
       "month": "Mes",

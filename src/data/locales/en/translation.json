@@ -296,7 +296,7 @@
       "state": "State",
       "help-state": "The employer's state where work was performed for this week.",
       "zipcode": "ZIP",
-      "help-zipcode": "The employer's ZIP code where work was performed for this week.",
+      "help-zipcode": "The employer's ZIP code where work was performed for this week. <p>Enter as ##### or #####-####.</p>",
       "lastDateWorked": "Last Date Worked",
       "help-lastDateWorked": "The last day worked in this certification week.",
       "month": "Month",
