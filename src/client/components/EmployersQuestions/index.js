@@ -62,7 +62,9 @@ function EmployerQuestions(props) {
     return (
       <Form.Group controlId={props.employerData.id + name} className="mb-3">
         <Form.Label>{t(tk(name))}</Form.Label>
-        <Form.Text className="help-text">{t(tk(`help-${name}`))}</Form.Text>
+        <Form.Text className="help-text">
+          <Trans t={t} i18nKey={tk(`help-${name}`)} />
+        </Form.Text>
         <Form.Control
           className={options.className}
           type="text"
