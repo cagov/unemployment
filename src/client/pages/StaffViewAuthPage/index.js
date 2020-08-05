@@ -8,7 +8,7 @@ import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Alert from "react-bootstrap/Alert";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import AUTH_STRINGS from "../../../data/authStrings";
 import routes from "../../../data/routes";
 import { userDataPropType, setUserDataPropType } from "../../commonPropTypes";
@@ -16,6 +16,7 @@ import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import weeksCompleted from "../../../utils/checkFormData";
 import { fromIndexToPathString } from "../../../utils/retroCertsWeeks";
+import Inputmask from "inputmask";
 import { autoScroll, TOP, BEHAVIOR } from "../../../utils/autoScroll";
 
 function StaffViewAuthPage(props) {
@@ -126,6 +127,13 @@ function StaffViewAuthPage(props) {
   const handleChange = (event, setter) => {
     setter(event.target.value);
   };
+
+  useEffect(() => {
+    const ssnRef = document.getElementById("formSsn");
+    // Inputmask.remove(ssnRef);
+    Inputmask("ssn", { placeholder: "#" }).mask(ssnRef);
+    ssnRef.type = "text";
+  }, []);
 
   const genericValidationError = (
     <Row>
