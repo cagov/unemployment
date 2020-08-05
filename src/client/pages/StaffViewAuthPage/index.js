@@ -130,7 +130,6 @@ function StaffViewAuthPage(props) {
 
   useEffect(() => {
     const ssnRef = document.getElementById("formSsn");
-    // Inputmask.remove(ssnRef);
     Inputmask("ssn", { placeholder: "#" }).mask(ssnRef);
     ssnRef.type = "text";
   }, []);
