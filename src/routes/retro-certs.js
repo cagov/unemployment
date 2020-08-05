@@ -86,6 +86,7 @@ function createRouter() {
               weeksCompleted(formRecord.formData, userRecord.programPlan) &&
             postJson.completed === true
           ) {
+            formRecord.completedAt = Date.now();
             formRecord.confirmationNumber = uuidv4();
             responseJson.confirmationNumber = formRecord.confirmationNumber;
           }
