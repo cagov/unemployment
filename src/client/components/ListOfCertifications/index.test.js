@@ -13,7 +13,6 @@ describe("<ListOfCertifications />", () => {
     };
 
     const wrapper = renderNonTransContent(Component, "ListOfCertifications", {
-      header: "Certifications Submitted",
       userData: {
         formData: [weekOfAnswers, weekOfAnswers, weekOfAnswers],
         weeksToCertify: [1, 2, 3],

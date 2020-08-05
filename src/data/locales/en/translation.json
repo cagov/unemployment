@@ -209,6 +209,12 @@
     "hide-ssn": "Hide SSN",
     "required-text": "* Indicates required text"
   },
+  "staff-view-login": {
+    "header1": "Staff View",
+    "instructions": "Enter claimant information below.",
+    "invalid-user-error": "This claimant is not found in the database and does not need to retroactively certify.",
+    "submit": "Search"
+  },
   "retrocerts-week-list-item": "<strong>Week {{weekForUser}}</strong>: Sunday, {{startDate}} – Saturday, {{endDate}}",
   "retrocerts-weeks": {
     "title": "Retroactive Certification for Unemployment",
@@ -339,7 +345,7 @@
     "ack-list-item-3": "I declare under penalty of perjury that I am a US Citizen or National; or an Alien in satisfactory immigration status and permitted to work by the United States Citizenship and Immigration Service.",
     "ack-list-item-4": "I understand when submitting my request for benefits my submission is considered the same as my written signature.",
     "ack-list-pua-item-1": "I declare under penalty of perjury that the information I have provided is true and correct to the best of my knowledge or belief, including the reason I am unemployed due to the COVID-19 pandemic.",
-    "ack-list-pua-item-2": "I understand that intentional misrepresentation in self-certifying that I fall within one or more of the  COVID-19 categories is fraud and that I may be subject to criminal prosecution if I have been found to have committed fraud to receive Pandemic Unemployment Assistance benefits.",
+    "ack-list-pua-item-2": "I understand that intentional misrepresentation in self-certifying that I fall within one or more of the COVID-19 categories is fraud and that I may be subject to criminal prosecution if I have been found to have committed fraud to receive Pandemic Unemployment Assistance benefits.",
     "ack-list-pua-item-3": "I understand when submitting my request for benefits my submission is considered the same as my written signature.",
     "ack-label": "You must indicate your acceptance of the statement by checking the box before your certification can be submitted.",
     "submit-p1": "You are about to submit your retroactive certifications. You will <strong>not</strong> be able to change your answers once you select <strong>Submit</strong>.",
@@ -363,6 +369,33 @@
     "aria-show-details": "Show details for this week",
     "header3": "Next Steps",
     "p2": "If you are still unemployed, continue to certify for benefits every two weeks. The fastest way is to use <2>UI Online</2>."
+  },
+  "staff-view-confirmation": {
+    "title": "Retroactive Certification for Unemployment",
+    "header1": "Staff View",
+    "button-search": "Search New Claimant",
+    "header2": "Certification Status",
+    "not-started": {
+      "status": "Not started",
+      "p1": "Claimant Xaybz has never logged in and has not begun retroactive certification."
+    },
+    "in-progress": {
+      "status": "In progress",
+      "p1": "Claimant Xaybz has logged in and begun retroactive certification."
+    },
+    "completed": {
+      "status": "Completed",
+      "last-name": "Claimant Last Name: ",
+      "confirmation-number": "Confirmation Number: ",
+      "p1": "Note: The claimant may have seen or saved a much longer confirmation number in the past. If so, it was <strong>{{confirmationNumber}}</strong>. If they log in now, they will see <strong>{{shortConfirmationNumber}}</strong> instead, which is the last 7 characters of the original number."
+    },
+    "button-print": "Print",
+    "header3": "Certification Weeks",
+    "button-show-all": "Show all",
+    "button-hide-all": "Hide all",
+    "aria-show-details": "Show details for this week",
+    "header4": "Retroactive Certification Application Details",
+    "p2": "The claimant is shown the following on the Retroactive Certification Application."
   },
   "generic-validation-error-message": "There are one or more errors on this page. Review and correct them to continue. Complete all fields and try again.",
   "timeout-modal": {

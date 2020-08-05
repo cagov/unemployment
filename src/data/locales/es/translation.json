@@ -209,6 +209,12 @@
     "hide-ssn": "Ocultar SSN",
     "required-text": "*Indica un campo requerido que falta completar"
   },
+  "staff-view-login": {
+    "header1": "Staff View",
+    "instructions": "Enter claimant information below.",
+    "invalid-user-error": "This claimant is not found in the database and does not need to retroactively certify.",
+    "submit": "Search"
+  },
   "retrocerts-week-list-item": "<strong>Semana {{weekForUser}}</strong>: Domingo, {{startDate}} – Sábado, {{endDate}}",
   "retrocerts-weeks": {
     "title": "Certificación retroactiva para el Seguro de Desempleo",
@@ -363,10 +369,37 @@
     "header3": "Siguientes pasos",
     "p2": "Si todavía está desempleado, continúe realizando la certificación para los beneficios cada dos semanas. La manera más rápida es a través de <2>UI Online</2>."
   },
+  "staff-view-confirmation": {
+    "title": "Retroactive Certification for Unemployment",
+    "header1": "Staff View",
+    "button-search": "Search New Claimant",
+    "header2": "Certification Status",
+    "not-started": {
+      "status": "Not started",
+      "p1": "Claimant Xaybz has never logged in and has not begun retroactive certification."
+    },
+    "in-progress": {
+      "status": "In progress",
+      "p1": "Claimant Xaybz has logged in and begun retroactive certification."
+    },
+    "completed": {
+      "status": "Completed",
+      "last-name": "Claimant Last Name: ",
+      "confirmation-number": "Confirmation Number: ",
+      "p1": "Note: The claimant may have seen or saved a much longer confirmation number in the past. If so, it was <strong>{{confirmationNumber}}</strong>. If they log in now, they will see <strong>{{shortConfirmationNumber}}</strong> instead, which is the last 7 characters of the original number."
+    },
+    "button-print": "Print",
+    "header3": "Certification Weeks",
+    "button-show-all": "Show all",
+    "button-hide-all": "Hide all",
+    "aria-show-details": "Show details for this week",
+    "header4": "Retroactive Certification Application Details",
+    "p2": "The claimant is shown the following on the Retroactive Certification Application."
+  },
   "generic-validation-error-message": "Hay más de un error en esta página. Revise y corrija los errores para continuar. Complete todo los campos e intente de nuevo.",
   "timeout-modal": {
     "header": "Su sesión cerrara pronto",
     "warning": "Para proteger su información, se cerrará su sesión en 5 minutos si no continúa teniendo actividad en su cuenta. Se perderá cualquier cambio que no haya sido guardado.",
     "button": "Continuar actividad en su cuenta"
-  }  
+  }
 }

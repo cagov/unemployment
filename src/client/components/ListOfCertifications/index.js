@@ -1,7 +1,6 @@
 import Button from "react-bootstrap/Button";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import PropTypes from "prop-types";
 import { userDataPropType } from "../../commonPropTypes";
 import ListOfWeeksWithDetail from "../../components/ListOfWeeksWithDetail";
 import programPlan from "../../../data/programPlan";
@@ -10,7 +9,7 @@ import AccordionItem from "../../components/AccordionItem";
 function ListOfCertifications(props) {
   const { t } = useTranslation();
 
-  const { header, userData } = props;
+  const { userData } = props;
 
   const numAccordions = userData.weeksToCertify.length + 1; // add 1 for Acknowledgement
 
@@ -64,7 +63,6 @@ function ListOfCertifications(props) {
 
   return (
     <React.Fragment>
-      <h2 className="mt-5">{header}</h2>
       <Button
         variant="outline-secondary"
         className="text-dark bg-light mb-3"
@@ -90,7 +88,6 @@ function ListOfCertifications(props) {
 }
 
 ListOfCertifications.propTypes = {
-  header: PropTypes.string.isRequired,
   userData: userDataPropType,
 };
 
