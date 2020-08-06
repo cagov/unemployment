@@ -150,12 +150,11 @@ function RetroCertsAuthPage(props) {
 
   useEffect(() => {
     const ssnRef = document.getElementById("formSsn");
+    Inputmask.remove(ssnRef);
     if (showSsn) {
-      Inputmask.remove(ssnRef);
       Inputmask("ssn", { placeholder: "#" }).mask(ssnRef);
       ssnRef.type = "text";
     } else {
-      Inputmask.remove(ssnRef);
       Inputmask("9", { repeat: "9", jitMasking: true }).mask(ssnRef);
       ssnRef.type = "password";
       ssnRef.placeholder = "###-##-####";
