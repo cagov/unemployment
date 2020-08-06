@@ -195,7 +195,7 @@ function RetroCertsCertificationPage(props) {
   return (
     <div id="overflow-wrapper">
       <Header />
-      <main id="certification-page" className="pb-5 questions">
+      <main id="certification-page">
         <div className="container p-4">
           <h1 ref={headingElement}>
             {t("retrocerts-certification.question-page-title")}
@@ -207,7 +207,7 @@ function RetroCertsCertificationPage(props) {
             </Alert>
           )}
           {showGenericValidationError && validated && genericValidationError}
-          <h2 className="h3 font-weight-bold mt-5">
+          <h2 className="h3 font-weight-bold mt-4">
             <Trans
               t={t}
               i18nKey="retrocerts-certification.form-header"
