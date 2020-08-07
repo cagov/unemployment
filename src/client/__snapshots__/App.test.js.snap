@@ -17,6 +17,30 @@ exports[`<App /> renders application with retro-certs 1`] = `
       component={[Function]}
       path="/guide"
     />
+    <StaffViewRoute
+      pageComponent={[Function]}
+      pageProps={
+        Object {
+          "setUserData": [Function],
+          "userData": Object {
+            "status": "not-logged-in",
+          },
+        }
+      }
+      path="/retroactive-certification/staff-view"
+    />
+    <StaffViewRoute
+      pageComponent={[Function]}
+      pageProps={
+        Object {
+          "setUserData": [Function],
+          "userData": Object {
+            "status": "not-logged-in",
+          },
+        }
+      }
+      path="/retroactive-certification/staff-view/claimant-info"
+    />
     <RetroCertsRoute
       pageComponent={[Function]}
       pageProps={
@@ -91,6 +115,30 @@ exports[`<App /> renders application without retro-certs 1`] = `
     <Route
       component={[Function]}
       path="/guide"
+    />
+    <StaffViewRoute
+      pageComponent={[Function]}
+      pageProps={
+        Object {
+          "setUserData": [Function],
+          "userData": Object {
+            "status": "not-logged-in",
+          },
+        }
+      }
+      path="/retroactive-certification/staff-view"
+    />
+    <StaffViewRoute
+      pageComponent={[Function]}
+      pageProps={
+        Object {
+          "setUserData": [Function],
+          "userData": Object {
+            "status": "not-logged-in",
+          },
+        }
+      }
+      path="/retroactive-certification/staff-view/claimant-info"
     />
     <RetroCertsRoute
       pageComponent={[Function]}

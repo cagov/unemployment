@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StaffViewRoute /> basic route 1`] = `
+<Route
+  exact={true}
+  path="/path"
+>
+  <TestComponent />
+</Route>
+`;
+
+exports[`<StaffViewRoute /> route needing user data 1`] = `
+<Route
+  computedMatch={Object {}}
+  exact={true}
+  path="/retroactive-certification/staff-view/claimant-info"
+>
+  <TestComponent
+    setUserData={[Function]}
+    userData={
+      Object {
+        "weeksToCertify": Array [
+          0,
+        ],
+      }
+    }
+  />
+</Route>
+`;
+
+exports[`<StaffViewRoute /> route needing user data, without user data 1`] = `
+<Route
+  computedMatch={Object {}}
+  exact={true}
+  path="/retroactive-certification/staff-view/claimant-info"
+>
+  <Redirect
+    push={true}
+    to="/retroactive-certification/staff-view"
+  />
+</Route>
+`;
