@@ -36,6 +36,7 @@
         "core-js": "^3.6.5",
         "dotenv": "^8.2.0",
         "express": "^4.17.1",
+        "express-ipfilter": "^1.1.2",
         "fflip": "^4.0.0",
         "helmet": "^3.21.2",
         "i18next-browser-languagedetector": "^4.1.1",

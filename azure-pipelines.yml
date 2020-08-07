@@ -26,6 +26,7 @@ steps:
     env:
       COSMOS_DB_KEY: ${COSMOS_DB_KEY}
       RECAPTCHA_SECRET: ${RECAPTCHA_SECRET}
+      STAFF_VIEW_ALLOWED_IPS: ${STAFF_VIEW_ALLOWED_IPS}
     displayName: "npm build"
 
   - task: ArchiveFiles@2
