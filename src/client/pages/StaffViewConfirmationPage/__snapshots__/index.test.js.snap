@@ -633,8 +633,7 @@ exports[`<StaffViewConfirmationPage /> when claimant completed 1`] = `
             Completed
           </span>
           <p>
-            Claimant Last Name: 
-             + userData.lastName
+            Claimant Last Name: Taylor
             <br />
             Confirmation Number: 0364833
           </p>

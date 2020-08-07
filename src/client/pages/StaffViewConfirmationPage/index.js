@@ -75,8 +75,8 @@ function StaffViewConfirmationPage(props) {
               {t("staff-view-confirmation.completed.status")}
             </span>
             <p>
-              {t("staff-view-confirmation.completed.last-name")} +
-              userData.lastName
+              {t("staff-view-confirmation.completed.last-name") +
+                userData.lastName}
               <br />
               {t("staff-view-confirmation.completed.confirmation-number") +
                 shortConfirmationNumber}
