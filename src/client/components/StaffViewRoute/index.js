@@ -1,5 +1,3 @@
-// This file is identical to RetroCertsRoute other than the section
-// near `if (isProdEnvironment)` which restricts access to Staff View
 import PropTypes from "prop-types";
 import { Route, Redirect } from "react-router-dom";
 import React from "react";
