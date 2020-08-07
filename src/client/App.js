@@ -55,7 +55,6 @@ export default function App() {
             userData: retroCertsUserData,
             setUserData: setRetroCertsUserData,
           }}
-          requiresAuthentication
         />
         <RetroCertsRoute
           path={routes.retroCertsWeeksToCertify}
