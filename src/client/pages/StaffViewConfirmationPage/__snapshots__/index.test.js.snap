@@ -65,22 +65,15 @@ exports[`<StaffViewConfirmationPage /> when claimant completed 1`] = `
       >
         Certification Weeks
       </h2>
-      <ListOfCertifications
-        userData={
-          Object {
-            "confirmationNumber": "33a6f278-eaa3-41c5-8d08-276fa0364833",
-            "programPlan": Array [
-              "UI full time",
-            ],
-            "status": "ok",
-            "weeksToCertify": Array [
-              0,
-              1,
-              2,
-              5,
-              6,
-            ],
-          }
+      <ListOfWeeks
+        weeksToCertify={
+          Array [
+            0,
+            1,
+            2,
+            5,
+            6,
+          ]
         }
       />
       <h2
@@ -165,22 +158,15 @@ exports[`<StaffViewConfirmationPage /> when claimant in progress 1`] = `
       >
         Certification Weeks
       </h2>
-      <ListOfCertifications
-        userData={
-          Object {
-            "hasLoggedIn": true,
-            "programPlan": Array [
-              "UI full time",
-            ],
-            "status": "ok",
-            "weeksToCertify": Array [
-              0,
-              1,
-              2,
-              5,
-              6,
-            ],
-          }
+      <ListOfWeeks
+        weeksToCertify={
+          Array [
+            0,
+            1,
+            2,
+            5,
+            6,
+          ]
         }
       />
       <h2
@@ -265,23 +251,15 @@ exports[`<StaffViewConfirmationPage /> when claimant not started 1`] = `
       >
         Certification Weeks
       </h2>
-      <ListOfCertifications
-        userData={
-          Object {
-            "confirmationNumber": "CONFIRMATION_NUMBER",
-            "hasLoggedIn": false,
-            "programPlan": Array [
-              "PUA full time",
-            ],
-            "status": "ok",
-            "weeksToCertify": Array [
-              0,
-              1,
-              2,
-              5,
-              6,
-            ],
-          }
+      <ListOfWeeks
+        weeksToCertify={
+          Array [
+            0,
+            1,
+            2,
+            5,
+            6,
+          ]
         }
       />
       <h2

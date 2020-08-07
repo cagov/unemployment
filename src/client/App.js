@@ -41,16 +41,16 @@ export default function App() {
         </Route>
         <Route path="/guide" component={GuidePage} />
         <StaffViewRoute
-          path={routes.staffViewAuth}
-          pageComponent={StaffViewAuthPage}
+          path={routes.staffViewConfirmation}
+          pageComponent={StaffViewConfirmationPage}
           pageProps={{
             userData: retroCertsUserData,
             setUserData: setRetroCertsUserData,
           }}
         />
         <StaffViewRoute
-          path={routes.staffViewConfirmation}
-          pageComponent={StaffViewConfirmationPage}
+          path={routes.staffViewAuth}
+          pageComponent={StaffViewAuthPage}
           pageProps={{
             userData: retroCertsUserData,
             setUserData: setRetroCertsUserData,

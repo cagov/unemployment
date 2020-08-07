@@ -14,8 +14,6 @@ import routes from "../../../data/routes";
 import { userDataPropType, setUserDataPropType } from "../../commonPropTypes";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
-import weeksCompleted from "../../../utils/checkFormData";
-import { fromIndexToPathString } from "../../../utils/retroCertsWeeks";
 import Inputmask from "inputmask";
 import { autoScroll, TOP, BEHAVIOR } from "../../../utils/autoScroll";
 
@@ -91,35 +89,7 @@ function StaffViewAuthPage(props) {
       .then((response) => response.json())
       .then((data) => {
         setUserData(data);
-        if (data.authToken) {
-          // Session storage is destroyed when the tab is closed! That's a bit weird.
-          // If we want to allow the user to use multiple tabs, we could sync the
-          // value across tabs:
-          // https://medium.com/@marciomariani/sharing-sessionstorage-between-tabs-5b6f42c6348c
-          sessionStorage.setItem(AUTH_STRINGS.authToken, data.authToken);
-
-          if (data.confirmationNumber) {
-            // The user has already completed the retro-certs process.
-            history.push(routes.retroCertsConfirmation, { isReturning: true });
-          } else {
-            const completedWeeks = weeksCompleted(
-              data.formData,
-              data.programPlan
-            );
-            if (completedWeeks === 0) {
-              history.push(routes.retroCertsWeeksToCertify);
-            } else {
-              history.push(
-                `${routes.retroCertsCertify}/${fromIndexToPathString(
-                  data.weeksToCertify[
-                    Math.min(completedWeeks, data.weeksToCertify.length - 1)
-                  ]
-                )}`,
-                { returningUser: true }
-              );
-            }
-          }
-        }
+        history.push(routes.staffViewConfirmation);
       })
       .catch((error) => console.error(error));
   };

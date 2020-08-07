@@ -7,6 +7,7 @@ import { userDataPropType } from "../../commonPropTypes";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import ListOfCertifications from "../../components/ListOfCertifications";
+import ListOfWeeks from "../../components/ListOfWeeks";
 
 function StaffViewConfirmationPage(props) {
   const { t } = useTranslation();
@@ -31,10 +32,11 @@ function StaffViewConfirmationPage(props) {
     shortConfirmationNumber = confirmationNumber
       .substr(startIndex)
       .toUpperCase();
-  } else if (userData.hasLoggedIn) {
-    // TODO(kalvin): make hasLoggedIn real
+  } else if (userData.formData && userData.formData.authToken) {
+    // user has logged in before
     status = statuses.IN_PROGRESS;
   } else {
+    // user has never logged in
     status = statuses.NOT_STARTED;
   }
 
@@ -72,9 +74,9 @@ function StaffViewConfirmationPage(props) {
             <span className="badge completed">
               {t("staff-view-confirmation.completed.status")}
             </span>
-            {/* TODO(kalvin): make last name real */}
             <p>
-              {t("staff-view-confirmation.completed.last-name")}
+              {t("staff-view-confirmation.completed.last-name")} +
+              userData.lastName
               <br />
               {t("staff-view-confirmation.completed.confirmation-number") +
                 shortConfirmationNumber}
@@ -115,6 +117,8 @@ function StaffViewConfirmationPage(props) {
     );
   }
 
+  const userHasCompletedCertification =
+    userData.formData && userData.formData.confirmationNumber;
   return (
     <div id="overflow-wrapper">
       <Header />
@@ -148,7 +152,11 @@ function StaffViewConfirmationPage(props) {
           <h2 className="h3 font-weight-bold mt-5 mb-3">
             {t("staff-view-confirmation.header3")}
           </h2>
-          <ListOfCertifications userData={userData} />
+          {userHasCompletedCertification ? (
+            <ListOfCertifications userData={userData} />
+          ) : (
+            <ListOfWeeks weeksToCertify={userData.weeksToCertify} />
+          )}
 
           <h2 className="h3 font-weight-bold mt-5 mb-3">
             {t("staff-view-confirmation.header4")}
