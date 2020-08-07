@@ -18,7 +18,7 @@ describe("<StaffViewRoute />", () => {
 
   it("route needing user data", async () => {
     const wrapper = renderNonTransContent(Component, "StaffViewRoute", {
-      path: "/retroactive-certification/staff-view/claimant-info",
+      path: "/retroactive-certification/staff-view/claimant-status",
       pageComponent: TestComponent,
       pageProps: {
         userData: { weeksToCertify: [0] },
@@ -32,7 +32,7 @@ describe("<StaffViewRoute />", () => {
 
   it("route needing user data, without user data", async () => {
     const wrapper = renderNonTransContent(Component, "StaffViewRoute", {
-      path: "/retroactive-certification/staff-view/claimant-info",
+      path: "/retroactive-certification/staff-view/claimant-status",
       pageComponent: TestComponent,
       pageProps: {
         userData: {},

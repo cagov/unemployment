@@ -27,7 +27,7 @@ exports[`<App /> renders application with retro-certs 1`] = `
           },
         }
       }
-      path="/retroactive-certification/staff-view/claimant-info"
+      path="/retroactive-certification/staff-view/claimant-status"
     />
     <StaffViewRoute
       pageComponent={[Function]}
@@ -126,7 +126,7 @@ exports[`<App /> renders application without retro-certs 1`] = `
           },
         }
       }
-      path="/retroactive-certification/staff-view/claimant-info"
+      path="/retroactive-certification/staff-view/claimant-status"
     />
     <StaffViewRoute
       pageComponent={[Function]}
