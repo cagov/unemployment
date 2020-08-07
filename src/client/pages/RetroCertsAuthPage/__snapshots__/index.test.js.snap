@@ -17,7 +17,9 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
       <LanguageSelector
         className="mt-3 mb-4"
       />
-      <p>
+      <p
+        className="mt-3"
+      >
         You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits you received for weeks of your claim early in the pandemic through the week ending May 9, 2020. The exact dates you are required to certify for will depend on your specific claim history.
       </p>
       <p>
@@ -227,7 +229,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
           noGutters={false}
         >
           <FormGroup
-            className="col-md-6"
+            className="col-md-6 mt-3"
             controlId="formReCaptcha"
           >
             <AsyncScriptLoader(ReCAPTCHA)
@@ -281,7 +283,9 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
       <LanguageSelector
         className="mt-3 mb-4"
       />
-      <p>
+      <p
+        className="mt-3"
+      >
         You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits you received for weeks of your claim early in the pandemic through the week ending May 9, 2020. The exact dates you are required to certify for will depend on your specific claim history.
       </p>
       <p>
@@ -491,7 +495,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
           noGutters={false}
         >
           <FormGroup
-            className="col-md-6"
+            className="col-md-6 mt-3"
             controlId="formReCaptcha"
           >
             <AsyncScriptLoader(ReCAPTCHA)
@@ -603,7 +607,9 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
           </Alert>
         </div>
       </Row>
-      <p>
+      <p
+        className="mt-3"
+      >
         You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits you received for weeks of your claim early in the pandemic through the week ending May 9, 2020. The exact dates you are required to certify for will depend on your specific claim history.
       </p>
       <p>
@@ -813,7 +819,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
           noGutters={false}
         >
           <FormGroup
-            className="col-md-6"
+            className="col-md-6 mt-3"
             controlId="formReCaptcha"
           >
             <AsyncScriptLoader(ReCAPTCHA)
@@ -867,7 +873,9 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
       <LanguageSelector
         className="mt-3 mb-4"
       />
-      <p>
+      <p
+        className="mt-3"
+      >
         You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits you received for weeks of your claim early in the pandemic through the week ending May 9, 2020. The exact dates you are required to certify for will depend on your specific claim history.
       </p>
       <p>
@@ -1077,7 +1085,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
           noGutters={false}
         >
           <FormGroup
-            className="col-md-6"
+            className="col-md-6 mt-3"
             controlId="formReCaptcha"
           >
             <AsyncScriptLoader(ReCAPTCHA)
