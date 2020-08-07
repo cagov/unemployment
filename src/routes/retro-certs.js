@@ -11,13 +11,11 @@ function createRouter() {
 
   async function staffViewAuthStatus(postJson, responseJson) {
     responseJson.status = AUTH_STRINGS.statusCode.userNotFound;
-    const [userRecord] = await Promise.all([
-      cosmos.getUserByNameDobSsn(
-        postJson.lastName || "",
-        postJson.dob,
-        postJson.ssn
-      ),
-    ]);
+    const userRecord = await cosmos.getUserByNameDobSsn(
+      postJson.lastName || "",
+      postJson.dob,
+      postJson.ssn
+    );
     if (!userRecord) {
       console.log("failed staff view login");
       return responseJson;

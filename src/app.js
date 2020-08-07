@@ -86,15 +86,23 @@ function init() {
     })
   );
 
-  app.use(
-    AUTH_STRINGS.staffView.login,
-    ipfilter(
-      process.env.STAFF_VIEW_ALLOWED_IPS
-        ? process.env.STAFF_VIEW_ALLOWED_IPS.split(" ")
-        : [],
-      { mode: "allow" }
-    )
-  );
+  const clientIp = function (req, res) {
+    return req.headers["x-forwarded-for"]
+      ? req.headers["x-forwarded-for"].split(",")[0]
+      : "";
+  };
+
+  if (process.env.NODE_ENV !== "development") {
+    app.use(
+      AUTH_STRINGS.staffView.login,
+      ipfilter(
+        process.env.STAFF_VIEW_ALLOWED_IPS
+          ? process.env.STAFF_VIEW_ALLOWED_IPS.split(" ")
+          : [],
+        { mode: "allow", detectIp: clientIp }
+      )
+    );
+  }
 
   // Setup our routes
   app.use("/", createRouter());
