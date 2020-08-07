@@ -75,7 +75,7 @@ function StaffViewAuthPage(props) {
     const month = dobMonth.length < 2 ? "0" + dobMonth : dobMonth;
     const day = dobDay.length < 2 ? "0" + dobDay : dobDay;
 
-    fetch(AUTH_STRINGS.apiPath.login, {
+    fetch(AUTH_STRINGS.staffView.login, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

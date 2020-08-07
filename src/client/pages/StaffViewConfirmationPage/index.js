@@ -32,7 +32,7 @@ function StaffViewConfirmationPage(props) {
     shortConfirmationNumber = confirmationNumber
       .substr(startIndex)
       .toUpperCase();
-  } else if (userData.formData && userData.formData.authToken) {
+  } else if (userData.authToken) {
     // user has logged in before
     status = statuses.IN_PROGRESS;
   } else {
@@ -117,8 +117,6 @@ function StaffViewConfirmationPage(props) {
     );
   }
 
-  const userHasCompletedCertification =
-    userData.formData && userData.formData.confirmationNumber;
   return (
     <div id="overflow-wrapper">
       <Header />
@@ -152,7 +150,7 @@ function StaffViewConfirmationPage(props) {
           <h2 className="h3 font-weight-bold mt-5 mb-3">
             {t("staff-view-confirmation.header3")}
           </h2>
-          {userHasCompletedCertification ? (
+          {userData.confirmationNumber ? (
             <ListOfCertifications userData={userData} />
           ) : (
             <ListOfWeeks weeksToCertify={userData.weeksToCertify} />
