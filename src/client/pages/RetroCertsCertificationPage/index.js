@@ -195,7 +195,7 @@ function RetroCertsCertificationPage(props) {
   return (
     <div id="overflow-wrapper">
       <Header />
-      <main id="certification-page">
+      <main id="certification-page" className="questions">
         <div className="container p-4">
           <h1 ref={headingElement}>
             {t("retrocerts-certification.question-page-title")}

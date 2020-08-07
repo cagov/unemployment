@@ -6,6 +6,7 @@ exports[`<RetroCertsCertificationPage /> Certify for 2nd week of 2 1`] = `
 >
   <Header />
   <main
+    className="questions"
     id="certification-page"
   >
     <div
@@ -246,6 +247,7 @@ exports[`<RetroCertsCertificationPage /> Certify for one week of 2 1`] = `
 >
   <Header />
   <main
+    className="questions"
     id="certification-page"
   >
     <div
