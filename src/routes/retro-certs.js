@@ -24,7 +24,7 @@ function createRouter() {
     }
 
     console.log("staff view login", userRecord.id);
-    userRecord.lastStaffLogin = Date.now();
+    userRecord.staffLastViewedAt = Date.now();
     await cosmos.updateUserData(userRecord);
 
     responseJson.status = AUTH_STRINGS.statusCode.ok;
