@@ -9,6 +9,37 @@ const weeksCompleted = require("../utils/checkFormData");
 function createRouter() {
   const router = Router();
 
+  async function staffViewAuthStatus(postJson, responseJson) {
+    responseJson.status = AUTH_STRINGS.statusCode.userNotFound;
+    const userRecord = await cosmos.getUserByNameDobSsn(
+      postJson.lastName || "",
+      postJson.dob,
+      postJson.ssn
+    );
+    if (!userRecord) {
+      console.log("failed staff view login");
+      return responseJson;
+    }
+
+    console.log("staff view login", userRecord.id);
+    userRecord.staffLastViewedAt = Date.now();
+    await cosmos.updateUserData(userRecord);
+
+    responseJson.status = AUTH_STRINGS.statusCode.ok;
+    responseJson.weeksToCertify = userRecord.weeksToCertify;
+    responseJson.programPlan = userRecord.programPlan;
+    responseJson.lastName = postJson.lastName;
+
+    const formRecord = await cosmos.getFormDataByUserId(userRecord.id);
+
+    if (formRecord) {
+      responseJson.formData = formRecord.formData;
+      responseJson.confirmationNumber = formRecord.confirmationNumber;
+    }
+
+    return responseJson;
+  }
+
   async function authStatus(postJson, responseJson) {
     responseJson.status = AUTH_STRINGS.statusCode.userNotFound;
 
@@ -103,6 +134,19 @@ function createRouter() {
     }
     return responseJson;
   }
+
+  router.post(AUTH_STRINGS.staffView.login, async (req, res) => {
+    try {
+      const responseJson = await staffViewAuthStatus(req.body, {});
+      const httpStatus =
+        responseJson.status === AUTH_STRINGS.statusCode.ok ? 200 : 401;
+
+      res.status(httpStatus).type("json").send(JSON.stringify(responseJson));
+    } catch (e) {
+      console.error("Error during staff-view/api/login", e);
+      res.status(500).send();
+    }
+  });
 
   router.post(AUTH_STRINGS.apiPath.login, async (req, res) => {
     try {

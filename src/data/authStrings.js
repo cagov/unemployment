@@ -11,6 +11,9 @@ const AUTH_STRINGS = {
     data: retroCertsBasePath + "/api/data",
     save: retroCertsBasePath + "/api/save",
   },
+  staffView: {
+    login: retroCertsBasePath + "/staff-view/api/login",
+  },
   statusCode: {
     ok: "ok",
     notLoggedIn: "not-logged-in",
