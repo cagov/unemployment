@@ -49,6 +49,17 @@ function getContainer(containerName) {
   return container;
 }
 
+async function updateUserData(item) {
+  const container = await getContainer(usersContainerName);
+
+  try {
+    const user = await container.item(item.id).replace(item);
+    return user;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
 async function upsertFormData(item) {
   const container = await getContainer(formsContainerName);
 
@@ -135,8 +146,10 @@ async function getFormDataByUserIdWithNewAuthToken(userId) {
 module.exports = {
   createRetroCertDatabaseIfNeeded,
   getFormDataByAuthToken,
+  getFormDataByUserId,
   getUserByNameDobSsn,
   getUserById,
   getFormDataByUserIdWithNewAuthToken,
+  updateUserData,
   upsertFormData,
 };

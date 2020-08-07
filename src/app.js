@@ -3,8 +3,10 @@
  *  middleware, routes, and authentication.
  */
 const express = require("express");
+const ipfilter = require("express-ipfilter").IpFilter;
 const helmet = require("helmet");
 const createRouter = require("./routes");
+const AUTH_STRINGS = require("./data/authStrings");
 const fflip = require("fflip");
 const fflipConfig = require("./data/fflipConfig");
 const { createRetroCertDatabaseIfNeeded } = require("./data/cosmos");
@@ -82,6 +84,11 @@ function init() {
         }
       },
     })
+  );
+
+  app.use(
+    AUTH_STRINGS.staffView.login,
+    ipfilter(process.env.STAFF_VIEW_ALLOWED_IPS.split(" "), { mode: "allow" })
   );
 
   // Setup our routes
