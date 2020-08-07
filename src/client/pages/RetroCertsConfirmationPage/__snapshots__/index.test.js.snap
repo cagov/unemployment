@@ -12,7 +12,6 @@ exports[`<RetroCertsConfirmationPage /> with confirmation number 1`] = `
 >
   <Header />
   <main
-    className="pb-5"
     id="certification-page"
   >
     <div
@@ -25,7 +24,7 @@ exports[`<RetroCertsConfirmationPage /> with confirmation number 1`] = `
         className="mt-3 mb-4"
       />
       <Alert
-        className="mt-5"
+        className="mt-4"
         closeLabel="Close alert"
         show={true}
         transition={

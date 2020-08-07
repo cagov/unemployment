@@ -52,11 +52,11 @@ function RetroCertsConfirmationPage(props) {
   return (
     <div id="overflow-wrapper">
       <Header />
-      <main id="certification-page" className="pb-5">
+      <main id="certification-page">
         <div className="container p-4">
           <h1>{t("retrocerts-confirmation.title")}</h1>
           <LanguageSelector className="mt-3 mb-4" />
-          <Alert variant="success" className="mt-5">
+          <Alert variant="success" className="mt-4">
             <img
               className="checkmark"
               src="/images/check-circle-fill.svg"

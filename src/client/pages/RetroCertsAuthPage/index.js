@@ -191,7 +191,7 @@ function RetroCertsAuthPage(props) {
           <LanguageSelector className="mt-3 mb-4" />
           {showGenericValidationError && validated && genericValidationError}
           {errorTransKey === "retrocert-login.session-timed-out" && errorAlert}
-          <p>{t("retrocert-login.help")}</p>
+          <p className="mt-3">{t("retrocert-login.help")}</p>
           <p>{t("retrocert-login.instructions")}</p>
           <p>{t("retrocert-login.required-text")}</p>
           <Form noValidate validated={validated} onSubmit={handleSubmit}>
@@ -294,7 +294,7 @@ function RetroCertsAuthPage(props) {
               </Form.Group>
             </Row>
             <Row>
-              <Form.Group controlId="formReCaptcha" className="col-md-6">
+              <Form.Group controlId="formReCaptcha" className="col-md-6 mt-3">
                 <ReCAPTCHA
                   key={currentLanguage}
                   sitekey="6Lf-DQEVAAAAABCMwJ-Gnbqec08RuiPhMZPtZPm9"
