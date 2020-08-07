@@ -88,7 +88,12 @@ function init() {
 
   app.use(
     AUTH_STRINGS.staffView.login,
-    ipfilter(process.env.STAFF_VIEW_ALLOWED_IPS.split(" "), { mode: "allow" })
+    ipfilter(
+      process.env.STAFF_VIEW_ALLOWED_IPS
+        ? process.env.STAFF_VIEW_ALLOWED_IPS.split(" ")
+        : [],
+      { mode: "allow" }
+    )
   );
 
   // Setup our routes
