@@ -13,7 +13,7 @@ exports[`<StaffViewRoute /> route needing user data 1`] = `
 <Route
   computedMatch={Object {}}
   exact={true}
-  path="/retroactive-certification/staff-view/claimant-info"
+  path="/retroactive-certification/staff-view/claimant-status"
 >
   <TestComponent
     setUserData={[Function]}
@@ -32,7 +32,7 @@ exports[`<StaffViewRoute /> route needing user data, without user data 1`] = `
 <Route
   computedMatch={Object {}}
   exact={true}
-  path="/retroactive-certification/staff-view/claimant-info"
+  path="/retroactive-certification/staff-view/claimant-status"
 >
   <Redirect
     push={true}

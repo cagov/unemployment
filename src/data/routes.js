@@ -33,7 +33,8 @@ const routes = {
   retroCertsConfirmation: "/retroactive-certification/confirmation",
 
   staffViewAuth: "/retroactive-certification/staff-view",
-  staffViewConfirmation: "/retroactive-certification/staff-view/claimant-info",
+  staffViewConfirmation:
+    "/retroactive-certification/staff-view/claimant-status",
 };
 
 module.exports = routes;
