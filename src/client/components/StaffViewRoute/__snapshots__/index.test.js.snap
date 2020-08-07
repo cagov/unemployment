@@ -2,46 +2,37 @@
 
 exports[`<StaffViewRoute /> basic route 1`] = `
 <Route
+  exact={true}
   path="/path"
 >
   <TestComponent />
 </Route>
 `;
 
-exports[`<StaffViewRoute /> route in production (should be PageNotFound) 1`] = `
-<Route
-  isProduction={true}
-  path="/path"
->
-  <TestComponent />
-</Route>
-`;
-
-exports[`<StaffViewRoute /> route needing auth with authToken 1`] = `
-<Route
-  path="/path"
->
-  <div>
-    Loading...
-  </div>
-</Route>
-`;
-
-exports[`<StaffViewRoute /> route needing auth with user data 1`] = `
+exports[`<StaffViewRoute /> route needing user data 1`] = `
 <Route
   computedMatch={Object {}}
-  path="/path"
+  exact={true}
+  path="/retroactive-certification/staff-view/claimant-info"
 >
-  <Redirect
-    push={true}
-    to="/retroactive-certification/staff-view"
+  <TestComponent
+    setUserData={[Function]}
+    userData={
+      Object {
+        "weeksToCertify": Array [
+          0,
+        ],
+      }
+    }
   />
 </Route>
 `;
 
-exports[`<StaffViewRoute /> route needing auth, but no data 1`] = `
+exports[`<StaffViewRoute /> route needing user data, without user data 1`] = `
 <Route
-  path="/path"
+  computedMatch={Object {}}
+  exact={true}
+  path="/retroactive-certification/staff-view/claimant-info"
 >
   <Redirect
     push={true}
