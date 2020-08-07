@@ -6,7 +6,6 @@ import { useTranslation, Trans } from "react-i18next";
 import { userDataPropType } from "../../commonPropTypes";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
-import { clearAuthToken } from "../../components/SessionTimer";
 import ListOfCertifications from "../../components/ListOfCertifications";
 
 function StaffViewConfirmationPage(props) {
@@ -40,9 +39,6 @@ function StaffViewConfirmationPage(props) {
   }
 
   document.title = t("staff-view-confirmation.title");
-
-  // Log out the user since they are done!
-  clearAuthToken();
 
   function handlePrint() {
     window.print();

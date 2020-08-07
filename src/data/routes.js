@@ -31,6 +31,9 @@ const routes = {
   retroCertsCertifyWeek12: "/retroactive-certification/certify/2020-05-02",
   retroCertsCertifyWeek13: "/retroactive-certification/certify/2020-05-09",
   retroCertsConfirmation: "/retroactive-certification/confirmation",
+
+  staffViewAuth: "/retroactive-certification/staff-view",
+  staffViewConfirmation: "/retroactive-certification/staff-view/claimant-info",
 };
 
 module.exports = routes;

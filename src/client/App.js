@@ -1,12 +1,16 @@
 import React, { Suspense, useState, useRef } from "react";
 import { Switch, Route, Redirect, useHistory } from "react-router-dom";
 import RetroCertsRoute from "./components/RetroCertsRoute";
+import StaffViewRoute from "./components/StaffViewRoute";
 import GuidePage from "./pages/GuidePage";
 import PageNotFound from "./pages/PageNotFound";
 import RetroCertsAuthPage from "./pages/RetroCertsAuthPage";
 import RetroCertsWeeksToCertifyPage from "./pages/RetroCertsWeeksToCertifyPage";
 import RetroCertsCertificationPage from "./pages/RetroCertsCertificationPage";
 import RetroCertsConfirmationPage from "./pages/RetroCertsConfirmationPage";
+import StaffViewAuthPage from "./pages/StaffViewAuthPage";
+import StaffViewConfirmationPage from "./pages/StaffViewConfirmationPage";
+
 import AUTH_STRINGS from "../data/authStrings";
 import routes from "../data/routes";
 import { logPage } from "./utils.js";
@@ -36,6 +40,22 @@ export default function App() {
           <Redirect to={routes.guideBenefits} />
         </Route>
         <Route path="/guide" component={GuidePage} />
+        <StaffViewRoute
+          path={routes.staffViewAuth}
+          pageComponent={StaffViewAuthPage}
+          pageProps={{
+            userData: retroCertsUserData,
+            setUserData: setRetroCertsUserData,
+          }}
+        />
+        <StaffViewRoute
+          path={routes.staffViewConfirmation}
+          pageComponent={StaffViewConfirmationPage}
+          pageProps={{
+            userData: retroCertsUserData,
+            setUserData: setRetroCertsUserData,
+          }}
+        />
         <RetroCertsRoute
           path={routes.retroCertsWeeksToCertify}
           pageComponent={RetroCertsWeeksToCertifyPage}
