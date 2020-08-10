@@ -6,6 +6,7 @@
 import englishLocale from "../../data/locales/en/translation.json";
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
+import { isDevEnv } from "../utils";
 
 const defaultLanguage = "en"; // English
 const resources = {
@@ -15,7 +16,7 @@ const resources = {
 i18n
   .use(initReactI18next) // passes the i18n instance to react-i18next which will make it available for all the components via the context api.
   .init({
-    debug: process.env.NODE_ENV === "development",
+    debug: isDevEnv,
     fallbackLng: defaultLanguage,
     interpolation: {
       escapeValue: false, // react already escapes values
