@@ -595,25 +595,25 @@ exports[`<StaffViewConfirmationPage /> when claimant completed 1`] = `
           }
           className="text-dark bg-light"
           disabled={false}
-          to="/retroactive-certification"
+          to="/retroactive-certification/staff-view"
           type="button"
           variant="outline-secondary"
         >
           <Link
             className="text-dark bg-light btn btn-outline-secondary"
             disabled={false}
-            to="/retroactive-certification"
+            to="/retroactive-certification/staff-view"
           >
             <LinkAnchor
               className="text-dark bg-light btn btn-outline-secondary"
               disabled={false}
-              href="/retroactive-certification"
+              href="/retroactive-certification/staff-view"
               navigate={[Function]}
             >
               <a
                 className="text-dark bg-light btn btn-outline-secondary"
                 disabled={false}
-                href="/retroactive-certification"
+                href="/retroactive-certification/staff-view"
                 onClick={[Function]}
               >
                 Search New Claimant
@@ -3221,25 +3221,25 @@ exports[`<StaffViewConfirmationPage /> when claimant in progress 1`] = `
           }
           className="text-dark bg-light"
           disabled={false}
-          to="/retroactive-certification"
+          to="/retroactive-certification/staff-view"
           type="button"
           variant="outline-secondary"
         >
           <Link
             className="text-dark bg-light btn btn-outline-secondary"
             disabled={false}
-            to="/retroactive-certification"
+            to="/retroactive-certification/staff-view"
           >
             <LinkAnchor
               className="text-dark bg-light btn btn-outline-secondary"
               disabled={false}
-              href="/retroactive-certification"
+              href="/retroactive-certification/staff-view"
               navigate={[Function]}
             >
               <a
                 className="text-dark bg-light btn btn-outline-secondary"
                 disabled={false}
-                href="/retroactive-certification"
+                href="/retroactive-certification/staff-view"
                 onClick={[Function]}
               >
                 Search New Claimant
@@ -4950,25 +4950,25 @@ exports[`<StaffViewConfirmationPage /> when claimant not started 1`] = `
           }
           className="text-dark bg-light"
           disabled={false}
-          to="/retroactive-certification"
+          to="/retroactive-certification/staff-view"
           type="button"
           variant="outline-secondary"
         >
           <Link
             className="text-dark bg-light btn btn-outline-secondary"
             disabled={false}
-            to="/retroactive-certification"
+            to="/retroactive-certification/staff-view"
           >
             <LinkAnchor
               className="text-dark bg-light btn btn-outline-secondary"
               disabled={false}
-              href="/retroactive-certification"
+              href="/retroactive-certification/staff-view"
               navigate={[Function]}
             >
               <a
                 className="text-dark bg-light btn btn-outline-secondary"
                 disabled={false}
-                href="/retroactive-certification"
+                href="/retroactive-certification/staff-view"
                 onClick={[Function]}
               >
                 Search New Claimant
