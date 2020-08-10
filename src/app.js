@@ -103,7 +103,7 @@ function init() {
 
     if (process.env.ALLOWED_IP_RANGES) {
       process.env.ALLOWED_IP_RANGES.split(" ").forEach((ipRange) => {
-        allowedIps.push([ipRange.split("-")[0], ipRange.split("-")[1]]);
+        allowedIps.push(ipRange.split("-"));
       });
     }
 
