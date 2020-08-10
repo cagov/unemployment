@@ -35,7 +35,7 @@ function createRouter() {
     if (formRecord) {
       responseJson.formData = formRecord.formData;
       responseJson.confirmationNumber = formRecord.confirmationNumber;
-      responseJson.authToken = formRecord.authToken;
+      responseJson.authToken = !!formRecord.authToken;
     }
 
     return responseJson;
