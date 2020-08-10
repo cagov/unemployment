@@ -121,7 +121,7 @@ function StaffViewConfirmationPage(props) {
             variant="outline-secondary"
             className="text-dark bg-light"
             as={Link}
-            to={routes.retroCertsAuth}
+            to={routes.staffViewAuth}
           >
             {t("staff-view-confirmation.button-search")}
           </Button>
