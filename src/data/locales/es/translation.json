@@ -374,27 +374,26 @@
     "header1": "Staff View",
     "button-search": "Search New Claimant",
     "header2": "Certification Status",
+    "last-name": "Claimant Last Name: ",
     "not-started": {
       "status": "Not started",
-      "p1": "Claimant Xaybz has never logged in and has not begun retroactive certification."
+      "p1": "Claimant has not logged in and has not begun completing retroactive certification."
     },
     "in-progress": {
       "status": "In progress",
-      "p1": "Claimant Xaybz has logged in and begun retroactive certification."
+      "p1": "Claimant has logged in and begun their retroactive certification."
     },
     "completed": {
       "status": "Completed",
-      "last-name": "Claimant Last Name: ",
+      "p1": "Claimant has completed and submitted their retroactive certification.",
       "confirmation-number": "Confirmation Number: ",
-      "p1": "Note: The claimant may have seen or saved a much longer confirmation number in the past. If so, it was <strong>{{confirmationNumber}}</strong>. If they log in now, they will see <strong>{{shortConfirmationNumber}}</strong> instead, which is the last 7 characters of the original number."
+      "p2": "<strong>Note:</strong> Beginning 07/17/20, the 32 character confirmation number was truncated to only display the last 7 characters."
     },
     "button-print": "Print",
     "header3": "Certification Weeks",
     "button-show-all": "Show all",
     "button-hide-all": "Hide all",
-    "aria-show-details": "Show details for this week",
-    "header4": "Retroactive Certification Application Details",
-    "p2": "The claimant is shown the following on the Retroactive Certification Application."
+    "aria-show-details": "Show details for this week"
   },
   "generic-validation-error-message": "Hay más de un error en esta página. Revise y corrija los errores para continuar. Complete todo los campos e intente de nuevo.",
   "timeout-modal": {
