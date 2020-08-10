@@ -4,6 +4,7 @@
  */
 const express = require("express");
 const ipfilter = require("express-ipfilter").IpFilter;
+const IpDeniedError = require("express-ipfilter").IpDeniedError;
 const helmet = require("helmet");
 const createRouter = require("./routes");
 const AUTH_STRINGS = require("./data/authStrings");
@@ -105,16 +106,32 @@ function init() {
       process.env.ALLOWED_IP_RANGES.split(" ").forEach((ipRange) => {
         allowedIps.push(ipRange.split("-"));
       });
+    } else {
+      // This needs to be set on all non-development environments for Staff View
+      console.error(
+        "process.env.ALLOWED_IP_RANGES has not been set on " +
+          process.env.NODE_ENV
+      );
     }
 
     app.use(
-      AUTH_STRINGS.staffView.login,
+      AUTH_STRINGS.staffView.root,
       ipfilter(allowedIps, { mode: "allow", detectIp: clientIp })
     );
   }
 
   // Setup our routes
   app.use("/", createRouter());
+
+  // If a non-EDD IP address tries to access staff view, log and redirect to home
+  app.use((err, req, res, next) => {
+    console.error("Express error handler", err);
+    if (err instanceof IpDeniedError) {
+      console.error("Access to staff view from non-EDD IP address denied");
+      res.redirect("/");
+    }
+    next(err);
+  });
 
   return app;
 }

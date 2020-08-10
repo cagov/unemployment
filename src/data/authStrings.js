@@ -12,6 +12,7 @@ const AUTH_STRINGS = {
     save: retroCertsBasePath + "/api/save",
   },
   staffView: {
+    root: retroCertsBasePath + "/staff-view",
     login: retroCertsBasePath + "/staff-view/api/login",
   },
   statusCode: {
