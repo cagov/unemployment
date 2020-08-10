@@ -47,6 +47,14 @@ function StaffViewConfirmationPage(props) {
   }
 
   function CertificationStatus() {
+    function ClaimantLastName() {
+      return (
+        <span>
+          {t("staff-view-confirmation.last-name")}{" "}
+          <strong>{userData.lastName}</strong>
+        </span>
+      );
+    }
     switch (status) {
       case statuses.NOT_STARTED:
         return (
@@ -54,8 +62,11 @@ function StaffViewConfirmationPage(props) {
             <span className="badge not-started">
               {t("staff-view-confirmation.not-started.status")}
             </span>
-            {/* TODO(kalvin): update with EDD content when received */}
-            <p>{t("staff-view-confirmation.not-started.p1")}</p>
+            <p>
+              <ClaimantLastName />
+              <br />
+              {t("staff-view-confirmation.not-started.p1")}
+            </p>
           </React.Fragment>
         );
       case statuses.IN_PROGRESS:
@@ -64,8 +75,11 @@ function StaffViewConfirmationPage(props) {
             <span className="badge in-progress">
               {t("staff-view-confirmation.in-progress.status")}
             </span>
-            {/* TODO(kalvin): update with EDD content when received */}
-            <p>{t("staff-view-confirmation.in-progress.p1")}</p>
+            <p>
+              <ClaimantLastName />
+              <br />
+              {t("staff-view-confirmation.in-progress.p1")}
+            </p>
           </React.Fragment>
         );
       case statuses.COMPLETED:
@@ -75,46 +89,23 @@ function StaffViewConfirmationPage(props) {
               {t("staff-view-confirmation.completed.status")}
             </span>
             <p>
-              {t("staff-view-confirmation.completed.last-name") +
-                userData.lastName}
+              <ClaimantLastName />
               <br />
-              {t("staff-view-confirmation.completed.confirmation-number") +
-                shortConfirmationNumber}
+              {t("staff-view-confirmation.completed.p1")}
+              <br />
+              {t("staff-view-confirmation.completed.confirmation-number")}{" "}
+              <strong>{shortConfirmationNumber}</strong>
             </p>
             <p>
-              <Trans
-                t={t}
-                i18nKey="staff-view-confirmation.completed.p1"
-                values={{ confirmationNumber, shortConfirmationNumber }}
-              >
-                Note: The claimant may have seen or saved a much longer
-                confirmation number in the past. If so, it was{" "}
-                <strong>adfdsaf</strong>. If they log in now, they will see
-                <strong>adfdsafdfds</strong> instead, which is the last 7
-                characters of the original number.
+              <Trans t={t} i18nKey="staff-view-confirmation.completed.p2">
+                <strong>Note:</strong> Beginning 07/17/20, the 32 character
+                confirmation number was truncated to only display the last 7
+                characters.
               </Trans>
             </p>
           </React.Fragment>
         );
     }
-  }
-
-  function ClaimantContent() {
-    return status === statuses.COMPLETED ? (
-      <div className="subtle-blockquote mb-5">
-        <p>{t("retrocerts-confirmation.p1b")}</p>
-        <Trans t={t} i18nKey="retrocerts-confirmation.p2">
-          If you are still unemployed, continue to certify for benefits every
-          two weeks. The fastest way is to use{" "}
-          <a href={t("links.edd-login")}>UI Online</a>.
-        </Trans>
-      </div>
-    ) : (
-      <div className="subtle-blockquote mb-5">
-        <p>{t("retrocerts-weeks.p3")}</p>
-        <p>{t("retrocerts-weeks.p4")}</p>
-      </div>
-    );
   }
 
   return (
@@ -155,12 +146,6 @@ function StaffViewConfirmationPage(props) {
           ) : (
             <ListOfWeeks weeksToCertify={userData.weeksToCertify} />
           )}
-
-          <h2 className="h3 font-weight-bold mt-5 mb-3">
-            {t("staff-view-confirmation.header4")}
-          </h2>
-          <p>{t("staff-view-confirmation.p2")}</p>
-          <ClaimantContent />
         </div>
       </main>
       <Footer backToTopTag="certification-page" />
