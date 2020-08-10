@@ -93,14 +93,23 @@ function init() {
   };
 
   if (process.env.NODE_ENV !== "development") {
+    const allowedIps = [];
+
+    if (process.env.INDIVIDUAL_ALLOWED_IPS) {
+      process.env.INDIVIDUAL_ALLOWED_IPS.split(" ").forEach((ip) =>
+        allowedIps.push(ip)
+      );
+    }
+
+    if (process.env.ALLOWED_IP_RANGES) {
+      process.env.ALLOWED_IP_RANGES.split(" ").forEach((ipRange) => {
+        allowedIps.push(ipRange.split("-"));
+      });
+    }
+
     app.use(
       AUTH_STRINGS.staffView.login,
-      ipfilter(
-        process.env.STAFF_VIEW_ALLOWED_IPS
-          ? process.env.STAFF_VIEW_ALLOWED_IPS.split(" ")
-          : [],
-        { mode: "allow", detectIp: clientIp }
-      )
+      ipfilter(allowedIps, { mode: "allow", detectIp: clientIp })
     );
   }
 
