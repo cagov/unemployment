@@ -438,7 +438,7 @@ exports[`<StaffViewAuthPage /> retro certs auth page with user not found error 1
               }
               variant="danger"
             >
-              This claimant is not found in the database and does not need to retroactively certify.
+              This claimant does not need to retroactively certify.
             </Alert>
           </div>
         </Row>

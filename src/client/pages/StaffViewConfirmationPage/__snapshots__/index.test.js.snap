@@ -633,34 +633,35 @@ exports[`<StaffViewConfirmationPage /> when claimant completed 1`] = `
             Completed
           </span>
           <p>
-            Claimant Last Name: Taylor
+            <ClaimantLastName>
+              <span>
+                Claimant Last Name: 
+                 
+                <strong>
+                  Taylor
+                </strong>
+              </span>
+            </ClaimantLastName>
             <br />
-            Confirmation Number: 0364833
+            Claimant has completed and submitted their retroactive certification.
+            <br />
+            Confirmation Number: 
+             
+            <strong>
+              0364833
+            </strong>
           </p>
           <p>
             <Trans
-              i18nKey="staff-view-confirmation.completed.p1"
+              i18nKey="staff-view-confirmation.completed.p2"
               t={[Function]}
-              values={
-                Object {
-                  "confirmationNumber": "33a6f278-eaa3-41c5-8d08-276fa0364833",
-                  "shortConfirmationNumber": "0364833",
-                }
-              }
             >
-              Note: The claimant may have seen or saved a much longer confirmation number in the past. If so, it was 
               <strong
-                key="strong-1"
+                key="strong-0"
               >
-                33a6f278-eaa3-41c5-8d08-276fa0364833
+                Note:
               </strong>
-              . If they log in now, they will see 
-              <strong
-                key="strong-3"
-              >
-                0364833
-              </strong>
-               instead, which is the last 7 characters of the original number.
+               Beginning 07/17/20, the 32 character confirmation number was truncated to only display the last 7 characters.
             </Trans>
           </p>
         </CertificationStatus>
@@ -1926,36 +1927,6 @@ exports[`<StaffViewConfirmationPage /> when claimant completed 1`] = `
             </div>
           </AccordionItem>
         </ListOfCertifications>
-        <h2
-          className="h3 font-weight-bold mt-5 mb-3"
-        >
-          Retroactive Certification Application Details
-        </h2>
-        <p>
-          The claimant is shown the following on the Retroactive Certification Application.
-        </p>
-        <ClaimantContent>
-          <div
-            className="subtle-blockquote mb-5"
-          >
-            <p>
-              You’ve been logged out of the system and may close this window.
-            </p>
-            <Trans
-              i18nKey="retrocerts-confirmation.p2"
-              t={[Function]}
-            >
-              If you are still unemployed, continue to certify for benefits every two weeks. The fastest way is to use 
-              <a
-                href="https://edd.ca.gov/Unemployment/UI_Online.htm"
-                key="1"
-              >
-                UI Online
-              </a>
-              .
-            </Trans>
-          </div>
-        </ClaimantContent>
       </div>
     </main>
     <Footer
@@ -3259,7 +3230,17 @@ exports[`<StaffViewConfirmationPage /> when claimant in progress 1`] = `
             In progress
           </span>
           <p>
-            Claimant Xaybz has logged in and begun retroactive certification.
+            <ClaimantLastName>
+              <span>
+                Claimant Last Name: 
+                 
+                <strong>
+                  Taylor
+                </strong>
+              </span>
+            </ClaimantLastName>
+            <br />
+            Claimant has logged in and begun their retroactive certification.
           </p>
         </CertificationStatus>
         <Button
@@ -3666,26 +3647,6 @@ exports[`<StaffViewConfirmationPage /> when claimant in progress 1`] = `
             </Fade>
           </Alert>
         </ListOfWeeks>
-        <h2
-          className="h3 font-weight-bold mt-5 mb-3"
-        >
-          Retroactive Certification Application Details
-        </h2>
-        <p>
-          The claimant is shown the following on the Retroactive Certification Application.
-        </p>
-        <ClaimantContent>
-          <div
-            className="subtle-blockquote mb-5"
-          >
-            <p>
-              Your answers for each completed certification week will save automatically when you continue to the next week. Partially completed weeks are not saved. Try to complete all retroactive certifications in one session.
-            </p>
-            <p>
-              To protect the security of your information, this application will automatically time out after 30 minutes of inactivity. To avoid timing out, select any button every 25 minutes.
-            </p>
-          </div>
-        </ClaimantContent>
       </div>
     </main>
     <Footer
@@ -4988,7 +4949,17 @@ exports[`<StaffViewConfirmationPage /> when claimant not started 1`] = `
             Not started
           </span>
           <p>
-            Claimant Xaybz has never logged in and has not begun retroactive certification.
+            <ClaimantLastName>
+              <span>
+                Claimant Last Name: 
+                 
+                <strong>
+                  Taylor
+                </strong>
+              </span>
+            </ClaimantLastName>
+            <br />
+            Claimant has not logged in and has not begun completing retroactive certification.
           </p>
         </CertificationStatus>
         <Button
@@ -5395,26 +5366,6 @@ exports[`<StaffViewConfirmationPage /> when claimant not started 1`] = `
             </Fade>
           </Alert>
         </ListOfWeeks>
-        <h2
-          className="h3 font-weight-bold mt-5 mb-3"
-        >
-          Retroactive Certification Application Details
-        </h2>
-        <p>
-          The claimant is shown the following on the Retroactive Certification Application.
-        </p>
-        <ClaimantContent>
-          <div
-            className="subtle-blockquote mb-5"
-          >
-            <p>
-              Your answers for each completed certification week will save automatically when you continue to the next week. Partially completed weeks are not saved. Try to complete all retroactive certifications in one session.
-            </p>
-            <p>
-              To protect the security of your information, this application will automatically time out after 30 minutes of inactivity. To avoid timing out, select any button every 25 minutes.
-            </p>
-          </div>
-        </ClaimantContent>
       </div>
     </main>
     <Footer
