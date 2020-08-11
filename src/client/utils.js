@@ -43,6 +43,6 @@ export function logError(errorMessage) {
 // Our app is only built once on the staging environment, so
 // process.env.NODE_ENV never equals "production". Therefore, we
 // check for the window URL as a workaround.
-export const isProdEnv = window.location.hostname !== "unemployment.edd.ca.gov";
+export const isProdEnv = window.location.hostname === "unemployment.edd.ca.gov";
 
 export const isDevEnv = process.env.NODE_ENV === "development";

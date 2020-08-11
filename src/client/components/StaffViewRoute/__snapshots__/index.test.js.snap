@@ -5,10 +5,7 @@ exports[`<StaffViewRoute /> basic route 1`] = `
   exact={true}
   path="/path"
 >
-  <Redirect
-    push={true}
-    to="/retroactive-certification"
-  />
+  <TestComponent />
 </Route>
 `;
 
@@ -18,9 +15,15 @@ exports[`<StaffViewRoute /> route needing user data 1`] = `
   exact={true}
   path="/retroactive-certification/staff-view/claimant-status"
 >
-  <Redirect
-    push={true}
-    to="/retroactive-certification"
+  <TestComponent
+    setUserData={[Function]}
+    userData={
+      Object {
+        "weeksToCertify": Array [
+          0,
+        ],
+      }
+    }
   />
 </Route>
 `;
@@ -33,7 +36,7 @@ exports[`<StaffViewRoute /> route needing user data, without user data 1`] = `
 >
   <Redirect
     push={true}
-    to="/retroactive-certification"
+    to="/retroactive-certification/staff-view"
   />
 </Route>
 `;
