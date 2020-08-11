@@ -3,6 +3,7 @@ import { Route, Redirect } from "react-router-dom";
 import React from "react";
 import { userDataPropType, setUserDataPropType } from "../../commonPropTypes";
 import routes from "../../../data/routes";
+import { isProdEnv } from "../../utils";
 
 function userDataIsSet(userData) {
   return !!userData.weeksToCertify;
@@ -12,9 +13,7 @@ function StaffViewRoute(props) {
   const { pageComponent: Component, pageProps, ...routeProps } = props;
 
   let routeChild = <div>Loading...</div>;
-  const hostname = window.location.hostname;
-  const isProdEnvironment = hostname === "unemployment.edd.ca.gov";
-  if (isProdEnvironment) {
+  if (isProdEnv) {
     // Staff view should currently not load on production at all,
     routeChild = <Redirect to={routes.retroCertsAuth} push />;
   } else if (
