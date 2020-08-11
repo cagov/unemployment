@@ -1,6 +1,7 @@
 // From: https://github.com/Azure-Samples/application-insights-react-demo/blob/master/src/TelemetryService.js
 import { ApplicationInsights } from "@microsoft/applicationinsights-web";
 import { ReactPlugin } from "@microsoft/applicationinsights-react-js";
+import { isProdEnv } from "../client/utils";
 
 let reactPlugin = null;
 let appInsights = null;
@@ -43,10 +44,7 @@ const createTelemetryService = () => {
     });
 
     appInsights.loadAppInsights();
-    if (
-      process.env.NODE_ENV === "development" ||
-      window.location.hostname !== "unemployment.edd.ca.gov"
-    ) {
+    if (!isProdEnv) {
       // Normally metrics are sent as batches. In development mode, send immediately.
       // https://docs.microsoft.com/en-us/azure/azure-monitor/app/api-custom-events-metrics#debug
       appInsights.config.maxBatchSizeInBytes = 0;
