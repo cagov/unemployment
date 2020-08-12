@@ -4959,7 +4959,7 @@ exports[`<StaffViewConfirmationPage /> when claimant not started 1`] = `
               </span>
             </ClaimantLastName>
             <br />
-            Claimant has not logged in and has not begun completing retroactive certification.
+            Claimant has not logged in and has not begun completing their retroactive certification.
           </p>
         </CertificationStatus>
         <Button
