@@ -378,7 +378,7 @@
     "last-name": "Claimant Last Name: ",
     "not-started": {
       "status": "Not started",
-      "p1": "Claimant has not logged in and has not begun completing retroactive certification."
+      "p1": "Claimant has not logged in and has not begun completing their retroactive certification."
     },
     "in-progress": {
       "status": "In progress",
