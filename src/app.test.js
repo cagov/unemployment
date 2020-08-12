@@ -1,11 +1,12 @@
 import { init } from "./app";
-import fflip from "fflip";
 import request from "supertest";
 
 describe("Router: Single page app", () => {
+  const env = Object.assign({}, process.env);
+  env.ENABLE_RETRO_CERTS = "0";
+  const server = init(env);
+
   it("HTTP gets returning the single page", async () => {
-    fflip.features.retroCerts.enabled = false;
-    const server = init();
     const testPaths = ["/guide", "/guide/benefits", "/"];
 
     for (const testPath of testPaths) {
@@ -22,8 +23,6 @@ describe("Router: Single page app", () => {
   });
 
   it("404 for pages that don't exist", async () => {
-    fflip.features.retroCerts.enabled = false;
-    const server = init();
     const testPaths = ["/does-not-exist", "/guide/"];
 
     for (const testPath of testPaths) {
