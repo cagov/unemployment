@@ -33,4 +33,50 @@ describe("Router: Single page app", () => {
       expect(res.text).toMatch(/<base href="\/">/);
     }
   });
+
+  describe("retroactive certification app", () => {
+    const randomIpAddress = "70.191.9.39";
+    const eddIpAddress = "192.168.2.33";
+    const navaTeamIpAddress = "10.83.44.21";
+    const testPaths = [
+      "/retroactive-certification/staff-view",
+      "/retroactive-certification/staff-view/claimant-status",
+    ];
+
+    const env = Object.assign({}, process.env);
+    env.ENABLE_RETRO_CERTS = "1";
+    env.ALLOWED_IP_RANGES = "192.168.2.1-192.168.2.100"; // these are EDD IPs in production
+    env.INDIVIDUAL_ALLOWED_IPS = "10.83.44.22 10.83.44.21"; // these are Nava team IPs in production
+    const server = init(env);
+
+    it("redirects to retrocert login when staff view is accessed via public IP", async () => {
+      for (const testPath of testPaths) {
+        const res = await request(server)
+          .get(testPath)
+          .set("X-Forwarded-For", randomIpAddress);
+        expect(res.status).toBe(302);
+        expect(res.text).toMatch("Found. Redirecting to /");
+        expect(res.redirect).toBe(true);
+      }
+    });
+
+    describe("does not redirect when staff view is accessed", () => {
+      it("by an EDD IP address", async () => {
+        for (const testPath of testPaths) {
+          const res = await request(server)
+            .get(testPath)
+            .set("X-Forwarded-For", eddIpAddress);
+          expect(res.status).toBe(200);
+        }
+      });
+      it("by a Nava team IP address", async () => {
+        for (const testPath of testPaths) {
+          const res = await request(server)
+            .get(testPath)
+            .set("X-Forwarded-For", navaTeamIpAddress);
+          expect(res.status).toBe(200);
+        }
+      });
+    });
+  });
 });
