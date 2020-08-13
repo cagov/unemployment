@@ -24,7 +24,7 @@ fflip.config(fflipConfig);
 /**
  * @returns {object} Express application
  */
-function init() {
+function init(env = process.env) {
   retroCertsIfEnabled();
 
   const app = express();
@@ -45,7 +45,7 @@ function init() {
   app.use(express.json());
 
   // On dev, enable hot reloading
-  if (process.env.NODE_ENV === "development") {
+  if (env.NODE_ENV === "development") {
     const webpack = require("webpack");
     const webpackConfig = require("../webpack.dev.config.js");
     const webpackCompiler = webpack(webpackConfig);
@@ -93,24 +93,23 @@ function init() {
       : "";
   };
 
-  if (process.env.NODE_ENV !== "development") {
+  if (env.NODE_ENV !== "development") {
     const allowedIps = [];
 
-    if (process.env.INDIVIDUAL_ALLOWED_IPS) {
-      process.env.INDIVIDUAL_ALLOWED_IPS.split(" ").forEach((ip) =>
+    if (env.INDIVIDUAL_ALLOWED_IPS) {
+      env.INDIVIDUAL_ALLOWED_IPS.split(" ").forEach((ip) =>
         allowedIps.push(ip)
       );
     }
 
-    if (process.env.ALLOWED_IP_RANGES) {
-      process.env.ALLOWED_IP_RANGES.split(" ").forEach((ipRange) => {
+    if (env.ALLOWED_IP_RANGES) {
+      env.ALLOWED_IP_RANGES.split(" ").forEach((ipRange) => {
         allowedIps.push(ipRange.split("-"));
       });
-    } else {
+    } else if (env.NODE_ENV !== "testing") {
       // This needs to be set on all non-development environments for Staff View
       console.error(
-        "process.env.ALLOWED_IP_RANGES has not been set on " +
-          process.env.NODE_ENV
+        "env.ALLOWED_IP_RANGES has not been set on " + env.NODE_ENV
       );
     }
 
@@ -125,12 +124,13 @@ function init() {
 
   // If a non-EDD IP address tries to access staff view, log and redirect to home
   app.use((err, req, res, next) => {
-    console.error("Express error handler", err);
     if (err instanceof IpDeniedError) {
-      console.error("Access to staff view from non-EDD IP address denied");
+      // eslint-disable-next-line no-console
+      console.log("Access to staff view from non-EDD IP address denied");
       res.redirect("/");
+    } else {
+      next(err);
     }
-    next(err);
   });
 
   return app;
