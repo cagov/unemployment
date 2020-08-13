@@ -399,7 +399,7 @@
   "generic-validation-error-message": "There are one or more errors on this page. Review and correct them to continue. Complete all fields and try again.",
   "timeout-modal": {
     "header": "Your Session Will End Soon",
-    "warning": "To protect your information, you will be logged out in 5 minutes if you do not continue working. Any unsaved changes will be lost.",
+    "warning": "To protect your information, you will be logged out in {{numberOfMinutes}} minutes if you do not continue working. Any unsaved changes will be lost.",
     "button": "Continue Working"
   }
 }
