@@ -22,7 +22,7 @@ describe("Router: Single page app", () => {
     }
   });
 
-  it("404 for pages that don't exist", async () => {
+  it("404s for pages that don't exist", async () => {
     const testPaths = ["/does-not-exist", "/guide/"];
 
     for (const testPath of testPaths) {
@@ -44,8 +44,10 @@ describe("Router: Single page app", () => {
 
     const env = Object.assign({}, process.env);
     env.ENABLE_RETRO_CERTS = "1";
-    env.ALLOWED_IP_RANGES = "192.168.2.1-192.168.2.100"; // these are EDD IPs in production
-    env.INDIVIDUAL_ALLOWED_IPS = "10.83.44.22 10.83.44.21"; // these are Nava team IPs in production
+    // in staging/production, these are EDD IPs
+    env.ALLOWED_IP_RANGES = "192.168.2.1-192.168.2.100";
+    // in staging/production, these are Nava team IPs
+    env.INDIVIDUAL_ALLOWED_IPS = "10.83.44.22 10.83.44.21";
     const server = init(env);
 
     it("redirects to retrocert login when staff view is accessed via public IP", async () => {

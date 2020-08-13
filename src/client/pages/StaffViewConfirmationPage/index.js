@@ -3,6 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import routes from "../../../data/routes";
 import { useTranslation, Trans } from "react-i18next";
+import PropTypes from "prop-types";
 import { userDataPropType } from "../../commonPropTypes";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
@@ -47,55 +48,72 @@ function StaffViewConfirmationPage(props) {
   }
 
   function CertificationStatus() {
-    function ClaimantLastName() {
+    function HeaderWithBadge(props) {
       return (
-        <span>
-          {t("staff-view-confirmation.last-name")}{" "}
-          <strong>{userData.lastName}</strong>
-        </span>
+        <h2 className="h3 font-weight-bold mt-5 mb-3">
+          {t("staff-view-confirmation.header2")} {props.children}
+        </h2>
       );
     }
+    HeaderWithBadge.propTypes = {
+      children: PropTypes.element.isRequired,
+    };
+
+    function ClaimantInfo(props) {
+      return (
+        <p>
+          {t("staff-view-confirmation.last-name")}{" "}
+          <strong>{userData.lastName}</strong>
+          <br />
+          {props.children}
+        </p>
+      );
+    }
+    ClaimantInfo.propTypes = {
+      children: PropTypes.element.isRequired,
+    };
+
     switch (status) {
       case statuses.NOT_STARTED:
         return (
           <React.Fragment>
-            <span className="badge not-started">
-              {t("staff-view-confirmation.not-started.status")}
-            </span>
-            <p>
-              <ClaimantLastName />
-              <br />
+            <HeaderWithBadge>
+              <span className="badge not-started">
+                {t("staff-view-confirmation.not-started.status")}
+              </span>
+            </HeaderWithBadge>
+            <ClaimantInfo>
               {t("staff-view-confirmation.not-started.p1")}
-            </p>
+            </ClaimantInfo>
           </React.Fragment>
         );
       case statuses.IN_PROGRESS:
         return (
           <React.Fragment>
-            <span className="badge in-progress">
-              {t("staff-view-confirmation.in-progress.status")}
-            </span>
-            <p>
-              <ClaimantLastName />
-              <br />
+            <HeaderWithBadge>
+              <span className="badge in-progress">
+                {t("staff-view-confirmation.in-progress.status")}
+              </span>
+            </HeaderWithBadge>
+            <ClaimantInfo>
               {t("staff-view-confirmation.in-progress.p1")}
-            </p>
+            </ClaimantInfo>
           </React.Fragment>
         );
       case statuses.COMPLETED:
         return (
           <React.Fragment>
-            <span className="badge completed">
-              {t("staff-view-confirmation.completed.status")}
-            </span>
-            <p>
-              <ClaimantLastName />
-              <br />
+            <HeaderWithBadge>
+              <span className="badge completed">
+                {t("staff-view-confirmation.completed.status")}
+              </span>
+            </HeaderWithBadge>
+            <ClaimantInfo>
               {t("staff-view-confirmation.completed.p1")}
               <br />
               {t("staff-view-confirmation.completed.confirmation-number")}{" "}
               <strong>{shortConfirmationNumber}</strong>
-            </p>
+            </ClaimantInfo>
             <p>
               <Trans t={t} i18nKey="staff-view-confirmation.completed.p2">
                 <strong>Note:</strong> Beginning 07/17/20, the 32 character
@@ -125,10 +143,6 @@ function StaffViewConfirmationPage(props) {
           >
             {t("staff-view-confirmation.button-search")}
           </Button>
-
-          <h2 className="h3 font-weight-bold mt-5 mb-3">
-            {t("staff-view-confirmation.header2")}
-          </h2>
           <CertificationStatus />
           <Button
             variant="outline-secondary"

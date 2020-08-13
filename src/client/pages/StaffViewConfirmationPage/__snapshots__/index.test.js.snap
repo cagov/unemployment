@@ -621,36 +621,37 @@ exports[`<StaffViewConfirmationPage /> when claimant completed 1`] = `
             </LinkAnchor>
           </Link>
         </Button>
-        <h2
-          className="h3 font-weight-bold mt-5 mb-3"
-        >
-          Certification Status
-        </h2>
         <CertificationStatus>
-          <span
-            className="badge completed"
-          >
-            Completed
-          </span>
-          <p>
-            <ClaimantLastName>
-              <span>
-                Claimant Last Name: 
-                 
-                <strong>
-                  Taylor
-                </strong>
+          <HeaderWithBadge>
+            <h2
+              className="h3 font-weight-bold mt-5 mb-3"
+            >
+              Certification Status: 
+               
+              <span
+                className="badge completed"
+              >
+                Completed
               </span>
-            </ClaimantLastName>
-            <br />
-            Claimant has completed and submitted their retroactive certification.
-            <br />
-            Confirmation Number: 
-             
-            <strong>
-              0364833
-            </strong>
-          </p>
+            </h2>
+          </HeaderWithBadge>
+          <ClaimantInfo>
+            <p>
+              Claimant Last Name: 
+               
+              <strong>
+                Taylor
+              </strong>
+              <br />
+              Claimant has completed and submitted their retroactive certification.
+              <br />
+              Confirmation Number: 
+               
+              <strong>
+                0364833
+              </strong>
+            </p>
+          </ClaimantInfo>
           <p>
             <Trans
               i18nKey="staff-view-confirmation.completed.p2"
@@ -3218,30 +3219,31 @@ exports[`<StaffViewConfirmationPage /> when claimant in progress 1`] = `
             </LinkAnchor>
           </Link>
         </Button>
-        <h2
-          className="h3 font-weight-bold mt-5 mb-3"
-        >
-          Certification Status
-        </h2>
         <CertificationStatus>
-          <span
-            className="badge in-progress"
-          >
-            In progress
-          </span>
-          <p>
-            <ClaimantLastName>
-              <span>
-                Claimant Last Name: 
-                 
-                <strong>
-                  Taylor
-                </strong>
+          <HeaderWithBadge>
+            <h2
+              className="h3 font-weight-bold mt-5 mb-3"
+            >
+              Certification Status: 
+               
+              <span
+                className="badge in-progress"
+              >
+                In progress
               </span>
-            </ClaimantLastName>
-            <br />
-            Claimant has logged in and begun their retroactive certification.
-          </p>
+            </h2>
+          </HeaderWithBadge>
+          <ClaimantInfo>
+            <p>
+              Claimant Last Name: 
+               
+              <strong>
+                Taylor
+              </strong>
+              <br />
+              Claimant has logged in and begun their retroactive certification.
+            </p>
+          </ClaimantInfo>
         </CertificationStatus>
         <Button
           active={false}
@@ -4937,30 +4939,31 @@ exports[`<StaffViewConfirmationPage /> when claimant not started 1`] = `
             </LinkAnchor>
           </Link>
         </Button>
-        <h2
-          className="h3 font-weight-bold mt-5 mb-3"
-        >
-          Certification Status
-        </h2>
         <CertificationStatus>
-          <span
-            className="badge not-started"
-          >
-            Not started
-          </span>
-          <p>
-            <ClaimantLastName>
-              <span>
-                Claimant Last Name: 
-                 
-                <strong>
-                  Taylor
-                </strong>
+          <HeaderWithBadge>
+            <h2
+              className="h3 font-weight-bold mt-5 mb-3"
+            >
+              Certification Status: 
+               
+              <span
+                className="badge not-started"
+              >
+                Not started
               </span>
-            </ClaimantLastName>
-            <br />
-            Claimant has not logged in and has not begun completing their retroactive certification.
-          </p>
+            </h2>
+          </HeaderWithBadge>
+          <ClaimantInfo>
+            <p>
+              Claimant Last Name: 
+               
+              <strong>
+                Taylor
+              </strong>
+              <br />
+              Claimant has not logged in and has not begun completing their retroactive certification.
+            </p>
+          </ClaimantInfo>
         </CertificationStatus>
         <Button
           active={false}
