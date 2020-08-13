@@ -56,7 +56,7 @@ function StaffViewConfirmationPage(props) {
       );
     }
     HeaderWithBadge.propTypes = {
-      children: PropTypes.element.isRequired,
+      children: PropTypes.node.isRequired,
     };
 
     function ClaimantInfo(props) {
@@ -70,7 +70,7 @@ function StaffViewConfirmationPage(props) {
       );
     }
     ClaimantInfo.propTypes = {
-      children: PropTypes.element.isRequired,
+      children: PropTypes.node.isRequired,
     };
 
     switch (status) {
