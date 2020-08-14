@@ -27,9 +27,10 @@ function SessionTimer(props) {
 
   useEffect(() => {
     if (showWarningModal) {
-      setTimeout(() => {
+      const timer = setTimeout(() => {
         setNumberOfMinutes(numberOfMinutes - 1);
       }, 60 * 1000);
+      return () => clearTimeout(timer);
     }
   });
 
