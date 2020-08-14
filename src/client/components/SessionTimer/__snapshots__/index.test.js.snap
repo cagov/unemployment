@@ -17,7 +17,15 @@ exports[`<SessionTimer /> clear 1`] = `
     </ModalTitle>
   </ModalHeader>
   <ModalBody>
-    To protect your information, you will be logged out in 5 minutes if you do not continue working. Any unsaved changes will be lost.
+    <Trans
+      i18nKey="timeout-modal.warning"
+      t={[Function]}
+      values={
+        Object {
+          "numberOfMinutes": undefined,
+        }
+      }
+    />
   </ModalBody>
   <ModalFooter
     className="border-0"
@@ -52,7 +60,15 @@ exports[`<SessionTimer /> startOrUpdate 1`] = `
     </ModalTitle>
   </ModalHeader>
   <ModalBody>
-    To protect your information, you will be logged out in 5 minutes if you do not continue working. Any unsaved changes will be lost.
+    <Trans
+      i18nKey="timeout-modal.warning"
+      t={[Function]}
+      values={
+        Object {
+          "numberOfMinutes": undefined,
+        }
+      }
+    />
   </ModalBody>
   <ModalFooter
     className="border-0"
