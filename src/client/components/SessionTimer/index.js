@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import PropTypes from "prop-types";
 import Modal from "react-bootstrap/Modal";
@@ -16,12 +16,22 @@ const TIMEOUT_KEY = "timeout";
 function SessionTimer(props) {
   const { t } = useTranslation();
   const TIMEOUT_MS = 30 * 60 * 1000;
-  const TIMEOUT_WARNING_MS = 2;
+  const TIMEOUT_DISPLAY_TIME_IN_MINUTES = 5;
+  const TIMEOUT_WARNING_MS =
+    TIMEOUT_MS - TIMEOUT_DISPLAY_TIME_IN_MINUTES * 60 * 1000;
   const history = useHistory();
   const { action, setUserData } = props;
 
   const [showWarningModal, setShowWarningModal] = useState();
   const [numberOfMinutes, setNumberOfMinutes] = useState();
+
+  useEffect(() => {
+    if (showWarningModal) {
+      setTimeout(() => {
+        setNumberOfMinutes(numberOfMinutes - 1);
+      }, 60 * 1000);
+    }
+  });
 
   function closeWarningModal() {
     setShowWarningModal(false);
@@ -52,7 +62,7 @@ function SessionTimer(props) {
     warningTimerId = setTimeout(() => {
       if (sessionStorage.getItem(AUTH_STRINGS.authToken)) {
         setShowWarningModal(true);
-        setNumberOfMinutes(5);
+        setNumberOfMinutes(TIMEOUT_DISPLAY_TIME_IN_MINUTES);
       }
     }, TIMEOUT_WARNING_MS);
     timeOutTimerId = setTimeout(() => {
@@ -87,10 +97,10 @@ function SessionTimer(props) {
       </Modal.Header>
       <Modal.Body>
         <Trans
-            t={t}
-            i18nKey="timeout-modal.warning"
-            values={{ numberOfMinutes }}
-          />
+          t={t}
+          i18nKey="timeout-modal.warning"
+          values={{ numberOfMinutes }}
+        />
       </Modal.Body>
       <Modal.Footer className="border-0">
         <Button variant="secondary" onClick={closeWarningModal}>
