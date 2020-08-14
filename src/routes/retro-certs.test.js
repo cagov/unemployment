@@ -365,4 +365,66 @@ describe("Router: API tests", () => {
       upsertFormDataMock.mockRestore();
     }
   });
+
+  describe("retro-certs staff view login", () => {
+    const randomIpAddress = "70.191.9.39";
+    const eddIpAddress = "192.168.2.33";
+    const env = Object.assign({}, process.env);
+    env.ALLOWED_IP_RANGES = "192.168.2.1-192.168.2.100";
+    fflip.features.retroCerts.enabled = true;
+    const server = init(env);
+    const testPath = AUTH_STRINGS.staffView.login;
+
+    it("redirects IPs that aren't allowed", async () => {
+      const res = await request(server)
+        .post(testPath)
+        .set("X-Forwarded-For", randomIpAddress);
+      expect(res.status).toBe(302);
+    });
+
+    it("returns user information for IPs that are allowed", async () => {
+      const getUserByNameDobSsnMock = jest.spyOn(cosmos, "getUserByNameDobSsn");
+      getUserByNameDobSsnMock.mockImplementation(
+        jest.fn(() =>
+          Promise.resolve({
+            id: "hash",
+            weeksToCertify: [0, 1],
+            programPlan: ["UI full time", "UI part time"],
+          })
+        )
+      );
+
+      const getFormDataByUserIdMock = jest.spyOn(cosmos, "getFormDataByUserId");
+      getFormDataByUserIdMock.mockImplementation(
+        jest.fn(() => Promise.resolve({ authToken: "test auth token" }))
+      );
+
+      const updateUserDataMock = jest.spyOn(cosmos, "updateUserData");
+      updateUserDataMock.mockImplementation(jest.fn(() => Promise.resolve()));
+
+      const res = await request(server)
+        .post(testPath)
+        .set("X-Forwarded-For", eddIpAddress)
+        .send(
+          JSON.stringify({
+            lastName: "Last",
+            dob: "2000-01-01",
+            ssn: "123456789",
+          })
+        )
+        .type("json");
+      expect(res.status).toBe(200);
+      expect(res.header["content-type"]).toMatch(/json/);
+      expect(res.body).toEqual({
+        status: AUTH_STRINGS.statusCode.ok,
+        authToken: true,
+        lastName: "Last",
+        weeksToCertify: [0, 1],
+        programPlan: ["UI full time", "UI part time"],
+      });
+
+      getUserByNameDobSsnMock.mockRestore();
+      getFormDataByUserIdMock.mockRestore();
+    });
+  });
 });
