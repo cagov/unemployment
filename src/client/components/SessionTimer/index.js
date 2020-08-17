@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import PropTypes from "prop-types";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
-import { useTranslation, Trans } from "react-i18next";
+import { useTranslation } from "react-i18next";
 import { setUserDataPropType } from "../../commonPropTypes";
 import AUTH_STRINGS from "../../../data/authStrings";
 import routes from "../../../data/routes";
@@ -99,10 +99,7 @@ function SessionTimer(props) {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <Trans
-          t={t}
-          i18nKey="timeout-modal.warning"
-          values={{ numberOfMinutes }}
+        {t("timeout-modal.warning", { numberOfMinutes })}
         />
       </Modal.Body>
       <Modal.Footer className="border-0">
