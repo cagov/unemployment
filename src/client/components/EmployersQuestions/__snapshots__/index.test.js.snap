@@ -1,221 +1,3637 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<EmployersQuestions /> renders the component 1`] = `
-<div>
-  <div
-    key="employerData00000000"
-  >
-    <hr />
-    <Row
-      className="align-items-baseline"
-      noGutters={false}
+<EmployersQuestions
+  onChange={[Function]}
+>
+  <div>
+    <div
+      key="employerData00000000"
     >
-      <Col
-        md="auto"
+      <hr />
+      <Row
+        className="align-items-baseline"
+        noGutters={false}
       >
-        <h3>
-          <Trans
-            i18nKey="retrocerts-certification.employers.heading"
-            t={[Function]}
-            values={
-              Object {
-                "incomeNumber": 1,
-              }
-            }
-          />
-        </h3>
-      </Col>
-    </Row>
-    <EmployerQuestions
-      employerData={
-        Object {
-          "address1": "",
-          "address2": "",
-          "city": "",
-          "employerName": "",
-          "grossEarnings": "",
-          "id": "00000000",
-          "lastDateWorked": "",
-          "moreDetails": "",
-          "reason": "still-working",
-          "state": "",
-          "totalHoursWorked": "",
-          "zipcode": "",
-        }
-      }
-      onChange={[Function]}
-    />
-  </div>
-  <hr />
-  <Row
-    noGutters={false}
-  >
-    <Col
-      md="auto"
-    >
-      <NavLink
-        as={
+        <div
+          className="align-items-baseline row"
+        >
+          <Col
+            md="auto"
+          >
+            <div
+              className="col-md-auto"
+            >
+              <h3>
+                <Trans
+                  i18nKey="retrocerts-certification.employers.heading"
+                  t={[Function]}
+                  values={
+                    Object {
+                      "incomeNumber": 1,
+                    }
+                  }
+                >
+                  Employer 1
+                </Trans>
+              </h3>
+            </div>
+          </Col>
+        </div>
+      </Row>
+      <EmployerQuestions
+        employerData={
           Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "displayName": "SafeAnchor",
-            "render": [Function],
+            "address1": "",
+            "address2": "",
+            "city": "",
+            "employerName": "",
+            "grossEarnings": "",
+            "id": "00000000",
+            "lastDateWorked": "",
+            "moreDetails": "",
+            "reason": "still-working",
+            "state": "",
+            "totalHoursWorked": "",
+            "zipcode": "",
           }
         }
-        disabled={false}
-        onClick={[Function]}
+        onChange={[Function]}
       >
-        + Add another employer
-      </NavLink>
-    </Col>
-  </Row>
-</div>
+        <div
+          className="follow-up"
+        >
+          <FormGroup
+            className="mb-3"
+            controlId="00000000employerName"
+          >
+            <div
+              className="mb-3 form-group"
+            >
+              <FormLabel
+                column={false}
+                srOnly={false}
+              >
+                <label
+                  className="form-label"
+                  htmlFor="00000000employerName"
+                >
+                  Employer Name
+                </label>
+              </FormLabel>
+              <FormText
+                className="help-text"
+              >
+                <small
+                  className="help-text form-text"
+                >
+                  <Trans
+                    i18nKey="retrocerts-certification.employers.help-employerName"
+                    t={[Function]}
+                  >
+                    The employer's name that work was performed for this week.
+                  </Trans>
+                </small>
+              </FormText>
+              <FormControl
+                maxLength={500}
+                onChange={[Function]}
+                required={true}
+                type="text"
+                value=""
+              >
+                <input
+                  className="form-control"
+                  id="00000000employerName"
+                  maxLength={500}
+                  onChange={[Function]}
+                  required={true}
+                  type="text"
+                  value=""
+                />
+              </FormControl>
+              <Feedback
+                type="invalid"
+              >
+                <div
+                  className="invalid-feedback"
+                >
+                  This field is required.
+                </div>
+              </Feedback>
+            </div>
+          </FormGroup>
+          <FormGroup
+            className="mb-3"
+            controlId="00000000address1"
+          >
+            <div
+              className="mb-3 form-group"
+            >
+              <FormLabel
+                column={false}
+                srOnly={false}
+              >
+                <label
+                  className="form-label"
+                  htmlFor="00000000address1"
+                >
+                  Address Line 1
+                </label>
+              </FormLabel>
+              <FormText
+                className="help-text"
+              >
+                <small
+                  className="help-text form-text"
+                >
+                  <Trans
+                    i18nKey="retrocerts-certification.employers.help-address1"
+                    t={[Function]}
+                  >
+                    The employer's address that work was performed for this week.
+                  </Trans>
+                </small>
+              </FormText>
+              <FormControl
+                maxLength={500}
+                onChange={[Function]}
+                required={true}
+                type="text"
+                value=""
+              >
+                <input
+                  className="form-control"
+                  id="00000000address1"
+                  maxLength={500}
+                  onChange={[Function]}
+                  required={true}
+                  type="text"
+                  value=""
+                />
+              </FormControl>
+              <Feedback
+                type="invalid"
+              >
+                <div
+                  className="invalid-feedback"
+                >
+                  This field is required.
+                </div>
+              </Feedback>
+            </div>
+          </FormGroup>
+          <FormGroup
+            className="mb-3"
+            controlId="00000000address2"
+          >
+            <div
+              className="mb-3 form-group"
+            >
+              <FormLabel
+                column={false}
+                srOnly={false}
+              >
+                <label
+                  className="form-label"
+                  htmlFor="00000000address2"
+                >
+                  Address Line 2
+                </label>
+              </FormLabel>
+              <FormText
+                className="help-text"
+              >
+                <small
+                  className="help-text form-text"
+                >
+                  <Trans
+                    i18nKey="retrocerts-certification.employers.help-address2"
+                    t={[Function]}
+                  >
+                    The employer's suite, floor, etc. that work was performed for this week.
+                  </Trans>
+                </small>
+              </FormText>
+              <FormControl
+                maxLength={500}
+                onChange={[Function]}
+                required={false}
+                type="text"
+                value=""
+              >
+                <input
+                  className="form-control"
+                  id="00000000address2"
+                  maxLength={500}
+                  onChange={[Function]}
+                  required={false}
+                  type="text"
+                  value=""
+                />
+              </FormControl>
+              <Feedback
+                type="invalid"
+              >
+                <div
+                  className="invalid-feedback"
+                >
+                  This field is required.
+                </div>
+              </Feedback>
+            </div>
+          </FormGroup>
+          <FormRow>
+            <div
+              className="form-row"
+            >
+              <Col
+                md={8}
+              >
+                <div
+                  className="col-md-8"
+                >
+                  <FormGroup
+                    className="mb-3"
+                    controlId="00000000city"
+                  >
+                    <div
+                      className="mb-3 form-group"
+                    >
+                      <FormLabel
+                        column={false}
+                        srOnly={false}
+                      >
+                        <label
+                          className="form-label"
+                          htmlFor="00000000city"
+                        >
+                          City
+                        </label>
+                      </FormLabel>
+                      <FormText
+                        className="help-text"
+                      >
+                        <small
+                          className="help-text form-text"
+                        >
+                          <Trans
+                            i18nKey="retrocerts-certification.employers.help-city"
+                            t={[Function]}
+                          >
+                            The employer's city where work was performed for this week.
+                          </Trans>
+                        </small>
+                      </FormText>
+                      <FormControl
+                        maxLength={100}
+                        onChange={[Function]}
+                        required={true}
+                        type="text"
+                        value=""
+                      >
+                        <input
+                          className="form-control"
+                          id="00000000city"
+                          maxLength={100}
+                          onChange={[Function]}
+                          required={true}
+                          type="text"
+                          value=""
+                        />
+                      </FormControl>
+                      <Feedback
+                        type="invalid"
+                      >
+                        <div
+                          className="invalid-feedback"
+                        >
+                          This field is required.
+                        </div>
+                      </Feedback>
+                    </div>
+                  </FormGroup>
+                </div>
+              </Col>
+            </div>
+          </FormRow>
+          <FormRow
+            className="mb-3"
+          >
+            <div
+              className="mb-3 form-row"
+            >
+              <FormGroup
+                as={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "displayName": "Col",
+                    "render": [Function],
+                  }
+                }
+                className="col-md-8"
+                controlId="00000000state-select"
+              >
+                <Col
+                  className="col-md-8 form-group"
+                >
+                  <div
+                    className="col-md-8 form-group col"
+                  >
+                    <FormLabel
+                      column={false}
+                      srOnly={false}
+                    >
+                      <label
+                        className="form-label"
+                        htmlFor="00000000state-select"
+                      >
+                        State
+                      </label>
+                    </FormLabel>
+                    <FormText
+                      className="help-text"
+                    >
+                      <small
+                        className="help-text form-text"
+                      >
+                        The employer's state where work was performed for this week.
+                      </small>
+                    </FormText>
+                    <FormControl
+                      as="select"
+                      className="col-md-4"
+                      onChange={[Function]}
+                      required={true}
+                      value=""
+                    >
+                      <select
+                        className="col-md-4 form-control"
+                        id="00000000state-select"
+                        onChange={[Function]}
+                        required={true}
+                        value=""
+                      >
+                        <option />
+                        <option
+                          key="AK"
+                        >
+                          AK
+                        </option>
+                        <option
+                          key="AL"
+                        >
+                          AL
+                        </option>
+                        <option
+                          key="AR"
+                        >
+                          AR
+                        </option>
+                        <option
+                          key="AS"
+                        >
+                          AS
+                        </option>
+                        <option
+                          key="AZ"
+                        >
+                          AZ
+                        </option>
+                        <option
+                          key="CA"
+                        >
+                          CA
+                        </option>
+                        <option
+                          key="CO"
+                        >
+                          CO
+                        </option>
+                        <option
+                          key="CT"
+                        >
+                          CT
+                        </option>
+                        <option
+                          key="DC"
+                        >
+                          DC
+                        </option>
+                        <option
+                          key="DE"
+                        >
+                          DE
+                        </option>
+                        <option
+                          key="FL"
+                        >
+                          FL
+                        </option>
+                        <option
+                          key="FM"
+                        >
+                          FM
+                        </option>
+                        <option
+                          key="GA"
+                        >
+                          GA
+                        </option>
+                        <option
+                          key="GU"
+                        >
+                          GU
+                        </option>
+                        <option
+                          key="HI"
+                        >
+                          HI
+                        </option>
+                        <option
+                          key="IA"
+                        >
+                          IA
+                        </option>
+                        <option
+                          key="ID"
+                        >
+                          ID
+                        </option>
+                        <option
+                          key="IL"
+                        >
+                          IL
+                        </option>
+                        <option
+                          key="IN"
+                        >
+                          IN
+                        </option>
+                        <option
+                          key="KS"
+                        >
+                          KS
+                        </option>
+                        <option
+                          key="KY"
+                        >
+                          KY
+                        </option>
+                        <option
+                          key="LA"
+                        >
+                          LA
+                        </option>
+                        <option
+                          key="MA"
+                        >
+                          MA
+                        </option>
+                        <option
+                          key="MD"
+                        >
+                          MD
+                        </option>
+                        <option
+                          key="ME"
+                        >
+                          ME
+                        </option>
+                        <option
+                          key="MH"
+                        >
+                          MH
+                        </option>
+                        <option
+                          key="MI"
+                        >
+                          MI
+                        </option>
+                        <option
+                          key="MN"
+                        >
+                          MN
+                        </option>
+                        <option
+                          key="MO"
+                        >
+                          MO
+                        </option>
+                        <option
+                          key="MP"
+                        >
+                          MP
+                        </option>
+                        <option
+                          key="MS"
+                        >
+                          MS
+                        </option>
+                        <option
+                          key="MT"
+                        >
+                          MT
+                        </option>
+                        <option
+                          key="NC"
+                        >
+                          NC
+                        </option>
+                        <option
+                          key="ND"
+                        >
+                          ND
+                        </option>
+                        <option
+                          key="NE"
+                        >
+                          NE
+                        </option>
+                        <option
+                          key="NH"
+                        >
+                          NH
+                        </option>
+                        <option
+                          key="NJ"
+                        >
+                          NJ
+                        </option>
+                        <option
+                          key="NM"
+                        >
+                          NM
+                        </option>
+                        <option
+                          key="NV"
+                        >
+                          NV
+                        </option>
+                        <option
+                          key="NY"
+                        >
+                          NY
+                        </option>
+                        <option
+                          key="OH"
+                        >
+                          OH
+                        </option>
+                        <option
+                          key="OK"
+                        >
+                          OK
+                        </option>
+                        <option
+                          key="OR"
+                        >
+                          OR
+                        </option>
+                        <option
+                          key="PA"
+                        >
+                          PA
+                        </option>
+                        <option
+                          key="PR"
+                        >
+                          PR
+                        </option>
+                        <option
+                          key="PW"
+                        >
+                          PW
+                        </option>
+                        <option
+                          key="RI"
+                        >
+                          RI
+                        </option>
+                        <option
+                          key="SC"
+                        >
+                          SC
+                        </option>
+                        <option
+                          key="SD"
+                        >
+                          SD
+                        </option>
+                        <option
+                          key="TN"
+                        >
+                          TN
+                        </option>
+                        <option
+                          key="TX"
+                        >
+                          TX
+                        </option>
+                        <option
+                          key="UT"
+                        >
+                          UT
+                        </option>
+                        <option
+                          key="VA"
+                        >
+                          VA
+                        </option>
+                        <option
+                          key="VI"
+                        >
+                          VI
+                        </option>
+                        <option
+                          key="VT"
+                        >
+                          VT
+                        </option>
+                        <option
+                          key="WA"
+                        >
+                          WA
+                        </option>
+                        <option
+                          key="WI"
+                        >
+                          WI
+                        </option>
+                        <option
+                          key="WV"
+                        >
+                          WV
+                        </option>
+                        <option
+                          key="WY"
+                        >
+                          WY
+                        </option>
+                      </select>
+                    </FormControl>
+                    <Feedback
+                      type="invalid"
+                    >
+                      <div
+                        className="invalid-feedback"
+                      >
+                        This field is required.
+                      </div>
+                    </Feedback>
+                  </div>
+                </Col>
+              </FormGroup>
+            </div>
+          </FormRow>
+          <FormGroup
+            className="mb-3"
+            controlId="00000000zipcode"
+          >
+            <div
+              className="mb-3 form-group"
+            >
+              <FormLabel
+                column={false}
+                srOnly={false}
+              >
+                <label
+                  className="form-label"
+                  htmlFor="00000000zipcode"
+                >
+                  ZIP
+                </label>
+              </FormLabel>
+              <FormText
+                className="help-text"
+              >
+                <small
+                  className="help-text form-text"
+                >
+                  <Trans
+                    i18nKey="retrocerts-certification.employers.help-zipcode"
+                    t={[Function]}
+                  >
+                    The employer's ZIP code where work was performed for this week. 
+                    <p
+                      key="p-1"
+                    >
+                      Enter as ##### or #####-####.
+                    </p>
+                  </Trans>
+                </small>
+              </FormText>
+              <FormControl
+                className="col-md-3"
+                maxLength={10}
+                onChange={[Function]}
+                pattern="\\\\d{5}|\\\\d{5}-\\\\d{4}"
+                required={true}
+                type="text"
+                value=""
+              >
+                <input
+                  className="col-md-3 form-control"
+                  id="00000000zipcode"
+                  maxLength={10}
+                  onChange={[Function]}
+                  pattern="\\\\d{5}|\\\\d{5}-\\\\d{4}"
+                  required={true}
+                  type="text"
+                  value=""
+                />
+              </FormControl>
+              <Feedback
+                type="invalid"
+              >
+                <div
+                  className="invalid-feedback"
+                >
+                  This field is required.
+                </div>
+              </Feedback>
+            </div>
+          </FormGroup>
+          <p>
+            Last Date Worked
+          </p>
+          <small
+            className="help-text"
+          >
+            The last day worked in this certification week.
+          </small>
+          <FormRow
+            className="mb-3"
+          >
+            <div
+              className="mb-3 form-row"
+            >
+              <FormGroup
+                as={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "displayName": "Col",
+                    "render": [Function],
+                  }
+                }
+                controlId="00000000lastDateWorked-month-question"
+                md={2}
+              >
+                <Col
+                  className="form-group"
+                  md={2}
+                >
+                  <div
+                    className="form-group col-md-2"
+                  >
+                    <FormLabel
+                      column={false}
+                      srOnly={false}
+                    >
+                      <label
+                        className="form-label"
+                        htmlFor="00000000lastDateWorked-month-question"
+                      >
+                        Month
+                      </label>
+                    </FormLabel>
+                    <FormControl
+                      maxLength={2}
+                      onChange={[Function]}
+                      pattern="(^0[1-9])|(^1[0-2])|(^[1-9]$)"
+                      required={true}
+                      type="text"
+                      value=""
+                    >
+                      <input
+                        className="form-control"
+                        id="00000000lastDateWorked-month-question"
+                        maxLength={2}
+                        onChange={[Function]}
+                        pattern="(^0[1-9])|(^1[0-2])|(^[1-9]$)"
+                        required={true}
+                        type="text"
+                        value=""
+                      />
+                    </FormControl>
+                    <Feedback
+                      type="invalid"
+                    >
+                      <div
+                        className="invalid-feedback"
+                      >
+                        This field is required.
+                      </div>
+                    </Feedback>
+                  </div>
+                </Col>
+              </FormGroup>
+              <FormGroup
+                as={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "displayName": "Col",
+                    "render": [Function],
+                  }
+                }
+                controlId="00000000lastDateWorked-day-question"
+                md={2}
+              >
+                <Col
+                  className="form-group"
+                  md={2}
+                >
+                  <div
+                    className="form-group col-md-2"
+                  >
+                    <FormLabel
+                      column={false}
+                      srOnly={false}
+                    >
+                      <label
+                        className="form-label"
+                        htmlFor="00000000lastDateWorked-day-question"
+                      >
+                        Day
+                      </label>
+                    </FormLabel>
+                    <FormControl
+                      maxLength={2}
+                      onChange={[Function]}
+                      pattern="(^0[1-9])|(^1[0-9])|(^2[0-9])|(^3[0-1])|(^[1-9]$)"
+                      required={true}
+                      type="text"
+                      value=""
+                    >
+                      <input
+                        className="form-control"
+                        id="00000000lastDateWorked-day-question"
+                        maxLength={2}
+                        onChange={[Function]}
+                        pattern="(^0[1-9])|(^1[0-9])|(^2[0-9])|(^3[0-1])|(^[1-9]$)"
+                        required={true}
+                        type="text"
+                        value=""
+                      />
+                    </FormControl>
+                    <Feedback
+                      type="invalid"
+                    >
+                      <div
+                        className="invalid-feedback"
+                      >
+                        This field is required.
+                      </div>
+                    </Feedback>
+                  </div>
+                </Col>
+              </FormGroup>
+              <FormGroup
+                as={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "displayName": "Col",
+                    "render": [Function],
+                  }
+                }
+                md={2}
+              >
+                <Col
+                  className="form-group"
+                  md={2}
+                >
+                  <div
+                    className="form-group col-md-2"
+                  >
+                    <FormLabel
+                      column={false}
+                      srOnly={false}
+                    >
+                      <label
+                        className="form-label"
+                      >
+                        Year
+                      </label>
+                    </FormLabel>
+                    <FormControl
+                      disabled={true}
+                      type="text"
+                      value="2020"
+                    >
+                      <input
+                        className="form-control"
+                        disabled={true}
+                        type="text"
+                        value="2020"
+                      />
+                    </FormControl>
+                  </div>
+                </Col>
+              </FormGroup>
+            </div>
+          </FormRow>
+          <FormGroup
+            className="mb-3"
+            controlId="00000000totalHoursWorked"
+          >
+            <div
+              className="mb-3 form-group"
+            >
+              <FormLabel
+                column={false}
+                srOnly={false}
+              >
+                <label
+                  className="form-label"
+                  htmlFor="00000000totalHoursWorked"
+                >
+                  Total hours worked for this employer
+                </label>
+              </FormLabel>
+              <FormText
+                className="help-text"
+              >
+                <small
+                  className="help-text form-text"
+                >
+                  <Trans
+                    i18nKey="retrocerts-certification.employers.help-totalHoursWorked"
+                    t={[Function]}
+                  >
+                    Report the hours worked in this week for this employer.
+                  </Trans>
+                </small>
+              </FormText>
+              <FormControl
+                className="col-md-2"
+                maxLength={6}
+                onChange={[Function]}
+                pattern="\\\\d+[.]?\\\\d*"
+                required={true}
+                type="text"
+                value=""
+              >
+                <input
+                  className="col-md-2 form-control"
+                  id="00000000totalHoursWorked"
+                  maxLength={6}
+                  onChange={[Function]}
+                  pattern="\\\\d+[.]?\\\\d*"
+                  required={true}
+                  type="text"
+                  value=""
+                />
+              </FormControl>
+              <Feedback
+                type="invalid"
+              >
+                <div
+                  className="invalid-feedback"
+                >
+                  This field is required.
+                </div>
+              </Feedback>
+            </div>
+          </FormGroup>
+          <FormGroup
+            className="mb-3"
+            controlId="00000000grossEarnings"
+          >
+            <div
+              className="mb-3 form-group"
+            >
+              <FormLabel
+                column={false}
+                srOnly={false}
+              >
+                <label
+                  className="form-label"
+                  htmlFor="00000000grossEarnings"
+                >
+                  Gross earnings before deductions for this employer (whether you were paid or not)
+                </label>
+              </FormLabel>
+              <FormText
+                className="help-text"
+              >
+                <small
+                  className="help-text form-text"
+                >
+                  <Trans
+                    i18nKey="retrocerts-certification.employers.help-grossEarnings"
+                    t={[Function]}
+                  >
+                    Full earnings without deductions.
+                  </Trans>
+                </small>
+              </FormText>
+              <FormControl
+                className="col-md-2"
+                maxLength={11}
+                onChange={[Function]}
+                pattern="^\\\\$?(([1-9](\\\\d*|\\\\d{0,2}(,\\\\d{3})*))|0)(\\\\.\\\\d{2})?$"
+                required={true}
+                type="text"
+                value=""
+              >
+                <input
+                  className="col-md-2 form-control"
+                  id="00000000grossEarnings"
+                  maxLength={11}
+                  onChange={[Function]}
+                  pattern="^\\\\$?(([1-9](\\\\d*|\\\\d{0,2}(,\\\\d{3})*))|0)(\\\\.\\\\d{2})?$"
+                  required={true}
+                  type="text"
+                  value=""
+                />
+              </FormControl>
+              <Feedback
+                type="invalid"
+              >
+                <div
+                  className="invalid-feedback"
+                >
+                  This field is required.
+                </div>
+              </Feedback>
+            </div>
+          </FormGroup>
+          <FormGroup
+            controlId="00000000reason-select"
+          >
+            <div
+              className="form-group"
+            >
+              <FormLabel
+                column={false}
+                srOnly={false}
+              >
+                <label
+                  className="form-label"
+                  htmlFor="00000000reason-select"
+                >
+                  Select the reason you are no longer working:
+                </label>
+              </FormLabel>
+              <FormControl
+                as="select"
+                onChange={[Function]}
+                value="still-working"
+              >
+                <select
+                  className="form-control"
+                  id="00000000reason-select"
+                  onChange={[Function]}
+                  value="still-working"
+                >
+                  <option
+                    key="fired"
+                    value="fired"
+                  >
+                    Terminated or Fired
+                  </option>
+                  <option
+                    key="quit"
+                    value="quit"
+                  >
+                    Quit
+                  </option>
+                  <option
+                    key="laid-off"
+                    value="laid-off"
+                  >
+                    Laid Off
+                  </option>
+                  <option
+                    key="still-working"
+                    value="still-working"
+                  >
+                    Still Working Part Time
+                  </option>
+                </select>
+              </FormControl>
+            </div>
+          </FormGroup>
+        </div>
+      </EmployerQuestions>
+    </div>
+    <hr />
+    <Row
+      noGutters={false}
+    >
+      <div
+        className="row"
+      >
+        <Col
+          md="auto"
+        >
+          <div
+            className="col-md-auto"
+          >
+            <NavLink
+              as={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "displayName": "SafeAnchor",
+                  "render": [Function],
+                }
+              }
+              disabled={false}
+              onClick={[Function]}
+            >
+              <ForwardRef
+                as={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "displayName": "SafeAnchor",
+                    "render": [Function],
+                  }
+                }
+                className="nav-link"
+                disabled={false}
+                onClick={[Function]}
+              >
+                <SafeAnchor
+                  className="nav-link"
+                  disabled={false}
+                  onClick={[Function]}
+                >
+                  <a
+                    className="nav-link"
+                    href="#"
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    role="button"
+                  >
+                    + Add another employer
+                  </a>
+                </SafeAnchor>
+              </ForwardRef>
+            </NavLink>
+          </div>
+        </Col>
+      </div>
+    </Row>
+  </div>
+</EmployersQuestions>
 `;
 
 exports[`<EmployersQuestions /> renders with 2 income sources 1`] = `
-<div>
-  <div
-    key="employerData12345678"
-  >
-    <hr />
-    <Row
-      className="align-items-baseline"
-      noGutters={false}
+<EmployersQuestions
+  employers={
+    Array [
+      Object {
+        "address1": "e1 - address 1",
+        "address2": "",
+        "city": "city",
+        "employerName": "employer name 1",
+        "grossEarnings": "$200",
+        "id": "12345678",
+        "lastDateWorked": "02/22/2020",
+        "moreDetails": "",
+        "reason": "still-working",
+        "state": "CA",
+        "totalHoursWorked": "10",
+        "zipcode": "94100",
+      },
+      Object {
+        "address1": "e2 - address 1",
+        "address2": "",
+        "city": "city 2",
+        "employerName": "employer name 2",
+        "grossEarnings": "$300",
+        "id": "22222222",
+        "lastDateWorked": "02/24/2020",
+        "moreDetails": "unable to travel",
+        "reason": "quit",
+        "state": "OR",
+        "totalHoursWorked": "12",
+        "zipcode": "97035",
+      },
+    ]
+  }
+  onChange={[Function]}
+>
+  <div>
+    <div
+      key="employerData12345678"
     >
-      <Col
-        md="auto"
+      <hr />
+      <Row
+        className="align-items-baseline"
+        noGutters={false}
       >
-        <h3>
-          <Trans
-            i18nKey="retrocerts-certification.employers.heading"
-            t={[Function]}
-            values={
-              Object {
-                "incomeNumber": 1,
-              }
-            }
-          />
-        </h3>
-      </Col>
-      <Col
-        md="auto"
-      >
-        <NavLink
-          as={
-            Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "displayName": "SafeAnchor",
-              "render": [Function],
-            }
-          }
-          disabled={false}
-          onClick={[Function]}
+        <div
+          className="align-items-baseline row"
         >
-          Remove this employer
-        </NavLink>
-      </Col>
-    </Row>
-    <EmployerQuestions
-      employerData={
-        Object {
-          "address1": "e1 - address 1",
-          "address2": "",
-          "city": "city",
-          "employerName": "employer name 1",
-          "grossEarnings": "$200",
-          "id": "12345678",
-          "lastDateWorked": "02/22/2020",
-          "moreDetails": "",
-          "reason": "still-working",
-          "state": "CA",
-          "totalHoursWorked": "10",
-          "zipcode": "94100",
-        }
-      }
-      onChange={[Function]}
-    />
-  </div>
-  <div
-    key="employerData22222222"
-  >
-    <hr />
-    <Row
-      className="align-items-baseline"
-      noGutters={false}
-    >
-      <Col
-        md="auto"
-      >
-        <h3>
-          <Trans
-            i18nKey="retrocerts-certification.employers.heading"
-            t={[Function]}
-            values={
-              Object {
-                "incomeNumber": 2,
-              }
-            }
-          />
-        </h3>
-      </Col>
-      <Col
-        md="auto"
-      >
-        <NavLink
-          as={
-            Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "displayName": "SafeAnchor",
-              "render": [Function],
-            }
-          }
-          disabled={false}
-          onClick={[Function]}
-        >
-          Remove this employer
-        </NavLink>
-      </Col>
-    </Row>
-    <EmployerQuestions
-      employerData={
-        Object {
-          "address1": "e2 - address 1",
-          "address2": "",
-          "city": "city 2",
-          "employerName": "employer name 2",
-          "grossEarnings": "$300",
-          "id": "22222222",
-          "lastDateWorked": "02/24/2020",
-          "moreDetails": "unable to travel",
-          "reason": "quit",
-          "state": "OR",
-          "totalHoursWorked": "12",
-          "zipcode": "97035",
-        }
-      }
-      onChange={[Function]}
-    />
-  </div>
-  <hr />
-  <Row
-    noGutters={false}
-  >
-    <Col
-      md="auto"
-    >
-      <NavLink
-        as={
+          <Col
+            md="auto"
+          >
+            <div
+              className="col-md-auto"
+            >
+              <h3>
+                <Trans
+                  i18nKey="retrocerts-certification.employers.heading"
+                  t={[Function]}
+                  values={
+                    Object {
+                      "incomeNumber": 1,
+                    }
+                  }
+                >
+                  Employer 1
+                </Trans>
+              </h3>
+            </div>
+          </Col>
+          <Col
+            md="auto"
+          >
+            <div
+              className="col-md-auto"
+            >
+              <NavLink
+                as={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "displayName": "SafeAnchor",
+                    "render": [Function],
+                  }
+                }
+                disabled={false}
+                onClick={[Function]}
+              >
+                <ForwardRef
+                  as={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "displayName": "SafeAnchor",
+                      "render": [Function],
+                    }
+                  }
+                  className="nav-link"
+                  disabled={false}
+                  onClick={[Function]}
+                >
+                  <SafeAnchor
+                    className="nav-link"
+                    disabled={false}
+                    onClick={[Function]}
+                  >
+                    <a
+                      className="nav-link"
+                      href="#"
+                      onClick={[Function]}
+                      onKeyDown={[Function]}
+                      role="button"
+                    >
+                      Remove this employer
+                    </a>
+                  </SafeAnchor>
+                </ForwardRef>
+              </NavLink>
+            </div>
+          </Col>
+        </div>
+      </Row>
+      <EmployerQuestions
+        employerData={
           Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "displayName": "SafeAnchor",
-            "render": [Function],
+            "address1": "e1 - address 1",
+            "address2": "",
+            "city": "city",
+            "employerName": "employer name 1",
+            "grossEarnings": "$200",
+            "id": "12345678",
+            "lastDateWorked": "02/22/2020",
+            "moreDetails": "",
+            "reason": "still-working",
+            "state": "CA",
+            "totalHoursWorked": "10",
+            "zipcode": "94100",
           }
         }
-        disabled={false}
-        onClick={[Function]}
+        onChange={[Function]}
       >
-        + Add another employer
-      </NavLink>
-    </Col>
-  </Row>
-</div>
+        <div
+          className="follow-up"
+        >
+          <FormGroup
+            className="mb-3"
+            controlId="12345678employerName"
+          >
+            <div
+              className="mb-3 form-group"
+            >
+              <FormLabel
+                column={false}
+                srOnly={false}
+              >
+                <label
+                  className="form-label"
+                  htmlFor="12345678employerName"
+                >
+                  Employer Name
+                </label>
+              </FormLabel>
+              <FormText
+                className="help-text"
+              >
+                <small
+                  className="help-text form-text"
+                >
+                  <Trans
+                    i18nKey="retrocerts-certification.employers.help-employerName"
+                    t={[Function]}
+                  >
+                    The employer's name that work was performed for this week.
+                  </Trans>
+                </small>
+              </FormText>
+              <FormControl
+                maxLength={500}
+                onChange={[Function]}
+                required={true}
+                type="text"
+                value="employer name 1"
+              >
+                <input
+                  className="form-control"
+                  id="12345678employerName"
+                  maxLength={500}
+                  onChange={[Function]}
+                  required={true}
+                  type="text"
+                  value="employer name 1"
+                />
+              </FormControl>
+              <Feedback
+                type="invalid"
+              >
+                <div
+                  className="invalid-feedback"
+                >
+                  This field is required.
+                </div>
+              </Feedback>
+            </div>
+          </FormGroup>
+          <FormGroup
+            className="mb-3"
+            controlId="12345678address1"
+          >
+            <div
+              className="mb-3 form-group"
+            >
+              <FormLabel
+                column={false}
+                srOnly={false}
+              >
+                <label
+                  className="form-label"
+                  htmlFor="12345678address1"
+                >
+                  Address Line 1
+                </label>
+              </FormLabel>
+              <FormText
+                className="help-text"
+              >
+                <small
+                  className="help-text form-text"
+                >
+                  <Trans
+                    i18nKey="retrocerts-certification.employers.help-address1"
+                    t={[Function]}
+                  >
+                    The employer's address that work was performed for this week.
+                  </Trans>
+                </small>
+              </FormText>
+              <FormControl
+                maxLength={500}
+                onChange={[Function]}
+                required={true}
+                type="text"
+                value="e1 - address 1"
+              >
+                <input
+                  className="form-control"
+                  id="12345678address1"
+                  maxLength={500}
+                  onChange={[Function]}
+                  required={true}
+                  type="text"
+                  value="e1 - address 1"
+                />
+              </FormControl>
+              <Feedback
+                type="invalid"
+              >
+                <div
+                  className="invalid-feedback"
+                >
+                  This field is required.
+                </div>
+              </Feedback>
+            </div>
+          </FormGroup>
+          <FormGroup
+            className="mb-3"
+            controlId="12345678address2"
+          >
+            <div
+              className="mb-3 form-group"
+            >
+              <FormLabel
+                column={false}
+                srOnly={false}
+              >
+                <label
+                  className="form-label"
+                  htmlFor="12345678address2"
+                >
+                  Address Line 2
+                </label>
+              </FormLabel>
+              <FormText
+                className="help-text"
+              >
+                <small
+                  className="help-text form-text"
+                >
+                  <Trans
+                    i18nKey="retrocerts-certification.employers.help-address2"
+                    t={[Function]}
+                  >
+                    The employer's suite, floor, etc. that work was performed for this week.
+                  </Trans>
+                </small>
+              </FormText>
+              <FormControl
+                maxLength={500}
+                onChange={[Function]}
+                required={false}
+                type="text"
+                value=""
+              >
+                <input
+                  className="form-control"
+                  id="12345678address2"
+                  maxLength={500}
+                  onChange={[Function]}
+                  required={false}
+                  type="text"
+                  value=""
+                />
+              </FormControl>
+              <Feedback
+                type="invalid"
+              >
+                <div
+                  className="invalid-feedback"
+                >
+                  This field is required.
+                </div>
+              </Feedback>
+            </div>
+          </FormGroup>
+          <FormRow>
+            <div
+              className="form-row"
+            >
+              <Col
+                md={8}
+              >
+                <div
+                  className="col-md-8"
+                >
+                  <FormGroup
+                    className="mb-3"
+                    controlId="12345678city"
+                  >
+                    <div
+                      className="mb-3 form-group"
+                    >
+                      <FormLabel
+                        column={false}
+                        srOnly={false}
+                      >
+                        <label
+                          className="form-label"
+                          htmlFor="12345678city"
+                        >
+                          City
+                        </label>
+                      </FormLabel>
+                      <FormText
+                        className="help-text"
+                      >
+                        <small
+                          className="help-text form-text"
+                        >
+                          <Trans
+                            i18nKey="retrocerts-certification.employers.help-city"
+                            t={[Function]}
+                          >
+                            The employer's city where work was performed for this week.
+                          </Trans>
+                        </small>
+                      </FormText>
+                      <FormControl
+                        maxLength={100}
+                        onChange={[Function]}
+                        required={true}
+                        type="text"
+                        value="city"
+                      >
+                        <input
+                          className="form-control"
+                          id="12345678city"
+                          maxLength={100}
+                          onChange={[Function]}
+                          required={true}
+                          type="text"
+                          value="city"
+                        />
+                      </FormControl>
+                      <Feedback
+                        type="invalid"
+                      >
+                        <div
+                          className="invalid-feedback"
+                        >
+                          This field is required.
+                        </div>
+                      </Feedback>
+                    </div>
+                  </FormGroup>
+                </div>
+              </Col>
+            </div>
+          </FormRow>
+          <FormRow
+            className="mb-3"
+          >
+            <div
+              className="mb-3 form-row"
+            >
+              <FormGroup
+                as={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "displayName": "Col",
+                    "render": [Function],
+                  }
+                }
+                className="col-md-8"
+                controlId="12345678state-select"
+              >
+                <Col
+                  className="col-md-8 form-group"
+                >
+                  <div
+                    className="col-md-8 form-group col"
+                  >
+                    <FormLabel
+                      column={false}
+                      srOnly={false}
+                    >
+                      <label
+                        className="form-label"
+                        htmlFor="12345678state-select"
+                      >
+                        State
+                      </label>
+                    </FormLabel>
+                    <FormText
+                      className="help-text"
+                    >
+                      <small
+                        className="help-text form-text"
+                      >
+                        The employer's state where work was performed for this week.
+                      </small>
+                    </FormText>
+                    <FormControl
+                      as="select"
+                      className="col-md-4"
+                      onChange={[Function]}
+                      required={true}
+                      value="CA"
+                    >
+                      <select
+                        className="col-md-4 form-control"
+                        id="12345678state-select"
+                        onChange={[Function]}
+                        required={true}
+                        value="CA"
+                      >
+                        <option />
+                        <option
+                          key="AK"
+                        >
+                          AK
+                        </option>
+                        <option
+                          key="AL"
+                        >
+                          AL
+                        </option>
+                        <option
+                          key="AR"
+                        >
+                          AR
+                        </option>
+                        <option
+                          key="AS"
+                        >
+                          AS
+                        </option>
+                        <option
+                          key="AZ"
+                        >
+                          AZ
+                        </option>
+                        <option
+                          key="CA"
+                        >
+                          CA
+                        </option>
+                        <option
+                          key="CO"
+                        >
+                          CO
+                        </option>
+                        <option
+                          key="CT"
+                        >
+                          CT
+                        </option>
+                        <option
+                          key="DC"
+                        >
+                          DC
+                        </option>
+                        <option
+                          key="DE"
+                        >
+                          DE
+                        </option>
+                        <option
+                          key="FL"
+                        >
+                          FL
+                        </option>
+                        <option
+                          key="FM"
+                        >
+                          FM
+                        </option>
+                        <option
+                          key="GA"
+                        >
+                          GA
+                        </option>
+                        <option
+                          key="GU"
+                        >
+                          GU
+                        </option>
+                        <option
+                          key="HI"
+                        >
+                          HI
+                        </option>
+                        <option
+                          key="IA"
+                        >
+                          IA
+                        </option>
+                        <option
+                          key="ID"
+                        >
+                          ID
+                        </option>
+                        <option
+                          key="IL"
+                        >
+                          IL
+                        </option>
+                        <option
+                          key="IN"
+                        >
+                          IN
+                        </option>
+                        <option
+                          key="KS"
+                        >
+                          KS
+                        </option>
+                        <option
+                          key="KY"
+                        >
+                          KY
+                        </option>
+                        <option
+                          key="LA"
+                        >
+                          LA
+                        </option>
+                        <option
+                          key="MA"
+                        >
+                          MA
+                        </option>
+                        <option
+                          key="MD"
+                        >
+                          MD
+                        </option>
+                        <option
+                          key="ME"
+                        >
+                          ME
+                        </option>
+                        <option
+                          key="MH"
+                        >
+                          MH
+                        </option>
+                        <option
+                          key="MI"
+                        >
+                          MI
+                        </option>
+                        <option
+                          key="MN"
+                        >
+                          MN
+                        </option>
+                        <option
+                          key="MO"
+                        >
+                          MO
+                        </option>
+                        <option
+                          key="MP"
+                        >
+                          MP
+                        </option>
+                        <option
+                          key="MS"
+                        >
+                          MS
+                        </option>
+                        <option
+                          key="MT"
+                        >
+                          MT
+                        </option>
+                        <option
+                          key="NC"
+                        >
+                          NC
+                        </option>
+                        <option
+                          key="ND"
+                        >
+                          ND
+                        </option>
+                        <option
+                          key="NE"
+                        >
+                          NE
+                        </option>
+                        <option
+                          key="NH"
+                        >
+                          NH
+                        </option>
+                        <option
+                          key="NJ"
+                        >
+                          NJ
+                        </option>
+                        <option
+                          key="NM"
+                        >
+                          NM
+                        </option>
+                        <option
+                          key="NV"
+                        >
+                          NV
+                        </option>
+                        <option
+                          key="NY"
+                        >
+                          NY
+                        </option>
+                        <option
+                          key="OH"
+                        >
+                          OH
+                        </option>
+                        <option
+                          key="OK"
+                        >
+                          OK
+                        </option>
+                        <option
+                          key="OR"
+                        >
+                          OR
+                        </option>
+                        <option
+                          key="PA"
+                        >
+                          PA
+                        </option>
+                        <option
+                          key="PR"
+                        >
+                          PR
+                        </option>
+                        <option
+                          key="PW"
+                        >
+                          PW
+                        </option>
+                        <option
+                          key="RI"
+                        >
+                          RI
+                        </option>
+                        <option
+                          key="SC"
+                        >
+                          SC
+                        </option>
+                        <option
+                          key="SD"
+                        >
+                          SD
+                        </option>
+                        <option
+                          key="TN"
+                        >
+                          TN
+                        </option>
+                        <option
+                          key="TX"
+                        >
+                          TX
+                        </option>
+                        <option
+                          key="UT"
+                        >
+                          UT
+                        </option>
+                        <option
+                          key="VA"
+                        >
+                          VA
+                        </option>
+                        <option
+                          key="VI"
+                        >
+                          VI
+                        </option>
+                        <option
+                          key="VT"
+                        >
+                          VT
+                        </option>
+                        <option
+                          key="WA"
+                        >
+                          WA
+                        </option>
+                        <option
+                          key="WI"
+                        >
+                          WI
+                        </option>
+                        <option
+                          key="WV"
+                        >
+                          WV
+                        </option>
+                        <option
+                          key="WY"
+                        >
+                          WY
+                        </option>
+                      </select>
+                    </FormControl>
+                    <Feedback
+                      type="invalid"
+                    >
+                      <div
+                        className="invalid-feedback"
+                      >
+                        This field is required.
+                      </div>
+                    </Feedback>
+                  </div>
+                </Col>
+              </FormGroup>
+            </div>
+          </FormRow>
+          <FormGroup
+            className="mb-3"
+            controlId="12345678zipcode"
+          >
+            <div
+              className="mb-3 form-group"
+            >
+              <FormLabel
+                column={false}
+                srOnly={false}
+              >
+                <label
+                  className="form-label"
+                  htmlFor="12345678zipcode"
+                >
+                  ZIP
+                </label>
+              </FormLabel>
+              <FormText
+                className="help-text"
+              >
+                <small
+                  className="help-text form-text"
+                >
+                  <Trans
+                    i18nKey="retrocerts-certification.employers.help-zipcode"
+                    t={[Function]}
+                  >
+                    The employer's ZIP code where work was performed for this week. 
+                    <p
+                      key="p-1"
+                    >
+                      Enter as ##### or #####-####.
+                    </p>
+                  </Trans>
+                </small>
+              </FormText>
+              <FormControl
+                className="col-md-3"
+                maxLength={10}
+                onChange={[Function]}
+                pattern="\\\\d{5}|\\\\d{5}-\\\\d{4}"
+                required={true}
+                type="text"
+                value="94100"
+              >
+                <input
+                  className="col-md-3 form-control"
+                  id="12345678zipcode"
+                  maxLength={10}
+                  onChange={[Function]}
+                  pattern="\\\\d{5}|\\\\d{5}-\\\\d{4}"
+                  required={true}
+                  type="text"
+                  value="94100"
+                />
+              </FormControl>
+              <Feedback
+                type="invalid"
+              >
+                <div
+                  className="invalid-feedback"
+                >
+                  This field is required.
+                </div>
+              </Feedback>
+            </div>
+          </FormGroup>
+          <p>
+            Last Date Worked
+          </p>
+          <small
+            className="help-text"
+          >
+            The last day worked in this certification week.
+          </small>
+          <FormRow
+            className="mb-3"
+          >
+            <div
+              className="mb-3 form-row"
+            >
+              <FormGroup
+                as={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "displayName": "Col",
+                    "render": [Function],
+                  }
+                }
+                controlId="12345678lastDateWorked-month-question"
+                md={2}
+              >
+                <Col
+                  className="form-group"
+                  md={2}
+                >
+                  <div
+                    className="form-group col-md-2"
+                  >
+                    <FormLabel
+                      column={false}
+                      srOnly={false}
+                    >
+                      <label
+                        className="form-label"
+                        htmlFor="12345678lastDateWorked-month-question"
+                      >
+                        Month
+                      </label>
+                    </FormLabel>
+                    <FormControl
+                      maxLength={2}
+                      onChange={[Function]}
+                      pattern="(^0[1-9])|(^1[0-2])|(^[1-9]$)"
+                      required={true}
+                      type="text"
+                      value="02"
+                    >
+                      <input
+                        className="form-control"
+                        id="12345678lastDateWorked-month-question"
+                        maxLength={2}
+                        onChange={[Function]}
+                        pattern="(^0[1-9])|(^1[0-2])|(^[1-9]$)"
+                        required={true}
+                        type="text"
+                        value="02"
+                      />
+                    </FormControl>
+                    <Feedback
+                      type="invalid"
+                    >
+                      <div
+                        className="invalid-feedback"
+                      >
+                        This field is required.
+                      </div>
+                    </Feedback>
+                  </div>
+                </Col>
+              </FormGroup>
+              <FormGroup
+                as={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "displayName": "Col",
+                    "render": [Function],
+                  }
+                }
+                controlId="12345678lastDateWorked-day-question"
+                md={2}
+              >
+                <Col
+                  className="form-group"
+                  md={2}
+                >
+                  <div
+                    className="form-group col-md-2"
+                  >
+                    <FormLabel
+                      column={false}
+                      srOnly={false}
+                    >
+                      <label
+                        className="form-label"
+                        htmlFor="12345678lastDateWorked-day-question"
+                      >
+                        Day
+                      </label>
+                    </FormLabel>
+                    <FormControl
+                      maxLength={2}
+                      onChange={[Function]}
+                      pattern="(^0[1-9])|(^1[0-9])|(^2[0-9])|(^3[0-1])|(^[1-9]$)"
+                      required={true}
+                      type="text"
+                      value="22"
+                    >
+                      <input
+                        className="form-control"
+                        id="12345678lastDateWorked-day-question"
+                        maxLength={2}
+                        onChange={[Function]}
+                        pattern="(^0[1-9])|(^1[0-9])|(^2[0-9])|(^3[0-1])|(^[1-9]$)"
+                        required={true}
+                        type="text"
+                        value="22"
+                      />
+                    </FormControl>
+                    <Feedback
+                      type="invalid"
+                    >
+                      <div
+                        className="invalid-feedback"
+                      >
+                        This field is required.
+                      </div>
+                    </Feedback>
+                  </div>
+                </Col>
+              </FormGroup>
+              <FormGroup
+                as={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "displayName": "Col",
+                    "render": [Function],
+                  }
+                }
+                md={2}
+              >
+                <Col
+                  className="form-group"
+                  md={2}
+                >
+                  <div
+                    className="form-group col-md-2"
+                  >
+                    <FormLabel
+                      column={false}
+                      srOnly={false}
+                    >
+                      <label
+                        className="form-label"
+                      >
+                        Year
+                      </label>
+                    </FormLabel>
+                    <FormControl
+                      disabled={true}
+                      type="text"
+                      value="2020"
+                    >
+                      <input
+                        className="form-control"
+                        disabled={true}
+                        type="text"
+                        value="2020"
+                      />
+                    </FormControl>
+                  </div>
+                </Col>
+              </FormGroup>
+            </div>
+          </FormRow>
+          <FormGroup
+            className="mb-3"
+            controlId="12345678totalHoursWorked"
+          >
+            <div
+              className="mb-3 form-group"
+            >
+              <FormLabel
+                column={false}
+                srOnly={false}
+              >
+                <label
+                  className="form-label"
+                  htmlFor="12345678totalHoursWorked"
+                >
+                  Total hours worked for this employer
+                </label>
+              </FormLabel>
+              <FormText
+                className="help-text"
+              >
+                <small
+                  className="help-text form-text"
+                >
+                  <Trans
+                    i18nKey="retrocerts-certification.employers.help-totalHoursWorked"
+                    t={[Function]}
+                  >
+                    Report the hours worked in this week for this employer.
+                  </Trans>
+                </small>
+              </FormText>
+              <FormControl
+                className="col-md-2"
+                maxLength={6}
+                onChange={[Function]}
+                pattern="\\\\d+[.]?\\\\d*"
+                required={true}
+                type="text"
+                value="10"
+              >
+                <input
+                  className="col-md-2 form-control"
+                  id="12345678totalHoursWorked"
+                  maxLength={6}
+                  onChange={[Function]}
+                  pattern="\\\\d+[.]?\\\\d*"
+                  required={true}
+                  type="text"
+                  value="10"
+                />
+              </FormControl>
+              <Feedback
+                type="invalid"
+              >
+                <div
+                  className="invalid-feedback"
+                >
+                  This field is required.
+                </div>
+              </Feedback>
+            </div>
+          </FormGroup>
+          <FormGroup
+            className="mb-3"
+            controlId="12345678grossEarnings"
+          >
+            <div
+              className="mb-3 form-group"
+            >
+              <FormLabel
+                column={false}
+                srOnly={false}
+              >
+                <label
+                  className="form-label"
+                  htmlFor="12345678grossEarnings"
+                >
+                  Gross earnings before deductions for this employer (whether you were paid or not)
+                </label>
+              </FormLabel>
+              <FormText
+                className="help-text"
+              >
+                <small
+                  className="help-text form-text"
+                >
+                  <Trans
+                    i18nKey="retrocerts-certification.employers.help-grossEarnings"
+                    t={[Function]}
+                  >
+                    Full earnings without deductions.
+                  </Trans>
+                </small>
+              </FormText>
+              <FormControl
+                className="col-md-2"
+                maxLength={11}
+                onChange={[Function]}
+                pattern="^\\\\$?(([1-9](\\\\d*|\\\\d{0,2}(,\\\\d{3})*))|0)(\\\\.\\\\d{2})?$"
+                required={true}
+                type="text"
+                value="$200"
+              >
+                <input
+                  className="col-md-2 form-control"
+                  id="12345678grossEarnings"
+                  maxLength={11}
+                  onChange={[Function]}
+                  pattern="^\\\\$?(([1-9](\\\\d*|\\\\d{0,2}(,\\\\d{3})*))|0)(\\\\.\\\\d{2})?$"
+                  required={true}
+                  type="text"
+                  value="$200"
+                />
+              </FormControl>
+              <Feedback
+                type="invalid"
+              >
+                <div
+                  className="invalid-feedback"
+                >
+                  This field is required.
+                </div>
+              </Feedback>
+            </div>
+          </FormGroup>
+          <FormGroup
+            controlId="12345678reason-select"
+          >
+            <div
+              className="form-group"
+            >
+              <FormLabel
+                column={false}
+                srOnly={false}
+              >
+                <label
+                  className="form-label"
+                  htmlFor="12345678reason-select"
+                >
+                  Select the reason you are no longer working:
+                </label>
+              </FormLabel>
+              <FormControl
+                as="select"
+                onChange={[Function]}
+                value="still-working"
+              >
+                <select
+                  className="form-control"
+                  id="12345678reason-select"
+                  onChange={[Function]}
+                  value="still-working"
+                >
+                  <option
+                    key="fired"
+                    value="fired"
+                  >
+                    Terminated or Fired
+                  </option>
+                  <option
+                    key="quit"
+                    value="quit"
+                  >
+                    Quit
+                  </option>
+                  <option
+                    key="laid-off"
+                    value="laid-off"
+                  >
+                    Laid Off
+                  </option>
+                  <option
+                    key="still-working"
+                    value="still-working"
+                  >
+                    Still Working Part Time
+                  </option>
+                </select>
+              </FormControl>
+            </div>
+          </FormGroup>
+        </div>
+      </EmployerQuestions>
+    </div>
+    <div
+      key="employerData22222222"
+    >
+      <hr />
+      <Row
+        className="align-items-baseline"
+        noGutters={false}
+      >
+        <div
+          className="align-items-baseline row"
+        >
+          <Col
+            md="auto"
+          >
+            <div
+              className="col-md-auto"
+            >
+              <h3>
+                <Trans
+                  i18nKey="retrocerts-certification.employers.heading"
+                  t={[Function]}
+                  values={
+                    Object {
+                      "incomeNumber": 2,
+                    }
+                  }
+                >
+                  Employer 2
+                </Trans>
+              </h3>
+            </div>
+          </Col>
+          <Col
+            md="auto"
+          >
+            <div
+              className="col-md-auto"
+            >
+              <NavLink
+                as={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "displayName": "SafeAnchor",
+                    "render": [Function],
+                  }
+                }
+                disabled={false}
+                onClick={[Function]}
+              >
+                <ForwardRef
+                  as={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "displayName": "SafeAnchor",
+                      "render": [Function],
+                    }
+                  }
+                  className="nav-link"
+                  disabled={false}
+                  onClick={[Function]}
+                >
+                  <SafeAnchor
+                    className="nav-link"
+                    disabled={false}
+                    onClick={[Function]}
+                  >
+                    <a
+                      className="nav-link"
+                      href="#"
+                      onClick={[Function]}
+                      onKeyDown={[Function]}
+                      role="button"
+                    >
+                      Remove this employer
+                    </a>
+                  </SafeAnchor>
+                </ForwardRef>
+              </NavLink>
+            </div>
+          </Col>
+        </div>
+      </Row>
+      <EmployerQuestions
+        employerData={
+          Object {
+            "address1": "e2 - address 1",
+            "address2": "",
+            "city": "city 2",
+            "employerName": "employer name 2",
+            "grossEarnings": "$300",
+            "id": "22222222",
+            "lastDateWorked": "02/24/2020",
+            "moreDetails": "unable to travel",
+            "reason": "quit",
+            "state": "OR",
+            "totalHoursWorked": "12",
+            "zipcode": "97035",
+          }
+        }
+        onChange={[Function]}
+      >
+        <div
+          className="follow-up"
+        >
+          <FormGroup
+            className="mb-3"
+            controlId="22222222employerName"
+          >
+            <div
+              className="mb-3 form-group"
+            >
+              <FormLabel
+                column={false}
+                srOnly={false}
+              >
+                <label
+                  className="form-label"
+                  htmlFor="22222222employerName"
+                >
+                  Employer Name
+                </label>
+              </FormLabel>
+              <FormText
+                className="help-text"
+              >
+                <small
+                  className="help-text form-text"
+                >
+                  <Trans
+                    i18nKey="retrocerts-certification.employers.help-employerName"
+                    t={[Function]}
+                  >
+                    The employer's name that work was performed for this week.
+                  </Trans>
+                </small>
+              </FormText>
+              <FormControl
+                maxLength={500}
+                onChange={[Function]}
+                required={true}
+                type="text"
+                value="employer name 2"
+              >
+                <input
+                  className="form-control"
+                  id="22222222employerName"
+                  maxLength={500}
+                  onChange={[Function]}
+                  required={true}
+                  type="text"
+                  value="employer name 2"
+                />
+              </FormControl>
+              <Feedback
+                type="invalid"
+              >
+                <div
+                  className="invalid-feedback"
+                >
+                  This field is required.
+                </div>
+              </Feedback>
+            </div>
+          </FormGroup>
+          <FormGroup
+            className="mb-3"
+            controlId="22222222address1"
+          >
+            <div
+              className="mb-3 form-group"
+            >
+              <FormLabel
+                column={false}
+                srOnly={false}
+              >
+                <label
+                  className="form-label"
+                  htmlFor="22222222address1"
+                >
+                  Address Line 1
+                </label>
+              </FormLabel>
+              <FormText
+                className="help-text"
+              >
+                <small
+                  className="help-text form-text"
+                >
+                  <Trans
+                    i18nKey="retrocerts-certification.employers.help-address1"
+                    t={[Function]}
+                  >
+                    The employer's address that work was performed for this week.
+                  </Trans>
+                </small>
+              </FormText>
+              <FormControl
+                maxLength={500}
+                onChange={[Function]}
+                required={true}
+                type="text"
+                value="e2 - address 1"
+              >
+                <input
+                  className="form-control"
+                  id="22222222address1"
+                  maxLength={500}
+                  onChange={[Function]}
+                  required={true}
+                  type="text"
+                  value="e2 - address 1"
+                />
+              </FormControl>
+              <Feedback
+                type="invalid"
+              >
+                <div
+                  className="invalid-feedback"
+                >
+                  This field is required.
+                </div>
+              </Feedback>
+            </div>
+          </FormGroup>
+          <FormGroup
+            className="mb-3"
+            controlId="22222222address2"
+          >
+            <div
+              className="mb-3 form-group"
+            >
+              <FormLabel
+                column={false}
+                srOnly={false}
+              >
+                <label
+                  className="form-label"
+                  htmlFor="22222222address2"
+                >
+                  Address Line 2
+                </label>
+              </FormLabel>
+              <FormText
+                className="help-text"
+              >
+                <small
+                  className="help-text form-text"
+                >
+                  <Trans
+                    i18nKey="retrocerts-certification.employers.help-address2"
+                    t={[Function]}
+                  >
+                    The employer's suite, floor, etc. that work was performed for this week.
+                  </Trans>
+                </small>
+              </FormText>
+              <FormControl
+                maxLength={500}
+                onChange={[Function]}
+                required={false}
+                type="text"
+                value=""
+              >
+                <input
+                  className="form-control"
+                  id="22222222address2"
+                  maxLength={500}
+                  onChange={[Function]}
+                  required={false}
+                  type="text"
+                  value=""
+                />
+              </FormControl>
+              <Feedback
+                type="invalid"
+              >
+                <div
+                  className="invalid-feedback"
+                >
+                  This field is required.
+                </div>
+              </Feedback>
+            </div>
+          </FormGroup>
+          <FormRow>
+            <div
+              className="form-row"
+            >
+              <Col
+                md={8}
+              >
+                <div
+                  className="col-md-8"
+                >
+                  <FormGroup
+                    className="mb-3"
+                    controlId="22222222city"
+                  >
+                    <div
+                      className="mb-3 form-group"
+                    >
+                      <FormLabel
+                        column={false}
+                        srOnly={false}
+                      >
+                        <label
+                          className="form-label"
+                          htmlFor="22222222city"
+                        >
+                          City
+                        </label>
+                      </FormLabel>
+                      <FormText
+                        className="help-text"
+                      >
+                        <small
+                          className="help-text form-text"
+                        >
+                          <Trans
+                            i18nKey="retrocerts-certification.employers.help-city"
+                            t={[Function]}
+                          >
+                            The employer's city where work was performed for this week.
+                          </Trans>
+                        </small>
+                      </FormText>
+                      <FormControl
+                        maxLength={100}
+                        onChange={[Function]}
+                        required={true}
+                        type="text"
+                        value="city 2"
+                      >
+                        <input
+                          className="form-control"
+                          id="22222222city"
+                          maxLength={100}
+                          onChange={[Function]}
+                          required={true}
+                          type="text"
+                          value="city 2"
+                        />
+                      </FormControl>
+                      <Feedback
+                        type="invalid"
+                      >
+                        <div
+                          className="invalid-feedback"
+                        >
+                          This field is required.
+                        </div>
+                      </Feedback>
+                    </div>
+                  </FormGroup>
+                </div>
+              </Col>
+            </div>
+          </FormRow>
+          <FormRow
+            className="mb-3"
+          >
+            <div
+              className="mb-3 form-row"
+            >
+              <FormGroup
+                as={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "displayName": "Col",
+                    "render": [Function],
+                  }
+                }
+                className="col-md-8"
+                controlId="22222222state-select"
+              >
+                <Col
+                  className="col-md-8 form-group"
+                >
+                  <div
+                    className="col-md-8 form-group col"
+                  >
+                    <FormLabel
+                      column={false}
+                      srOnly={false}
+                    >
+                      <label
+                        className="form-label"
+                        htmlFor="22222222state-select"
+                      >
+                        State
+                      </label>
+                    </FormLabel>
+                    <FormText
+                      className="help-text"
+                    >
+                      <small
+                        className="help-text form-text"
+                      >
+                        The employer's state where work was performed for this week.
+                      </small>
+                    </FormText>
+                    <FormControl
+                      as="select"
+                      className="col-md-4"
+                      onChange={[Function]}
+                      required={true}
+                      value="OR"
+                    >
+                      <select
+                        className="col-md-4 form-control"
+                        id="22222222state-select"
+                        onChange={[Function]}
+                        required={true}
+                        value="OR"
+                      >
+                        <option />
+                        <option
+                          key="AK"
+                        >
+                          AK
+                        </option>
+                        <option
+                          key="AL"
+                        >
+                          AL
+                        </option>
+                        <option
+                          key="AR"
+                        >
+                          AR
+                        </option>
+                        <option
+                          key="AS"
+                        >
+                          AS
+                        </option>
+                        <option
+                          key="AZ"
+                        >
+                          AZ
+                        </option>
+                        <option
+                          key="CA"
+                        >
+                          CA
+                        </option>
+                        <option
+                          key="CO"
+                        >
+                          CO
+                        </option>
+                        <option
+                          key="CT"
+                        >
+                          CT
+                        </option>
+                        <option
+                          key="DC"
+                        >
+                          DC
+                        </option>
+                        <option
+                          key="DE"
+                        >
+                          DE
+                        </option>
+                        <option
+                          key="FL"
+                        >
+                          FL
+                        </option>
+                        <option
+                          key="FM"
+                        >
+                          FM
+                        </option>
+                        <option
+                          key="GA"
+                        >
+                          GA
+                        </option>
+                        <option
+                          key="GU"
+                        >
+                          GU
+                        </option>
+                        <option
+                          key="HI"
+                        >
+                          HI
+                        </option>
+                        <option
+                          key="IA"
+                        >
+                          IA
+                        </option>
+                        <option
+                          key="ID"
+                        >
+                          ID
+                        </option>
+                        <option
+                          key="IL"
+                        >
+                          IL
+                        </option>
+                        <option
+                          key="IN"
+                        >
+                          IN
+                        </option>
+                        <option
+                          key="KS"
+                        >
+                          KS
+                        </option>
+                        <option
+                          key="KY"
+                        >
+                          KY
+                        </option>
+                        <option
+                          key="LA"
+                        >
+                          LA
+                        </option>
+                        <option
+                          key="MA"
+                        >
+                          MA
+                        </option>
+                        <option
+                          key="MD"
+                        >
+                          MD
+                        </option>
+                        <option
+                          key="ME"
+                        >
+                          ME
+                        </option>
+                        <option
+                          key="MH"
+                        >
+                          MH
+                        </option>
+                        <option
+                          key="MI"
+                        >
+                          MI
+                        </option>
+                        <option
+                          key="MN"
+                        >
+                          MN
+                        </option>
+                        <option
+                          key="MO"
+                        >
+                          MO
+                        </option>
+                        <option
+                          key="MP"
+                        >
+                          MP
+                        </option>
+                        <option
+                          key="MS"
+                        >
+                          MS
+                        </option>
+                        <option
+                          key="MT"
+                        >
+                          MT
+                        </option>
+                        <option
+                          key="NC"
+                        >
+                          NC
+                        </option>
+                        <option
+                          key="ND"
+                        >
+                          ND
+                        </option>
+                        <option
+                          key="NE"
+                        >
+                          NE
+                        </option>
+                        <option
+                          key="NH"
+                        >
+                          NH
+                        </option>
+                        <option
+                          key="NJ"
+                        >
+                          NJ
+                        </option>
+                        <option
+                          key="NM"
+                        >
+                          NM
+                        </option>
+                        <option
+                          key="NV"
+                        >
+                          NV
+                        </option>
+                        <option
+                          key="NY"
+                        >
+                          NY
+                        </option>
+                        <option
+                          key="OH"
+                        >
+                          OH
+                        </option>
+                        <option
+                          key="OK"
+                        >
+                          OK
+                        </option>
+                        <option
+                          key="OR"
+                        >
+                          OR
+                        </option>
+                        <option
+                          key="PA"
+                        >
+                          PA
+                        </option>
+                        <option
+                          key="PR"
+                        >
+                          PR
+                        </option>
+                        <option
+                          key="PW"
+                        >
+                          PW
+                        </option>
+                        <option
+                          key="RI"
+                        >
+                          RI
+                        </option>
+                        <option
+                          key="SC"
+                        >
+                          SC
+                        </option>
+                        <option
+                          key="SD"
+                        >
+                          SD
+                        </option>
+                        <option
+                          key="TN"
+                        >
+                          TN
+                        </option>
+                        <option
+                          key="TX"
+                        >
+                          TX
+                        </option>
+                        <option
+                          key="UT"
+                        >
+                          UT
+                        </option>
+                        <option
+                          key="VA"
+                        >
+                          VA
+                        </option>
+                        <option
+                          key="VI"
+                        >
+                          VI
+                        </option>
+                        <option
+                          key="VT"
+                        >
+                          VT
+                        </option>
+                        <option
+                          key="WA"
+                        >
+                          WA
+                        </option>
+                        <option
+                          key="WI"
+                        >
+                          WI
+                        </option>
+                        <option
+                          key="WV"
+                        >
+                          WV
+                        </option>
+                        <option
+                          key="WY"
+                        >
+                          WY
+                        </option>
+                      </select>
+                    </FormControl>
+                    <Feedback
+                      type="invalid"
+                    >
+                      <div
+                        className="invalid-feedback"
+                      >
+                        This field is required.
+                      </div>
+                    </Feedback>
+                  </div>
+                </Col>
+              </FormGroup>
+            </div>
+          </FormRow>
+          <FormGroup
+            className="mb-3"
+            controlId="22222222zipcode"
+          >
+            <div
+              className="mb-3 form-group"
+            >
+              <FormLabel
+                column={false}
+                srOnly={false}
+              >
+                <label
+                  className="form-label"
+                  htmlFor="22222222zipcode"
+                >
+                  ZIP
+                </label>
+              </FormLabel>
+              <FormText
+                className="help-text"
+              >
+                <small
+                  className="help-text form-text"
+                >
+                  <Trans
+                    i18nKey="retrocerts-certification.employers.help-zipcode"
+                    t={[Function]}
+                  >
+                    The employer's ZIP code where work was performed for this week. 
+                    <p
+                      key="p-1"
+                    >
+                      Enter as ##### or #####-####.
+                    </p>
+                  </Trans>
+                </small>
+              </FormText>
+              <FormControl
+                className="col-md-3"
+                maxLength={10}
+                onChange={[Function]}
+                pattern="\\\\d{5}|\\\\d{5}-\\\\d{4}"
+                required={true}
+                type="text"
+                value="97035"
+              >
+                <input
+                  className="col-md-3 form-control"
+                  id="22222222zipcode"
+                  maxLength={10}
+                  onChange={[Function]}
+                  pattern="\\\\d{5}|\\\\d{5}-\\\\d{4}"
+                  required={true}
+                  type="text"
+                  value="97035"
+                />
+              </FormControl>
+              <Feedback
+                type="invalid"
+              >
+                <div
+                  className="invalid-feedback"
+                >
+                  This field is required.
+                </div>
+              </Feedback>
+            </div>
+          </FormGroup>
+          <p>
+            Last Date Worked
+          </p>
+          <small
+            className="help-text"
+          >
+            The last day worked in this certification week.
+          </small>
+          <FormRow
+            className="mb-3"
+          >
+            <div
+              className="mb-3 form-row"
+            >
+              <FormGroup
+                as={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "displayName": "Col",
+                    "render": [Function],
+                  }
+                }
+                controlId="22222222lastDateWorked-month-question"
+                md={2}
+              >
+                <Col
+                  className="form-group"
+                  md={2}
+                >
+                  <div
+                    className="form-group col-md-2"
+                  >
+                    <FormLabel
+                      column={false}
+                      srOnly={false}
+                    >
+                      <label
+                        className="form-label"
+                        htmlFor="22222222lastDateWorked-month-question"
+                      >
+                        Month
+                      </label>
+                    </FormLabel>
+                    <FormControl
+                      maxLength={2}
+                      onChange={[Function]}
+                      pattern="(^0[1-9])|(^1[0-2])|(^[1-9]$)"
+                      required={true}
+                      type="text"
+                      value="02"
+                    >
+                      <input
+                        className="form-control"
+                        id="22222222lastDateWorked-month-question"
+                        maxLength={2}
+                        onChange={[Function]}
+                        pattern="(^0[1-9])|(^1[0-2])|(^[1-9]$)"
+                        required={true}
+                        type="text"
+                        value="02"
+                      />
+                    </FormControl>
+                    <Feedback
+                      type="invalid"
+                    >
+                      <div
+                        className="invalid-feedback"
+                      >
+                        This field is required.
+                      </div>
+                    </Feedback>
+                  </div>
+                </Col>
+              </FormGroup>
+              <FormGroup
+                as={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "displayName": "Col",
+                    "render": [Function],
+                  }
+                }
+                controlId="22222222lastDateWorked-day-question"
+                md={2}
+              >
+                <Col
+                  className="form-group"
+                  md={2}
+                >
+                  <div
+                    className="form-group col-md-2"
+                  >
+                    <FormLabel
+                      column={false}
+                      srOnly={false}
+                    >
+                      <label
+                        className="form-label"
+                        htmlFor="22222222lastDateWorked-day-question"
+                      >
+                        Day
+                      </label>
+                    </FormLabel>
+                    <FormControl
+                      maxLength={2}
+                      onChange={[Function]}
+                      pattern="(^0[1-9])|(^1[0-9])|(^2[0-9])|(^3[0-1])|(^[1-9]$)"
+                      required={true}
+                      type="text"
+                      value="24"
+                    >
+                      <input
+                        className="form-control"
+                        id="22222222lastDateWorked-day-question"
+                        maxLength={2}
+                        onChange={[Function]}
+                        pattern="(^0[1-9])|(^1[0-9])|(^2[0-9])|(^3[0-1])|(^[1-9]$)"
+                        required={true}
+                        type="text"
+                        value="24"
+                      />
+                    </FormControl>
+                    <Feedback
+                      type="invalid"
+                    >
+                      <div
+                        className="invalid-feedback"
+                      >
+                        This field is required.
+                      </div>
+                    </Feedback>
+                  </div>
+                </Col>
+              </FormGroup>
+              <FormGroup
+                as={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "displayName": "Col",
+                    "render": [Function],
+                  }
+                }
+                md={2}
+              >
+                <Col
+                  className="form-group"
+                  md={2}
+                >
+                  <div
+                    className="form-group col-md-2"
+                  >
+                    <FormLabel
+                      column={false}
+                      srOnly={false}
+                    >
+                      <label
+                        className="form-label"
+                      >
+                        Year
+                      </label>
+                    </FormLabel>
+                    <FormControl
+                      disabled={true}
+                      type="text"
+                      value="2020"
+                    >
+                      <input
+                        className="form-control"
+                        disabled={true}
+                        type="text"
+                        value="2020"
+                      />
+                    </FormControl>
+                  </div>
+                </Col>
+              </FormGroup>
+            </div>
+          </FormRow>
+          <FormGroup
+            className="mb-3"
+            controlId="22222222totalHoursWorked"
+          >
+            <div
+              className="mb-3 form-group"
+            >
+              <FormLabel
+                column={false}
+                srOnly={false}
+              >
+                <label
+                  className="form-label"
+                  htmlFor="22222222totalHoursWorked"
+                >
+                  Total hours worked for this employer
+                </label>
+              </FormLabel>
+              <FormText
+                className="help-text"
+              >
+                <small
+                  className="help-text form-text"
+                >
+                  <Trans
+                    i18nKey="retrocerts-certification.employers.help-totalHoursWorked"
+                    t={[Function]}
+                  >
+                    Report the hours worked in this week for this employer.
+                  </Trans>
+                </small>
+              </FormText>
+              <FormControl
+                className="col-md-2"
+                maxLength={6}
+                onChange={[Function]}
+                pattern="\\\\d+[.]?\\\\d*"
+                required={true}
+                type="text"
+                value="12"
+              >
+                <input
+                  className="col-md-2 form-control"
+                  id="22222222totalHoursWorked"
+                  maxLength={6}
+                  onChange={[Function]}
+                  pattern="\\\\d+[.]?\\\\d*"
+                  required={true}
+                  type="text"
+                  value="12"
+                />
+              </FormControl>
+              <Feedback
+                type="invalid"
+              >
+                <div
+                  className="invalid-feedback"
+                >
+                  This field is required.
+                </div>
+              </Feedback>
+            </div>
+          </FormGroup>
+          <FormGroup
+            className="mb-3"
+            controlId="22222222grossEarnings"
+          >
+            <div
+              className="mb-3 form-group"
+            >
+              <FormLabel
+                column={false}
+                srOnly={false}
+              >
+                <label
+                  className="form-label"
+                  htmlFor="22222222grossEarnings"
+                >
+                  Gross earnings before deductions for this employer (whether you were paid or not)
+                </label>
+              </FormLabel>
+              <FormText
+                className="help-text"
+              >
+                <small
+                  className="help-text form-text"
+                >
+                  <Trans
+                    i18nKey="retrocerts-certification.employers.help-grossEarnings"
+                    t={[Function]}
+                  >
+                    Full earnings without deductions.
+                  </Trans>
+                </small>
+              </FormText>
+              <FormControl
+                className="col-md-2"
+                maxLength={11}
+                onChange={[Function]}
+                pattern="^\\\\$?(([1-9](\\\\d*|\\\\d{0,2}(,\\\\d{3})*))|0)(\\\\.\\\\d{2})?$"
+                required={true}
+                type="text"
+                value="$300"
+              >
+                <input
+                  className="col-md-2 form-control"
+                  id="22222222grossEarnings"
+                  maxLength={11}
+                  onChange={[Function]}
+                  pattern="^\\\\$?(([1-9](\\\\d*|\\\\d{0,2}(,\\\\d{3})*))|0)(\\\\.\\\\d{2})?$"
+                  required={true}
+                  type="text"
+                  value="$300"
+                />
+              </FormControl>
+              <Feedback
+                type="invalid"
+              >
+                <div
+                  className="invalid-feedback"
+                >
+                  This field is required.
+                </div>
+              </Feedback>
+            </div>
+          </FormGroup>
+          <FormGroup
+            controlId="22222222reason-select"
+          >
+            <div
+              className="form-group"
+            >
+              <FormLabel
+                column={false}
+                srOnly={false}
+              >
+                <label
+                  className="form-label"
+                  htmlFor="22222222reason-select"
+                >
+                  Select the reason you are no longer working:
+                </label>
+              </FormLabel>
+              <FormControl
+                as="select"
+                onChange={[Function]}
+                value="quit"
+              >
+                <select
+                  className="form-control"
+                  id="22222222reason-select"
+                  onChange={[Function]}
+                  value="quit"
+                >
+                  <option
+                    key="fired"
+                    value="fired"
+                  >
+                    Terminated or Fired
+                  </option>
+                  <option
+                    key="quit"
+                    value="quit"
+                  >
+                    Quit
+                  </option>
+                  <option
+                    key="laid-off"
+                    value="laid-off"
+                  >
+                    Laid Off
+                  </option>
+                  <option
+                    key="still-working"
+                    value="still-working"
+                  >
+                    Still Working Part Time
+                  </option>
+                </select>
+              </FormControl>
+            </div>
+          </FormGroup>
+          <FormGroup
+            controlId="22222222reason-details"
+          >
+            <div
+              className="form-group"
+            >
+              <FormLabel
+                column={false}
+                srOnly={false}
+              >
+                <label
+                  className="form-label"
+                  htmlFor="22222222reason-details"
+                >
+                  Provide more details.
+                </label>
+              </FormLabel>
+              <FormText
+                className="help-text"
+              >
+                <small
+                  className="help-text form-text"
+                >
+                  Provide a specific reason why you are no longer working.
+                </small>
+              </FormText>
+              <FormControl
+                as="textarea"
+                maxLength={2000}
+                onChange={[Function]}
+                required={true}
+                rows="3"
+                value="unable to travel"
+              >
+                <textarea
+                  className="form-control"
+                  id="22222222reason-details"
+                  maxLength={2000}
+                  onChange={[Function]}
+                  required={true}
+                  rows="3"
+                  value="unable to travel"
+                />
+              </FormControl>
+            </div>
+          </FormGroup>
+        </div>
+      </EmployerQuestions>
+    </div>
+    <hr />
+    <Row
+      noGutters={false}
+    >
+      <div
+        className="row"
+      >
+        <Col
+          md="auto"
+        >
+          <div
+            className="col-md-auto"
+          >
+            <NavLink
+              as={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "displayName": "SafeAnchor",
+                  "render": [Function],
+                }
+              }
+              disabled={false}
+              onClick={[Function]}
+            >
+              <ForwardRef
+                as={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "displayName": "SafeAnchor",
+                    "render": [Function],
+                  }
+                }
+                className="nav-link"
+                disabled={false}
+                onClick={[Function]}
+              >
+                <SafeAnchor
+                  className="nav-link"
+                  disabled={false}
+                  onClick={[Function]}
+                >
+                  <a
+                    className="nav-link"
+                    href="#"
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    role="button"
+                  >
+                    + Add another employer
+                  </a>
+                </SafeAnchor>
+              </ForwardRef>
+            </NavLink>
+          </div>
+        </Col>
+      </div>
+    </Row>
+  </div>
+</EmployersQuestions>
 `;

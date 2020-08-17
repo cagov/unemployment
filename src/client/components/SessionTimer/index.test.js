@@ -3,7 +3,7 @@ import Component from "./index";
 
 describe("<SessionTimer />", () => {
   it("startOrUpdate", async () => {
-    const wrapper = renderNonTransContent(Component, "SessionTimer", {
+    const wrapper = renderNonTransContent(Component, {
       action: "startOrUpdate",
       setUserData: () => {},
     });
@@ -14,7 +14,7 @@ describe("<SessionTimer />", () => {
   });
 
   it("clear", async () => {
-    const wrapper = renderNonTransContent(Component, "SessionTimer", {
+    const wrapper = renderNonTransContent(Component, {
       action: "clear",
       setUserData: () => {},
     });

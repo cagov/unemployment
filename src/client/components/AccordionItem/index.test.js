@@ -4,7 +4,7 @@ import Component from "./index";
 
 describe("<AccordionItem />", () => {
   it("renders the component", async () => {
-    const wrapper = renderNonTransContent(Component, "AccordionItem", {
+    const wrapper = renderNonTransContent(Component, {
       header: <div>header react element</div>,
       content: <div>detailed body react element</div>,
       showContent: true,

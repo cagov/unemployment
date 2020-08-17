@@ -10,7 +10,7 @@ describe("<StaffViewAuthPage />", () => {
   });
 
   it("retro certs auth page with user not found error", async () => {
-    const wrapper = renderNonTransContent(Component, "StaffViewAuthPage", {
+    const wrapper = renderNonTransContent(Component, {
       userData: { status: AUTH_STRINGS.statusCode.userNotFound },
     });
 

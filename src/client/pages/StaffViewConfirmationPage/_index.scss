@@ -38,7 +38,7 @@ input[type="checkbox"] {
 
 @mixin status($bg-color) {
   font-size: 100%;
-  padding: 0.4em 0.3em;
+  padding: 0.3em 0.4em;
   background-color: $bg-color;
 }
 
