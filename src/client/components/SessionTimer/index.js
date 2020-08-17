@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import PropTypes from "prop-types";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
-import { useTranslation } from "react-i18next";
+import { useTranslation, Trans } from "react-i18next";
 import { setUserDataPropType } from "../../commonPropTypes";
 import AUTH_STRINGS from "../../../data/authStrings";
 import routes from "../../../data/routes";
@@ -16,11 +16,23 @@ const TIMEOUT_KEY = "timeout";
 function SessionTimer(props) {
   const { t } = useTranslation();
   const TIMEOUT_MS = 30 * 60 * 1000;
-  const TIMEOUT_WARNING_MS = TIMEOUT_MS - 5 * 60 * 1000;
+  const TIMEOUT_DISPLAY_TIME_IN_MINUTES = 5;
+  const TIMEOUT_WARNING_MS =
+    TIMEOUT_MS - TIMEOUT_DISPLAY_TIME_IN_MINUTES * 60 * 1000;
   const history = useHistory();
   const { action, setUserData } = props;
 
   const [showWarningModal, setShowWarningModal] = useState();
+  const [numberOfMinutes, setNumberOfMinutes] = useState();
+
+  useEffect(() => {
+    if (showWarningModal) {
+      const timer = setTimeout(() => {
+        setNumberOfMinutes(numberOfMinutes - 1);
+      }, 60 * 1000);
+      return () => clearTimeout(timer);
+    }
+  });
 
   function closeWarningModal() {
     setShowWarningModal(false);
@@ -50,6 +62,7 @@ function SessionTimer(props) {
     clear();
     warningTimerId = setTimeout(() => {
       if (sessionStorage.getItem(AUTH_STRINGS.authToken)) {
+        setNumberOfMinutes(TIMEOUT_DISPLAY_TIME_IN_MINUTES);
         setShowWarningModal(true);
       }
     }, TIMEOUT_WARNING_MS);
@@ -83,7 +96,13 @@ function SessionTimer(props) {
           <strong>{t("timeout-modal.header")}</strong>
         </Modal.Title>
       </Modal.Header>
-      <Modal.Body>{t("timeout-modal.warning")}</Modal.Body>
+      <Modal.Body>
+        <Trans
+          t={t}
+          i18nKey="timeout-modal.warning"
+          values={{ numberOfMinutes }}
+        />
+      </Modal.Body>
       <Modal.Footer className="border-0">
         <Button variant="secondary" onClick={closeWarningModal}>
           {t("timeout-modal.button")}
