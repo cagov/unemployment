@@ -23,7 +23,9 @@ function SessionTimer(props) {
   const { action, setUserData } = props;
 
   const [showWarningModal, setShowWarningModal] = useState();
-  const [numberOfMinutes, setNumberOfMinutes] = useState();
+  const [numberOfMinutes, setNumberOfMinutes] = useState(
+    TIMEOUT_DISPLAY_TIME_IN_MINUTES
+  );
 
   useEffect(() => {
     if (showWarningModal) {
@@ -62,8 +64,8 @@ function SessionTimer(props) {
     clear();
     warningTimerId = setTimeout(() => {
       if (sessionStorage.getItem(AUTH_STRINGS.authToken)) {
-        setNumberOfMinutes(TIMEOUT_DISPLAY_TIME_IN_MINUTES);
         setShowWarningModal(true);
+        setNumberOfMinutes(TIMEOUT_DISPLAY_TIME_IN_MINUTES);
       }
     }, TIMEOUT_WARNING_MS);
     timeOutTimerId = setTimeout(() => {
