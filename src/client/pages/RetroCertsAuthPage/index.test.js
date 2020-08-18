@@ -4,7 +4,7 @@ import Component from "./index";
 
 describe("<RetroCertsAuthPage />", () => {
   it("retro certs auth page", async () => {
-    const wrapper = renderNonTransContent(Component, "RetroCertsAuthPage");
+    const wrapper = renderNonTransContent(Component);
 
     expect(wrapper).toMatchSnapshot();
   });

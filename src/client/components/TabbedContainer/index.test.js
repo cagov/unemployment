@@ -3,7 +3,7 @@ import Component from "./index";
 
 describe("<TabbedContainer />", () => {
   it("renders the component", async () => {
-    const wrapper = renderNonTransContent(Component, "TabbedContainer");
+    const wrapper = renderNonTransContent(Component);
 
     expect(wrapper).toMatchSnapshot();
   });

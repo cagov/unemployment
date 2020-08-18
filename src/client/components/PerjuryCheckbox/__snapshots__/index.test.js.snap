@@ -1,23 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<PerjuryCheckbox /> renders the component 1`] = `
-<PerjuryCheckbox
-  0="P"
-  1="e"
-  10="c"
-  11="k"
-  12="b"
-  13="o"
-  14="x"
-  2="r"
-  3="j"
-  4="u"
-  5="r"
-  6="y"
-  7="C"
-  8="h"
-  9="e"
->
+<PerjuryCheckbox>
   <FormGroup
     className="unchecked"
     controlId="perjury-checkbox"

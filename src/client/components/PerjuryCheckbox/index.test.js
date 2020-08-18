@@ -3,7 +3,7 @@ import Component from "./index";
 
 describe("<PerjuryCheckbox />", () => {
   it("renders the component", async () => {
-    const wrapper = renderTransContent(Component, "PerjuryCheckbox");
+    const wrapper = renderTransContent(Component);
 
     expect(wrapper).toMatchSnapshot();
   });
