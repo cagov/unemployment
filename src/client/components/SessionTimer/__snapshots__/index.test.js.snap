@@ -22,7 +22,7 @@ exports[`<SessionTimer /> clear 1`] = `
       t={[Function]}
       values={
         Object {
-          "numberOfMinutes": undefined,
+          "numberOfMinutes": 5,
         }
       }
     />
@@ -65,7 +65,7 @@ exports[`<SessionTimer /> startOrUpdate 1`] = `
       t={[Function]}
       values={
         Object {
-          "numberOfMinutes": undefined,
+          "numberOfMinutes": 5,
         }
       }
     />
