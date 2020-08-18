@@ -3,7 +3,7 @@ import Component from "./index";
 
 describe("<DaysSickQuestion />", () => {
   it("renders the component", async () => {
-    const wrapper = renderNonTransContent(Component, "DaysSickQuestion", {
+    const wrapper = renderNonTransContent(Component, {
       onChange: () => {},
       questionText:
         "If Yes, enter the number of days (1 - 7) you were unable to work.",

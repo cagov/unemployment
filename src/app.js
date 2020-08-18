@@ -106,7 +106,7 @@ function init(env = process.env) {
       env.ALLOWED_IP_RANGES.split(" ").forEach((ipRange) => {
         allowedIps.push(ipRange.split("-"));
       });
-    } else if (env.NODE_ENV !== "testing") {
+    } else if (env.NODE_ENV !== "test") {
       // This needs to be set on all non-development environments for Staff View
       console.error(
         "env.ALLOWED_IP_RANGES has not been set on " + env.NODE_ENV

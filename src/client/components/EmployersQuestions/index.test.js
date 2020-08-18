@@ -1,9 +1,9 @@
-import renderNonTransContent from "../../test-helpers/renderNonTransContent";
+import renderTransContent from "../../test-helpers/renderTransContent";
 import Component from "./index";
 
 describe("<EmployersQuestions />", () => {
   it("renders the component", async () => {
-    const wrapper = renderNonTransContent(Component, "EmployersQuestions", {
+    const wrapper = renderTransContent(Component, {
       onChange: () => {},
     });
 
@@ -11,7 +11,7 @@ describe("<EmployersQuestions />", () => {
   });
 
   it("renders with 2 income sources", async () => {
-    const wrapper = renderNonTransContent(Component, "EmployersQuestions", {
+    const wrapper = renderTransContent(Component, {
       onChange: () => {},
       employers: [
         {

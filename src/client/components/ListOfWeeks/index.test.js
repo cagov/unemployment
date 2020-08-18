@@ -1,9 +1,9 @@
-import renderNonTransContent from "../../test-helpers/renderNonTransContent";
+import renderTransContent from "../../test-helpers/renderTransContent";
 import Component from "./index";
 
 describe("<ListOfWeeks />", () => {
   it("renders the component", async () => {
-    const wrapper = renderNonTransContent(Component, "ListOfWeeks", {
+    const wrapper = renderTransContent(Component, {
       weeksToCertify: [0, 5],
     });
 
@@ -11,7 +11,7 @@ describe("<ListOfWeeks />", () => {
   });
 
   it("with checks", async () => {
-    const wrapper = renderNonTransContent(Component, "ListOfWeeks", {
+    const wrapper = renderTransContent(Component, {
       weeksToCertify: [1],
       showChecks: true,
     });

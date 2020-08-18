@@ -4,13 +4,13 @@ import Component from "./index";
 
 describe("<RetroCertsAuthPage />", () => {
   it("retro certs auth page", async () => {
-    const wrapper = renderNonTransContent(Component, "RetroCertsAuthPage");
+    const wrapper = renderNonTransContent(Component);
 
     expect(wrapper).toMatchSnapshot();
   });
 
   it("retro certs auth page with user not found error", async () => {
-    const wrapper = renderNonTransContent(Component, "RetroCertsAuthPage", {
+    const wrapper = renderNonTransContent(Component, {
       userData: { status: AUTH_STRINGS.statusCode.userNotFound },
     });
 
@@ -18,7 +18,7 @@ describe("<RetroCertsAuthPage />", () => {
   });
 
   it("retro certs auth page with captcha timeout error", async () => {
-    const wrapper = renderNonTransContent(Component, "RetroCertsAuthPage", {
+    const wrapper = renderNonTransContent(Component, {
       userData: { status: AUTH_STRINGS.statusCode.recaptchaInvalid },
     });
 
@@ -26,7 +26,7 @@ describe("<RetroCertsAuthPage />", () => {
   });
 
   it("retro certs auth page with session timeout", async () => {
-    const wrapper = renderNonTransContent(Component, "RetroCertsAuthPage", {
+    const wrapper = renderNonTransContent(Component, {
       userData: { status: AUTH_STRINGS.statusCode.sessionTimedOut },
     });
 

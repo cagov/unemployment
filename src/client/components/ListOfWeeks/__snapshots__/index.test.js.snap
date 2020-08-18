@@ -1,7 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ListOfWeeks /> renders the component 1`] = `
-Array [
+<ListOfWeeks
+  weeksToCertify={
+    Array [
+      0,
+      5,
+    ]
+  }
+>
   <Alert
     className="d-flex"
     closeLabel="Close alert"
@@ -23,22 +30,59 @@ Array [
     }
     variant="secondary"
   >
-    <div
-      className="flex-fill"
+    <Fade
+      appear={false}
+      in={true}
+      mountOnEnter={false}
+      timeout={300}
+      unmountOnExit={true}
     >
-      <Trans
-        i18nKey="retrocerts-week-list-item"
-        t={[Function]}
-        values={
-          Object {
-            "endDate": "02/08/2020",
-            "startDate": "02/02/2020",
-            "weekForUser": 1,
-          }
-        }
-      />
-    </div>
-  </Alert>,
+      <Transition
+        addEndListener={[Function]}
+        appear={false}
+        enter={true}
+        exit={true}
+        in={true}
+        mountOnEnter={false}
+        onEnter={[Function]}
+        onEntered={[Function]}
+        onEntering={[Function]}
+        onExit={[Function]}
+        onExited={[Function]}
+        onExiting={[Function]}
+        timeout={300}
+        unmountOnExit={true}
+      >
+        <div
+          className="fade d-flex alert alert-secondary show"
+          role="alert"
+        >
+          <div
+            className="flex-fill"
+          >
+            <Trans
+              i18nKey="retrocerts-week-list-item"
+              t={[Function]}
+              values={
+                Object {
+                  "endDate": "02/08/2020",
+                  "startDate": "02/02/2020",
+                  "weekForUser": 1,
+                }
+              }
+            >
+              <strong
+                key="strong-0"
+              >
+                Week 1
+              </strong>
+              : Sunday, 02/02/2020 – Saturday, 02/08/2020
+            </Trans>
+          </div>
+        </div>
+      </Transition>
+    </Fade>
+  </Alert>
   <Alert
     className="d-flex"
     closeLabel="Close alert"
@@ -60,66 +104,149 @@ Array [
     }
     variant="secondary"
   >
-    <div
-      className="flex-fill"
+    <Fade
+      appear={false}
+      in={true}
+      mountOnEnter={false}
+      timeout={300}
+      unmountOnExit={true}
     >
-      <Trans
-        i18nKey="retrocerts-week-list-item"
-        t={[Function]}
-        values={
-          Object {
-            "endDate": "03/14/2020",
-            "startDate": "03/08/2020",
-            "weekForUser": 2,
-          }
-        }
-      />
-    </div>
-  </Alert>,
-]
+      <Transition
+        addEndListener={[Function]}
+        appear={false}
+        enter={true}
+        exit={true}
+        in={true}
+        mountOnEnter={false}
+        onEnter={[Function]}
+        onEntered={[Function]}
+        onEntering={[Function]}
+        onExit={[Function]}
+        onExited={[Function]}
+        onExiting={[Function]}
+        timeout={300}
+        unmountOnExit={true}
+      >
+        <div
+          className="fade d-flex alert alert-secondary show"
+          role="alert"
+        >
+          <div
+            className="flex-fill"
+          >
+            <Trans
+              i18nKey="retrocerts-week-list-item"
+              t={[Function]}
+              values={
+                Object {
+                  "endDate": "03/14/2020",
+                  "startDate": "03/08/2020",
+                  "weekForUser": 2,
+                }
+              }
+            >
+              <strong
+                key="strong-0"
+              >
+                Week 2
+              </strong>
+              : Sunday, 03/08/2020 – Saturday, 03/14/2020
+            </Trans>
+          </div>
+        </div>
+      </Transition>
+    </Fade>
+  </Alert>
+</ListOfWeeks>
 `;
 
 exports[`<ListOfWeeks /> with checks 1`] = `
-<Alert
-  className="d-flex"
-  closeLabel="Close alert"
-  key="weekToCertify1"
-  show={true}
-  transition={
-    Object {
-      "$$typeof": Symbol(react.forward_ref),
-      "defaultProps": Object {
-        "appear": false,
-        "in": false,
-        "mountOnEnter": false,
-        "timeout": 300,
-        "unmountOnExit": false,
-      },
-      "displayName": "Fade",
-      "render": [Function],
-    }
+<ListOfWeeks
+  showChecks={true}
+  weeksToCertify={
+    Array [
+      1,
+    ]
   }
-  variant="secondary"
 >
-  <div
-    className="flex-fill"
-  >
-    <Trans
-      i18nKey="retrocerts-week-list-item"
-      t={[Function]}
-      values={
-        Object {
-          "endDate": "02/15/2020",
-          "startDate": "02/09/2020",
-          "weekForUser": 1,
-        }
+  <Alert
+    className="d-flex"
+    closeLabel="Close alert"
+    key="weekToCertify1"
+    show={true}
+    transition={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "defaultProps": Object {
+          "appear": false,
+          "in": false,
+          "mountOnEnter": false,
+          "timeout": 300,
+          "unmountOnExit": false,
+        },
+        "displayName": "Fade",
+        "render": [Function],
       }
-    />
-  </div>
-  <img
-    alt="checkmark"
-    className="checkmark"
-    src="/images/check-circle-fill.svg"
-  />
-</Alert>
+    }
+    variant="secondary"
+  >
+    <Fade
+      appear={false}
+      in={true}
+      mountOnEnter={false}
+      timeout={300}
+      unmountOnExit={true}
+    >
+      <Transition
+        addEndListener={[Function]}
+        appear={false}
+        enter={true}
+        exit={true}
+        in={true}
+        mountOnEnter={false}
+        onEnter={[Function]}
+        onEntered={[Function]}
+        onEntering={[Function]}
+        onExit={[Function]}
+        onExited={[Function]}
+        onExiting={[Function]}
+        timeout={300}
+        unmountOnExit={true}
+      >
+        <div
+          className="fade d-flex alert alert-secondary show"
+          role="alert"
+        >
+          <div
+            className="flex-fill"
+          >
+            <Trans
+              i18nKey="retrocerts-week-list-item"
+              t={[Function]}
+              values={
+                Object {
+                  "endDate": "02/15/2020",
+                  "startDate": "02/09/2020",
+                  "weekForUser": 1,
+                }
+              }
+            >
+              <strong
+                key="strong-0"
+              >
+                Week 1
+              </strong>
+              : Sunday, 02/09/2020 – Saturday, 02/15/2020
+            </Trans>
+          </div>
+          <img
+            alt="checkmark"
+            className="checkmark"
+            src="/images/check-circle-fill.svg"
+          />
+        </div>
+      </Transition>
+    </Fade>
+  </Alert>
+</ListOfWeeks>
 `;

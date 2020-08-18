@@ -1,66 +1,141 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<PerjuryCheckbox /> renders the component 1`] = `
-<FormGroup
-  className="unchecked"
-  controlId="perjury-checkbox"
->
-  <FormText
-    as="h3"
+<PerjuryCheckbox>
+  <FormGroup
+    className="unchecked"
+    controlId="perjury-checkbox"
   >
-    Acknowledgement
-  </FormText>
-  <ul>
-    <li>
-      I understand the questions I answered through this automated system.
-    </li>
-    <li>
-      I know the law provides penalties if I make false statements or withhold facts to receive benefits; and my answers are true and correct.
-    </li>
-    <li>
-      I declare under penalty of perjury that I am a US Citizen or National; or an Alien in satisfactory immigration status and permitted to work by the United States Citizenship and Immigration Service.
-    </li>
-    <li>
-      I understand when submitting my request for benefits my submission is considered the same as my written signature.
-    </li>
-  </ul>
-  <FormRow>
-    <Col
-      md="auto"
+    <div
+      className="unchecked form-group"
     >
-      <FormCheck
-        checked={false}
-        disabled={false}
-        inline={false}
-        isInvalid={false}
-        isValid={false}
-        onChange={[Function]}
-        required={true}
-        title=""
-        type="checkbox"
-      />
-    </Col>
-    <Col>
-      <FormLabel
-        column={false}
-        srOnly={false}
+      <FormText
+        as="h3"
       >
-        You must indicate your acceptance of the statement by checking the box before your certification can be submitted.
-      </FormLabel>
-    </Col>
-  </FormRow>
-  <Feedback
-    type="invalid"
-  >
-    This field is required.
-  </Feedback>
-  <FormText
-    as="p"
-  >
-    <Trans
-      i18nKey="retrocerts-certification.submit-p1"
-      t={[Function]}
-    />
-  </FormText>
-</FormGroup>
+        <h3
+          className="form-text"
+        >
+          Acknowledgement
+        </h3>
+      </FormText>
+      <ul>
+        <li>
+          I understand the questions I answered through this automated system.
+        </li>
+        <li>
+          I know the law provides penalties if I make false statements or withhold facts to receive benefits; and my answers are true and correct.
+        </li>
+        <li>
+          I declare under penalty of perjury that I am a US Citizen or National; or an Alien in satisfactory immigration status and permitted to work by the United States Citizenship and Immigration Service.
+        </li>
+        <li>
+          I understand when submitting my request for benefits my submission is considered the same as my written signature.
+        </li>
+      </ul>
+      <FormRow>
+        <div
+          className="form-row"
+        >
+          <Col
+            md="auto"
+          >
+            <div
+              className="col-md-auto"
+            >
+              <FormCheck
+                checked={false}
+                disabled={false}
+                inline={false}
+                isInvalid={false}
+                isValid={false}
+                onChange={[Function]}
+                required={true}
+                title=""
+                type="checkbox"
+              >
+                <div
+                  className="form-check"
+                >
+                  <FormCheckInput
+                    as="input"
+                    checked={false}
+                    disabled={false}
+                    isInvalid={false}
+                    isStatic={true}
+                    isValid={false}
+                    onChange={[Function]}
+                    required={true}
+                    type="checkbox"
+                  >
+                    <input
+                      checked={false}
+                      className="form-check-input position-static"
+                      disabled={false}
+                      id="perjury-checkbox"
+                      onChange={[Function]}
+                      required={true}
+                      type="checkbox"
+                    />
+                  </FormCheckInput>
+                </div>
+              </FormCheck>
+            </div>
+          </Col>
+          <Col>
+            <div
+              className="col"
+            >
+              <FormLabel
+                column={false}
+                srOnly={false}
+              >
+                <label
+                  className="form-label"
+                  htmlFor="perjury-checkbox"
+                >
+                  You must indicate your acceptance of the statement by checking the box before your certification can be submitted.
+                </label>
+              </FormLabel>
+            </div>
+          </Col>
+        </div>
+      </FormRow>
+      <Feedback
+        type="invalid"
+      >
+        <div
+          className="invalid-feedback"
+        >
+          This field is required.
+        </div>
+      </Feedback>
+      <FormText
+        as="p"
+      >
+        <p
+          className="form-text"
+        >
+          <Trans
+            i18nKey="retrocerts-certification.submit-p1"
+            t={[Function]}
+          >
+            You are about to submit your retroactive certifications. You will 
+            <strong
+              key="strong-1"
+            >
+              not
+            </strong>
+             be able to change your answers once you select 
+            <strong
+              key="strong-3"
+            >
+              Submit
+            </strong>
+            .
+          </Trans>
+        </p>
+      </FormText>
+    </div>
+  </FormGroup>
+</PerjuryCheckbox>
 `;

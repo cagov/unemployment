@@ -10,7 +10,7 @@ const TestComponent = () => {
 describe("<RetroCertsRoute />", () => {
   it("basic route", async () => {
     sessionStorage.removeItem(AUTH_STRINGS.authToken);
-    const wrapper = renderNonTransContent(Component, "RetroCertsRoute", {
+    const wrapper = renderNonTransContent(Component, {
       path: "/path",
       pageComponent: TestComponent,
     });
@@ -20,7 +20,7 @@ describe("<RetroCertsRoute />", () => {
 
   it("route in production (should be PageNotFound)", async () => {
     sessionStorage.removeItem(AUTH_STRINGS.authToken);
-    const wrapper = renderNonTransContent(Component, "RetroCertsRoute", {
+    const wrapper = renderNonTransContent(Component, {
       path: "/path",
       pageComponent: TestComponent,
       isProduction: true,
@@ -31,7 +31,7 @@ describe("<RetroCertsRoute />", () => {
 
   it("route needing auth, but no data", async () => {
     sessionStorage.removeItem(AUTH_STRINGS.authToken);
-    const wrapper = renderNonTransContent(Component, "RetroCertsRoute", {
+    const wrapper = renderNonTransContent(Component, {
       path: "/path",
       pageComponent: TestComponent,
       pageProps: {
@@ -46,7 +46,7 @@ describe("<RetroCertsRoute />", () => {
 
   it("route needing auth with user data", async () => {
     sessionStorage.removeItem(AUTH_STRINGS.authToken);
-    const wrapper = renderNonTransContent(Component, "RetroCertsRoute", {
+    const wrapper = renderNonTransContent(Component, {
       path: "/path",
       pageComponent: TestComponent,
       pageProps: {
@@ -77,7 +77,7 @@ describe("<RetroCertsRoute />", () => {
     );
     global.fetch = mockFetch;
 
-    const wrapper = renderNonTransContent(Component, "RetroCertsRoute", {
+    const wrapper = renderNonTransContent(Component, {
       path: "/path",
       pageComponent: TestComponent,
       pageProps: {

@@ -8,7 +8,7 @@ const TestComponent = () => {
 
 describe("<StaffViewRoute />", () => {
   it("basic route", async () => {
-    const wrapper = renderNonTransContent(Component, "StaffViewRoute", {
+    const wrapper = renderNonTransContent(Component, {
       path: "/path",
       pageComponent: TestComponent,
     });
@@ -17,7 +17,7 @@ describe("<StaffViewRoute />", () => {
   });
 
   it("route needing user data", async () => {
-    const wrapper = renderNonTransContent(Component, "StaffViewRoute", {
+    const wrapper = renderNonTransContent(Component, {
       path: "/retroactive-certification/staff-view/claimant-status",
       pageComponent: TestComponent,
       pageProps: {
@@ -31,7 +31,7 @@ describe("<StaffViewRoute />", () => {
   });
 
   it("route needing user data, without user data", async () => {
-    const wrapper = renderNonTransContent(Component, "StaffViewRoute", {
+    const wrapper = renderNonTransContent(Component, {
       path: "/retroactive-certification/staff-view/claimant-status",
       pageComponent: TestComponent,
       pageProps: {

@@ -3,7 +3,7 @@ import Component from "./index";
 
 describe("<Header />", () => {
   it("renders the component", async () => {
-    const wrapper = renderNonTransContent(Component, "Header");
+    const wrapper = renderNonTransContent(Component);
 
     expect(wrapper).toMatchSnapshot();
   });

@@ -12,7 +12,7 @@ describe("<ListOfCertifications />", () => {
       workOrEarn: false,
     };
 
-    const wrapper = renderNonTransContent(Component, "ListOfCertifications", {
+    const wrapper = renderNonTransContent(Component, {
       userData: {
         formData: [weekOfAnswers, weekOfAnswers, weekOfAnswers],
         weeksToCertify: [1, 2, 3],
