@@ -65,6 +65,7 @@ function SessionTimer(props) {
     warningTimerId = setTimeout(() => {
       if (sessionStorage.getItem(AUTH_STRINGS.authToken)) {
         setShowWarningModal(true);
+        setNumberOfMinutes(TIMEOUT_DISPLAY_TIME_IN_MINUTES);
       }
     }, TIMEOUT_WARNING_MS);
     timeOutTimerId = setTimeout(() => {
