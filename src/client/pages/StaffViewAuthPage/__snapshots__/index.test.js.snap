@@ -187,6 +187,7 @@ exports[`<StaffViewAuthPage /> retro certs auth page 1`] = `
             <FormControl
               aria-describedby="ssn-sr-desc"
               onChange={[Function]}
+              pattern="\\\\d\\\\d\\\\d[-]?\\\\d\\\\d[-]?\\\\d\\\\d\\\\d\\\\d"
               required={true}
               value=""
             />
@@ -402,6 +403,7 @@ exports[`<StaffViewAuthPage /> retro certs auth page with user not found error 1
             <FormControl
               aria-describedby="ssn-sr-desc"
               onChange={[Function]}
+              pattern="\\\\d\\\\d\\\\d[-]?\\\\d\\\\d[-]?\\\\d\\\\d\\\\d\\\\d"
               required={true}
               value=""
             />

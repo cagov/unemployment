@@ -201,6 +201,7 @@ function StaffViewAuthPage(props) {
                   value={ssn}
                   onChange={(e) => handleChange(e, setSsn)}
                   aria-describedby="ssn-sr-desc"
+                  pattern="\d\d\d[-]?\d\d[-]?\d\d\d\d"
                   required
                 />
                 <Form.Control.Feedback type="invalid">
