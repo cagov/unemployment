@@ -98,10 +98,7 @@ function SessionTimer(props) {
           <strong>{t("timeout-modal.header")}</strong>
         </Modal.Title>
       </Modal.Header>
-      <Modal.Body>
-        {t("timeout-modal.warning", { numberOfMinutes })}
-        />
-      </Modal.Body>
+      <Modal.Body>{t("timeout-modal.warning", { numberOfMinutes })}</Modal.Body>
       <Modal.Footer className="border-0">
         <Button variant="secondary" onClick={closeWarningModal}>
           {t("timeout-modal.button")}
