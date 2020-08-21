@@ -18,7 +18,6 @@ exports[`<SessionTimer /> clear 1`] = `
   </ModalHeader>
   <ModalBody>
     To protect your information, you will be logged out in 5 minutes if you do not continue working. Any unsaved changes will be lost.
-    /&gt;
   </ModalBody>
   <ModalFooter
     className="border-0"
@@ -54,7 +53,6 @@ exports[`<SessionTimer /> startOrUpdate 1`] = `
   </ModalHeader>
   <ModalBody>
     To protect your information, you will be logged out in 5 minutes if you do not continue working. Any unsaved changes will be lost.
-    /&gt;
   </ModalBody>
   <ModalFooter
     className="border-0"
