@@ -9,6 +9,7 @@ function userDataIsSet(userData) {
 }
 
 function StaffViewRoute(props) {
+  // These routes are restricted to certain IP addresses in app.js
   const { pageComponent: Component, pageProps, ...routeProps } = props;
 
   let routeChild = <div>Loading...</div>;
