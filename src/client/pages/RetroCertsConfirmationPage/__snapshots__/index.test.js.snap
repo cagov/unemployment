@@ -1956,12 +1956,72 @@ exports[`<RetroCertsConfirmationPage /> with confirmation number 1`] = `
                     I understand when submitting my request for benefits my submission is considered the same as my written signature.
                   </li>
                 </ul>
-                <input
-                  checked={true}
-                  disabled={true}
-                  type="checkbox"
-                />
-                You must indicate your acceptance of the statement by checking the box before your certification can be submitted.
+                <FormGroup>
+                  <div
+                    className="form-group"
+                  >
+                    <FormRow>
+                      <div
+                        className="form-row"
+                      >
+                        <Col
+                          md="auto"
+                        >
+                          <div
+                            className="col-md-auto"
+                          >
+                            <FormCheck
+                              checked={true}
+                              disabled={true}
+                              inline={false}
+                              isInvalid={false}
+                              isValid={false}
+                              title=""
+                              type="checkbox"
+                            >
+                              <div
+                                className="form-check"
+                              >
+                                <FormCheckInput
+                                  as="input"
+                                  checked={true}
+                                  disabled={true}
+                                  isInvalid={false}
+                                  isStatic={true}
+                                  isValid={false}
+                                  type="checkbox"
+                                >
+                                  <input
+                                    checked={true}
+                                    className="form-check-input position-static"
+                                    disabled={true}
+                                    type="checkbox"
+                                  />
+                                </FormCheckInput>
+                              </div>
+                            </FormCheck>
+                          </div>
+                        </Col>
+                        <Col>
+                          <div
+                            className="col"
+                          >
+                            <FormLabel
+                              column={false}
+                              srOnly={false}
+                            >
+                              <label
+                                className="form-label"
+                              >
+                                You must indicate your acceptance of the statement by checking the box before your certification can be submitted.
+                              </label>
+                            </FormLabel>
+                          </div>
+                        </Col>
+                      </div>
+                    </FormRow>
+                  </div>
+                </FormGroup>
               </AcknowledgementDetail>
             </div>
           </AccordionItem>

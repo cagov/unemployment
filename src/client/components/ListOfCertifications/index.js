@@ -1,6 +1,8 @@
 import Button from "react-bootstrap/Button";
+import Col from "react-bootstrap/Col";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
+import Form from "react-bootstrap/Form";
 import { userDataPropType } from "../../commonPropTypes";
 import ListOfWeeksWithDetail from "../../components/ListOfWeeksWithDetail";
 import programPlan from "../../../data/programPlan";
@@ -55,8 +57,16 @@ function ListOfCertifications(props) {
             <li>{t("retrocerts-certification.ack-list-item-4")}</li>
           </ul>
         )}
-        <input type="checkbox" checked disabled />
-        {t("retrocerts-certification.ack-label")}
+        <Form.Group>
+          <Form.Row>
+            <Col md="auto">
+              <Form.Check type="checkbox" checked disabled />
+            </Col>
+            <Col>
+              <Form.Label>{t("retrocerts-certification.ack-label")}</Form.Label>
+            </Col>
+          </Form.Row>
+        </Form.Group>
       </React.Fragment>
     );
   }
