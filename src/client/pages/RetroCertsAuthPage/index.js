@@ -152,12 +152,11 @@ function RetroCertsAuthPage(props) {
     const ssnRef = document.getElementById("formSsn");
     Inputmask.remove(ssnRef);
     if (showSsn) {
-      Inputmask("ssn", { placeholder: "#" }).mask(ssnRef);
+      Inputmask("ssn").mask(ssnRef);
       ssnRef.type = "text";
     } else {
       Inputmask("9", { repeat: "9", jitMasking: true }).mask(ssnRef);
       ssnRef.type = "password";
-      ssnRef.placeholder = "###-##-####";
     }
   });
 
@@ -192,14 +191,21 @@ function RetroCertsAuthPage(props) {
           {showGenericValidationError && validated && genericValidationError}
           {errorTransKey === "retrocert-login.session-timed-out" && errorAlert}
           <p className="mt-3">{t("retrocert-login.help")}</p>
+          <h2>{t("retrocert-login.instructions-header")}</h2>
           <p>{t("retrocert-login.instructions")}</p>
-          <p>{t("retrocert-login.required-text")}</p>
+          <p>
+            <span className="text-danger">* </span>
+            <span>{t("retrocert-login.required-text")}</span>
+          </p>
           <Form noValidate validated={validated} onSubmit={handleSubmit}>
             <Row>
               <Form.Group controlId="formLastName" className="col-md-6">
-                <Form.Label>{`* ${t(
-                  "retrocert-login.last-name-label"
-                )}`}</Form.Label>
+                <Form.Label>
+                  <span className="text-danger">* </span>
+                  <span>
+                    <strong>{t("retrocert-login.last-name-label")}</strong>
+                  </span>
+                </Form.Label>
                 <Form.Control
                   type="text"
                   value={lastName}
@@ -211,15 +217,15 @@ function RetroCertsAuthPage(props) {
                 </Form.Control.Feedback>
               </Form.Group>
             </Row>
-            <div className="mb-n2 mt-4">{`* ${t(
-              "retrocert-login.dob-heading"
-            )}`}</div>
-            <small className="text-muted">
-              {t("retrocert-login.dob-hint")}
-            </small>
+            <div className="mb-3 mt-4">{t("retrocert-login.dob-heading")}</div>
             <Row>
               <Form.Group controlId="formDobMonth" as={Col} md={2}>
-                <Form.Label>{t("retrocert-login.dob-month")}</Form.Label>
+                <Form.Label>
+                  <span className="text-danger">* </span>
+                  <span>
+                    <strong>{t("retrocert-login.dob-month")}</strong>
+                  </span>
+                </Form.Label>
                 <Form.Control
                   type="text"
                   value={dobMonth}
@@ -228,12 +234,20 @@ function RetroCertsAuthPage(props) {
                   required
                   pattern="(^0[1-9])|(^1[0-2])|(^[1-9]$)"
                 />
+                <Form.Text muted>
+                  {t("retrocert-login.dob-month-hint")}
+                </Form.Text>
                 <Form.Control.Feedback type="invalid">
                   {t("required-error")}
                 </Form.Control.Feedback>
               </Form.Group>
               <Form.Group controlId="formDobDay" as={Col} md={2}>
-                <Form.Label>{t("retrocert-login.dob-day")}</Form.Label>
+                <Form.Label>
+                  <span className="text-danger">* </span>
+                  <span>
+                    <strong>{t("retrocert-login.dob-day")}</strong>
+                  </span>
+                </Form.Label>
                 <Form.Control
                   type="text"
                   value={dobDay}
@@ -242,12 +256,18 @@ function RetroCertsAuthPage(props) {
                   required
                   pattern="(^0[1-9])|(^1[0-9])|(^2[0-9])|(^3[0-1])|(^[1-9]$)"
                 />
+                <Form.Text muted>{t("retrocert-login.dob-day-hint")}</Form.Text>
                 <Form.Control.Feedback type="invalid">
                   {t("required-error")}
                 </Form.Control.Feedback>
               </Form.Group>
               <Form.Group controlId="formDobYear" as={Col} md={3}>
-                <Form.Label>{t("retrocert-login.dob-year")}</Form.Label>
+                <Form.Label>
+                  <span className="text-danger">* </span>
+                  <span>
+                    <strong>{t("retrocert-login.dob-year")}</strong>
+                  </span>
+                </Form.Label>
                 <Form.Control
                   type="text"
                   value={dobYear}
@@ -256,6 +276,9 @@ function RetroCertsAuthPage(props) {
                   required
                   pattern="[12][890]\d\d"
                 />
+                <Form.Text muted>
+                  {t("retrocert-login.dob-year-hint")}
+                </Form.Text>
                 <Form.Control.Feedback type="invalid">
                   {t("required-error")}
                 </Form.Control.Feedback>
@@ -263,10 +286,12 @@ function RetroCertsAuthPage(props) {
             </Row>
             <Row className="mt-4">
               <Form.Group controlId="formSsn" className="col-md-6">
-                <Form.Label>{`* ${t("retrocert-login.ssn-label")}`}</Form.Label>
-                <Form.Text muted className="ssn-hint">
-                  {t("retrocert-login.ssn-hint")}
-                </Form.Text>
+                <Form.Label>
+                  <span className="text-danger">* </span>
+                  <span>
+                    <strong>{t("retrocert-login.ssn-label")}</strong>
+                  </span>
+                </Form.Label>
                 {/* sr-only is invisible and used for screen readers:
                 https://v4-alpha.getbootstrap.com/getting-started/accessibility/#skip-navigation */}
                 <span id="ssn-sr-desc" className="sr-only">
@@ -279,10 +304,11 @@ function RetroCertsAuthPage(props) {
                   pattern="\d\d\d[-]?\d\d[-]?\d\d\d\d"
                   required
                 />
+                <Form.Text muted>{t("retrocert-login.ssn-hint")}</Form.Text>
                 <Form.Control.Feedback type="invalid">
                   {t("required-error")}
                 </Form.Control.Feedback>
-                <div className="d-flex justify-content-end">
+                <div className="d-flex justify-content-end mt-n4">
                   <Button
                     onClick={toggleSsn}
                     variant="link"
@@ -294,6 +320,7 @@ function RetroCertsAuthPage(props) {
                 </div>
               </Form.Group>
             </Row>
+            <h2>{t("retrocert-login.security-header")}</h2>
             <Row>
               <Form.Group controlId="formReCaptcha" className="col-md-6 mt-3">
                 <ReCAPTCHA
@@ -302,9 +329,6 @@ function RetroCertsAuthPage(props) {
                   ref={recaptchaRef}
                   hl={currentLanguage}
                 />
-                <Form.Text className="text-muted">
-                  {t("retrocert-login.recaptcha-text")}
-                </Form.Text>
               </Form.Group>
             </Row>
             {(errorTransKey === "retrocert-login.invalid-user-error" ||

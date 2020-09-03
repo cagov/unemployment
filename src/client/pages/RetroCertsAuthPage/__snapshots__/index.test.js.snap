@@ -22,11 +22,21 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
       >
         You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits you received for weeks of your claim early in the pandemic through the week ending May 9, 2020. The exact dates you are required to certify for will depend on your specific claim history.
       </p>
+      <h2>
+        Enter Your Information.
+      </h2>
       <p>
-        Enter your information to confirm if you have any benefit weeks that you need to retroactively certify.
+        Confirm any benefit weeks you still need to certify for.
       </p>
       <p>
-        * Indicates required text
+        <span
+          className="text-danger"
+        >
+          * 
+        </span>
+        <span>
+          Required Field
+        </span>
       </p>
       <Form
         inline={false}
@@ -45,7 +55,16 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
               column={false}
               srOnly={false}
             >
-              * Last Name
+              <span
+                className="text-danger"
+              >
+                * 
+              </span>
+              <span>
+                <strong>
+                  Last Name
+                </strong>
+              </span>
             </FormLabel>
             <FormControl
               onChange={[Function]}
@@ -61,15 +80,10 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
           </FormGroup>
         </Row>
         <div
-          className="mb-n2 mt-4"
+          className="mb-3 mt-4"
         >
-          * Date of Birth
+          Date of Birth
         </div>
-        <small
-          className="text-muted"
-        >
-          For example, 4 28 1990
-        </small>
         <Row
           noGutters={false}
         >
@@ -88,7 +102,16 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
               column={false}
               srOnly={false}
             >
-              Month
+              <span
+                className="text-danger"
+              >
+                * 
+              </span>
+              <span>
+                <strong>
+                  Month
+                </strong>
+              </span>
             </FormLabel>
             <FormControl
               maxLength={2}
@@ -98,6 +121,11 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
               type="text"
               value=""
             />
+            <FormText
+              muted={true}
+            >
+              MM
+            </FormText>
             <Feedback
               type="invalid"
             >
@@ -119,7 +147,16 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
               column={false}
               srOnly={false}
             >
-              Day
+              <span
+                className="text-danger"
+              >
+                * 
+              </span>
+              <span>
+                <strong>
+                  Day
+                </strong>
+              </span>
             </FormLabel>
             <FormControl
               maxLength={2}
@@ -129,6 +166,11 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
               type="text"
               value=""
             />
+            <FormText
+              muted={true}
+            >
+              DD
+            </FormText>
             <Feedback
               type="invalid"
             >
@@ -150,7 +192,16 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
               column={false}
               srOnly={false}
             >
-              Year
+              <span
+                className="text-danger"
+              >
+                * 
+              </span>
+              <span>
+                <strong>
+                  Year
+                </strong>
+              </span>
             </FormLabel>
             <FormControl
               maxLength={4}
@@ -160,6 +211,11 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
               type="text"
               value=""
             />
+            <FormText
+              muted={true}
+            >
+              YYYY
+            </FormText>
             <Feedback
               type="invalid"
             >
@@ -179,14 +235,17 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
               column={false}
               srOnly={false}
             >
-              * Social Security Number
+              <span
+                className="text-danger"
+              >
+                * 
+              </span>
+              <span>
+                <strong>
+                  Social Security Number
+                </strong>
+              </span>
             </FormLabel>
-            <FormText
-              className="ssn-hint"
-              muted={true}
-            >
-              Enter your Social Security number with or without dashes.
-            </FormText>
             <span
               className="sr-only"
               id="ssn-sr-desc"
@@ -200,13 +259,18 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
               required={true}
               value=""
             />
+            <FormText
+              muted={true}
+            >
+              XXX-XX-XXXX
+            </FormText>
             <Feedback
               type="invalid"
             >
               This field is required.
             </Feedback>
             <div
-              className="d-flex justify-content-end"
+              className="d-flex justify-content-end mt-n4"
             >
               <Button
                 active={false}
@@ -226,6 +290,9 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
             </div>
           </FormGroup>
         </Row>
+        <h2>
+          Security Check
+        </h2>
         <Row
           noGutters={false}
         >
@@ -238,11 +305,6 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
               key="en"
               sitekey="6Lf-DQEVAAAAABCMwJ-Gnbqec08RuiPhMZPtZPm9"
             />
-            <FormText
-              className="text-muted"
-            >
-              Security check provided by reCAPTCHA.
-            </FormText>
           </FormGroup>
         </Row>
         <Button
@@ -289,11 +351,21 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
       >
         You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits you received for weeks of your claim early in the pandemic through the week ending May 9, 2020. The exact dates you are required to certify for will depend on your specific claim history.
       </p>
+      <h2>
+        Enter Your Information.
+      </h2>
       <p>
-        Enter your information to confirm if you have any benefit weeks that you need to retroactively certify.
+        Confirm any benefit weeks you still need to certify for.
       </p>
       <p>
-        * Indicates required text
+        <span
+          className="text-danger"
+        >
+          * 
+        </span>
+        <span>
+          Required Field
+        </span>
       </p>
       <Form
         inline={false}
@@ -312,7 +384,16 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
               column={false}
               srOnly={false}
             >
-              * Last Name
+              <span
+                className="text-danger"
+              >
+                * 
+              </span>
+              <span>
+                <strong>
+                  Last Name
+                </strong>
+              </span>
             </FormLabel>
             <FormControl
               onChange={[Function]}
@@ -328,15 +409,10 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
           </FormGroup>
         </Row>
         <div
-          className="mb-n2 mt-4"
+          className="mb-3 mt-4"
         >
-          * Date of Birth
+          Date of Birth
         </div>
-        <small
-          className="text-muted"
-        >
-          For example, 4 28 1990
-        </small>
         <Row
           noGutters={false}
         >
@@ -355,7 +431,16 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
               column={false}
               srOnly={false}
             >
-              Month
+              <span
+                className="text-danger"
+              >
+                * 
+              </span>
+              <span>
+                <strong>
+                  Month
+                </strong>
+              </span>
             </FormLabel>
             <FormControl
               maxLength={2}
@@ -365,6 +450,11 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
               type="text"
               value=""
             />
+            <FormText
+              muted={true}
+            >
+              MM
+            </FormText>
             <Feedback
               type="invalid"
             >
@@ -386,7 +476,16 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
               column={false}
               srOnly={false}
             >
-              Day
+              <span
+                className="text-danger"
+              >
+                * 
+              </span>
+              <span>
+                <strong>
+                  Day
+                </strong>
+              </span>
             </FormLabel>
             <FormControl
               maxLength={2}
@@ -396,6 +495,11 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
               type="text"
               value=""
             />
+            <FormText
+              muted={true}
+            >
+              DD
+            </FormText>
             <Feedback
               type="invalid"
             >
@@ -417,7 +521,16 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
               column={false}
               srOnly={false}
             >
-              Year
+              <span
+                className="text-danger"
+              >
+                * 
+              </span>
+              <span>
+                <strong>
+                  Year
+                </strong>
+              </span>
             </FormLabel>
             <FormControl
               maxLength={4}
@@ -427,6 +540,11 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
               type="text"
               value=""
             />
+            <FormText
+              muted={true}
+            >
+              YYYY
+            </FormText>
             <Feedback
               type="invalid"
             >
@@ -446,14 +564,17 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
               column={false}
               srOnly={false}
             >
-              * Social Security Number
+              <span
+                className="text-danger"
+              >
+                * 
+              </span>
+              <span>
+                <strong>
+                  Social Security Number
+                </strong>
+              </span>
             </FormLabel>
-            <FormText
-              className="ssn-hint"
-              muted={true}
-            >
-              Enter your Social Security number with or without dashes.
-            </FormText>
             <span
               className="sr-only"
               id="ssn-sr-desc"
@@ -467,13 +588,18 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
               required={true}
               value=""
             />
+            <FormText
+              muted={true}
+            >
+              XXX-XX-XXXX
+            </FormText>
             <Feedback
               type="invalid"
             >
               This field is required.
             </Feedback>
             <div
-              className="d-flex justify-content-end"
+              className="d-flex justify-content-end mt-n4"
             >
               <Button
                 active={false}
@@ -493,6 +619,9 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
             </div>
           </FormGroup>
         </Row>
+        <h2>
+          Security Check
+        </h2>
         <Row
           noGutters={false}
         >
@@ -505,11 +634,6 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
               key="en"
               sitekey="6Lf-DQEVAAAAABCMwJ-Gnbqec08RuiPhMZPtZPm9"
             />
-            <FormText
-              className="text-muted"
-            >
-              Security check provided by reCAPTCHA.
-            </FormText>
           </FormGroup>
         </Row>
         <Row
@@ -614,11 +738,21 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
       >
         You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits you received for weeks of your claim early in the pandemic through the week ending May 9, 2020. The exact dates you are required to certify for will depend on your specific claim history.
       </p>
+      <h2>
+        Enter Your Information.
+      </h2>
       <p>
-        Enter your information to confirm if you have any benefit weeks that you need to retroactively certify.
+        Confirm any benefit weeks you still need to certify for.
       </p>
       <p>
-        * Indicates required text
+        <span
+          className="text-danger"
+        >
+          * 
+        </span>
+        <span>
+          Required Field
+        </span>
       </p>
       <Form
         inline={false}
@@ -637,7 +771,16 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
               column={false}
               srOnly={false}
             >
-              * Last Name
+              <span
+                className="text-danger"
+              >
+                * 
+              </span>
+              <span>
+                <strong>
+                  Last Name
+                </strong>
+              </span>
             </FormLabel>
             <FormControl
               onChange={[Function]}
@@ -653,15 +796,10 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
           </FormGroup>
         </Row>
         <div
-          className="mb-n2 mt-4"
+          className="mb-3 mt-4"
         >
-          * Date of Birth
+          Date of Birth
         </div>
-        <small
-          className="text-muted"
-        >
-          For example, 4 28 1990
-        </small>
         <Row
           noGutters={false}
         >
@@ -680,7 +818,16 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
               column={false}
               srOnly={false}
             >
-              Month
+              <span
+                className="text-danger"
+              >
+                * 
+              </span>
+              <span>
+                <strong>
+                  Month
+                </strong>
+              </span>
             </FormLabel>
             <FormControl
               maxLength={2}
@@ -690,6 +837,11 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
               type="text"
               value=""
             />
+            <FormText
+              muted={true}
+            >
+              MM
+            </FormText>
             <Feedback
               type="invalid"
             >
@@ -711,7 +863,16 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
               column={false}
               srOnly={false}
             >
-              Day
+              <span
+                className="text-danger"
+              >
+                * 
+              </span>
+              <span>
+                <strong>
+                  Day
+                </strong>
+              </span>
             </FormLabel>
             <FormControl
               maxLength={2}
@@ -721,6 +882,11 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
               type="text"
               value=""
             />
+            <FormText
+              muted={true}
+            >
+              DD
+            </FormText>
             <Feedback
               type="invalid"
             >
@@ -742,7 +908,16 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
               column={false}
               srOnly={false}
             >
-              Year
+              <span
+                className="text-danger"
+              >
+                * 
+              </span>
+              <span>
+                <strong>
+                  Year
+                </strong>
+              </span>
             </FormLabel>
             <FormControl
               maxLength={4}
@@ -752,6 +927,11 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
               type="text"
               value=""
             />
+            <FormText
+              muted={true}
+            >
+              YYYY
+            </FormText>
             <Feedback
               type="invalid"
             >
@@ -771,14 +951,17 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
               column={false}
               srOnly={false}
             >
-              * Social Security Number
+              <span
+                className="text-danger"
+              >
+                * 
+              </span>
+              <span>
+                <strong>
+                  Social Security Number
+                </strong>
+              </span>
             </FormLabel>
-            <FormText
-              className="ssn-hint"
-              muted={true}
-            >
-              Enter your Social Security number with or without dashes.
-            </FormText>
             <span
               className="sr-only"
               id="ssn-sr-desc"
@@ -792,13 +975,18 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
               required={true}
               value=""
             />
+            <FormText
+              muted={true}
+            >
+              XXX-XX-XXXX
+            </FormText>
             <Feedback
               type="invalid"
             >
               This field is required.
             </Feedback>
             <div
-              className="d-flex justify-content-end"
+              className="d-flex justify-content-end mt-n4"
             >
               <Button
                 active={false}
@@ -818,6 +1006,9 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
             </div>
           </FormGroup>
         </Row>
+        <h2>
+          Security Check
+        </h2>
         <Row
           noGutters={false}
         >
@@ -830,11 +1021,6 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
               key="en"
               sitekey="6Lf-DQEVAAAAABCMwJ-Gnbqec08RuiPhMZPtZPm9"
             />
-            <FormText
-              className="text-muted"
-            >
-              Security check provided by reCAPTCHA.
-            </FormText>
           </FormGroup>
         </Row>
         <Button
@@ -881,11 +1067,21 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
       >
         You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits you received for weeks of your claim early in the pandemic through the week ending May 9, 2020. The exact dates you are required to certify for will depend on your specific claim history.
       </p>
+      <h2>
+        Enter Your Information.
+      </h2>
       <p>
-        Enter your information to confirm if you have any benefit weeks that you need to retroactively certify.
+        Confirm any benefit weeks you still need to certify for.
       </p>
       <p>
-        * Indicates required text
+        <span
+          className="text-danger"
+        >
+          * 
+        </span>
+        <span>
+          Required Field
+        </span>
       </p>
       <Form
         inline={false}
@@ -904,7 +1100,16 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
               column={false}
               srOnly={false}
             >
-              * Last Name
+              <span
+                className="text-danger"
+              >
+                * 
+              </span>
+              <span>
+                <strong>
+                  Last Name
+                </strong>
+              </span>
             </FormLabel>
             <FormControl
               onChange={[Function]}
@@ -920,15 +1125,10 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
           </FormGroup>
         </Row>
         <div
-          className="mb-n2 mt-4"
+          className="mb-3 mt-4"
         >
-          * Date of Birth
+          Date of Birth
         </div>
-        <small
-          className="text-muted"
-        >
-          For example, 4 28 1990
-        </small>
         <Row
           noGutters={false}
         >
@@ -947,7 +1147,16 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
               column={false}
               srOnly={false}
             >
-              Month
+              <span
+                className="text-danger"
+              >
+                * 
+              </span>
+              <span>
+                <strong>
+                  Month
+                </strong>
+              </span>
             </FormLabel>
             <FormControl
               maxLength={2}
@@ -957,6 +1166,11 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
               type="text"
               value=""
             />
+            <FormText
+              muted={true}
+            >
+              MM
+            </FormText>
             <Feedback
               type="invalid"
             >
@@ -978,7 +1192,16 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
               column={false}
               srOnly={false}
             >
-              Day
+              <span
+                className="text-danger"
+              >
+                * 
+              </span>
+              <span>
+                <strong>
+                  Day
+                </strong>
+              </span>
             </FormLabel>
             <FormControl
               maxLength={2}
@@ -988,6 +1211,11 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
               type="text"
               value=""
             />
+            <FormText
+              muted={true}
+            >
+              DD
+            </FormText>
             <Feedback
               type="invalid"
             >
@@ -1009,7 +1237,16 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
               column={false}
               srOnly={false}
             >
-              Year
+              <span
+                className="text-danger"
+              >
+                * 
+              </span>
+              <span>
+                <strong>
+                  Year
+                </strong>
+              </span>
             </FormLabel>
             <FormControl
               maxLength={4}
@@ -1019,6 +1256,11 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
               type="text"
               value=""
             />
+            <FormText
+              muted={true}
+            >
+              YYYY
+            </FormText>
             <Feedback
               type="invalid"
             >
@@ -1038,14 +1280,17 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
               column={false}
               srOnly={false}
             >
-              * Social Security Number
+              <span
+                className="text-danger"
+              >
+                * 
+              </span>
+              <span>
+                <strong>
+                  Social Security Number
+                </strong>
+              </span>
             </FormLabel>
-            <FormText
-              className="ssn-hint"
-              muted={true}
-            >
-              Enter your Social Security number with or without dashes.
-            </FormText>
             <span
               className="sr-only"
               id="ssn-sr-desc"
@@ -1059,13 +1304,18 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
               required={true}
               value=""
             />
+            <FormText
+              muted={true}
+            >
+              XXX-XX-XXXX
+            </FormText>
             <Feedback
               type="invalid"
             >
               This field is required.
             </Feedback>
             <div
-              className="d-flex justify-content-end"
+              className="d-flex justify-content-end mt-n4"
             >
               <Button
                 active={false}
@@ -1085,6 +1335,9 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
             </div>
           </FormGroup>
         </Row>
+        <h2>
+          Security Check
+        </h2>
         <Row
           noGutters={false}
         >
@@ -1097,11 +1350,6 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
               key="en"
               sitekey="6Lf-DQEVAAAAABCMwJ-Gnbqec08RuiPhMZPtZPm9"
             />
-            <FormText
-              className="text-muted"
-            >
-              Security check provided by reCAPTCHA.
-            </FormText>
           </FormGroup>
         </Row>
         <Row
