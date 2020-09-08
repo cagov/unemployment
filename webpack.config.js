@@ -112,7 +112,6 @@ if (!IS_DEV) {
     // Define process.env.NODE_ENV for optimized React bundles
     new webpack.DefinePlugin({
       "process.env.NODE_ENV": JSON.stringify(env),
-      "process.env.ENABLE_RETRO_CERTS": process.env.ENABLE_RETRO_CERTS,
     }),
     new webpack.optimize.AggressiveMergingPlugin(),
   ];
