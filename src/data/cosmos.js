@@ -75,7 +75,7 @@ async function upsertFormData(item) {
   }
 }
 
-async function createRetroCertDatabaseIfNeeded() {
+async function createRetroCertDatabase() {
   try {
     await createDatabase(databaseName);
     await Promise.all([
@@ -144,7 +144,7 @@ async function getFormDataByUserIdWithNewAuthToken(userId) {
 }
 
 module.exports = {
-  createRetroCertDatabaseIfNeeded,
+  createRetroCertDatabase,
   getFormDataByAuthToken,
   getFormDataByUserId,
   getUserByNameDobSsn,

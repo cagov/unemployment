@@ -3,7 +3,6 @@ import request from "supertest";
 
 describe("Router: Single page app", () => {
   const env = Object.assign({}, process.env);
-  env.ENABLE_RETRO_CERTS = "0";
   const server = init(env);
 
   it("HTTP gets returning the single page", async () => {
@@ -43,7 +42,6 @@ describe("Router: Single page app", () => {
     ];
 
     const env = Object.assign({}, process.env);
-    env.ENABLE_RETRO_CERTS = "1";
     // in staging/production, these are EDD IPs
     env.ALLOWED_IP_RANGES = "192.168.2.1-192.168.2.100";
     // in staging/production, these are Nava team IPs

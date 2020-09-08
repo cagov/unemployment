@@ -5,26 +5,12 @@
 import { init } from "../app";
 import AUTH_STRINGS from "../data/authStrings";
 import cosmos from "../data/cosmos";
-import fflip from "fflip";
 import request from "supertest";
 import ReCaptcha from "../services/reCaptcha";
 import programPlan from "../data/programPlan";
 
 describe("Router: API tests", () => {
-  it("retro-certs POST feature disabled", async () => {
-    fflip.features.retroCerts.enabled = false;
-    const server = init();
-    const testPaths = Object.values(AUTH_STRINGS.apiPath);
-
-    for (const testPath of testPaths) {
-      const res = await request(server).post(testPath);
-      expect(res.status).toBe(404);
-      expect(res.text).toMatch(/Cannot POST/);
-    }
-  });
-
   it("retro-certs POST feature enabled", async () => {
-    fflip.features.retroCerts.enabled = true;
     const getUserByNameDobSsnMock = jest.spyOn(cosmos, "getUserByNameDobSsn");
     getUserByNameDobSsnMock.mockImplementation(
       jest.fn(() => Promise.resolve(null))
@@ -48,7 +34,6 @@ describe("Router: API tests", () => {
   });
 
   it("retro-certs /api/login tests", async () => {
-    fflip.features.retroCerts.enabled = true;
     const server = init();
     // Format of each test case is:
     //   post body,
@@ -149,7 +134,6 @@ describe("Router: API tests", () => {
   });
 
   it("retro-certs /api/data tests", async () => {
-    fflip.features.retroCerts.enabled = true;
     const server = init();
     // Format of each test case is:
     //   post body,
@@ -246,7 +230,6 @@ describe("Router: API tests", () => {
   });
 
   it("retro-certs /api/save tests", async () => {
-    fflip.features.retroCerts.enabled = true;
     const server = init();
     // Format of each test case is:
     //   post body,
@@ -371,7 +354,6 @@ describe("Router: API tests", () => {
     const eddIpAddress = "192.168.2.33";
     const env = Object.assign({}, process.env);
     env.ALLOWED_IP_RANGES = "192.168.2.1-192.168.2.100";
-    fflip.features.retroCerts.enabled = true;
     const server = init(env);
     const testPath = AUTH_STRINGS.staffView.login;
 

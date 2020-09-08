@@ -8,9 +8,7 @@ const IpDeniedError = require("express-ipfilter").IpDeniedError;
 const helmet = require("helmet");
 const createRouter = require("./routes");
 const AUTH_STRINGS = require("./data/authStrings");
-const fflip = require("fflip");
-const fflipConfig = require("./data/fflipConfig");
-const { createRetroCertDatabaseIfNeeded } = require("./data/cosmos");
+const { createRetroCertDatabase } = require("./data/cosmos");
 
 const http = require("http");
 const https = require("https");
@@ -18,14 +16,11 @@ const https = require("https");
 http.globalAgent.maxSockets = 50;
 https.globalAgent.maxSockets = 50;
 
-// Load default feature flag values.
-fflip.config(fflipConfig);
-
 /**
  * @returns {object} Express application
  */
 function init(env = process.env) {
-  retroCertsIfEnabled();
+  createRetroCertDatabase();
 
   const app = express();
 
@@ -134,16 +129,6 @@ function init(env = process.env) {
   });
 
   return app;
-}
-
-async function retroCertsIfEnabled() {
-  if (
-    process.env.NODE_ENV === "development" ||
-    process.env.ENABLE_RETRO_CERTS === "1"
-  ) {
-    fflip.features.retroCerts.enabled = true;
-    await createRetroCertDatabaseIfNeeded();
-  }
 }
 
 module.exports = { init };
