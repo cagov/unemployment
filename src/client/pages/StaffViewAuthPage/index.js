@@ -100,7 +100,7 @@ function StaffViewAuthPage(props) {
 
   useEffect(() => {
     const ssnRef = document.getElementById("formSsn");
-    Inputmask("ssn", { placeholder: "#" }).mask(ssnRef);
+    Inputmask("ssn").mask(ssnRef);
     ssnRef.type = "text";
   }, []);
 
@@ -123,13 +123,19 @@ function StaffViewAuthPage(props) {
           </h2>
           {showGenericValidationError && validated && genericValidationError}
           <p>{t("staff-view-login.instructions")}</p>
-          <p>{t("retrocert-login.required-text")}</p>
+          <p>
+            <span className="text-danger">* </span>
+            <span>{t("retrocert-login.required-text")}</span>
+          </p>
           <Form noValidate validated={validated} onSubmit={handleSubmit}>
             <Row>
               <Form.Group controlId="formLastName" className="col-md-6">
-                <Form.Label>{`* ${t(
-                  "retrocert-login.last-name-label"
-                )}`}</Form.Label>
+                <Form.Label>
+                  <span className="text-danger">* </span>
+                  <span>
+                    <strong>{t("retrocert-login.last-name-label")}</strong>
+                  </span>
+                </Form.Label>
                 <Form.Control
                   type="text"
                   value={lastName}
@@ -141,15 +147,15 @@ function StaffViewAuthPage(props) {
                 </Form.Control.Feedback>
               </Form.Group>
             </Row>
-            <div className="mb-n2 mt-4">{`* ${t(
-              "retrocert-login.dob-heading"
-            )}`}</div>
-            <small className="text-muted">
-              {t("retrocert-login.dob-hint")}
-            </small>
+            <div className="mb-3 mt-4">{t("retrocert-login.dob-heading")}</div>
             <Row>
               <Form.Group controlId="formDobMonth" as={Col} md={2}>
-                <Form.Label>{t("retrocert-login.dob-month")}</Form.Label>
+                <Form.Label>
+                  <span className="text-danger">* </span>
+                  <span>
+                    <strong>{t("retrocert-login.dob-month")}</strong>
+                  </span>
+                </Form.Label>
                 <Form.Control
                   type="text"
                   value={dobMonth}
@@ -158,12 +164,20 @@ function StaffViewAuthPage(props) {
                   required
                   pattern="(^0[1-9])|(^1[0-2])|(^[1-9]$)"
                 />
+                <Form.Text muted>
+                  {t("retrocert-login.dob-month-hint")}
+                </Form.Text>
                 <Form.Control.Feedback type="invalid">
                   {t("required-error")}
                 </Form.Control.Feedback>
               </Form.Group>
               <Form.Group controlId="formDobDay" as={Col} md={2}>
-                <Form.Label>{t("retrocert-login.dob-day")}</Form.Label>
+                <Form.Label>
+                  <span className="text-danger">* </span>
+                  <span>
+                    <strong>{t("retrocert-login.dob-day")}</strong>
+                  </span>
+                </Form.Label>
                 <Form.Control
                   type="text"
                   value={dobDay}
@@ -172,12 +186,18 @@ function StaffViewAuthPage(props) {
                   required
                   pattern="(^0[1-9])|(^1[0-9])|(^2[0-9])|(^3[0-1])|(^[1-9]$)"
                 />
+                <Form.Text muted>{t("retrocert-login.dob-day-hint")}</Form.Text>
                 <Form.Control.Feedback type="invalid">
                   {t("required-error")}
                 </Form.Control.Feedback>
               </Form.Group>
               <Form.Group controlId="formDobYear" as={Col} md={3}>
-                <Form.Label>{t("retrocert-login.dob-year")}</Form.Label>
+                <Form.Label>
+                  <span className="text-danger">* </span>
+                  <span>
+                    <strong>{t("retrocert-login.dob-year")}</strong>
+                  </span>
+                </Form.Label>
                 <Form.Control
                   type="text"
                   value={dobYear}
@@ -186,6 +206,9 @@ function StaffViewAuthPage(props) {
                   required
                   pattern="[12][890]\d\d"
                 />
+                <Form.Text muted>
+                  {t("retrocert-login.dob-year-hint")}
+                </Form.Text>
                 <Form.Control.Feedback type="invalid">
                   {t("required-error")}
                 </Form.Control.Feedback>
@@ -193,10 +216,12 @@ function StaffViewAuthPage(props) {
             </Row>
             <Row className="mt-4">
               <Form.Group controlId="formSsn" className="col-md-6">
-                <Form.Label>{`* ${t("retrocert-login.ssn-label")}`}</Form.Label>
-                <Form.Text muted className="ssn-hint">
-                  {t("retrocert-login.ssn-hint")}
-                </Form.Text>
+                <Form.Label>
+                  <span className="text-danger">* </span>
+                  <span>
+                    <strong>{t("retrocert-login.ssn-label")}</strong>
+                  </span>
+                </Form.Label>
                 <Form.Control
                   value={ssn}
                   onChange={(e) => handleChange(e, setSsn)}
@@ -204,6 +229,7 @@ function StaffViewAuthPage(props) {
                   pattern="\d\d\d[-]?\d\d[-]?\d\d\d\d"
                   required
                 />
+                <Form.Text muted>{t("retrocert-login.ssn-hint")}</Form.Text>
                 <Form.Control.Feedback type="invalid">
                   {t("required-error")}
                 </Form.Control.Feedback>
