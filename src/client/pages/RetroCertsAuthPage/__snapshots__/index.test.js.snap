@@ -23,7 +23,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
         You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits you received for weeks of your claim early in the pandemic through the week ending May 9, 2020. The exact dates you are required to certify for will depend on your specific claim history.
       </p>
       <h2>
-        Enter Your Information.
+        Enter Your Information
       </h2>
       <p>
         Confirm any benefit weeks you still need to certify for.
@@ -275,13 +275,9 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
               <Button
                 active={false}
                 disabled={false}
+                id="toggleSsn"
                 onClick={[Function]}
                 size="sm"
-                style={
-                  Object {
-                    "fontWeight": "normal",
-                  }
-                }
                 type="button"
                 variant="link"
               >
@@ -352,7 +348,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
         You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits you received for weeks of your claim early in the pandemic through the week ending May 9, 2020. The exact dates you are required to certify for will depend on your specific claim history.
       </p>
       <h2>
-        Enter Your Information.
+        Enter Your Information
       </h2>
       <p>
         Confirm any benefit weeks you still need to certify for.
@@ -604,13 +600,9 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
               <Button
                 active={false}
                 disabled={false}
+                id="toggleSsn"
                 onClick={[Function]}
                 size="sm"
-                style={
-                  Object {
-                    "fontWeight": "normal",
-                  }
-                }
                 type="button"
                 variant="link"
               >
@@ -739,7 +731,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
         You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits you received for weeks of your claim early in the pandemic through the week ending May 9, 2020. The exact dates you are required to certify for will depend on your specific claim history.
       </p>
       <h2>
-        Enter Your Information.
+        Enter Your Information
       </h2>
       <p>
         Confirm any benefit weeks you still need to certify for.
@@ -991,13 +983,9 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
               <Button
                 active={false}
                 disabled={false}
+                id="toggleSsn"
                 onClick={[Function]}
                 size="sm"
-                style={
-                  Object {
-                    "fontWeight": "normal",
-                  }
-                }
                 type="button"
                 variant="link"
               >
@@ -1068,7 +1056,7 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
         You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits you received for weeks of your claim early in the pandemic through the week ending May 9, 2020. The exact dates you are required to certify for will depend on your specific claim history.
       </p>
       <h2>
-        Enter Your Information.
+        Enter Your Information
       </h2>
       <p>
         Confirm any benefit weeks you still need to certify for.
@@ -1320,13 +1308,9 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
               <Button
                 active={false}
                 disabled={false}
+                id="toggleSsn"
                 onClick={[Function]}
                 size="sm"
-                style={
-                  Object {
-                    "fontWeight": "normal",
-                  }
-                }
                 type="button"
                 variant="link"
               >

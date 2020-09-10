@@ -191,7 +191,7 @@
     "title": "Certificación retroactiva para el Seguro de Desempleo",
     "help": "Usted debe realizar la certificación para los beneficios del Seguro de Desempleo (UI, por sus siglas en inglés) y de la Asistencia de Desempleo por la Pandemia (PUA, por sus siglas en inglés) que recibió durante las semanas en que comenzó la pandemia correspondiente a su solicitud, hasta la semana que termina el 9 de mayo de 2020. Las fechas exactas para las que debe realizar la certificación dependerán específicamente del historial de su solicitud.",
     "instructions-header": "Ingrese su información",
-    "instructions": "Ingrese su información para confirmar si usted tiene alguna semana de beneficios en que necesite certificar retroactivamente.",
+    "instructions": "Confirme las semanas de beneficios para las que aún necesita certificar.",
     "last-name-label": "Apellido",
     "dob-heading": "Fecha de nacimiento",
     "dob-month": "Mes",
@@ -199,7 +199,7 @@
     "dob-day": "Día",
     "dob-day-hint": "DD",
     "dob-year": "Año",
-    "dob-year-hint": "YYYY",
+    "dob-year-hint": "AAAA",
     "ssn-label": "Número de Seguro Social",
     "ssn-hint": "XXX-XX-XXXX",
     "ssn-screen-reader": "Puede seleccionar Mostrar SSN después de este campo de entrada",
@@ -210,7 +210,7 @@
     "session-timed-out": "Su sesión se cerró después de 30 minutos de inactividad. Proporcione su información nuevamente para certificar sus semanas.",
     "show-ssn": "Mostrar SSN",
     "hide-ssn": "Ocultar SSN",
-    "required-text": "Indica un campo requerido que falta completar"
+    "required-text": "Campo requerido"
   },
   "staff-view-login": {
     "header1": "Staff View",

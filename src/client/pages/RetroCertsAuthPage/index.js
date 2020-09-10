@@ -312,7 +312,7 @@ function RetroCertsAuthPage(props) {
                   <Button
                     onClick={toggleSsn}
                     variant="link"
-                    style={{ fontWeight: "normal" }}
+                    id="toggleSsn"
                     size="sm"
                   >
                     {getSsnToggleText()}
