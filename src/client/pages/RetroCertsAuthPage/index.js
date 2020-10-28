@@ -191,7 +191,14 @@ function RetroCertsAuthPage(props) {
           {showGenericValidationError && validated && genericValidationError}
           {errorTransKey === "retrocert-login.session-timed-out" && errorAlert}
           <p className="mt-3">{t("retrocert-login.help")}</p>
-          <h2>{t("retrocert-login.instructions-header")}</h2>
+          <p>
+            <a href={t("links.edd-retro-cert")}>
+              {t("retrocert-login.learn-more")}
+            </a>
+          </p>
+          <h2 className="h3 font-weight-bold mb-3">
+            {t("retrocert-login.instructions-header")}
+          </h2>
           <p>{t("retrocert-login.instructions")}</p>
           <p>
             <span className="text-danger">* </span>
@@ -320,7 +327,9 @@ function RetroCertsAuthPage(props) {
                 </div>
               </Form.Group>
             </Row>
-            <h2>{t("retrocert-login.security-header")}</h2>
+            <h2 className="h3 font-weight-bold mb-3">
+              {t("retrocert-login.security-header")}
+            </h2>
             <Row>
               <Form.Group controlId="formReCaptcha" className="col-md-6 mt-3">
                 <ReCAPTCHA
