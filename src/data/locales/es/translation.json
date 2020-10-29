@@ -191,7 +191,7 @@
   "retrocert-login": {
     "title": "Certificación retroactiva para el Seguro de Desempleo",
     "help": "Usted debe realizar la certificación para los beneficios del Seguro de Desempleo (UI, por sus siglas en inglés) y de la Asistencia de Desempleo por la Pandemia (PUA, por sus siglas en inglés) que recibió durante las semanas en que comenzó la pandemia correspondiente a su solicitud, hasta la semana que termina el 9 de mayo de 2020. Las fechas exactas para las que debe realizar la certificación dependerán específicamente del historial de su solicitud.",
-    "learn-more": "Learn about retroactive certification and how it works en espanol.",
+    "learn-more": "Conozca sobre la certificación retroactiva y cómo funciona.",
     "instructions-header": "Ingrese su información",
     "instructions": "Confirme las semanas de beneficios para las que aún necesita certificar.",
     "last-name-label": "Apellido",
