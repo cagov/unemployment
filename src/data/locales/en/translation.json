@@ -57,7 +57,8 @@
     "caljobs": "https://www.caljobs.ca.gov/vosnet/Default.aspx",
     "edd-debit": "https://www.edd.ca.gov/about_edd/The_EDD_Debit_Card.htm",
     "edd-coronavirus-faqs": "https://edd.ca.gov/about_edd/coronavirus-2019/faqs.htm",
-    "edd-coronavirus-claims": "https://edd.ca.gov/about_edd/coronavirus-2019/unemployment-claims.htm"
+    "edd-coronavirus-claims": "https://edd.ca.gov/about_edd/coronavirus-2019/unemployment-claims.htm",
+    "edd-retro-cert": "https://edd.ca.gov/Unemployment/retro-certify.htm"
   },
   "certification-header1": "What is certification?",
   "certification-p1": "Certification is the required process of updating the EDD every two weeks with your unemployment status with basic eligibility information:",
@@ -190,6 +191,7 @@
   "retrocert-login": {
     "title": "Retroactive Certification for Unemployment",
     "help": "You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits you received for weeks of your claim early in the pandemic through the week ending May 9, 2020. The exact dates you are required to certify for will depend on your specific claim history.",
+    "learn-more": "Learn about retroactive certification and how it works.",
     "instructions-header": "Enter Your Information",
     "instructions": "Confirm any benefit weeks you still need to certify for.",
     "last-name-label": "Last Name",

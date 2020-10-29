@@ -22,7 +22,16 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
       >
         You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits you received for weeks of your claim early in the pandemic through the week ending May 9, 2020. The exact dates you are required to certify for will depend on your specific claim history.
       </p>
-      <h2>
+      <p>
+        <a
+          href="https://edd.ca.gov/Unemployment/retro-certify.htm"
+        >
+          Learn about retroactive certification and how it works.
+        </a>
+      </p>
+      <h2
+        className="h3 font-weight-bold mb-3"
+      >
         Enter Your Information
       </h2>
       <p>
@@ -286,7 +295,9 @@ exports[`<RetroCertsAuthPage /> retro certs auth page 1`] = `
             </div>
           </FormGroup>
         </Row>
-        <h2>
+        <h2
+          className="h3 font-weight-bold mb-3"
+        >
           Security Check
         </h2>
         <Row
@@ -347,7 +358,16 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
       >
         You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits you received for weeks of your claim early in the pandemic through the week ending May 9, 2020. The exact dates you are required to certify for will depend on your specific claim history.
       </p>
-      <h2>
+      <p>
+        <a
+          href="https://edd.ca.gov/Unemployment/retro-certify.htm"
+        >
+          Learn about retroactive certification and how it works.
+        </a>
+      </p>
+      <h2
+        className="h3 font-weight-bold mb-3"
+      >
         Enter Your Information
       </h2>
       <p>
@@ -611,7 +631,9 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with captcha timeout error
             </div>
           </FormGroup>
         </Row>
-        <h2>
+        <h2
+          className="h3 font-weight-bold mb-3"
+        >
           Security Check
         </h2>
         <Row
@@ -730,7 +752,16 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
       >
         You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits you received for weeks of your claim early in the pandemic through the week ending May 9, 2020. The exact dates you are required to certify for will depend on your specific claim history.
       </p>
-      <h2>
+      <p>
+        <a
+          href="https://edd.ca.gov/Unemployment/retro-certify.htm"
+        >
+          Learn about retroactive certification and how it works.
+        </a>
+      </p>
+      <h2
+        className="h3 font-weight-bold mb-3"
+      >
         Enter Your Information
       </h2>
       <p>
@@ -994,7 +1025,9 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with session timeout 1`] =
             </div>
           </FormGroup>
         </Row>
-        <h2>
+        <h2
+          className="h3 font-weight-bold mb-3"
+        >
           Security Check
         </h2>
         <Row
@@ -1055,7 +1088,16 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
       >
         You are required to certify for Unemployment Insurance (UI) and Pandemic Unemployment Assistance (PUA) benefits you received for weeks of your claim early in the pandemic through the week ending May 9, 2020. The exact dates you are required to certify for will depend on your specific claim history.
       </p>
-      <h2>
+      <p>
+        <a
+          href="https://edd.ca.gov/Unemployment/retro-certify.htm"
+        >
+          Learn about retroactive certification and how it works.
+        </a>
+      </p>
+      <h2
+        className="h3 font-weight-bold mb-3"
+      >
         Enter Your Information
       </h2>
       <p>
@@ -1319,7 +1361,9 @@ exports[`<RetroCertsAuthPage /> retro certs auth page with user not found error 
             </div>
           </FormGroup>
         </Row>
-        <h2>
+        <h2
+          className="h3 font-weight-bold mb-3"
+        >
           Security Check
         </h2>
         <Row
