@@ -47,7 +47,6 @@ function init(env = process.env) {
 
     app.use(
       require("webpack-dev-middleware")(webpackCompiler, {
-        noInfo: true,
         publicPath: webpackConfig.output.publicPath,
       })
     );
