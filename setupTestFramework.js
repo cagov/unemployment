@@ -27,10 +27,9 @@ jest.mock(
 process.env.RECAPTCHA_SECRET = "6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe";
 process.env.COSMOS_DB_KEY = "mock-cosmos-db-key";
 
+const isDevEnvironment = process.env.NODE_ENV === "development";
 // Only test creating the database if running locally in development
-// or on staging and production
-const isTestEnvironment = process.env.NODE_ENV === "test";
-if (isTestEnvironment) {
+if (!isDevEnvironment) {
   jest.mock("./src/data/cosmos");
   const cosmos = require("./src/data/cosmos");
   cosmos.createRetroCertDatabase(() => true);
