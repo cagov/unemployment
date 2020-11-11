@@ -27,6 +27,15 @@ jest.mock(
 process.env.RECAPTCHA_SECRET = "6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe";
 process.env.COSMOS_DB_KEY = "mock-cosmos-db-key";
 
+jest.mock("@azure/cosmos", () => {
+  const actual = jest.requireActual("@azure/cosmos");
+
+  return {
+    ...actual,
+    CosmosClient: jest.fn(),
+  };
+});
+jest.mock("./src/data/cosmosConfig", () => jest.fn());
 jest.mock("./src/data/cosmos");
 const cosmos = require("./src/data/cosmos");
 cosmos.createRetroCertDatabase(jest.fn());
