@@ -19,13 +19,10 @@ exports[`<RetroCertsConfirmationPage /> no confirmation number 1`] = `
     }
   }
 >
-  <Redirect
-    to="/retroactive-certification/weeks-to-certify"
-  >
+  <Redirect>
     <Lifecycle
       onMount={[Function]}
       onUpdate={[Function]}
-      to="/retroactive-certification/weeks-to-certify"
     />
   </Redirect>
 </RetroCertsConfirmationPage>

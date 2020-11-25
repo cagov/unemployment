@@ -2018,7 +2018,7 @@ exports[`<RetroCertsCertificationPage /> Certify for 2nd week of 2 1`] = `
                       className="text-dark bg-light"
                       disabled={false}
                       onClick={[Function]}
-                      to="/retroactive-certification/certify/2020-02-08"
+                      to="undefined/2020-02-08"
                       type="button"
                       variant="outline-secondary"
                     >
@@ -2026,19 +2026,19 @@ exports[`<RetroCertsCertificationPage /> Certify for 2nd week of 2 1`] = `
                         className="text-dark bg-light btn btn-outline-secondary"
                         disabled={false}
                         onClick={[Function]}
-                        to="/retroactive-certification/certify/2020-02-08"
+                        to="undefined/2020-02-08"
                       >
                         <LinkAnchor
                           className="text-dark bg-light btn btn-outline-secondary"
                           disabled={false}
-                          href="/retroactive-certification/certify/2020-02-08"
+                          href="/undefined/2020-02-08"
                           navigate={[Function]}
                           onClick={[Function]}
                         >
                           <a
                             className="text-dark bg-light btn btn-outline-secondary"
                             disabled={false}
-                            href="/retroactive-certification/certify/2020-02-08"
+                            href="/undefined/2020-02-08"
                             onClick={[Function]}
                           >
                             Back to Previous Week
@@ -4639,7 +4639,6 @@ exports[`<RetroCertsCertificationPage /> Certify for one week of 2 1`] = `
                       className="text-dark bg-light"
                       disabled={false}
                       onClick={[Function]}
-                      to="/retroactive-certification/weeks-to-certify"
                       type="button"
                       variant="outline-secondary"
                     >
@@ -4647,19 +4646,18 @@ exports[`<RetroCertsCertificationPage /> Certify for one week of 2 1`] = `
                         className="text-dark bg-light btn btn-outline-secondary"
                         disabled={false}
                         onClick={[Function]}
-                        to="/retroactive-certification/weeks-to-certify"
                       >
                         <LinkAnchor
                           className="text-dark bg-light btn btn-outline-secondary"
                           disabled={false}
-                          href="/retroactive-certification/weeks-to-certify"
+                          href=""
                           navigate={[Function]}
                           onClick={[Function]}
                         >
                           <a
                             className="text-dark bg-light btn btn-outline-secondary"
                             disabled={false}
-                            href="/retroactive-certification/weeks-to-certify"
+                            href=""
                             onClick={[Function]}
                           >
                             Back
@@ -5433,13 +5431,10 @@ exports[`<RetroCertsCertificationPage /> Certify week not found. 1`] = `
     }
   }
 >
-  <Redirect
-    to="/retroactive-certification/weeks-to-certify"
-  >
+  <Redirect>
     <Lifecycle
       onMount={[Function]}
       onUpdate={[Function]}
-      to="/retroactive-certification/weeks-to-certify"
     />
   </Redirect>
 </RetroCertsCertificationPage>

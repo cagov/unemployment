@@ -51,7 +51,6 @@ exports[`<App /> renders application with retro-certs 1`] = `
           },
         }
       }
-      path="/retroactive-certification/weeks-to-certify"
       requiresAuthentication={true}
     />
     <RetroCertsRoute
@@ -64,7 +63,7 @@ exports[`<App /> renders application with retro-certs 1`] = `
           },
         }
       }
-      path="/retroactive-certification/certify/:week"
+      path="undefined/:week"
       requiresAuthentication={true}
     />
     <RetroCertsRoute
@@ -77,7 +76,6 @@ exports[`<App /> renders application with retro-certs 1`] = `
           },
         }
       }
-      path="/retroactive-certification/confirmation"
       requiresAuthentication={true}
     />
     <RetroCertsRoute
@@ -90,7 +88,6 @@ exports[`<App /> renders application with retro-certs 1`] = `
           },
         }
       }
-      path="/retroactive-certification"
     />
     <Route>
       <PageNotFound />
@@ -150,7 +147,6 @@ exports[`<App /> renders application without retro-certs 1`] = `
           },
         }
       }
-      path="/retroactive-certification/weeks-to-certify"
       requiresAuthentication={true}
     />
     <RetroCertsRoute
@@ -163,7 +159,7 @@ exports[`<App /> renders application without retro-certs 1`] = `
           },
         }
       }
-      path="/retroactive-certification/certify/:week"
+      path="undefined/:week"
       requiresAuthentication={true}
     />
     <RetroCertsRoute
@@ -176,7 +172,6 @@ exports[`<App /> renders application without retro-certs 1`] = `
           },
         }
       }
-      path="/retroactive-certification/confirmation"
       requiresAuthentication={true}
     />
     <RetroCertsRoute
@@ -189,7 +184,6 @@ exports[`<App /> renders application without retro-certs 1`] = `
           },
         }
       }
-      path="/retroactive-certification"
     />
     <Route>
       <PageNotFound />
