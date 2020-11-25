@@ -33,6 +33,11 @@ singlePageAppRouter.get(
   }
 );
 
+// Retroactive certification ended Nov 2020, so redirect to EDD's landing page
+singlePageAppRouter.get("^/retroactive-certification/?", (req, res) => {
+  res.redirect(302, "https://edd.ca.gov/Unemployment/retro-certify.htm");
+});
+
 singlePageAppRouter.get("/*", (req, res) => {
   const contentSecurityPolicy = buildPolicies();
 
