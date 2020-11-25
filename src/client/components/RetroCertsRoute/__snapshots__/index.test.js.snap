@@ -34,7 +34,6 @@ exports[`<RetroCertsRoute /> route needing auth with user data 1`] = `
 >
   <Redirect
     push={true}
-    to="/retroactive-certification"
   />
 </Route>
 `;
@@ -45,7 +44,6 @@ exports[`<RetroCertsRoute /> route needing auth, but no data 1`] = `
 >
   <Redirect
     push={true}
-    to="/retroactive-certification"
   />
 </Route>
 `;

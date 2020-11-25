@@ -94,7 +94,7 @@ exports[`<RetroCertsWeeksToCertifyPage /> has user data 1`] = `
               }
             }
             disabled={false}
-            to="/retroactive-certification/certify/2020-02-08"
+            to="undefined/2020-02-08"
             type="button"
             variant="secondary"
           >
