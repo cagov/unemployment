@@ -10,27 +10,15 @@ import ReCaptcha from "../services/reCaptcha";
 import programPlan from "../data/programPlan";
 
 describe("Router: API tests", () => {
-  it("retro-certs POST feature enabled", async () => {
-    const getUserByNameDobSsnMock = jest.spyOn(cosmos, "getUserByNameDobSsn");
-    getUserByNameDobSsnMock.mockImplementation(
-      jest.fn(() => Promise.resolve(null))
-    );
-
+  it("retro-certs POST feature disabled", async () => {
     const server = init();
     const testPaths = Object.values(AUTH_STRINGS.apiPath);
 
     for (const testPath of testPaths.slice(0, 1)) {
       const res = await request(server).post(testPath);
-      expect(res.status).toBe(401);
-      expect(res.body).toEqual({
-        status: AUTH_STRINGS.statusCode.userNotFound,
-      });
+      // Retroactive certification ended, so POST requests should return 500
+      expect(res.status).toBe(500);
     }
-    expect(getUserByNameDobSsnMock.mock.calls).toEqual([
-      ["", undefined, undefined],
-    ]);
-
-    getUserByNameDobSsnMock.mockRestore();
   });
 
   it("retro-certs /api/login tests", async () => {
@@ -100,8 +88,6 @@ describe("Router: API tests", () => {
         recaptchaResponse,
         getUserResponse,
         getFormDataByUserIdWithNewAuthTokenResponse,
-        httpStatus,
-        responseJson,
       ] = testCase;
       const validateUserMock = jest.spyOn(ReCaptcha.prototype, "validateUser");
       validateUserMock.mockImplementation(() => recaptchaResponse);
@@ -123,9 +109,8 @@ describe("Router: API tests", () => {
         .post(AUTH_STRINGS.apiPath.login)
         .send(JSON.stringify(reqJson))
         .type("json");
-      expect(res.status).toBe(httpStatus);
-      expect(res.header["content-type"]).toMatch(/json/);
-      expect(res.body).toEqual(responseJson);
+      // Retroactive certification ended, so login requests should return 500
+      expect(res.status).toBe(500);
 
       validateUserMock.mockRestore();
       getUserByNameDobSsnMock.mockRestore();
@@ -318,8 +303,6 @@ describe("Router: API tests", () => {
         reqJson,
         getFormDataByAuthTokenResponse,
         getUserByIdResponse,
-        httpStatus,
-        responseJson,
       ] = testCase;
       const getFormDataByAuthTokenMock = jest.spyOn(
         cosmos,
@@ -339,9 +322,8 @@ describe("Router: API tests", () => {
         .post(AUTH_STRINGS.apiPath.save)
         .send(JSON.stringify(reqJson))
         .type("json");
-      expect(res.status).toBe(httpStatus);
-      expect(res.header["content-type"]).toMatch(/json/);
-      expect(res.body).toEqual(responseJson);
+      // Retroactive certification ended, so save requests should return 500
+      expect(res.status).toBe(500);
 
       getFormDataByAuthTokenMock.mockRestore();
       getUserByIdMock.mockRestore();
