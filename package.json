@@ -99,7 +99,7 @@
         "postcss-hash": "^1.0.2",
         "postcss-scss": "^2.0.0",
         "prettier": "2.0.4",
-        "stylelint": "^13.7.0",
+        "stylelint": "^15.10.1",
         "stylelint-config-prettier": "^8.0.2",
         "stylelint-junit-formatter": "^0.2.2",
         "supertest": "^4.0.2",
